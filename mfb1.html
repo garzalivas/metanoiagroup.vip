@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="New_Favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metanoia Football — Mario Garza Livas</title>
+<meta name="description" content="Metanoia Football (MFB) — Mario Garza Livas, Consultor Experto en Fútbol y Negocios de Fútbol. Quince papers de investigación aplicada sobre desarrollo de talento, arquitectura institucional de clubes, gobernanza, alto rendimiento competitivo y confederaciones.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Metanoia Football — Mario Garza Livas">
+<meta property="og:description" content="Arquitectura estratégica para el ecosistema del fútbol profesional. Quince papers, siete áreas de especialización.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<meta property="og:site_name" content="The Metanoia Group">
+<meta property="og:image" content="https://metanoiagroup.vip/og-image-1.jpg">
+  <meta property="og:url" content="https://metanoiagroup.vip/MFB1">
+<link rel="alternate" hreflang="es" href="https://metanoiagroup.vip/MFB1.html">
+<link rel="alternate" hreflang="en" href="https://metanoiagroup.vip/MFB2.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0a0b;
+    --bg-alt:#111113;
+    --bg-card:#141416;
+    --text:#ece8e0;
+    --text-dim:#96908780;
+    --text-muted:#9b968c;
+    --accent:#b6905c;
+    --accent-dim:#7d6743;
+    --line:#26242066;
+    --line-strong:#2f2c27;
+    --serif:'Fraunces', Georgia, 'Times New Roman', serif;
+    --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --maxw:920px;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;scroll-padding-top:150px;}
+
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  a{color:inherit;text-decoration:none;}
+
+  ::selection{background:var(--accent-dim);color:var(--bg);}
+
+  a:focus-visible, button:focus-visible{
+    outline:1.5px solid var(--accent);
+    outline-offset:4px;
+  }
+
+  /* background texture */
+  body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+    background:
+      radial-gradient(ellipse 900px 500px at 15% -10%, #b6905c10, transparent 60%),
+      radial-gradient(ellipse 700px 500px at 100% 20%, #b6905c08, transparent 60%);
+    pointer-events:none;
+    z-index:0;
+  }
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;z-index:1;}
+
+  /* ---------- NAV ---------- */
+  nav.topbar{
+    position:sticky;top:0;
+    background:#0a0a0bd9;
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+    z-index:50;
+  }
+  nav.topbar .inner{
+    max-width:var(--maxw);margin:0 auto;padding:18px 28px;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:14px;flex-wrap:wrap;
+  }
+  .brandmark{
+    font-family:var(--serif);
+    font-size:15px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--text);
+    font-weight:500;
+  }
+  .brandmark span{color:var(--text-muted);font-weight:400;}
+  .nav-links{display:flex;gap:26px;align-items:center;flex-wrap:wrap;}
+  .nav-links a{
+    font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--text-muted);
+    transition:color .25s ease;
+    white-space:nowrap;
+  }
+  .nav-links a:hover{color:var(--accent);}
+  .nav-links a.en{
+    border:1px solid var(--line-strong);
+    padding:6px 12px;
+    border-radius:2px;
+  }
+  .nav-links a.en:hover{border-color:var(--accent);}
+
+  /* ---------- HERO ---------- */
+  header.hero{
+    padding:120px 0 90px;
+    position:relative;
+  }
+  .eyebrow{
+    font-size:12px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--accent);
+    font-weight:500;
+    display:flex;align-items:center;gap:12px;
+    opacity:0;
+    animation:fadeUp .9s ease .1s forwards;
+  }
+  .eyebrow::before{
+    content:'';display:inline-block;width:28px;height:1px;background:var(--accent);
+  }
+  h1.name{
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:clamp(42px, 7vw, 74px);
+    line-height:1.04;
+    letter-spacing:-.01em;
+    margin-top:22px;
+    opacity:0;
+    animation:fadeUp .9s ease .25s forwards;
+  }
+  h1.name em{font-style:italic;font-weight:400;color:var(--accent);font-size:0.90em;display:inline;}
+
+  p.roles{
+    margin-top:26px;
+    font-size:clamp(15px,2vw,18px);
+    color:var(--text-muted);
+    max-width:640px;
+    line-height:1.7;
+    font-weight:300;
+    opacity:0;
+    animation:fadeUp .9s ease .4s forwards;
+  }
+  p.roles .sep{color:var(--accent-dim);margin:0 10px;}
+
+  .locbar{
+    margin-top:34px;
+    display:flex;align-items:center;gap:10px;
+    font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);
+    opacity:0;
+    animation:fadeUp .9s ease .55s forwards;
+  }
+  .locbar .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none;
+    box-shadow:0 0 8px 1px #b6905c80;
+  }
+
+  .hero-cta{
+    margin-top:46px;
+    display:flex;gap:16px;flex-wrap:wrap;
+    opacity:0;
+    animation:fadeUp .9s ease .7s forwards;
+  }
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:14px 24px;
+    font-size:12.5px;letter-spacing:.09em;text-transform:uppercase;
+    border-radius:2px;
+    transition:all .25s ease;
+  }
+  .btn-primary{
+    background:var(--accent);color:#0a0a0b;font-weight:600;
+  }
+  .btn-primary:hover{background:#c9a06d;transform:translateY(-1px);}
+  .btn-ghost{
+    border:1px solid var(--line-strong);color:var(--text);
+  }
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+
+  @keyframes fadeUp{
+    from{opacity:0;transform:translateY(16px);}
+    to{opacity:1;transform:translateY(0);}
+  }
+
+  /* ---------- SECTION SHELL ---------- */
+  section{
+    padding:86px 0;
+    border-top:1px solid var(--line);
+    position:relative;
+  }
+  .sec-head{
+    display:flex;align-items:baseline;gap:18px;margin-bottom:48px;
+  }
+  .sec-num{
+    font-family:var(--serif);font-style:italic;font-size:15px;color:var(--accent-dim);
+    letter-spacing:.05em;
+  }
+  h2.sec-title{
+    font-family:var(--serif);font-weight:400;font-size:clamp(26px,3.4vw,36px);
+    letter-spacing:-.01em;
+  }
+  h2.sec-title em{font-style:italic;color:var(--accent);font-weight:400;}
+  h2.sec-title .name-accent{color:var(--accent);font-style:italic;font-weight:400;}
+  .sec-sub{
+    color:var(--text-muted);font-size:14.5px;font-weight:300;max-width:520px;margin-top:14px;line-height:1.7;
+  }
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease, transform .8s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  /* ---------- LEAD PARAGRAPHS ---------- */
+  .lead{
+    font-size:15.5px;color:var(--text-muted);line-height:1.9;font-weight:300;max-width:720px;
+  }
+  .lead + .lead{margin-top:20px;}
+  .lead strong{color:var(--text);font-weight:500;}
+
+  /* ---------- STAT ROW ---------- */
+  .stat-row{
+    display:flex;flex-wrap:wrap;
+    margin-top:52px;
+    border-top:1px solid var(--line-strong);
+    border-bottom:1px solid var(--line-strong);
+  }
+  .stat-item{flex:1 1 140px;padding:26px 26px 26px 0;}
+  .stat-item + .stat-item{border-left:1px solid var(--line-strong);padding-left:26px;}
+  .stat-num{font-family:var(--serif);font-size:34px;color:var(--accent);line-height:1;}
+  .stat-label{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin-top:10px;}
+
+  @media (max-width:640px){
+    .stat-item{flex:1 1 45%;border-left:none !important;padding-left:0 !important;}
+  }
+
+  /* ---------- SPECIALIZATION / ECOSYSTEM CARDS ---------- */
+  .eco-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:1px;
+    background:var(--line-strong);
+    border:1px solid var(--line-strong);
+  }
+  .eco-card{
+    background:var(--bg-alt);
+    padding:34px 30px;
+    display:block;
+    transition:background .3s ease, transform .3s ease;
+  }
+  .eco-card:hover{background:var(--bg-card);transform:translateY(-2px);}
+  .eco-code{
+    font-family:var(--serif);font-style:italic;font-size:13px;color:var(--accent);
+    letter-spacing:.06em;
+  }
+  .eco-name{
+    font-family:var(--serif);font-size:21px;margin-top:10px;font-weight:400;
+  }
+  .eco-desc{
+    color:var(--text-muted);font-size:13.5px;margin-top:10px;line-height:1.65;font-weight:300;
+  }
+  .eco-url{
+    margin-top:18px;font-size:11px;letter-spacing:.08em;color:var(--accent-dim);
+    display:flex;align-items:center;gap:8px;
+    text-transform:lowercase;
+  }
+  .eco-card:hover .eco-url{color:var(--accent);}
+  .eco-url .arrow{transition:transform .25s ease;}
+  .eco-card:hover .eco-url .arrow{transform:translateX(4px);}
+  .eco-tag{
+    text-transform:none;
+  }
+  .eco-card.full{grid-column:1 / -1;}
+
+  @media (max-width:640px){
+    .eco-grid{grid-template-columns:1fr;}
+    .eco-card.full{grid-column:auto;}
+  }
+
+  /* ---------- PAPER CATEGORY BLOCKS ---------- */
+  .cat-block{margin-bottom:64px;}
+  .cat-block:last-child{margin-bottom:0;}
+  .cat-header{
+    display:flex;align-items:baseline;gap:16px;
+    margin-bottom:8px;padding-bottom:18px;
+    border-bottom:1px solid var(--line-strong);
+    flex-wrap:wrap;
+  }
+  .cat-letter{
+    font-family:var(--serif);font-style:italic;font-size:26px;color:var(--accent);flex:none;
+  }
+  .cat-titlewrap{flex:1;min-width:200px;}
+  .cat-title{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--text);}
+  .cat-count{
+    font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);
+    flex:none;
+  }
+
+  .paper-card{padding:32px 4px;border-bottom:1px solid var(--line-strong);}
+  .paper-card:last-child{border-bottom:none;}
+  .paper-title{font-family:var(--serif);font-size:21px;font-weight:400;color:var(--text);line-height:1.3;}
+  .paper-abstract{
+    color:var(--text-muted);font-size:13.5px;line-height:1.8;font-weight:300;margin-top:14px;max-width:780px;
+  }
+  .paper-dl{
+    margin-top:20px;display:inline-flex;align-items:center;gap:12px;
+    font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent-dim);
+    transition:color .25s ease;
+  }
+  .paper-dl:hover{color:var(--accent);}
+  .paper-dl .dl-icon{
+    width:32px;height:32px;border-radius:50%;
+    border:1px solid var(--line-strong);
+    display:flex;align-items:center;justify-content:center;
+    transition:all .25s ease;flex:none;
+  }
+  .paper-dl:hover .dl-icon{border-color:var(--accent);background:var(--accent);}
+  .paper-dl svg{width:12px;height:12px;stroke:var(--text-muted);transition:stroke .25s ease;}
+  .paper-dl:hover svg{stroke:#0a0a0b;}
+
+  /* ---------- FEATURED DOCUMENT (BROCHURE) ---------- */
+  .featured-doc{
+    border:1px solid var(--line-strong);
+    background:var(--bg-alt);
+    padding:36px 32px;
+    margin-bottom:60px;
+    position:relative;
+    overflow:hidden;
+  }
+  .featured-doc::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--accent);}
+  .featured-tag{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);}
+  .featured-title{font-family:var(--serif);font-size:23px;margin-top:14px;color:var(--text);font-weight:400;}
+  .featured-desc{color:var(--text-muted);font-size:13.5px;line-height:1.8;margin-top:14px;font-weight:300;max-width:780px;}
+
+  @media (max-width:640px){
+    .featured-doc{padding:28px 22px;}
+  }
+
+  /* ---------- SOCIAL / LINK CHIPS ---------- */
+  .social-grid{
+    display:flex;flex-wrap:wrap;gap:14px;
+  }
+  .social-chip{
+    display:flex;align-items:center;gap:12px;
+    border:1px solid var(--line-strong);
+    padding:12px 18px 12px 12px;
+    border-radius:32px;
+    transition:all .25s ease;
+  }
+  .social-chip:hover{border-color:var(--accent);transform:translateY(-2px);}
+  .social-badge{
+    width:30px;height:30px;border-radius:50%;
+    background:var(--bg-card);
+    border:1px solid var(--line-strong);
+    display:flex;align-items:center;justify-content:center;
+    font-size:10.5px;letter-spacing:.02em;font-weight:600;color:var(--text);
+    font-family:var(--sans);
+    transition:all .25s ease;
+  }
+  .social-chip:hover .social-badge{background:var(--accent);color:#0a0a0b;border-color:var(--accent);}
+  .social-name{font-size:13px;color:var(--text-muted);white-space:nowrap;}
+  .social-chip:hover .social-name{color:var(--text);}
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    padding:70px 0 46px;
+    border-top:1px solid var(--line);
+  }
+  .footer-brand{
+    font-family:var(--serif);font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted);
+  }
+  .footer-tagline{
+    font-family:var(--serif);font-style:italic;font-size:19px;color:var(--text);margin-top:14px;
+  }
+  .footer-role{
+    margin-top:22px;font-size:13px;color:var(--text-muted);
+  }
+  .footer-role strong{color:var(--text);font-weight:500;}
+  .footer-contacts{
+    margin-top:10px;display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--text-muted);
+  }
+  .footer-contacts a:hover{color:var(--accent);}
+  .footer-motto{
+    margin-top:36px;font-size:12.5px;color:var(--text-dim);line-height:1.9;
+    font-style:italic;font-family:var(--serif);
+  }
+  .footer-bottom{
+    margin-top:40px;padding-top:22px;border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;
+  }
+  .copyright{font-size:11.5px;color:var(--text-dim);letter-spacing:.04em;}
+  .footer-en{
+    font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);
+    border:1px solid var(--line-strong);padding:7px 14px;border-radius:2px;
+  }
+  .footer-en:hover{color:var(--accent);border-color:var(--accent);}
+
+  @media (max-width:640px){
+    header.hero{padding:56px 0 60px;}
+    section{padding:60px 0;}
+    nav.topbar .inner{padding:16px 20px;}
+    .nav-links{gap:12px 16px;width:100%;}
+    .nav-links a{font-size:11px;}
+    .nav-links a.en{margin-left:auto;}
+    .brandmark{font-size:13px;}
+    .footer-bottom{flex-direction:column;align-items:flex-start;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}
+  }
+</style>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Metanoia Football — Mario Garza Livas">
+<meta name="twitter:description" content="Metanoia Football (MFB) — Mario Garza Livas. 15 papers de investigación aplicada sobre desarrollo de talento, arquitectura institucional de clubes y gobernanza del fútbol profesional.">
+<meta name="twitter:image" content="https://metanoiagroup.vip/og-image-1.jpg">
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KHNZVPJX1N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KHNZVPJX1N');
+</script>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="inner">
+    <div class="brandmark">METANOIA FOOTBALL <span>· MARIO GARZA LIVAS</span></div>
+    <div class="nav-links">
+      <a href="#sobre">Acerca de</a>
+      <a href="#especializacion">Especialización</a>
+      <a href="#papers">Papers</a>
+      <a href="#enlaces">Enlaces</a>
+      <a class="en" href="MFB2.html">English</a>
+      <a href="https://metanoiagroup.vip/mgl1">Landing Personal</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Metanoia Football · MFB</p>
+    <h1 class="name">Arquitectura Estratégica<br>para el <em>Fútbol Profesional</em></h1>
+    <p class="roles">
+      Mario Garza Livas<br><span class="sep">·</span>Arquitecto de Sistemas de Alto Rendimiento<br><span class="sep">·</span>Asesor Estratégico<br><span class="sep">·</span>Consultor en Negocios de Fútbol<br><span class="sep">·</span>Agente Deportivo<br><span class="sep">·</span>CIO de Family Office<br><span class="sep">·</span>Profesor de Cátedra
+    </p>
+    <div class="locbar"><span class="dot"></span>Monterrey, Nuevo León, México</div>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#papers">Explorar los 15 Papers</a>
+      <a class="btn btn-ghost" href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp'})">Escribir por WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<section id="sobre">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">I</span>
+      <div>
+        <h2 class="sec-title">Acerca de <span class="name-accent">Mario Garza Livas</span> y <em>Metanoia Football</em></h2>
+        <p class="sec-sub">Quién es Mario, qué es MFB, y qué conecta a ambos.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        <strong>Mario Garza Livas</strong> es un estratega especializado en arquitectura y transformación del ecosistema del fútbol profesional. Su expertise abarca el desarrollo y estructuración del talento, la transformación institucional de clubes, la gobernanza y competitividad de ligas, el diseño de sistemas nacionales de talento y el análisis estratégico de la industria global del fútbol. A través de Metanoia Football, integra estrategia, inteligencia, tecnología e IA para abordar el fútbol no como una colección de organizaciones aisladas, sino como un sistema interdependiente en el que talento, instituciones y gobernanza determinan la ventaja competitiva.
+      </p>
+      <p class="lead">
+        <strong>Metanoia Football (MFB)</strong> es la vertical especializada en la industria del fútbol dentro de The Metanoia Group, la firma de transformación institucional que Garza Livas fundó y dirige. Bajo el sello editorial de MFB —y bajo su propio nombre— ha publicado un corpus de quince documentos de investigación aplicada que constituye, en conjunto, una arquitectura teórica integral para el fútbol profesional: desde el desarrollo individual de talento hasta la gobernanza de federaciones de fútbol y las oportunidades de sinergia inter-confederaciones, pasando por la transformación institucional de clubes específicos.
+      </p>
+      <p class="lead">
+        Ningún documento del corpus se sostiene de manera aislada. Todos comparten un mismo vocabulario técnico y una misma tesis de fondo: la ventaja competitiva sostenible no depende únicamente del talento o de los recursos disponibles, sino de la <strong>arquitectura institucional</strong> capaz de convertir ese potencial en desempeño realizado, de manera reproducible y a lo largo del tiempo.
+      </p>
+    </div>
+
+    <div class="stat-row reveal">
+      <div class="stat-item">
+        <div class="stat-num">15</div>
+        <div class="stat-label">Papers Publicados</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">7</div>
+        <div class="stat-label">Áreas de Especialización</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">1</div>
+        <div class="stat-label">Arquitectura Integral</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="especializacion">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">II</span>
+      <div>
+        <h2 class="sec-title">Áreas de <em>especialización</em></h2>
+        <p class="sec-sub">Siete dominios de práctica, derivados directamente del corpus de investigación.</p>
+      </div>
+    </div>
+
+    <div class="eco-grid reveal">
+      <a class="eco-card" href="#categoria-a">
+        <div class="eco-code">Categoría A</div>
+        <div class="eco-name">Framework Teórico del Talento Futbolístico</div>
+        <p class="eco-desc">Arquitectura conceptual general del desarrollo del futbolista: la interacción recurrente entre formación deliberada y exposición competitiva, capital de aprendizaje frente a capital de adaptación competitiva, y el diseño de currículos duales.</p>
+        <div class="eco-url"><span class="eco-tag">1 paper</span> <span class="arrow">→</span></div>
+      </a>
+      <a class="eco-card" href="#categoria-b">
+        <div class="eco-code">Categoría B</div>
+        <div class="eco-name">Arquitectura Nacional de Talento y Selecciones</div>
+        <p class="eco-desc">Diseño institucional de sistemas nacionales de producción de talento y de robustez competitiva de Selecciones Nacionales juveniles y mayores, bajo presión de torneos de margen de error mínimo.</p>
+        <div class="eco-url"><span class="eco-tag">4 papers</span> <span class="arrow">→</span></div>
+      </a>
+      <a class="eco-card" href="#categoria-c">
+        <div class="eco-code">Categoría C</div>
+        <div class="eco-name">Gobernanza y Arquitectura Sistémica de Ligas</div>
+        <p class="eco-desc">Rediseño estructural de la pirámide del fútbol profesional mexicano: ascenso y descenso, gobernanza federativa, concentración de poder y contrapesos institucionales.</p>
+        <div class="eco-url"><span class="eco-tag">2 papers</span> <span class="arrow">→</span></div>
+      </a>
+      <a class="eco-card" href="#categoria-d">
+        <div class="eco-code">Categoría D</div>
+        <div class="eco-name">Teoría General de Ventaja Competitiva Institucional</div>
+        <p class="eco-desc">Marco teórico aplicable a cualquier institución futbolística de élite: identidad institucional, capacidad competitiva, conversión de desempeño, y la naturaleza de los fosos competitivos sostenibles.</p>
+        <div class="eco-url"><span class="eco-tag">1 paper</span> <span class="arrow">→</span></div>
+      </a>
+      <a class="eco-card" href="#categoria-e">
+        <div class="eco-code">Categoría E</div>
+        <div class="eco-name">Transformación Institucional de Clubes Específicos</div>
+        <p class="eco-desc">Diagnóstico y hoja de ruta aplicados a instituciones concretas: crisis de continuidad, arquitecturas de capital y de gobierno, y benchmark competitivo frente a rivales directos.</p>
+        <div class="eco-url"><span class="eco-tag">2 papers</span> <span class="arrow">→</span></div>
+      </a>
+      <a class="eco-card" href="#categoria-f">
+        <div class="eco-code">Categoría F</div>
+        <div class="eco-name">Formación con el Club como Epicentro</div>
+        <p class="eco-desc">Auditoría y diseño de sistemas de cantera como activo institucional: censo, captación, formación, aceleración internacional, y la brecha entre calidad formativa y dominancia competitiva.</p>
+        <div class="eco-url"><span class="eco-tag">4 papers</span> <span class="arrow">→</span></div>
+      </a>
+      <a class="eco-card full" href="#categoria-g">
+        <div class="eco-code">Categoría G</div>
+        <div class="eco-name">Propuestas Estratégicas a Nivel Confederaciones</div>
+        <p class="eco-desc">Diseño de arquitecturas competitivas panamericanas: cómo CONCACAF y CONMEBOL pueden coordinar calendarios, torneos y propiedades deportivas para generar valor conjunto sin renunciar a su autonomía histórica.</p>
+        <div class="eco-url"><span class="eco-tag">1 paper</span> <span class="arrow">→</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="papers">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">III</span>
+      <div>
+        <h2 class="sec-title">Los <em>15 papers</em></h2>
+        <p class="sec-sub">Investigación aplicada, publicada bajo autoría de Mario Garza Livas y bajo el sello editorial de Metanoia Football. Cada documento incluye su resumen ejecutivo y descarga directa en PDF.</p>
+      </div>
+    </div>
+
+    <!-- DOCUMENTO GENERAL: BROCHURE MFB -->
+    <div class="featured-doc reveal">
+      <div class="featured-tag">Documento General · Oferta de Valor de MFB</div>
+      <div class="featured-title">Brochure Corporativo — Metanoia Football</div>
+      <p class="featured-desc">
+        A diferencia de los quince papers de investigación, este documento no desarrolla una tesis: describe a detalle la oferta de valor comercial de Metanoia Football — sus cuatro áreas de servicio y quince módulos, desde la Arquitectura de Carrera del jugador hasta la Inteligencia Estratégica a nivel ecosistema — y cómo cada uno se conecta con el corpus de investigación aplicada.
+      </p>
+      <a class="paper-dl" href="https://metanoiagroup.vip/downloads/MFB_Brochure_ES.pdf" target="_blank" rel="noopener">
+        <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+        Descargar Brochure (PDF)
+      </a>
+    </div>
+
+    <!-- CATEGORÍA A -->
+    <div id="categoria-a" class="cat-block reveal">
+      <div class="cat-header">
+        <span class="cat-letter">A</span>
+        <div class="cat-titlewrap"><span class="cat-title">Framework Teórico del Talento Futbolístico</span></div>
+        <span class="cat-count">1 paper</span>
+      </div>
+
+      <div class="paper-card">
+        <div class="paper-title">La Doble Hélice del Talento</div>
+        <p class="paper-abstract">
+          "La Doble Hélice del Talento" propone una nueva forma de entender el desarrollo del futbolista: no como un proceso lineal basado exclusivamente en la formación, sino como la interacción continua entre aprendizaje deliberado y exposición competitiva de calidad. Su tesis central sostiene que formar capacidades y competir no son procesos independientes, sino dos motores que se retroalimentan en una espiral constante: la formación construye capacidades, la competencia las pone a prueba en contextos de incertidumbre y presión, y la evidencia obtenida permite identificar nuevas necesidades de aprendizaje y adaptar el siguiente ciclo de desarrollo.
+        </p>
+        <p class="paper-abstract">
+          A partir de esta arquitectura, el whitepaper desarrolla un modelo integral que conecta talento, formación, competencia, pathways, medición y gobernanza institucional. Su propuesta desplaza el foco desde la cantidad de recursos, entrenamientos o minutos hacia la capacidad real del sistema para convertir potencial en adaptación y desempeño competitivo sostenible.
+        </p>
+        <a class="paper-dl" href="https://metanoiagroup.vip/downloads/La_Doble_Helice_del_Talento.pdf" target="_blank" rel="noopener">
+          <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+          Descargar PDF
+        </a>
+      </div>
+    </div>
+
+    <!-- CATEGORÍA B -->
+    <div id="categoria-b" class="cat-block reveal">
+      <div class="cat-header">
+        <span class="cat-letter">B</span>
+        <div class="cat-titlewrap"><span class="cat-title">Selección Mexicana</span></div>
+        <span class="cat-count">4 papers</span>
+      </div>
+
+      <div class="paper-card">
+        <div class="paper-title">La Refinería del Talento</div>
+        <p class="paper-abstract">
+          "La Refinería del Talento" plantea una pregunta central: ¿por qué un país con una enorme cultura futbolística, una gran base de jugadores y una infraestructura profesional consolidada no consigue convertir sistemáticamente ese potencial en talento de clase mundial? El documento sostiene que el problema no reside únicamente en los jugadores, los entrenadores o las selecciones, sino en el diseño del sistema que los produce.
+        </p>
+        <p class="paper-abstract">
+          La propuesta articula una arquitectura de largo plazo basada en identificación nacional, desarrollo estandarizado, evaluación multidimensional, aprendizaje longitudinal, competencia progresiva, aceleración profesional y gobernanza institucional. Su tesis de fondo es que una selección no puede superar de forma sostenida el techo de talento que produce su sistema.
+        </p>
+        <a class="paper-dl" href="https://metanoiagroup.vip/downloads/La_Refineria_del_Talento.pdf" target="_blank" rel="noopener">
+          <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+          Descargar PDF
+        </a>
+      </div>
+
+      <div class="paper-card">
+        <div class="paper-title">De la Escasez a la Abundancia Competitiva</div>
+        <p class="paper-abstract">
+          "De la Escasez a la Abundancia Competitiva" plantea una pregunta distinta sobre el desarrollo del fútbol mexicano: no cómo encontrar al próximo gran jugador, sino cómo construir un sistema capaz de producir talento de élite de manera repetible. El texto sostiene que el problema no radica únicamente en la calidad individual, sino en la distribución del talento, la densidad competitiva, las transiciones donde se pierde potencial y los incentivos que determinan cómo los jugadores progresan dentro del sistema.
+        </p>
+        <p class="paper-abstract">
+          Propone una arquitectura nacional de producción de talento —la Refinería— articulada en seis funciones: Censar, Captar, Formar, Hacer Élite, Aceleración e Identidad. Su tesis central es que México no necesita solamente mejores jugadores, sino suficientes jugadores buenos para que la competencia entre ellos eleve sistemáticamente a los mejores hacia niveles extraordinarios.
+        </p>
+        <a class="paper-dl" href="https://metanoiagroup.vip/downloads/De_la_Escasez_a_la_Abundancia_Competitiva.pdf" target="_blank" rel="noopener">
+          <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+          Descargar PDF
+        </a>
+      </div>
+
+      <div class="paper-card">
+        <div class="paper-title">La Ingeniería de la Conversión</div>
+        <p class="paper-abstract">
+          "La Ingeniería de la Conversión" propone una nueva forma de entender el rendimiento en el fútbol de selecciones: el talento, los recursos y el potencial no garantizan por sí mismos resultados. Su tesis central distingue entre el Techo Estructural —la capacidad que una nación puede construir a largo plazo— y la Conversión Situacional —la capacidad de transformar ese potencial en rendimiento competitivo cuando realmente importa.
+        </p>
+        <p class="paper-abstract">
+          Más allá de lo táctico, la obra plantea una arquitectura institucional para convertir el aprendizaje de cada ciclo en inteligencia competitiva acumulable. El documento sostiene que la ventaja competitiva no depende únicamente de tener más talento, sino de reducir las pérdidas, preservar la opcionalidad, adaptarse sin perder identidad y construir una institución capaz de convertir sistemáticamente su potencial en rendimiento.
+        </p>
+        <a class="paper-dl" href="https://metanoiagroup.vip/downloads/La_Ingenieria_de_la_Conversion.pdf" target="_blank" rel="noopener">
+          <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+          Descargar PDF
+        </a>
+      </div>
+
+      <div class="paper-card">
+        <div class="paper-title">Sistema Integral de Robustez Competitiva</div>
+        <p class="paper-abstract">
+          El "Sistema Integral de Robustez Competitiva (SIRC)" propone un cambio de paradigma en la manera de entender el alto rendimiento de las Selecciones Nacionales: el éxito no depende únicamente del talento disponible o de la calidad táctica, sino de la capacidad de una organización para convertir ese potencial en rendimiento estable bajo condiciones de máxima presión, incertidumbre y margen de error reducido.
+        </p>
+        <p class="paper-abstract">
+          Más que un conjunto de herramientas deportivas, el SIRC plantea una transformación institucional: medir aquello que precede al resultado, convertir los datos en decisiones, transformar cada experiencia en aprendizaje y preservar ese conocimiento más allá de entrenadores, generaciones o administraciones.
+        </p>
+        <a class="paper-dl" href="https://metanoiagroup.vip/downloads/Sistema_Integral_De_Robustez_Competitiva.pdf" target="_blank" rel="noopener">
+          <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+          Descargar PDF
+        </a>
+      </div>
+    </div>
+
+    <!-- CATEGORÍA C -->
+    <div id="categoria-c" class="cat-block reveal">
+      <div class="cat-header">
+        <span class="cat-letter">C</span>
+        <div class="cat-titlewrap"><span class="cat-title">Pirámide Divisional del Fútbol Mexicano</span></div>
+        <span class="cat-count">2 papers</span>
+      </div>
+
+      <div class="paper-card">
+        <div class="paper-title">La Estructura Paralela</div>
+        <p class="paper-abstract">
+          "La Estructura Paralela" plantea que los principales problemas del fútbol profesional mexicano no son únicamente deportivos, sino fundamentalmente institucionales y estructurales. A partir del cierre de la pirámide de ascenso y descenso, el texto propone repensar la arquitectura del fútbol nacional: crear una estructura paralela, independiente y sostenible que permita recuperar el mérito deportivo, desarrollar talento, fortalecer a los clubes y ampliar la presencia del fútbol profesional en distintas regiones del país.
+        </p>
+        <p class="paper-abstract">
+          La propuesta de la Unión Mexicana de Fútbol (UMF) busca construir ese ecosistema desde abajo hacia arriba, mediante una organización basada en clubes, gobernanza independiente, reglas transparentes, desarrollo integral de jugadores, disciplina financiera, infraestructura compartida y un modelo comercial propio.
+        </p>
+        <a class="paper-dl" href="https://metanoiagroup.vip/downloads/La_Estructura_Paralela.pdf" target="_blank" rel="noopener">
+          <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+          Descargar PDF
+        </a>
+      </div>
+
+      <div class="paper-card">
+        <div class="paper-title">El Expediente de Gobernanza</div>
+        <p class="paper-abstract">
+          "El Expediente de Gobernanza" analiza la arquitectura institucional del fútbol mexicano desde una perspectiva jurídica, económica y de gobernanza, y sostiene que el principal desafío del sistema no radica únicamente en la creciente autonomía y poder económico de la Liga MX, sino en la ausencia de contrapesos capaces de impedir que esa concentración de poder se traduzca en una captura estructural de las decisiones que afectan al conjunto del fútbol federado.
+        </p>
+        <p class="paper-abstract">
+          El expediente propone una estrategia progresiva que distingue entre cuestionar decisiones deportivas concretas y corregir las estructuras que las producen, articulando un marco de actuación jurídica y procesal y una reforma estructural basada en cinco pilares: redistribución del poder interno, separación funcional entre Federación y Liga, protección de la Selección Nacional, recuperación de la función de custodio de toda la pirámide futbolística y establecimiento de contrapesos externos.
+        </p>
+        <a class="paper-dl" href="https://metanoiagroup.vip/downloads/El_Expediente_de_Gobernanza.pdf" target="_blank" rel="noopener">
+          <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+          Descargar PDF
+        </a>
+      </div>
+    </div>
+
+    <!-- CATEGORÍA D -->
+    <div id="categoria-d" class="cat-block reveal">
+      <div class="cat-header">
+        <span class="cat-letter">D</span>
+        <div class="cat-titlewrap"><span class="cat-title">Framework Teórico sobre la Dominancia a Nivel Clubes</span></div>
+        <span class="cat-count">1 paper</span>
+      </div>
+
+      <div class="paper-card">
+        <div class="paper-title">La Arquitectura de la Ventaja</div>
+        <p class="paper-abstract">
+          "La Arquitectura de la Ventaja" propone un marco para comprender por qué algunas instituciones deportivas alcanzan una superioridad sostenida mientras otras, pese a contar con recursos, talento o éxitos puntuales, no consiguen reproducirlos en el tiempo. El texto plantea que la grandeza institucional no puede explicarse por variables aisladas como el presupuesto, el entrenador o la calidad de los jugadores, sino por la interacción entre identidad, estrategia, capacidad competitiva y conversión del potencial en desempeño.
+        </p>
+        <p class="paper-abstract">
+          A partir de esta premisa, el documento desarrolla una visión sistémica del club como una arquitectura de capacidades interdependientes, identifica las fugas de desempeño que impiden convertir todo el potencial disponible en resultados y analiza los mecanismos de aprendizaje, adaptación y renovación que permiten sostener una ventaja frente a rivales que también evolucionan.
+        </p>
+        <a class="paper-dl" href="https://metanoiagroup.vip/downloads/La_Arquitectura_de_la_Ventaja.pdf" target="_blank" rel="noopener">
+          <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+          Descargar PDF
+        </a>
+      </div>
+    </div>
+
+    <!-- CATEGORÍA E -->
+    <div id="categoria-e" class="cat-block reveal">
+      <div class="cat-header">
+        <span class="cat-letter">E</span>
+        <div class="cat-titlewrap"><span class="cat-title">Clubes Específicos</span></div>
+        <span class="cat-count">2 papers</span>
+      </div>
+
+      <div class="paper-card">
+        <div class="paper-title">Tigres Eterno: Capacidad, Conversión y Arquetipo</div>
+        <p class="paper-abstract">
+          "Tigres Eterno: Capacidad, Conversión y Arquetipo" es una obra de diagnóstico y transformación institucional que parte de una pregunta esencial: ¿cómo puede una institución que alcanzó una época extraordinaria de éxito conservar su grandeza cuando desaparece la generación que la hizo posible? A partir del caso de Tigres, el texto sostiene que el desafío no consiste únicamente en recuperar resultados deportivos, sino en convertir los activos existentes —identidad, marca, afición, capital, infraestructura y talento— en una arquitectura institucional capaz de producir competitividad de manera consistente y sostenible.
+        </p>
+        <p class="paper-abstract">
+          La obra propone una visión integral que conecta identidad, capacidad competitiva, conversión del desempeño, liderazgo, gobierno, cantera, aprendizaje, capital, ecosistema y medición, con una hoja de ruta hacia 2035.
+        </p>
+        <a class="paper-dl" href="https://metanoiagroup.vip/downloads/Tigres_Eterno.pdf" target="_blank" rel="noopener">
+          <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+          Descargar PDF
+        </a>
+      </div>
+
+      <div class="paper-card">
+        <div class="paper-title">Rayados: La Segunda Fundación</div>
+        <p class="paper-abstract">
+          "Rayados: La Segunda Fundación" propone una reflexión sobre qué necesita una institución deportiva para trascender los ciclos de personas, temporadas y resultados, y convertirse en una organización estructuralmente superior. Su tesis central parte de una distinción fundamental entre capacidad competitiva —lo que una institución es capaz de alcanzar— y conversión competitiva —su capacidad para transformar ese potencial en desempeño real—, y desarrolla una arquitectura basada en cinco capacidades interdependientes: Capital, Talento, Inteligencia, Plataforma e Institución.
+        </p>
+        <p class="paper-abstract">
+          La verdadera ambición de la «Segunda Fundación» no es únicamente ganar más, sino construir una institución capaz de aprender, reinventarse y mantener su competitividad cuando cambien sus líderes, entrenadores y generaciones de jugadores.
+        </p>
+        <a class="paper-dl" href="https://metanoiagroup.vip/downloads/Rayados_La_Segunda_Fundacion.pdf" target="_blank" rel="noopener">
+          <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+          Descargar PDF
+        </a>
+      </div>
+    </div>
+
+    <!-- CATEGORÍA F -->
+    <div id="categoria-f" class="cat-block reveal">
+      <div class="cat-header">
+        <span class="cat-letter">F</span>
+        <div class="cat-titlewrap"><span class="cat-title">Formación con el Club como Epicentro</span></div>
+        <span class="cat-count">4 papers</span>
+      </div>
+
+      <div class="paper-card">
+        <div class="paper-title">Más Allá de la Academia</div>
+        <p class="paper-abstract">
+          "Más Allá de la Academia" analiza el caso de Independiente del Valle para explorar una pregunta más amplia: ¿cómo se construye un sistema capaz de convertir talento potencial en jugadores profesionales de manera consistente y sostenible? El documento propone mirar más allá de la academia tradicional y entender el desarrollo como una cadena integrada de identificación, captación, formación, competencia, adaptación, aceleración, movilidad y realización.
+        </p>
+        <p class="paper-abstract">
+          A partir de conceptos como Densidad Competitiva, Capital de Adaptación Competitiva, Meritocracia, Distancia Competitiva y Valor Marginal de Aprendizaje, el texto plantea que la verdadera ventaja no reside en acumular talento, sino en diseñar las condiciones que obligan a ese talento a desarrollarse.
+        </p>
+        <a class="paper-dl" href="https://metanoiagroup.vip/downloads/Mas_Alla_de_la_Academia.pdf" target="_blank" rel="noopener">
+          <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+          Descargar PDF
+        </a>
+      </div>
+
+      <div class="paper-card">
+        <div class="paper-title">El Club como Refinería de Talento</div>
+        <p class="paper-abstract">
+          "El Club como Refinería de Talento" propone una nueva forma de entender la producción de futbolistas: no como el resultado aislado de una buena cantera, sino como el producto de un sistema integral, medible y reproducible. El texto articula seis capacidades —Censo, Descubrimiento, Formación, Alto Rendimiento, Aceleración Internacional e Identidad— y las conecta con doce áreas de calidad que permiten evaluar dónde un club genera valor, dónde pierde talento y qué condiciones determinan su capacidad real para convertir potencial en rendimiento profesional.
+        </p>
+        <p class="paper-abstract">
+          Más que un manual de entrenamiento, el documento es un marco de diseño y auditoría institucional que combina metodología de desarrollo, identificación de talento, capital humano, cuidado cognitivo y físico, competencia, infraestructura, conectividad y mecanismos de medición.
+        </p>
+        <a class="paper-dl" href="https://metanoiagroup.vip/downloads/El_Club_como_Refineria_de_Talento.pdf" target="_blank" rel="noopener">
+          <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+          Descargar PDF
+        </a>
+      </div>
+
+      <div class="paper-card">
+        <div class="paper-title">La Paradoja Mexicana</div>
+        <p class="paper-abstract">
+          "La Paradoja Mexicana" analiza una aparente contradicción del fútbol mexicano: algunos de sus clubes poseen academias con estructuras de formación comparables a referentes internacionales, pero esa excelencia no siempre se traduce en una dominancia equivalente de sus primeros equipos. A partir de un assessment institucional que evalúa veinte academias y cruza su calidad estructural (QA Score) con su rendimiento competitivo reciente (Cosecha U5A), el estudio demuestra que formar talento y convertirlo en rendimiento profesional son capacidades distintas.
+        </p>
+        <p class="paper-abstract">
+          La investigación propone que el principal desafío no está necesariamente en mejorar la academia, sino en cerrar la brecha entre formación y competición mediante mayor densidad competitiva, transiciones progresivas, movilidad y mejores estructuras intermedias.
+        </p>
+        <a class="paper-dl" href="https://metanoiagroup.vip/downloads/La_Paradoja_Mexicana.pdf" target="_blank" rel="noopener">
+          <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+          Descargar PDF
+        </a>
+      </div>
+
+      <div class="paper-card">
+        <div class="paper-title">La Cantera de Papel</div>
+        <p class="paper-abstract">
+          "La Cantera de Papel" plantea una pregunta estratégica fundamental para cualquier club de fútbol: ¿qué capacidad tendría para competir si mañana dejara de depender del mercado de fichajes? A partir de esta pregunta, el documento analiza la formación de jugadores no como una obligación regulatoria ni como un simple mecanismo de ahorro, sino como una infraestructura estratégica capaz de generar talento, valor económico, opcionalidad, resiliencia financiera, identidad, capital humano y ventaja competitiva sostenible.
+        </p>
+        <p class="paper-abstract">
+          La diferencia entre una "cantera de papel" y una verdadera cantera institucional no se define por lo que un club anuncia hoy, sino por las capacidades que decide construir y sostener durante los próximos cinco, diez o veinte años.
+        </p>
+        <a class="paper-dl" href="https://metanoiagroup.vip/downloads/La_Cantera_de_Papel.pdf" target="_blank" rel="noopener">
+          <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+          Descargar PDF
+        </a>
+      </div>
+    </div>
+
+    <!-- CATEGORÍA G -->
+    <div id="categoria-g" class="cat-block reveal">
+      <div class="cat-header">
+        <span class="cat-letter">G</span>
+        <div class="cat-titlewrap"><span class="cat-title">Propuestas Estratégicas a Nivel Confederaciones</span></div>
+        <span class="cat-count">1 paper</span>
+      </div>
+
+      <div class="paper-card">
+        <div class="paper-title">Hacia una Nueva Arquitectura del Fútbol de las Américas</div>
+        <p class="paper-abstract">
+          "Hacia una Nueva Arquitectura del Fútbol de las Américas" plantea una respuesta estratégica al profundo cambio que atraviesa el fútbol internacional tras la expansión de la Copa Mundial a 48 selecciones. El documento sostiene que la progresiva pérdida de función de las eliminatorias tradicionales abre una oportunidad histórica para que CONCACAF y CONMEBOL pasen de operar principalmente como ecosistemas separados a construir una arquitectura competitiva panamericana, sin renunciar a su autonomía ni a sus competiciones históricas.
+        </p>
+        <p class="paper-abstract">
+          La propuesta se articula alrededor de tres nuevos pilares —una Panamerican Nations League, una Copa América renovada y una Copa Libertadores de América – Final 8— diseñados para elevar simultáneamente el nivel competitivo, la exposición internacional y el valor comercial del fútbol continental. Más que crear torneos adicionales, la arquitectura busca conectar mercados, calendarios y propiedades deportivas para generar valor nuevo, preservar la identidad histórica de ambas confederaciones y establecer una plataforma adaptable tanto al actual Mundial de 48 selecciones como a un eventual escenario de 64.
+        </p>
+        <a class="paper-dl" href="https://metanoiagroup.vip/downloads/Hacia_una_Nueva_Arquitectura_del_Futbol_de_las_Americas.pdf" target="_blank" rel="noopener">
+          <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+          Descargar PDF
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="enlaces">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">IV</span>
+      <div>
+        <h2 class="sec-title">Enlaces <em>relevantes</em></h2>
+        <p class="sec-sub">Más contenido, más contexto, y el resto del ecosistema.</p>
+      </div>
+    </div>
+
+    <div class="eco-grid reveal">
+      <a class="eco-card full" href="https://www.linkedin.com/in/garzalivas/recent-activity/articles/" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'contact','event_label':'linkedin'})">
+        <div class="eco-code">Enlace 1</div>
+        <div class="eco-name">Artículos en LinkedIn</div>
+        <p class="eco-desc">Más ensayos y artículos de Mario Garza Livas, publicados de forma continua en LinkedIn.</p>
+        <div class="eco-url">linkedin.com/in/garzalivas <span class="arrow">→</span></div>
+      </a>
+      <a class="eco-card" href="https://metanoiagroup.vip/mgl1" target="_blank" rel="noopener">
+        <div class="eco-code">Enlace 2</div>
+        <div class="eco-name">Landing Page Personal</div>
+        <p class="eco-desc">Contacto directo, CV, documentos y el ecosistema completo de Mario Garza Livas.</p>
+        <div class="eco-url">metanoiagroup.vip/mgl1 <span class="arrow">→</span></div>
+      </a>
+      <a class="eco-card" href="https://metanoiagroup.vip/" target="_blank" rel="noopener">
+        <div class="eco-code">Enlace 3</div>
+        <div class="eco-name">The Metanoia Group</div>
+        <p class="eco-desc">Arquitectura de antifragilidad para el líder, su empresa y su patrimonio.</p>
+        <div class="eco-url">metanoiagroup.vip <span class="arrow">→</span></div>
+      </a>
+      <a class="eco-card" href="https://natio.one" target="_blank" rel="noopener">
+        <div class="eco-code">Enlace 4</div>
+        <div class="eco-name">Natio</div>
+        <p class="eco-desc">Representación de deportistas.</p>
+        <div class="eco-url">natio.one <span class="arrow">→</span></div>
+      </a>
+      <a class="eco-card" href="https://www.fournations.football" target="_blank" rel="noopener">
+        <div class="eco-code">Enlace 5</div>
+        <div class="eco-name">Four Nations Football Consulting</div>
+        <p class="eco-desc">Consultoría en negocios de fútbol.</p>
+        <div class="eco-url">fournations.football <span class="arrow">→</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-brand">Metanoia Football</div>
+    <div class="footer-tagline">Arquitectura estratégica para el ecosistema del fútbol profesional.</div>
+    <div class="footer-role"><strong>Mario Garza Livas</strong><br> · Arquitecto de Sistemas de Alto Rendimiento<br> · Asesor Estratégico<br> · Consultor en Negocios de Fútbol<br> · Agente Deportivo<br> · CIO de Family Office<br> · Profesor de Cátedra</div>
+    <div class="footer-contacts">
+      <a href="mailto:mario@metanoiagroup.vip">mario@metanoiagroup.vip</a>
+      <span>·</span>
+      <a href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp'})">+52 (81) 2513 6784</a>
+      <span>·</span>
+      <a href="https://linkedin.com/in/garzalivas" onclick="gtag('event','click',{'event_category':'contact','event_label':'linkedin'})">linkedin.com/in/garzalivas</a>
+    </div>
+    <p class="footer-motto">Estructura estabiliza.<br>Propósito dirige.<br>Adaptación sostiene.</p>
+
+    <div class="footer-bottom">
+      <span class="copyright">© 2026 Metanoia Football · The Metanoia Group</span>
+      <a class="footer-en" href="MFB2.html">English →</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.12});
+  els.forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>

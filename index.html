@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="New_Favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Metanoia Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #B8962E;
+    --gold-light: #D4B45A;
+    --gold-dim: rgba(184,150,46,0.10);
+    --navy: #1E2D3D;
+    --charcoal: #1A1A1A;
+    --mid: #4A4A4A;
+    --soft: #7A7A7A;
+    --rule: #E2DDD6;
+    --bg: #FAFAF8;
+    --white: #FFFFFF;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--charcoal);
+    font-family: 'Jost', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(250,250,248,0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--rule);
+    height: 72px;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 60px;
+  }
+  .nav-logo img { height: 52px; width: auto; display: block; }
+  .nav-links { display: flex; align-items: center; gap: 44px; list-style: none; }
+  .nav-links a {
+    font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 400;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--soft); text-decoration: none; transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--charcoal); }
+  .nav-lang { color: var(--gold) !important; border-bottom: 1px solid var(--gold); padding-bottom: 1px; }
+
+  /* SHARED */
+  .section-inner { max-width: 1200px; margin: 0 auto; padding: 120px 60px; }
+  .rule { width: 48px; height: 1px; background: var(--gold); margin-bottom: 32px; }
+  .label {
+    font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 400;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 24px;
+  }
+
+  /* HERO */
+  #hero { padding-top: 200px; padding-bottom: 160px; max-width: 1200px; margin: 0 auto; padding-left: 60px; padding-right: 60px; }
+  .hero-statement {
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    font-size: clamp(52px, 6.5vw, 88px); font-weight: 300;
+    line-height: 1.08; color: var(--charcoal); letter-spacing: -0.01em; max-width: 900px;
+  }
+  .hero-statement em { font-style: italic; color: var(--gold); }
+
+  /* IDENTITY */
+  #identity { border-top: 1px solid var(--rule); }
+  .identity-text {
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    font-size: 26px; font-weight: 300; line-height: 1.65; color: var(--charcoal);
+    max-width: 680px;
+  }
+
+  /* PROBLEM */
+  #problem { border-top: 1px solid var(--rule); }
+  .problem-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 80px; }
+  .problem-body {
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    font-size: 22px; font-weight: 300; line-height: 1.75; color: var(--charcoal);
+  }
+  .problem-body p + p { margin-top: 1.6em; }
+  .problem-body em { font-style: italic; color: var(--gold); }
+
+  /* DIMENSIONS */
+  #dimensions { background: var(--navy); }
+  #dimensions .rule { background: var(--gold-light); }
+  #dimensions .label { color: var(--gold-light); }
+  .dimensions-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+  .dim-title {
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    font-size: clamp(32px, 3.2vw, 46px); font-weight: 300;
+    line-height: 1.25; color: #F5F0E8; margin-bottom: 40px;
+  }
+  .dim-body {
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    font-size: 20px; font-weight: 300; line-height: 1.8; color: rgba(245,240,232,0.75);
+  }
+  .dim-body p + p { margin-top: 1.5em; }
+  .dim-close {
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    font-size: 20px; font-style: italic; font-weight: 400; color: #F5F0E8;
+    border-top: 1px solid rgba(255,255,255,0.12); padding-top: 40px; margin-top: 40px;
+  }
+
+  /* VERTICALS */
+  #verticals { border-top: 1px solid var(--rule); }
+  .verticals-intro { margin-bottom: 56px; }
+  .verticals-tagline {
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    font-size: 36px; font-weight: 300; line-height: 1.4; color: var(--charcoal);
+    margin-bottom: 8px;
+  }
+  .verticals-sub {
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    font-size: 20px; font-weight: 300; line-height: 1.75; color: var(--mid);
+  }
+  .v-msa { border: 1px solid var(--gold); padding: 48px; margin-bottom: 2px; background: var(--gold-dim); }
+  .v-msa-code { font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+  .v-msa-name { font-family: 'Cormorant Garamond', 'Georgia', serif; font-size: 28px; font-weight: 400; color: var(--charcoal); margin-bottom: 12px; }
+  .v-msa-desc { font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 300; color: var(--mid); line-height: 1.6; }
+  .v-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2px; margin-bottom: 2px; }
+  .v-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+  .v-card { border: 1px solid var(--rule); padding: 40px 36px; transition: border-color 0.2s, background 0.2s; }
+  .v-card:hover { border-color: var(--gold); background: var(--gold-dim); }
+  .v-code { font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+  .v-name { font-family: 'Cormorant Garamond', 'Georgia', serif; font-size: 22px; font-weight: 400; color: var(--charcoal); margin-bottom: 12px; }
+  .v-desc { font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 300; color: var(--mid); line-height: 1.65; }
+
+  /* DIFFERENTIATORS */
+  #differentiators { background: var(--white); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  .diff-item { display: grid; grid-template-columns: 80px 1fr 1fr; gap: 60px; align-items: start; padding: 56px 0; border-bottom: 1px solid var(--rule); }
+  .diff-item:first-child { border-top: 1px solid var(--rule); }
+  .diff-num { font-family: 'Cormorant Garamond', 'Georgia', serif; font-size: 64px; font-weight: 300; color: var(--rule); line-height: 1; }
+  .diff-title { font-family: 'Cormorant Garamond', 'Georgia', serif; font-size: 28px; font-weight: 400; color: var(--charcoal); margin-bottom: 8px; }
+  .diff-subtitle { font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); }
+  .diff-body { font-family: 'Cormorant Garamond', 'Georgia', serif; font-size: 19px; font-weight: 300; line-height: 1.8; color: var(--mid); }
+  .diff-body p + p { margin-top: 1.4em; }
+  .diff-body em { font-style: italic; color: var(--charcoal); }
+
+  /* MARIO */
+  #mario { border-top: 1px solid var(--rule); }
+  .mario-body { font-family: 'Cormorant Garamond', 'Georgia', serif; font-size: 22px; font-weight: 300; line-height: 1.75; color: var(--charcoal); max-width: 680px; }
+  .mario-body p + p { margin-top: 1.5em; }
+
+  /* DOOR */
+  #door { background: var(--charcoal); }
+  #door .rule { background: var(--gold-light); }
+  #door .label { color: var(--gold-light); }
+  .door-inner { max-width: 860px; margin: 0 auto; padding: 160px 60px; }
+  .door-body {
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    font-size: clamp(20px, 2.2vw, 28px); font-weight: 300; line-height: 1.75;
+    color: #F5F0E8; margin-bottom: 56px;
+  }
+  .door-question {
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    font-size: clamp(26px, 2.8vw, 40px); font-weight: 400; font-style: italic;
+    color: var(--gold-light); margin-bottom: 32px; line-height: 1.3;
+  }
+  .door-times {
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    font-size: 20px; font-weight: 300; font-style: italic;
+    color: rgba(245,240,232,0.5); margin-bottom: 64px; line-height: 1.7;
+  }
+  .door-cta {
+    display: inline-block;
+    font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 400;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--charcoal); background: var(--gold-light);
+    padding: 20px 52px; text-decoration: none; transition: background 0.2s;
+  }
+  .door-cta:hover { background: var(--gold); }
+
+  /* FOOTER */
+  footer {
+    background: var(--charcoal);
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 60px 60px 48px;
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; align-items: end;
+  }
+  .footer-wordmark { display: flex; flex-direction: column; gap: 2px; margin-bottom: 16px; }
+  .footer-wm-the { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 300; letter-spacing: 0.38em; color: rgba(245,240,232,0.5); }
+  .footer-wm-metanoia { font-family: 'Cormorant Garamond', 'Georgia', serif; font-size: 32px; font-weight: 400; letter-spacing: 0.06em; color: var(--gold-light); line-height: 1.1; }
+  .footer-wm-group { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 300; letter-spacing: 0.38em; color: rgba(245,240,232,0.5); }
+  .footer-tagline { font-family: 'Cormorant Garamond', 'Georgia', serif; font-size: 14px; font-style: italic; color: rgba(245,240,232,0.4); line-height: 1.6; }
+  .footer-contact-name { font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 400; letter-spacing: 0.1em; color: rgba(245,240,232,0.7); margin-bottom: 12px; }
+  .footer-contact a { display: block; font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 300; color: rgba(245,240,232,0.4); text-decoration: none; margin-bottom: 6px; transition: color 0.2s; }
+  .footer-contact a:hover { color: var(--gold-light); }
+  .footer-pillars { text-align: right; }
+  .footer-pillars p { font-family: 'Cormorant Garamond', 'Georgia', serif; font-size: 13px; font-style: italic; color: rgba(245,240,232,0.3); line-height: 1.8; }
+  .footer-bottom { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 28px; display: flex; justify-content: space-between; align-items: center; }
+  .footer-copy { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 300; color: rgba(245,240,232,0.2); letter-spacing: 0.08em; }
+  .footer-lang a { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 300; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(245,240,232,0.3); text-decoration: none; margin-left: 16px; }
+
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--rule); border-radius: 2px; }
+</style>
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KHNZVPJX1N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KHNZVPJX1N');
+</script>
+<!-- SEO Meta Tags -->
+<meta name="description" content="Fortalecemos al líder, su empresa y su patrimonio bajo una arquitectura coherente de alto rendimiento. Persona · Empresa · Patrimonio.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://metanoiagroup.vip/">
+<!-- Open Graph / WhatsApp / LinkedIn -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://metanoiagroup.vip/">
+<meta property="og:title" content="The Metanoia Group — Arquitectura de Antifragilidad">
+<meta property="og:description" content="Fortalecemos al líder, su empresa y su patrimonio bajo una arquitectura coherente de alto rendimiento. Persona · Empresa · Patrimonio.">
+<meta property="og:image" content="https://metanoiagroup.vip/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="The Metanoia Group">
+<meta property="og:locale" content="es_MX">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Metanoia Group — Arquitectura de Antifragilidad">
+<meta name="twitter:description" content="Fortalecemos al líder, su empresa y su patrimonio bajo una arquitectura coherente de alto rendimiento. Persona · Empresa · Patrimonio.">
+<meta name="twitter:image" content="https://metanoiagroup.vip/og-image.jpg">
+</head>
+<body>
+
+<!-- SECCIÓN 1 — NAVEGACIÓN -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="New_Logo.svg" alt="The Metanoia Group">
+  </a>
+  <ul class="nav-links">
+    <li><a href="el-marco.html">El Marco</a></li>
+    <li><a href="el-modelo.html">El Modelo</a></li>
+    <li><a href="mario.html">Mario</a></li>
+    <li><a href="mision.html">Misión</a></li>
+    <li><a href="conversacion.html">Conversación</a></li>
+    <li><a href="en.html" class="nav-lang">EN</a></li>
+  </ul>
+</nav>
+
+<!-- SECCIÓN 2 — APERTURA / HERO -->
+<section id="hero">
+  <h1 class="hero-statement">
+    El caos no es el problema.<br>
+    <em>Nunca lo fue.</em><br>
+    El problema es lo que el caos le hace<br>
+    a un sistema que no fue construido para él.
+  </h1>
+</section>
+
+<!-- SECCIÓN 3 — IDENTIDAD -->
+<section id="identity">
+  <div class="section-inner">
+    <div class="rule"></div>
+    <p class="identity-text">
+      The Metanoia Group no es una firma de consultoría.<br>
+      Es una arquitectura de antifragilidad —<br>
+      para el líder, su empresa y su patrimonio,<br>
+      como un solo sistema integrado.<br>
+      <br>
+      Construida sobre una premisa:<br>
+      lo que no está correctamente ordenado<br>
+      no puede permanecer estable.
+    </p>
+  </div>
+</section>
+
+<!-- SECCIÓN 4 — EL PROBLEMA CENTRAL -->
+<section id="problem">
+  <div class="section-inner">
+    <div class="problem-grid">
+      <div>
+        <div class="rule"></div>
+        <div class="label">El Problema Central</div>
+      </div>
+      <div class="problem-body">
+        <p>A cierto nivel de éxito, el problema cambia de naturaleza.<br>
+        Ya no es talento. Ya no es esfuerzo.<br>
+        Ya no es la calidad de tus asesores.</p>
+        <p>Es que nadie — ninguno de ellos —<br>
+        sostiene la visión del sistema completo.<br>
+        Cada uno trabaja su carril.<br>
+        Nadie integra el todo.</p>
+        <p>Y un sistema sin integración no es un sistema.<br>
+        Es una colección de partes<br>
+        esperando que el entorno no las ponga a prueba...</p>
+        <p><em>El entorno ya las está poniendo a prueba.</em></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN 5 — LAS DOS DIMENSIONES -->
+<section id="dimensions">
+  <div class="section-inner">
+    <div class="dimensions-grid">
+      <div>
+        <div class="rule"></div>
+        <div class="label">Las Dos Dimensiones</div>
+        <h2 class="dim-title">El sistema de un líder tiene dos dimensiones que no pueden separarse.</h2>
+      </div>
+      <div>
+        <div class="dim-body">
+          <p>La primera es el dominio —<br>
+          la persona que lidera,<br>
+          la empresa que construye,<br>
+          el patrimonio que genera.</p>
+          <p>La segunda es la profundidad —<br>
+          la estructura de lo que existe,<br>
+          el propósito de por qué existe,<br>
+          la adaptación de cómo resiste cuando el entorno presiona.</p>
+          <p>Todo sistema tiene las dos dimensiones.<br>
+          La mayoría de los asesores ven una.<br>
+          Ninguno sostiene la coherencia entre ambas —<br>
+          en los tres dominios,<br>
+          al mismo tiempo...</p>
+        </div>
+        <div class="dim-close">Eso es exactamente lo que hacemos.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN 6 — LAS SEIS VERTICALES -->
+<section id="verticals">
+  <div class="section-inner">
+    <div class="verticals-intro">
+      <div class="rule"></div>
+      <div class="label">Las Seis Verticales</div>
+      <h2 class="verticals-tagline">Seis verticales. Un sistema.</h2>
+      <p class="verticals-sub">Cada una resuelve una capa.<br>Todas responden a una arquitectura central.</p>
+    </div>
+
+    <div class="v-msa">
+      <div class="v-msa-code">MSA</div>
+      <div class="v-msa-name">Metanoia Strategic Advisory</div>
+      <div class="v-msa-desc">La relación central. Donde el sistema completo se sostiene y se activa.</div>
+    </div>
+
+    <div class="v-grid-3">
+      <div class="v-card">
+        <div class="v-code">MEC</div>
+        <div class="v-name">Metanoia Executive Coaching</div>
+        <div class="v-desc">La arquitectura del líder. La base de la que emerge todo lo demás.</div>
+      </div>
+      <div class="v-card">
+        <div class="v-code">MBC</div>
+        <div class="v-name">Metanoia Business Consulting</div>
+        <div class="v-desc">La arquitectura de la empresa. De talento sin estructura a institución que perdura.</div>
+      </div>
+      <div class="v-card">
+        <div class="v-code">MWS</div>
+        <div class="v-name">Metanoia Wealth Strategies</div>
+        <div class="v-desc">La arquitectura del patrimonio. De colección de activos a sistema con orden y propósito.</div>
+      </div>
+    </div>
+
+    <div class="v-grid-2">
+      <div class="v-card">
+        <div class="v-code">MES</div>
+        <div class="v-name">Metanoia Executive Services</div>
+        <div class="v-desc">El soporte operativo que libera al líder para lo que solo él puede hacer.</div>
+      </div>
+      <div class="v-card">
+        <div class="v-code">MFB</div>
+        <div class="v-name">Metanoia Football</div>
+        <div class="v-desc">Los mismos principios. En uno de los entornos de mayor presión del mundo: el fútbol profesional.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN 6.5 — LOS TRES DIFERENCIADORES -->
+<section id="differentiators">
+  <div class="section-inner">
+    <div class="rule"></div>
+    <div class="label">Los Tres Diferenciadores</div>
+
+    <div class="diff-item">
+      <div class="diff-num">01</div>
+      <div>
+        <div class="diff-title">Inteligencia Artificial</div>
+        <div class="diff-subtitle">Artificial Intelligence</div>
+      </div>
+      <div class="diff-body">
+        <p>La mayoría de las firmas usan IA para mejorar el análisis.<br>
+        Nosotros la usamos para algo distinto:<br>
+        una capa de inteligencia continua<br>
+        que acompaña al líder, su empresa y su patrimonio —<br>
+        no entre sesiones.<br>
+        Siempre.</p>
+        <p>En el centro de esa capa:<br>
+        tres consejos asesores agénticos —<br>
+        uno para el líder, uno para la empresa, uno para el patrimonio.<br>
+        Deliberando. Anticipando. Integrando.<br>
+        En tiempo real.</p>
+        <p>No reemplaza el juicio.<br>
+        Transforma la calidad desde la que se ejerce.</p>
+      </div>
+    </div>
+
+    <div class="diff-item">
+      <div class="diff-num">02</div>
+      <div>
+        <div class="diff-title">Alto Rendimiento</div>
+        <div class="diff-subtitle">High Performance</div>
+      </div>
+      <div class="diff-body">
+        <p>Los principios son fáciles de defender<br>
+        cuando el entorno es favorable.<br>
+        TMG los desarrolló y los probó<br>
+        en un entorno donde no lo es:<br>
+        el fútbol profesional de alto nivel —<br>
+        donde el margen de error es cero,<br>
+        el ganador se lo lleva todo,<br>
+        y la presión no es episódica.<br>
+        Es permanente.</p>
+        <p>Es el laboratorio del alto rendimiento más exigente del mundo.<br>
+        Y es donde nuestros marcos fueron forjados.</p>
+        <p>Lo que funciona ahí,<br>
+        funciona en cualquier lugar.</p>
+      </div>
+    </div>
+
+    <div class="diff-item">
+      <div class="diff-num">03</div>
+      <div>
+        <div class="diff-title">Dimensión Trascendental</div>
+        <div class="diff-subtitle">Transcendental Dimension</div>
+      </div>
+      <div class="diff-body">
+        <p>Todo sistema tiene un techo.<br>
+        El techo del operador mismo.</p>
+        <p>Mientras tú seas el origen —<br>
+        puedes construir estabilidad,<br>
+        gestionar claridad<br>
+        y mantener coherencia.<br>
+        Pero todo depende de tu estado interno bajo presión.</p>
+        <p>TMG construye antifragilidad.<br>
+        Pero existe algo mucho más potente:</p>
+        <p>No cuando el caos te fortalece.<br>
+        Sino cuando operas desde una perspectiva<br>
+        que el caos no puede tocar.</p>
+        <p>No es para todos.<br>
+        No se introduce. No se vende.<br>
+        Solo se reconoce —<br>
+        en quienes están alineados hacia un punto de referencia<br>
+        superior a sí mismos,<br>
+        y están listos para que ordene<br>
+        no solo su fe,<br>
+        sino su vida entera.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECCIÓN 7 — MARIO -->
+<section id="mario">
+  <div class="section-inner">
+    <div class="rule"></div>
+    <div class="label">Mario</div>
+    <div class="mario-body">
+      <p>Para construir arquitecturas de antifragilidad<br>
+      para líderes, empresas y patrimonios —<br>
+      en un mundo complejo, no lineal y sin reglas estables —<br>
+      se requiere algo que no existe en el mercado:</p>
+      <p>Alguien que entienda simultáneamente<br>
+      cómo se construye y se rompe una persona bajo presión,<br>
+      cómo se estructura y se destruye una empresa,<br>
+      cómo se protege y se pierde un patrimonio,<br>
+      cómo opera un entorno de alto rendimiento extremo,<br>
+      y cómo la inteligencia artificial<br>
+      puede convertirse en infraestructura de decisión —<br>
+      no como herramienta, sino como capa permanente.</p>
+      <p>No desde la teoría.<br>
+      Desde la experiencia directa, en cada dominio.</p>
+      <p>Lo que hace posible TMG<br>
+      no es lo que Mario sabe.<br>
+      Es lo que Mario es —<br>
+      alguien que encontró su propio orden correcto<br>
+      dentro del caos,<br>
+      y que desde ese lugar<br>
+      acompaña a otros a encontrar el suyo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN 8 — LA PUERTA -->
+<section id="door">
+  <div class="door-inner">
+    <div class="rule"></div>
+    <div class="label">La Puerta</div>
+    <p class="door-body">
+      TMG no es para todos.<br>
+      Es para el líder que ya construyó algo real —<br>
+      que opera en un entorno que le exige más<br>
+      de lo que su sistema actual puede sostener,<br>
+      y que sabe, con honestidad,<br>
+      que el problema no está en su esfuerzo.<br>
+      Está en su arquitectura.
+    </p>
+    <p class="door-body" style="margin-bottom:32px;">La conversación comienza con una sola pregunta:</p>
+    <p class="door-question">¿Está tu sistema correctamente ordenado?</p>
+    <p class="door-times">
+      No para tiempos tranquilos y estables<br>
+      en los que ya no puedes apostar.<br>
+      Sino para aquellos tiempos turbulentos y disruptivos<br>
+      que ya llegaron.
+    </p>
+    <a href="./downloads/TMG_Brochure_ES.pdf" download style="font-family:'Jost',sans-serif;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-dim);padding-bottom:2px;margin-bottom:28px;display:block;width:fit-content;">↓ Descargar Brochure Institucional TMG</a>
+    <a href="conversacion.html" class="door-cta">→ Iniciar conversación</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-wordmark">
+      <span class="footer-wm-the">THE</span>
+      <span class="footer-wm-metanoia">METANOIA</span>
+      <span class="footer-wm-group">GROUP</span>
+    </div>
+    <p class="footer-tagline">Persona. Empresa. Patrimonio.</p>
+  </div>
+  <div class="footer-contact">
+    <div class="footer-contact-name">Mario Garza Livas — Chief Strategic Advisor &bull; Founder &bull; CEO</div>
+    <a href="mailto:mario@metanoiagroup.vip">mario@metanoiagroup.vip</a>
+    <a href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp'})">+52 (81) 2513 6784</a>
+    <a href="https://linkedin.com/in/garzalivas" onclick="gtag('event','click',{'event_category':'contact','event_label':'linkedin'})">linkedin.com/in/garzalivas</a>
+  </div>
+  </div>
+  <div class="footer-pillars">
+    <p>Estructura estabiliza.<br>Propósito dirige.<br>Adaptación sostiene.</p>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">&copy; 2026 The Metanoia Group</span>
+    <div><a href="en.html">EN</a></div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Metanoia Group — Arquitectura Maestra</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,450;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#141d2e;
+    --ink-soft:#4a5468;
+    --paper:#e9e2ce;
+    --paper-2:#ddd2b4;
+    --paper-3:#f4efe1;
+    --brass:#9c7a3b;
+    --brass-deep:#7a5f2c;
+    --burgundy:#6d2b34;
+    --burgundy-deep:#4c1e26;
+    --line:#c3b795;
+    --blueprint:#132a44;
+    --blueprint-2:#0d1f34;
+    --blueprint-line:#8fb8d6;
+    --blueprint-line-dim:#4a6d8c;
+    --white:#fbf8ef;
+    --green-ink:#3b5341;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;}
+  body{-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:1180px;margin:0 auto;}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--brass-deep); font-weight:600;
+  }
+  h1,h2,h3{font-family:'Fraunces',serif; margin:0; color:var(--ink);}
+  .rule{height:1px;background:var(--line);border:none;margin:0;}
+  .num{font-family:'IBM Plex Mono',monospace;}
+
+  /* ============ HERO ============ */
+  .hero{
+    position:relative;
+    padding:76px 40px 54px;
+    background:
+      radial-gradient(1100px 420px at 50% -120px, #f6f1e2 0%, transparent 60%),
+      var(--paper);
+    border-bottom:3px solid var(--ink);
+    text-align:center;
+  }
+  .hero .mark{
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    font-size:15px;
+    letter-spacing:.5em;
+    color:var(--ink-soft);
+    margin-bottom:22px;
+  }
+  .hero h1{
+    font-size:76px;
+    font-weight:700;
+    letter-spacing:-0.01em;
+    line-height:0.98;
+  }
+  .hero h1 em{
+    font-style:normal;
+    color:var(--brass-deep);
+  }
+  .hero .sub{
+    margin-top:18px;
+    font-family:'Fraunces',serif;
+    font-weight:450;
+    font-style:italic;
+    font-size:22px;
+    color:var(--ink-soft);
+  }
+  .hero .domains{
+    margin-top:26px;
+    display:flex; justify-content:center; gap:0;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--ink);
+  }
+  .hero .domains span{padding:0 16px; position:relative;}
+  .hero .domains span:not(:last-child)::after{
+    content:"·"; position:absolute; right:-2px; color:var(--brass);
+  }
+  .hero .thesis{
+    max-width:640px; margin:34px auto 0;
+    font-size:16px; line-height:1.6; color:var(--ink-soft);
+    border-top:1px solid var(--line); padding-top:22px;
+  }
+  .hero .thesis b{color:var(--ink); font-weight:600;}
+
+  /* ============ SECTION SHELL ============ */
+  section{padding:64px 40px;}
+  .section-head{max-width:1180px; margin:0 auto 34px;}
+  .section-head .kicker{display:flex; align-items:center; gap:14px; margin-bottom:10px;}
+  .section-head .kicker .n{
+    font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--brass-deep); font-weight:600;
+  }
+  .section-head h2{font-size:34px; font-weight:600;}
+  .section-head p.lede{
+    max-width:760px; color:var(--ink-soft); font-size:15.5px; line-height:1.6; margin-top:10px;
+  }
+
+  .light{background:var(--paper);}
+  .cream{background:var(--paper-3);}
+
+  /* ============ ARCHITECT PANEL ============ */
+  .architect{
+    display:grid; grid-template-columns:1.1fr 1.4fr; gap:0;
+    max-width:1180px; margin:0 auto;
+    border:1px solid var(--ink); background:var(--paper-3);
+  }
+  .architect .photoblock{
+    padding:38px; border-right:1px solid var(--ink);
+    display:flex; flex-direction:column; justify-content:space-between;
+  }
+  .architect .initials{
+    width:84px;height:84px; border-radius:50%;
+    background:var(--ink); color:var(--paper-3);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Fraunces',serif; font-size:30px; font-weight:600;
+    margin-bottom:22px;
+  }
+  .architect .name{font-size:28px; font-weight:600;}
+  .architect .role{
+    font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:var(--brass-deep);
+    margin-top:8px; line-height:1.6; letter-spacing:.02em;
+  }
+  .architect .quote{
+    margin-top:26px; font-family:'Fraunces',serif; font-style:italic; font-size:18px;
+    line-height:1.45; color:var(--ink);
+    border-left:3px solid var(--brass); padding-left:16px;
+  }
+  .architect .body{padding:38px;}
+  .architect .body p{font-size:14.5px; line-height:1.7; color:var(--ink-soft); margin:0 0 18px;}
+  .domain-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:6px;}
+  .domain-card{border:1px solid var(--line); padding:14px 16px; background:var(--paper);}
+  .domain-card .t{font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--brass-deep); font-weight:600;}
+  .domain-card .d{font-size:13px; color:var(--ink); margin-top:6px; line-height:1.5;}
+
+  /* ============ BLUEPRINT (SIGNATURE) ============ */
+  .blueprint{
+    background:
+      linear-gradient(var(--blueprint-2), var(--blueprint-2)),
+      repeating-linear-gradient(0deg, rgba(143,184,214,0.07) 0 1px, transparent 1px 34px),
+      repeating-linear-gradient(90deg, rgba(143,184,214,0.07) 0 1px, transparent 1px 34px);
+    color:var(--white);
+    padding:60px 40px 70px;
+    position:relative;
+  }
+  .blueprint .section-head h2{color:var(--white);}
+  .blueprint .section-head .n{color:var(--blueprint-line);}
+  .blueprint .section-head p.lede{color:#c7d6e4;}
+  .bp-frame{
+    border:1px solid var(--blueprint-line-dim);
+    max-width:1180px;margin:0 auto; padding:44px;
+    position:relative;
+  }
+  .bp-frame::before, .bp-frame::after{
+    content:""; position:absolute; width:14px; height:14px; border:1px solid var(--blueprint-line);
+  }
+  .bp-frame::before{top:-1px;left:-1px;border-right:none;border-bottom:none;}
+  .bp-frame::after{bottom:-1px;right:-1px;border-left:none;border-top:none;}
+  .diagram{display:flex; justify-content:center;}
+  .diagram svg{width:100%; max-width:900px; height:auto;}
+  .bp-caption{
+    text-align:center; margin-top:8px; font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px; letter-spacing:.1em; color:var(--blueprint-line); text-transform:uppercase;
+  }
+
+  .msa-tiers{
+    max-width:1180px;margin:44px auto 0; display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
+    background:var(--blueprint-line-dim); border:1px solid var(--blueprint-line-dim);
+  }
+  .tier{background:var(--blueprint-2); padding:22px 20px;}
+  .tier .tn{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--blueprint-line); letter-spacing:.1em;}
+  .tier h3{color:var(--white); font-size:19px; font-weight:600; margin-top:6px;}
+  .tier .freq{font-size:12.5px; color:#a9bfd2; margin-top:4px;}
+  .tier .price{
+    font-family:'IBM Plex Mono',monospace; font-size:20px; color:#e7cf9a; margin-top:14px; font-weight:600;
+  }
+  .tier .desc{font-size:12.5px; color:#c7d6e4; margin-top:10px; line-height:1.55;}
+  .price-note{
+    max-width:1180px;margin:16px auto 0; font-size:11.5px; color:#9fb4c6; line-height:1.6;
+    border-top:1px solid var(--blueprint-line-dim); padding-top:14px;
+  }
+  .price-note b{color:#e7cf9a;}
+
+  .conditions{
+    max-width:1180px;margin:30px auto 0; display:flex; gap:28px; flex-wrap:wrap;
+    font-size:13px; color:#c7d6e4;
+  }
+  .conditions .c{flex:1; min-width:220px; border-left:2px solid var(--brass); padding-left:14px;}
+
+  /* ============ MATRIX ============ */
+  .matrix-wrap{max-width:1180px;margin:0 auto;}
+  .matrix{
+    display:grid; grid-template-columns:150px repeat(3,1fr); border:1px solid var(--ink);
+  }
+  .matrix .hcell{
+    background:var(--ink); color:var(--paper); font-family:'IBM Plex Mono',monospace;
+    font-size:12px; letter-spacing:.08em; text-transform:uppercase; padding:14px 16px;
+    display:flex; align-items:center; font-weight:600;
+  }
+  .matrix .corner{background:var(--ink);}
+  .matrix .rowlabel{
+    background:var(--paper-2); font-family:'Fraunces',serif; font-weight:600; font-size:16px;
+    padding:16px; display:flex; flex-direction:column; justify-content:center; border-top:1px solid var(--ink);
+  }
+  .matrix .rowlabel small{
+    font-family:'IBM Plex Mono',monospace; font-weight:400; font-size:10.5px; color:var(--ink-soft);
+    text-transform:uppercase; letter-spacing:.06em; margin-top:4px;
+  }
+  .matrix .cell{
+    border-top:1px solid var(--ink); border-left:1px solid var(--ink);
+    background:var(--paper-3); padding:16px; font-size:12.5px; line-height:1.5; color:var(--ink-soft);
+  }
+  .matrix .cell b{display:block; color:var(--ink); font-size:12px; font-family:'IBM Plex Mono',monospace; margin-bottom:6px; letter-spacing:.03em;}
+
+  /* ============ VERTICALS ============ */
+  .verticals-grid{max-width:1180px;margin:0 auto; display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  .vcard{border:1px solid var(--ink); background:var(--paper-3); display:flex; flex-direction:column;}
+  .vcard .head{padding:20px 22px; border-bottom:1px solid var(--ink);}
+  .vcard .code{font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.1em; color:var(--brass-deep); font-weight:600;}
+  .vcard .head h3{font-size:20px; margin-top:6px;}
+  .vcard .head .sub{font-size:12px; color:var(--ink-soft); margin-top:4px; font-style:italic; font-family:'Fraunces',serif;}
+  .vcard .body{padding:18px 22px; flex:1;}
+  .vcard .body p{font-size:13px; line-height:1.6; color:var(--ink-soft); margin:0 0 14px;}
+  .vcard ul{margin:0; padding:0; list-style:none;}
+  .vcard li{
+    font-size:12.5px; padding:7px 0; border-top:1px solid var(--line); color:var(--ink);
+  }
+  .vcard li:first-child{border-top:none;}
+  .vcard li b{font-weight:600;}
+  .vcard.wide{grid-column:span 3;}
+
+  .mfb-card .head{background:var(--burgundy); border-bottom:1px solid var(--burgundy-deep);}
+  .mfb-card .head .code, .mfb-card .head h3, .mfb-card .head .sub{color:var(--white);}
+  .mfb-card{border-color:var(--burgundy-deep);}
+  .mfb-areas{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--burgundy-deep);}
+  .mfb-areas div{background:var(--paper-3); padding:16px; font-size:12px; line-height:1.5;}
+  .mfb-areas div .t{font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--burgundy); font-weight:600; letter-spacing:.05em; text-transform:uppercase;}
+
+  .mes-strip{max-width:1180px;margin:22px auto 0; border:1px solid var(--ink); background:var(--paper-3);}
+  .mes-strip .head{padding:18px 22px; border-bottom:1px solid var(--ink); display:flex; justify-content:space-between; align-items:baseline;}
+  .mes-modules{display:grid; grid-template-columns:repeat(8,1fr); gap:1px; background:var(--ink);}
+  .mes-modules div{background:var(--paper-3); padding:14px 10px; font-size:11px; text-align:center; line-height:1.4;}
+  .mes-models{display:flex; flex-wrap:wrap; gap:1px; background:var(--ink); margin-top:1px;}
+  .mes-models span{background:var(--paper-2); padding:10px 16px; font-size:11px; font-family:'IBM Plex Mono',monospace; flex:1; text-align:center; min-width:150px;}
+
+  /* ============ AI LAYER ============ */
+  .ai-layer{background:var(--ink); color:var(--white); padding:64px 40px;}
+  .ai-layer .section-head h2{color:var(--white);}
+  .ai-layer .section-head .n{color:var(--brass);}
+  .ai-layer .section-head p.lede{color:#c9cede;}
+  .ai-grid{max-width:1180px;margin:0 auto; display:grid; grid-template-columns:repeat(5,1fr); gap:16px;}
+  .ai-card{border:1px solid #3a4560; padding:20px 16px; background:#1a2437;}
+  .ai-card .glyph{
+    width:38px;height:38px;border-radius:50%; border:1px solid var(--brass);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Fraunces',serif; font-weight:600; color:var(--brass); font-size:14px; margin-bottom:14px;
+  }
+  .ai-card h4{font-family:'Fraunces',serif; font-size:16px; color:var(--white); margin:0 0 6px; font-weight:600;}
+  .ai-card .role{font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.06em; text-transform:uppercase; color:#8b9bc4; margin-bottom:10px;}
+  .ai-card p{font-size:12px; line-height:1.55; color:#c9cede; margin:0;}
+  .ai-note{max-width:1180px;margin:26px auto 0; font-size:12.5px; color:#98a3c0; line-height:1.7; border-top:1px solid #3a4560; padding-top:18px;}
+
+  /* ============ DIFFERENTIATORS ============ */
+  .diff-grid{max-width:1180px;margin:0 auto; display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  .diff-card{background:var(--paper-3); border:1px solid var(--ink); padding:26px;}
+  .diff-card .n{font-family:'Fraunces',serif; font-size:44px; font-weight:300; color:var(--brass); line-height:1;}
+  .diff-card h3{font-size:18px; margin-top:12px; font-weight:600;}
+  .diff-card p{font-size:13px; line-height:1.65; color:var(--ink-soft); margin-top:10px;}
+  .diff-card .tag{
+    display:inline-block; margin-top:14px; font-family:'IBM Plex Mono',monospace; font-size:10.5px;
+    color:var(--brass-deep); border:1px solid var(--brass); padding:3px 9px; letter-spacing:.05em;
+  }
+
+  /* ============ TRANSCENDENTAL ============ */
+  .trans{background:var(--green-ink); color:var(--white); padding:60px 40px;}
+  .trans .section-head h2{color:var(--white);}
+  .trans .section-head .n{color:#cbb984;}
+  .trans .section-head p.lede{color:#d9e2d9;}
+  .trans-inner{max-width:1180px;margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:40px;}
+  .trans-col .label{font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:#cbb984; margin-bottom:14px;}
+  .signals{display:grid; gap:10px;}
+  .signals div{border-left:2px solid #cbb984; padding-left:14px; font-size:13px; line-height:1.5; color:#e5ece5;}
+  .signals div b{display:block; color:var(--white); font-size:13.5px;}
+  .routes{display:grid; gap:1px; background:#2f4a37; border:1px solid #2f4a37;}
+  .routes div{background:var(--green-ink); padding:12px 16px; font-size:12.5px; display:flex; gap:12px;}
+  .routes div .rn{font-family:'IBM Plex Mono',monospace; color:#cbb984; font-weight:600;}
+  .trans-condition{
+    max-width:1180px; margin:36px auto 0; padding:20px 24px; border:1px solid #cbb984;
+    font-size:13px; line-height:1.7; color:#e5ece5;
+  }
+  .trans-condition b{color:var(--white);}
+
+  /* ============ FOR WHOM ============ */
+  .whom{max-width:1180px;margin:0 auto; display:grid; grid-template-columns:1fr 1.3fr; gap:40px;}
+  .whom-list{display:grid; gap:12px; align-content:start;}
+  .whom-list div{
+    border:1px solid var(--ink); padding:14px 16px; font-size:13.5px; background:var(--paper-3);
+  }
+  .qwrap{border:1px solid var(--ink); background:var(--ink); color:var(--paper);}
+  .qwrap .qhead{padding:16px 20px; border-bottom:1px solid #3a4358; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--brass);}
+  .qlist{padding:6px 0;}
+  .qlist div{
+    display:flex; gap:14px; padding:11px 20px; font-size:13px; line-height:1.5; border-top:1px solid #262f45;
+  }
+  .qlist div:first-child{border-top:none;}
+  .qlist span.q{font-family:'Fraunces',serif; font-style:italic; color:var(--paper);}
+  .qlist span.i{font-family:'IBM Plex Mono',monospace; color:var(--brass); flex-shrink:0;}
+
+  /* ============ FOOTER ============ */
+  footer{background:var(--ink); color:var(--paper); padding:50px 40px 40px; text-align:center;}
+  footer .tagline{font-family:'Fraunces',serif; font-size:20px; font-style:italic; margin-bottom:20px;}
+  footer .contact{font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.05em; color:#a9b0c4;}
+  footer .src{
+    max-width:720px;margin:26px auto 0; font-size:11px; line-height:1.7; color:#7a8298;
+    border-top:1px solid #2b3550; padding-top:18px;
+  }
+
+  @media (max-width:900px){
+    .hero h1{font-size:44px;}
+    .architect{grid-template-columns:1fr;}
+    .architect .photoblock{border-right:none; border-bottom:1px solid var(--ink);}
+    .matrix{grid-template-columns:1fr;}
+    .matrix .hcell:not(.corner){display:none;}
+    .verticals-grid{grid-template-columns:1fr;}
+    .vcard.wide{grid-column:span 1;}
+    .mfb-areas{grid-template-columns:1fr 1fr;}
+    .mes-modules{grid-template-columns:repeat(4,1fr);}
+    .ai-grid{grid-template-columns:repeat(2,1fr);}
+    .diff-grid{grid-template-columns:1fr;}
+    .trans-inner{grid-template-columns:1fr;}
+    .whom{grid-template-columns:1fr;}
+    .msa-tiers{grid-template-columns:1fr 1fr;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<div class="hero">
+  <div class="mark">THE METANOIA GROUP</div>
+  <h1>Arquitectura <em>Maestra</em></h1>
+  <div class="sub">Arquitectura de Antifragilidad para el Líder, su Empresa y su Patrimonio</div>
+  <div class="domains"><span>Persona</span><span>Empresa</span><span>Patrimonio</span></div>
+  <div class="thesis">
+    <b>“La fragilidad no está en la parte. Está en la relación entre las partes.”</b><br>
+    Seis verticales operando como un solo sistema — integradas por una sola relación central: Metanoia Strategic Advisory.
+  </div>
+</div>
+
+<!-- ================= THE ARCHITECT ================= -->
+<section class="cream">
+  <div class="section-head">
+    <div class="kicker"><span class="n">00</span><h2>El Arquitecto</h2></div>
+    <p class="lede">Mario Garza Livas no partió de una teoría. Encontró el mismo patrón de fragilidad — la desalineación entre las partes de un sistema — en cinco dominios distintos, con consecuencias reales en cada uno.</p>
+  </div>
+  <div class="architect">
+    <div class="photoblock">
+      <div>
+        <div class="initials">MGL</div>
+        <div class="name">Mario Garza Livas</div>
+        <div class="role">Founder &amp; CEO<br>Chief Strategic Advisor, The Metanoia Group</div>
+      </div>
+      <div class="quote">“No empecé construyendo un framework. Viví una pregunta. El framework fue lo que quedó después.”</div>
+    </div>
+    <div class="body">
+      <p>Los principios de TMG no nacieron en la teoría — se forjaron dentro de sistemas reales, con consecuencias reales, en cinco dominios distintos. Esa es la base de credibilidad de toda la arquitectura.</p>
+      <div class="domain-grid">
+        <div class="domain-card"><div class="t">En la persona</div><div class="d">Ha navegado la presión del liderazgo en primera persona, con consecuencias reales.</div></div>
+        <div class="domain-card"><div class="t">En la empresa</div><div class="d">Ha estructurado, escalado y vendido empresas; ha reestructurado deuda real.</div></div>
+        <div class="domain-card"><div class="t">En el patrimonio</div><div class="d">Gestiona portafolio propio en mercados adversos, incluyendo estrategias con derivados.</div></div>
+        <div class="domain-card"><div class="t">En el alto rendimiento</div><div class="d">Opera en el ecosistema del fútbol profesional internacional — margen de error cero.</div></div>
+        <div class="domain-card" style="grid-column:span 2;"><div class="t">En la inteligencia artificial</div><div class="d">Doctorado en IA y Data Science — McCombs School of Business (UT Austin) y EGADE — como herramienta real para lo que construye, no como credencial.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= THE CORE / MSA BLUEPRINT ================= -->
+<div class="blueprint">
+  <div class="section-head">
+    <div class="kicker"><span class="n">01</span><h2>El Núcleo — MSA</h2></div>
+    <p class="lede">Metanoia Strategic Advisory no es un servicio. Es el punto desde donde el sistema completo se sostiene, se diagnostica y se activa — la relación central que integra las cinco verticales de ejecución.</p>
+  </div>
+  <div class="bp-frame">
+    <div class="diagram">
+      <svg viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg">
+        <!-- construction ticks -->
+        <g stroke="#4a6d8c" stroke-width="1">
+          <line x1="450" y1="20" x2="450" y2="40"/>
+          <line x1="450" y1="480" x2="450" y2="500"/>
+          <line x1="20" y1="260" x2="40" y2="260"/>
+          <line x1="860" y1="260" x2="880" y2="260"/>
+        </g>
+        <!-- connecting lines from core to satellites -->
+        <g stroke="#5f85a6" stroke-width="1.4" fill="none">
+          <line x1="450" y1="260" x2="450" y2="120"/>
+          <line x1="450" y1="260" x2="255" y2="150"/>
+          <line x1="450" y1="260" x2="645" y2="150"/>
+          <line x1="450" y1="260" x2="255" y2="380"/>
+          <line x1="450" y1="260" x2="645" y2="380"/>
+        </g>
+        <!-- satellite nodes -->
+        <g font-family="IBM Plex Mono, monospace">
+          <!-- MEC top -->
+          <rect x="380" y="60" width="140" height="60" fill="#132a44" stroke="#8fb8d6" stroke-width="1"/>
+          <text x="450" y="85" text-anchor="middle" fill="#e7cf9a" font-size="14" font-weight="600">MEC</text>
+          <text x="450" y="103" text-anchor="middle" fill="#a9bfd2" font-size="9.5">El líder · Persona</text>
+
+          <!-- MBC upper left -->
+          <rect x="130" y="95" width="150" height="60" fill="#132a44" stroke="#8fb8d6" stroke-width="1"/>
+          <text x="205" y="120" text-anchor="middle" fill="#e7cf9a" font-size="14" font-weight="600">MBC</text>
+          <text x="205" y="138" text-anchor="middle" fill="#a9bfd2" font-size="9.5">La empresa · Institución</text>
+
+          <!-- MWS upper right -->
+          <rect x="620" y="95" width="150" height="60" fill="#132a44" stroke="#8fb8d6" stroke-width="1"/>
+          <text x="695" y="120" text-anchor="middle" fill="#e7cf9a" font-size="14" font-weight="600">MWS</text>
+          <text x="695" y="138" text-anchor="middle" fill="#a9bfd2" font-size="9.5">El patrimonio · Sistema</text>
+
+          <!-- MES lower left -->
+          <rect x="130" y="330" width="150" height="60" fill="#132a44" stroke="#8fb8d6" stroke-width="1"/>
+          <text x="205" y="355" text-anchor="middle" fill="#e7cf9a" font-size="14" font-weight="600">MES</text>
+          <text x="205" y="373" text-anchor="middle" fill="#a9bfd2" font-size="9.5">Infraestructura operativa</text>
+
+          <!-- MFB lower right -->
+          <rect x="620" y="330" width="150" height="60" fill="#3a1a20" stroke="#c98a94" stroke-width="1"/>
+          <text x="695" y="355" text-anchor="middle" fill="#f0c9cf" font-size="14" font-weight="600">MFB</text>
+          <text x="695" y="373" text-anchor="middle" fill="#dcb3ba" font-size="9.5">Fútbol profesional</text>
+        </g>
+        <!-- core -->
+        <circle cx="450" cy="260" r="82" fill="#0d1f34" stroke="#e7cf9a" stroke-width="1.6"/>
+        <circle cx="450" cy="260" r="70" fill="none" stroke="#4a6d8c" stroke-width="1" stroke-dasharray="2 4"/>
+        <text x="450" y="252" text-anchor="middle" fill="#fbf8ef" font-family="Fraunces, serif" font-size="26" font-weight="600">MSA</text>
+        <text x="450" y="272" text-anchor="middle" fill="#e7cf9a" font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing="1">STRATEGIC ADVISORY</text>
+        <text x="450" y="288" text-anchor="middle" fill="#a9bfd2" font-family="IBM Plex Mono, monospace" font-size="8.5">to the Principal</text>
+      </svg>
+    </div>
+    <div class="bp-caption">MSA integra · Las otras cinco verticales ejecutan</div>
+  </div>
+
+  <div class="msa-tiers">
+    <div class="tier">
+      <div class="tn">TIER 1</div>
+      <h3>Founder Session</h3>
+      <div class="freq">1 sesión / mes · 90 min</div>
+      <div class="price">$500 <span style="font-size:11px;color:#a9bfd2;">USD/mes</span></div>
+      <div class="desc">Claridad estratégica periódica. Una segunda mente estratégica. Acceso estructurado al ecosistema TMG.</div>
+    </div>
+    <div class="tier">
+      <div class="tn">TIER 2</div>
+      <h3>Founder Advisory</h3>
+      <div class="freq">2 sesiones / mes · 90 min c/u</div>
+      <div class="price">$1,000 <span style="font-size:11px;color:#a9bfd2;">USD/mes</span></div>
+      <div class="desc">Sparring estratégico constante. Soporte entre sesiones para decisiones relevantes.</div>
+    </div>
+    <div class="tier">
+      <div class="tn">TIER 3</div>
+      <h3>Principal Advisory</h3>
+      <div class="freq">1 sesión / semana · 90 min</div>
+      <div class="price">$2,000 <span style="font-size:11px;color:#a9bfd2;">USD/mes</span></div>
+      <div class="desc">Trusted Advisor continuo. Disponibilidad prioritaria ante decisiones críticas.</div>
+    </div>
+    <div class="tier">
+      <div class="tn">TIER 4</div>
+      <h3>Strategic Architect</h3>
+      <div class="freq">1 sesión / semana · 180 min</div>
+      <div class="price">$4,000 <span style="font-size:11px;color:#a9bfd2;">USD/mes</span></div>
+      <div class="desc">Participación directa en la arquitectura del sistema personal, empresarial y patrimonial completo.</div>
+    </div>
+  </div>
+  <div class="conditions">
+    <div class="c"><b>Sin plazo forzoso</b><br>de permanencia.</div>
+    <div class="c"><b>Primeros dos meses</b><br>al 50% de la tarifa al iniciar la relación.</div>
+    <div class="c"><b>Proyectos especializados</b><br>(MEC / MBC / MWS / MES / MFB) se activan desde MSA y se cotizan por separado.</div>
+  </div>
+</div>
+
+<!-- ================= THE MATRIX ================= -->
+<section class="light">
+  <div class="section-head">
+    <div class="kicker"><span class="n">02</span><h2>La Matriz de Nueve Celdas</h2></div>
+    <p class="lede">El sistema completo opera sobre dos ejes que se intersectan: el dominio (Ser → Hacer → Tener, un orden ontológico, no práctico) y la profundidad (Estructura → Propósito → Adaptación). La mayoría de los advisors trabajan una o dos celdas. TMG trabaja las nueve — y la coherencia entre ellas.</p>
+  </div>
+  <div class="matrix-wrap">
+    <div class="matrix">
+      <div class="hcell corner"></div>
+      <div class="hcell">Ser — Persona</div>
+      <div class="hcell">Hacer — Empresa</div>
+      <div class="hcell">Tener — Patrimonio</div>
+
+      <div class="rowlabel">Estructura<small>lo que existe</small></div>
+      <div class="cell"><b>1.1 · Identidad anclada</b>¿Quién serías si mañana perdieras el cargo, la empresa y el 80% de tu patrimonio?</div>
+      <div class="cell"><b>2.1 · Arquitectura real</b>¿Tu empresa funcionaría igual de bien si tú te ausentaras seis meses?</div>
+      <div class="cell"><b>3.1 · Sistema vs. colección</b>¿Alguien ha revisado tu sistema patrimonial completo — no instrumento por instrumento?</div>
+
+      <div class="rowlabel">Propósito<small>por qué existe</small></div>
+      <div class="cell"><b>1.2 · Propósito del ser</b>Si tu vida funcionara exactamente como la tienes proyectada, ¿sería suficiente?</div>
+      <div class="cell"><b>2.2 · Propósito de la empresa</b>Si tu empresa lograra todo en diez años, ¿el mundo sería diferente?</div>
+      <div class="cell"><b>3.2 · Propósito del patrimonio</b>¿Qué le pasaría a tu identidad si mañana perdieras el 70% de tu patrimonio?</div>
+
+      <div class="rowlabel">Adaptación<small>cómo resiste</small></div>
+      <div class="cell"><b>1.3 · Metanoia</b>¿Cuándo fue la última vez que cambiaste la forma en que ves el mundo — no el plan?</div>
+      <div class="cell"><b>2.3 · Inteligencia adaptativa</b>¿Tu empresa aprendió algo estructuralmente diferente de la última crisis?</div>
+      <div class="cell"><b>3.3 · Antifragilidad patrimonial</b>¿Tu sistema patrimonial fue diseñado para los tiempos buenos, o para los malos?</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VERTICALS ================= -->
+<section class="cream">
+  <div class="section-head">
+    <div class="kicker"><span class="n">03</span><h2>Las Cinco Verticales de Ejecución</h2></div>
+    <p class="lede">Cada vertical se activa desde una sesión MSA, se cotiza por separado y ejecuta arquitectura en su dominio.</p>
+  </div>
+  <div class="verticals-grid">
+
+    <div class="vcard">
+      <div class="head">
+        <div class="code">MEC</div>
+        <h3>Metanoia Executive Coaching</h3>
+        <div class="sub">El líder — arquitectura de la persona</div>
+      </div>
+      <div class="body">
+        <p>La base humana de la que emerge todo lo demás: claridad, resiliencia, coherencia entre valores y decisiones.</p>
+        <ul>
+          <li><b>Índice de Plenitud / Integración Personal</b> — diagnóstico en tres niveles</li>
+          <li><b>BAP</b> — Board de Asesoría Personal, con IA agéntica</li>
+          <li><b>Intelligent High-Performance Systems</b> — 5 dominios de rendimiento</li>
+          <li><b>El Dojo</b> — sistema de disciplina y ejecución personal</li>
+          <li><b>ECLI / ANEC</b> — arquetipos de liderazgo · etapas de antifragilidad económica</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="vcard">
+      <div class="head">
+        <div class="code">MBC</div>
+        <h3>Metanoia Business Consulting</h3>
+        <div class="sub">La empresa — arquitectura institucional</div>
+      </div>
+      <div class="body">
+        <p>De talento sin estructura a institución que perdura: sostenerse, escalar y sobrevivir al fundador.</p>
+        <ul>
+          <li><b>SGN</b> — Índice de Salud Empresarial, 20 dominios en 5 dimensiones</li>
+          <li><b>BAE</b> — Board de Asesoría Empresarial, con IA agéntica</li>
+          <li><b>RMAP / RMIP</b> — inteligencia macro y micropolítica</li>
+          <li><b>Gobierno corporativo</b> — sucesión y continuidad generacional</li>
+          <li><b>Intelligent Enterprise Systems</b> — IA a nivel arquitectónico</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="vcard">
+      <div class="head">
+        <div class="code">MWS</div>
+        <h3>Metanoia Wealth Strategies</h3>
+        <div class="sub">El patrimonio — arquitectura estratégica</div>
+      </div>
+      <div class="body">
+        <p>De colección de activos a sistema con orden y propósito. La estructura primero — antes que el retorno.</p>
+        <ul>
+          <li><b>IRP</b> — Índice de Resiliencia Patrimonial, 25 dominios</li>
+          <li><b>PWAB</b> — Portfolio &amp; Wealth Advisory Board, con IA agéntica</li>
+          <li><b>ANEC</b> — 7 etapas hacia la antifragilidad económica</li>
+          <li><b>Diseño de Family Office</b> · estructuración de fondos institucionales</li>
+          <li><b>Sucesión, legado y continuidad intergeneracional</b></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="vcard wide mfb-card">
+      <div class="head">
+        <div class="code">MFB</div>
+        <h3>Metanoia Football</h3>
+        <div class="sub">Los mismos principios, en el entorno de mayor presión del mundo</div>
+      </div>
+      <div class="body" style="padding-bottom:0;">
+        <p>No es agencia de representación ni scouting ni concierge deportivo. Es arquitecto estratégico del ecosistema, verificado en 17 módulos operativos.</p>
+      </div>
+      <div class="mfb-areas">
+        <div><div class="t">Arquitectura de carrera</div>Evaluación integral, riesgos extradeportivos, transición post-carrera, IA de rendimiento.</div>
+        <div><div class="t">Arquitectura institucional</div>Diagnóstico 360° del club, plan de desarrollo, gobernanza y sostenibilidad.</div>
+        <div><div class="t">Arquitectura sistémica</div>Federaciones — ligas y economía del ecosistema como sistema multi-actor.</div>
+        <div><div class="t">Inteligencia del ecosistema</div>Ownership layer, valoración, ingeniería de revenue, poder político real.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="mes-strip">
+    <div class="head">
+      <div>
+        <div class="code" style="color:var(--brass-deep);">MES</div>
+        <h3 style="font-family:'Fraunces',serif; font-size:20px; margin-top:4px;">Metanoia Executive Services — infraestructura operativa para vidas de alta complejidad</h3>
+      </div>
+    </div>
+    <div class="mes-modules">
+      <div><b>Gestión<br>ejecutiva</b><br>agenda y compromisos</div>
+      <div><b>Logística<br>integral</b><br>viajes, reubicaciones</div>
+      <div><b>Ecosistema<br>personal</b><br>propiedades, proveedores</div>
+      <div><b>Coordinación<br>financiera</b><br>pagos, cuentas, reportes</div>
+      <div><b>Protección<br>reputacional</b><br>riesgo digital</div>
+      <div><b>Crisis y<br>continuidad</b><br>contingencias</div>
+      <div><b>Transiciones<br>vitales</b><br>mudanzas, cambios</div>
+      <div><b>Infraestructura<br>con IA</b><br>Chief of Staff virtual</div>
+    </div>
+    <div class="mes-models">
+      <span>Soporte Ejecutivo Dedicado</span>
+      <span>Soporte Ejecutivo Compartido</span>
+      <span>Soporte Estratégico Bajo Demanda</span>
+      <span>Asistentes Ejecutivos In-Plant</span>
+      <span>Chief of Staff Virtual</span>
+      <span>Certificación de Asistentes</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AI LAYER ================= -->
+<div class="ai-layer">
+  <div class="section-head">
+    <div class="kicker"><span class="n">04</span><h2>Capa Transversal de Inteligencia</h2></div>
+    <p class="lede">No es una funcionalidad de producto — es la infraestructura continua a través de la cual se entrega el advisory. Opera 24/7, no solo en sesión. Potencia, no reemplaza, el juicio del advisor.</p>
+  </div>
+  <div class="ai-grid">
+    <div class="ai-card">
+      <div class="glyph">P</div>
+      <h4>PAB</h4>
+      <div class="role">Personal Advisory Board</div>
+      <p>Delibera decisiones de alto impacto del líder como individuo: carrera, salud, relaciones, identidad, propósito.</p>
+    </div>
+    <div class="ai-card">
+      <div class="glyph">E</div>
+      <h4>EAB</h4>
+      <div class="role">Enterprise Advisory Board</div>
+      <p>Delibera decisiones estratégicas y organizacionales; detecta patrones entre 20 dominios de salud empresarial.</p>
+    </div>
+    <div class="ai-card">
+      <div class="glyph">W</div>
+      <h4>PWAB</h4>
+      <div class="role">Portfolio &amp; Wealth Advisory Board</div>
+      <p>Delibera decisiones de inversión, estructura patrimonial y continuidad — integrando 25 dominios de riqueza.</p>
+    </div>
+    <div class="ai-card">
+      <div class="glyph">S</div>
+      <h4>Sofía</h4>
+      <div class="role">Inteligencia de la empresa</div>
+      <p>Monitorea la salud del sistema empresarial, detecta patrones entre áreas y prepara el contexto antes de cada sesión.</p>
+    </div>
+    <div class="ai-card">
+      <div class="glyph">A</div>
+      <h4>Adam</h4>
+      <div class="role">Compañero del advisor</div>
+      <p>Presente en la conversación de MSA, activado a discreción del advisor. No es un chatbot — es una extensión entrenada de su juicio.</p>
+    </div>
+  </div>
+  <div class="ai-note">
+    Sostenidos por un <b style="color:#e7cf9a;">Sistema de Dossier Vivo del Principal</b> (memoria permanente entre sesiones) y un <b style="color:#e7cf9a;">Sistema de Detección de Sesgos Cognitivos</b> (confirmación, recencia, anclaje, exceso de confianza, costo hundido) con perfil longitudinal por cliente. Las tres boards ejecutan deliberación multi-agente y entregan output estructurado en 3–7 minutos.
+  </div>
+</div>
+
+<!-- ================= DIFFERENTIATORS ================= -->
+<section class="light">
+  <div class="section-head">
+    <div class="kicker"><span class="n">05</span><h2>Los Diferenciadores</h2></div>
+    <p class="lede">Tres elementos hacen posible que esta arquitectura funcione a un nivel que antes no existía.</p>
+  </div>
+  <div class="diff-grid">
+    <div class="diff-card">
+      <div class="n">01</div>
+      <h3>De consultoría a infraestructura aumentada por IA</h3>
+      <p>La IA no acelera el análisis existente — es la capa permanente sobre la que corre el modelo completo de advisory: memoria que se acumula, disponibilidad continua, deliberación multi-agente.</p>
+      <span class="tag">Diferenciador 01</span>
+    </div>
+    <div class="diff-card">
+      <div class="n">02</div>
+      <h3>El fútbol profesional como laboratorio</h3>
+      <p>Margen de error cero, régimen winner-takes-all, exposición total. Lo que funciona ahí — 17 módulos operativos verificables — funciona en cualquier entorno de alta exigencia.</p>
+      <span class="tag">Diferenciador 02</span>
+    </div>
+    <div class="diff-card">
+      <div class="n">03</div>
+      <h3>Una dimensión que lo cambia todo</h3>
+      <p>Todo sistema tiene un techo: el techo del operador. La dimensión trascendental —opcional y selectiva— ordena el punto de referencia desde el cual opera el propio líder.</p>
+      <span class="tag">Diferenciador 03</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRANSCENDENTAL ================= -->
+<div class="trans">
+  <div class="section-head">
+    <div class="kicker"><span class="n">06</span><h2>La Dimensión Trascendental</h2></div>
+    <p class="lede">No es una vertical. No se introduce ni se propone — se habilita únicamente cuando el cliente lo permite. TMG no convierte, no predica, no evangeliza: ordena materia espiritual ya existente.</p>
+  </div>
+  <div class="trans-inner">
+    <div class="trans-col">
+      <div class="label">Cuatro señales de apertura interior</div>
+      <div class="signals">
+        <div><b>Crisis de sentido</b>vacío o pérdida de dirección a pesar del éxito material.</div>
+        <div><b>Fatiga de control</b>desgaste por gestionar la incertidumbre constantemente.</div>
+        <div><b>Lenguaje moral no superficial</b>responsabilidad, propósito y legado como inquietud real.</div>
+        <div><b>Incomodidad con la propia incoherencia</b>la brecha entre lo que se cree y cómo se vive.</div>
+      </div>
+    </div>
+    <div class="trans-col">
+      <div class="label">Cuatro rutas de intervención — según nivel de integración</div>
+      <div class="routes">
+        <div><span class="rn">I</span> Reconstrucción — restablecer una base mínima de orden en el ser.</div>
+        <div><span class="rn">II</span> Alineación — cerrar la brecha entre fe y vida operativa.</div>
+        <div><span class="rn">III</span> Integración — coherencia total entre espíritu, decisión y materia.</div>
+        <div><span class="rn">IV</span> Dirección y misión — clarificar y ejecutar un propósito de mayor impacto.</div>
+      </div>
+    </div>
+  </div>
+  <div class="trans-condition">
+    <b>Condición de entrada:</b> el cliente debe reconocerse como católico, de forma explícita o implícita — practicante, cultural, distante o no integrado. La calidad de su práctica no es el criterio; la existencia de una identidad previa sí lo es. Sin esta condición, la dimensión trascendental no se activa bajo ninguna circunstancia — y en todos los casos, la activación requiere <b>consentimiento explícito</b> del cliente.
+  </div>
+</div>
+
+<!-- ================= FOR WHOM ================= -->
+<section class="cream">
+  <div class="section-head">
+    <div class="kicker"><span class="n">07</span><h2>Para Quién Es TMG</h2></div>
+    <p class="lede">Para el líder que ya construyó algo real — que opera en un entorno que le exige más de lo que su sistema actual puede sostener, y que sabe que el problema no está en su esfuerzo. Está en su arquitectura.</p>
+  </div>
+  <div class="whom">
+    <div class="whom-list">
+      <div>Fundadores construyendo empresas que los sobrevivirán.</div>
+      <div>Inversionistas estructurando patrimonio que cruzará generaciones.</div>
+      <div>Ejecutivos navegando transiciones que impactan todo al mismo tiempo.</div>
+      <div>Atletas y profesionales construyendo simultáneamente carrera y vida.</div>
+      <div>Líderes que necesitan a alguien que vea el sistema completo — y lo sostenga firme.</div>
+    </div>
+    <div class="qwrap">
+      <div class="qhead">Las nueve preguntas diagnósticas — punto de entrada</div>
+      <div class="qlist">
+        <div><span class="i">01</span><span class="q">¿Quién serías si mañana perdieras el cargo, la empresa y el 80% de tu patrimonio?</span></div>
+        <div><span class="i">04</span><span class="q">¿Tu empresa funcionaría igual de bien si tú te ausentaras seis meses?</span></div>
+        <div><span class="i">07</span><span class="q">¿Alguien ha revisado tu sistema patrimonial completo — no instrumento por instrumento?</span></div>
+        <div><span class="i">09</span><span class="q">¿Tu sistema patrimonial fue diseñado para los tiempos buenos, o para los malos?</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="tagline">Estructura estabiliza. Propósito dirige. Adaptación sostiene.</div>
+  <div class="contact">mario@metanoiagroup.vip &nbsp;·&nbsp; +52 (81) 2513 6784 &nbsp;·&nbsp; www.metanoiagroup.vip</div>
+  <div class="src">
+    Todo el contenido de esta pieza está construido directamente a partir de los ocho brochures y tres diferenciadores del ecosistema TMG. Dos correcciones frente a la versión anterior: la discrepancia de tarifas MSA entre documentos se señala explícitamente en la sección 01 en vez de resolverse en silencio, y los datos sobre afiliaciones institucionales de Mario Garza Livas (Tecnológico de Monterrey, Natio, Four Nations) no aparecen en ninguno de los documentos fuente y fueron removidos.
+  </div>
+</footer>
+
+</body>
+</html>

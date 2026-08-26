@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Metanoia Group — Conscious Business Model Canvas</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  :root{
+    --ink:#0B0B0A;
+    --paper:#EFEAdc;
+    --paper2:#F2EEE0;
+    --card:#FBF9F2;
+    --gold:#A9803D;
+    --gold-deep:#7C5D28;
+    --slate:#3E4A54;
+    --umber:#6B4A2F;
+    --line:rgba(11,11,10,0.15);
+    --muted:#615C50;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper2);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.5;}
+  h1,h2,h3,h4{font-family:'Fraunces',serif;margin:0;}
+  p{margin:0;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;}
+
+  /* ============ COVER ============ */
+  .cover{position:relative;background:var(--ink);color:#F3EFE2;padding:64px 0 46px;overflow:hidden;}
+  .cover::before{content:"";position:absolute;inset:0;
+    background:
+      repeating-linear-gradient(90deg, rgba(169,128,61,0.045) 0 1px, transparent 1px 84px),
+      repeating-linear-gradient(0deg, rgba(169,128,61,0.045) 0 1px, transparent 1px 84px),
+      radial-gradient(ellipse at 50% -10%, rgba(169,128,61,0.22), transparent 55%);
+  }
+  .cover .wrap{position:relative;z-index:2;}
+  .cover-top{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;border-bottom:1px solid rgba(243,239,226,0.14);padding-bottom:26px;margin-bottom:34px;}
+  .brandmark{display:flex;align-items:center;gap:14px;}
+  .brandmark .bm-text{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;color:#D9CFB4;line-height:1.5;}
+  .brandmark .bm-text b{color:#F3EFE2;display:block;font-size:13px;letter-spacing:.14em;}
+  .cover-meta{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#B7AC8E;text-align:right;line-height:1.7;}
+  .cover-meta b{color:#D9CFB4;}
+
+  .cover-title h1{font-weight:900;font-size:clamp(30px,4.4vw,52px);line-height:1.06;letter-spacing:-0.01em;color:#F6F2E6;max-width:820px;}
+  .cover-title h1 span{color:var(--gold);}
+  .motto{margin-top:20px;font-family:'Fraunces',serif;font-style:italic;font-size:16px;color:#C9BE9E;letter-spacing:.01em;}
+  .motto b{color:var(--gold);font-style:normal;}
+
+  .kpi-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(243,239,226,0.14);margin-top:40px;border:1px solid rgba(243,239,226,0.14);}
+  .kpi{background:rgba(0,0,0,0.22);padding:16px 16px;}
+  .kpi .val{font-family:'Fraunces',serif;font-weight:700;font-size:23px;color:var(--gold);line-height:1;}
+  .kpi .lbl{font-family:'IBM Plex Mono',monospace;font-size:9.6px;letter-spacing:.05em;text-transform:uppercase;color:#B7AC8E;margin-top:7px;line-height:1.4;}
+
+  /* ============ TRINITY ============ */
+  .trinity{padding:56px 0;background:var(--card);border-bottom:1px solid var(--line);}
+  .trinity-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);}
+  .tri-card{background:var(--card);padding:26px 26px;}
+  .tri-card h4{font-size:16.5px;color:var(--gold-deep);margin-bottom:8px;}
+  .tri-card p{font-size:12.6px;line-height:1.6;color:#39352C;}
+  .tri-card p i{font-style:italic;color:var(--muted);}
+  @media (max-width:760px){.trinity-grid{grid-template-columns:1fr;}}
+
+  /* ============ SECTION LABELS ============ */
+  section{padding:70px 0;}
+  .section-head{max-width:740px;margin:0 auto 40px;text-align:center;}
+  .section-head .eyebrow{color:var(--gold-deep);margin-bottom:12px;}
+  .section-head h2{font-size:clamp(23px,2.8vw,32px);letter-spacing:-0.01em;}
+  .section-head p{margin-top:12px;color:var(--muted);font-size:14.5px;line-height:1.6;}
+
+  /* ============ CANVAS (validated geometry engine) ============ */
+  .canvas-scroll{overflow-x:auto;padding-bottom:14px;margin-bottom:8px;}
+  .canvas-outer{position:relative;width:100%;min-width:1180px;aspect-ratio:1400/840;}
+  .canvas-outer svg{position:absolute;inset:0;width:100%;height:100%;}
+  #shape-layer{z-index:1;}
+  #arrow-layer{z-index:3;pointer-events:none;}
+  #label-layer{position:absolute;inset:0;z-index:2;}
+
+  .block-label{position:absolute;display:flex;flex-direction:column;overflow:hidden;padding:7px 9px;}
+  .block-head{display:flex;align-items:center;gap:6px;margin-bottom:3px;}
+  .zone-bullet{width:8px;height:8px;border-radius:2px;flex:none;}
+  .block-title{font-family:'Fraunces',serif;font-weight:700;font-size:14px;line-height:1.1;}
+  .block-q{font-size:9.4px;color:#7a7466;line-height:1.22;margin-bottom:6px;font-style:italic;}
+  .block-icon{margin-left:auto;font-size:12.5px;color:var(--line);opacity:.75;}
+
+  .postits{display:flex;flex-wrap:wrap;gap:5px;align-items:flex-start;overflow-y:auto;flex:1;min-height:0;}
+  .postits::-webkit-scrollbar{width:5px;}
+  .postits::-webkit-scrollbar-thumb{background:rgba(11,11,10,0.25);border-radius:3px;}
+  .postit{background:#fffefb;border:1px solid rgba(11,11,10,0.18);border-radius:2px;padding:5px 7px 6px;
+    font-size:10px;line-height:1.25;font-weight:500;color:var(--ink);box-shadow:1px 2px 2px rgba(11,11,10,0.08);max-width:100%;}
+  .postit i{font-style:italic;color:var(--gold-deep);}
+  .zone-front .postit{border-left:3px solid var(--gold);}
+  .zone-back  .postit{border-left:3px solid var(--slate);}
+  .zone-profit .postit{border-left:3px solid var(--umber);}
+  .zone-front .zone-bullet{background:var(--gold);}
+  .zone-back  .zone-bullet{background:var(--slate);}
+  .zone-profit .zone-bullet{background:var(--umber);}
+
+  #purpose-label{align-items:center;text-align:center;justify-content:center;}
+  #purpose-label .block-title{font-size:15.5px;color:var(--gold-deep);}
+  #purpose-label .postits{justify-content:center;}
+  .purpose-badge{width:36px;height:36px;border-radius:50%;border:1.5px solid var(--gold);background:#fff;
+    display:flex;align-items:center;justify-content:center;position:absolute;top:-4px;left:50%;transform:translateX(-50%);
+    box-shadow:0 1px 3px rgba(0,0,0,.18);font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;
+    letter-spacing:.02em;color:var(--gold-deep);}
+
+  .edge-label{position:absolute;z-index:4;transform:translate(-50%,-50%);font-family:'IBM Plex Mono',monospace;
+    font-size:9px;font-weight:600;padding:2px 6px;border-radius:9px;white-space:nowrap;pointer-events:none;border:1px solid rgba(11,11,10,0.15);
+    background:#0B0B0A;color:#F2EEE0;}
+
+  .wing-icon{position:absolute;width:28px;height:28px;border-radius:50%;background:var(--card);border:1.5px solid var(--ink);
+    display:flex;align-items:center;justify-content:center;font-size:12px;transform:translate(-50%,-50%);z-index:2;}
+
+  .zone-legend{display:flex;gap:22px;flex-wrap:wrap;margin-bottom:16px;justify-content:center;}
+  .zone-chip{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--muted);font-weight:500;}
+  .zone-dot{width:11px;height:11px;border-radius:3px;flex:none;}
+
+  .arrow-legend{display:flex;gap:28px;flex-wrap:wrap;margin:18px 0 18px;padding:14px 18px;border:1px solid var(--line);background:var(--card);}
+  .arrow-legend .item{display:flex;align-items:center;gap:9px;font-size:12px;color:#3d3830;}
+  .swatch{width:34px;height:2px;position:relative;flex:none;}
+  .swatch.causal{background:var(--ink);}
+  .swatch.enabling{background:repeating-linear-gradient(90deg,var(--gold) 0 6px,transparent 6px 10px);}
+  .swatch.tension{background:repeating-linear-gradient(90deg,var(--umber) 0 6px,transparent 6px 10px);}
+
+  .rel-detail{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:20px;}
+  .rel-col{background:var(--card);padding:16px 20px;}
+  .rel-col h4{margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#4a453f;display:flex;align-items:center;gap:8px;}
+  .rel-col ul{margin:0;padding-left:18px;}
+  .rel-col li{font-size:12.3px;line-height:1.62;color:#3d3830;}
+  .rel-col b{color:var(--ink);font-weight:700;}
+  @media (max-width:760px){.rel-detail{grid-template-columns:1fr;}}
+
+  /* ============ LOOPS ============ */
+  .loops{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  .loop-card{border:1.5px solid var(--ink);background:var(--card);padding:20px 22px;}
+  .loop-card h3{font-family:'Fraunces',serif;font-size:16px;margin:0 0 4px;}
+  .loop-card.positive h3{color:var(--gold-deep);}
+  .loop-card.risk h3{color:var(--umber);}
+  .loop-card p.sub{font-size:11px;color:var(--muted);margin:0 0 14px;}
+  .loop-chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;}
+  .loop-chip{font-size:11px;font-weight:600;padding:6px 10px;border-radius:14px;background:#fff;border:1px solid var(--line);}
+  .loop-card.positive .loop-chip{border-color:var(--gold);color:var(--gold-deep);}
+  .loop-card.risk .loop-chip{border-color:var(--umber);color:var(--umber);}
+  .loop-arrow{font-size:13px;color:#8a857c;}
+  @media (max-width:760px){.loops{grid-template-columns:1fr;}}
+
+  /* ============ SYNTHESIS ============ */
+  .synthesis{position:relative;background:var(--ink);color:#EDE8D8;padding:90px 0;overflow:hidden;}
+  .synthesis::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%, rgba(169,128,61,0.20), transparent 60%);}
+  .synthesis .wrap{position:relative;z-index:2;}
+  .synth-quote{max-width:820px;margin:0 auto 40px;text-align:center;font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:clamp(19px,2.6vw,26px);line-height:1.55;color:#F3EFE2;}
+
+  .triad{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:rgba(243,239,226,0.14);margin:36px 0;}
+  .triad-card{background:rgba(0,0,0,0.22);padding:20px 20px;text-align:center;}
+  .triad-card .tk{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;color:var(--gold);margin-bottom:6px;}
+  .triad-card b{display:block;font-family:'Fraunces',serif;font-size:15px;color:#F3EFE2;margin-bottom:4px;}
+  @media (max-width:700px){.triad{grid-template-columns:1fr;}}
+
+  .final-motto{text-align:center;font-family:'Fraunces',serif;font-style:italic;font-size:16px;color:#C9BE9E;margin-top:10px;}
+  .final-motto b{color:var(--gold);font-style:normal;}
+
+  footer{background:var(--ink);color:#8f8a7c;padding:34px 0 44px;font-size:11.3px;line-height:1.75;}
+  footer .wrap{border-top:1px solid rgba(243,239,226,0.12);padding-top:22px;text-align:center;}
+  footer b{color:#cfc6ac;}
+  footer .contact{margin-top:10px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#a89d80;}
+</style>
+</head>
+<body>
+
+<header class="cover">
+  <div class="wrap">
+    <div class="cover-top">
+      <div class="brandmark">
+        <div class="bm-text"><b>THE METANOIA GROUP</b>Conscious Business Model Canvas</div>
+      </div>
+      <div class="cover-meta">Working document — internal use<br><b>Mario Garza Livas</b> · Founder &amp; CEO</div>
+    </div>
+
+    <div class="cover-title">
+      <div class="eyebrow" style="color:#B7AC8E;">14-Block Canvas</div>
+      <h1 style="margin-top:14px;">The right order that <span>success doesn't guarantee</span></h1>
+      <p class="motto">Structure stabilizes. <b>Purpose directs.</b> Adaptation sustains.</p>
+    </div>
+
+    <div class="kpi-strip">
+      <div class="kpi"><div class="val">500</div><div class="lbl">Leaders — BHAG 2040</div></div>
+      <div class="kpi"><div class="val">5</div><div class="lbl">Domains with skin in the game</div></div>
+      <div class="kpi"><div class="val">0</div><div class="lbl">Margin for error — professional football standard</div></div>
+      <div class="kpi"><div class="val">1</div><div class="lbl">Operator — no rotation, no juniors</div></div>
+      <div class="kpi"><div class="val">17</div><div class="lbl">Modules — Metanoia Football</div></div>
+    </div>
+  </div>
+</header>
+
+<section class="trinity">
+  <div class="wrap">
+    <div class="trinity-grid">
+      <div class="tri-card">
+        <h4>Structure stabilizes</h4>
+        <p>The design that determines whether the system works once reality stops being favorable. <i>A company without structure collapses under pressure. One with structure can capitalize on it.</i></p>
+      </div>
+      <div class="tri-card">
+        <h4>Purpose directs</h4>
+        <p>The point from which decisions are made when information is incomplete — which is always. <i>It isn't decorative. It's the decision mechanism when financial logic alone isn't enough.</i></p>
+      </div>
+      <div class="tri-card">
+        <h4>Adaptation sustains</h4>
+        <p>The system's capacity to learn from disruption and reconfigure without losing coherence. <i>The difference between robust and antifragile. One withstands the blow. The other improves because of it.</i></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="canvas">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">14-Block Canvas — official Conscious Business Model geometry</div>
+      <h2>Person, company, and wealth, as a single system</h2>
+      <p>Osterwalder's classic Business Model Canvas (9 blocks) expanded with 5 blocks from the conscious model: Higher Purpose, Talent, Commitment to Talent, and Social &amp; Environmental Costs/Benefits.</p>
+    </div>
+
+    <div class="zone-legend">
+      <div class="zone-chip"><span class="zone-dot" style="background:var(--gold)"></span>Frontstage — what the principal sees</div>
+      <div class="zone-chip"><span class="zone-dot" style="background:var(--slate)"></span>Backstage — TMG's internal architecture</div>
+      <div class="zone-chip"><span class="zone-dot" style="background:var(--umber)"></span>Profitability &amp; impact — business and system balance</div>
+    </div>
+
+    <div class="canvas-scroll">
+      <div class="canvas-outer" id="canvas-outer">
+        <svg id="shape-layer" viewBox="0 0 1400 840" preserveAspectRatio="none"></svg>
+        <svg id="arrow-layer" viewBox="0 0 1400 840" preserveAspectRatio="none"></svg>
+        <div id="label-layer"></div>
+      </div>
+    </div>
+
+    <div class="arrow-legend">
+      <div class="item"><span class="swatch causal"></span>Causal relationship / direct dependency</div>
+      <div class="item"><span class="swatch enabling"></span>Enabling relationship / reinforcement</div>
+      <div class="item"><span class="swatch tension"></span>Tension / strategic trade-off</div>
+    </div>
+
+    <div class="rel-detail">
+      <div class="rel-col">
+        <h4><span class="swatch enabling" style="width:20px;display:inline-block;vertical-align:middle;"></span> Enabling relationships</h4>
+        <ul>
+          <li><b>Key Resources</b> (agentic AI) → <b>Key Activities</b> — enables continuous stress-testing</li>
+          <li><b>Social Benefits</b> → <b>Customer Relationships</b> — reinforces trust and reputation</li>
+          <li><b>Key Partners</b> (community of principals) → <b>Channels</b> — reinforces quality referrals</li>
+          <li><b>Commitment to Talent</b> → <b>Value Proposition</b> — sustains the promise of continuity without rotation</li>
+        </ul>
+      </div>
+      <div class="rel-col">
+        <h4><span class="swatch tension" style="width:20px;display:inline-block;vertical-align:middle;"></span> Strategic tensions</h4>
+        <ul>
+          <li><b>Higher Purpose</b> ↔ <b>Revenue Streams</b> — radical exclusivity vs. business growth</li>
+          <li><b>Talent</b> ↔ <b>Revenue Streams</b> — a single operator vs. scaling revenue</li>
+          <li><b>Social Costs</b> ↔ <b>Customer Segments</b> — exclusivity vs. accessibility and broad impact</li>
+          <li><b>Cost Structure</b> ↔ <b>Talent</b> — Mario's time, a scarce resource, vs. growing demand</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--card);border-top:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">System loops</div>
+      <h2>Structural capitalization, and its own limit</h2>
+    </div>
+    <div class="loops">
+      <div class="loop-card positive">
+        <h3>Positive reinforcement loop</h3>
+        <p class="sub">The relationship that ages well was designed to age</p>
+        <div class="loop-chain">
+          <span class="loop-chip">Accumulated context</span><span class="loop-arrow">→</span>
+          <span class="loop-chip">Capitalizing relationship</span><span class="loop-arrow">→</span>
+          <span class="loop-chip">Better-informed decisions</span><span class="loop-arrow">→</span>
+          <span class="loop-chip">Better-ordered principal</span><span class="loop-arrow">→</span>
+          <span class="loop-chip">Quality referral</span><span class="loop-arrow">→</span>
+          <span class="loop-chip">More accumulated context</span>
+        </div>
+      </div>
+      <div class="loop-card risk">
+        <h3>Risk loop</h3>
+        <p class="sub">The ceiling of any system is the ceiling of the operator who sustains it</p>
+        <div class="loop-chain">
+          <span class="loop-chip">Demand grows faster than Mario's time</span><span class="loop-arrow">→</span>
+          <span class="loop-chip">Pressure to scale via headcount</span><span class="loop-arrow">→</span>
+          <span class="loop-chip">Risk of diluting skin in the game and continuity</span><span class="loop-arrow">→</span>
+          <span class="loop-chip">Erosion of the Value Proposition</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="synthesis">
+  <div class="wrap">
+    <div class="section-head" style="max-width:780px;">
+      <div class="eyebrow" style="color:var(--gold);">The coherence of the canvas</div>
+      <h2 style="color:#F3EFE2;">It isn't in any single block</h2>
+    </div>
+
+    <p class="synth-quote">"The excellence of each part does not compensate for the incoherence of the whole. In TMG's canvas, the parts are coherent."</p>
+
+    <div class="triad">
+      <div class="triad-card"><div class="tk">BE</div><b>The person</b>What is built outward cannot exceed what is ordered inward. It comes first, always.</div>
+      <div class="triad-card"><div class="tk">BUILD</div><b>The company</b>The outward expression of the architecture of the leader who builds it.</div>
+      <div class="triad-card"><div class="tk">HAVE</div><b>The wealth</b>The result — not the origin. A coherent wealth system requires the two prior ones to be coherent first.</div>
+    </div>
+
+    <p class="final-motto">Structure stabilizes. <b>Purpose directs.</b> Adaptation sustains.<br><b>Ad Majorem Dei Gloriam.</b></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <b>The Metanoia Group</b> — Conscious Business Model Canvas (14 blocks), built on Osterwalder &amp; Pigneur's Business Model Canvas (2010) and Mackey &amp; Sisodia's Conscious Capitalism framework (2013).<br>
+    Working document — internal use. Content based on TMG's Mission, Vision, Values and Canvas.
+    <div class="contact">Mario Garza Livas · Founder &amp; CEO · mario@metanoiagroup.vip · +52 (81) 2513 6784 · metanoiagroup.vip</div>
+  </div>
+</footer>
+
+<script>
+/* ===================== GEOMETRY (validated Canvas-14 official template) ===================== */
+const SHAPES = [
+  { id:'cost-social',   zone:'profit', pts:[[20,20],[700,20],[700,140],[217.5,140]] },
+  { id:'benefit-social', zone:'profit', pts:[[700,20],[1380,20],[1182.5,140],[700,140]] },
+  { id:'cost-structure', zone:'profit', pts:[[217.5,140],[700,140],[700,246],[392,246]] },
+  { id:'revenue',        zone:'profit', pts:[[700,140],[1182.5,140],[1008,246],[700,246]] },
+  { id:'key-allies',     zone:'back',   pts:[[20,20],[392,246],[392,558],[20,800]] },
+  { id:'customer-segments', zone:'front', pts:[[1380,20],[1008,246],[1008,558],[1380,800]] },
+  { id:'key-resources',  zone:'back',  pts:[[392,246],[580,246],[580,402],[392,402]] },
+  { id:'value-prop',     zone:'front', pts:[[580,246],[820,246],[820,402],[580,402]] },
+  { id:'customer-relationships', zone:'front', pts:[[820,246],[1008,246],[1008,402],[820,402]] },
+  { id:'key-activities', zone:'back',  pts:[[392,402],[580,402],[580,558],[392,558]] },
+  { id:'purpose',        zone:'purpose', pts:[[580,402],[820,402],[820,558],[580,558]] },
+  { id:'channels',       zone:'front', pts:[[820,402],[1008,402],[1008,558],[820,558]] },
+  { id:'talent',         zone:'back',  pts:[[392,558],[700,558],[700,800],[20,800]] },
+  { id:'commitment',     zone:'back',  pts:[[700,558],[1008,558],[1380,800],[700,800]] },
+];
+const ZONE_FILL = { front:'#FBF9F2', back:'#F4F0E4', profit:'#F6F1E0', purpose:'#F7EFDA' };
+
+const NS = 'http://www.w3.org/2000/svg';
+const shapeLayer = document.getElementById('shape-layer');
+
+function poly(pts, extra){
+  const p = document.createElementNS(NS,'polygon');
+  p.setAttribute('points', pts.map(pt=>pt.join(',')).join(' '));
+  p.setAttribute('fill', extra.fill);
+  p.setAttribute('stroke', '#0B0B0A');
+  p.setAttribute('stroke-width', '2');
+  p.setAttribute('stroke-linejoin','round');
+  return p;
+}
+function rrect(x,y,w,h,r,fill,stroke,sw){
+  const r2 = document.createElementNS(NS,'rect');
+  r2.setAttribute('x',x); r2.setAttribute('y',y); r2.setAttribute('width',w); r2.setAttribute('height',h);
+  r2.setAttribute('rx',r); r2.setAttribute('fill',fill); r2.setAttribute('stroke',stroke); r2.setAttribute('stroke-width',sw);
+  return r2;
+}
+shapeLayer.appendChild(rrect(20,20,1360,780,34,'#FBF9F2','#0B0B0A',5));
+SHAPES.filter(s=>s.zone!=='purpose').forEach(s=>{ shapeLayer.appendChild(poly(s.pts, {fill: ZONE_FILL[s.zone]})); });
+const purposeShape = SHAPES.find(s=>s.id==='purpose');
+shapeLayer.appendChild(poly(purposeShape.pts, {fill: ZONE_FILL.purpose}));
+shapeLayer.appendChild(rrect(392,246,616,312,26,'none','#0B0B0A',5));
+
+/* ===================== TEXT LABEL BOXES (validated to fit inside their polygon) ===================== */
+const BOXES = {
+  'cost-social':          {x:230, y:26,  w:460, h:110},
+  'benefit-social':       {x:710, y:26,  w:460, h:110},
+  'cost-structure':       {x:390, y:144, w:300, h:96},
+  'revenue':              {x:710, y:144, w:300, h:96},
+  'key-allies':           {x:34,  y:256, w:350, h:296},
+  'customer-segments':    {x:1016,y:256, w:350, h:296},
+  'key-resources':        {x:400, y:254, w:172, h:142},
+  'value-prop':           {x:588, y:254, w:224, h:142},
+  'customer-relationships':{x:828, y:254, w:172, h:142},
+  'key-activities':       {x:400, y:410, w:172, h:142},
+  'purpose':              {x:588, y:410, w:224, h:142},
+  'channels':             {x:828, y:410, w:172, h:142},
+  'talent':                {x:270, y:650, w:410, h:140},
+  'commitment':            {x:720, y:650, w:410, h:140},
+};
+
+const CONTENT = {
+  'cost-social': { title:'Social &amp; Environmental Costs', icon:'−', zone:'profit',
+    q:'What negative impact does our activity generate?', items:[
+      'Structurally exclusive model: it only serves those who have already crossed the threshold where misalignment stops being theoretical',
+      'Total concentration in a single operator — without Mario, the system neither scales nor transfers',
+      'Travel footprint and international presence of the MFB ecosystem' ]},
+  'benefit-social': { title:'Social &amp; Environmental Benefits', icon:'+', zone:'profit',
+    q:'What positive impact does it generate for principals and the system?', items:[
+      'Antifragile companies preserve jobs through adverse cycles that fragile ones don\'t survive',
+      'Well-structured wealth generates intergenerational continuity',
+      'Public intellectual output — open access to the corpus (MFB papers, thought leadership)',
+      'Structurally low environmental impact model — no offices, no manufacturing, digital scale' ]},
+  'cost-structure': { title:'Cost Structure', icon:'Σ', zone:'profit',
+    q:'What are the most important costs?', items:[
+      'Mario\'s time — the system\'s scarcest and most valuable resource',
+      'AI infrastructure — development, operation, and continuous updating of the agents',
+      'Research, intellectual output, and MFB ecosystem operations (travel, international presence)' ]},
+  'revenue': { title:'Revenue Streams', icon:'€', zone:'profit',
+    q:'Where does revenue come from?', items:[
+      '<b>MSA</b> — tiered monthly retainer (the model\'s integrating center)',
+      '<b>MEC / MBC</b> — modular executive coaching and project-based consulting',
+      '<b>MWS / MES / MFB</b> — wealth, executive systems, and professional football' ]},
+  'key-allies': { title:'Key Partners', icon:'◇', zone:'back',
+    q:'Who complements the system?', items:[
+      'Domain-specialist network — legal, tax, wealth — activated through MSA',
+      'Professional football ecosystem (clubs, leagues, agents, investors)',
+      'Academic institutions — McCombs, EGADE',
+      'Community of principals — the well-earned referral, the only acquisition channel TMG respects' ]},
+  'key-resources': { title:'Key Resources', icon:'▣', zone:'back',
+    q:'What assets are indispensable?', items:[
+      'Mario Garza Livas — the resource that cannot be replicated; his voice is irreproducible because its source is his life',
+      'Accumulated context — each principal\'s living dossier',
+      'Agentic AI infrastructure — Sofía, Adam, three advisory boards (PAB, EAB, PWAB)',
+      'The 9-cell framework — the central intellectual tool' ]},
+  'value-prop': { title:'Value Proposition', icon:'★', zone:'front',
+    q:'What value do we deliver, and to whom?', items:[
+      'The right order that success doesn\'t guarantee — before disruption forces it',
+      'Simultaneously integrates person, company, and wealth as a single coherent system',
+      'Not better decisions — a different system from which decisions are made',
+      'No one else is looking at the whole system' ]},
+  'customer-relationships': { title:'Customer Relationships', icon:'♥', zone:'front',
+    q:'What kind of relationship do we sustain?', items:[
+      'Structural capitalization — the relationship doesn\'t reset, it accumulates',
+      'MSA: continuous advisory, not project-based',
+      'Sofía and Adam: permanent presence between sessions' ]},
+  'customer-segments': { title:'Customer Segments', icon:'◎', zone:'front',
+    q:'Who are the principals?', items:[
+      'Founders building companies that will outlive them',
+      'Investors structuring intergenerational wealth',
+      'Executives navigating transitions that impact everything simultaneously',
+      'Athletes and high-performance professionals',
+      'Entry criterion: the cost of misalignment is no longer theoretical' ]},
+  'key-activities': { title:'Key Activities', icon:'⚙', zone:'back',
+    q:'What must TMG do excellently?', items:[
+      'Diagnosis of the principal\'s entire system',
+      'Continuous strategic deliberation — MSA sessions',
+      'Stress-testing decisions before execution',
+      'Thought leadership production — books, papers, essays' ]},
+  'channels': { title:'Channels', icon:'→', zone:'front',
+    q:'How does TMG reach its principals?', items:[
+      'Initial strategic conversation — direct, no forms, no junior associates',
+      'Referrals from current principals — the only growth source by design',
+      'Thought leadership + metanoiagroup.vip',
+      'Professional football ecosystem as a credibility channel' ]},
+  'talent': { title:'Talent', icon:'◈', zone:'back',
+    q:'What collaborators does the system require?', items:[
+      'A team of one — expanded through architecture, not headcount',
+      'Mario operates as the sole advisor',
+      'Sofía and Adam aren\'t tools — they\'re team members' ]},
+  'commitment': { title:'Commitment to Talent', icon:'✓', zone:'back',
+    q:'What is offered in exchange for continuity?', items:[
+      'The principal works directly with Mario — always',
+      'No rotation, no junior learning on the client\'s dime',
+      'The professional football standard — no safety net — calibrates every intervention' ]},
+};
+
+const PURPOSE = { title:'Higher Purpose', q:'What is the reason for being, beyond the business?', items:[
+  'Reorder entire systems before disruption forces it',
+  'Not optimization. Not consulting. Not coaching. Metanoia',
+  'For those who are ready: all the way to the root',
+  '<i>Ad Majorem Dei Gloriam</i>' ]};
+
+const VBW = 1400, VBH = 840;
+const labelLayer = document.getElementById('label-layer');
+function pctBox(b){ return { left:(b.x/VBW*100)+'%', top:(b.y/VBH*100)+'%', width:(b.w/VBW*100)+'%', height:(b.h/VBH*100)+'%' }; }
+function postitsHTML(items){ return items.map(t=>`<div class="postit">${t}</div>`).join(''); }
+
+Object.keys(CONTENT).forEach(id=>{
+  const c = CONTENT[id], b = BOXES[id], p = pctBox(b);
+  const el = document.createElement('div');
+  el.className = `block-label zone-${c.zone}`;
+  el.id = 'lbl-'+id;
+  Object.assign(el.style, p);
+  el.innerHTML = `
+    <div class="block-head">
+      <span class="zone-bullet"></span>
+      <span class="block-title">${c.title}</span>
+      <span class="block-icon">${c.icon}</span>
+    </div>
+    <div class="block-q">${c.q}</div>
+    <div class="postits">${postitsHTML(c.items)}</div>`;
+  labelLayer.appendChild(el);
+});
+
+{
+  const b = BOXES['purpose'], p = pctBox(b);
+  const el = document.createElement('div');
+  el.id = 'lbl-purpose';
+  el.className = 'block-label';
+  Object.assign(el.style, p);
+  el.innerHTML = `
+    <div id="purpose-label">
+      <div class="purpose-badge">TMG</div>
+      <div class="block-title" style="margin-top:24px;">${PURPOSE.title}</div>
+      <div class="block-q">${PURPOSE.q}</div>
+      <div class="postits">${postitsHTML(PURPOSE.items)}</div>
+    </div>`;
+  labelLayer.appendChild(el);
+}
+
+function addWingIcon(x,y,glyph){
+  const d = document.createElement('div');
+  d.className = 'wing-icon';
+  Object.assign(d.style, { left:(x/VBW*100)+'%', top:(y/VBH*100)+'%' });
+  d.textContent = glyph;
+  labelLayer.appendChild(d);
+}
+addWingIcon(24, 405, '◇');
+addWingIcon(1376, 405, '◎');
+
+/* ===================== ARROWS ===================== */
+const RELS = [
+  { from:'purpose', to:'talent', type:'causal', label:'shapes', bend:34 },
+  { from:'purpose', to:'key-resources', type:'causal', label:'shapes', bend:-34 },
+  { from:'key-resources', to:'value-prop', type:'causal', label:'feeds', bend:-16 },
+  { from:'talent', to:'value-prop', type:'causal', label:'feeds', bend:22 },
+  { from:'value-prop', to:'customer-relationships', type:'causal', label:'generates', bend:0 },
+  { from:'customer-relationships', to:'revenue', type:'causal', label:'sustains', bend:38 },
+  { from:'revenue', to:'commitment', type:'causal', label:'funds', bend:0 },
+  { from:'revenue', to:'cost-structure', type:'causal', label:'funds', bend:-40 },
+
+  { from:'key-resources', to:'key-activities', type:'enabling', bend:-40 },
+  { from:'benefit-social', to:'customer-relationships', type:'enabling', bend:44 },
+  { from:'key-allies', to:'channels', type:'enabling', bend:-30 },
+  { from:'commitment', to:'value-prop', type:'enabling', bend:26 },
+
+  { from:'purpose', to:'revenue', type:'tension', bend:-60 },
+  { from:'talent', to:'revenue', type:'tension', bend:40 },
+  { from:'cost-social', to:'customer-segments', type:'tension', bend:50 },
+  { from:'cost-structure', to:'talent', type:'tension', bend:36 },
+];
+
+const arrowLayer = document.getElementById('arrow-layer');
+const outerEl = document.getElementById('canvas-outer');
+
+function ensureDefs(){
+  const defs = document.createElementNS(NS,'defs');
+  const mk = (id,color) => {
+    const m = document.createElementNS(NS,'marker');
+    m.setAttribute('id',id); m.setAttribute('markerWidth','8'); m.setAttribute('markerHeight','8');
+    m.setAttribute('refX','6'); m.setAttribute('refY','3'); m.setAttribute('orient','auto');
+    const p = document.createElementNS(NS,'path');
+    p.setAttribute('d','M0,0 L6,3 L0,6 Z'); p.setAttribute('fill',color);
+    m.appendChild(p); defs.appendChild(m);
+  };
+  mk('arrow-causal','#0B0B0A'); mk('arrow-enabling', '#A9803D'); mk('arrow-tension', '#6B4A2F');
+  arrowLayer.appendChild(defs);
+}
+function centerOf(b){ return { cx:b.x+b.w/2, cy:b.y+b.h/2, w:b.w, h:b.h }; }
+function edgePoint(rect, toward){
+  const dx = toward.x - rect.cx, dy = toward.y - rect.cy;
+  const hw = rect.w/2 - 4, hh = rect.h/2 - 4;
+  if(dx===0 && dy===0) return {x:rect.cx,y:rect.cy};
+  const sx = dx!==0 ? hw/Math.abs(dx) : Infinity;
+  const sy = dy!==0 ? hh/Math.abs(dy) : Infinity;
+  const s = Math.min(sx,sy);
+  return { x: rect.cx + dx*s, y: rect.cy + dy*s };
+}
+function bez(p1,c,p2,t){
+  const mt=1-t;
+  return { x: mt*mt*p1.x+2*mt*t*c.x+t*t*p2.x, y: mt*mt*p1.y+2*mt*t*c.y+t*t*p2.y };
+}
+function rectsOverlap(ax,ay,aw,ah,bx,by,bw,bh){
+  return ax < bx+bw && ax+aw > bx && ay < by+bh && ay+ah > by;
+}
+const CAND_T = Array.from({length:41}, (_,i)=> 0.1 + i*0.02);
+const NUDGES = [0,14,-14,26,-26,38,-38,50,-50];
+
+function drawArrows(){
+  arrowLayer.innerHTML = '';
+  ensureDefs();
+  document.querySelectorAll('.edge-label').forEach(n=>n.remove());
+  const placedLabels = [];
+
+  RELS.forEach(rel=>{
+    const bF = BOXES[rel.from], bT = BOXES[rel.to];
+    if(!bF || !bT) return;
+    const rF = centerOf(bF), rT = centerOf(bT);
+    const p1 = edgePoint(rF, {x:rT.cx,y:rT.cy});
+    const p2 = edgePoint(rT, {x:rF.cx,y:rF.cy});
+
+    const mx=(p1.x+p2.x)/2, my=(p1.y+p2.y)/2;
+    const dx=p2.x-p1.x, dy=p2.y-p1.y;
+    const len=Math.sqrt(dx*dx+dy*dy)||1;
+    const nx=-dy/len, ny=dx/len;
+    const bend = rel.bend||0;
+    const ctrl = { x: mx+nx*bend, y: my+ny*bend };
+
+    const path = document.createElementNS(NS,'path');
+    path.setAttribute('d', `M ${p1.x} ${p1.y} Q ${ctrl.x} ${ctrl.y} ${p2.x} ${p2.y}`);
+    path.setAttribute('fill','none');
+    path.setAttribute('stroke-width', rel.type==='causal' ? '2.2':'1.8');
+    path.setAttribute('opacity', rel.type==='causal' ? '0.85':'0.8');
+    path.setAttribute('marker-end', `url(#arrow-${rel.type})`);
+    if(rel.type==='causal'){ path.setAttribute('stroke','#0B0B0A'); }
+    if(rel.type==='enabling'){ path.setAttribute('stroke','#A9803D'); path.setAttribute('stroke-dasharray','1,6'); path.setAttribute('stroke-linecap','round'); }
+    if(rel.type==='tension'){ path.setAttribute('stroke','#6B4A2F'); path.setAttribute('stroke-dasharray','6,4'); }
+    arrowLayer.appendChild(path);
+
+    if(!rel.label) return;
+
+    const lw = rel.label.length*5.8+16, lh=17;
+    let spot = null;
+    outer:
+    for(const t of CAND_T){
+      const pt = bez(p1,ctrl,p2,t);
+      for(const off of NUDGES){
+        const px = pt.x+nx*off, py = pt.y+ny*off;
+        const lx = px-lw/2, ly = py-lh/2;
+        const hitsBox = Object.keys(BOXES).some(bid=>{
+          if(bid===rel.from || bid===rel.to) return false;
+          const b = BOXES[bid];
+          return rectsOverlap(lx,ly,lw,lh,b.x,b.y,b.w,b.h);
+        });
+        if(hitsBox) continue;
+        const hitsLabel = placedLabels.some(pl=>rectsOverlap(lx,ly,lw,lh,pl.x,pl.y,pl.w,pl.h));
+        if(hitsLabel) continue;
+        spot = {x:px,y:py,lx,ly,lw,lh};
+        break outer;
+      }
+    }
+    if(!spot) return;
+
+    placedLabels.push({x:spot.lx,y:spot.ly,w:spot.lw,h:spot.lh});
+    const lbl = document.createElement('div');
+    lbl.className = `edge-label`;
+    lbl.style.left = (spot.x/VBW*100)+'%';
+    lbl.style.top = (spot.y/VBH*100)+'%';
+    lbl.textContent = rel.label;
+    outerEl.appendChild(lbl);
+  });
+}
+drawArrows();
+</script>
+</body>
+</html>

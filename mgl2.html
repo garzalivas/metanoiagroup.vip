@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="New_Favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mario Garza Livas — The Metanoia Group</title>
+<meta name="description" content="Mario Garza Livas — Strategic Advisor, Football Business Consultant, Sports Agent, Family Office CIO, Adjunct Professor. Contact, documents and links.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Mario Garza Livas — The Metanoia Group">
+<meta property="og:description" content="Person. Company. Wealth. One single point of entry.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="The Metanoia Group">
+<meta property="og:image" content="https://metanoiagroup.vip/og-image-2.jpg">
+  <meta property="og:url" content="https://metanoiagroup.vip/MGL2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0a0b;
+    --bg-alt:#111113;
+    --bg-card:#141416;
+    --text:#ece8e0;
+    --text-dim:#96908780;
+    --text-muted:#9b968c;
+    --accent:#b6905c;
+    --accent-dim:#7d6743;
+    --line:#26242066;
+    --line-strong:#2f2c27;
+    --serif:'Fraunces', Georgia, 'Times New Roman', serif;
+    --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --maxw:920px;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  a{color:inherit;text-decoration:none;}
+
+  ::selection{background:var(--accent-dim);color:var(--bg);}
+
+  a:focus-visible, button:focus-visible{
+    outline:1.5px solid var(--accent);
+    outline-offset:4px;
+  }
+
+  /* background texture */
+  body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+    background:
+      radial-gradient(ellipse 900px 500px at 15% -10%, #b6905c10, transparent 60%),
+      radial-gradient(ellipse 700px 500px at 100% 20%, #b6905c08, transparent 60%);
+    pointer-events:none;
+    z-index:0;
+  }
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;z-index:1;}
+
+  /* ---------- NAV ---------- */
+  nav.topbar{
+    position:sticky;top:0;
+    background:#0a0a0bd9;
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+    z-index:50;
+  }
+  nav.topbar .inner{
+    max-width:var(--maxw);margin:0 auto;padding:18px 28px;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:14px;flex-wrap:wrap;
+  }
+  .brandmark{
+    font-family:var(--serif);
+    font-size:15px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--text);
+    font-weight:500;
+  }
+  .brandmark span{color:var(--text-muted);font-weight:400;}
+  .nav-links{display:flex;gap:26px;align-items:center;flex-wrap:wrap;}
+  .nav-links a{
+    font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--text-muted);
+    transition:color .25s ease;
+    white-space:nowrap;
+  }
+  .nav-links a:hover{color:var(--accent);}
+  .nav-links a.en{
+    border:1px solid var(--line-strong);
+    padding:6px 12px;
+    border-radius:2px;
+  }
+  .nav-links a.en:hover{border-color:var(--accent);}
+
+  /* ---------- HERO ---------- */
+  header.hero{
+    padding:120px 0 90px;
+    position:relative;
+  }
+  .eyebrow{
+    font-size:12px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--accent);
+    font-weight:500;
+    display:flex;align-items:center;gap:12px;
+    opacity:0;
+    animation:fadeUp .9s ease .1s forwards;
+  }
+  .eyebrow::before{
+    content:'';display:inline-block;width:28px;height:1px;background:var(--accent);
+  }
+  h1.name{
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:clamp(42px, 7vw, 74px);
+    line-height:1.04;
+    letter-spacing:-.01em;
+    margin-top:22px;
+    opacity:0;
+    animation:fadeUp .9s ease .25s forwards;
+  }
+  h1.name em{font-style:italic;font-weight:400;color:var(--accent);font-size:0.5em;display:inline-block;margin-top:6px;}
+
+  p.roles{
+    margin-top:26px;
+    font-size:clamp(15px,2vw,18px);
+    color:var(--text-muted);
+    max-width:640px;
+    line-height:1.7;
+    font-weight:300;
+    opacity:0;
+    animation:fadeUp .9s ease .4s forwards;
+  }
+  p.roles .sep{color:var(--accent-dim);margin:0 10px;}
+
+  .locbar{
+    margin-top:34px;
+    display:flex;align-items:center;gap:10px;
+    font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);
+    opacity:0;
+    animation:fadeUp .9s ease .55s forwards;
+  }
+  .locbar .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none;
+    box-shadow:0 0 8px 1px #b6905c80;
+  }
+
+  .hero-cta{
+    margin-top:46px;
+    display:flex;gap:16px;flex-wrap:wrap;
+    opacity:0;
+    animation:fadeUp .9s ease .7s forwards;
+  }
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:14px 24px;
+    font-size:12.5px;letter-spacing:.09em;text-transform:uppercase;
+    border-radius:2px;
+    transition:all .25s ease;
+  }
+  .btn-primary{
+    background:var(--accent);color:#0a0a0b;font-weight:600;
+  }
+  .btn-primary:hover{background:#c9a06d;transform:translateY(-1px);}
+  .btn-ghost{
+    border:1px solid var(--line-strong);color:var(--text);
+  }
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+
+  @keyframes fadeUp{
+    from{opacity:0;transform:translateY(16px);}
+    to{opacity:1;transform:translateY(0);}
+  }
+
+  /* ---------- SECTION SHELL ---------- */
+  section{
+    padding:86px 0;
+    border-top:1px solid var(--line);
+    position:relative;
+  }
+  .sec-head{
+    display:flex;align-items:baseline;gap:18px;margin-bottom:48px;
+  }
+  .sec-num{
+    font-family:var(--serif);font-style:italic;font-size:15px;color:var(--accent-dim);
+    letter-spacing:.05em;
+  }
+  h2.sec-title{
+    font-family:var(--serif);font-weight:400;font-size:clamp(26px,3.4vw,36px);
+    letter-spacing:-.01em;
+  }
+  h2.sec-title em{font-style:italic;color:var(--accent);font-weight:400;}
+  .sec-sub{
+    color:var(--text-muted);font-size:14.5px;font-weight:300;max-width:520px;margin-top:14px;line-height:1.7;
+  }
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease, transform .8s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  /* ---------- CONTACT ---------- */
+  .contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1px;
+    background:var(--line-strong);
+    border:1px solid var(--line-strong);
+  }
+  .contact-item{
+    background:var(--bg-alt);
+    padding:26px 28px;
+    display:flex;align-items:center;gap:18px;
+    transition:background .25s ease;
+  }
+  .contact-item:hover{background:var(--bg-card);}
+  .cicon{
+    flex:none;width:42px;height:42px;border-radius:50%;
+    border:1px solid var(--line-strong);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--serif);font-style:italic;font-size:13px;color:var(--accent);
+    transition:border-color .25s ease;
+  }
+  .contact-item:hover .cicon{border-color:var(--accent);}
+  .clabel{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);}
+  .cvalue{font-size:15px;margin-top:4px;word-break:break-word;}
+  .cvalue-link{transition:color .2s ease;}
+  .contact-item:hover .cvalue-link{color:var(--accent);}
+
+  @media (max-width:640px){
+    .contact-grid{grid-template-columns:1fr;}
+  }
+
+  /* ---------- ECOSYSTEM (verticals-style codes) ---------- */
+  .eco-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:1px;
+    background:var(--line-strong);
+    border:1px solid var(--line-strong);
+  }
+  .eco-card{
+    background:var(--bg-alt);
+    padding:34px 30px;
+    display:block;
+    transition:background .3s ease, transform .3s ease;
+  }
+  .eco-card:hover{background:var(--bg-card);transform:translateY(-2px);}
+  .eco-code{
+    font-family:var(--serif);font-style:italic;font-size:13px;color:var(--accent);
+    letter-spacing:.06em;
+  }
+  .eco-name{
+    font-family:var(--serif);font-size:21px;margin-top:10px;font-weight:400;
+  }
+  .eco-desc{
+    color:var(--text-muted);font-size:13.5px;margin-top:10px;line-height:1.65;font-weight:300;
+  }
+  .eco-url{
+    margin-top:18px;font-size:11px;letter-spacing:.08em;color:var(--accent-dim);
+    display:flex;align-items:center;gap:8px;
+    text-transform:lowercase;
+  }
+  .eco-card:hover .eco-url{color:var(--accent);}
+  .eco-url .arrow{transition:transform .25s ease;}
+  .eco-card:hover .eco-url .arrow{transform:translateX(4px);}
+
+  @media (max-width:640px){
+    .eco-grid{grid-template-columns:1fr;}
+  }
+
+  /* ---------- DOCUMENTS ---------- */
+  .doc-list{border-top:1px solid var(--line-strong);}
+  .doc-row{
+    display:flex;align-items:center;justify-content:space-between;gap:20px;
+    padding:26px 4px;
+    border-bottom:1px solid var(--line-strong);
+    transition:padding-left .3s ease, background .3s ease;
+  }
+  .doc-row:hover{padding-left:14px;background:#ffffff03;}
+  .doc-left{display:flex;align-items:center;gap:20px;min-width:0;}
+  .doc-num{font-family:var(--serif);font-style:italic;color:var(--accent-dim);font-size:14px;flex:none;}
+  .doc-text{min-width:0;}
+  .doc-title{font-family:var(--serif);font-size:19px;font-weight:400;}
+  .doc-hint{color:var(--text-muted);font-size:12.5px;margin-top:4px;font-weight:300;}
+  .doc-dl{
+    flex:none;
+    width:38px;height:38px;border-radius:50%;
+    border:1px solid var(--line-strong);
+    display:flex;align-items:center;justify-content:center;
+    transition:all .25s ease;
+  }
+  .doc-row:hover .doc-dl{border-color:var(--accent);background:var(--accent);}
+  .doc-dl svg{width:14px;height:14px;stroke:var(--text-muted);transition:stroke .25s ease;}
+  .doc-row:hover .doc-dl svg{stroke:#0a0a0b;}
+
+  /* ---------- SOCIAL ---------- */
+  .social-grid{
+    display:flex;flex-wrap:wrap;gap:14px;
+  }
+  .social-chip{
+    display:flex;align-items:center;gap:12px;
+    border:1px solid var(--line-strong);
+    padding:12px 18px 12px 12px;
+    border-radius:32px;
+    transition:all .25s ease;
+  }
+  .social-chip:hover{border-color:var(--accent);transform:translateY(-2px);}
+  .social-badge{
+    width:30px;height:30px;border-radius:50%;
+    background:var(--bg-card);
+    border:1px solid var(--line-strong);
+    display:flex;align-items:center;justify-content:center;
+    font-size:10.5px;letter-spacing:.02em;font-weight:600;color:var(--text);
+    font-family:var(--sans);
+    transition:all .25s ease;
+  }
+  .social-chip:hover .social-badge{background:var(--accent);color:#0a0a0b;border-color:var(--accent);}
+  .social-name{font-size:13px;color:var(--text-muted);white-space:nowrap;}
+  .social-chip:hover .social-name{color:var(--text);}
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    padding:70px 0 46px;
+    border-top:1px solid var(--line);
+  }
+  .footer-brand{
+    font-family:var(--serif);font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted);
+  }
+  .footer-tagline{
+    font-family:var(--serif);font-style:italic;font-size:19px;color:var(--text);margin-top:14px;
+  }
+  .footer-role{
+    margin-top:22px;font-size:13px;color:var(--text-muted);
+  }
+  .footer-role strong{color:var(--text);font-weight:500;}
+  .footer-contacts{
+    margin-top:10px;display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--text-muted);
+  }
+  .footer-contacts a:hover{color:var(--accent);}
+  .footer-motto{
+    margin-top:36px;font-size:12.5px;color:var(--text-dim);line-height:1.9;
+    font-style:italic;font-family:var(--serif);
+  }
+  .footer-bottom{
+    margin-top:40px;padding-top:22px;border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;
+  }
+  .copyright{font-size:11.5px;color:var(--text-dim);letter-spacing:.04em;}
+  .footer-en{
+    font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);
+    border:1px solid var(--line-strong);padding:7px 14px;border-radius:2px;
+  }
+  .footer-en:hover{color:var(--accent);border-color:var(--accent);}
+
+  @media (max-width:640px){
+    header.hero{padding:56px 0 60px;}
+    section{padding:60px 0;}
+    nav.topbar .inner{padding:16px 20px;}
+    .nav-links{gap:12px 16px;width:100%;}
+    .nav-links a{font-size:11px;}
+    .nav-links a.en{margin-left:auto;}
+    .brandmark{font-size:13px;}
+    .footer-bottom{flex-direction:column;align-items:flex-start;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}
+  }
+</style>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mario Garza Livas — The Metanoia Group">
+<meta name="twitter:description" content="Mario Garza Livas — Strategic Advisor, Football Business Consultant, Sports Agent, Family Office CIO, Adjunct Professor. Contact, documents and links.">
+<meta name="twitter:image" content="https://metanoiagroup.vip/og-image-2.jpg">
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KHNZVPJX1N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KHNZVPJX1N');
+</script>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="inner">
+    <div class="brandmark">MARIO GARZA LIVAS <span>· LANDING PAGE</span></div>
+    <div class="nav-links">
+      <a href="#contact">Contact</a>
+      <a href="#links">Links</a>
+      <a href="#documents">Documents</a>
+      <a href="#social">Social</a>
+      <a class="en" href="https://metanoiagroup.vip/MGL1.html">ES</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Personal Landing Page</p>
+    <h1 class="name">Mario Garza Livas<br><em>High-Performance Systems Architect</em></h1>
+    <p class="roles">
+      <span class="sep">·</span>Strategic Advisor<br><span class="sep">·</span>Football Business Consultant<br><span class="sep">·</span>Sports Agent<br><span class="sep">·</span>Family Office CIO<br><span class="sep">·</span>Adjunct Professor
+    </p>
+    <div class="locbar"><span class="dot"></span>Monterrey, Nuevo León, México</div>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp'})">Message on WhatsApp</a>
+      <a class="btn btn-ghost" href="mailto:mario@metanoiagroup.vip">Send an email</a>
+    </div>
+  </div>
+</header>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">I</span>
+      <div>
+        <h2 class="sec-title">Direct <em>contact</em></h2>
+        <p class="sec-sub">Phone, WhatsApp, LinkedIn and 4 email addresses.</p>
+      </div>
+    </div>
+
+    <div class="contact-grid reveal">
+      <a class="contact-item" href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp'})">
+        <div class="cicon">PW</div>
+        <div>
+          <div class="clabel">Phone &amp; WhatsApp</div>
+          <div class="cvalue cvalue-link">+52 (81) 2513 6784</div>
+        </div>
+      </a>
+      <a class="contact-item" href="mailto:mario@metanoiagroup.vip">
+        <div class="cicon">01</div>
+        <div>
+          <div class="clabel">Email 1 · The Metanoia Group</div>
+          <div class="cvalue cvalue-link">mario@metanoiagroup.vip</div>
+        </div>
+      </a>
+      <a class="contact-item" href="mailto:garzalivas@utexas.edu">
+        <div class="cicon">02</div>
+        <div>
+          <div class="clabel">Email 2 · UT Austin</div>
+          <div class="cvalue cvalue-link">garzalivas@utexas.edu</div>
+        </div>
+      </a>
+      <a class="contact-item" href="mailto:garzalivas@tec.mx">
+        <div class="cicon">03</div>
+        <div>
+          <div class="clabel">Email 3 · Tecnológico de Monterrey</div>
+          <div class="cvalue cvalue-link">garzalivas@tec.mx</div>
+        </div>
+      </a>
+      <a class="contact-item" href="mailto:garzalivas@gmail.com">
+        <div class="cicon">04</div>
+        <div>
+          <div class="clabel">Email 4 · Personal</div>
+          <div class="cvalue cvalue-link">garzalivas@gmail.com</div>
+        </div>
+      </a>
+      <a class="contact-item" href="https://www.linkedin.com/in/garzalivas/?locale=en-US" onclick="gtag('event','click',{'event_category':'contact','event_label':'linkedin'})">
+        <div class="cicon">in</div>
+        <div>
+          <div class="clabel">LinkedIn</div>
+          <div class="cvalue cvalue-link">linkedin.com/in/garzalivas</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="links">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">II</span>
+      <div>
+        <h2 class="sec-title">Relevant <em>links</em></h2>
+        <p class="sec-sub">Companies I work with + AllMyLinks.</p>
+      </div>
+    </div>
+
+    <div class="eco-grid reveal">
+      <a class="eco-card" href="https://metanoiagroup.vip/en" target="_blank" rel="noopener">
+        <div class="eco-code">Link 1</div>
+        <div class="eco-name">The Metanoia Group</div>
+        <p class="eco-desc">Antifragility architecture for the leader, their company and their wealth.</p>
+        <div class="eco-url">metanoiagroup.vip <span class="arrow">→</span></div>
+      </a>
+      <a class="eco-card" href="https://natio.one" target="_blank" rel="noopener">
+        <div class="eco-code">Link 2</div>
+        <div class="eco-name">Natio</div>
+        <p class="eco-desc">Athlete representation.</p>
+        <div class="eco-url">natio.one <span class="arrow">→</span></div>
+      </a>
+      <a class="eco-card" href="https://www.fournations.football" target="_blank" rel="noopener">
+        <div class="eco-code">Link 3</div>
+        <div class="eco-name">Four Nations Football Consulting</div>
+        <p class="eco-desc">Football business consulting.</p>
+        <div class="eco-url">fournations.football <span class="arrow">→</span></div>
+      </a>
+      <a class="eco-card" href="https://allmylinks.com/garzalivas" target="_blank" rel="noopener">
+        <div class="eco-code">Link 4</div>
+        <div class="eco-name">AllMyLinks</div>
+        <p class="eco-desc">Full directory of links, social profiles and contact.</p>
+        <div class="eco-url">allmylinks.com/garzalivas <span class="arrow">→</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="documents">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">III</span>
+      <div>
+        <h2 class="sec-title">Documents to <em>download</em></h2>
+        <p class="sec-sub">Track record, references and life framework in three documents.</p>
+      </div>
+    </div>
+
+    <div class="doc-list reveal">
+      <a class="doc-row" href="https://metanoiagroup.vip/downloads/Resume_Mario_Garza_Livas.pdf" target="_blank" rel="noopener">
+        <div class="doc-left">
+          <span class="doc-num">01</span>
+          <div class="doc-text">
+            <div class="doc-title">Resume</div>
+            <div class="doc-hint">Full professional and academic track record · PDF</div>
+          </div>
+        </div>
+        <div class="doc-dl"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></div>
+      </a>
+      <a class="doc-row" href="https://metanoiagroup.vip/downloads/Books_Etc_Mario_Garza_Livas.pdf" target="_blank" rel="noopener">
+        <div class="doc-left">
+          <span class="doc-num">02</span>
+          <div class="doc-text">
+            <div class="doc-title">Books, Podcasts &amp; Talks</div>
+            <div class="doc-hint">Publications and public appearances · PDF</div>
+          </div>
+        </div>
+        <div class="doc-dl"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></div>
+      </a>
+      <a class="doc-row" href="https://metanoiagroup.vip/downloads/Apostolates_Mario_Garza_Livas.pdf" target="_blank" rel="noopener">
+        <div class="doc-left">
+          <span class="doc-num">03</span>
+          <div class="doc-text">
+            <div class="doc-title">Apostolates</div>
+            <div class="doc-hint">Community commitment and service · PDF</div>
+          </div>
+        </div>
+        <div class="doc-dl"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="social">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">IV</span>
+      <div>
+        <h2 class="sec-title">Social <em>media</em></h2>
+        <p class="sec-sub">Public presence, platform by platform.</p>
+      </div>
+    </div>
+
+    <div class="social-grid reveal">
+      <a class="social-chip" href="https://www.linkedin.com/in/garzalivas/?locale=en-US" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'contact','event_label':'linkedin'})"><span class="social-badge">in</span><span class="social-name">LinkedIn</span></a>
+      <a class="social-chip" href="https://twitter.com/garzalivas" target="_blank" rel="noopener"><span class="social-badge">X</span><span class="social-name">X / Twitter</span></a>
+      <a class="social-chip" href="https://www.youtube.com/user/garzalivasx" target="_blank" rel="noopener"><span class="social-badge">YT</span><span class="social-name">YouTube</span></a>
+      <a class="social-chip" href="https://www.instagram.com/garzalivasmario" target="_blank" rel="noopener"><span class="social-badge">IG</span><span class="social-name">Instagram</span></a>
+      <a class="social-chip" href="https://www.tiktok.com/@garzalivas" target="_blank" rel="noopener"><span class="social-badge">TT</span><span class="social-name">TikTok</span></a>
+      <a class="social-chip" href="https://www.facebook.com/mariogarzalivas" target="_blank" rel="noopener"><span class="social-badge">FB</span><span class="social-name">Facebook</span></a>
+      <a class="social-chip" href="https://t.me/garzalivas" target="_blank" rel="noopener"><span class="social-badge">TG</span><span class="social-name">Telegram</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-brand">The Metanoia Group</div>
+    <div class="footer-tagline">Person. Company. Wealth.</div>
+    <div class="footer-role"><strong>Mario Garza Livas</strong> — Chief Strategic Advisor · Founder · CEO</div>
+    <div class="footer-contacts">
+      <a href="mailto:mario@metanoiagroup.vip">mario@metanoiagroup.vip</a>
+      <span>·</span>
+      <a href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp'})">+52 (81) 2513 6784</a>
+      <span>·</span>
+      <a href="https://www.linkedin.com/in/garzalivas/?locale=en-US" onclick="gtag('event','click',{'event_category':'contact','event_label':'linkedin'})">linkedin.com/in/garzalivas</a>
+    </div>
+    <p class="footer-motto">Structure stabilizes.<br>Purpose directs.<br>Adaptation sustains.</p>
+
+    <div class="footer-bottom">
+      <span class="copyright">© 2026 The Metanoia Group</span>
+      <a class="footer-en" href="https://metanoiagroup.vip/MGL1.html">Versión en Español →</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.12});
+  els.forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
