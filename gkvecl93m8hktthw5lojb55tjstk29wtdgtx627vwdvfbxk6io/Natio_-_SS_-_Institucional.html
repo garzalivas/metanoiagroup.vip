@@ -3,32 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NATIO - QUICKSTUDY GUIDE</title>
+<title>NATIO — 6-Panel SmartStudy Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --black:#010101;--off:#040404;--dark:#080808;--mid:#0d0d0d;--border:#1c1c1c;
-  --muted:#484848;--ts:#686868;--tb:#888888;--tp:#b0b0b0;--white:#e8e8e8;
-  /* Panel 1 — Verde esmeralda: tesis / problema estructural */
-  --a1:#18c46a;--g1:rgba(24,196,106,.07);--b1:rgba(24,196,106,.18);
-  /* Panel 2 — Azul eléctrico: NFB / gobernanza de carrera */
-  --a2:#2878e8;--g2:rgba(40,120,232,.07);--b2:rgba(40,120,232,.18);
-  /* Panel 3 — Ámbar: NGL / movilidad internacional */
-  --a3:#e09020;--g3:rgba(224,144,32,.07);--b3:rgba(224,144,32,.18);
-  /* Panel 4 — Cian: N360 / entorno y marca */
-  --a4:#10b8c8;--g4:rgba(16,184,200,.07);--b4:rgba(16,184,200,.18);
-  /* Panel 5 — Rojo coral: capacidades y guardrails */
-  --a5:#e04040;--g5:rgba(224,64,64,.07);--b5:rgba(224,64,64,.18);
-  /* Panel 6 — Lavanda: modelo de negocio e inversión */
-  --a6:#9898c8;--g6:rgba(152,152,200,.06);--b6:rgba(152,152,200,.16);
+  --black:  #f5f0eb;
+  --off:    #f0ebe4;
+  --dark:   #ede7df;
+  --mid:    #e8e1d8;
+  --border: #c8bfb4;
+  --muted:  #6b6055;
+  --ts:     #4a3f35;
+  --tb:     #2e2520;
+  --tp:     #1a1210;
+  --white:  #0d0a08;
+  /* Panel 1 — Verde bosque: tesis / ecosistema */
+  --a1:#1d6f3a;--g1:rgba(29,111,58,.07);--b1:rgba(29,111,58,.24);
+  /* Panel 2 — Azul profundo: NFB / gobernanza de carrera */
+  --a2:#1060c8;--g2:rgba(16,96,200,.07);--b2:rgba(16,96,200,.24);
+  /* Panel 3 — Ámbar tierra: NGL / movilidad internacional */
+  --a3:#b85c00;--g3:rgba(184,92,0,.07);--b3:rgba(184,92,0,.24);
+  /* Panel 4 — Teal oscuro: N360 / entorno y marca */
+  --a4:#0a6868;--g4:rgba(10,104,104,.07);--b4:rgba(10,104,104,.24);
+  /* Panel 5 — Rojo: capacidades y guardrails */
+  --a5:#c0152a;--g5:rgba(192,21,42,.07);--b5:rgba(192,21,42,.24);
+  /* Panel 6 — Violeta saturado: modelo de negocio e inversión */
+  --a6:#6020b8;--g6:rgba(96,32,184,.06);--b6:rgba(96,32,184,.18);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{background:var(--off);color:var(--tb);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.7;font-size:15px;}
 
 /* ── NAV ── */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(1,1,1,.98);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:54px;}
-.nb{font-family:'Bebas Neue',sans-serif;font-size:12px;letter-spacing:.16em;color:var(--white);text-decoration:none;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(245,240,235,.98);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:54px;}
+.nb{font-family:'Bebas Neue',sans-serif;font-size:12px;letter-spacing:.16em;color:var(--tp);text-decoration:none;}
 .np{display:flex;gap:4px;}
 .nd{width:30px;height:30px;border-radius:2px;border:1px solid var(--border);font-family:'Bebas Neue',sans-serif;font-size:13px;transition:all .18s;text-decoration:none;display:flex;align-items:center;justify-content:center;color:var(--ts);}
 .nd:hover{transform:translateY(-2px);}
@@ -40,35 +49,32 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(1,1,1,.98);b
 .n6:hover{border-color:var(--a6);background:var(--g6);color:var(--a6);}
 
 /* ── HERO ── */
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:80px 2rem 5rem;background:var(--black);position:relative;overflow:hidden;}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 18% 38%,rgba(24,196,106,.07) 0%,transparent 50%),radial-gradient(ellipse at 82% 62%,rgba(40,120,232,.05) 0%,transparent 50%),radial-gradient(ellipse at 50% 90%,rgba(152,152,200,.04) 0%,transparent 50%);pointer-events:none;}
-.h-eye{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-bottom:2rem;}
-.h-badge{display:inline-block;padding:8px 22px;border:1px solid rgba(245,216,0,.45);border-radius:2px;background:rgba(245,216,0,.06);margin-bottom:1.5rem;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.09em;color:#f5d800;}
-.h-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,5.5vw,80px);letter-spacing:.05em;line-height:.88;color:var(--white);margin-bottom:.6rem;}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:120px 2rem 5rem;background:var(--dark);position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 25% 40%,rgba(29,111,58,.08) 0%,transparent 50%),radial-gradient(ellipse at 75% 65%,rgba(96,32,184,.07) 0%,transparent 50%);pointer-events:none;}
+.hero-col{position:relative;display:flex;flex-direction:column;align-items:center;max-width:860px;width:100%;}
+.h-eye{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);margin-bottom:2rem;}
+.h-brand{font-family:'Bebas Neue',sans-serif;font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--a1);opacity:.85;margin-bottom:1.1rem;}
+.h-badge{display:inline-block;padding:8px 22px;border:1px solid var(--b1);border-radius:2px;background:var(--g1);margin-bottom:1.7rem;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.09em;color:var(--a1);}
+.h-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(34px,7vw,96px);letter-spacing:.03em;line-height:.92;color:var(--tp);margin-bottom:.9rem;}
 .ha{color:var(--a1);}
 .hb{color:var(--a2);}
-.h-sub{font-size:13px;color:var(--ts);margin-bottom:3rem;font-family:'DM Mono',monospace;letter-spacing:.09em;}
-.hprog{max-width:640px;margin:0 auto 3rem;background:var(--dark);border:1px solid var(--border);border-radius:2px;overflow:hidden;}
-.hprog-lbl{padding:8px 16px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border);}
-.hprog-row{display:flex;flex-wrap:wrap;gap:1px;background:var(--border);}
-.hprog-step{flex:1;min-width:60px;background:var(--dark);padding:10px 8px;text-align:center;}
-.hprog-n{font-family:'DM Mono',monospace;font-size:9px;color:var(--muted);margin-bottom:3px;}
-.hprog-v{font-family:'Bebas Neue',sans-serif;font-size:11px;letter-spacing:.06em;}
-.hg{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;max-width:720px;width:100%;margin:0 auto 3rem;}
-.hc{padding:12px 5px;border-radius:2px;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:5px;border:1px solid;transition:all .2s;background:var(--dark);}
+.hc-t{color:var(--a6);}
+.h-sub{font-size:13px;color:var(--ts);margin-bottom:3.5rem;font-family:'DM Mono',monospace;letter-spacing:.07em;max-width:560px;margin-left:auto;margin-right:auto;}
+.hg{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;max-width:700px;width:100%;margin:0 auto 3rem;}
+.hc{padding:14px 6px;border-radius:2px;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:6px;border:1px solid;transition:all .2s;background:var(--black);}
 .hc:hover{transform:translateY(-3px);}
-.hc-n{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:.04em;line-height:1;}
-.hc-l{font-size:9px;letter-spacing:.05em;text-transform:uppercase;text-align:center;line-height:1.3;font-family:'DM Mono',monospace;}
+.hc-n{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:.04em;line-height:1;}
+.hc-l{font-size:9px;letter-spacing:.04em;text-transform:uppercase;text-align:center;line-height:1.3;font-family:'DM Mono',monospace;}
 .c1{background:var(--g1);border-color:var(--b1);color:var(--a1);}
 .c2{background:var(--g2);border-color:var(--b2);color:var(--a2);}
 .c3{background:var(--g3);border-color:var(--b3);color:var(--a3);}
 .c4{background:var(--g4);border-color:var(--b4);color:var(--a4);}
 .c5{background:var(--g5);border-color:var(--b5);color:var(--a5);}
 .c6{background:var(--g6);border-color:var(--b6);color:var(--a6);}
-.hseq{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;max-width:540px;width:100%;background:var(--border);border-radius:2px;overflow:hidden;}
-.hs{background:var(--dark);padding:11px 14px;}
-.hs-n{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);margin-bottom:3px;}
-.hs-l{font-size:11px;color:var(--ts);font-family:'DM Mono',monospace;}
+@media(max-width:640px){.hg{grid-template-columns:repeat(3,1fr);}}
+.thesis{max-width:680px;width:100%;margin:0 auto;background:var(--dark);border:1px solid var(--border);border-top:2px solid var(--a1);border-radius:2px;padding:22px 26px;text-align:left;}
+.thesis-lbl{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--a1);margin-bottom:10px;}
+.thesis p{font-size:13px;color:var(--tb);line-height:1.75;}
 
 /* ── PANELS ── */
 .pn{padding:80px 0;}.pn+.pn{border-top:1px solid var(--border);}
@@ -82,184 +88,154 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(1,1,1,.98);b
 .pb5{background:var(--dark);border-color:var(--a5);color:var(--a5);}
 .pb6{background:var(--dark);border-color:var(--a6);color:var(--a6);}
 .ph-tag{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:4px;}
-.ph-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(22px,3.5vw,38px);letter-spacing:.06em;color:var(--white);line-height:1;margin-bottom:5px;}
-.ph-sub{font-size:13px;color:var(--ts);font-family:'DM Mono',monospace;}
+.ph-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(22px,3.5vw,38px);letter-spacing:.04em;color:var(--tp);line-height:1;margin-bottom:6px;}
+.ph-sub{font-size:13px;color:var(--ts);font-family:'DM Mono',monospace;line-height:1.5;}
 
-/* ── SECTION DIVIDERS & BASE ── */
 .pstr{border-left:2px solid;padding:14px 18px;margin-bottom:24px;background:var(--dark);}
 .ps-tag{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:6px;}
-.pstr p{font-size:13px;color:var(--tb);margin:3px 0;line-height:1.65;}
-.sd{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:24px 0 10px;display:flex;align-items:center;gap:10px;}
+.pstr p{font-size:13px;color:var(--tb);margin:3px 0;line-height:1.7;}
+.sd{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:26px 0 11px;display:flex;align-items:center;gap:10px;}
 .sd::after{content:'';flex:1;height:1px;background:var(--border);}
-.mbox{border-left:3px solid;padding:14px 18px;margin-bottom:20px;background:var(--dark);}
-.mt{font-size:14px;color:var(--white);font-weight:400;line-height:1.55;}
+.mbox{border-left:3px solid;padding:15px 18px;margin-bottom:22px;background:var(--dark);}
+.mt{font-size:14px;color:var(--tp);font-weight:400;line-height:1.6;}
 
-/* ── GRIDS ── */
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px;}
 .g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:12px;}
-@media(max-width:640px){.g2,.g3{grid-template-columns:1fr!important;}.hg{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:640px){.g2,.g3{grid-template-columns:1fr!important;}}
 
-/* ── CARD ── */
-.card{background:var(--mid);border:1px solid var(--border);border-radius:2px;padding:14px 16px;}
-.ch{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:9px;}
+.card{background:var(--mid);border:1px solid var(--border);border-radius:2px;padding:15px 17px;}
+.ch{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px;}
 .card ul{list-style:none;padding:0;}
-.card ul li{font-size:13px;color:var(--tb);padding:3px 0 3px 16px;position:relative;line-height:1.55;}
+.card ul li{font-size:13px;color:var(--tb);padding:3px 0 3px 16px;position:relative;line-height:1.6;}
 .card ul li::before{content:'→';position:absolute;left:0;color:var(--muted);font-size:10px;top:7px;}
-.card ul li strong{color:var(--white);}
+.card ul li strong{color:var(--tp);}
 
-/* ── VARS6 ── */
 .vars6{display:flex;flex-direction:column;gap:1px;background:var(--border);border-radius:2px;overflow:hidden;margin-bottom:12px;}
-.vr6{background:var(--dark);display:grid;grid-template-columns:40px 230px 1fr;align-items:stretch;}
-.vr6-n{background:var(--mid);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:16px;}
-.vr6-name{padding:10px 14px;border-left:1px solid var(--border);display:flex;align-items:center;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;}
-.vr6-desc{padding:10px 14px;border-left:1px solid var(--border);font-size:12px;color:var(--ts);line-height:1.6;}
+.vr6{background:var(--dark);display:grid;grid-template-columns:44px 230px 1fr;align-items:stretch;}
+.vr6-n{background:var(--mid);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:15px;text-align:center;padding:4px;}
+.vr6-name{padding:10px 14px;border-left:1px solid var(--border);display:flex;align-items:center;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.07em;text-transform:uppercase;font-weight:500;color:var(--tp);}
+.vr6-desc{padding:10px 14px;border-left:1px solid var(--border);font-size:12px;color:var(--ts);line-height:1.65;}
+@media(max-width:760px){.vr6{grid-template-columns:1fr;}.vr6-n{padding:6px;}.vr6-name,.vr6-desc{border-left:none;border-top:1px solid var(--border);}}
 
-/* ── TILES ── */
 .tiles3{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border-radius:2px;overflow:hidden;margin-bottom:12px;}
-.tl3{background:var(--dark);padding:14px 13px;border-top:3px solid;}
-.tl3-label{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);margin-bottom:3px;letter-spacing:.08em;text-transform:uppercase;}
-.tl3-title{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:.06em;margin-bottom:6px;}
-.tl3 p{font-size:12px;color:var(--ts);margin-bottom:6px;line-height:1.55;}
+.tl3{background:var(--dark);padding:15px 14px;border-top:3px solid;}
+.tl3-label{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);margin-bottom:3px;letter-spacing:.07em;text-transform:uppercase;}
+.tl3-title{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:.04em;margin-bottom:7px;color:var(--tp);}
+.tl3 p{font-size:12px;color:var(--ts);margin-bottom:7px;line-height:1.6;}
 .tl3 ul{list-style:none;padding:0;}
 .tl3 ul li{font-size:12px;color:var(--tb);padding:2px 0 2px 10px;position:relative;}
 .tl3 ul li::before{content:'·';position:absolute;left:0;color:var(--muted);}
-.tl3 ul li strong{color:var(--white);}
+.tl3 ul li strong{color:var(--tp);}
 @media(max-width:580px){.tiles3{grid-template-columns:1fr;}}
-.tiles4{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-radius:2px;overflow:hidden;margin-bottom:12px;}
-.tl4{background:var(--dark);padding:13px 11px;border-top:2px solid;}
-.tl4-label{font-family:'DM Mono',monospace;font-size:9px;color:var(--muted);margin-bottom:3px;letter-spacing:.06em;text-transform:uppercase;}
-.tl4-title{font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:.06em;margin-bottom:5px;}
-.tl4 p{font-size:11px;color:var(--ts);line-height:1.55;}
-@media(max-width:520px){.tiles4{grid-template-columns:repeat(2,1fr);}}
 
-/* ── SINERGIAS ── */
+.tiles4{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-radius:2px;overflow:hidden;margin-bottom:12px;}
+.tl4{background:var(--dark);padding:14px 12px;border-top:2px solid;}
+.tl4-label{font-family:'DM Mono',monospace;font-size:9px;color:var(--muted);margin-bottom:3px;letter-spacing:.05em;text-transform:uppercase;}
+.tl4-title{font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:.04em;margin-bottom:5px;color:var(--tp);}
+.tl4 p{font-size:11px;color:var(--ts);line-height:1.55;}
+@media(max-width:640px){.tiles4{grid-template-columns:repeat(2,1fr);}}
+
 .sinergias{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px;}
-.sn-box{background:var(--dark);border:1px solid var(--border);border-radius:2px;padding:15px 16px;border-top:3px solid;}
-.sn-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px;}
-.sn-title{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:.06em;margin-bottom:7px;color:var(--white);}
-.sn-box p{font-size:12px;color:var(--ts);margin-bottom:7px;line-height:1.6;}
+.sn-box{background:var(--dark);border:1px solid var(--border);border-radius:2px;padding:16px 17px;border-top:3px solid;}
+.sn-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:7px;}
+.sn-title{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:.04em;margin-bottom:8px;color:var(--tp);}
+.sn-box p{font-size:12px;color:var(--ts);margin-bottom:8px;line-height:1.65;}
 .sn-box ul{list-style:none;padding:0;}
 .sn-box ul li{font-size:12px;color:var(--tb);padding:3px 0 3px 12px;position:relative;}
 .sn-box ul li::before{content:'·';position:absolute;left:0;color:var(--muted);}
-.sn-box ul li strong{color:var(--white);}
-@media(max-width:640px){.sinergias{grid-template-columns:1fr;}}
+.sn-box ul li strong{color:var(--tp);}
+@media(max-width:680px){.sinergias{grid-template-columns:1fr;}}
 
-/* ── MATHBOX ── */
-.mathbox{background:var(--dark);border:1px solid var(--border);border-radius:2px;padding:16px 20px;margin-bottom:12px;font-family:'DM Mono',monospace;font-size:12px;color:var(--tb);line-height:2.0;}
+.mathbox{background:var(--dark);border:1px solid var(--border);border-radius:2px;padding:18px 22px;margin-bottom:12px;font-family:'DM Mono',monospace;font-size:12.5px;color:var(--tb);line-height:2.05;}
 .mathbox .mh{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;}
-.mathbox strong{color:var(--white);}
-.mathbox .hi1{color:var(--a1);}
-.mathbox .hi2{color:var(--a2);}
-.mathbox .hi3{color:var(--a3);}
-.mathbox .hi4{color:var(--a4);}
-.mathbox .hi5{color:var(--a5);}
-.mathbox .hi6{color:var(--a6);}
+.mathbox strong{color:var(--tp);}
+.mathbox .hi1{color:var(--a1);}.mathbox .hi2{color:var(--a2);}.mathbox .hi3{color:var(--a3);}
+.mathbox .hi4{color:var(--a4);}.mathbox .hi5{color:var(--a5);}.mathbox .hi6{color:var(--a6);}
 
-/* ── FMLA TABLE ── */
-.fmla{display:flex;flex-direction:column;gap:1px;background:var(--border);border-radius:2px;overflow:hidden;margin-bottom:12px;}
-.fm-hdr{background:var(--black);display:grid;grid-template-columns:180px 1fr 160px;align-items:stretch;}
-.fm-hdr-cell{padding:6px 10px;border-left:1px solid var(--border);font-family:'DM Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);}
-.fm-row{background:var(--dark);display:grid;grid-template-columns:180px 1fr 160px;align-items:stretch;}
-.fm-name{padding:9px 13px;display:flex;align-items:center;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;}
-.fm-formula{padding:9px 13px;border-left:1px solid var(--border);font-family:'DM Mono',monospace;font-size:12px;}
-.fm-note{padding:9px 10px;border-left:1px solid var(--border);font-size:11px;color:var(--ts);}
-@media(max-width:640px){.fmla,.fm-hdr{display:none;}}
-
-/* ── PROC STAGES ── */
 .proc-stages{display:flex;flex-direction:column;gap:1px;background:var(--border);border-radius:2px;overflow:hidden;margin-bottom:12px;}
-.pr-hdr{background:var(--black);display:grid;grid-template-columns:38px 160px 1fr 200px;align-items:stretch;}
-.pr-hdr-cell{padding:6px 10px;border-left:1px solid var(--border);font-family:'DM Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);}
-.pr-row{background:var(--dark);display:grid;grid-template-columns:38px 160px 1fr 200px;align-items:stretch;}
+.pr-hdr{background:var(--black);display:grid;grid-template-columns:38px 170px 1fr 210px;align-items:stretch;}
+.pr-hdr-cell{padding:7px 10px;border-left:1px solid var(--border);font-family:'DM Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);}
+.pr-row{background:var(--dark);display:grid;grid-template-columns:38px 170px 1fr 210px;align-items:stretch;}
 .pr-n{background:var(--mid);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:16px;}
-.pr-stage{padding:10px 13px;border-left:1px solid var(--border);display:flex;align-items:center;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;}
-.pr-desc{padding:10px 13px;border-left:1px solid var(--border);font-size:12px;color:var(--ts);line-height:1.6;}
+.pr-stage{padding:10px 13px;border-left:1px solid var(--border);display:flex;align-items:center;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:500;color:var(--tp);}
+.pr-desc{padding:10px 13px;border-left:1px solid var(--border);font-size:12px;color:var(--ts);line-height:1.65;}
 .pr-note{padding:10px 10px;border-left:1px solid var(--border);font-size:11px;font-family:'DM Mono',monospace;display:flex;align-items:center;line-height:1.4;}
-@media(max-width:720px){.proc-stages,.pr-hdr{display:none;}}
+@media(max-width:760px){.proc-stages,.pr-hdr{display:none;}.proc-stages.mob-show{display:flex;}}
 
-/* ── RISK TABLE ── */
 .rk-table{display:flex;flex-direction:column;gap:1px;background:var(--border);border-radius:2px;overflow:hidden;margin-bottom:12px;}
-.rk-hdr{background:var(--black);display:grid;grid-template-columns:38px 180px 1fr 200px;align-items:stretch;}
-.rk-hdr-cell{padding:6px 10px;border-left:1px solid var(--border);font-family:'DM Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);}
-.rk-row{background:var(--dark);display:grid;grid-template-columns:38px 180px 1fr 200px;align-items:stretch;}
+.rk-hdr{background:var(--black);display:grid;grid-template-columns:38px 180px 1fr 210px;align-items:stretch;}
+.rk-hdr-cell{padding:7px 10px;border-left:1px solid var(--border);font-family:'DM Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);}
+.rk-row{background:var(--dark);display:grid;grid-template-columns:38px 180px 1fr 210px;align-items:stretch;}
 .rk-n{background:var(--mid);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:16px;}
-.rk-name{padding:10px 13px;border-left:1px solid var(--border);display:flex;align-items:center;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:500;}
-.rk-desc{padding:10px 13px;border-left:1px solid var(--border);font-size:12px;color:var(--ts);line-height:1.6;}
+.rk-name{padding:10px 13px;border-left:1px solid var(--border);display:flex;align-items:center;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;font-weight:500;color:var(--tp);}
+.rk-desc{padding:10px 13px;border-left:1px solid var(--border);font-size:12px;color:var(--ts);line-height:1.65;}
 .rk-val{padding:10px 10px;border-left:1px solid var(--border);font-size:11px;font-family:'DM Mono',monospace;display:flex;align-items:center;line-height:1.4;}
-@media(max-width:720px){.rk-table,.rk-hdr{display:none;}}
+@media(max-width:760px){.rk-table,.rk-hdr{display:none;}}
 
-/* ── GRAB ── */
-.grab{border:1px solid var(--border);border-radius:2px;padding:20px 24px;margin-bottom:16px;position:relative;background:var(--dark);}
-.grab::before{content:'"';position:absolute;top:-10px;left:16px;font-family:'Bebas Neue',sans-serif;font-size:40px;line-height:1;padding:0 6px;background:var(--dark);}
-.gt{font-size:14px;color:var(--tp);font-weight:400;line-height:1.6;}
-.gr1::before{color:var(--a1);}
-.gr2::before{color:var(--a2);}
-.gr3::before{color:var(--a3);}
-.gr4::before{color:var(--a4);}
-.gr5::before{color:var(--a5);}
-.gr6::before{color:var(--a6);}
+.cmp-table{display:flex;flex-direction:column;gap:1px;background:var(--border);border-radius:2px;overflow:hidden;margin-bottom:12px;}
+.cmp-hdr{background:var(--black);display:grid;grid-template-columns:190px 1fr 1fr;}
+.cmp-hdr-cell{padding:8px 12px;border-left:1px solid var(--border);font-family:'DM Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);}
+.cmp-row{background:var(--dark);display:grid;grid-template-columns:190px 1fr 1fr;}
+.cmp-dim{padding:10px 13px;display:flex;align-items:center;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;font-weight:500;color:var(--tp);}
+.cmp-bad{padding:10px 12px;border-left:1px solid var(--border);font-size:12px;color:var(--ts);line-height:1.55;}
+.cmp-good{padding:10px 12px;border-left:1px solid var(--border);font-size:12px;line-height:1.55;font-weight:500;}
+@media(max-width:760px){.cmp-table,.cmp-hdr{display:none;}}
 
-/* ── KPI GRID ── */
+.grab{border:1px solid var(--border);border-radius:2px;padding:22px 26px;margin-bottom:16px;position:relative;background:var(--dark);}
+.grab::before{content:'"';position:absolute;top:-14px;left:16px;font-family:'Bebas Neue',sans-serif;font-size:44px;line-height:1;padding:0 6px;background:var(--dark);}
+.gt{font-size:14.5px;color:var(--tp);font-weight:400;line-height:1.65;}
+.gr1::before{color:var(--a1);}.gr2::before{color:var(--a2);}.gr3::before{color:var(--a3);}
+.gr4::before{color:var(--a4);}.gr5::before{color:var(--a5);}.gr6::before{color:var(--a6);}
+
 .kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-radius:2px;overflow:hidden;margin-bottom:12px;}
-.kp{background:var(--dark);padding:12px 12px;}
-.kp-label{font-family:'DM Mono',monospace;font-size:9px;color:var(--muted);margin-bottom:3px;letter-spacing:.1em;text-transform:uppercase;}
-.kp-title{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:.06em;margin-bottom:5px;}
-.kp p{font-size:11px;color:var(--ts);line-height:1.5;}
-@media(max-width:520px){.kpi-grid{grid-template-columns:repeat(2,1fr);}}
+.kp{background:var(--dark);padding:13px 13px;}
+.kp-label{font-family:'DM Mono',monospace;font-size:9px;color:var(--muted);margin-bottom:4px;letter-spacing:.09em;text-transform:uppercase;}
+.kp-title{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:.04em;margin-bottom:6px;color:var(--tp);}
+.kp p{font-size:11px;color:var(--ts);line-height:1.55;}
+@media(max-width:560px){.kpi-grid{grid-template-columns:repeat(2,1fr);}}
 
-/* ── PILLS ── */
-.pills{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;}
-.pill{padding:5px 12px;border-radius:2px;border:1px solid;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.06em;}
+.pills{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:16px;}
+.pill{padding:6px 13px;border-radius:2px;border:1px solid;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.05em;background:var(--dark);}
 
-/* ── AXES2 ── */
 .axes2{display:grid;grid-template-columns:1fr 48px 1fr;gap:0;margin-bottom:12px;background:var(--border);border-radius:2px;overflow:hidden;}
-.ax-l,.ax-r{background:var(--dark);padding:16px 16px;}
-.ax-mid{background:var(--mid);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:11px;letter-spacing:.08em;writing-mode:vertical-rl;color:var(--muted);}
-.ax-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px;}
-.ax-title{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:.06em;margin-bottom:6px;}
+.ax-l,.ax-r{background:var(--dark);padding:17px 17px;}
+.ax-mid{background:var(--mid);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:11px;letter-spacing:.06em;writing-mode:vertical-rl;color:var(--muted);}
+.ax-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:7px;}
+.ax-title{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:.04em;margin-bottom:7px;color:var(--tp);}
 .ax-l ul,.ax-r ul{list-style:none;padding:0;}
 .ax-l ul li,.ax-r ul li{font-size:12px;color:var(--tb);padding:2px 0 2px 12px;position:relative;}
 .ax-l ul li::before,.ax-r ul li::before{content:'·';position:absolute;left:0;color:var(--muted);}
-.ax-l ul li strong,.ax-r ul li strong{color:var(--white);}
+.ax-l ul li strong,.ax-r ul li strong{color:var(--tp);}
+@media(max-width:640px){.axes2{grid-template-columns:1fr;}.ax-mid{writing-mode:horizontal-tb;padding:6px;}}
 
-/* ── FCLOSE ── */
-.fclose{border-top:2px solid;margin-top:32px;padding-top:20px;}
-.fc-tag{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:8px;}
-.fc-text{font-size:13px;color:var(--tp);line-height:1.65;}
-.fc-sub{font-size:12px;color:var(--ts);margin-top:8px;font-family:'DM Mono',monospace;border-top:1px solid var(--border);padding-top:8px;}
-
-/* ── ESCALERA ── */
 .escalera{display:flex;flex-direction:column;gap:2px;margin-bottom:12px;}
 .esc-row{display:flex;align-items:stretch;gap:0;}
-.esc-n{background:var(--mid);border:1px solid var(--border);width:44px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:16px;}
-.esc-body{background:var(--dark);border:1px solid var(--border);border-left:none;flex:1;padding:10px 14px;}
-.esc-title{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;margin-bottom:3px;}
-.esc-desc{font-size:12px;color:var(--ts);line-height:1.55;}
-.esc-note{font-family:'DM Mono',monospace;font-size:10px;margin-top:4px;}
+.esc-n{background:var(--mid);border:1px solid var(--border);width:48px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:16px;}
+.esc-body{background:var(--dark);border:1px solid var(--border);border-left:none;flex:1;padding:11px 15px;}
+.esc-title{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:500;margin-bottom:4px;color:var(--tp);}
+.esc-desc{font-size:12px;color:var(--ts);line-height:1.6;}
+.esc-note{font-family:'DM Mono',monospace;font-size:10px;margin-top:5px;}
 
-/* ── COMPARE TABLE (2-col) ── */
-.cmp-table{display:flex;flex-direction:column;gap:1px;background:var(--border);border-radius:2px;overflow:hidden;margin-bottom:12px;}
-.cmp-hdr{background:var(--black);display:grid;grid-template-columns:200px 1fr 1fr;}
-.cmp-hdr-cell{padding:7px 12px;border-left:1px solid var(--border);font-family:'DM Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);}
-.cmp-row{background:var(--dark);display:grid;grid-template-columns:200px 1fr 1fr;}
-.cmp-dim{padding:10px 13px;display:flex;align-items:center;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:500;}
-.cmp-bad{padding:10px 12px;border-left:1px solid var(--border);font-size:12px;color:var(--ts);line-height:1.5;}
-.cmp-good{padding:10px 12px;border-left:1px solid var(--border);font-size:12px;line-height:1.5;}
-@media(max-width:680px){.cmp-table,.cmp-hdr{display:none;}}
+.fclose{border-top:2px solid;margin-top:34px;padding-top:20px;}
+.fc-tag{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:9px;}
+.fc-text{font-size:13.5px;color:var(--tp);line-height:1.7;}
+.fc-sub{font-size:12.5px;color:var(--ts);margin-top:10px;font-family:'DM Mono',monospace;border-top:1px solid var(--border);padding-top:10px;line-height:1.6;}
 
 /* ── FOOTER ── */
-footer{background:var(--black);border-top:1px solid var(--border);padding:40px 2rem;text-align:center;}
-.ft-title{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:.2em;color:var(--white);margin-bottom:4px;}
-.ft-sub{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);margin-bottom:20px;letter-spacing:.08em;}
-.ft-nav{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;}
-.ft-nav a{font-family:'DM Mono',monospace;font-size:10px;color:var(--ts);text-decoration:none;letter-spacing:.1em;}
-.ft-nav a:hover{color:var(--white);}
+footer{background:var(--black);border-top:1px solid var(--border);padding:44px 2rem;text-align:center;}
+.ft-brand{font-family:'Bebas Neue',sans-serif;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--a1);opacity:.85;margin-bottom:10px;}
+.ft-title{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:.18em;color:var(--tp);margin-bottom:5px;}
+.ft-sub{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);margin-bottom:22px;letter-spacing:.07em;}
+.ft-nav{display:flex;flex-wrap:wrap;gap:17px;justify-content:center;}
+.ft-nav a{font-family:'DM Mono',monospace;font-size:10px;color:var(--ts);text-decoration:none;letter-spacing:.08em;}
+.ft-nav a:hover{color:var(--a1);}
 </style>
 </head>
 <body>
 
 <!-- ══════════════════════════ NAV ══════════════════════════ -->
 <nav>
-  <a class="nb" href="#">NATIO · QUICKSTUDY GUIDE</a>
+  <a class="nb" href="#">NATIO · 6-PANEL SMARTSTUDY GUIDE</a>
   <div class="np">
     <a class="nd n1" href="#p1">1</a>
     <a class="nd n2" href="#p2">2</a>
@@ -272,39 +248,29 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:40px 2
 
 <!-- ══════════════════════════ HERO ══════════════════════════ -->
 <section class="hero">
-  <div class="h-eye">QuickStudy Guide · Natio · Nivel Experto</div>
-  <div class="h-badge">Las carreras no fracasan por falta de talento. Fracasan por ausencia de arquitectura.</div>
-  <div class="h-title" style="color:#f5d800">
-    NATIO<br>
-    QUICKSTUDY GUIDE
-  </div>
-  <div class="h-sub">NFB · NGL · N360 — Tres unidades. Una arquitectura. Cero improvisación.</div>
-
-  <div class="hprog">
-    <div class="hprog-lbl">Ruta de dominio — 6 paneles</div>
-    <div class="hprog-row">
-      <div class="hprog-step"><div class="hprog-n">P1</div><div class="hprog-v" style="color:var(--a1)">TESIS</div></div>
-      <div class="hprog-step"><div class="hprog-n">P2</div><div class="hprog-v" style="color:var(--a2)">NFB</div></div>
-      <div class="hprog-step"><div class="hprog-n">P3</div><div class="hprog-v" style="color:var(--a3)">NGL</div></div>
-      <div class="hprog-step"><div class="hprog-n">P4</div><div class="hprog-v" style="color:var(--a4)">N360</div></div>
-      <div class="hprog-step"><div class="hprog-n">P5</div><div class="hprog-v" style="color:var(--a5)">CAPACIDADES</div></div>
-      <div class="hprog-step"><div class="hprog-n">P6</div><div class="hprog-v" style="color:var(--a6)">NEGOCIO</div></div>
+  <div class="hero-col">
+    <div class="h-eye">Colección Institucional · Deep Dive · Nivel Experto</div>
+    <div class="h-brand">El Mundo en 6 Paneles</div>
+    <div class="h-badge">6-Panel SmartStudy Guide</div>
+    <div class="h-title">
+      NATIO<br>
+      SMARTSTUDY GUIDE
     </div>
-  </div>
+    <div class="h-sub">NFB dirige, NGL expande, N360 protege y construye — el sistema operativo completo del futbolista profesional, panel por panel.</div>
 
-  <div class="hg">
-    <a class="hc c1" href="#p1"><div class="hc-n">1</div><div class="hc-l">Tesis &amp; Ecosistema</div></a>
-    <a class="hc c2" href="#p2"><div class="hc-n">2</div><div class="hc-l">NFB Gobernanza</div></a>
-    <a class="hc c3" href="#p3"><div class="hc-n">3</div><div class="hc-l">NGL Movilidad</div></a>
-    <a class="hc c4" href="#p4"><div class="hc-n">4</div><div class="hc-l">N360 Entorno</div></a>
-    <a class="hc c5" href="#p5"><div class="hc-n">5</div><div class="hc-l">Capacidades</div></a>
-    <a class="hc c6" href="#p6"><div class="hc-n">6</div><div class="hc-l">Modelo &amp; Escala</div></a>
-  </div>
+    <div class="hg">
+      <a class="hc c1" href="#p1"><div class="hc-n">1</div><div class="hc-l">Tesis &amp; Ecosistema</div></a>
+      <a class="hc c2" href="#p2"><div class="hc-n">2</div><div class="hc-l">NFB Gobernanza</div></a>
+      <a class="hc c3" href="#p3"><div class="hc-n">3</div><div class="hc-l">NGL Movilidad</div></a>
+      <a class="hc c4" href="#p4"><div class="hc-n">4</div><div class="hc-l">N360 Entorno</div></a>
+      <a class="hc c5" href="#p5"><div class="hc-n">5</div><div class="hc-l">Capacidades</div></a>
+      <a class="hc c6" href="#p6"><div class="hc-n">6</div><div class="hc-l">Modelo &amp; Escala</div></a>
+    </div>
 
-  <div class="hseq">
-    <div class="hs"><div class="hs-n">P1 → P2</div><div class="hs-l">Del problema al sistema que lo resuelve</div></div>
-    <div class="hs"><div class="hs-n">P3 → P4</div><div class="hs-l">Del movimiento a la protección total del entorno</div></div>
-    <div class="hs"><div class="hs-n">P5 → P6</div><div class="hs-l">De la infraestructura al modelo de negocio</div></div>
+    <div class="thesis">
+      <div class="thesis-lbl">Tesis central de esta guía</div>
+      <p>Natio no es una agencia de representación mejorada — es una categoría nueva. Mientras la industria tradicional opera por eventos (aparece cuando hay comisión), Natio opera por arquitectura: un sistema operativo longitudinal que dirige la trayectoria deportiva (NFB), expande opcionalidad internacional gobernando confianza (NGL), y protege y construye el entorno extra-fútbol (N360). Al terminar esta guía entenderás por qué esa diferencia de categoría — no de grado — es lo que convierte a Natio en una plataforma estructuralmente difícil de replicar, y por qué el mercado latinoamericano tiene, ahora mismo, la ventana estratégica para construirla como referencia regional.</p>
+    </div>
   </div>
 </section>
 
@@ -325,7 +291,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:40px 2
     <p>El fútbol es una de las industrias más complejas del mundo para gestionar talento. Y sin embargo, la infraestructura que existe para el jugador sigue siendo primitiva, reactiva y transaccional. La agencia tradicional opera por eventos: aparece cuando hay comisión y desaparece cuando no la hay. El resultado es predecible: estancamientos silenciosos, peaks mal capitalizados, movimientos que parecen upgrades y resultan ser trampas, carreras que se desperdician no por falta de talento, sino por ausencia de arquitectura. Natio no nació para ser otra agencia. Nació para ser el sistema operativo que la industria no tenía.</p>
   </div>
 
-  <div class="mbox m1" style="border-color:var(--a1)">
+  <div class="mbox" style="border-color:var(--a1)">
     <div class="mt">Las agencias operan por eventos. Natio opera por arquitectura. La diferencia no es de grado — es de categoría.</div>
   </div>
 
@@ -336,7 +302,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:40px 2
       <div class="tl3-title" style="color:var(--a1)">Ausencia de Dirección Estratégica</div>
       <p>La mayoría de los jugadores navegan su carrera sin diagnóstico, sin modelo explícito y sin timing disciplinado. La industria aparece cuando hay deal; el resto del tiempo, la carrera avanza en piloto automático.</p>
       <ul>
-        <li>Stancamientos silenciosos que se normalizan</li>
+        <li>Estancamientos silenciosos que se normalizan</li>
         <li>Peaks mal capitalizados deportiva y económicamente</li>
         <li>Movimientos por presión emocional, no por arquitectura</li>
         <li>Declives prematuros por decisiones mal timbradas</li>
@@ -407,10 +373,10 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:40px 2
 
   <div class="sd">Arquitectura del ecosistema — cómo se integran las tres unidades</div>
   <div class="vars6">
-    <div class="vr6"><div class="vr6-n" style="color:var(--a2)">NFB</div><div class="vr6-name" style="color:var(--white)">NATIO Football · Dirige</div><div class="vr6-desc">Cerebro estratégico del ecosistema. Primer y único punto de entrada. Diagnóstica, protege y optimiza la trayectoria. Sin NFB activo, NGL y N360 no se activan. Frase núcleo: <em style="color:var(--a2)">"No negociamos contratos. Dirigimos, protegemos y optimizamos tu carrera."</em></div></div>
-    <div class="vr6"><div class="vr6-n" style="color:var(--a3)">NGL</div><div class="vr6-name" style="color:var(--white)">NATIO Global Link · Expande</div><div class="vr6-desc">Red de movilidad estratégica e intermediación internacional en 4 modalidades. Solo se activa ante trigger estratégico real diagnosticado por NFB. Frase núcleo: <em style="color:var(--a3)">"No conectamos partes. Operamos confianza."</em></div></div>
-    <div class="vr6"><div class="vr6-n" style="color:var(--a4)">N360</div><div class="vr6-name" style="color:var(--white)">NATIO 360 · Protege y Construye</div><div class="vr6-desc">Plataforma de entorno, imagen y marca personal. Operable en dos frentes simultáneos: defensivo (reputación, logística, patrimonio) y ofensivo (marca, acuerdos comerciales, líneas de negocio). Frase núcleo: <em style="color:var(--a4)">"No ofrecemos más cosas. Ofrecemos más control."</em></div></div>
-    <div class="vr6"><div class="vr6-n" style="color:var(--a1)">REGLA</div><div class="vr6-name" style="color:var(--white)">Principio Anti-Upsell</div><div class="vr6-desc">NGL y N360 se activan por necesidad y oportunidad real — nunca se ofrecen como servicios complementarios ni se inflan problemas para justificarlos. NFB es el único punto de entrada. La diferencia entre las dos percepciones es la diferencia entre confianza y escepticismo.</div></div>
+    <div class="vr6"><div class="vr6-n" style="color:var(--a2)">NFB</div><div class="vr6-name">Natio Football · Dirige</div><div class="vr6-desc">Cerebro estratégico del ecosistema. Primer y único punto de entrada. Diagnostica, protege y optimiza la trayectoria. Sin NFB activo, NGL y N360 no se activan. Frase núcleo: <em style="color:var(--a2)">"No negociamos contratos. Dirigimos, protegemos y optimizamos tu carrera."</em></div></div>
+    <div class="vr6"><div class="vr6-n" style="color:var(--a3)">NGL</div><div class="vr6-name">Natio Global Link · Expande</div><div class="vr6-desc">Red de movilidad estratégica e intermediación internacional en 4 modalidades. Solo se activa ante trigger estratégico real diagnosticado por NFB. Frase núcleo: <em style="color:var(--a3)">"No conectamos partes. Operamos confianza."</em></div></div>
+    <div class="vr6"><div class="vr6-n" style="color:var(--a4)">N360</div><div class="vr6-name">Natio 360 · Protege y Construye</div><div class="vr6-desc">Plataforma de entorno, imagen y marca personal. Operable en dos frentes simultáneos: defensivo (reputación, logística, patrimonio) y ofensivo (marca, acuerdos comerciales, líneas de negocio). Frase núcleo: <em style="color:var(--a4)">"No ofrecemos más cosas. Ofrecemos más control."</em></div></div>
+    <div class="vr6"><div class="vr6-n" style="color:var(--a1)">Regla</div><div class="vr6-name">Principio Anti-Upsell</div><div class="vr6-desc">NGL y N360 se activan por necesidad y oportunidad real — nunca se ofrecen como servicios complementarios ni se inflan problemas para justificarlos. NFB es el único punto de entrada. La diferencia entre las dos percepciones es la diferencia entre confianza y escepticismo.</div></div>
   </div>
 
   <div class="sd">Lo que Natio NO es — guardrails de identidad institucional</div>
@@ -427,11 +393,11 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:40px 2
     <div class="card">
       <div class="ch" style="color:var(--a1)">Lenguaje institucional — la diferencia importa</div>
       <ul>
-        <li><strong>Dice:</strong> "Gobernanza estratégica de carrera" — <em style="color:var(--ts)">No dice:</em> "Representación"</li>
-        <li><strong>Dice:</strong> "Trigger estratégico real" — <em style="color:var(--ts)">No dice:</em> "Oportunidad interesante"</li>
-        <li><strong>Dice:</strong> "Inevitabilidad por arquitectura" — <em style="color:var(--ts)">No dice:</em> "Te garantizamos que llegas"</li>
-        <li><strong>Dice:</strong> "Activación por necesidad diagnosticada" — <em style="color:var(--ts)">No dice:</em> "Tenemos este servicio para ti"</li>
-        <li><strong>Dice:</strong> "Valor protegido (riesgos evitados)" — <em style="color:var(--ts)">No dice:</em> "Confía en nosotros"</li>
+        <li><strong>Dice:</strong> "Gobernanza estratégica de carrera" — <em style="color:var(--ts)">no dice:</em> "Representación"</li>
+        <li><strong>Dice:</strong> "Trigger estratégico real" — <em style="color:var(--ts)">no dice:</em> "Oportunidad interesante"</li>
+        <li><strong>Dice:</strong> "Inevitabilidad por arquitectura" — <em style="color:var(--ts)">no dice:</em> "Te garantizamos que llegas"</li>
+        <li><strong>Dice:</strong> "Activación por necesidad diagnosticada" — <em style="color:var(--ts)">no dice:</em> "Tenemos este servicio para ti"</li>
+        <li><strong>Dice:</strong> "Valor protegido (riesgos evitados)" — <em style="color:var(--ts)">no dice:</em> "Confía en nosotros"</li>
       </ul>
     </div>
   </div>
@@ -442,8 +408,8 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:40px 2
 
   <div class="fclose" style="border-top-color:var(--a1)">
     <div class="fc-tag" style="color:var(--a1)">Output declarativo — Panel 1</div>
-    <div class="fc-text">Puedes articular los tres vacíos estructurales del mercado y la unidad de Natio que resuelve cada uno. Entiendes por qué el modelo transaccional de la industria tradicional es estructuralmente obsoleto y cómo Natio es cualitativamente distinto — no una agencia mejorada sino una categoría nueva. Puedes explicar la regla fundamental del ecosistema: NFB dirige, NGL expande, N360 protege y construye, y los tres se activan por necesidad real nunca por oportunidad comercial.</div>
-    <div class="fc-sub">Misión: Dirigir, proteger y optimizar la trayectoria del futbolista mediante una plataforma sistémica integrada que opera con arquitectura longitudinal, no con intermediación transaccional.</div>
+    <div class="fc-text">Puedes articular los tres vacíos estructurales del mercado y la unidad de Natio que resuelve cada uno. Entiendes por qué el modelo transaccional de la industria tradicional es estructuralmente obsoleto y cómo Natio es cualitativamente distinto — no una agencia mejorada sino una categoría nueva. Puedes explicar la regla fundamental del ecosistema: NFB dirige, NGL expande, N360 protege y construye, y los tres se activan por necesidad real, nunca por oportunidad comercial.</div>
+    <div class="fc-sub">Misión: dirigir, proteger y optimizar la trayectoria del futbolista mediante una plataforma sistémica integrada que opera con arquitectura longitudinal, no con intermediación transaccional.</div>
   </div>
 </div>
 </section>
@@ -465,14 +431,14 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:40px 2
     <p>El error más costoso en el fútbol profesional no es elegir el club equivocado. Es aplicar la estrategia equivocada al momento equivocado. Mientras el techo competitivo de un jugador permanece incierto, existe una incertidumbre favorable — el Potential Premium — que eleva su valor percibido y exige una lógica de expansión. Cuando ese techo se revela, la estrategia correcta cambia radicalmente a optimización. Confundirlas cuesta años. NFB existe para no confundirlas nunca. Esta distinción es el eje alrededor del cual se construye toda la arquitectura de gobernanza de carrera.</p>
   </div>
 
-  <div class="mbox m2" style="border-color:var(--a2)">
+  <div class="mbox" style="border-color:var(--a2)">
     <div class="mt">Mientras el techo es incierto, la estrategia correcta es expansión. Cuando el techo se revela, la estrategia correcta es optimización. Aplicar la lógica equivocada al momento equivocado es el error que NFB existe para prevenir.</div>
   </div>
 
   <div class="sd">NFB BREAKOUT — el sistema para hacer inevitable al jugador juvenil</div>
 
   <div class="mathbox">
-    <div class="mh">Motor operativo de NFB BREAKOUT — las cinco variables críticas</div>
+    <div class="mh">Motor operativo de NFB BREAKOUT — las tres variables que determinan el output</div>
     <strong class="hi2">Elite Output</strong> = <span class="hi1">Training Quality (TQ)</span> × <span class="hi2">Minutes Velocity (MV)</span> × <span class="hi4">ASAGE Timing</span><br><br>
     <strong class="hi1">Training Quality (TQ)</strong> — Tasa real de mejora del skill-number por unidad de tiempo. No la fama del club. La calidad metodológica, los hábitos y la corrección dirigida de brechas reales.<br>
     <strong class="hi2">Minutes Velocity (MV)</strong> — Velocidad de acceso a minutos competitivos reales y sostenidos (week in, week out). No un debut simbólico. Continuidad real.<br>
@@ -483,24 +449,24 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:40px 2
   <div class="sd">El skill-number — el tablero de control cuantitativo</div>
   <p style="font-size:13px;color:var(--ts);margin-bottom:10px;">Escala logarítmica acumulativa 1–10 que integra técnica, táctica, físico, mental y capacidad de sostener rendimiento bajo presión. NFB opera con 5 variables del skill-number simultáneamente:</p>
   <div class="vars6">
-    <div class="vr6"><div class="vr6-n" style="color:var(--a2)">S0</div><div class="vr6-name" style="color:var(--white)">Skill-number actual</div><div class="vr6-desc">Nivel real hoy. Benchmarked en triple referencia: vs su club, vs su país, vs el mundo. No depende de percepciones — tiene evidencia. Escala: &lt;5 amateur, 6 mínimo para sobrevivir el profesional, 7–8 sólido con impacto, 9 antesala de élite, 10 élite absoluta.</div></div>
-    <div class="vr6"><div class="vr6-n" style="color:var(--a2)">S*</div><div class="vr6-name" style="color:var(--white)">Skill-number objetivo</div><div class="vr6-desc">Umbral que debe alcanzar por etapa o ventana de desarrollo. Define la meta con precisión numérica, no con aspiraciones vagas. Es la referencia para evaluar readiness real.</div></div>
-    <div class="vr6"><div class="vr6-n" style="color:var(--a2)">ΔS</div><div class="vr6-name" style="color:var(--white)">Tasa de mejora</div><div class="vr6-desc">Velocidad de crecimiento del skill-number por trimestre. Es la métrica de eficiencia del proceso de desarrollo. Si ΔS es bajo: brecha metodológica, de entorno, o ambas. Se revisa en cada revisión trimestral.</div></div>
-    <div class="vr6"><div class="vr6-n" style="color:var(--a5)">Ssuv</div><div class="vr6-name" style="color:var(--a5)">Umbral de supervivencia</div><div class="vr6-desc">Nivel mínimo para sobrevivir en el entorno al que se aspira. Moverse antes de alcanzarlo genera banca y trauma. Guardrail anti-salto prematuro: si S &lt; S_survive, no se mueve al jugador, independientemente de la oferta.</div></div>
-    <div class="vr6"><div class="vr6-n" style="color:var(--a2)">W</div><div class="vr6-name" style="color:var(--white)">Ventanas temporales</div><div class="vr6-desc">Debut, consolidación, salto estratégico. Las ventanas tienen apertura y cierre. Perderlas tiene consecuencias irreversibles. El timing no es una preferencia — es una disciplina operativa que NFB protege activamente.</div></div>
+    <div class="vr6"><div class="vr6-n" style="color:var(--a2)">S0</div><div class="vr6-name">Skill-number actual</div><div class="vr6-desc">Nivel real hoy. Benchmarked en triple referencia: vs su club, vs su país, vs el mundo. No depende de percepciones — tiene evidencia. Escala: &lt;5 amateur, 6 mínimo para sobrevivir el profesional, 7–8 sólido con impacto, 9 antesala de élite, 10 élite absoluta.</div></div>
+    <div class="vr6"><div class="vr6-n" style="color:var(--a2)">S*</div><div class="vr6-name">Skill-number objetivo</div><div class="vr6-desc">Umbral que debe alcanzar por etapa o ventana de desarrollo. Define la meta con precisión numérica, no con aspiraciones vagas. Es la referencia para evaluar readiness real.</div></div>
+    <div class="vr6"><div class="vr6-n" style="color:var(--a2)">ΔS</div><div class="vr6-name">Tasa de mejora</div><div class="vr6-desc">Velocidad de crecimiento del skill-number por trimestre. Es la métrica de eficiencia del proceso de desarrollo. Si ΔS es bajo: brecha metodológica, de entorno, o ambas. Se revisa en cada revisión trimestral.</div></div>
+    <div class="vr6"><div class="vr6-n" style="color:var(--a5)">Ssuv</div><div class="vr6-name">Umbral de supervivencia</div><div class="vr6-desc">Nivel mínimo para sobrevivir en el entorno al que se aspira. Moverse antes de alcanzarlo genera banca y trauma. Guardrail anti-salto prematuro: si S &lt; S_survive, no se mueve al jugador, independientemente de la oferta.</div></div>
+    <div class="vr6"><div class="vr6-n" style="color:var(--a2)">W</div><div class="vr6-name">Ventanas temporales</div><div class="vr6-desc">Debut, consolidación, salto estratégico. Las ventanas tienen apertura y cierre. Perderlas tiene consecuencias irreversibles. El timing no es una preferencia — es una disciplina operativa que NFB protege activamente.</div></div>
   </div>
 
   <div class="sd">Los 14 catalizadores de fracaso — y el blindaje NFB BREAKOUT</div>
   <p style="font-size:13px;color:var(--ts);margin-bottom:10px;">NFB BREAKOUT identifica 14 factores que pueden destruir una carrera independientemente del talento técnico. La antifragilidad futbolística es la capacidad de fortalecerse ante adversidad en lugar de romperse.</p>
   <div class="vars6">
-    <div class="vr6"><div class="vr6-n" style="color:var(--a5)">F1</div><div class="vr6-name" style="color:var(--white)">Lesión grave o recurrente</div><div class="vr6-desc">Blindaje: gestión de carga, recuperación activa, cultura de prevención real — no protocolos decorativos.</div></div>
-    <div class="vr6"><div class="vr6-n" style="color:var(--a5)">F2</div><div class="vr6-name" style="color:var(--white)">Banca crónica sin minutos</div><div class="vr6-desc">Blindaje: diagnóstico de club-fit real y pathway de minutos concreto. Protocolo de decisión: quedarse vs moverse.</div></div>
-    <div class="vr6"><div class="vr6-n" style="color:var(--a5)">F3</div><div class="vr6-name" style="color:var(--white)">Mal entorno deportivo</div><div class="vr6-desc">Blindaje: evaluación estructurada de academias/clubes por oportunidad real de desarrollo — no por nombre ni promesa.</div></div>
-    <div class="vr6"><div class="vr6-n" style="color:var(--a5)">F4</div><div class="vr6-name" style="color:var(--white)">Exportación prematura</div><div class="vr6-desc">Blindaje: guardrail anti-salto. S &lt; S_survive = no se mueve. Una exportación prematura es estancamiento con otro idioma.</div></div>
-    <div class="vr6"><div class="vr6-n" style="color:var(--a5)">F5</div><div class="vr6-name" style="color:var(--white)">Decisiones por presión familiar</div><div class="vr6-desc">Blindaje: alineación triádica jugador–familia–Natio. Educación preventiva sin presión ni miedo.</div></div>
-    <div class="vr6"><div class="vr6-n" style="color:var(--a5)">F6</div><div class="vr6-name" style="color:var(--white)">Entorno de terceros oportunistas</div><div class="vr6-desc">Blindaje: blindaje ético y comercial temprano. Exclusividad protectora estructurada desde etapa juvenil.</div></div>
-    <div class="vr6"><div class="vr6-n" style="color:var(--a5)">F7</div><div class="vr6-name" style="color:var(--white)">Estancamiento técnico real</div><div class="vr6-desc">Blindaje: microplanes por brecha. Feedback estructurado. ΔS como KPI trimestral obligatorio.</div></div>
-    <div class="vr6"><div class="vr6-n" style="color:var(--a5)">F8–F14</div><div class="vr6-name" style="color:var(--white)">Decisiones sin sistema + 6 más</div><div class="vr6-desc">F8: Career Intelligence Engine. F9: política digital. F10: protocolos de crisis. F11: educación financiera. F12: dinámica de vestidor. F13: identidad dual persona+atleta. F14: gestión de expectativas contra el hype.</div></div>
+    <div class="vr6"><div class="vr6-n" style="color:var(--a5)">F1</div><div class="vr6-name">Lesión grave o recurrente</div><div class="vr6-desc">Blindaje: gestión de carga, recuperación activa, cultura de prevención real — no protocolos decorativos.</div></div>
+    <div class="vr6"><div class="vr6-n" style="color:var(--a5)">F2</div><div class="vr6-name">Banca crónica sin minutos</div><div class="vr6-desc">Blindaje: diagnóstico de club-fit real y pathway de minutos concreto. Protocolo de decisión: quedarse vs moverse.</div></div>
+    <div class="vr6"><div class="vr6-n" style="color:var(--a5)">F3</div><div class="vr6-name">Mal entorno deportivo</div><div class="vr6-desc">Blindaje: evaluación estructurada de academias/clubes por oportunidad real de desarrollo — no por nombre ni promesa.</div></div>
+    <div class="vr6"><div class="vr6-n" style="color:var(--a5)">F4</div><div class="vr6-name">Exportación prematura</div><div class="vr6-desc">Blindaje: guardrail anti-salto. S &lt; S_survive = no se mueve. Una exportación prematura es estancamiento con otro idioma.</div></div>
+    <div class="vr6"><div class="vr6-n" style="color:var(--a5)">F5</div><div class="vr6-name">Decisiones por presión familiar</div><div class="vr6-desc">Blindaje: alineación triádica jugador–familia–Natio. Educación preventiva sin presión ni miedo.</div></div>
+    <div class="vr6"><div class="vr6-n" style="color:var(--a5)">F6</div><div class="vr6-name">Entorno de terceros oportunistas</div><div class="vr6-desc">Blindaje: blindaje ético y comercial temprano. Exclusividad protectora estructurada desde etapa juvenil.</div></div>
+    <div class="vr6"><div class="vr6-n" style="color:var(--a5)">F7</div><div class="vr6-name">Estancamiento técnico real</div><div class="vr6-desc">Blindaje: microplanes por brecha. Feedback estructurado. ΔS como KPI trimestral obligatorio.</div></div>
+    <div class="vr6"><div class="vr6-n" style="color:var(--a5)">F8–F14</div><div class="vr6-name">Decisiones sin sistema + 6 más</div><div class="vr6-desc">F8: Career Intelligence Engine. F9: política digital. F10: protocolos de crisis. F11: educación financiera. F12: dinámica de vestidor. F13: identidad dual persona+atleta. F14: gestión de expectativas contra el hype.</div></div>
   </div>
 
   <div class="sd">NFB SUCCESS — gobernanza por etapas A–F para profesionales establecidos</div>
@@ -549,7 +515,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:40px 2
     </div>
   </div>
 
-  <div class="sd">Club-fit estratégico y Narrative Status Engine</div>
+  <div class="sd">Club-fit estratégico y arquitectura femenil</div>
   <div class="g2">
     <div class="card">
       <div class="ch" style="color:var(--a2)">Las 6 dimensiones de club-fit — prestigio no es criterio</div>
@@ -568,7 +534,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:40px 2
         <li><strong>Estructura salarial:</strong> rangos fundamentalmente distintos con mayor varianza entre ligas y clubes</li>
         <li><strong>Dinámica internacional distinta:</strong> España (Liga F), Portugal, USA (NCAA + NWSL), Escandinavia — cada uno con sus lógicas propias</li>
         <li><strong>Madurez institucional en proceso:</strong> mayor riesgo contractual, menor estandarización regulatoria</li>
-        <li><strong>Oportunidad estructural:</strong> aceleración del mercado femenil crea ventana estratégica. Con arquitectura se capitaliza. Sin sistema se pierde.</li>
+        <li><strong>Oportunidad estructural:</strong> aceleración del mercado femenil crea ventana estratégica. Con arquitectura se capitaliza. Sin sistema se pierde</li>
         <li><strong>Benchmarks propios:</strong> el skill-number se calibra contra el ecosistema femenil, no contra el varonil</li>
       </ul>
     </div>
@@ -581,7 +547,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:40px 2
   <div class="fclose" style="border-top-color:var(--a2)">
     <div class="fc-tag" style="color:var(--a2)">Output declarativo — Panel 2</div>
     <div class="fc-text">Puedes diagnosticar en qué etapa A–F se encuentra un jugador profesional y qué modelo de carrera (PRO-SPORT / PRO-WEALTH / PRO-BALANCE) corresponde a esa etapa. Entiendes por qué el Potential Premium determina la estrategia correcta y qué error se comete cuando se aplica la lógica equivocada al momento equivocado. Puedes evaluar el club-fit con las 6 dimensiones correctas sin dejarte engañar por el nombre del club. Entiendes por qué NFB WOMEN no es una réplica del modelo masculino sino una arquitectura propia con sus propios benchmarks y mercados prioritarios.</div>
-    <div class="fc-sub">Diferencia startup vs empresa consolidada: BREAKOUT opera cuando el techo aún puede expandirse. SUCCESS opera cuando el techo ya está definido y hay que optimizarlo. El error más costoso en ambos es aplicar la estrategia equivocada al momento equivocado.</div>
+    <div class="fc-sub">Diferencia BREAKOUT vs SUCCESS: BREAKOUT opera cuando el techo aún puede expandirse. SUCCESS opera cuando el techo ya está definido y hay que optimizarlo. El error más costoso en ambos es aplicar la estrategia equivocada al momento equivocado.</div>
   </div>
 </div>
 </section>
@@ -603,7 +569,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:40px 2
     <p>La intermediación internacional no falla porque no hay talento ni dinero. Falla porque no hay confianza entre partes que no se conocen, hay roles ambiguos, existe bypass entre agencias, hay expectativas irreales y comunicación desordenada. La intermediación transaccional conecta personas y espera que el deal ocurra. NGL opera la confianza necesaria para que el deal ocurra en condiciones de incertidumbre, fricción y múltiples intereses en conflicto. Lo que está en juego en cada deal no es solo la comisión. Es el acceso futuro, la credibilidad institucional, la repetibilidad del modelo y la capacidad de escalar sin perder estándar.</p>
   </div>
 
-  <div class="mbox m3" style="border-color:var(--a3)">
+  <div class="mbox" style="border-color:var(--a3)">
     <div class="mt">No conectamos partes. Reducimos fricción, alineamos incentivos y convertimos complejidad en cierres confiables. La gobernanza del proceso es el producto — no el contacto.</div>
   </div>
 
@@ -657,11 +623,11 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:40px 2
 
   <div class="sd">Por qué fallan los deals internacionales — mapa de fricción sistémica</div>
   <div class="vars6">
-    <div class="vr6"><div class="vr6-n" style="color:var(--a5)">F1</div><div class="vr6-name" style="color:var(--white)">Desconfianza entre agencias</div><div class="vr6-desc">Agencias que no se conocen no cooperan naturalmente. La atribución económica ambigua hace que cada parte tema ser circunvenida. NGL construye protocolos de confianza explícita antes de que el deal empiece.</div></div>
-    <div class="vr6"><div class="vr6-n" style="color:var(--a5)">F2</div><div class="vr6-name" style="color:var(--white)">Bypass y triangulaciones</div><div class="vr6-desc">Una parte contacta directamente al jugador o al club, destruyendo la confianza y el deal. Solución: Non-Circumvention Agreement desde el primer contacto, sin excepciones.</div></div>
-    <div class="vr6"><div class="vr6-n" style="color:var(--a5)">F3</div><div class="vr6-name" style="color:var(--white)">Expectativas irreales</div><div class="vr6-desc">Salario, rol, nivel de liga: cuando no se alinean al inicio, el deal colapsa en la negociación real después de semanas perdidas. Validación objetiva del fit antes de avanzar.</div></div>
-    <div class="vr6"><div class="vr6-n" style="color:var(--a5)">F4</div><div class="vr6-name" style="color:var(--white)">Filtraciones prematuras</div><div class="vr6-desc">Cuando el interés del jugador se hace público antes de tiempo, su posición en el club actual se destruye y el club destino pierde urgencia. Cero filtraciones: guardrail absoluto e inquebrantable.</div></div>
-    <div class="vr6"><div class="vr6-n" style="color:var(--a5)">F5</div><div class="vr6-name" style="color:var(--white)">Ejecución operativa fallida</div><div class="vr6-desc">Los deals no colapsan por fútbol. Colapsan por documentos incompletos, registros retrasados, médicos sin agendar, visados no tramitados. NGL-7 (ejecución operativa impecable) existe específicamente para esto.</div></div>
+    <div class="vr6"><div class="vr6-n" style="color:var(--a5)">F1</div><div class="vr6-name">Desconfianza entre agencias</div><div class="vr6-desc">Agencias que no se conocen no cooperan naturalmente. La atribución económica ambigua hace que cada parte tema ser circunvenida. NGL construye protocolos de confianza explícita antes de que el deal empiece.</div></div>
+    <div class="vr6"><div class="vr6-n" style="color:var(--a5)">F2</div><div class="vr6-name">Bypass y triangulaciones</div><div class="vr6-desc">Una parte contacta directamente al jugador o al club, destruyendo la confianza y el deal. Solución: Non-Circumvention Agreement desde el primer contacto, sin excepciones.</div></div>
+    <div class="vr6"><div class="vr6-n" style="color:var(--a5)">F3</div><div class="vr6-name">Expectativas irreales</div><div class="vr6-desc">Salario, rol, nivel de liga: cuando no se alinean al inicio, el deal colapsa en la negociación real después de semanas perdidas. Validación objetiva del fit antes de avanzar.</div></div>
+    <div class="vr6"><div class="vr6-n" style="color:var(--a5)">F4</div><div class="vr6-name">Filtraciones prematuras</div><div class="vr6-desc">Cuando el interés del jugador se hace público antes de tiempo, su posición en el club actual se destruye y el club destino pierde urgencia. Cero filtraciones: guardrail absoluto e inquebrantable.</div></div>
+    <div class="vr6"><div class="vr6-n" style="color:var(--a5)">F5</div><div class="vr6-name">Ejecución operativa fallida</div><div class="vr6-desc">Los deals no colapsan por fútbol. Colapsan por documentos incompletos, registros retrasados, médicos sin agendar, visados no tramitados. NGL-7 (ejecución operativa impecable) existe específicamente para esto.</div></div>
   </div>
 
   <div class="sd">Cláusulas mínimas en todas las modalidades de NGL</div>
@@ -689,13 +655,13 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:40px 2
   </div>
 
   <div class="grab gr3">
-    <div class="gt">NGL OUTBOUND solo se activa ante trigger estratégico real. La frustración emocional del jugador nunca es un trigger válido. El movimiento siempre sirve a la estrategia de carrera — nunca es el fin en sí mismo. — La reputación vale más que cualquier deal.</div>
+    <div class="gt">NGL OUTBOUND solo se activa ante trigger estratégico real. La frustración emocional del jugador nunca es un trigger válido. El movimiento siempre sirve a la estrategia de carrera — nunca es el fin en sí mismo. La reputación vale más que cualquier deal.</div>
   </div>
 
   <div class="fclose" style="border-top-color:var(--a3)">
     <div class="fc-tag" style="color:var(--a3)">Output declarativo — Panel 3</div>
     <div class="fc-text">Puedes distinguir las cuatro modalidades de NGL y saber cuándo aplica cada una según quién tiene el mandato del jugador y quién tiene el acceso al club. Entiendes por qué los deals internacionales colapsan mayoritariamente por fricción sistémica y no por falta de talento, y qué condiciones mínimas deben existir antes de activar cualquier proceso de movilidad. Puedes explicar por qué NGL OFFLOAD no es solo una herramienta de salida sino un entry-point estratégico para la relación institucional con clubes.</div>
-    <div class="fc-sub">Guardrail inquebrantable de NGL: No movilidad sin dirección NFB activa. No partners sin verificación de track record institucional real. No filtraciones en ningún momento del proceso.</div>
+    <div class="fc-sub">Guardrail inquebrantable de NGL: no movilidad sin dirección NFB activa. No partners sin verificación de track record institucional real. No filtraciones en ningún momento del proceso.</div>
   </div>
 </div>
 </section>
@@ -717,7 +683,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:40px 2
     <p>N360 no es un escudo. Es una unidad de doble palanca. Por un lado, gobierna las variables del entorno que pueden destruir una carrera desde afuera: fricción logística, riesgo reputacional, desorden patrimonial, vacío post-retiro. Por el otro, desarrolla activamente la marca personal del jugador, sus acuerdos comerciales y sus líneas de negocio propias. La industria hace una cosa o la otra. N360 integra las dos porque no se puede construir valor sobre un entorno inestable, ni proteger un entorno que no genera. La separación estructural NFB vs N360 es un guardrail institucional no negociable: NFB gobierna carrera deportiva, N360 gobierna entorno extra-fútbol.</p>
   </div>
 
-  <div class="mbox m4" style="border-color:var(--a4)">
+  <div class="mbox" style="border-color:var(--a4)">
     <div class="mt">N360 opera en dos frentes simultáneos: protege lo que puede destruirte y construye lo que puede multiplicarte. No elige uno. Opera los dos. No es concierge — es gobernanza operativa con protocolos, SLAs y trazabilidad.</div>
   </div>
 
@@ -769,17 +735,17 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:40px 2
     <div class="esc-row">
       <div class="esc-n" style="color:var(--a3)">T2</div>
       <div class="esc-body" style="border-left:2px solid var(--a3)">
-        <div class="esc-title" style="color:var(--a3)">N360 IDENTITY — Control reputacional + construcción activa de imagen</div>
-        <div class="esc-desc">Dimensión defensiva: arquitectura de identidad pública, estrategia de silencio, PR defensivo, playbooks de crisis preventivos, media training, gestión de privacidad familiar. Dimensión ofensiva: estrategia activa de acuerdos comerciales con marcas con fit real, desarrollo de marca personal, creatividad y estrategia publicitaria para marcas. Métrica defensiva: PROBLEMAS EVITADOS. Métrica ofensiva: acuerdos cerrados y revenue de imagen generado.</div>
-        <div class="esc-note" style="color:var(--a3)">Trigger: aumento de exposición mediática, primera convocatoria a selección, incorporación de patrocinadores</div>
+        <div class="esc-title" style="color:var(--a3)">N360 IDENTITY — Construcción activa de marca y reputación</div>
+        <div class="esc-desc">Arquitectura de identidad pública consciente, política digital y de medios, playbooks de crisis reputacional preventivos, primeros acuerdos comerciales estructurados con fit real. Se activa cuando la visibilidad del jugador empieza a generar exposición real — antes de que la exposición se vuelva riesgo no gestionado.</div>
+        <div class="esc-note" style="color:var(--a3)">Trigger: visibilidad creciente, primeras oportunidades de imagen o marca</div>
       </div>
     </div>
     <div class="esc-row">
-      <div class="esc-n" style="color:var(--a4)">T3</div>
-      <div class="esc-body" style="border-left:2px solid var(--a4)">
-        <div class="esc-title" style="color:var(--a4)">N360 CAPITAL — Monetizar sin comprometer estabilidad</div>
-        <div class="esc-desc">Gobernanza financiera estructurada (N360 coordina, no suplanta licencias). Anti-scam framework obligatorio con checklists y red flags. Due diligence profundo de deals, sponsors y contratos. Control de liquidez y prevención de inflación de estilo de vida. Sponsors estratégicos de escala: acuerdos comerciales de mayor complejidad. Modelos de negocio con el nombre como activo.</div>
-        <div class="esc-note" style="color:var(--a4)">Trigger: peak de carrera con ingresos significativos / oportunidades de inversión complejas</div>
+      <div class="esc-n" style="color:var(--a1)">T3</div>
+      <div class="esc-body" style="border-left:2px solid var(--a1)">
+        <div class="esc-title" style="color:var(--a1)">N360 CAPITAL — Gobernanza patrimonial y comercial en su punto máximo</div>
+        <div class="esc-desc">Framework anti-scam estructurado, due diligence de cada inversión y deal, coordinación activa de asesores externos (fiscal, legal, patrimonial), portafolio de acuerdos comerciales y líneas de negocio propias en escala. Se activa en el peak de valor de mercado, cuando el patrimonio generado necesita gobernanza real, no confianza ciega.</div>
+        <div class="esc-note" style="color:var(--a1)">Trigger: etapa D (peak) de la arquitectura A–F / patrimonio relevante generado</div>
       </div>
     </div>
     <div class="esc-row">
@@ -833,18 +799,18 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:40px 2
     <p>Un modelo impresionante sin capacidades para ejecutarlo es solo una presentación bien diseñada. La diferencia entre una promesa y una plataforma es esta: la promesa depende del carisma y los contactos de un individuo. La plataforma depende de capacidades institucionales repetibles que funcionan independientemente de quién las opera. Natio compite con infraestructura institucional, no con discursos. Institucionalizar una capacidad requiere cuatro elementos: protocolo documentado, herramienta que lo materializa, cultura que lo aplica sin supervisión, y métricas que verifican su aplicación.</p>
   </div>
 
-  <div class="mbox m5" style="border-color:var(--a5)">
+  <div class="mbox" style="border-color:var(--a5)">
     <div class="mt">Los modelos impresionan. Las capacidades sostienen. La confianza consolida. El control diferencia. Sin los cuatro, la plataforma es una promesa disfrazada de sistema.</div>
   </div>
 
   <div class="sd">Los 6 clusters de capacidades transversales — la infraestructura institucional</div>
   <div class="vars6">
-    <div class="vr6"><div class="vr6-n" style="color:var(--a2)">T-1</div><div class="vr6-name" style="color:var(--white)">Career Intelligence Engine</div><div class="vr6-desc">Diagnóstico superior: leer sistemas, trayectorias y contextos — no solo rendimiento puntual. La capacidad más crítica y diferenciadora de todo el ecosistema. Aplica a NFB BREAKOUT, NFB SUCCESS y NGL OFFLOAD. Sin esto, el sistema opera con intuición disfrazada de método.</div></div>
-    <div class="vr6"><div class="vr6-n" style="color:var(--a3)">T-2</div><div class="vr6-name" style="color:var(--white)">Gobernanza de Procesos</div><div class="vr6-desc">Roles claros, canal único, trazabilidad, anti-bypass, atribución explícita. La gobernanza convierte la intención en ejecución confiable. Aplica a todas las modalidades de NGL y todos los tiers de N360.</div></div>
-    <div class="vr6"><div class="vr6-n" style="color:var(--a4)">T-3</div><div class="vr6-name" style="color:var(--white)">Inteligencia Contextual</div><div class="vr6-desc">Leer ecosistemas reales: clubes, mercados, familias, entornos culturales, dinámicas institucionales. Sin inteligencia contextual, el diagnóstico puede ser correcto pero la intervención incorrecta. Aplica a NFB, NGL y N360 en todas sus unidades.</div></div>
-    <div class="vr6"><div class="vr6-n" style="color:var(--a6)">T-4</div><div class="vr6-name" style="color:var(--white)">Protección de Valor y Narrativa</div><div class="vr6-desc">Reputación, timing, confidencialidad, coherencia narrativa. El valor del jugador es en parte reputacional. Si no se protege activamente, se erosiona silenciosamente. Aplica a N360 IDENTITY, NGL todas las modalidades y NFB SUCCESS.</div></div>
-    <div class="vr6"><div class="vr6-n" style="color:var(--a5)">T-5</div><div class="vr6-name" style="color:var(--white)">Disciplina Operativa Impecable</div><div class="vr6-desc">Ejecución sin fricción, SLAs cumplidos, vetting de proveedores, compliance regulatorio FIFA. La diferencia entre promesa y plataforma se juega en los detalles. Aplica a N360 ESSENTIALS, NGL INBOUND y todas las unidades.</div></div>
-    <div class="vr6"><div class="vr6-n" style="color:var(--a1)">T-6</div><div class="vr6-name" style="color:var(--white)">Construcción de Confianza Longitudinal</div><div class="vr6-desc">Presencia sostenida, cadencia real, ética consistente, relaciones que trascienden deals. La barrera de salida más poderosa es una relación que ha demostrado valor durante años. Marco ético institucional inquebrantable. Aplica a NFB todas, N360 RUNWAY y NGL todas.</div></div>
+    <div class="vr6"><div class="vr6-n" style="color:var(--a2)">T-1</div><div class="vr6-name">Career Intelligence Engine</div><div class="vr6-desc">Diagnóstico superior: leer sistemas, trayectorias y contextos — no solo rendimiento puntual. La capacidad más crítica y diferenciadora de todo el ecosistema. Aplica a NFB BREAKOUT, NFB SUCCESS y NGL OFFLOAD. Sin esto, el sistema opera con intuición disfrazada de método.</div></div>
+    <div class="vr6"><div class="vr6-n" style="color:var(--a3)">T-2</div><div class="vr6-name">Gobernanza de Procesos</div><div class="vr6-desc">Roles claros, canal único, trazabilidad, anti-bypass, atribución explícita. La gobernanza convierte la intención en ejecución confiable. Aplica a todas las modalidades de NGL y todos los tiers de N360.</div></div>
+    <div class="vr6"><div class="vr6-n" style="color:var(--a4)">T-3</div><div class="vr6-name">Inteligencia Contextual</div><div class="vr6-desc">Leer ecosistemas reales: clubes, mercados, familias, entornos culturales, dinámicas institucionales. Sin inteligencia contextual, el diagnóstico puede ser correcto pero la intervención incorrecta. Aplica a NFB, NGL y N360 en todas sus unidades.</div></div>
+    <div class="vr6"><div class="vr6-n" style="color:var(--a6)">T-4</div><div class="vr6-name">Protección de Valor y Narrativa</div><div class="vr6-desc">Reputación, timing, confidencialidad, coherencia narrativa. El valor del jugador es en parte reputacional. Si no se protege activamente, se erosiona silenciosamente. Aplica a N360 IDENTITY, NGL todas las modalidades y NFB SUCCESS.</div></div>
+    <div class="vr6"><div class="vr6-n" style="color:var(--a5)">T-5</div><div class="vr6-name">Disciplina Operativa Impecable</div><div class="vr6-desc">Ejecución sin fricción, SLAs cumplidos, vetting de proveedores, compliance regulatorio FIFA. La diferencia entre promesa y plataforma se juega en los detalles. Aplica a N360 ESSENTIALS, NGL INBOUND y todas las unidades.</div></div>
+    <div class="vr6"><div class="vr6-n" style="color:var(--a1)">T-6</div><div class="vr6-name">Construcción de Confianza Longitudinal</div><div class="vr6-desc">Presencia sostenida, cadencia real, ética consistente, relaciones que trascienden deals. La barrera de salida más poderosa es una relación que ha demostrado valor durante años. Marco ético institucional inquebrantable. Aplica a NFB todas, N360 RUNWAY y NGL todas.</div></div>
   </div>
 
   <div class="sd">Capacidades específicas por unidad — lo que Natio debe dominar institucionalmente</div>
@@ -895,24 +861,24 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:40px 2
     <div class="card">
       <div class="ch" style="color:var(--a5)">Guardrails de NFB y NGL</div>
       <ul>
-        <li><strong>NFB:</strong> No transferencias motivadas por comisión — el movimiento siempre sirve a la estrategia de carrera</li>
-        <li><strong>NFB:</strong> No decisiones reactivas por ansiedad del jugador — el timing lo define la arquitectura</li>
-        <li><strong>NFB:</strong> No club-fit sin análisis previo de rol, sistema, cultura e institucionalidad</li>
-        <li><strong>NGL:</strong> No movilidad sin dirección NFB activa — sin excepción</li>
-        <li><strong>NGL:</strong> No salida por frustración emocional del jugador</li>
-        <li><strong>NGL:</strong> No partners sin verificación de track record institucional real</li>
-        <li><strong>NGL:</strong> No filtraciones en ningún momento del proceso — cero excepciones</li>
+        <li><strong>NFB:</strong> no transferencias motivadas por comisión — el movimiento siempre sirve a la estrategia de carrera</li>
+        <li><strong>NFB:</strong> no decisiones reactivas por ansiedad del jugador — el timing lo define la arquitectura</li>
+        <li><strong>NFB:</strong> no club-fit sin análisis previo de rol, sistema, cultura e institucionalidad</li>
+        <li><strong>NGL:</strong> no movilidad sin dirección NFB activa — sin excepción</li>
+        <li><strong>NGL:</strong> no salida por frustración emocional del jugador</li>
+        <li><strong>NGL:</strong> no partners sin verificación de track record institucional real</li>
+        <li><strong>NGL:</strong> no filtraciones en ningún momento del proceso — cero excepciones</li>
       </ul>
     </div>
     <div class="card">
-      <div class="ch" style="color:var(--a5)">Promesa defendible vs promesa vacía</div>
+      <div class="ch" style="color:var(--a1)">Promesa defendible vs promesa vacía</div>
       <ul>
-        <li><strong>Natio promete:</strong> Diagnóstico honesto con sistema y evidencia</li>
-        <li><strong>Natio promete:</strong> Arquitectura de decisiones por etapa con modelo explícito</li>
-        <li><strong>Natio promete:</strong> Timing disciplinado como guardrail operativo</li>
-        <li><strong>Natio promete:</strong> Cadencia operativa sostenida que no desaparece entre contratos</li>
-        <li><strong>Natio NO promete:</strong> Debuts en fechas específicas, ni contratos con clubes específicos</li>
-        <li><strong>Natio NO promete:</strong> Transferencias a mercados específicos ni salarios mínimos garantizados</li>
+        <li><strong>Natio promete:</strong> diagnóstico honesto con sistema y evidencia</li>
+        <li><strong>Natio promete:</strong> arquitectura de decisiones por etapa con modelo explícito</li>
+        <li><strong>Natio promete:</strong> timing disciplinado como guardrail operativo</li>
+        <li><strong>Natio promete:</strong> cadencia operativa sostenida que no desaparece entre contratos</li>
+        <li><strong>Natio NO promete:</strong> debuts en fechas específicas, ni contratos con clubes específicos</li>
+        <li><strong>Natio NO promete:</strong> transferencias a mercados específicos ni salarios mínimos garantizados</li>
         <li><strong>Natio NO promete:</strong> "Europa" como destino sin trigger estratégico real documentado</li>
       </ul>
     </div>
@@ -947,16 +913,16 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:40px 2
     <p>El mercado de representación en México y Latinoamérica está estructuralmente fragmentado, dominado por operadores individuales sin sistema, sin escalabilidad y sin integración del entorno extra-deportivo. El mercado de transferencias internacionales en ligas de segunda y tercera línea es particularmente ineficiente: alto volumen de deals que colapsan por fricción sistémica, baja tasa de conversión y ausencia de operadores con gobernanza institucional. Natio no busca una tajada del mercado existente. Busca crear una categoría nueva: la plataforma sistémica de gobernanza de carrera para el futbolista latinoamericano. Tres tendencias convergen para crear la ventana estratégica más importante de la última década: la industria se está profesionalizando sin una plataforma sistémica, el fútbol femenino está acelerando sin arquitectura, y la confianza es el recurso más escaso de la intermediación internacional.</p>
   </div>
 
-  <div class="mbox m6" style="border-color:var(--a6)">
+  <div class="mbox" style="border-color:var(--a6)">
     <div class="mt">El talento no escasea. La arquitectura sí. Natio es esa arquitectura — y la ventana para construirla como plataforma de referencia regional existe ahora.</div>
   </div>
 
   <div class="sd">Modelo de negocio — fuentes de revenue por unidad</div>
   <div class="vars6">
-    <div class="vr6"><div class="vr6-n" style="color:var(--a2)">NFB</div><div class="vr6-name" style="color:var(--white)">Revenue recurrente de base</div><div class="vr6-desc">BREAKOUT: retainer mensual por jugador + bonus por hitos (debut, primer contrato profesional, salto de nivel). SUCCESS: retainer mensual + porcentaje de contratos y renegociaciones + bonus por extensiones. Revenue de base recurrente más variable sobre transacciones. WOMEN: idéntica estructura a BREAKOUT o SUCCESS según etapa.</div></div>
-    <div class="vr6"><div class="vr6-n" style="color:var(--a3)">NGL</div><div class="vr6-name" style="color:var(--white)">Revenue transaccional gobernado</div><div class="vr6-desc">INBOUND y OUTBOUND: comisión sobre el valor del transfer. Hasta 10% permitido por FIFA según estructura del deal. BROKERAGE: split de comisión entre agencias participantes por gobernanza del proceso. OFFLOAD: retainer o comisión del club mandante por arquitectura de salida estratégica.</div></div>
-    <div class="vr6"><div class="vr6-n" style="color:var(--a4)">N360</div><div class="vr6-name" style="color:var(--white)">Revenue por tier activo + imagen</div><div class="vr6-desc">Tiers 1–4: retainer mensual por tier activo. Comisión sobre acuerdos comerciales cerrados (sponsors, endorsements, deals de marca). Revenue por desarrollo de marca personal y líneas de negocio del jugador. Revenue creciente con la etapa de carrera y visibilidad del jugador. Tier 0 (RUNWAY) es pro bono estratégico.</div></div>
-    <div class="vr6"><div class="vr6-n" style="color:var(--a6)">LTV</div><div class="vr6-name" style="color:var(--white)">Lifetime value del jugador</div><div class="vr6-desc">Juvenil (14–18): NFB BREAKOUT + N360 RUNWAY — inversión en relación longitudinal. Peak (27–30): NFB SUCCESS + NGL OUTBOUND + N360 IDENTITY + N360 CAPITAL — revenue máximo del ciclo. Post-retiro: N360 LEGACY + marca personal + proyectos de segunda carrera. Un jugador que atraviesa el ciclo completo genera LTV que multiplica varias veces el retainer inicial.</div></div>
+    <div class="vr6"><div class="vr6-n" style="color:var(--a2)">NFB</div><div class="vr6-name">Revenue recurrente de base</div><div class="vr6-desc">BREAKOUT: retainer mensual por jugador + bonus por hitos (debut, primer contrato profesional, salto de nivel). SUCCESS: retainer mensual + porcentaje de contratos y renegociaciones + bonus por extensiones. Revenue de base recurrente más variable sobre transacciones. WOMEN: idéntica estructura a BREAKOUT o SUCCESS según etapa.</div></div>
+    <div class="vr6"><div class="vr6-n" style="color:var(--a3)">NGL</div><div class="vr6-name">Revenue transaccional gobernado</div><div class="vr6-desc">INBOUND y OUTBOUND: comisión sobre el valor del transfer. Hasta 10% permitido por FIFA según estructura del deal. BROKERAGE: split de comisión entre agencias participantes por gobernanza del proceso. OFFLOAD: retainer o comisión del club mandante por arquitectura de salida estratégica.</div></div>
+    <div class="vr6"><div class="vr6-n" style="color:var(--a4)">N360</div><div class="vr6-name">Revenue por tier activo + imagen</div><div class="vr6-desc">Tiers 1–4: retainer mensual por tier activo. Comisión sobre acuerdos comerciales cerrados (sponsors, endorsements, deals de marca). Revenue por desarrollo de marca personal y líneas de negocio del jugador. Revenue creciente con la etapa de carrera y visibilidad del jugador. Tier 0 (RUNWAY) es pro bono estratégico.</div></div>
+    <div class="vr6"><div class="vr6-n" style="color:var(--a6)">LTV</div><div class="vr6-name">Lifetime value del jugador</div><div class="vr6-desc">Juvenil (14–18): NFB BREAKOUT + N360 RUNWAY — inversión en relación longitudinal. Peak (27–30): NFB SUCCESS + NGL OUTBOUND + N360 IDENTITY + N360 CAPITAL — revenue máximo del ciclo. Post-retiro: N360 LEGACY + marca personal + proyectos de segunda carrera. Un jugador que atraviesa el ciclo completo genera LTV que multiplica varias veces el retainer inicial.</div></div>
   </div>
 
   <div class="sd">Los cuatro moats estratégicos — por qué no se puede copiar fácilmente</div>
@@ -1016,8 +982,9 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:40px 2
 
 <!-- ══════════════════════════ FOOTER ══════════════════════════ -->
 <footer>
+  <div class="ft-brand">El Mundo en 6 Paneles</div>
   <div class="ft-title">NATIO</div>
-  <div class="ft-sub">Documento Interno Confidencial · 6-Panel QuickStudy Guide</div>
+  <div class="ft-sub">Documento Interno Confidencial · 6-Panel SmartStudy Guide</div>
   <div class="ft-nav">
     <a href="#p1">P1 — Tesis y Ecosistema</a>
     <a href="#p2">P2 — NFB: Gobernanza de Carrera</a>
