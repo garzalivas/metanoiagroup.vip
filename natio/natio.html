@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/jpeg" href="Logo_Natio.jpg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Natio — Apéndice Institucional</title>
+<meta name="description" content="Apéndice institucional del sistema Natio. Arquitectura, documentos de referencia y líneas de producto: NFB, NGL y N360.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Natio — Apéndice Institucional">
+<meta property="og:description" content="Dirigimos tu carrera. Expandimos tus opciones. Protegemos tu estabilidad. — El sistema Natio, documentado.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<meta property="og:site_name" content="Natio">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#0a0a0a;
+    --dark:#111111;
+    --card:#161616;
+    --border:#232323;
+    --yellow:#F5C518;
+    --yellow-dim:rgba(245,197,24,0.12);
+    --yellow-glow:rgba(245,197,24,0.35);
+    --white:#f5f5f0;
+    --grey:#888;
+    --light-grey:#bbb;
+    --display:'Bebas Neue', sans-serif;
+    --sans:'Barlow', sans-serif;
+    --cond:'Barlow Condensed', sans-serif;
+    --maxw:960px;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;scroll-padding-top:110px;}
+
+  body{
+    background:var(--black);
+    color:var(--white);
+    font-family:var(--sans);
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  a{color:inherit;text-decoration:none;}
+  ::selection{background:var(--yellow-glow);color:var(--black);}
+  a:focus-visible, button:focus-visible{outline:1.5px solid var(--yellow);outline-offset:4px;}
+
+  /* noise texture, consistent with Natio product pages */
+  body::before{
+    content:'';
+    position:fixed;inset:0;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events:none;z-index:0;opacity:0.4;
+  }
+  body::after{
+    content:'';
+    position:fixed;right:0;top:0;bottom:0;width:55%;
+    background:radial-gradient(ellipse 700px 600px at 100% 10%, var(--yellow-dim), transparent 60%);
+    pointer-events:none;z-index:0;
+  }
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;z-index:1;}
+
+  /* ---------- NAV ---------- */
+  nav.topbar{
+    position:sticky;top:0;
+    background:#0a0a0ad9;
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+    z-index:50;
+  }
+  nav.topbar .inner{
+    max-width:var(--maxw);margin:0 auto;padding:14px 28px;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:14px;flex-wrap:wrap;
+  }
+  .brandmark{display:flex;align-items:center;gap:12px;}
+  .brandmark img{height:26px;width:auto;display:block;}
+  .brandmark span{
+    font-family:var(--cond);font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--grey);font-weight:500;border-left:1px solid var(--border);padding-left:12px;
+  }
+  .nav-links{display:flex;gap:24px;align-items:center;flex-wrap:wrap;}
+  .nav-links a{
+    font-family:var(--cond);
+    font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;
+    color:var(--light-grey);
+    transition:color .25s ease;
+    white-space:nowrap;
+  }
+  .nav-links a:hover{color:var(--yellow);}
+  .nav-links a.ext{
+    border:1px solid var(--border);
+    padding:7px 14px;
+    color:var(--yellow);
+  }
+  .nav-links a.ext:hover{border-color:var(--yellow);}
+
+  /* ---------- HERO ---------- */
+  header.hero{
+    padding:110px 0 86px;
+    position:relative;
+  }
+  .eyebrow{
+    font-family:var(--cond);
+    font-size:12.5px;font-weight:600;
+    letter-spacing:.3em;
+    text-transform:uppercase;
+    color:var(--yellow);
+    display:flex;align-items:center;gap:12px;
+    opacity:0;
+    animation:fadeUp .8s ease .1s forwards;
+  }
+  .eyebrow::before{content:'';display:inline-block;width:28px;height:1px;background:var(--yellow);}
+  h1.name{
+    font-family:var(--display);
+    font-weight:400;
+    font-size:clamp(46px, 7.4vw, 92px);
+    line-height:.94;
+    letter-spacing:.005em;
+    margin-top:20px;
+    opacity:0;
+    animation:fadeUp .8s ease .2s forwards;
+  }
+  h1.name span{color:var(--yellow);display:block;}
+
+  p.roles{
+    margin-top:26px;
+    font-size:clamp(15px,2vw,18px);
+    color:var(--light-grey);
+    max-width:620px;
+    line-height:1.7;
+    font-weight:300;
+    opacity:0;
+    animation:fadeUp .8s ease .32s forwards;
+  }
+  p.roles strong{color:var(--white);font-weight:600;}
+
+  .locbar{
+    margin-top:30px;
+    display:flex;align-items:center;gap:10px;
+    font-family:var(--cond);
+    font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--grey);
+    opacity:0;
+    animation:fadeUp .8s ease .42s forwards;
+  }
+  .locbar .dot{width:6px;height:6px;border-radius:50%;background:var(--yellow);flex:none;
+    box-shadow:0 0 8px 1px var(--yellow-glow);
+  }
+
+  .hero-cta{
+    margin-top:42px;
+    display:flex;gap:14px;flex-wrap:wrap;
+    opacity:0;
+    animation:fadeUp .8s ease .54s forwards;
+  }
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:15px 26px;
+    font-family:var(--cond);
+    font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    transition:all .2s ease;
+    position:relative;overflow:hidden;
+  }
+  .btn-primary{background:var(--yellow);color:var(--black);}
+  .btn-primary:hover{background:#ffd93f;transform:translateY(-1px);}
+  .btn-ghost{border:1px solid var(--border);color:var(--white);}
+  .btn-ghost:hover{border-color:var(--yellow);color:var(--yellow);}
+
+  @keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+
+  /* ---------- SECTION SHELL ---------- */
+  section{padding:78px 0;border-top:1px solid var(--border);position:relative;}
+  .sec-head{display:flex;align-items:baseline;gap:18px;margin-bottom:44px;}
+  .sec-num{
+    font-family:var(--cond);font-weight:700;font-size:14px;color:var(--yellow);
+    letter-spacing:.1em;
+  }
+  h2.sec-title{
+    font-family:var(--display);font-weight:400;font-size:clamp(28px,3.6vw,42px);
+    letter-spacing:.005em;line-height:1.05;
+  }
+  h2.sec-title span{color:var(--yellow);}
+  .sec-sub{color:var(--light-grey);font-size:14.5px;font-weight:300;max-width:540px;margin-top:14px;line-height:1.7;}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease, transform .8s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  /* ---------- LEAD PARAGRAPHS ---------- */
+  .lead{font-size:15.5px;color:var(--light-grey);line-height:1.9;font-weight:300;max-width:740px;}
+  .lead + .lead{margin-top:20px;}
+  .lead strong{color:var(--white);font-weight:600;}
+
+  /* ---------- STAT ROW ---------- */
+  .stat-row{display:flex;flex-wrap:wrap;margin-top:52px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+  .stat-item{flex:1 1 140px;padding:26px 26px 26px 0;}
+  .stat-item + .stat-item{border-left:1px solid var(--border);padding-left:26px;}
+  .stat-num{font-family:var(--display);font-size:40px;color:var(--yellow);line-height:1;}
+  .stat-label{font-family:var(--cond);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--grey);margin-top:10px;}
+  @media (max-width:640px){.stat-item{flex:1 1 45%;border-left:none !important;padding-left:0 !important;}}
+
+  /* ---------- CORE PHRASE BLOCK ---------- */
+  .core-phrase{
+    margin-top:52px;padding:32px 30px;border:1px solid var(--border);border-left:2px solid var(--yellow);
+    background:var(--dark);
+  }
+  .core-phrase p{
+    font-family:var(--display);font-size:clamp(20px,2.6vw,28px);line-height:1.3;color:var(--white);
+  }
+  .core-phrase p span{color:var(--yellow);}
+  .core-phrase .cp-cite{margin-top:14px;font-family:var(--cond);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);}
+
+  /* ---------- UNIT / ECO GRID ---------- */
+  .eco-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);}
+  .eco-grid.two{grid-template-columns:repeat(2,1fr);}
+  .eco-card{background:var(--dark);padding:32px 28px;display:block;transition:background .3s ease, transform .3s ease;}
+  .eco-card:hover{background:var(--card);transform:translateY(-2px);}
+  .eco-code{font-family:var(--cond);font-weight:700;font-size:12.5px;color:var(--yellow);letter-spacing:.1em;text-transform:uppercase;}
+  .eco-name{font-family:var(--display);font-size:24px;margin-top:10px;font-weight:400;line-height:1.05;}
+  .eco-desc{color:var(--light-grey);font-size:13.5px;margin-top:12px;line-height:1.7;font-weight:300;}
+  .eco-url{margin-top:18px;font-family:var(--cond);font-size:11px;letter-spacing:.08em;font-weight:600;color:var(--grey);display:flex;align-items:center;gap:8px;text-transform:uppercase;}
+  .eco-card:hover .eco-url{color:var(--yellow);}
+  .eco-url .arrow{transition:transform .25s ease;}
+  .eco-card:hover .eco-url .arrow{transform:translateX(4px);}
+  .eco-card.full{grid-column:1 / -1;}
+  @media (max-width:760px){.eco-grid{grid-template-columns:1fr;}.eco-card.full{grid-column:auto;}}
+
+  /* ---------- UNIT CATEGORY BLOCKS (product lines) ---------- */
+  .cat-block{margin-bottom:56px;}
+  .cat-block:last-child{margin-bottom:0;}
+  .cat-header{display:flex;align-items:baseline;gap:16px;margin-bottom:6px;padding-bottom:16px;border-bottom:1px solid var(--border);flex-wrap:wrap;}
+  .cat-letter{font-family:var(--display);font-size:30px;color:var(--yellow);flex:none;}
+  .cat-titlewrap{flex:1;min-width:200px;}
+  .cat-title{font-family:var(--cond);font-size:16px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--white);}
+  .cat-sub{font-family:var(--cond);font-size:11.5px;color:var(--grey);letter-spacing:.06em;text-transform:uppercase;margin-top:3px;}
+  .cat-count{font-family:var(--cond);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--grey);flex:none;}
+
+  .line-card{padding:28px 4px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;gap:24px;align-items:flex-start;flex-wrap:wrap;transition:padding-left .3s ease;}
+  .line-card:hover{padding-left:12px;background:#ffffff03;}
+  .line-card:last-child{border-bottom:none;}
+  .line-main{flex:1;min-width:260px;}
+  .line-title{font-family:var(--display);font-size:23px;font-weight:400;color:var(--white);line-height:1.1;}
+  .line-desc{color:var(--light-grey);font-size:13.5px;line-height:1.75;font-weight:300;margin-top:10px;max-width:640px;}
+  .line-link{
+    flex:none;display:inline-flex;align-items:center;gap:10px;
+    font-family:var(--cond);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--yellow);
+    border:1px solid var(--border);padding:11px 18px;transition:all .25s ease;white-space:nowrap;
+  }
+  .line-link:hover{border-color:var(--yellow);background:var(--yellow-dim);}
+
+  /* ---------- DOCUMENTS ---------- */
+  .doc-list{border-top:1px solid var(--border);}
+  .doc-row{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:24px 4px;border-bottom:1px solid var(--border);transition:padding-left .3s ease, background .3s ease;}
+  .doc-row:hover{padding-left:14px;background:#ffffff03;}
+  .doc-left{display:flex;align-items:center;gap:20px;min-width:0;}
+  .doc-num{font-family:var(--display);color:var(--yellow);font-size:20px;flex:none;}
+  .doc-text{min-width:0;}
+  .doc-title{font-family:var(--display);font-size:20px;font-weight:400;}
+  .doc-hint{color:var(--grey);font-size:12.5px;margin-top:4px;font-weight:300;}
+  .doc-dl{flex:none;width:38px;height:38px;border-radius:50%;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;transition:all .25s ease;}
+  .doc-row:hover .doc-dl{border-color:var(--yellow);background:var(--yellow);}
+  .doc-dl svg{width:14px;height:14px;stroke:var(--grey);transition:stroke .25s ease;}
+  .doc-row:hover .doc-dl svg{stroke:var(--black);}
+
+  /* ---------- FOOTER ---------- */
+  footer{padding:64px 0 42px;border-top:1px solid var(--border);}
+  .footer-brand{display:flex;align-items:center;gap:10px;}
+  .footer-brand img{height:22px;width:auto;}
+  .footer-brand span{font-family:var(--cond);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);}
+  .footer-tagline{font-family:var(--display);font-size:22px;color:var(--white);margin-top:16px;line-height:1.25;}
+  .footer-tagline span{color:var(--yellow);}
+  .footer-role{margin-top:20px;font-size:13px;color:var(--light-grey);}
+  .footer-role strong{color:var(--white);font-weight:600;}
+  .footer-contacts{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--grey);}
+  .footer-contacts a:hover{color:var(--yellow);}
+  .footer-note{margin-top:32px;font-size:12.5px;color:#555;line-height:1.8;max-width:520px;}
+  .footer-bottom{margin-top:36px;padding-top:20px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;}
+  .copyright{font-family:var(--cond);font-size:11.5px;color:#555;letter-spacing:.04em;}
+  .footer-back{
+    font-family:var(--cond);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--light-grey);
+    border:1px solid var(--border);padding:8px 15px;
+  }
+  .footer-back:hover{color:var(--yellow);border-color:var(--yellow);}
+
+  @media (max-width:640px){
+    header.hero{padding:52px 0 56px;}
+    section{padding:56px 0;}
+    nav.topbar .inner{padding:14px 20px;}
+    .nav-links{gap:10px 14px;width:100%;}
+    .nav-links a{font-size:11.5px;}
+    .nav-links a.ext{margin-left:auto;}
+    .footer-bottom{flex-direction:column;align-items:flex-start;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}
+  }
+</style>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Natio — Apéndice Institucional">
+<meta name="twitter:description" content="Arquitectura, documentos de referencia y líneas de producto del sistema Natio.">
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="inner">
+    <div class="brandmark">
+      <img src="Logo_Natio.jpg" alt="Natio">
+      <span>Apéndice Institucional</span>
+    </div>
+    <div class="nav-links">
+      <a href="#acerca">Acerca</a>
+      <a href="#sistema">El Sistema</a>
+      <a href="#documentos">Documentos</a>
+      <a href="#otros">Otros</a>
+      <a class="ext" href="https://natio.one" target="_blank" rel="noopener">natio.one ↗</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Apéndice Institucional · Confidencial</p>
+    <h1 class="name">El Sistema<span>Natio.</span></h1>
+    <p class="roles">
+      Arquitectura institucional, documentos de referencia y líneas de producto del sistema Natio — dirección, expansión y protección de la carrera del futbolista profesional.
+    </p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#sistema">Ver el sistema</a>
+      <a class="btn btn-ghost" href="https://natio.one" target="_blank" rel="noopener">natio.one ↗</a>
+    </div>
+  </div>
+</header>
+
+<section id="acerca">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">I</span>
+      <div>
+        <h2 class="sec-title">Acerca de <span>Natio</span></h2>
+        <p class="sec-sub">Qué es Natio, y qué vacíos estructurales existe para resolver.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        <strong>Natio</strong> no es una agencia de representación tradicional. Es un sistema operativo de carrera: una arquitectura longitudinal que dirige, expande y protege la trayectoria del futbolista profesional desde sus primeros pasos hasta después de su retiro. Opera por método replicable y diagnóstico estructurado, no por eventos aislados ni comisiones puntuales.
+      </p>
+      <p class="lead">
+        Natio identificó tres vacíos estructurales que ningún actor del mercado ha resuelto de forma sistémica: la ausencia de dirección estratégica de carrera, la dependencia de un solo mercado o red, y el impacto destructivo del entorno extra-deportivo junto con las oportunidades de imagen que la mayoría de los jugadores no capturan. Cada unidad de negocio existe para cerrar uno de esos vacíos.
+      </p>
+      <p class="lead">
+        Este documento reúne, en un solo lugar, la arquitectura institucional, los documentos de referencia y las líneas de producto que conforman el sistema Natio.
+      </p>
+    </div>
+
+    <div class="stat-row reveal">
+      <div class="stat-item">
+        <div class="stat-num">3</div>
+        <div class="stat-label">Unidades de Negocio</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">7</div>
+        <div class="stat-label">Líneas de Producto</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">2</div>
+        <div class="stat-label">Documentos Institucionales</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sistema">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">II</span>
+      <div>
+        <h2 class="sec-title">El sistema <span>Natio</span></h2>
+        <p class="sec-sub">Tres unidades, un mismo eje. Cada una responde a un vacío estructural distinto de la industria.</p>
+      </div>
+    </div>
+
+    <div class="core-phrase reveal">
+      <p><span>Dirigimos</span> tu carrera.<br><span>Expandimos</span> tus opciones.<br><span>Protegemos</span> tu estabilidad.</p>
+      <div class="cp-cite">Frase núcleo del ecosistema Natio</div>
+    </div>
+
+    <div class="eco-grid reveal" style="margin-top:1px;">
+      <a class="eco-card" href="#documentos">
+        <div class="eco-code">NFB</div>
+        <div class="eco-name">Dirigimos</div>
+        <p class="eco-desc">El cerebro estratégico del ecosistema. Gobierna la trayectoria del jugador con diagnóstico real, arquitectura por etapas y cadencia operativa sostenida. Sin dirección clara, ni la movilidad ni la estabilidad tienen sentido.</p>
+        <div class="eco-url">3 líneas <span class="arrow">→</span></div>
+      </a>
+      <a class="eco-card" href="#documentos">
+        <div class="eco-code">NGL</div>
+        <div class="eco-name">Expandimos</div>
+        <p class="eco-desc">Construye opcionalidad internacional real y devuelve poder negociador al jugador. Se activa solo ante un trigger estratégico genuino — bloqueo, leverage o salto de carrera. Nunca por salir por salir.</p>
+        <div class="eco-url">3 líneas <span class="arrow">→</span></div>
+      </a>
+      <a class="eco-card" href="#documentos">
+        <div class="eco-code">N360</div>
+        <div class="eco-name">Protegemos</div>
+        <p class="eco-desc">Gobierna el entorno extra-fútbol en dos dimensiones: la defensiva (reputación, patrimonio, logística) y la ofensiva (marca personal, acuerdos comerciales). Se activa por necesidad real, nunca como upsell.</p>
+        <div class="eco-url">1 línea, 5 tiers <span class="arrow">→</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="documentos">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">III</span>
+      <div>
+        <h2 class="sec-title">Documentos y <span>líneas de producto</span></h2>
+        <p class="sec-sub">La arquitectura institucional completa, y cada línea de producto del sistema.</p>
+      </div>
+    </div>
+
+    <div class="cat-block reveal">
+      <div class="cat-header">
+        <span class="cat-letter">A</span>
+        <div class="cat-titlewrap">
+          <span class="cat-title">Documentos Institucionales</span>
+          <div class="cat-sub">Documento de referencia · .docx</div>
+        </div>
+        <span class="cat-count">2 documentos</span>
+      </div>
+
+      <div class="doc-list">
+        <a class="doc-row" href="Natio_-_Documento_Institucional.docx" target="_blank" rel="noopener">
+          <div class="doc-left">
+            <span class="doc-num">01</span>
+            <div class="doc-text">
+              <div class="doc-title">Documento Institucional — Sistema Operativo del Futbolista Profesional</div>
+              <div class="doc-hint">El mapa completo del sistema: los tres vacíos que resuelve, la arquitectura de las tres unidades y los guardrails operativos · DOCX</div>
+            </div>
+          </div>
+          <div class="doc-dl"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></div>
+        </a>
+        <a class="doc-row" href="Natio_-_Mision_Vision2040_Valores.docx" target="_blank" rel="noopener">
+          <div class="doc-left">
+            <span class="doc-num">02</span>
+            <div class="doc-text">
+              <div class="doc-title">Misión, Visión 2040 y Valores</div>
+              <div class="doc-hint">Declaración de misión, tres horizontes hacia 2040 y los ocho valores institucionales que operan como guardrails no negociables · DOCX</div>
+            </div>
+          </div>
+          <div class="doc-dl"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="cat-block reveal">
+      <div class="cat-header">
+        <span class="cat-letter">B</span>
+        <div class="cat-titlewrap">
+          <span class="cat-title">NFB — Dirección de Carrera</span>
+          <div class="cat-sub">El eje central del ecosistema</div>
+        </div>
+        <span class="cat-count">3 líneas</span>
+      </div>
+
+      <div class="line-card">
+        <div class="line-main">
+          <div class="line-title">NFB Breakout</div>
+          <p class="line-desc">Para jugadores juveniles. Arquitectura Factory + Conveyor Belt, sistema skill-number y 14 catalizadores de fracaso identificados y neutralizados. El talento no falla — fallan las decisiones sin sistema.</p>
+        </div>
+        <a class="line-link" href="Natio_-_NFB_BREAKOUT.html" target="_blank" rel="noopener">Ver página →</a>
+      </div>
+      <div class="line-card">
+        <div class="line-main">
+          <div class="line-title">NFB Success</div>
+          <p class="line-desc">Para profesionales establecidos. No gestiona la carrera del jugador — la gobierna, en cada etapa, no solo cuando hay un contrato que firmar o una transferencia que cerrar.</p>
+        </div>
+        <a class="line-link" href="Natio_-_NFB_SUCCESS.html" target="_blank" rel="noopener">Ver página →</a>
+      </div>
+      <div class="line-card">
+        <div class="line-main">
+          <div class="line-title">NFB Women</div>
+          <p class="line-desc">Para el fútbol femenil — diseñado, no adaptado del varonil. Diagnóstico por etapa real, club-fit sobre club-nombre y timing protegido en un mercado que acelera.</p>
+        </div>
+        <a class="line-link" href="Natio_-_NFB_WOMEN.html" target="_blank" rel="noopener">Ver página →</a>
+      </div>
+    </div>
+
+    <div class="cat-block reveal">
+      <div class="cat-header">
+        <span class="cat-letter">C</span>
+        <div class="cat-titlewrap">
+          <span class="cat-title">NGL — Movilidad y Opcionalidad</span>
+          <div class="cat-sub">Para agencias y clubes, no para jugadores directamente</div>
+        </div>
+        <span class="cat-count">3 líneas</span>
+      </div>
+
+      <div class="line-card">
+        <div class="line-main">
+          <div class="line-title">NGL Inbound</div>
+          <p class="line-desc">Para agencias con player-access que buscan entrar a Liga MX. Ellas controlan al jugador; Natio aporta el acceso institucional real a directores deportivos y cuerpos técnicos.</p>
+        </div>
+        <a class="line-link" href="Natio_-_NGL_INBOUND.html" target="_blank" rel="noopener">Ver página →</a>
+      </div>
+      <div class="line-card">
+        <div class="line-main">
+          <div class="line-title">NGL Outbound</div>
+          <p class="line-desc">Para agencias con club-access internacional. Natio controla al talento mexicano — diagnosticado, verificado y con expectativas alineadas — y la agencia ejecuta el placement.</p>
+        </div>
+        <a class="line-link" href="Natio_-_NGL_OUTBOUND.html" target="_blank" rel="noopener">Ver página →</a>
+      </div>
+      <div class="line-card">
+        <div class="line-main">
+          <div class="line-title">NGL Offload</div>
+          <p class="line-desc">Para clubes de fútbol. Natio diseña la salida de jugadores que ya no encajan — no solo la gestiona. Narrativa de venta construida con detalle y red activa en más de 20 ligas.</p>
+        </div>
+        <a class="line-link" href="Natio_-_NGL_OFFLOAD.html" target="_blank" rel="noopener">Ver página →</a>
+      </div>
+    </div>
+
+    <div class="cat-block reveal">
+      <div class="cat-header">
+        <span class="cat-letter">D</span>
+        <div class="cat-titlewrap">
+          <span class="cat-title">N360 — Protección e Imagen</span>
+          <div class="cat-sub">Dimensión defensiva y ofensiva, en cinco tiers</div>
+        </div>
+        <span class="cat-count">1 línea</span>
+      </div>
+
+      <div class="line-card">
+        <div class="line-main">
+          <div class="line-title">N360</div>
+          <p class="line-desc">No es un servicio extra — son dos trabajos en uno. Protege lo que el jugador ya construyó (entorno, reputación, patrimonio) y monetiza su nombre con inteligencia (marca personal, acuerdos comerciales). Escalado en cinco tiers, de T0 Runway a T4 Legacy, activados por etapa real de carrera, nunca por venta.</p>
+        </div>
+        <a class="line-link" href="Natio_-_N360.html" target="_blank" rel="noopener">Ver página →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="otros">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">V</span>
+      <div>
+        <h2 class="sec-title">Otros <span>documentos</span></h2>
+        <p class="sec-sub">Inteligencia de mercado y reportes estratégicos de uso interno.</p>
+      </div>
+    </div>
+
+    <div class="cat-block reveal">
+      <div class="cat-header">
+        <span class="cat-letter">E</span>
+        <div class="cat-titlewrap">
+          <span class="cat-title">Ecuador Después de IDV</span>
+          <div class="cat-sub">Confidencial · Management Natio</div>
+        </div>
+        <span class="cat-count">2 documentos</span>
+      </div>
+
+      <div class="doc-list">
+        <a class="doc-row" href="Natio_-_Ecuador_despues_de_IDV_Presentacion_Ejecutiva.pptx" target="_blank" rel="noopener">
+          <div class="doc-left">
+            <span class="doc-num">01</span>
+            <div class="doc-text">
+              <div class="doc-title">Ecuador Después de IDV — Presentación Ejecutiva</div>
+              <div class="doc-hint">Mapa de fricción y arquitectura de oportunidad: dos ecosistemas de talento, tres verticales de activación y el caso Walter Ayoví como infraestructura de captación · PPTX</div>
+            </div>
+          </div>
+          <div class="doc-dl"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></div>
+        </a>
+        <a class="doc-row" href="Natio_-_Ecuador_despues_de_IDV_Reporte_Estrategico.docx" target="_blank" rel="noopener">
+          <div class="doc-left">
+            <span class="doc-num">02</span>
+            <div class="doc-text">
+              <div class="doc-title">Ecuador Después de IDV — Reporte Estratégico</div>
+              <div class="doc-hint">Versión completa: censo histórico y post-IDV de la élite ecuatoriana, cartografía de oportunidad por cuenca, proyección a 3 años y riesgos del posicionamiento · DOCX</div>
+            </div>
+          </div>
+          <div class="doc-dl"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="enlaces">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">VI</span>
+      <div>
+        <h2 class="sec-title">Enlace <span>oficial</span></h2>
+        <p class="sec-sub">El sitio oficial de Natio.</p>
+      </div>
+    </div>
+
+    <div class="eco-grid reveal" style="grid-template-columns:1fr;">
+      <a class="eco-card" href="https://natio.one" target="_blank" rel="noopener">
+        <div class="eco-code">Sitio Oficial</div>
+        <div class="eco-name">Natio</div>
+        <p class="eco-desc">Sitio oficial del sistema Natio — para jugadores, familias, agencias y clubes.</p>
+        <div class="eco-url">natio.one <span class="arrow">→</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-brand">
+      <img src="Logo_Natio.jpg" alt="Natio">
+      <span>Apéndice Institucional</span>
+    </div>
+    <div class="footer-tagline"><span>Dirigimos</span> tu carrera.<br><span>Expandimos</span> tus opciones.<br><span>Protegemos</span> tu estabilidad.</div>
+    <p class="footer-note">Documento de uso interno. No sustituye al sitio oficial de Natio en natio.one.</p>
+
+    <div class="footer-bottom">
+      <span class="copyright">© 2026 Natio</span>
+      <a class="footer-back" href="https://natio.one" target="_blank" rel="noopener">natio.one ↗</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.12});
+  els.forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
