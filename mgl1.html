@@ -189,6 +189,44 @@
     to{opacity:1;transform:translateY(0);}
   }
 
+  /* ---------- HERO QR ---------- */
+  .hero-grid{
+    display:flex;align-items:center;justify-content:space-between;gap:56px;
+  }
+  .hero-main{flex:1;min-width:0;}
+  .hero-qr{
+    flex:none;
+    opacity:0;
+    animation:fadeUp .9s ease .85s forwards;
+  }
+  .qr-card{
+    width:164px;
+    background:var(--bg-card);
+    border:1px solid var(--line-strong);
+    border-radius:6px;
+    padding:18px;
+    display:flex;flex-direction:column;align-items:center;text-align:center;
+    transition:border-color .3s ease, transform .3s ease;
+  }
+  .qr-card:hover{border-color:var(--accent);transform:translateY(-2px);}
+  .qr-card img{
+    display:block;width:118px;height:118px;
+    background:#fff;border-radius:3px;padding:6px;
+  }
+  .qr-label{
+    font-family:var(--serif);font-style:italic;font-size:13px;color:var(--text);
+    margin-top:14px;
+  }
+  .qr-sub{
+    font-size:10.5px;letter-spacing:.03em;color:var(--text-muted);
+    margin-top:5px;line-height:1.55;font-weight:300;
+  }
+
+  @media (max-width:820px){
+    .hero-grid{flex-direction:column;align-items:flex-start;gap:38px;}
+    .hero-qr{align-self:center;}
+  }
+
   /* ---------- SECTION SHELL ---------- */
   section{
     padding:86px 0;
@@ -413,16 +451,27 @@
 
 <header class="hero">
   <div class="wrap">
-    <p class="eyebrow">Landing Page Personal</p>
-    <h1 class="name">Mario Garza Livas<br><em>Arquitecto de Sistemas de Alto Rendimiento</em></h1>
-    <p class="roles">
-      <span class="sep">·</span>Asesor Estratégico<br><span class="sep">·</span>Consultor en Negocios de Fútbol<br><span class="sep">·</span>Agente Deportivo<br><span class="sep">·</span>CIO de Family Office<br><span class="sep">·</span>Profesor de Cátedra
-    </p>
-    <div class="locbar"><span class="dot"></span>Monterrey, Nuevo León, México</div>
-    <div class="hero-cta">
-      <a class="btn btn-primary" href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp'})">Escribir por WhatsApp</a>
-      <a class="btn btn-ghost" href="mailto:mario@metanoiagroup.vip">Enviar un correo</a>
-      <a class="btn btn-ghost" href="./downloads/Mario_Garza_Livas_ES.vcf" download onclick="gtag('event','click',{'event_category':'download','event_label':'vcard_es'})">&#8659; Guardar Contacto</a>
+    <div class="hero-grid">
+      <div class="hero-main">
+        <p class="eyebrow">Landing Page Personal</p>
+        <h1 class="name">Mario Garza Livas<br><em>Arquitecto de Sistemas de Alto Rendimiento</em></h1>
+        <p class="roles">
+          <span class="sep">·</span>Asesor Estratégico<br><span class="sep">·</span>Consultor en Negocios de Fútbol<br><span class="sep">·</span>Agente Deportivo<br><span class="sep">·</span>CIO de Family Office<br><span class="sep">·</span>Profesor de Cátedra
+        </p>
+        <div class="locbar"><span class="dot"></span>Monterrey, Nuevo León, México</div>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp'})">Escribir por WhatsApp</a>
+          <a class="btn btn-ghost" href="mailto:mario@metanoiagroup.vip">Enviar un correo</a>
+          <a class="btn btn-ghost" href="./downloads/Mario_Garza_Livas_ES.vcf" download onclick="gtag('event','click',{'event_category':'download','event_label':'vcard_es'})">&#8659; Guardar Contacto</a>
+        </div>
+      </div>
+      <aside class="hero-qr">
+        <div class="qr-card">
+          <img src="QR.png" alt="Código QR para visitar esta página desde tu smartphone" width="118" height="118" loading="lazy">
+          <p class="qr-label">Escanéame desde tu teléfono</p>
+          <p class="qr-sub">para guardar el contacto en un toque</p>
+        </div>
+      </aside>
     </div>
   </div>
 </header>
