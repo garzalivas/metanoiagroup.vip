@@ -383,7 +383,7 @@
   }
   .footer-role strong{color:var(--text);font-weight:500;}
   .footer-contacts{
-    margin-top:10px;display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--text-muted);
+    margin-top:10px;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--text-muted);
   }
   .footer-contacts a:hover{color:var(--accent);}
   .footer-motto{
@@ -400,6 +400,11 @@
     border:1px solid var(--line-strong);padding:7px 14px;border-radius:2px;
   }
   .footer-en:hover{color:var(--accent);border-color:var(--accent);}
+  .footer-admg-rule{width:28px;height:1px;background:var(--accent-dim);margin-top:30px;}
+  .footer-admg{
+    margin-top:16px;font-family:var(--serif);font-style:italic;font-size:13.5px;
+    color:var(--accent);letter-spacing:.02em;
+  }
 
   @media (max-width:640px){
     header.hero{padding:56px 0 60px;}
@@ -1068,18 +1073,18 @@
   <div class="wrap">
     <div class="footer-brand">Metanoia Football</div>
     <div class="footer-tagline">Strategic architecture for the professional football ecosystem.</div>
-    <div class="footer-role"><strong>Mario Garza Livas</strong><br> · High Performance Systems Architect<br> · Strategic Advisor<br> · Football Business Consultant<br> · Sports Agent<br> · Family Office CIO<br> · Adjunct Professor</div>
+    <div class="footer-role"><strong>Mario Garza Livas</strong> — Chief Strategic Advisor · Founder · CEO</div>
     <div class="footer-contacts">
       <a href="mailto:mario@metanoiagroup.vip">mario@metanoiagroup.vip</a>
-      <span>·</span>
       <a href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp'})">+52 (81) 2513 6784</a>
-      <span>·</span>
-      <a href="https://linkedin.com/in/garzalivas" onclick="gtag('event','click',{'event_category':'contact','event_label':'linkedin'})">linkedin.com/in/garzalivas</a>
+      <a href="https://www.linkedin.com/in/garzalivas/?locale=en-US" onclick="gtag('event','click',{'event_category':'contact','event_label':'linkedin'})">linkedin.com/in/garzalivas</a>
     </div>
     <p class="footer-motto">Structure stabilizes.<br>Purpose directs.<br>Adaptation sustains.</p>
+    <div class="footer-admg-rule"></div>
+    <p class="footer-admg">Ad Majorem Dei Gloriam.</p>
 
     <div class="footer-bottom">
-      <span class="copyright">© 2026 Metanoia Football · The Metanoia Group</span>
+      <span class="copyright">© 2026 The Metanoia Group</span>
       <a class="footer-en" href="mfb1.html">Español →</a>
     </div>
   </div>
