@@ -202,6 +202,9 @@
   .consejo-title{font-size:14.5px;color:var(--text);font-weight:400;line-height:1.5;}
   .consejo-item.rel{background:linear-gradient(90deg, #b66b5c0f, transparent 60%);}
   .consejo-item.rel .consejo-num{color:var(--warn);}
+  .consejo-quote{margin-top:40px;padding-top:32px;border-top:1px solid var(--line);}
+  .consejo-quote .quote-text{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--text);line-height:1.4;}
+  .consejo-quote .quote-attr{margin-top:12px;font-size:12.5px;color:var(--text-muted);letter-spacing:.02em;}
   .badge-rel{
     display:inline-block;margin-left:10px;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;
     color:var(--warn);border:1px solid var(--warn-dim);padding:2px 8px;border-radius:20px;vertical-align:middle;
@@ -222,6 +225,11 @@
     border:1px solid var(--line-strong);padding:7px 14px;border-radius:2px;transition:all .25s ease;
   }
   .footer-en:hover{color:var(--accent);border-color:var(--accent);}
+  .footer-admg-rule{width:28px;height:1px;background:var(--accent-dim);margin-top:30px;}
+  .footer-admg{
+    margin-top:16px;font-family:var(--serif);font-style:italic;font-size:13.5px;
+    color:var(--accent);letter-spacing:.02em;
+  }
 
   @media (max-width:640px){
     header.hero{padding:56px 0 50px;}
@@ -369,6 +377,11 @@
       <div class="consejo-item rel"><span class="consejo-num">15</span><span class="consejo-title">Hagan de Dios el eje de sus vidas<span class="badge-rel">Contenido religioso</span></span></div>
     </div>
 
+    <div class="consejo-quote reveal">
+      <p class="quote-text">"Happiness is only real when shared."</p>
+      <p class="quote-attr">— Christopher McCandless, aka Alexander Supertramp</p>
+    </div>
+
     <div class="hero-cta reveal" style="margin-top:44px;">
       <a class="btn btn-primary locked" id="bottom-dl" href="#unlock-box" data-href="downloads/Los_15_Consejos_del_Prof_Mario.pdf" data-label="bottom_download">🔒 Descargar el documento completo</a>
     </div>
@@ -380,6 +393,8 @@
     <div class="footer-brand">Los 15 Consejos del Prof. Mario</div>
     <div class="footer-tagline">Antes de ser empresarios, líderes o profesionistas, somos personas.</div>
     <div class="footer-role"><strong>Mario Garza Livas</strong><br>Monterrey, NL, México · Agosto 2026</div>
+    <div class="footer-admg-rule"></div>
+    <p class="footer-admg">Ad Majorem Dei Gloriam.</p>
     <div class="footer-bottom">
       <span class="copyright">© 2026 Mario Garza Livas · Opinión personal — no representa la postura del Tec de Monterrey</span>
       <a class="footer-en" href="mgl1.html">Landing Personal →</a>
