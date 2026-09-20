@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="new_favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hágase Tu Voluntad — Mario Garza Livas</title>
+<meta name="description" content="Hágase Tu Voluntad — Mario Garza Livas. Libro, podcast y conferencias sobre cómo ordenar una sola vida: la persona, la vocación, las obras y aquello que se nos ha confiado. Fe, razón y acción.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Hágase Tu Voluntad — Mario Garza Livas">
+<meta property="og:description" content="Fe. Realidad. Acción. Una sola vida, una sola dirección, una sola pregunta: ¿Estoy haciendo Su Voluntad?">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<meta property="og:site_name" content="The Metanoia Group">
+<meta property="og:image" content="https://metanoiagroup.vip/og-image-1.jpg">
+<meta property="og:url" content="https://metanoiagroup.vip/MGY1">
+<link rel="alternate" hreflang="es" href="https://metanoiagroup.vip/mgy1.html">
+<link rel="alternate" hreflang="en" href="https://metanoiagroup.vip/mgy2.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff;
+    --bg-alt:#f7f8fa;
+    --bg-card:#e9edf3;
+    --text:#14213d;
+    --text-dim:#9aa0ae;
+    --text-muted:#5d6479;
+    --accent:#2a5fa8;
+    --accent-dim:#8ea6c6;
+    --accent-deep:#16305c;
+    --trace:#b3201f;
+    --line:#14213d17;
+    --line-strong:#14213d26;
+    --serif:'Fraunces', Georgia, 'Times New Roman', serif;
+    --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --maxw:920px;
+    --nav-h:62px;
+    --anchor-gap:24px;
+    --sec-pad:86px;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;background:var(--bg);}
+
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  a{color:inherit;text-decoration:none;}
+
+  ::selection{background:#2a5fa826;color:var(--text);}
+
+  a:focus-visible, button:focus-visible{
+    outline:1.5px solid var(--accent);
+    outline-offset:4px;
+  }
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;}
+
+  /* ---------- NAV ---------- */
+  nav.topbar{
+    position:sticky;top:0;
+    background:#ffffffd9;
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+    z-index:50;
+  }
+  nav.topbar .inner{
+    max-width:var(--maxw);margin:0 auto;padding:18px 28px;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:14px;flex-wrap:wrap;
+  }
+  .brandmark{
+    font-family:var(--serif);
+    font-size:15px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--text);
+    font-weight:500;
+  }
+  .brandmark .tu{color:var(--trace);}
+  .brandmark span{
+    color:var(--text-muted);font-weight:400;
+    letter-spacing:.06em;text-transform:none;font-family:var(--sans);font-size:13px;
+  }
+  .nav-links{display:flex;gap:24px;align-items:center;flex-wrap:wrap;}
+  .nav-links a{
+    font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--text-muted);
+    transition:color .25s ease;
+    white-space:nowrap;
+  }
+  .nav-links a:hover{color:var(--accent);}
+  .nav-links a.pill{
+    border:1px solid var(--line-strong);
+    padding:6px 12px;
+    border-radius:2px;
+  }
+  .nav-links a.pill:hover{border-color:var(--accent);}
+  .nav-links a.pill.secular:hover{border-color:var(--trace);color:var(--trace);}
+
+  /* ---------- HERO ---------- */
+  header.hero{
+    padding:104px 0 88px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-logo{
+    display:block;
+    width:min(400px, 84vw);
+    height:auto;
+    mix-blend-mode:multiply;
+    margin:-30px 0 24px -14px;
+    opacity:0;
+    animation:fadeUp .9s ease .05s forwards;
+  }
+  h1.name{
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:clamp(34px, 5.6vw, 56px);
+    line-height:1.12;
+    letter-spacing:-.015em;
+    max-width:18ch;
+    opacity:0;
+    animation:fadeUp .9s ease .2s forwards;
+  }
+  h1.name .turn{color:var(--accent);font-style:italic;}
+
+  p.lede{
+    margin-top:28px;
+    font-size:clamp(15px,2vw,17.5px);
+    color:var(--text-muted);
+    max-width:62ch;
+    line-height:1.75;
+    font-weight:300;
+    opacity:0;
+    animation:fadeUp .9s ease .34s forwards;
+  }
+
+  .triad-bar{
+    margin-top:34px;
+    display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+    font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);
+    opacity:0;
+    animation:fadeUp .9s ease .46s forwards;
+  }
+  .triad-bar .slash{color:var(--accent-dim);}
+  .triad-bar a:hover{color:var(--accent);}
+
+  .hero-cta{
+    margin-top:42px;
+    display:flex;gap:14px;flex-wrap:wrap;
+    opacity:0;
+    animation:fadeUp .9s ease .58s forwards;
+  }
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:14px 24px;
+    font-size:12.5px;letter-spacing:.09em;text-transform:uppercase;
+    border-radius:2px;
+    transition:all .25s ease;
+  }
+  .btn-primary{
+    background:var(--accent-deep);color:#ffffff;font-weight:600;
+  }
+  .btn-primary:hover{background:var(--accent);transform:translateY(-1px);}
+  .btn-ghost{
+    border:1px solid var(--line-strong);color:var(--text);
+  }
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+
+  @keyframes fadeUp{
+    from{opacity:0;transform:translateY(16px);}
+    to{opacity:1;transform:translateY(0);}
+  }
+
+  /* ---------- SECTION SHELL ---------- */
+  section{
+    padding:var(--sec-pad) 0;
+    scroll-margin-top:max(0px, calc(var(--nav-h) + var(--anchor-gap) - var(--sec-pad)));
+    border-top:1px solid var(--line);
+    position:relative;
+  }
+  .sec-head{
+    display:flex;align-items:baseline;gap:18px;margin-bottom:48px;
+  }
+  .sec-num{
+    font-family:var(--serif);font-style:italic;font-size:15px;color:var(--accent-dim);
+    letter-spacing:.05em;flex:none;
+  }
+  h2.sec-title{
+    font-family:var(--serif);font-weight:400;font-size:clamp(26px,3.4vw,36px);
+    letter-spacing:-.01em;
+  }
+  h2.sec-title em{font-style:italic;color:var(--accent);font-weight:400;}
+  .sec-sub{
+    color:var(--text-muted);font-size:14.5px;font-weight:300;max-width:56ch;margin-top:14px;line-height:1.7;
+  }
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease, transform .8s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  p.lead{
+    font-size:15.5px;line-height:1.8;color:var(--text-muted);font-weight:300;
+    max-width:72ch;
+  }
+  p.lead + p.lead{margin-top:18px;}
+  p.lead strong{color:var(--text);font-weight:500;}
+
+  /* ---------- PULL QUOTE ---------- */
+  .pull{
+    margin:40px 0;
+    border-left:2px solid var(--accent);
+    padding:6px 0 6px 26px;
+    font-family:var(--serif);
+    font-size:clamp(18px,2.6vw,23px);
+    line-height:1.5;
+    color:var(--text);
+    font-weight:400;
+    max-width:46ch;
+  }
+  .pull span{display:block;color:var(--text-muted);font-style:italic;font-size:.72em;margin-top:12px;}
+
+  /* ---------- HIERARCHY CHAIN ---------- */
+  .chain{
+    margin-top:40px;
+    border:1px solid var(--line-strong);
+    background:var(--bg-alt);
+    padding:30px 34px;
+    display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;
+    font-family:var(--serif);font-size:16px;
+  }
+  .chain .node{color:var(--text);}
+  .chain .node:first-child{color:var(--accent);font-style:italic;}
+  .chain .link{color:var(--accent-dim);font-size:13px;}
+  .chain-note{
+    margin-top:16px;font-size:12.5px;color:var(--text-dim);font-weight:300;line-height:1.7;max-width:64ch;
+  }
+
+  /* ---------- LENS LIST ---------- */
+  .lens{margin-top:38px;border-top:1px solid var(--line-strong);}
+  .lens li{
+    list-style:none;
+    border-bottom:1px solid var(--line-strong);
+    padding:18px 4px;
+    display:flex;align-items:baseline;gap:18px;
+    font-size:16px;
+    font-family:var(--serif);
+    font-weight:400;
+  }
+  .lens li .mark{
+    color:var(--accent-dim);font-style:italic;font-size:13px;flex:none;width:22px;
+  }
+  .lens-foot{
+    margin-top:22px;font-size:13.5px;color:var(--text-muted);font-weight:300;line-height:1.75;max-width:64ch;
+  }
+
+  /* ---------- STATS ---------- */
+  .stat-row{
+    display:grid;grid-template-columns:repeat(4,1fr);
+    gap:1px;background:var(--line-strong);
+    border:1px solid var(--line-strong);
+    margin-top:46px;
+  }
+  .stat-item{background:var(--bg-alt);padding:26px 20px;text-align:center;}
+  .stat-num{font-family:var(--serif);font-size:32px;color:var(--accent);font-weight:400;line-height:1;}
+  .stat-label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin-top:10px;line-height:1.5;}
+  @media (max-width:640px){
+    .stat-row{grid-template-columns:repeat(2,1fr);}
+  }
+
+  /* ---------- BOOK ---------- */
+  .book-grid{display:flex;gap:44px;align-items:flex-start;}
+  .book-cover{flex:none;width:236px;}
+  .book-cover img{
+    display:block;width:100%;height:auto;
+    border:1px solid var(--line-strong);
+    border-radius:3px;
+  }
+  .book-meta{
+    margin-top:16px;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--text-muted);line-height:1.8;
+  }
+  .book-body{flex:1;min-width:0;}
+  .book-sub{
+    font-family:var(--serif);font-style:italic;font-size:18px;color:var(--text);
+    line-height:1.5;margin-bottom:24px;max-width:38ch;
+  }
+  @media (max-width:760px){
+    .book-grid{flex-direction:column;gap:32px;}
+    .book-cover{width:200px;align-self:center;}
+  }
+
+  /* ---------- SEQUENCE ---------- */
+  .seq{
+    margin-top:40px;
+    counter-reset:seq;
+    display:grid;grid-template-columns:1fr 1fr;
+    gap:1px;background:var(--line-strong);
+    border:1px solid var(--line-strong);
+  }
+  .seq li{
+    list-style:none;
+    counter-increment:seq;
+    background:var(--bg-alt);
+    padding:22px 24px;
+    display:flex;gap:16px;align-items:baseline;
+  }
+  .seq li::before{
+    content:counter(seq,decimal-leading-zero);
+    font-family:var(--serif);font-style:italic;font-size:12.5px;color:var(--accent-dim);
+    flex:none;
+  }
+  .seq .step-name{font-family:var(--serif);font-size:17px;color:var(--text);display:block;}
+  .seq .step-desc{font-size:13px;color:var(--text-muted);font-weight:300;line-height:1.6;margin-top:5px;display:block;}
+  @media (max-width:640px){
+    .seq{grid-template-columns:1fr;}
+  }
+
+  /* ---------- DOWNLOAD BUTTON ---------- */
+  .paper-dl{
+    margin-top:34px;
+    display:inline-flex;align-items:center;gap:12px;
+    border:1px solid var(--line-strong);
+    padding:15px 24px;border-radius:2px;
+    font-size:12.5px;letter-spacing:.09em;text-transform:uppercase;
+    transition:all .25s ease;
+  }
+  .paper-dl:hover{border-color:var(--accent);color:var(--accent);}
+  .dl-icon{
+    width:34px;height:34px;border-radius:50%;flex:none;
+    border:1px solid var(--line-strong);
+    display:flex;align-items:center;justify-content:center;
+    transition:all .25s ease;
+  }
+  .dl-icon svg{width:14px;height:14px;stroke:var(--text-muted);fill:none;transition:stroke .25s ease;}
+  .paper-dl:hover .dl-icon{border-color:var(--accent);background:var(--accent);}
+  .paper-dl:hover .dl-icon svg{stroke:#ffffff;}
+
+  /* ---------- PODCAST ---------- */
+  .pod-grid{display:flex;gap:44px;align-items:flex-start;}
+  .pod-art{flex:none;width:190px;}
+  .pod-art img{display:block;width:100%;height:auto;border-radius:50%;mix-blend-mode:multiply;}
+  .pod-body{flex:1;min-width:0;}
+  .status{
+    display:inline-flex;align-items:center;gap:10px;
+    border:1px solid var(--accent-dim);
+    padding:8px 16px;border-radius:2px;
+    font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);
+    margin-bottom:24px;
+  }
+  .status .dot{
+    width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none;
+  }
+  @media (max-width:760px){
+    .pod-grid{flex-direction:column;gap:30px;}
+    .pod-art{width:160px;align-self:center;}
+  }
+
+  /* ---------- ECO GRID ---------- */
+  .eco-grid{
+    display:grid;grid-template-columns:repeat(2,1fr);
+    gap:1px;background:var(--line-strong);
+    border:1px solid var(--line-strong);
+    margin-top:40px;
+  }
+  .eco-card{
+    background:var(--bg-alt);
+    padding:30px 28px;
+    display:block;
+    transition:background .3s ease;
+  }
+  a.eco-card:hover{background:var(--bg-card);}
+  .eco-code{
+    font-family:var(--serif);font-style:italic;font-size:13px;color:var(--accent);
+    letter-spacing:.05em;
+  }
+  .eco-name{
+    font-family:var(--serif);font-size:20px;margin-top:10px;font-weight:400;line-height:1.3;
+  }
+  .eco-desc{
+    color:var(--text-muted);font-size:13.5px;margin-top:10px;line-height:1.65;font-weight:300;
+  }
+  .eco-url{
+    margin-top:18px;font-size:11px;letter-spacing:.08em;color:var(--accent-dim);
+    display:flex;align-items:center;gap:8px;
+  }
+  a.eco-card:hover .eco-url{color:var(--accent);}
+  .eco-url .arrow{transition:transform .25s ease;}
+  a.eco-card:hover .eco-url .arrow{transform:translateX(4px);}
+  .eco-card.full{grid-column:span 2;}
+  @media (max-width:640px){
+    .eco-grid{grid-template-columns:1fr;}
+    .eco-card.full{grid-column:span 1;}
+  }
+
+  /* ---------- FORMATS ---------- */
+  .fmt-list{margin-top:40px;border-top:1px solid var(--line-strong);}
+  .fmt-row{
+    display:flex;align-items:baseline;justify-content:space-between;gap:24px;
+    padding:24px 4px;border-bottom:1px solid var(--line-strong);
+  }
+  .fmt-left{min-width:0;}
+  .fmt-name{font-family:var(--serif);font-size:19px;font-weight:400;}
+  .fmt-desc{color:var(--text-muted);font-size:13.5px;margin-top:6px;font-weight:300;line-height:1.6;max-width:56ch;}
+  .fmt-dur{
+    flex:none;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);
+    white-space:nowrap;
+  }
+  @media (max-width:600px){
+    .fmt-row{flex-direction:column;gap:10px;}
+  }
+
+  /* ---------- DISTINCTIONS ---------- */
+  .dist{
+    margin-top:40px;
+    display:grid;grid-template-columns:repeat(2,1fr);
+    gap:1px;background:var(--line-strong);
+    border:1px solid var(--line-strong);
+  }
+  .dist li{
+    list-style:none;background:var(--bg-alt);
+    padding:20px 24px;
+    font-family:var(--serif);font-size:16.5px;color:var(--text);
+    display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;
+  }
+  .dist .neq{color:var(--accent);font-style:italic;font-size:14px;}
+  @media (max-width:640px){.dist{grid-template-columns:1fr;}}
+
+  /* ---------- NOT-LIST ---------- */
+  .notlist{margin-top:36px;display:grid;grid-template-columns:1fr 1fr;gap:12px 32px;}
+  .notlist li{
+    list-style:none;font-size:14px;color:var(--text-muted);font-weight:300;
+    padding-left:20px;position:relative;line-height:1.6;
+  }
+  .notlist li::before{
+    content:'';position:absolute;left:0;top:10px;
+    width:9px;height:1px;background:var(--accent-dim);
+  }
+  @media (max-width:640px){.notlist{grid-template-columns:1fr;}}
+
+  /* ---------- MIRROR (trace of the X) ---------- */
+  .mirror{
+    border:1px solid var(--line-strong);
+    background:var(--bg-alt);
+    padding:44px 40px;
+    display:block;
+    transition:border-color .3s ease, background .3s ease;
+  }
+  .mirror:hover{border-color:var(--trace);background:var(--bg-card);}
+  .mirror-name{font-family:var(--serif);font-size:clamp(24px,3.4vw,32px);font-weight:400;line-height:1.2;}
+  .mirror-name .x{color:var(--trace);}
+  .mirror-desc{color:var(--text-muted);font-size:14.5px;margin-top:18px;line-height:1.75;font-weight:300;max-width:62ch;}
+  .mirror-go{
+    margin-top:26px;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--trace);
+    display:flex;align-items:center;gap:9px;
+  }
+  .mirror-go .arrow{transition:transform .25s ease;}
+  .mirror:hover .mirror-go .arrow{transform:translateX(5px);}
+  @media (max-width:640px){.mirror{padding:32px 26px;}}
+
+  /* ---------- CONTACT ---------- */
+  .contact-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:1px;
+    background:var(--line-strong);border:1px solid var(--line-strong);
+    margin-top:40px;
+  }
+  .contact-item{
+    background:var(--bg-alt);padding:26px 28px;
+    display:flex;align-items:center;gap:18px;
+    transition:background .25s ease;
+  }
+  .contact-item:hover{background:var(--bg-card);}
+  .cicon{
+    flex:none;width:42px;height:42px;border-radius:50%;
+    border:1px solid var(--line-strong);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--serif);font-style:italic;font-size:13px;color:var(--accent);
+    transition:border-color .25s ease;
+  }
+  .contact-item:hover .cicon{border-color:var(--accent);}
+  .clabel{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);}
+  .cvalue{font-size:15px;margin-top:4px;word-break:break-word;transition:color .2s ease;}
+  .contact-item:hover .cvalue{color:var(--accent);}
+  @media (max-width:640px){.contact-grid{grid-template-columns:1fr;}}
+
+  /* ---------- FOOTER ---------- */
+  footer{padding:70px 0 46px;border-top:1px solid var(--line);}
+  .footer-brand{
+    font-family:var(--serif);font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--text);font-weight:500;
+  }
+  .footer-brand .tu{color:var(--trace);}
+  .footer-tagline{
+    font-family:var(--serif);font-style:italic;font-size:17px;color:var(--text-muted);margin-top:12px;
+  }
+  .footer-role{margin-top:24px;font-size:13px;color:var(--text-muted);}
+  .footer-role strong{color:var(--text);font-weight:500;}
+  .footer-contacts{
+    margin-top:10px;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--text-muted);
+  }
+  .footer-contacts a:hover{color:var(--accent);}
+  .footer-admg-rule{width:28px;height:1px;background:var(--accent-dim);margin-top:34px;}
+  .footer-admg{
+    margin-top:16px;font-family:var(--serif);font-style:italic;font-size:13.5px;
+    color:var(--accent);letter-spacing:.02em;
+  }
+  .footer-bottom{
+    margin-top:40px;padding-top:22px;border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;
+  }
+  .copyright{font-size:11.5px;color:var(--text-dim);letter-spacing:.04em;}
+  .footer-en{
+    font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);
+    border:1px solid var(--line-strong);padding:7px 14px;border-radius:2px;
+  }
+  .footer-en:hover{color:var(--accent);border-color:var(--accent);}
+
+  @media (max-width:640px){
+    header.hero{padding:56px 0 60px;}
+    section{--sec-pad:60px;}
+    nav.topbar .inner{padding:16px 20px;}
+    .nav-links{gap:12px 16px;width:100%;}
+    .nav-links a{font-size:11px;}
+    .brandmark{font-size:13px;}
+    .hero-logo{margin-left:0;}
+    .footer-bottom{flex-direction:column;align-items:flex-start;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}
+  }
+</style>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hágase Tu Voluntad — Mario Garza Livas">
+<meta name="twitter:description" content="Fe. Realidad. Acción. Una sola vida, una sola dirección, una sola pregunta: ¿Estoy haciendo Su Voluntad?">
+<meta name="twitter:image" content="https://metanoiagroup.vip/og-image-1.jpg">
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KHNZVPJX1N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KHNZVPJX1N');
+</script>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="inner">
+    <div class="brandmark">Hágase <span class="tu">Tu</span> Voluntad <span>· Mario Garza Livas</span></div>
+    <div class="nav-links">
+      <a href="#vision">La visión</a>
+      <a href="#libro">Libro</a>
+      <a href="#podcast">Podcast</a>
+      <a href="#conferencias">Conferencias</a>
+      <a class="pill secular" href="mgx1.html">ineXorable</a>
+      <a class="pill" href="mgy2.html">EN</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="hero-logo" src="hagase-logo.png" alt="Hágase Tu Voluntad — fe, realidad, acción" width="400" height="200">
+    <h1 class="name">Una sola vida.<br>Una sola dirección.<br><span class="turn">Una sola pregunta.</span></h1>
+    <p class="lede">
+      No tenemos una vida para la fe y otra para el trabajo, ni una para la familia y otra para el dinero. Somos una sola persona y vivimos una sola vida. Hágase Tu Voluntad trata sobre cómo ordenarla entera desde una misma pregunta: ¿estoy haciendo Su Voluntad?
+    </p>
+    <div class="triad-bar">
+      <a href="#libro">Libro</a><span class="slash">/</span><a href="#podcast">Podcast</a><span class="slash">/</span><a href="#conferencias">Conferencias</a>
+    </div>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="downloads/Hagase_Tu_Voluntad.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_hagase_es'})">Descargar el libro</a>
+      <a class="btn btn-ghost" href="https://www.youtube.com/@Hagase-Tu-Voluntad" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'outbound','event_label':'youtube_hagase'})">Ver el podcast</a>
+      <a class="btn btn-ghost" href="#conferencias">Invitar a una conferencia</a>
+    </div>
+  </div>
+</header>
+
+<section id="vision">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">I</span>
+      <div>
+        <h2 class="sec-title">De la fragmentación a la <em>integración</em></h2>
+        <p class="sec-sub">Qué es Hágase Tu Voluntad, desde dónde mira, y por qué no propone añadir nada a tu vida.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        El diagnóstico del que parte todo el proyecto es la <strong>fragmentación</strong>. Una persona puede trabajar con excelencia, ganar dinero legítimamente, construir una empresa exitosa, cuidar a su familia y practicar su fe, y aun así vivir estructuralmente desordenada. No porque tome decisiones evidentemente malas, sino porque cada ámbito está gobernado por una lógica distinta: el trabajo por rendimiento, el patrimonio por maximización, la empresa por crecimiento, el liderazgo por control, la vida espiritual por devoción. El problema no es la ausencia de buenas convicciones. Es que las convicciones no gobiernan de manera unificada la existencia.
+      </p>
+      <p class="lead">
+        Por eso la propuesta no consiste en añadir una dimensión más. No se trata de incorporar espiritualidad al trabajo, ni de agregar valores al liderazgo, ni de introducir ética en las finanzas: esas adiciones dejan intacta la fractura, porque siguen suponiendo que existen dos mundos. <strong>La alternativa es más exigente: que exista una sola vida y, por tanto, una sola orientación.</strong>
+      </p>
+      <p class="lead">
+        Integración no significa equilibrio. No significa dedicar el mismo tiempo a todas las áreas ni que todas las dimensiones pesen igual. Significa que todas obedecen a una misma jerarquía. Y esa jerarquía no elimina los conflictos: los ordena. No elimina la incertidumbre: permite atravesarla. No elimina los sacrificios: les da sentido. No reduce la responsabilidad: la profundiza.
+      </p>
+
+      <div class="chain">
+        <span class="node">Dios</span><span class="link">&rarr;</span>
+        <span class="node">Persona</span><span class="link">&rarr;</span>
+        <span class="node">Vocación</span><span class="link">&rarr;</span>
+        <span class="node">Obras</span><span class="link">&rarr;</span>
+        <span class="node">Liderazgo y empresa</span><span class="link">&rarr;</span>
+        <span class="node">Patrimonio</span><span class="link">&rarr;</span>
+        <span class="node">Bien común</span>
+      </div>
+      <p class="chain-note">
+        Cada nivel recibe su sentido del anterior y no debe subordinarlo. No se trata de elegir entre Dios, familia, trabajo, empresa y patrimonio como si fueran compartimentos independientes, sino de comprender qué lugar ocupa cada uno dentro de la totalidad.
+      </p>
+    </div>
+
+    <div class="pull reveal">
+      Ordenar antes de optimizar.
+      <span>Antes de hacer algo mejor, más rápido o más grande, preguntar si corresponde hacerlo.</span>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        Ese pensamiento se expresa a través de tres vehículos. <strong>El libro funda</strong> la visión y le da estructura y permanencia. <strong>El podcast desarrolla</strong> el pensamiento vivo y lo pone en conversación con la realidad. <strong>La conferencia encuentra</strong>: concentra, confronta y lleva la visión al encuentro directo con personas concretas. Una visión, tres vehículos, una sola pregunta.
+      </p>
+    </div>
+
+    <div class="stat-row reveal">
+      <div class="stat-item">
+        <div class="stat-num">3</div>
+        <div class="stat-label">Vehículos</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">7</div>
+        <div class="stat-label">Territorios</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">6</div>
+        <div class="stat-label">Pasos del método</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">1</div>
+        <div class="stat-label">Pregunta</div>
+      </div>
+    </div>
+
+    <div class="eco-grid reveal">
+      <div class="eco-card">
+        <div class="eco-code">Territorio</div>
+        <div class="eco-name">Persona</div>
+        <p class="eco-desc">Identidad, dignidad, carácter, virtud, libertad, interioridad, disciplina, éxito, fracaso y sufrimiento.</p>
+      </div>
+      <div class="eco-card">
+        <div class="eco-code">Territorio</div>
+        <div class="eco-name">Vocación</div>
+        <p class="eco-desc">Propósito, llamado, capacidades, ambición, profesión, discernimiento, misión y renuncia.</p>
+      </div>
+      <div class="eco-card">
+        <div class="eco-code">Territorio</div>
+        <div class="eco-name">Trabajo y obras</div>
+        <p class="eco-desc">Profesión, excelencia, productividad, emprendimiento, creación, servicio y responsabilidad.</p>
+      </div>
+      <div class="eco-card">
+        <div class="eco-code">Territorio</div>
+        <div class="eco-name">Liderazgo, autoridad y empresa</div>
+        <p class="eco-desc">Poder, equipos, cultura, crecimiento, gobierno, incentivos y responsabilidad sobre otros.</p>
+      </div>
+      <div class="eco-card">
+        <div class="eco-code">Territorio</div>
+        <div class="eco-name">Patrimonio y bienes</div>
+        <p class="eco-desc">Dinero, riqueza, inversión, propiedad, consumo, riesgo, herencia, generosidad y administración.</p>
+      </div>
+      <div class="eco-card">
+        <div class="eco-code">Territorio</div>
+        <div class="eco-name">Cultura y realidad contemporánea</div>
+        <p class="eco-desc">Tecnología, IA, educación, economía, innovación, sociedad, ciencia y transformación.</p>
+      </div>
+      <div class="eco-card full">
+        <div class="eco-code">Territorio</div>
+        <div class="eco-name">Servicio, bien común y legado</div>
+        <p class="eco-desc">Familia, comunidad, formación, instituciones, transmisión, continuidad, impacto y legado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="libro">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">II</span>
+      <div>
+        <h2 class="sec-title">El <em>libro</em></h2>
+        <p class="sec-sub">La obra fundacional: donde la visión se desarrolla completa. Descarga directa en PDF, sin costo.</p>
+      </div>
+    </div>
+
+    <div class="book-grid reveal">
+      <div class="book-cover">
+        <img src="hagase-portada.png" alt="Portada de Hágase Tu Voluntad, de Mario Garza Livas" width="236" height="354" loading="lazy">
+        <div class="book-meta">
+          Mario Garza Livas<br>
+          PDF · Descarga libre
+        </div>
+      </div>
+      <div class="book-body">
+        <p class="book-sub">Cómo ordenar una sola vida: la persona, la vocación, las obras y aquello que se nos ha confiado.</p>
+        <p class="lead">
+          El libro distingue entre lo que una persona afirma creer y lo que realmente gobierna sus decisiones. La verdadera arquitectura de una vida no se descubre en sus declaraciones, sino en aquellas decisiones que implican un costo. Por eso no pregunta qué valoras: pregunta <strong>qué principio gana cuando dos bienes entran en conflicto.</strong>
+        </p>
+        <p class="lead">
+          Su eje es una secuencia que no es una fórmula de productividad sino una proposición sobre el orden real de las cosas: <strong>SER → HACER → TENER</strong>. La persona precede a sus obras, y sus obras preceden a sus bienes. Invertir ese orden —tengo un patrimonio, luego soy alguien; tengo un cargo, luego valgo— coloca la identidad entera sobre variables que pueden perderse. El libro lo describe como una concentración de riesgo extrema.
+        </p>
+        <p class="lead">
+          Y no promete que ordenar la vida produzca más dinero, más reconocimiento o mejores resultados. Advierte expresamente que puede producir menos de cualquiera de esas cosas. No dice «haz la voluntad de Dios y te irá mejor». Dice algo más difícil: haz aquello que corresponde aunque no puedas garantizar que el resultado te favorecerá.
+        </p>
+      </div>
+    </div>
+
+    <div class="pull reveal">
+      Un principio que nunca ha impedido nada probablemente fue redactado después.
+      <span>La prueba no es si tienes principios, sino qué estás dispuesto a perder para no violarlos.</span>
+    </div>
+
+    <div class="reveal">
+      <h3 class="eco-name" style="font-size:22px;">El método</h3>
+      <p class="sec-sub" style="margin-top:10px;">El ciclo no termina: regresa al principio. La vida integrada no consiste en resolver una vez y para siempre qué hacer, sino en desarrollar la capacidad de volver permanentemente a la pregunta correcta.</p>
+      <ol class="seq">
+        <li><div><span class="step-name">Contemplar</span><span class="step-desc">Ver la realidad antes de imponerle una interpretación.</span></div></li>
+        <li><div><span class="step-name">Discernir</span><span class="step-desc">Determinar qué significa lo que se está viendo y qué corresponde hacer.</span></div></li>
+        <li><div><span class="step-name">Ordenar</span><span class="step-desc">Establecer prioridades y jerarquías.</span></div></li>
+        <li><div><span class="step-name">Decidir</span><span class="step-desc">Elegir, sabiendo lo que se deja fuera.</span></div></li>
+        <li><div><span class="step-name">Actuar</span><span class="step-desc">Convertir la decisión en conducta.</span></div></li>
+        <li><div><span class="step-name">Entregar</span><span class="step-desc">Reconocer el límite del control personal sobre los resultados.</span></div></li>
+      </ol>
+      <p class="chain-note">
+        Entregar no significa abandonar la responsabilidad. Significa distinguir responsabilidad de control: hacer aquello que corresponde y después entregar el resultado, para que la responsabilidad legítima no se convierta en una pretensión de dominar la realidad.
+      </p>
+
+      <a class="paper-dl" href="downloads/Hagase_Tu_Voluntad.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_hagase_es_seccion'})">
+        <span class="dl-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+        Descargar el libro (PDF)
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="podcast">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">III</span>
+      <div>
+        <h2 class="sec-title">El <em>podcast</em></h2>
+        <p class="sec-sub">Formación católica para el laico que vive en el mundo real: familia, trabajo, empresa, liderazgo, dinero, cultura y responsabilidad.</p>
+      </div>
+    </div>
+
+    <div class="pod-grid reveal">
+      <div class="pod-art">
+        <img src="hagase-podcast.png" alt="Logotipo del podcast Hágase Tu Voluntad" width="190" height="190" loading="lazy">
+      </div>
+      <div class="pod-body">
+        <div class="status"><span class="dot"></span>Primeros episodios por estrenarse</div>
+        <p class="lead">
+          Aquí la fe no es decorativa ni está separada de la vida. Es criterio para decidir, trabajar, liderar, administrar, ejercer autoridad y custodiar lo que Dios confía. La mayoría de los episodios son de desarrollo —Mario piensa en voz alta sobre una pregunta que importa—, y una proporción menor son conversaciones. <strong>No buscamos invitados interesantes: buscamos conversaciones necesarias.</strong>
+        </p>
+        <p class="lead">
+          Le habla a personas que tienen algo que construir, algo que decidir y algo que administrar, y que empiezan a preguntarse para quién y para qué lo están haciendo. Emprendedores, ejecutivos, profesionales, inversionistas, líderes y personas con responsabilidad real sobre otros.
+        </p>
+        <p class="lead">
+          El camino es el del discípulo que se forma, el apóstol que es enviado y el custodio que administra responsablemente lo recibido.
+        </p>
+        <a class="btn btn-primary" style="margin-top:28px;" href="https://www.youtube.com/@Hagase-Tu-Voluntad" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'outbound','event_label':'youtube_hagase_seccion'})">Suscribirse en YouTube</a>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <h3 class="eco-name" style="font-size:20px;margin-top:56px;">Lo que este podcast no es</h3>
+      <ul class="notlist">
+        <li>Un podcast de motivación o autoayuda.</li>
+        <li>Un podcast de negocios con lenguaje católico.</li>
+        <li>Un podcast sobre cómo hacerse rico.</li>
+        <li>Espiritualidad desconectada de la realidad.</li>
+        <li>Apologética o debate religioso.</li>
+        <li>Un instrumento para pedirle a Dios que bendiga planes ya decididos.</li>
+      </ul>
+      <p class="lens-foot">
+        No sustituye la vida sacramental, la formación doctrinal, la dirección espiritual ni la vida de la Iglesia. No entrega certezas prefabricadas: entrega criterios para discernir.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="conferencias">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">IV</span>
+      <div>
+        <h2 class="sec-title">Las <em>conferencias</em></h2>
+        <p class="sec-sub">La expresión presencial: empresas, universidades, instituciones, grupos de líderes, comunidades católicas, congresos y encuentros.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        Una conferencia de Hágase Tu Voluntad no es una charla motivacional, ni una conferencia corporativa con lenguaje religioso, ni un resumen del libro. Es un espacio de pensamiento, formación y confrontación en el que una realidad humana concreta se mira desde una visión de la vida entera ordenada a Dios.
+      </p>
+      <p class="lead">
+        La audiencia no se define por edad, profesión ni nivel económico, sino por una condición: <strong>responsabilidad</strong>. La persona que tiene algo que construir, algo que decidir y algo que administrar, y que comienza a preguntarse para quién y para qué lo está haciendo. La audiencia modifica el punto de entrada, no el centro.
+      </p>
+    </div>
+
+    <div class="pull reveal">
+      No venimos a enseñarte a construir la vida que quieres. Venimos a ayudarte a descubrir cómo ordenar la vida que Dios te está llamando a construir.
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        Hay dos maneras de llevarla. <strong>La conferencia conduce</strong>: tiene dirección definida, mayor curaduría e intensidad. <strong>La plática acompaña</strong>: es más cercana y conversacional, con participación al servicio de la pregunta. No es una versión menor de la otra; es otra relación con la sala.
+      </p>
+
+      <div class="fmt-list">
+        <div class="fmt-row">
+          <div class="fmt-left">
+            <div class="fmt-name">Microtalk</div>
+            <p class="fmt-desc">Una pregunta, una tensión, una distinción y una invitación. Para foros, universidades y encuentros con varios ponentes.</p>
+          </div>
+          <div class="fmt-dur">15 – 25 min</div>
+        </div>
+        <div class="fmt-row">
+          <div class="fmt-left">
+            <div class="fmt-name">Plática</div>
+            <p class="fmt-desc">Formato cercano y conversacional. La improvisación ocurre dentro de una arquitectura preparada.</p>
+          </div>
+          <div class="fmt-dur">30 – 45 min</div>
+        </div>
+        <div class="fmt-row">
+          <div class="fmt-left">
+            <div class="fmt-name">Conferencia</div>
+            <p class="fmt-desc">El formato insignia. Recorre pregunta, realidad, tensión, idea, distinción, orden, decisión y vida.</p>
+          </div>
+          <div class="fmt-dur">45 – 60 min</div>
+        </div>
+        <div class="fmt-row">
+          <div class="fmt-left">
+            <div class="fmt-name">Sesión extendida</div>
+            <p class="fmt-desc">Con interacción, casos, ejercicios y aplicación. Para equipos directivos y grupos de formación.</p>
+          </div>
+          <div class="fmt-dur">75 – 120 min</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <h3 class="eco-name" style="font-size:20px;margin-top:56px;">Las distinciones</h3>
+      <p class="sec-sub" style="margin-top:10px;">Lo que una conferencia debe ayudar a separar. Casi todo el desorden empieza por confundir uno de estos pares.</p>
+      <ul class="dist">
+        <li>Deseo <span class="neq">no es</span> vocación</li>
+        <li>Capacidad <span class="neq">no es</span> llamado</li>
+        <li>Oportunidad <span class="neq">no es</span> mandato</li>
+        <li>Crecimiento <span class="neq">no es</span> progreso</li>
+        <li>Rentabilidad <span class="neq">no es</span> legitimidad</li>
+        <li>Dificultad <span class="neq">no es</span> error</li>
+        <li>Poder <span class="neq">no es</span> autoridad</li>
+        <li>Posesión <span class="neq">no es</span> custodia</li>
+        <li>Resultado <span class="neq">no es</span> fidelidad</li>
+        <li>Éxito <span class="neq">no es</span> significado</li>
+      </ul>
+    </div>
+
+    <div class="reveal">
+      <h3 class="eco-name" style="font-size:20px;margin-top:56px;">Tres para empezar</h3>
+      <div class="eco-grid">
+        <div class="eco-card">
+          <div class="eco-code">Fundacional</div>
+          <div class="eco-name">¿Estoy haciendo Su Voluntad?</div>
+          <p class="eco-desc">Presenta la visión completa y la pregunta central que atraviesa toda la obra.</p>
+        </div>
+        <div class="eco-card">
+          <div class="eco-code">Criterio</div>
+          <div class="eco-name">Ordenar antes de optimizar</div>
+          <p class="eco-desc">La diferencia entre eficiencia y dirección: por qué no todo lo posible debe hacerse.</p>
+        </div>
+        <div class="eco-card full">
+          <div class="eco-code">Aplicación</div>
+          <div class="eco-name">¿Qué tipo de empresa estás construyendo?</div>
+          <p class="eco-desc">Empresa, cultura, crecimiento y bien común. Qué realidad humana produce la estructura que diriges.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <h3 class="eco-name" style="font-size:20px;margin-top:56px;">Invitar a una conferencia</h3>
+      <p class="sec-sub" style="margin-top:10px;">Disponible en español y en inglés, presencial y en línea.</p>
+      <div class="contact-grid">
+        <a class="contact-item" href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp_mgy1'})">
+          <div class="cicon">TW</div>
+          <div>
+            <div class="clabel">Teléfono &amp; WhatsApp</div>
+            <div class="cvalue">+52 (81) 2513 6784</div>
+          </div>
+        </a>
+        <a class="contact-item" href="mailto:mario@metanoiagroup.vip?subject=Conferencia%20H%C3%A1gase%20Tu%20Voluntad" onclick="gtag('event','click',{'event_category':'contact','event_label':'email_mgy1'})">
+          <div class="cicon">@</div>
+          <div>
+            <div class="clabel">Correo</div>
+            <div class="cvalue">mario@metanoiagroup.vip</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="espejo">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">V</span>
+      <div>
+        <h2 class="sec-title">La misma arquitectura, sin la <em>pregunta final</em></h2>
+        <p class="sec-sub">Hágase Tu Voluntad tiene una obra hermana. Misma tríada, mismo rigor, un registro secular.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        <em>ineXorable</em> trabaja el mismo material desde fuera de la fe: cómo construir una vida, una obra y un patrimonio que no dependan de que el mundo coopere. Habla de estructura, de margen, de dependencias y de la capacidad de seguir decidiendo cuando las condiciones cambian. Todo eso sigue siendo verdad aquí, y está supuesto en estas páginas.
+      </p>
+      <p class="lead">
+        La diferencia no es de tema sino de destino. <strong>ineXorable termina en la agencia: qué puedo hacer ahora que antes no era posible.</strong> Hágase Tu Voluntad recoge esa capacidad y le añade dos cosas que aquel marco, por sí solo, no puede dar: una dirección —no basta con poder, hay que preguntar si corresponde— y un límite —entregar, que distingue responsabilidad de control.
+      </p>
+      <p class="lead">
+        Si estás llegando aquí desde un lugar donde la fe todavía no es parte de la conversación, esa es la puerta de entrada.
+      </p>
+    </div>
+
+    <a class="mirror reveal" href="mgx1.html">
+      <div class="mirror-name">ine<span class="x">X</span>orable</div>
+      <p class="mirror-desc">
+        Cómo construir una vida, una obra y un patrimonio que no dependan de que el mundo coopere. Libro, podcast y conferencias.
+      </p>
+      <div class="mirror-go">Entrar <span class="arrow">&rarr;</span></div>
+    </a>
+  </div>
+</section>
+
+<section id="enlaces">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">VI</span>
+      <div>
+        <h2 class="sec-title">Enlaces <em>relevantes</em></h2>
+        <p class="sec-sub">El resto del ecosistema.</p>
+      </div>
+    </div>
+
+    <div class="eco-grid reveal">
+      <a class="eco-card" href="mgy2.html">
+        <div class="eco-code">Idioma</div>
+        <div class="eco-name">Thy Will Be Done</div>
+        <p class="eco-desc">Esta misma página, en inglés.</p>
+        <div class="eco-url">mgy2 <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="eco-card" href="mgl1.html">
+        <div class="eco-code">Personal</div>
+        <div class="eco-name">Mario Garza Livas</div>
+        <p class="eco-desc">Landing page personal: contacto, documentos y el resto de los proyectos.</p>
+        <div class="eco-url">mgl1 <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="eco-card full" href="https://metanoiagroup.vip/" target="_blank" rel="noopener">
+        <div class="eco-code">Firma</div>
+        <div class="eco-name">The Metanoia Group</div>
+        <p class="eco-desc">Arquitectura de antifragilidad para el líder, su empresa y su patrimonio.</p>
+        <div class="eco-url">metanoiagroup.vip <span class="arrow">&rarr;</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-brand">Hágase <span class="tu">Tu</span> Voluntad</div>
+    <div class="footer-tagline">Fe. Realidad. Acción.</div>
+    <div class="footer-role"><strong>Mario Garza Livas</strong> — Autor · Conductor · Conferencista</div>
+    <div class="footer-contacts">
+      <a href="mailto:mario@metanoiagroup.vip">mario@metanoiagroup.vip</a>
+      <a href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp_footer_mgy1'})">+52 (81) 2513 6784</a>
+      <a href="https://www.youtube.com/@Hagase-Tu-Voluntad" target="_blank" rel="noopener">youtube.com/@Hagase-Tu-Voluntad</a>
+    </div>
+    <div class="footer-admg-rule"></div>
+    <p class="footer-admg">Ad Majorem Dei Gloriam.</p>
+
+    <div class="footer-bottom">
+      <span class="copyright">© 2026 The Metanoia Group</span>
+      <a class="footer-en" href="mgy2.html">English Version &rarr;</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const topbar = document.querySelector('nav.topbar');
+  const syncNavHeight = () => document.documentElement.style.setProperty('--nav-h', topbar.offsetHeight + 'px');
+  syncNavHeight();
+  if(window.ResizeObserver){ new ResizeObserver(syncNavHeight).observe(topbar); }
+  else { window.addEventListener('resize', syncNavHeight); }
+
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.12});
+  els.forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>

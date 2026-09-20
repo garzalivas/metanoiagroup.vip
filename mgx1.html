@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="new_favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ineXorable — Mario Garza Livas</title>
+<meta name="description" content="ineXorable — Mario Garza Livas. Libro, podcast y conferencias sobre cómo construir una vida, una obra y un patrimonio que no dependan de que el mundo coopere. El cambio es inexorable; nuestra capacidad para responder a él no tiene por qué serlo.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="ineXorable — Mario Garza Livas">
+<meta property="og:description" content="Ideas para un mundo que cambia. Libro, podcast y conferencias: un solo sistema de pensamiento, tres instrumentos.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<meta property="og:site_name" content="The Metanoia Group">
+<meta property="og:image" content="https://metanoiagroup.vip/og-image-1.jpg">
+<meta property="og:url" content="https://metanoiagroup.vip/MGX1">
+<link rel="alternate" hreflang="es" href="https://metanoiagroup.vip/mgx1.html">
+<link rel="alternate" hreflang="en" href="https://metanoiagroup.vip/mgx2.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#000000;
+    --bg-alt:#0d0d0f;
+    --bg-card:#16161a;
+    --text:#ece8e0;
+    --text-dim:#9690877f;
+    --text-muted:#9b968c;
+    --accent:#d8342f;
+    --accent-dim:#8c211d;
+    --accent-soft:#e6615c;
+    --line:#26242066;
+    --line-strong:#2f2c27;
+    --serif:'Fraunces', Georgia, 'Times New Roman', serif;
+    --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --maxw:920px;
+    --nav-h:62px;
+    --anchor-gap:24px;
+    --sec-pad:86px;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;background:var(--bg);}
+
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  a{color:inherit;text-decoration:none;}
+
+  ::selection{background:var(--accent-dim);color:var(--text);}
+
+  a:focus-visible, button:focus-visible{
+    outline:1.5px solid var(--accent);
+    outline-offset:4px;
+  }
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;}
+
+  /* ---------- NAV ---------- */
+  nav.topbar{
+    position:sticky;top:0;
+    background:#000000d9;
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+    z-index:50;
+  }
+  nav.topbar .inner{
+    max-width:var(--maxw);margin:0 auto;padding:18px 28px;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:14px;flex-wrap:wrap;
+  }
+  .brandmark{
+    font-family:var(--sans);
+    font-size:16px;
+    letter-spacing:-.01em;
+    color:var(--text);
+    font-weight:500;
+  }
+  .brandmark .x{color:var(--accent);font-weight:600;}
+  .brandmark span{
+    color:var(--text-muted);font-weight:400;font-size:13px;
+    letter-spacing:.06em;
+  }
+  .nav-links{display:flex;gap:24px;align-items:center;flex-wrap:wrap;}
+  .nav-links a{
+    font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--text-muted);
+    transition:color .25s ease;
+    white-space:nowrap;
+  }
+  .nav-links a:hover{color:var(--accent);}
+  .nav-links a.pill{
+    border:1px solid var(--line-strong);
+    padding:6px 12px;
+    border-radius:2px;
+  }
+  .nav-links a.pill:hover{border-color:var(--accent);}
+
+  /* ---------- HERO ---------- */
+  header.hero{
+    padding:104px 0 88px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-logo{
+    display:block;
+    width:min(340px, 74vw);
+    height:auto;
+    mix-blend-mode:screen;
+    margin-bottom:34px;
+    opacity:0;
+    animation:fadeUp .9s ease .05s forwards;
+  }
+  h1.name{
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:clamp(34px, 5.6vw, 58px);
+    line-height:1.1;
+    letter-spacing:-.015em;
+    max-width:16ch;
+    opacity:0;
+    animation:fadeUp .9s ease .2s forwards;
+  }
+  h1.name .turn{color:var(--accent-soft);font-style:italic;}
+
+  p.lede{
+    margin-top:28px;
+    font-size:clamp(15px,2vw,17.5px);
+    color:var(--text-muted);
+    max-width:62ch;
+    line-height:1.75;
+    font-weight:300;
+    opacity:0;
+    animation:fadeUp .9s ease .34s forwards;
+  }
+
+  .triad-bar{
+    margin-top:34px;
+    display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+    font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);
+    opacity:0;
+    animation:fadeUp .9s ease .46s forwards;
+  }
+  .triad-bar .slash{color:var(--accent-dim);}
+  .triad-bar a:hover{color:var(--accent);}
+
+  .hero-cta{
+    margin-top:42px;
+    display:flex;gap:14px;flex-wrap:wrap;
+    opacity:0;
+    animation:fadeUp .9s ease .58s forwards;
+  }
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:14px 24px;
+    font-size:12.5px;letter-spacing:.09em;text-transform:uppercase;
+    border-radius:2px;
+    transition:all .25s ease;
+  }
+  .btn-primary{
+    background:var(--accent);color:#000000;font-weight:600;
+  }
+  .btn-primary:hover{background:var(--accent-soft);transform:translateY(-1px);}
+  .btn-ghost{
+    border:1px solid var(--line-strong);color:var(--text);
+  }
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+
+  @keyframes fadeUp{
+    from{opacity:0;transform:translateY(16px);}
+    to{opacity:1;transform:translateY(0);}
+  }
+
+  /* ---------- SECTION SHELL ---------- */
+  section{
+    padding:var(--sec-pad) 0;
+    scroll-margin-top:max(0px, calc(var(--nav-h) + var(--anchor-gap) - var(--sec-pad)));
+    border-top:1px solid var(--line);
+    position:relative;
+  }
+  .sec-head{
+    display:flex;align-items:baseline;gap:18px;margin-bottom:48px;
+  }
+  .sec-num{
+    font-family:var(--serif);font-style:italic;font-size:15px;color:var(--accent-dim);
+    letter-spacing:.05em;flex:none;
+  }
+  h2.sec-title{
+    font-family:var(--serif);font-weight:400;font-size:clamp(26px,3.4vw,36px);
+    letter-spacing:-.01em;
+  }
+  h2.sec-title em{font-style:italic;color:var(--accent);font-weight:400;}
+  .sec-sub{
+    color:var(--text-muted);font-size:14.5px;font-weight:300;max-width:56ch;margin-top:14px;line-height:1.7;
+  }
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease, transform .8s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  p.lead{
+    font-size:15.5px;line-height:1.8;color:var(--text-muted);font-weight:300;
+    max-width:72ch;
+  }
+  p.lead + p.lead{margin-top:18px;}
+  p.lead strong{color:var(--text);font-weight:500;}
+
+  /* ---------- PULL QUOTE ---------- */
+  .pull{
+    margin:40px 0;
+    border-left:2px solid var(--accent);
+    padding:6px 0 6px 26px;
+    font-family:var(--serif);
+    font-size:clamp(18px,2.6vw,23px);
+    line-height:1.5;
+    color:var(--text);
+    font-weight:400;
+    max-width:44ch;
+  }
+  .pull span{display:block;color:var(--text-muted);font-style:italic;font-size:.72em;margin-top:12px;}
+
+  /* ---------- LENS LIST ---------- */
+  .lens{
+    margin-top:38px;
+    border-top:1px solid var(--line-strong);
+  }
+  .lens li{
+    list-style:none;
+    border-bottom:1px solid var(--line-strong);
+    padding:18px 4px;
+    display:flex;align-items:baseline;gap:18px;
+    font-size:16px;
+    font-family:var(--serif);
+    font-weight:400;
+  }
+  .lens li .mark{
+    color:var(--accent-dim);font-style:italic;font-size:13px;flex:none;width:22px;
+  }
+  .lens-foot{
+    margin-top:22px;font-size:13.5px;color:var(--text-muted);font-weight:300;line-height:1.75;max-width:64ch;
+  }
+
+  /* ---------- STATS ---------- */
+  .stat-row{
+    display:grid;grid-template-columns:repeat(4,1fr);
+    gap:1px;background:var(--line-strong);
+    border:1px solid var(--line-strong);
+    margin-top:46px;
+  }
+  .stat-item{background:var(--bg-alt);padding:26px 20px;text-align:center;}
+  .stat-num{font-family:var(--serif);font-size:32px;color:var(--accent);font-weight:400;line-height:1;}
+  .stat-label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin-top:10px;line-height:1.5;}
+  @media (max-width:640px){
+    .stat-row{grid-template-columns:repeat(2,1fr);}
+  }
+
+  /* ---------- BOOK ---------- */
+  .book-grid{
+    display:flex;gap:44px;align-items:flex-start;
+  }
+  .book-cover{flex:none;width:236px;}
+  .book-cover img{
+    display:block;width:100%;height:auto;
+    border:1px solid var(--line-strong);
+    border-radius:3px;
+  }
+  .book-meta{
+    margin-top:16px;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--text-muted);line-height:1.8;
+  }
+  .book-body{flex:1;min-width:0;}
+  .book-sub{
+    font-family:var(--serif);font-style:italic;font-size:18px;color:var(--text);
+    line-height:1.5;margin-bottom:24px;max-width:36ch;
+  }
+  @media (max-width:760px){
+    .book-grid{flex-direction:column;gap:32px;}
+    .book-cover{width:200px;align-self:center;}
+  }
+
+  /* ---------- MATRIX ---------- */
+  .matrix-wrap{margin-top:44px;overflow-x:auto;}
+  table.matrix{
+    border-collapse:collapse;width:100%;min-width:520px;
+    font-size:13.5px;
+  }
+  table.matrix th, table.matrix td{
+    border:1px solid var(--line-strong);
+    padding:16px 18px;text-align:left;vertical-align:top;
+  }
+  table.matrix thead th{
+    background:var(--bg-alt);
+    font-family:var(--serif);font-weight:400;font-size:14px;color:var(--accent);
+  }
+  table.matrix tbody th{
+    background:var(--bg-alt);
+    font-family:var(--serif);font-weight:400;font-size:14px;color:var(--text);
+    font-style:italic;white-space:nowrap;
+  }
+  table.matrix td{color:var(--text-muted);font-weight:300;}
+  table.matrix thead th:first-child{background:transparent;border-color:transparent;}
+  .matrix-note{
+    margin-top:16px;font-size:12.5px;color:var(--text-dim);font-weight:300;line-height:1.7;
+  }
+
+  /* ---------- NUMBERED PRINCIPLES ---------- */
+  .decalogo{
+    margin-top:40px;
+    counter-reset:dec;
+    display:grid;grid-template-columns:1fr 1fr;
+    gap:1px;background:var(--line-strong);
+    border:1px solid var(--line-strong);
+  }
+  .decalogo li{
+    list-style:none;
+    counter-increment:dec;
+    background:var(--bg-alt);
+    padding:22px 24px;
+    font-size:14px;line-height:1.6;color:var(--text);
+    font-weight:300;
+    display:flex;gap:16px;align-items:baseline;
+  }
+  .decalogo li::before{
+    content:counter(dec,decimal-leading-zero);
+    font-family:var(--serif);font-style:italic;font-size:12.5px;color:var(--accent-dim);
+    flex:none;
+  }
+  @media (max-width:640px){
+    .decalogo{grid-template-columns:1fr;}
+  }
+
+  /* ---------- DOWNLOAD BUTTON ---------- */
+  .paper-dl{
+    margin-top:34px;
+    display:inline-flex;align-items:center;gap:12px;
+    border:1px solid var(--line-strong);
+    padding:15px 24px;border-radius:2px;
+    font-size:12.5px;letter-spacing:.09em;text-transform:uppercase;
+    transition:all .25s ease;
+  }
+  .paper-dl:hover{border-color:var(--accent);color:var(--accent);}
+  .dl-icon{
+    width:34px;height:34px;border-radius:50%;flex:none;
+    border:1px solid var(--line-strong);
+    display:flex;align-items:center;justify-content:center;
+    transition:all .25s ease;
+  }
+  .dl-icon svg{width:14px;height:14px;stroke:var(--text-muted);fill:none;transition:stroke .25s ease;}
+  .paper-dl:hover .dl-icon{border-color:var(--accent);background:var(--accent);}
+  .paper-dl:hover .dl-icon svg{stroke:#000000;}
+
+  /* ---------- PODCAST ---------- */
+  .pod-grid{display:flex;gap:44px;align-items:flex-start;}
+  .pod-art{flex:none;width:190px;}
+  .pod-art img{display:block;width:100%;height:auto;border-radius:50%;mix-blend-mode:screen;}
+  .pod-body{flex:1;min-width:0;}
+  .status{
+    display:inline-flex;align-items:center;gap:10px;
+    border:1px solid var(--accent-dim);
+    padding:8px 16px;border-radius:2px;
+    font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-soft);
+    margin-bottom:24px;
+  }
+  .status .dot{
+    width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none;
+    box-shadow:0 0 8px 1px #d8342f80;
+  }
+  @media (max-width:760px){
+    .pod-grid{flex-direction:column;gap:30px;}
+    .pod-art{width:160px;align-self:center;}
+  }
+
+  /* ---------- ECO GRID (territorios / formatos) ---------- */
+  .eco-grid{
+    display:grid;grid-template-columns:repeat(2,1fr);
+    gap:1px;background:var(--line-strong);
+    border:1px solid var(--line-strong);
+    margin-top:40px;
+  }
+  .eco-card{
+    background:var(--bg-alt);
+    padding:30px 28px;
+    display:block;
+    transition:background .3s ease;
+  }
+  a.eco-card:hover{background:var(--bg-card);}
+  .eco-code{
+    font-family:var(--serif);font-style:italic;font-size:13px;color:var(--accent);
+    letter-spacing:.05em;
+  }
+  .eco-name{
+    font-family:var(--serif);font-size:20px;margin-top:10px;font-weight:400;line-height:1.3;
+  }
+  .eco-desc{
+    color:var(--text-muted);font-size:13.5px;margin-top:10px;line-height:1.65;font-weight:300;
+  }
+  .eco-url{
+    margin-top:18px;font-size:11px;letter-spacing:.08em;color:var(--accent-dim);
+    display:flex;align-items:center;gap:8px;
+  }
+  a.eco-card:hover .eco-url{color:var(--accent);}
+  .eco-url .arrow{transition:transform .25s ease;}
+  a.eco-card:hover .eco-url .arrow{transform:translateX(4px);}
+  .eco-card.full{grid-column:span 2;}
+  @media (max-width:640px){
+    .eco-grid{grid-template-columns:1fr;}
+    .eco-card.full{grid-column:span 1;}
+  }
+
+  /* ---------- FORMATS ---------- */
+  .fmt-list{margin-top:40px;border-top:1px solid var(--line-strong);}
+  .fmt-row{
+    display:flex;align-items:baseline;justify-content:space-between;gap:24px;
+    padding:24px 4px;border-bottom:1px solid var(--line-strong);
+  }
+  .fmt-left{min-width:0;}
+  .fmt-name{font-family:var(--serif);font-size:19px;font-weight:400;}
+  .fmt-desc{color:var(--text-muted);font-size:13.5px;margin-top:6px;font-weight:300;line-height:1.6;max-width:56ch;}
+  .fmt-dur{
+    flex:none;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);
+    white-space:nowrap;
+  }
+  @media (max-width:600px){
+    .fmt-row{flex-direction:column;gap:10px;}
+  }
+
+  /* ---------- DISTINCTIONS / NOT-LIST ---------- */
+  .notlist{margin-top:36px;display:grid;grid-template-columns:1fr 1fr;gap:12px 32px;}
+  .notlist li{
+    list-style:none;font-size:14px;color:var(--text-muted);font-weight:300;
+    padding-left:20px;position:relative;line-height:1.6;
+  }
+  .notlist li::before{
+    content:'';position:absolute;left:0;top:10px;
+    width:9px;height:1px;background:var(--accent-dim);
+  }
+  @media (max-width:640px){.notlist{grid-template-columns:1fr;}}
+
+  /* ---------- MIRROR ---------- */
+  .mirror{
+    border:1px solid var(--line-strong);
+    background:var(--bg-alt);
+    padding:44px 40px;
+    display:block;
+    transition:border-color .3s ease, background .3s ease;
+  }
+  .mirror:hover{border-color:var(--accent);background:var(--bg-card);}
+  .mirror-name{font-family:var(--serif);font-size:clamp(24px,3.4vw,32px);font-weight:400;line-height:1.2;}
+  .mirror-desc{color:var(--text-muted);font-size:14.5px;margin-top:18px;line-height:1.75;font-weight:300;max-width:62ch;}
+  .mirror-go{
+    margin-top:26px;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);
+    display:flex;align-items:center;gap:9px;
+  }
+  .mirror-go .arrow{transition:transform .25s ease;}
+  .mirror:hover .mirror-go .arrow{transform:translateX(5px);}
+  @media (max-width:640px){.mirror{padding:32px 26px;}}
+
+  /* ---------- CONTACT ---------- */
+  .contact-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:1px;
+    background:var(--line-strong);border:1px solid var(--line-strong);
+    margin-top:40px;
+  }
+  .contact-item{
+    background:var(--bg-alt);padding:26px 28px;
+    display:flex;align-items:center;gap:18px;
+    transition:background .25s ease;
+  }
+  .contact-item:hover{background:var(--bg-card);}
+  .cicon{
+    flex:none;width:42px;height:42px;border-radius:50%;
+    border:1px solid var(--line-strong);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--serif);font-style:italic;font-size:13px;color:var(--accent);
+    transition:border-color .25s ease;
+  }
+  .contact-item:hover .cicon{border-color:var(--accent);}
+  .clabel{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);}
+  .cvalue{font-size:15px;margin-top:4px;word-break:break-word;transition:color .2s ease;}
+  .contact-item:hover .cvalue{color:var(--accent);}
+  @media (max-width:640px){.contact-grid{grid-template-columns:1fr;}}
+
+  /* ---------- FOOTER ---------- */
+  footer{padding:70px 0 46px;border-top:1px solid var(--line);}
+  .footer-brand{
+    font-family:var(--sans);font-size:17px;color:var(--text);font-weight:500;letter-spacing:-.01em;
+  }
+  .footer-brand .x{color:var(--accent);font-weight:600;}
+  .footer-tagline{
+    font-family:var(--serif);font-style:italic;font-size:17px;color:var(--text-muted);margin-top:10px;
+  }
+  .footer-role{margin-top:24px;font-size:13px;color:var(--text-muted);}
+  .footer-role strong{color:var(--text);font-weight:500;}
+  .footer-contacts{
+    margin-top:10px;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--text-muted);
+  }
+  .footer-contacts a:hover{color:var(--accent);}
+  .footer-bottom{
+    margin-top:44px;padding-top:22px;border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;
+  }
+  .copyright{font-size:11.5px;color:var(--text-dim);letter-spacing:.04em;}
+  .footer-en{
+    font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);
+    border:1px solid var(--line-strong);padding:7px 14px;border-radius:2px;
+  }
+  .footer-en:hover{color:var(--accent);border-color:var(--accent);}
+
+  @media (max-width:640px){
+    header.hero{padding:56px 0 60px;}
+    section{--sec-pad:60px;}
+    nav.topbar .inner{padding:16px 20px;}
+    .nav-links{gap:12px 16px;width:100%;}
+    .nav-links a{font-size:11px;}
+    .brandmark{font-size:14px;}
+    .footer-bottom{flex-direction:column;align-items:flex-start;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}
+  }
+</style>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ineXorable — Mario Garza Livas">
+<meta name="twitter:description" content="Ideas para un mundo que cambia. Libro, podcast y conferencias: un solo sistema de pensamiento, tres instrumentos.">
+<meta name="twitter:image" content="https://metanoiagroup.vip/og-image-1.jpg">
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KHNZVPJX1N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KHNZVPJX1N');
+</script>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="inner">
+    <div class="brandmark">ine<span class="x">X</span>orable <span>· Mario Garza Livas</span></div>
+    <div class="nav-links">
+      <a href="#vision">La visión</a>
+      <a href="#libro">Libro</a>
+      <a href="#podcast">Podcast</a>
+      <a href="#conferencias">Conferencias</a>
+      <a class="pill" href="mgy1.html">Hágase Tu Voluntad</a>
+      <a class="pill" href="mgx2.html">EN</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="hero-logo" src="inexorable-logo.png" alt="ineXorable — ideas para un mundo que cambia" width="340" height="140">
+    <h1 class="name">El cambio es inexorable.<br><span class="turn">Tu capacidad no tiene por qué serlo.</span></h1>
+    <p class="lede">
+      ineXorable es un sistema de pensamiento sobre cómo construir una vida, una obra y un patrimonio que no dependan de que el mundo coopere. No propone predecir mejor el futuro. Propone depender menos de acertarlo.
+    </p>
+    <div class="triad-bar">
+      <a href="#libro">Libro</a><span class="slash">/</span><a href="#podcast">Podcast</a><span class="slash">/</span><a href="#conferencias">Conferencias</a>
+    </div>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="downloads/ineXorable.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_inexorable_es'})">Descargar el libro</a>
+      <a class="btn btn-ghost" href="https://www.youtube.com/@ineXorable-mx" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'outbound','event_label':'youtube_inexorable'})">Ver el podcast</a>
+      <a class="btn btn-ghost" href="#conferencias">Contratar una conferencia</a>
+    </div>
+  </div>
+</header>
+
+<section id="vision">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">I</span>
+      <div>
+        <h2 class="sec-title">Un lente, no un <em>nicho</em></h2>
+        <p class="sec-sub">Qué es ineXorable, desde dónde mira y por qué el tema puede cambiar sin que cambie el proyecto.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        <strong>ineXorable</strong> nació de una observación incómoda: cuando las condiciones cambian, la diferencia entre quienes siguen avanzando y quienes quedan atrapados casi nunca se explica por haber reaccionado mejor a la crisis. Se explica por cómo estaban construidos antes de que la crisis apareciera. Personas competentes, disciplinadas, informadas y bien asesoradas responden de maneras radicalmente distintas a un mismo cambio. La explicación no está en el temperamento ni en la suerte, sino en una arquitectura previa que la perturbación se limita a hacer visible.
+      </p>
+      <p class="lead">
+        De ahí el desplazamiento que organiza todo el proyecto: <strong>de la predicción a la arquitectura</strong>. En lugar de gastar el esfuerzo principal en anticipar qué sucederá, ineXorable identifica aquello de lo que dependemos para que lo construido siga funcionando, y trabaja sobre eso. Una preparación específica exige acertar el escenario. Una capacidad genérica sigue sirviendo aunque el escenario previsto nunca ocurra.
+      </p>
+      <p class="lead">
+        Por eso ineXorable no se define por un tema. Se define por una forma de mirar. Puede ocuparse de inteligencia artificial, de patrimonio, de alto rendimiento, de liderazgo o de geopolítica, porque frente a cualquiera de ellos hace siempre las mismas preguntas. El tema cambia; el lente permanece.
+      </p>
+
+      <ul class="lens">
+        <li><span class="mark">i</span>¿Qué está cambiando?</li>
+        <li><span class="mark">ii</span>¿Qué significa?</li>
+        <li><span class="mark">iii</span>¿Qué modelo o supuesto está siendo cuestionado?</li>
+        <li><span class="mark">iv</span>¿Qué capacidad exige?</li>
+        <li><span class="mark">v</span>¿Qué debemos preservar, adaptar, abandonar o construir?</li>
+        <li><span class="mark">vi</span>¿Qué podemos hacer con ello?</li>
+      </ul>
+      <p class="lens-foot">
+        Ese recorrido tiene un destino: la agencia. No el control —el mercado, la tecnología, los ciclos y las decisiones de terceros seguirán fuera de nuestro alcance—, sino la capacidad preservada de elegir cómo responder. Sin margen no hay alternativas; sin alternativas no hay elección; sin elección, la agencia es solo una aspiración.
+      </p>
+    </div>
+
+    <div class="pull reveal">
+      No construyas una vida que funcione solo si el mundo coopera. Construye una vida capaz de seguir avanzando cuando deje de hacerlo.
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        Ese pensamiento se expresa a través de tres instrumentos. <strong>El libro desarrolla</strong> la arquitectura completa. <strong>El podcast explora</strong> preguntas abiertas y las pone a prueba contra la realidad. <strong>La conferencia transforma</strong> la perspectiva de una audiencia en vivo. Una idea puede nacer en el escenario, investigarse en el podcast y terminar desarrollada en el libro. No son tres marcas con el mismo nombre: son tres instrumentos de un mismo sistema.
+      </p>
+    </div>
+
+    <div class="stat-row reveal">
+      <div class="stat-item">
+        <div class="stat-num">3</div>
+        <div class="stat-label">Instrumentos</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">8</div>
+        <div class="stat-label">Territorios temáticos</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">9</div>
+        <div class="stat-label">Celdas de la matriz</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">1</div>
+        <div class="stat-label">Lente</div>
+      </div>
+    </div>
+
+    <div class="eco-grid reveal">
+      <div class="eco-card">
+        <div class="eco-code">Territorio</div>
+        <div class="eco-name">Cambio y futuro</div>
+        <p class="eco-desc">Transformaciones estructurales, incertidumbre, disrupción, obsolescencia y nuevas condiciones.</p>
+      </div>
+      <div class="eco-card">
+        <div class="eco-code">Territorio</div>
+        <div class="eco-name">Inteligencia y tecnología</div>
+        <p class="eco-desc">IA, IA agéntica, automatización, herramientas, conocimiento, decisiones y transformación del trabajo.</p>
+      </div>
+      <div class="eco-card">
+        <div class="eco-code">Territorio</div>
+        <div class="eco-name">Persona y desarrollo</div>
+        <p class="eco-desc">Identidad, aprendizaje, carácter, disciplina, criterio, adaptación y evolución.</p>
+      </div>
+      <div class="eco-card">
+        <div class="eco-code">Territorio</div>
+        <div class="eco-name">Rendimiento y capacidad</div>
+        <p class="eco-desc">Alto rendimiento, productividad, energía, atención, presión, recuperación y capacidad sostenible.</p>
+      </div>
+      <div class="eco-card">
+        <div class="eco-code">Territorio</div>
+        <div class="eco-name">Liderazgo, empresa y sistemas</div>
+        <p class="eco-desc">Estrategia, organizaciones, liderazgo, innovación, transformación, modelos y sistemas.</p>
+      </div>
+      <div class="eco-card">
+        <div class="eco-code">Territorio</div>
+        <div class="eco-name">Patrimonio y largo plazo</div>
+        <p class="eco-desc">Capital, activos, propiedad, preservación, independencia y construcción intergeneracional.</p>
+      </div>
+      <div class="eco-card">
+        <div class="eco-code">Territorio</div>
+        <div class="eco-name">Propósito, sentido y vida</div>
+        <p class="eco-desc">Principios, valores, identidad, propósito, prioridades y aquello que vale la pena preservar.</p>
+      </div>
+      <div class="eco-card">
+        <div class="eco-code">Territorio</div>
+        <div class="eco-name">Agencia y transformación</div>
+        <p class="eco-desc">Influencia, iniciativa, innovación, construcción y el paso de reaccionar a actuar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="libro">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">II</span>
+      <div>
+        <h2 class="sec-title">El <em>libro</em></h2>
+        <p class="sec-sub">La obra fundacional: donde la arquitectura se desarrolla completa. Descarga directa en PDF, sin costo.</p>
+      </div>
+    </div>
+
+    <div class="book-grid reveal">
+      <div class="book-cover">
+        <img src="inexorable-portada.png" alt="Portada de ineXorable, de Mario Garza Livas" width="236" height="354" loading="lazy">
+        <div class="book-meta">
+          Mario Garza Livas<br>
+          PDF · Descarga libre
+        </div>
+      </div>
+      <div class="book-body">
+        <p class="book-sub">Cómo construir una vida, una obra y un patrimonio que no dependan de que el mundo coopere.</p>
+        <p class="lead">
+          La mayoría de los sistemas personales, empresariales y patrimoniales se construyen para funcionar bajo las condiciones que existen mientras se construyen. El problema aparece cuando se confunde funcionamiento actual con solidez estructural. Una empresa puede ser rentable y depender de un solo cliente. Un fundador puede ser extraordinariamente competente y concentrar en sí mismo decisiones, relaciones y conocimiento crítico. Una persona puede tener una identidad aparentemente sólida y descubrir que estaba construida alrededor de un cargo. <strong>La fragilidad permanece silenciosa mientras aquello de lo que depende sigue funcionando.</strong>
+        </p>
+        <p class="lead">
+          El libro trata persona, obra y patrimonio como un solo sistema de tres niveles —<strong>SER, HACER y TENER</strong>— porque muchos problemas aparecen en las junturas: un problema financiero puede ser en realidad identitario, y un problema empresarial puede estar provocado por una dependencia personal. Optimizar cada nivel por separado puede producir un sistema globalmente peor.
+        </p>
+        <p class="lead">
+          Y no termina en una tesis. El anexo convierte el marco en un mecanismo recurrente de diagnóstico: ocho tests, la matriz de nueve celdas, una secuencia de construcción, un ritual de revisión, cuarenta y seis preguntas, un glosario y una guía de aplicación.
+        </p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="matrix-wrap">
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th></th>
+              <th>SER · Persona</th>
+              <th>HACER · Obra</th>
+              <th>TENER · Patrimonio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Estructura</th>
+              <td>Identidad anclada</td>
+              <td>Arquitectura real</td>
+              <td>Sistema patrimonial</td>
+            </tr>
+            <tr>
+              <th>Propósito</th>
+              <td>Dirección</td>
+              <td>Razón de la obra</td>
+              <td>Función del patrimonio</td>
+            </tr>
+            <tr>
+              <th>Adaptación</th>
+              <td>Metanoia</td>
+              <td>Inteligencia adaptativa</td>
+              <td>Antifragilidad</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="matrix-note">
+        La estructura estabiliza. El propósito dirige. La adaptación sostiene. Cruzadas con los tres niveles, estas tres dimensiones producen una matriz que no clasifica: detecta incoherencias que un análisis por áreas no alcanza a ver.
+      </p>
+    </div>
+
+    <div class="pull reveal">
+      El margen convierte una obligación en una elección.
+      <span>No es prudencia, ni dinero improductivo, ni capacidad ociosa. Es capacidad de decisión preservada para cuando las condiciones dejan de ser favorables.</span>
+    </div>
+
+    <div class="reveal">
+      <h3 class="eco-name" style="font-size:22px;">El decálogo</h3>
+      <ol class="decalogo">
+        <li>No construyas suponiendo que las condiciones actuales permanecerán.</li>
+        <li>No intentes predecir el futuro; reduce tu dependencia de acertarlo.</li>
+        <li>Construye primero la persona, después la obra, después el patrimonio.</li>
+        <li>No permitas que tu identidad dependa de aquello que puede desaparecer.</li>
+        <li>Convierte el talento en arquitectura.</li>
+        <li>Convierte el patrimonio en sistema, no en colección.</li>
+        <li>Construye capacidad antes de necesitarla.</li>
+        <li>Haz que cada crisis produzca aprendizaje estructural.</li>
+        <li>Sé flexible en los métodos y deliberado en los principios.</li>
+        <li>No te limites a adaptarte al cambio: desarrolla capacidad para influir sobre aquello que puedes transformar.</li>
+      </ol>
+
+      <a class="paper-dl" href="downloads/ineXorable.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_inexorable_es_seccion'})">
+        <span class="dl-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+        Descargar el libro (PDF)
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="podcast">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">III</span>
+      <div>
+        <h2 class="sec-title">El <em>podcast</em></h2>
+        <p class="sec-sub">Donde el pensamiento se explora en voz alta: investigación, preguntas abiertas y conversaciones necesarias.</p>
+      </div>
+    </div>
+
+    <div class="pod-grid reveal">
+      <div class="pod-art">
+        <img src="inexorable-podcast.png" alt="Logotipo del podcast ineXorable" width="190" height="190" loading="lazy">
+      </div>
+      <div class="pod-body">
+        <div class="status"><span class="dot"></span>Primeros episodios por estrenarse</div>
+        <p class="lead">
+          El podcast no parte de un tema: parte de una pregunta que vale la pena pensar. La mayoría de los episodios son en solitario —Mario investiga, narra, conecta y desarrolla una idea hasta sus consecuencias—. Una proporción menor incorpora invitados, seleccionados no por notoriedad sino por lo que permiten pensar. <strong>Mario es la constante; los invitados son las variables.</strong>
+        </p>
+        <p class="lead">
+          Se estructura en temporadas conceptuales, no en calendario. Cada temporada reúne preguntas alrededor de una misma tensión y funciona como una unidad de exploración, con pausas deliberadas entre una y otra. No publicar para llenar un calendario es un principio editorial, no una excusa.
+        </p>
+        <p class="lead">
+          Cada episodio debe dejar algo que sobreviva al episodio: una manera distinta de mirar algo que ya conocías, una pregunta que antes no tenías y una posibilidad de acción que no estabas viendo.
+        </p>
+        <a class="btn btn-primary" style="margin-top:28px;" href="https://www.youtube.com/@ineXorable-mx" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'outbound','event_label':'youtube_inexorable_seccion'})">Suscribirse en YouTube</a>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <h3 class="eco-name" style="font-size:20px;margin-top:56px;">Lo que ineXorable no es</h3>
+      <ul class="notlist">
+        <li>Un noticiero. La actualidad es materia prima, no identidad.</li>
+        <li>Un podcast de predicciones. No promete acertar el futuro.</li>
+        <li>Motivación o autoayuda.</li>
+        <li>Un podcast de entrevistas. El invitado sirve a una pregunta.</li>
+        <li>Un podcast de celebridades o gurús.</li>
+        <li>Opiniones rápidas y recetas universales.</li>
+      </ul>
+      <p class="lens-foot">
+        ineXorable no existe para decirte qué pensar. Existe para ayudarte a pensar mejor cuando lo que creías ya no funciona.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="conferencias">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">IV</span>
+      <div>
+        <h2 class="sec-title">Las <em>conferencias</em></h2>
+        <p class="sec-sub">La expresión en vivo: donde el pensamiento se condensa para producir un cambio de perspectiva en la sala.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        Una conferencia ineXorable no entrega información ni entusiasmo. Entrega una experiencia intelectual diseñada para que la audiencia vea de otra manera algo que creía conocer. La medida no es el aplauso ni cuánto contenido se recuerda: es si algo cambió en la forma de interpretar la realidad y, a partir de ahí, aumentó la capacidad de decidir y actuar.
+      </p>
+      <p class="lead">
+        La audiencia no se define por industria ni por puesto, sino por su relación con lo que está construyendo: líderes, empresarios, ejecutivos, equipos y organizaciones que atraviesan una transformación y tienen responsabilidad sobre recursos, decisiones u otras personas.
+      </p>
+    </div>
+
+    <div class="pull reveal">
+      No vengo a decirte qué va a pasar. Vengo a ayudarte a pensar qué hacer cuando cambie lo que creías estable.
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        Idealmente, cada pieza deja tres cosas: <strong>una idea que recuerdes, una pregunta que permanezca y una posibilidad de acción que antes no veías.</strong> Una misma idea puede existir en distintas duraciones, pero no se recorta ni se alarga: cada formato tiene su propia arquitectura.
+      </p>
+
+      <div class="fmt-list">
+        <div class="fmt-row">
+          <div class="fmt-left">
+            <div class="fmt-name">Microtalk</div>
+            <p class="fmt-desc">Una idea, una tensión, un giro y una apertura. Para foros, universidades y eventos con varios ponentes.</p>
+          </div>
+          <div class="fmt-dur">15 – 25 min</div>
+        </div>
+        <div class="fmt-row">
+          <div class="fmt-left">
+            <div class="fmt-name">Talk</div>
+            <p class="fmt-desc">Formato base y versátil. Permite construir una tesis completa sin convertirse en una clase.</p>
+          </div>
+          <div class="fmt-dur">30 – 45 min</div>
+        </div>
+        <div class="fmt-row">
+          <div class="fmt-left">
+            <div class="fmt-name">Keynote</div>
+            <p class="fmt-desc">El formato insignia. Desarrolla una experiencia intelectual completa, de la ruptura inicial hasta la agencia.</p>
+          </div>
+          <div class="fmt-dur">45 – 60 min</div>
+        </div>
+        <div class="fmt-row">
+          <div class="fmt-left">
+            <div class="fmt-name">Masterclass</div>
+            <p class="fmt-desc">Sesión extendida con interacción, casos, ejercicios y aplicación de los frameworks del libro.</p>
+          </div>
+          <div class="fmt-dur">75 – 120 min</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <h3 class="eco-name" style="font-size:20px;margin-top:56px;">Lo que nunca será</h3>
+      <ul class="notlist">
+        <li>Una charla motivacional.</li>
+        <li>Una conferencia corporativa genérica de liderazgo e innovación.</li>
+        <li>Una clase académica.</li>
+        <li>Un desfile de datos.</li>
+        <li>Una predicción del futuro.</li>
+        <li>Una autobiografía.</li>
+      </ul>
+      <p class="lens-foot">
+        El podcast puede partir de un tema. La conferencia debe encontrar una tensión.
+      </p>
+    </div>
+
+    <div class="reveal">
+      <h3 class="eco-name" style="font-size:20px;margin-top:56px;">Agendar una conferencia</h3>
+      <p class="sec-sub" style="margin-top:10px;">Disponible en español y en inglés, presencial y en línea.</p>
+      <div class="contact-grid">
+        <a class="contact-item" href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp_mgx1'})">
+          <div class="cicon">TW</div>
+          <div>
+            <div class="clabel">Teléfono &amp; WhatsApp</div>
+            <div class="cvalue">+52 (81) 2513 6784</div>
+          </div>
+        </a>
+        <a class="contact-item" href="mailto:mario@metanoiagroup.vip?subject=Conferencia%20ineXorable" onclick="gtag('event','click',{'event_category':'contact','event_label':'email_mgx1'})">
+          <div class="cicon">@</div>
+          <div>
+            <div class="clabel">Correo</div>
+            <div class="cvalue">mario@metanoiagroup.vip</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="espejo">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">V</span>
+      <div>
+        <h2 class="sec-title">La misma pregunta, en otro <em>registro</em></h2>
+        <p class="sec-sub">ineXorable tiene una obra hermana. Misma arquitectura, misma tríada, una orientación distinta.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        ineXorable trabaja sobre la capacidad: cómo construir margen, reducir dependencias y conservar la posibilidad de elegir cuando las condiciones dejan de cooperar. Pero hay una pregunta que ese marco, por sí solo, no puede responder: <strong>construir esa capacidad, ¿para qué y para quién?</strong>
+      </p>
+      <p class="lead">
+        Esa es la pregunta de <em>Hágase Tu Voluntad</em>: el mismo sistema —libro, podcast y conferencias— ordenado desde la fe católica. Donde ineXorable dice <em>no dependas de acertar el futuro</em>, la obra hermana añade <em>ordenar antes de optimizar</em>: antes de hacer algo mejor, más rápido o más grande, preguntar si corresponde hacerlo.
+      </p>
+    </div>
+
+    <a class="mirror reveal" href="mgy1.html">
+      <div class="mirror-name">Hágase Tu Voluntad</div>
+      <p class="mirror-desc">
+        Cómo ordenar una sola vida: la persona, la vocación, las obras y aquello que se nos ha confiado. Libro, podcast y conferencias.
+      </p>
+      <div class="mirror-go">Entrar <span class="arrow">&rarr;</span></div>
+    </a>
+  </div>
+</section>
+
+<section id="enlaces">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">VI</span>
+      <div>
+        <h2 class="sec-title">Enlaces <em>relevantes</em></h2>
+        <p class="sec-sub">El resto del ecosistema.</p>
+      </div>
+    </div>
+
+    <div class="eco-grid reveal">
+      <a class="eco-card" href="mgx2.html">
+        <div class="eco-code">Idioma</div>
+        <div class="eco-name">ineXorable in English</div>
+        <p class="eco-desc">Esta misma página, en inglés.</p>
+        <div class="eco-url">mgx2 <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="eco-card" href="mgl1.html">
+        <div class="eco-code">Personal</div>
+        <div class="eco-name">Mario Garza Livas</div>
+        <p class="eco-desc">Landing page personal: contacto, documentos y el resto de los proyectos.</p>
+        <div class="eco-url">mgl1 <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="eco-card full" href="https://metanoiagroup.vip/" target="_blank" rel="noopener">
+        <div class="eco-code">Firma</div>
+        <div class="eco-name">The Metanoia Group</div>
+        <p class="eco-desc">Arquitectura de antifragilidad para el líder, su empresa y su patrimonio.</p>
+        <div class="eco-url">metanoiagroup.vip <span class="arrow">&rarr;</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-brand">ine<span class="x">X</span>orable</div>
+    <div class="footer-tagline">Ideas para un mundo que cambia.</div>
+    <div class="footer-role"><strong>Mario Garza Livas</strong> — Autor · Conductor · Conferencista</div>
+    <div class="footer-contacts">
+      <a href="mailto:mario@metanoiagroup.vip">mario@metanoiagroup.vip</a>
+      <a href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp_footer_mgx1'})">+52 (81) 2513 6784</a>
+      <a href="https://www.youtube.com/@ineXorable-mx" target="_blank" rel="noopener">youtube.com/@ineXorable-mx</a>
+    </div>
+    <div class="footer-bottom">
+      <span class="copyright">© 2026 The Metanoia Group</span>
+      <a class="footer-en" href="mgx2.html">English Version &rarr;</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const topbar = document.querySelector('nav.topbar');
+  const syncNavHeight = () => document.documentElement.style.setProperty('--nav-h', topbar.offsetHeight + 'px');
+  syncNavHeight();
+  if(window.ResizeObserver){ new ResizeObserver(syncNavHeight).observe(topbar); }
+  else { window.addEventListener('resize', syncNavHeight); }
+
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.12});
+  els.forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>

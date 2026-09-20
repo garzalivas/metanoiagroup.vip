@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="new_favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hágase Tu Voluntad (Thy Will Be Done) — Mario Garza Livas</title>
+<meta name="description" content="Hágase Tu Voluntad — Mario Garza Livas. Book, podcast and talks on how to order a single life: the person, the calling, the work and what has been entrusted to us. Faith, reason and action.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Hágase Tu Voluntad (Thy Will Be Done) — Mario Garza Livas">
+<meta property="og:description" content="Faith. Reality. Action. One life, one direction, one question: am I doing His will?">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="The Metanoia Group">
+<meta property="og:image" content="https://metanoiagroup.vip/og-image-2.jpg">
+<meta property="og:url" content="https://metanoiagroup.vip/MGY2">
+<link rel="alternate" hreflang="es" href="https://metanoiagroup.vip/mgy1.html">
+<link rel="alternate" hreflang="en" href="https://metanoiagroup.vip/mgy2.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff;
+    --bg-alt:#f7f8fa;
+    --bg-card:#e9edf3;
+    --text:#14213d;
+    --text-dim:#9aa0ae;
+    --text-muted:#5d6479;
+    --accent:#2a5fa8;
+    --accent-dim:#8ea6c6;
+    --accent-deep:#16305c;
+    --trace:#b3201f;
+    --line:#14213d17;
+    --line-strong:#14213d26;
+    --serif:'Fraunces', Georgia, 'Times New Roman', serif;
+    --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --maxw:920px;
+    --nav-h:62px;
+    --anchor-gap:24px;
+    --sec-pad:86px;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;background:var(--bg);}
+
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  a{color:inherit;text-decoration:none;}
+
+  ::selection{background:#2a5fa826;color:var(--text);}
+
+  a:focus-visible, button:focus-visible{
+    outline:1.5px solid var(--accent);
+    outline-offset:4px;
+  }
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;}
+
+  /* ---------- NAV ---------- */
+  nav.topbar{
+    position:sticky;top:0;
+    background:#ffffffd9;
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+    z-index:50;
+  }
+  nav.topbar .inner{
+    max-width:var(--maxw);margin:0 auto;padding:18px 28px;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:14px;flex-wrap:wrap;
+  }
+  .brandmark{
+    font-family:var(--serif);
+    font-size:15px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--text);
+    font-weight:500;
+  }
+  .brandmark .tu{color:var(--trace);}
+  .brandmark span{
+    color:var(--text-muted);font-weight:400;
+    letter-spacing:.06em;text-transform:none;font-family:var(--sans);font-size:13px;
+  }
+  .nav-links{display:flex;gap:24px;align-items:center;flex-wrap:wrap;}
+  .nav-links a{
+    font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--text-muted);
+    transition:color .25s ease;
+    white-space:nowrap;
+  }
+  .nav-links a:hover{color:var(--accent);}
+  .nav-links a.pill{
+    border:1px solid var(--line-strong);
+    padding:6px 12px;
+    border-radius:2px;
+  }
+  .nav-links a.pill:hover{border-color:var(--accent);}
+  .nav-links a.pill.secular:hover{border-color:var(--trace);color:var(--trace);}
+
+  /* ---------- HERO ---------- */
+  header.hero{
+    padding:104px 0 88px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-logo{
+    display:block;
+    width:min(400px, 84vw);
+    height:auto;
+    mix-blend-mode:multiply;
+    margin:-30px 0 24px -14px;
+    opacity:0;
+    animation:fadeUp .9s ease .05s forwards;
+  }
+  h1.name{
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:clamp(34px, 5.6vw, 56px);
+    line-height:1.12;
+    letter-spacing:-.015em;
+    max-width:18ch;
+    opacity:0;
+    animation:fadeUp .9s ease .2s forwards;
+  }
+  h1.name .turn{color:var(--accent);font-style:italic;}
+
+  p.lede{
+    margin-top:28px;
+    font-size:clamp(15px,2vw,17.5px);
+    color:var(--text-muted);
+    max-width:62ch;
+    line-height:1.75;
+    font-weight:300;
+    opacity:0;
+    animation:fadeUp .9s ease .34s forwards;
+  }
+
+  .triad-bar{
+    margin-top:34px;
+    display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+    font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);
+    opacity:0;
+    animation:fadeUp .9s ease .46s forwards;
+  }
+  .triad-bar .slash{color:var(--accent-dim);}
+  .triad-bar a:hover{color:var(--accent);}
+
+  .hero-cta{
+    margin-top:42px;
+    display:flex;gap:14px;flex-wrap:wrap;
+    opacity:0;
+    animation:fadeUp .9s ease .58s forwards;
+  }
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:14px 24px;
+    font-size:12.5px;letter-spacing:.09em;text-transform:uppercase;
+    border-radius:2px;
+    transition:all .25s ease;
+  }
+  .btn-primary{
+    background:var(--accent-deep);color:#ffffff;font-weight:600;
+  }
+  .btn-primary:hover{background:var(--accent);transform:translateY(-1px);}
+  .btn-ghost{
+    border:1px solid var(--line-strong);color:var(--text);
+  }
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+
+  @keyframes fadeUp{
+    from{opacity:0;transform:translateY(16px);}
+    to{opacity:1;transform:translateY(0);}
+  }
+
+  /* ---------- SECTION SHELL ---------- */
+  section{
+    padding:var(--sec-pad) 0;
+    scroll-margin-top:max(0px, calc(var(--nav-h) + var(--anchor-gap) - var(--sec-pad)));
+    border-top:1px solid var(--line);
+    position:relative;
+  }
+  .sec-head{
+    display:flex;align-items:baseline;gap:18px;margin-bottom:48px;
+  }
+  .sec-num{
+    font-family:var(--serif);font-style:italic;font-size:15px;color:var(--accent-dim);
+    letter-spacing:.05em;flex:none;
+  }
+  h2.sec-title{
+    font-family:var(--serif);font-weight:400;font-size:clamp(26px,3.4vw,36px);
+    letter-spacing:-.01em;
+  }
+  h2.sec-title em{font-style:italic;color:var(--accent);font-weight:400;}
+  .sec-sub{
+    color:var(--text-muted);font-size:14.5px;font-weight:300;max-width:56ch;margin-top:14px;line-height:1.7;
+  }
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease, transform .8s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  p.lead{
+    font-size:15.5px;line-height:1.8;color:var(--text-muted);font-weight:300;
+    max-width:72ch;
+  }
+  p.lead + p.lead{margin-top:18px;}
+  p.lead strong{color:var(--text);font-weight:500;}
+
+  /* ---------- PULL QUOTE ---------- */
+  .pull{
+    margin:40px 0;
+    border-left:2px solid var(--accent);
+    padding:6px 0 6px 26px;
+    font-family:var(--serif);
+    font-size:clamp(18px,2.6vw,23px);
+    line-height:1.5;
+    color:var(--text);
+    font-weight:400;
+    max-width:46ch;
+  }
+  .pull span{display:block;color:var(--text-muted);font-style:italic;font-size:.72em;margin-top:12px;}
+
+  /* ---------- HIERARCHY CHAIN ---------- */
+  .chain{
+    margin-top:40px;
+    border:1px solid var(--line-strong);
+    background:var(--bg-alt);
+    padding:30px 34px;
+    display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;
+    font-family:var(--serif);font-size:16px;
+  }
+  .chain .node{color:var(--text);}
+  .chain .node:first-child{color:var(--accent);font-style:italic;}
+  .chain .link{color:var(--accent-dim);font-size:13px;}
+  .chain-note{
+    margin-top:16px;font-size:12.5px;color:var(--text-dim);font-weight:300;line-height:1.7;max-width:64ch;
+  }
+
+  /* ---------- LENS LIST ---------- */
+  .lens{margin-top:38px;border-top:1px solid var(--line-strong);}
+  .lens li{
+    list-style:none;
+    border-bottom:1px solid var(--line-strong);
+    padding:18px 4px;
+    display:flex;align-items:baseline;gap:18px;
+    font-size:16px;
+    font-family:var(--serif);
+    font-weight:400;
+  }
+  .lens li .mark{
+    color:var(--accent-dim);font-style:italic;font-size:13px;flex:none;width:22px;
+  }
+  .lens-foot{
+    margin-top:22px;font-size:13.5px;color:var(--text-muted);font-weight:300;line-height:1.75;max-width:64ch;
+  }
+
+  /* ---------- STATS ---------- */
+  .stat-row{
+    display:grid;grid-template-columns:repeat(4,1fr);
+    gap:1px;background:var(--line-strong);
+    border:1px solid var(--line-strong);
+    margin-top:46px;
+  }
+  .stat-item{background:var(--bg-alt);padding:26px 20px;text-align:center;}
+  .stat-num{font-family:var(--serif);font-size:32px;color:var(--accent);font-weight:400;line-height:1;}
+  .stat-label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin-top:10px;line-height:1.5;}
+  @media (max-width:640px){
+    .stat-row{grid-template-columns:repeat(2,1fr);}
+  }
+
+  /* ---------- BOOK ---------- */
+  .book-grid{display:flex;gap:44px;align-items:flex-start;}
+  .book-cover{flex:none;width:236px;}
+  .book-cover img{
+    display:block;width:100%;height:auto;
+    border:1px solid var(--line-strong);
+    border-radius:3px;
+  }
+  .book-meta{
+    margin-top:16px;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--text-muted);line-height:1.8;
+  }
+  .book-body{flex:1;min-width:0;}
+  .book-sub{
+    font-family:var(--serif);font-style:italic;font-size:18px;color:var(--text);
+    line-height:1.5;margin-bottom:24px;max-width:38ch;
+  }
+  @media (max-width:760px){
+    .book-grid{flex-direction:column;gap:32px;}
+    .book-cover{width:200px;align-self:center;}
+  }
+
+  /* ---------- SEQUENCE ---------- */
+  .seq{
+    margin-top:40px;
+    counter-reset:seq;
+    display:grid;grid-template-columns:1fr 1fr;
+    gap:1px;background:var(--line-strong);
+    border:1px solid var(--line-strong);
+  }
+  .seq li{
+    list-style:none;
+    counter-increment:seq;
+    background:var(--bg-alt);
+    padding:22px 24px;
+    display:flex;gap:16px;align-items:baseline;
+  }
+  .seq li::before{
+    content:counter(seq,decimal-leading-zero);
+    font-family:var(--serif);font-style:italic;font-size:12.5px;color:var(--accent-dim);
+    flex:none;
+  }
+  .seq .step-name{font-family:var(--serif);font-size:17px;color:var(--text);display:block;}
+  .seq .step-desc{font-size:13px;color:var(--text-muted);font-weight:300;line-height:1.6;margin-top:5px;display:block;}
+  @media (max-width:640px){
+    .seq{grid-template-columns:1fr;}
+  }
+
+  /* ---------- DOWNLOAD BUTTON ---------- */
+  .paper-dl{
+    margin-top:34px;
+    display:inline-flex;align-items:center;gap:12px;
+    border:1px solid var(--line-strong);
+    padding:15px 24px;border-radius:2px;
+    font-size:12.5px;letter-spacing:.09em;text-transform:uppercase;
+    transition:all .25s ease;
+  }
+  .paper-dl:hover{border-color:var(--accent);color:var(--accent);}
+  .dl-icon{
+    width:34px;height:34px;border-radius:50%;flex:none;
+    border:1px solid var(--line-strong);
+    display:flex;align-items:center;justify-content:center;
+    transition:all .25s ease;
+  }
+  .dl-icon svg{width:14px;height:14px;stroke:var(--text-muted);fill:none;transition:stroke .25s ease;}
+  .paper-dl:hover .dl-icon{border-color:var(--accent);background:var(--accent);}
+  .paper-dl:hover .dl-icon svg{stroke:#ffffff;}
+
+  /* ---------- PODCAST ---------- */
+  .pod-grid{display:flex;gap:44px;align-items:flex-start;}
+  .pod-art{flex:none;width:190px;}
+  .pod-art img{display:block;width:100%;height:auto;border-radius:50%;mix-blend-mode:multiply;}
+  .pod-body{flex:1;min-width:0;}
+  .status{
+    display:inline-flex;align-items:center;gap:10px;
+    border:1px solid var(--accent-dim);
+    padding:8px 16px;border-radius:2px;
+    font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);
+    margin-bottom:24px;
+  }
+  .status .dot{
+    width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none;
+  }
+  @media (max-width:760px){
+    .pod-grid{flex-direction:column;gap:30px;}
+    .pod-art{width:160px;align-self:center;}
+  }
+
+  /* ---------- ECO GRID ---------- */
+  .eco-grid{
+    display:grid;grid-template-columns:repeat(2,1fr);
+    gap:1px;background:var(--line-strong);
+    border:1px solid var(--line-strong);
+    margin-top:40px;
+  }
+  .eco-card{
+    background:var(--bg-alt);
+    padding:30px 28px;
+    display:block;
+    transition:background .3s ease;
+  }
+  a.eco-card:hover{background:var(--bg-card);}
+  .eco-code{
+    font-family:var(--serif);font-style:italic;font-size:13px;color:var(--accent);
+    letter-spacing:.05em;
+  }
+  .eco-name{
+    font-family:var(--serif);font-size:20px;margin-top:10px;font-weight:400;line-height:1.3;
+  }
+  .eco-desc{
+    color:var(--text-muted);font-size:13.5px;margin-top:10px;line-height:1.65;font-weight:300;
+  }
+  .eco-url{
+    margin-top:18px;font-size:11px;letter-spacing:.08em;color:var(--accent-dim);
+    display:flex;align-items:center;gap:8px;
+  }
+  a.eco-card:hover .eco-url{color:var(--accent);}
+  .eco-url .arrow{transition:transform .25s ease;}
+  a.eco-card:hover .eco-url .arrow{transform:translateX(4px);}
+  .eco-card.full{grid-column:span 2;}
+  @media (max-width:640px){
+    .eco-grid{grid-template-columns:1fr;}
+    .eco-card.full{grid-column:span 1;}
+  }
+
+  /* ---------- FORMATS ---------- */
+  .fmt-list{margin-top:40px;border-top:1px solid var(--line-strong);}
+  .fmt-row{
+    display:flex;align-items:baseline;justify-content:space-between;gap:24px;
+    padding:24px 4px;border-bottom:1px solid var(--line-strong);
+  }
+  .fmt-left{min-width:0;}
+  .fmt-name{font-family:var(--serif);font-size:19px;font-weight:400;}
+  .fmt-desc{color:var(--text-muted);font-size:13.5px;margin-top:6px;font-weight:300;line-height:1.6;max-width:56ch;}
+  .fmt-dur{
+    flex:none;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);
+    white-space:nowrap;
+  }
+  @media (max-width:600px){
+    .fmt-row{flex-direction:column;gap:10px;}
+  }
+
+  /* ---------- DISTINCTIONS ---------- */
+  .dist{
+    margin-top:40px;
+    display:grid;grid-template-columns:repeat(2,1fr);
+    gap:1px;background:var(--line-strong);
+    border:1px solid var(--line-strong);
+  }
+  .dist li{
+    list-style:none;background:var(--bg-alt);
+    padding:20px 24px;
+    font-family:var(--serif);font-size:16.5px;color:var(--text);
+    display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;
+  }
+  .dist .neq{color:var(--accent);font-style:italic;font-size:14px;}
+  @media (max-width:640px){.dist{grid-template-columns:1fr;}}
+
+  /* ---------- NOT-LIST ---------- */
+  .notlist{margin-top:36px;display:grid;grid-template-columns:1fr 1fr;gap:12px 32px;}
+  .notlist li{
+    list-style:none;font-size:14px;color:var(--text-muted);font-weight:300;
+    padding-left:20px;position:relative;line-height:1.6;
+  }
+  .notlist li::before{
+    content:'';position:absolute;left:0;top:10px;
+    width:9px;height:1px;background:var(--accent-dim);
+  }
+  @media (max-width:640px){.notlist{grid-template-columns:1fr;}}
+
+  /* ---------- MIRROR (trace of the X) ---------- */
+  .mirror{
+    border:1px solid var(--line-strong);
+    background:var(--bg-alt);
+    padding:44px 40px;
+    display:block;
+    transition:border-color .3s ease, background .3s ease;
+  }
+  .mirror:hover{border-color:var(--trace);background:var(--bg-card);}
+  .mirror-name{font-family:var(--serif);font-size:clamp(24px,3.4vw,32px);font-weight:400;line-height:1.2;}
+  .mirror-name .x{color:var(--trace);}
+  .mirror-desc{color:var(--text-muted);font-size:14.5px;margin-top:18px;line-height:1.75;font-weight:300;max-width:62ch;}
+  .mirror-go{
+    margin-top:26px;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--trace);
+    display:flex;align-items:center;gap:9px;
+  }
+  .mirror-go .arrow{transition:transform .25s ease;}
+  .mirror:hover .mirror-go .arrow{transform:translateX(5px);}
+  @media (max-width:640px){.mirror{padding:32px 26px;}}
+
+  /* ---------- CONTACT ---------- */
+  .contact-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:1px;
+    background:var(--line-strong);border:1px solid var(--line-strong);
+    margin-top:40px;
+  }
+  .contact-item{
+    background:var(--bg-alt);padding:26px 28px;
+    display:flex;align-items:center;gap:18px;
+    transition:background .25s ease;
+  }
+  .contact-item:hover{background:var(--bg-card);}
+  .cicon{
+    flex:none;width:42px;height:42px;border-radius:50%;
+    border:1px solid var(--line-strong);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--serif);font-style:italic;font-size:13px;color:var(--accent);
+    transition:border-color .25s ease;
+  }
+  .contact-item:hover .cicon{border-color:var(--accent);}
+  .clabel{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);}
+  .cvalue{font-size:15px;margin-top:4px;word-break:break-word;transition:color .2s ease;}
+  .contact-item:hover .cvalue{color:var(--accent);}
+  @media (max-width:640px){.contact-grid{grid-template-columns:1fr;}}
+
+  /* ---------- FOOTER ---------- */
+  footer{padding:70px 0 46px;border-top:1px solid var(--line);}
+  .footer-brand{
+    font-family:var(--serif);font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--text);font-weight:500;
+  }
+  .footer-brand .tu{color:var(--trace);}
+  .footer-tagline{
+    font-family:var(--serif);font-style:italic;font-size:17px;color:var(--text-muted);margin-top:12px;
+  }
+  .footer-role{margin-top:24px;font-size:13px;color:var(--text-muted);}
+  .footer-role strong{color:var(--text);font-weight:500;}
+  .footer-contacts{
+    margin-top:10px;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--text-muted);
+  }
+  .footer-contacts a:hover{color:var(--accent);}
+  .footer-admg-rule{width:28px;height:1px;background:var(--accent-dim);margin-top:34px;}
+  .footer-admg{
+    margin-top:16px;font-family:var(--serif);font-style:italic;font-size:13.5px;
+    color:var(--accent);letter-spacing:.02em;
+  }
+  .footer-bottom{
+    margin-top:40px;padding-top:22px;border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;
+  }
+  .copyright{font-size:11.5px;color:var(--text-dim);letter-spacing:.04em;}
+  .footer-en{
+    font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);
+    border:1px solid var(--line-strong);padding:7px 14px;border-radius:2px;
+  }
+  .footer-en:hover{color:var(--accent);border-color:var(--accent);}
+
+  @media (max-width:640px){
+    header.hero{padding:56px 0 60px;}
+    section{--sec-pad:60px;}
+    nav.topbar .inner{padding:16px 20px;}
+    .nav-links{gap:12px 16px;width:100%;}
+    .nav-links a{font-size:11px;}
+    .brandmark{font-size:13px;}
+    .hero-logo{margin-left:0;}
+    .footer-bottom{flex-direction:column;align-items:flex-start;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}
+  }
+</style>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hágase Tu Voluntad (Thy Will Be Done) — Mario Garza Livas">
+<meta name="twitter:description" content="Faith. Reality. Action. One life, one direction, one question: am I doing His will?">
+<meta name="twitter:image" content="https://metanoiagroup.vip/og-image-2.jpg">
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KHNZVPJX1N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KHNZVPJX1N');
+</script>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="inner">
+    <div class="brandmark">Hágase <span class="tu">Tu</span> Voluntad <span>· Mario Garza Livas</span></div>
+    <div class="nav-links">
+      <a href="#vision">The vision</a>
+      <a href="#book">Book</a>
+      <a href="#podcast">Podcast</a>
+      <a href="#talks">Talks</a>
+      <a class="pill secular" href="mgx2.html">ineXorable</a>
+      <a class="pill" href="mgy1.html">ES</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="hero-logo" src="hagase-logo.png" alt="Hágase Tu Voluntad — faith, reality, action" width="400" height="200">
+    <h1 class="name">One life.<br>One direction.<br><span class="turn">One question.</span></h1>
+    <p class="lede">
+      We don't have one life for faith and another for work, one for family and another for money. We are one person living one life. <em>Hágase Tu Voluntad</em> — Thy Will Be Done — is about ordering that life whole, around a single question: am I doing His will?
+    </p>
+    <div class="triad-bar">
+      <a href="#book">Book</a><span class="slash">/</span><a href="#podcast">Podcast</a><span class="slash">/</span><a href="#talks">Talks</a>
+    </div>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="downloads/Hagase_Tu_Voluntad.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_hagase_en'})">Download the book</a>
+      <a class="btn btn-ghost" href="https://www.youtube.com/@Hagase-Tu-Voluntad" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'outbound','event_label':'youtube_hagase_en'})">Watch the podcast</a>
+      <a class="btn btn-ghost" href="#talks">Invite Mario to speak</a>
+    </div>
+  </div>
+</header>
+
+<section id="vision">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">I</span>
+      <div>
+        <h2 class="sec-title">From fragmentation to <em>integration</em></h2>
+        <p class="sec-sub">What this work is, where it looks from, and why it proposes adding nothing to your life.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        The diagnosis behind the whole project is <strong>fragmentation</strong>. A person can work with excellence, earn money honestly, build a successful company, care for a family and practise their faith — and still live in structural disorder. Not because of obviously bad decisions, but because each sphere is governed by a different logic: work by performance, wealth by maximization, the company by growth, leadership by control, the spiritual life by devotion. The problem isn't an absence of good convictions. It's that the convictions don't govern existence as one.
+      </p>
+      <p class="lead">
+        So the proposal isn't to add one more dimension. Not to bring spirituality into work, or values into leadership, or ethics into finance: those additions leave the fracture untouched, because they still assume there are two worlds. <strong>The alternative is more demanding: that there be one life and therefore one orientation.</strong>
+      </p>
+      <p class="lead">
+        Integration is not balance. It doesn't mean giving every area equal time, or treating every dimension as equally weighty. It means they all answer to one hierarchy. And that hierarchy doesn't remove conflict: it orders it. It doesn't remove uncertainty: it lets you cross it. It doesn't remove sacrifice: it gives it meaning. It doesn't reduce responsibility: it deepens it.
+      </p>
+
+      <div class="chain">
+        <span class="node">God</span><span class="link">&rarr;</span>
+        <span class="node">Person</span><span class="link">&rarr;</span>
+        <span class="node">Vocation</span><span class="link">&rarr;</span>
+        <span class="node">Work</span><span class="link">&rarr;</span>
+        <span class="node">Leadership and company</span><span class="link">&rarr;</span>
+        <span class="node">Wealth</span><span class="link">&rarr;</span>
+        <span class="node">Common good</span>
+      </div>
+      <p class="chain-note">
+        Each level takes its meaning from the one before it and must not subordinate it. This isn't about choosing between God, family, work, company and wealth as though they were independent compartments, but about understanding what place each one holds within the whole.
+      </p>
+    </div>
+
+    <div class="pull reveal">
+      Order before you optimize.
+      <span>Before doing something better, faster or bigger, ask whether it should be done at all.</span>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        The vision is expressed through three vehicles. <strong>The book founds</strong> it, giving it structure and permanence. <strong>The podcast develops</strong> the living thought and puts it in conversation with reality. <strong>The talk meets</strong>: it concentrates, confronts and brings the vision into direct contact with real people. One vision, three vehicles, one question.
+      </p>
+    </div>
+
+    <div class="stat-row reveal">
+      <div class="stat-item">
+        <div class="stat-num">3</div>
+        <div class="stat-label">Vehicles</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">7</div>
+        <div class="stat-label">Territories</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">6</div>
+        <div class="stat-label">Steps in the method</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">1</div>
+        <div class="stat-label">Question</div>
+      </div>
+    </div>
+
+    <div class="eco-grid reveal">
+      <div class="eco-card">
+        <div class="eco-code">Territory</div>
+        <div class="eco-name">Person</div>
+        <p class="eco-desc">Identity, dignity, character, virtue, freedom, interior life, discipline, success, failure and suffering.</p>
+      </div>
+      <div class="eco-card">
+        <div class="eco-code">Territory</div>
+        <div class="eco-name">Vocation</div>
+        <p class="eco-desc">Purpose, calling, capabilities, ambition, profession, discernment, mission and renunciation.</p>
+      </div>
+      <div class="eco-card">
+        <div class="eco-code">Territory</div>
+        <div class="eco-name">Work and deeds</div>
+        <p class="eco-desc">Profession, excellence, productivity, entrepreneurship, creation, service and responsibility.</p>
+      </div>
+      <div class="eco-card">
+        <div class="eco-code">Territory</div>
+        <div class="eco-name">Leadership, authority and company</div>
+        <p class="eco-desc">Power, teams, culture, growth, governance, incentives and responsibility over others.</p>
+      </div>
+      <div class="eco-card">
+        <div class="eco-code">Territory</div>
+        <div class="eco-name">Wealth and possessions</div>
+        <p class="eco-desc">Money, investment, ownership, consumption, risk, inheritance, generosity and stewardship.</p>
+      </div>
+      <div class="eco-card">
+        <div class="eco-code">Territory</div>
+        <div class="eco-name">Culture and the contemporary world</div>
+        <p class="eco-desc">Technology, AI, education, economy, innovation, society, science and transformation.</p>
+      </div>
+      <div class="eco-card full">
+        <div class="eco-code">Territory</div>
+        <div class="eco-name">Service, common good and legacy</div>
+        <p class="eco-desc">Family, community, formation, institutions, transmission, continuity, impact and legacy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">II</span>
+      <div>
+        <h2 class="sec-title">The <em>book</em></h2>
+        <p class="sec-sub">The founding work, where the vision is developed in full. Direct PDF download, free of charge.</p>
+      </div>
+    </div>
+
+    <div class="book-grid reveal">
+      <div class="book-cover">
+        <img src="hagase-portada.png" alt="Cover of Hágase Tu Voluntad, by Mario Garza Livas" width="236" height="354" loading="lazy">
+        <div class="book-meta">
+          Mario Garza Livas<br>
+          PDF · Free download
+        </div>
+      </div>
+      <div class="book-body">
+        <p class="book-sub">How to order a single life: the person, the calling, the work and what has been entrusted to us.</p>
+        <p class="lead">
+          The book draws a line between what a person claims to believe and what actually governs their decisions. The real architecture of a life isn't found in its declarations but in the decisions that carried a cost. So it doesn't ask what you value. It asks <strong>which principle wins when two goods come into conflict.</strong>
+        </p>
+        <p class="lead">
+          Its backbone is a sequence that is not a productivity formula but a claim about the real order of things: <strong>BEING → DOING → HAVING</strong>. The person precedes their work, and their work precedes their possessions. Inverting that order — I have an estate, therefore I am someone; I have a title, therefore I am worth something — places an entire identity on variables that can be lost. The book calls this an extreme concentration of risk.
+        </p>
+        <p class="lead">
+          And it makes no promise that ordering your life will produce more money, more recognition or better outcomes. It warns expressly that it may produce less of all three. It doesn't say «do God's will and things will go better for you». It says something harder: do what is right even when you cannot guarantee the result will favour you.
+        </p>
+      </div>
+    </div>
+
+    <div class="pull reveal">
+      A principle that has never prevented anything was probably written afterwards.
+      <span>The test isn't whether you hold principles, but what you're willing to lose in order not to break them.</span>
+    </div>
+
+    <div class="reveal">
+      <h3 class="eco-name" style="font-size:22px;">The method</h3>
+      <p class="sec-sub" style="margin-top:10px;">The cycle doesn't end: it returns to the beginning. An integrated life isn't about settling once and for all what to do, but about building the capacity to keep returning to the right question.</p>
+      <ol class="seq">
+        <li><div><span class="step-name">Contemplate</span><span class="step-desc">See reality before imposing an interpretation on it.</span></div></li>
+        <li><div><span class="step-name">Discern</span><span class="step-desc">Work out what you're seeing means and what it calls for.</span></div></li>
+        <li><div><span class="step-name">Order</span><span class="step-desc">Establish priorities and hierarchy.</span></div></li>
+        <li><div><span class="step-name">Decide</span><span class="step-desc">Choose, knowing what is left out.</span></div></li>
+        <li><div><span class="step-name">Act</span><span class="step-desc">Turn the decision into conduct.</span></div></li>
+        <li><div><span class="step-name">Surrender</span><span class="step-desc">Recognize the limit of personal control over outcomes.</span></div></li>
+      </ol>
+      <p class="chain-note">
+        Surrender doesn't mean abandoning responsibility. It means separating responsibility from control: doing what is right and then handing over the result, so that legitimate responsibility doesn't turn into a claim to govern reality.
+      </p>
+
+      <a class="paper-dl" href="downloads/Hagase_Tu_Voluntad.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_hagase_en_seccion'})">
+        <span class="dl-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+        Download the book (PDF)
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="podcast">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">III</span>
+      <div>
+        <h2 class="sec-title">The <em>podcast</em></h2>
+        <p class="sec-sub">Catholic formation for the layperson living in the real world: family, work, business, leadership, money, culture and responsibility.</p>
+      </div>
+    </div>
+
+    <div class="pod-grid reveal">
+      <div class="pod-art">
+        <img src="hagase-podcast.png" alt="Hágase Tu Voluntad podcast logo" width="190" height="190" loading="lazy">
+      </div>
+      <div class="pod-body">
+        <div class="status"><span class="dot"></span>First episodes coming soon</div>
+        <p class="lead">
+          Here faith isn't decorative, and it isn't kept apart from life. It is the criterion for deciding, working, leading, administering, exercising authority and guarding what God entrusts. Most episodes are development episodes — Mario thinking out loud about a question that matters — and a smaller share are conversations. <strong>We don't look for interesting guests. We look for necessary conversations.</strong>
+        </p>
+        <p class="lead">
+          It speaks to people who have something to build, something to decide and something to administer, and who are starting to ask for whom and for what they are doing it. Founders, executives, professionals, investors, leaders and anyone carrying real responsibility for others.
+        </p>
+        <p class="lead">
+          The path is that of the disciple who is formed, the apostle who is sent, and the steward who administers responsibly what he has received.
+        </p>
+        <a class="btn btn-primary" style="margin-top:28px;" href="https://www.youtube.com/@Hagase-Tu-Voluntad" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'outbound','event_label':'youtube_hagase_en_seccion'})">Subscribe on YouTube</a>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <h3 class="eco-name" style="font-size:20px;margin-top:56px;">What this podcast is not</h3>
+      <ul class="notlist">
+        <li>Motivation or self-help.</li>
+        <li>A business podcast in Catholic language.</li>
+        <li>A podcast about getting rich.</li>
+        <li>Spirituality disconnected from reality.</li>
+        <li>Apologetics or religious debate.</li>
+        <li>A way of asking God to bless plans already decided.</li>
+      </ul>
+      <p class="lens-foot">
+        It is no substitute for the sacramental life, doctrinal formation, spiritual direction or the life of the Church. It doesn't hand out ready-made certainties: it offers criteria for discernment.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="talks">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">IV</span>
+      <div>
+        <h2 class="sec-title">The <em>talks</em></h2>
+        <p class="sec-sub">The in-person expression: companies, universities, institutions, leadership groups, Catholic communities, congresses and gatherings.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        A Hágase Tu Voluntad talk is not a motivational speech, not a corporate talk in religious language, and not a summary of the book. It is a space for thought, formation and confrontation in which one concrete human reality is looked at from a vision of a whole life ordered to God.
+      </p>
+      <p class="lead">
+        The audience isn't defined by age, profession or income, but by one condition: <strong>responsibility</strong>. The person who has something to build, something to decide and something to administer, and who is beginning to ask for whom and for what they are doing it. The audience changes the point of entry, not the centre.
+      </p>
+    </div>
+
+    <div class="pull reveal">
+      We're not here to teach you how to build the life you want. We're here to help you discover how to order the life God is calling you to build.
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        There are two ways to bring it into a room. <strong>The keynote leads</strong>: defined direction, tighter curation, greater intensity. <strong>The conversation accompanies</strong>: closer and more dialogical, with participation in service of the question. Neither is a lesser version of the other; each is a different relationship with the room.
+      </p>
+
+      <div class="fmt-list">
+        <div class="fmt-row">
+          <div class="fmt-left">
+            <div class="fmt-name">Microtalk</div>
+            <p class="fmt-desc">One question, one tension, one distinction and one invitation. For forums, universities and multi-speaker gatherings.</p>
+          </div>
+          <div class="fmt-dur">15 – 25 min</div>
+        </div>
+        <div class="fmt-row">
+          <div class="fmt-left">
+            <div class="fmt-name">Conversation</div>
+            <p class="fmt-desc">Close and dialogical. Improvisation happens inside a prepared architecture.</p>
+          </div>
+          <div class="fmt-dur">30 – 45 min</div>
+        </div>
+        <div class="fmt-row">
+          <div class="fmt-left">
+            <div class="fmt-name">Keynote</div>
+            <p class="fmt-desc">The flagship format. It moves through question, reality, tension, idea, distinction, order, decision and life.</p>
+          </div>
+          <div class="fmt-dur">45 – 60 min</div>
+        </div>
+        <div class="fmt-row">
+          <div class="fmt-left">
+            <div class="fmt-name">Extended session</div>
+            <p class="fmt-desc">With interaction, cases, exercises and applied work. For leadership teams and formation groups.</p>
+          </div>
+          <div class="fmt-dur">75 – 120 min</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <h3 class="eco-name" style="font-size:20px;margin-top:56px;">The distinctions</h3>
+      <p class="sec-sub" style="margin-top:10px;">What a talk should help separate. Almost all disorder begins by confusing one of these pairs.</p>
+      <ul class="dist">
+        <li>Desire <span class="neq">is not</span> vocation</li>
+        <li>Capability <span class="neq">is not</span> calling</li>
+        <li>Opportunity <span class="neq">is not</span> mandate</li>
+        <li>Growth <span class="neq">is not</span> progress</li>
+        <li>Profitability <span class="neq">is not</span> legitimacy</li>
+        <li>Difficulty <span class="neq">is not</span> error</li>
+        <li>Power <span class="neq">is not</span> authority</li>
+        <li>Ownership <span class="neq">is not</span> stewardship</li>
+        <li>Outcome <span class="neq">is not</span> faithfulness</li>
+        <li>Success <span class="neq">is not</span> meaning</li>
+      </ul>
+    </div>
+
+    <div class="reveal">
+      <h3 class="eco-name" style="font-size:20px;margin-top:56px;">Three to begin with</h3>
+      <div class="eco-grid">
+        <div class="eco-card">
+          <div class="eco-code">Foundational</div>
+          <div class="eco-name">Am I doing His will?</div>
+          <p class="eco-desc">Presents the full vision and the central question that runs through the whole work.</p>
+        </div>
+        <div class="eco-card">
+          <div class="eco-code">Criterion</div>
+          <div class="eco-name">Order before you optimize</div>
+          <p class="eco-desc">The difference between efficiency and direction: why not everything possible should be done.</p>
+        </div>
+        <div class="eco-card full">
+          <div class="eco-code">Application</div>
+          <div class="eco-name">What kind of company are you building?</div>
+          <p class="eco-desc">Company, culture, growth and the common good. What human reality the structure you lead is producing.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <h3 class="eco-name" style="font-size:20px;margin-top:56px;">Invite Mario to speak</h3>
+      <p class="sec-sub" style="margin-top:10px;">Available in English and Spanish, in person or online.</p>
+      <div class="contact-grid">
+        <a class="contact-item" href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp_mgy2'})">
+          <div class="cicon">TW</div>
+          <div>
+            <div class="clabel">Phone &amp; WhatsApp</div>
+            <div class="cvalue">+52 (81) 2513 6784</div>
+          </div>
+        </a>
+        <a class="contact-item" href="mailto:mario@metanoiagroup.vip?subject=H%C3%A1gase%20Tu%20Voluntad%20Speaking%20Enquiry" onclick="gtag('event','click',{'event_category':'contact','event_label':'email_mgy2'})">
+          <div class="cicon">@</div>
+          <div>
+            <div class="clabel">Email</div>
+            <div class="cvalue">mario@metanoiagroup.vip</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="mirror">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">V</span>
+      <div>
+        <h2 class="sec-title">The same architecture, without the <em>final question</em></h2>
+        <p class="sec-sub">This work has a sister. Same three vehicles, same rigour, a secular register.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        <em>ineXorable</em> works the same material from outside the faith: how to build a life, a body of work and an estate that don't depend on the world cooperating. It deals with structure, margin, dependencies and the capacity to keep deciding when conditions change. All of that remains true here, and is assumed throughout these pages.
+      </p>
+      <p class="lead">
+        The difference isn't subject matter but destination. <strong>ineXorable ends in agency: what can I do now that wasn't possible before.</strong> Hágase Tu Voluntad takes that capacity and adds two things the other framework cannot supply on its own: a direction — being able isn't enough, you have to ask whether it is right — and a limit — surrender, which separates responsibility from control.
+      </p>
+      <p class="lead">
+        If you're arriving from somewhere faith isn't yet part of the conversation, that is the way in.
+      </p>
+    </div>
+
+    <a class="mirror reveal" href="mgx2.html">
+      <div class="mirror-name">ine<span class="x">X</span>orable</div>
+      <p class="mirror-desc">
+        How to build a life, a body of work and an estate that don't depend on the world cooperating. Book, podcast and talks.
+      </p>
+      <div class="mirror-go">Enter <span class="arrow">&rarr;</span></div>
+    </a>
+  </div>
+</section>
+
+<section id="links">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">VI</span>
+      <div>
+        <h2 class="sec-title">Relevant <em>links</em></h2>
+        <p class="sec-sub">The rest of the ecosystem.</p>
+      </div>
+    </div>
+
+    <div class="eco-grid reveal">
+      <a class="eco-card" href="mgy1.html">
+        <div class="eco-code">Language</div>
+        <div class="eco-name">Hágase Tu Voluntad en español</div>
+        <p class="eco-desc">This same page, in Spanish.</p>
+        <div class="eco-url">mgy1 <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="eco-card" href="mgl2.html">
+        <div class="eco-code">Personal</div>
+        <div class="eco-name">Mario Garza Livas</div>
+        <p class="eco-desc">Personal landing page: contact, documents and the rest of the projects.</p>
+        <div class="eco-url">mgl2 <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="eco-card full" href="https://metanoiagroup.vip/en.html" target="_blank" rel="noopener">
+        <div class="eco-code">Firm</div>
+        <div class="eco-name">The Metanoia Group</div>
+        <p class="eco-desc">Antifragility architecture for the leader, the company and the estate.</p>
+        <div class="eco-url">metanoiagroup.vip/en <span class="arrow">&rarr;</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-brand">Hágase <span class="tu">Tu</span> Voluntad</div>
+    <div class="footer-tagline">Faith. Reality. Action.</div>
+    <div class="footer-role"><strong>Mario Garza Livas</strong> — Author · Host · Speaker</div>
+    <div class="footer-contacts">
+      <a href="mailto:mario@metanoiagroup.vip">mario@metanoiagroup.vip</a>
+      <a href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp_footer_mgy2'})">+52 (81) 2513 6784</a>
+      <a href="https://www.youtube.com/@Hagase-Tu-Voluntad" target="_blank" rel="noopener">youtube.com/@Hagase-Tu-Voluntad</a>
+    </div>
+    <div class="footer-admg-rule"></div>
+    <p class="footer-admg">Ad Majorem Dei Gloriam.</p>
+
+    <div class="footer-bottom">
+      <span class="copyright">© 2026 The Metanoia Group</span>
+      <a class="footer-en" href="mgy1.html">Versión en español &rarr;</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const topbar = document.querySelector('nav.topbar');
+  const syncNavHeight = () => document.documentElement.style.setProperty('--nav-h', topbar.offsetHeight + 'px');
+  syncNavHeight();
+  if(window.ResizeObserver){ new ResizeObserver(syncNavHeight).observe(topbar); }
+  else { window.addEventListener('resize', syncNavHeight); }
+
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.12});
+  els.forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
