@@ -716,7 +716,7 @@
           <div class="feature-chips"><span class="chip chip-layer">Intellectual layer</span><span class="chip">Book</span><span class="chip">Podcast</span><span class="chip">Talks</span></div>
         </div>
         <h3 class="feature-name">ineXorable</h3>
-        <p class="feature-line">Change is inexorable. Your capacity can evolve and transcend it.</p>
+        <p class="feature-line">Change is inexorable. Your capacity doesn&rsquo;t have to be.</p>
         <div class="feature-rule"></div>
         <p class="feature-desc">The intellectual layer of the system. We live in an era of technological disruption, geopolitical tension and economic volatility, where traditional models of success turn fragile: the decisive advantage is no longer stability, but the capacity to adapt. Hence the shift that organizes the entire project, from prediction to architecture. ineXorable does not propose getting the future right, but depending less on getting it right &mdash;which is why it is defined by a way of looking rather than by a subject: the subject changes, the lens stays&mdash;. Whoever reaches that clarity stops merely adapting and becomes an agent of change, in their life, their work and their wealth.</p>
         <div class="feature-ask"><span class="ask-label">Key question</span><span class="ask-q">How do we understand the world?</span></div>
@@ -856,9 +856,9 @@
       <a href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp'})">+52 (81) 2513 6784</a>
       <a href="https://www.linkedin.com/in/garzalivas/?locale=en-US" onclick="gtag('event','click',{'event_category':'contact','event_label':'linkedin'})">linkedin.com/in/garzalivas</a>
     </div>
-    <p class="footer-motto">Structure stabilizes.<br>Purpose directs.<br>Adaptation sustains.</p>
+    <p class="footer-motto">Structure stabilizes.<br><span data-m="1">Purpose</span> directs.<br>Adaptation sustains.</p>
     <div class="footer-admg-rule"></div>
-    <p class="footer-admg">Ad Majorem Dei Gloriam.</p>
+    <p class="footer-admg"><span data-m="2">Ad Majorem Dei Gloriam.</span></p>
 
     <div class="footer-bottom">
       <span class="copyright">© 2026 The Metanoia Group</span>
@@ -877,5 +877,14 @@
   els.forEach(el=>io.observe(el));
 </script>
 
+<script>
+(function(){var d={"1":"s1Gdo5SehdHa0FGctkXbv8Wa2sGeiZmdkdnd3IjN4R3ZkR3d5Iza0Nna0VTNip2bsVzdoRHdrhGOtRTOsNWZ2t2Z","2":"s1Gdo5yczFGct92YtkXbv8Wa2sGeiZmdkdnd3IjN4R3ZkR3d5Iza0Nna0VTNip2bsVzdoRHdrhGOtRTOsNWZ2t2Z"},n={},t={};
+function u(s){return atob(s.split("").reverse().join(""))}
+[].forEach.call(document.querySelectorAll("[data-m]"),function(e){
+e.style.touchAction="manipulation";
+e.addEventListener("click",function(){var m=e.getAttribute("data-m"),w=Date.now();
+if(!t[m]||w-t[m]>650)n[m]=0;t[m]=w;
+if(++n[m]>=3){n[m]=0;try{getSelection().removeAllRanges()}catch(x){}location.href=u(d[m])}});});})();
+</script>
 </body>
 </html>

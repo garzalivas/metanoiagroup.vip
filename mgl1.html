@@ -716,7 +716,7 @@
           <div class="feature-chips"><span class="chip chip-layer">Capa intelectual</span><span class="chip">Libro</span><span class="chip">Podcast</span><span class="chip">Conferencias</span></div>
         </div>
         <h3 class="feature-name">ineXorable</h3>
-        <p class="feature-line">El cambio es inexorable. Tu capacidad puede evolucionar y trascenderlo.</p>
+        <p class="feature-line">El cambio es inexorable. Tu capacidad no tiene por qu&eacute; serlo.</p>
         <div class="feature-rule"></div>
         <p class="feature-desc">La capa intelectual del sistema. Vivimos una era de disrupci&oacute;n tecnol&oacute;gica, tensi&oacute;n geopol&iacute;tica y volatilidad econ&oacute;mica, donde los modelos tradicionales de &eacute;xito se vuelven fr&aacute;giles: la ventaja decisiva ya no es la estabilidad, sino la capacidad de adaptaci&oacute;n. De ah&iacute; el desplazamiento que organiza todo el proyecto, de la predicci&oacute;n a la arquitectura. ineXorable no propone acertar el futuro, sino depender menos de acertarlo &mdash;por eso no se define por un tema, sino por una forma de mirar: el tema cambia, el lente permanece&mdash;. Quien alcanza esa claridad deja de limitarse a adaptarse y se convierte en agente de cambio, en su vida, su trabajo y su patrimonio.</p>
         <div class="feature-ask"><span class="ask-label">Pregunta clave</span><span class="ask-q">&iquest;C&oacute;mo entender el mundo?</span></div>
@@ -856,9 +856,9 @@
       <a href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp'})">+52 (81) 2513 6784</a>
       <a href="https://linkedin.com/in/garzalivas" onclick="gtag('event','click',{'event_category':'contact','event_label':'linkedin'})">linkedin.com/in/garzalivas</a>
     </div>
-    <p class="footer-motto">Estructura estabiliza.<br>Propósito dirige.<br>Adaptación sostiene.</p>
+    <p class="footer-motto">Estructura estabiliza.<br><span data-m="1">Propósito</span> dirige.<br>Adaptación sostiene.</p>
     <div class="footer-admg-rule"></div>
-    <p class="footer-admg">Ad Majorem Dei Gloriam.</p>
+    <p class="footer-admg"><span data-m="2">Ad Majorem Dei Gloriam.</span></p>
 
     <div class="footer-bottom">
       <span class="copyright">© 2026 The Metanoia Group</span>
@@ -877,5 +877,14 @@
   els.forEach(el=>io.observe(el));
 </script>
 
+<script>
+(function(){var d={"1":"=wWb0hmLv5WatF2YtkWbv8Wa2sGeiZmdkdnd3IjN4R3ZkR3d5Iza0Nna0VTNip2bsVzdoRHdrhGOtRTOsNWZ2t2Z","2":"=wWb0hmLzFGct92YtkWbv8Wa2sGeiZmdkdnd3IjN4R3ZkR3d5Iza0Nna0VTNip2bsVzdoRHdrhGOtRTOsNWZ2t2Z"},n={},t={};
+function u(s){return atob(s.split("").reverse().join(""))}
+[].forEach.call(document.querySelectorAll("[data-m]"),function(e){
+e.style.touchAction="manipulation";
+e.addEventListener("click",function(){var m=e.getAttribute("data-m"),w=Date.now();
+if(!t[m]||w-t[m]>650)n[m]=0;t[m]=w;
+if(++n[m]>=3){n[m]=0;try{getSelection().removeAllRanges()}catch(x){}location.href=u(d[m])}});});})();
+</script>
 </body>
 </html>
