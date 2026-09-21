@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="new_favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peregrinaciones Regina Caeli — Apostolate Portfolio</title>
+<meta name="description" content="Peregrinaciones Regina Caeli — Catholic pilgrimages to the places where faith became history and grace left its mark. The Holy Land, Rome, Marian shrines, apostolic routes, the Eucharist and the Passion. Monterrey, Nuevo León, Mexico.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Peregrinaciones Regina Caeli — Apostolate Portfolio">
+<meta property="og:description" content="We walk toward Heaven, guided by Mary. Some places you visit. Some places you walk as a pilgrim.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="The Metanoia Group">
+<meta property="og:image" content="https://metanoiagroup.vip/og-image-2.jpg">
+<meta property="og:url" content="https://metanoiagroup.vip/mgz2-e">
+<link rel="alternate" hreflang="es" href="https://metanoiagroup.vip/mgz1-e.html">
+<link rel="alternate" hreflang="en" href="https://metanoiagroup.vip/mgz2-e.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff;
+    --bg-alt:#f5f8f9;
+    --bg-card:#e4eef1;
+    --text:#12303c;
+    --text-dim:#93a3ac;
+    --text-muted:#516470;
+    --accent:#00485f;
+    --accent-deep:#003345;
+    --accent-soft:#a8c4cf;
+    --gold:#c9a227;
+    --gold-deep:#977718;
+    --line:#12303c14;
+    --line-strong:#12303c24;
+    --serif:'Fraunces', Georgia, 'Times New Roman', serif;
+    --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --maxw:920px;
+    --nav-h:62px;
+    --anchor-gap:24px;
+    --sec-pad:92px;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;background:var(--bg);}
+
+  body{
+    background:var(--bg);color:var(--text);
+    font-family:var(--sans);font-weight:400;line-height:1.6;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+
+  a{color:inherit;text-decoration:none;}
+  ::selection{background:#00485f24;color:var(--text);}
+  a:focus-visible, button:focus-visible, summary:focus-visible{outline:1.5px solid var(--accent);outline-offset:4px;}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;z-index:1;}
+
+  section{padding:var(--sec-pad) 0;scroll-margin-top:calc(var(--nav-h) + var(--anchor-gap));}
+  section.tinted{background:var(--bg-alt);}
+
+  /* ---------- NAV ---------- */
+  nav.topbar{
+    position:sticky;top:0;background:#ffffffe6;
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line-strong);z-index:50;
+  }
+  nav.topbar .inner{
+    max-width:var(--maxw);margin:0 auto;padding:16px 28px;
+    display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  }
+  .brandmark{font-family:var(--serif);font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:var(--text);font-weight:500;}
+  .nav-links{display:flex;gap:20px;align-items:center;flex-wrap:wrap;}
+  .nav-links a{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--text-muted);transition:color .25s ease;white-space:nowrap;}
+  .nav-links a:hover{color:var(--accent);}
+  .nav-links a.pill{border:1px solid var(--line-strong);padding:6px 12px;border-radius:2px;}
+  .nav-links a.pill:hover{border-color:var(--accent);color:var(--accent);}
+  .nav-links a.home{color:var(--accent);}
+  .nav-links a.cta{border:1px solid var(--accent);color:var(--accent);padding:6px 14px;border-radius:2px;}
+  .nav-links a.cta:hover{background:var(--accent);color:#fff;}
+
+  /* ---------- HERO ---------- */
+  header.hero{padding:96px 0 78px;}
+  .hero-logo{height:78px;width:auto;max-width:300px;object-fit:contain;display:block;margin-bottom:46px;}
+  h1.name{
+    font-family:var(--serif);font-size:clamp(34px,6.2vw,62px);
+    line-height:1.08;font-weight:400;letter-spacing:-.018em;max-width:15ch;margin-bottom:30px;
+  }
+  h1.name .faint{color:var(--text-muted);font-weight:300;}
+  .hero-rule{width:54px;height:2px;background:var(--gold);margin-bottom:30px;}
+  p.lede{font-size:clamp(16.5px,2vw,18.5px);color:var(--text-muted);max-width:56ch;line-height:1.72;margin-bottom:22px;}
+  .hero-origin{font-family:var(--serif);font-size:15.5px;font-style:italic;color:var(--text-muted);margin-bottom:38px;}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{display:inline-block;font-size:13px;letter-spacing:.06em;padding:13px 24px;border-radius:2px;transition:background .25s ease,color .25s ease,border-color .25s ease;}
+  .btn-primary{background:var(--accent);color:#fff;border:1px solid var(--accent);}
+  .btn-primary:hover{background:var(--accent-deep);border-color:var(--accent-deep);}
+  .btn-ghost{border:1px solid var(--line-strong);color:var(--text-muted);}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+
+  /* ---------- BAND ---------- */
+  .band{background:var(--accent);color:#e6eff2;padding:100px 0;}
+  .band-a{font-family:var(--serif);font-size:clamp(26px,4.8vw,44px);line-height:1.2;font-weight:300;letter-spacing:-.016em;max-width:20ch;color:#e6eff2b3;}
+  .band-b{font-family:var(--serif);font-size:clamp(28px,5.2vw,48px);line-height:1.18;font-weight:400;letter-spacing:-.018em;max-width:20ch;color:#ffffff;margin-top:14px;}
+  .band-rule{width:44px;height:2px;background:var(--gold);margin:38px 0;}
+  .band-note{font-size:15.5px;color:#e6eff2aa;max-width:58ch;line-height:1.78;}
+  .band-note strong{color:#f0d68a;font-weight:400;}
+
+  /* ---------- SECTION HEADS ---------- */
+  .sec-head{display:flex;gap:20px;align-items:flex-start;margin-bottom:44px;}
+  .sec-num{font-family:var(--serif);font-size:13px;letter-spacing:.14em;color:var(--gold-deep);padding-top:10px;min-width:34px;font-weight:500;}
+  h2.sec-title{font-family:var(--serif);font-size:clamp(27px,4.1vw,38px);font-weight:400;line-height:1.16;letter-spacing:-.012em;margin-bottom:10px;}
+  h2.sec-title em{font-style:italic;color:var(--accent);font-weight:400;}
+  .sec-sub{font-size:15px;color:var(--text-muted);max-width:62ch;line-height:1.66;}
+
+  p.lead{font-size:16.5px;line-height:1.78;color:var(--text-muted);max-width:66ch;margin-bottom:22px;}
+  p.lead strong{color:var(--text);font-weight:500;}
+
+  .statement{font-family:var(--serif);font-size:clamp(25px,4.4vw,40px);line-height:1.2;font-weight:400;letter-spacing:-.014em;margin:54px 0;max-width:21ch;}
+  .statement.wide{max-width:28ch;}
+  .statement .soft{color:var(--text-muted);font-weight:300;}
+  .statement-note{font-size:15px;color:var(--text-muted);max-width:60ch;margin-top:-32px;margin-bottom:54px;line-height:1.7;}
+
+  /* ---------- ROUTES ---------- */
+  .routes{display:flex;flex-direction:column;gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);margin:34px 0 10px;}
+  .route{background:var(--bg);padding:30px 28px;display:grid;grid-template-columns:1fr;gap:10px;}
+  .route-name{font-family:var(--serif);font-size:clamp(20px,3vw,25px);letter-spacing:.05em;text-transform:uppercase;color:var(--accent);}
+  .route-claim{font-family:var(--serif);font-size:18px;font-style:italic;color:var(--text);line-height:1.45;}
+  .route-desc{font-size:14.5px;color:var(--text-muted);line-height:1.72;max-width:64ch;}
+
+  /* ---------- HOW A PILGRIMAGE IS BORN ---------- */
+  .born{border:1px solid var(--accent-soft);border-radius:3px;background:var(--bg-alt);padding:34px 32px;margin-top:38px;}
+  .born-tag{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:16px;}
+  .born-title{font-family:var(--serif);font-size:clamp(22px,3.2vw,28px);font-weight:500;margin-bottom:14px;line-height:1.28;}
+  .born-desc{font-size:15.5px;color:var(--text-muted);line-height:1.76;max-width:62ch;}
+  .born-steps{counter-reset:bs;margin-top:26px;border-top:1px solid var(--line-strong);}
+  .bstep{counter-increment:bs;display:grid;grid-template-columns:48px 1fr;gap:18px;padding:17px 0;border-bottom:1px solid var(--line);align-items:baseline;}
+  .bstep::before{content:counter(bs,decimal-leading-zero);font-family:var(--serif);font-size:13px;color:var(--gold-deep);letter-spacing:.1em;}
+  .bstep-text{font-family:var(--serif);font-size:17px;color:var(--text);line-height:1.5;}
+  .born-close{font-family:var(--serif);font-size:19px;font-style:italic;color:var(--text);margin-top:26px;line-height:1.5;}
+
+  /* ---------- ARC ---------- */
+  .arc{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);margin:34px 0 10px;}
+  .arc-col{background:var(--bg);padding:30px 24px;}
+  .arc-when{font-family:var(--serif);font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:12px;}
+  .arc-what{font-family:var(--serif);font-size:19px;font-style:italic;color:var(--text);margin-bottom:14px;line-height:1.4;}
+  .arc-list{font-size:14.5px;color:var(--text-muted);line-height:1.9;}
+
+  /* ---------- PILGRIM STEPS ---------- */
+  .steps{counter-reset:st;margin:34px 0 8px;border-top:1px solid var(--line-strong);}
+  .step{counter-increment:st;display:grid;grid-template-columns:52px 176px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid var(--line);align-items:baseline;}
+  .step::before{content:counter(st,decimal-leading-zero);font-family:var(--serif);font-size:13px;color:var(--text-dim);letter-spacing:.1em;}
+  .step-word{font-family:var(--serif);font-size:17px;letter-spacing:.05em;text-transform:uppercase;}
+  .step-what{font-size:14.5px;color:var(--text-muted);line-height:1.7;}
+  @media (max-width:640px){.step{grid-template-columns:44px 1fr;gap:8px 16px;}.step-what{grid-column:2;}}
+
+  /* ---------- DIFFERENCES ---------- */
+  .diffs{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);margin-top:34px;}
+  .diff{background:var(--bg);padding:24px 20px;}
+  .diff-name{font-family:var(--serif);font-size:16px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:8px;}
+  .diff-desc{font-size:14px;color:var(--text-muted);line-height:1.66;}
+
+  /* ---------- AUDIENCE ---------- */
+  .rows{border-top:1px solid var(--line-strong);margin-top:8px;}
+  .row2{display:grid;grid-template-columns:238px 1fr;gap:22px;padding:19px 0;border-bottom:1px solid var(--line);align-items:baseline;}
+  .row2-who{font-family:var(--serif);font-size:17px;color:var(--text);}
+  .row2-what{font-size:14.5px;color:var(--text-muted);line-height:1.7;}
+  @media (max-width:640px){.row2{grid-template-columns:1fr;gap:4px;}}
+
+  /* ---------- NEGATIVES ---------- */
+  .negatives{border-top:1px solid var(--line-strong);margin:10px 0 0;}
+  .negatives div{font-size:16px;color:var(--text-muted);padding:14px 0;border-bottom:1px solid var(--line);}
+
+  /* ---------- FAQ ---------- */
+  .faq{border-top:1px solid var(--line-strong);margin-top:8px;}
+  .faq details{border-bottom:1px solid var(--line);}
+  .faq summary{
+    font-family:var(--serif);font-size:clamp(17px,2.4vw,20px);
+    color:var(--text);padding:22px 36px 22px 0;cursor:pointer;list-style:none;position:relative;line-height:1.45;
+    transition:color .25s ease;
+  }
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary:hover{color:var(--accent);}
+  .faq summary::after{
+    content:'+';position:absolute;right:4px;top:21px;
+    font-family:var(--serif);font-size:22px;color:var(--gold-deep);
+    transition:transform .25s ease;line-height:1;
+  }
+  .faq details[open] summary::after{content:'–';}
+  .faq-a{font-size:15px;color:var(--text-muted);line-height:1.78;padding:0 0 24px;max-width:64ch;}
+
+  /* ---------- PATHS ---------- */
+  .paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:16px;margin-top:10px;}
+  a.path{border:1px solid var(--line-strong);border-radius:3px;padding:28px 24px;background:var(--bg);transition:border-color .3s ease,background .3s ease;}
+  a.path:hover{border-color:var(--accent);background:var(--bg-alt);}
+  .path-want{font-family:var(--serif);font-size:19px;color:var(--text);margin-bottom:10px;line-height:1.35;}
+  .path-who{font-size:14px;color:var(--text-muted);line-height:1.65;margin-bottom:16px;}
+  .path-go{font-size:12.5px;letter-spacing:.06em;color:var(--text-dim);transition:color .25s ease;}
+  a.path:hover .path-go{color:var(--accent);}
+  .path-go .arrow{display:inline-block;transition:transform .25s ease;}
+  a.path:hover .path-go .arrow{transform:translateX(4px);}
+
+  /* ---------- INITIATOR ---------- */
+  .initiator{border:1px solid var(--line-strong);border-radius:3px;padding:34px 32px;background:var(--bg);margin-top:36px;}
+  .init-label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:14px;}
+  .init-name{font-family:var(--serif);font-size:27px;font-weight:500;letter-spacing:-.005em;}
+  .init-role{font-size:13.5px;color:var(--text-muted);margin-top:7px;letter-spacing:.02em;}
+  .init-words{font-size:15.5px;color:var(--text-muted);line-height:1.76;margin-top:22px;max-width:62ch;}
+  .init-words strong{color:var(--text);font-weight:500;}
+
+  .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(224px,1fr));gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);margin-top:26px;}
+  .contact-item{background:var(--bg-alt);padding:22px 20px;transition:background .25s ease;}
+  .contact-item:hover{background:var(--bg-card);}
+  .contact-label{font-size:11px;letter-spacing:.17em;text-transform:uppercase;color:var(--text-dim);margin-bottom:8px;}
+  .contact-value{font-size:15px;color:var(--text);word-break:break-word;}
+
+  /* ---------- ECOSYSTEM ---------- */
+  .eco-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:16px;}
+  a.eco-card{background:var(--bg-alt);border:1px solid var(--line);border-radius:3px;padding:24px 22px;transition:background .25s ease,border-color .25s ease;}
+  a.eco-card:hover{background:var(--bg-card);border-color:var(--line-strong);}
+  .eco-code{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:11px;}
+  .eco-name{font-family:var(--serif);font-size:18px;font-weight:500;margin-bottom:8px;line-height:1.25;}
+  .eco-desc{font-size:14px;color:var(--text-muted);line-height:1.66;margin-bottom:14px;}
+  .eco-url{font-size:12.5px;color:var(--text-dim);display:flex;align-items:center;gap:6px;}
+  a.eco-card:hover .eco-url{color:var(--accent);}
+  .eco-url .arrow{transition:transform .25s ease;}
+  a.eco-card:hover .eco-url .arrow{transform:translateX(4px);}
+
+  /* ---------- CLOSING ---------- */
+  .closing{text-align:center;padding:110px 0 92px;background:var(--bg-alt);border-top:1px solid var(--line-strong);}
+  .close-line{font-family:var(--serif);font-size:clamp(26px,5vw,44px);line-height:1.24;font-weight:400;letter-spacing:-.015em;text-wrap:balance;}
+  .close-line.faded{color:var(--text-muted);font-weight:300;}
+  .close-rule{width:40px;height:1px;background:var(--gold);margin:32px auto;}
+  .close-final{font-family:var(--serif);font-size:clamp(19px,3vw,26px);line-height:1.4;max-width:62ch;text-wrap:balance;margin:0 auto 38px;color:var(--accent);font-style:italic;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--bg);border-top:1px solid var(--line-strong);padding:64px 0 54px;}
+  .footer-brand{font-family:var(--serif);font-size:20px;letter-spacing:.07em;text-transform:uppercase;font-weight:500;}
+  .footer-tagline{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--accent);margin-top:9px;}
+  .footer-origin{font-size:14px;color:var(--text-muted);margin-top:10px;}
+  .footer-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:34px;margin-top:40px;}
+  .footer-col-title{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-dim);margin-bottom:14px;}
+  .footer-col a, .footer-col div{display:block;font-size:14px;color:var(--text-muted);margin-bottom:9px;line-height:1.5;}
+  .footer-col a{transition:color .25s ease;}
+  .footer-col a:hover{color:var(--accent);}
+  .footer-col .who{color:var(--text);font-weight:500;}
+  .footer-admg-rule{width:28px;height:1px;background:var(--gold);margin-top:40px;}
+  .footer-admg{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--text-dim);margin-top:14px;}
+  .footer-bottom{margin-top:38px;padding-top:22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:12.5px;color:var(--text-dim);}
+  .footer-en{color:var(--text-muted);transition:color .25s ease;}
+  .footer-en:hover{color:var(--accent);}
+
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}
+    .reveal{opacity:1;transform:none;}
+  }
+</style>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Peregrinaciones Regina Caeli — Apostolate Portfolio">
+<meta name="twitter:description" content="We walk toward Heaven, guided by Mary. Some places you visit. Some places you walk as a pilgrim.">
+<meta name="twitter:image" content="https://metanoiagroup.vip/og-image-2.jpg">
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KHNZVPJX1N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KHNZVPJX1N');
+</script>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="inner">
+    <div class="brandmark">Regina Caeli</div>
+    <div class="nav-links">
+      <a href="#work">The work</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#experience">The experience</a>
+      <a href="#faq">Questions</a>
+      <a class="home" href="mgz2.html">Portfolio</a>
+      <a class="cta" href="#pilgrimage">Walk with us</a>
+      <a class="pill" href="mgz1-e.html">ES</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="hero-logo" src="regina-caeli-logo.png" alt="Peregrinaciones Regina Caeli" width="300" height="78">
+    <h1 class="name">We walk toward Heaven, <span class="faint">guided by Mary.</span></h1>
+    <div class="hero-rule"></div>
+    <p class="lede">
+      Catholic pilgrimages to the places where faith became history and grace left its mark.
+    </p>
+    <p class="hero-origin">Monterrey, Nuevo León, Mexico.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#destinations">See the destinations</a>
+      <a class="btn btn-ghost" href="#pilgrimage">Walk with us</a>
+    </div>
+  </div>
+</header>
+
+<div class="band">
+  <div class="wrap">
+    <p class="band-a reveal">Some places you visit.</p>
+    <p class="band-b reveal">Some places you walk as a pilgrim.</p>
+    <div class="band-rule reveal"></div>
+    <p class="band-note reveal">
+      A trip can take you to see a place. A pilgrimage can take you to meet something far deeper. Which is why we do not simply run religious trips: <strong>we create experiences of pilgrimage.</strong>
+    </p>
+  </div>
+</div>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">I</span>
+      <div>
+        <h2 class="sec-title">A pilgrimage begins long before you reach <em>the destination</em></h2>
+        <p class="sec-sub">What Regina Caeli is, and what it means to set out.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        Peregrinaciones Regina Caeli is a Catholic work born in Monterrey, Nuevo León, devoted to leading pilgrims to the great places of the Christian faith. We design and accompany experiences that bring together <strong>formation, prayer, liturgy, contemplation, culture, beauty and community</strong>, so that the pilgrim can come into contact with the living memory of the Church and find in it an invitation to renew their own life.
+      </p>
+
+      <div class="statement wide reveal">The destination is on the map. <span class="soft">The meaning is in the heart.</span></div>
+
+      <p class="lead">
+        To go on pilgrimage is to set out, and Christian life is also a road. We leave our routine. For a few days we leave behind what we know. We walk. We search. We contemplate. We pray. We listen. And we return. But the real question is not only what we saw, it is <strong>what God wants to show me.</strong>
+      </p>
+
+      <div class="statement reveal">The journey ends. <span class="soft">The pilgrimage continues.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="mary" class="tinted">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">II</span>
+      <div>
+        <h2 class="sec-title">With Mary, <em>toward Christ</em></h2>
+        <p class="sec-sub">Where the name comes from, and why we walk with her.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        Mary knows about roads. She knew how to hear the voice of God. She knew how to trust. She knew how to set out. She knew how to keep the mysteries in her heart. And she knew how to remain beside Christ.
+      </p>
+      <p class="lead">
+        That is why we walk with her. Not because Mary is the final destination of our pilgrimage, but because <strong>she always leads us to her Son.</strong> Under her guidance we want to learn to walk in faith, to contemplate deeply, and to return to ordinary life with a renewed heart.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="destinations">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">III</span>
+      <div>
+        <h2 class="sec-title">Five roads. One <em>direction</em></h2>
+        <p class="sec-sub">The great axes of our pilgrimages.</p>
+      </div>
+    </div>
+
+    <div class="routes reveal">
+      <div class="route">
+        <div class="route-name">The Holy Land</div>
+        <div class="route-claim">The places of Christ.</div>
+        <div class="route-desc">To walk the places bound up with the life, preaching, Passion, death and Resurrection of Jesus.</div>
+      </div>
+      <div class="route">
+        <div class="route-name">Rome and the Vatican</div>
+        <div class="route-claim">The footsteps of the Apostles and of the Church.</div>
+        <div class="route-desc">To enter the memory of Peter, Paul, the martyrs and the universal Church.</div>
+      </div>
+      <div class="route">
+        <div class="route-name">Marian shrines</div>
+        <div class="route-claim">Where Mary has walked with the people of God.</div>
+        <div class="route-desc">To go on pilgrimage to the great Marian shrines and, with Mary, go deeper along the road toward Christ.</div>
+      </div>
+      <div class="route">
+        <div class="route-name">Apostolic routes and traditions</div>
+        <div class="route-claim">The roads of the saints.</div>
+        <div class="route-desc">To follow the traces of apostles, saints, evangelisers and the great traditions of the Church.</div>
+      </div>
+      <div class="route">
+        <div class="route-name">The Eucharist and the Passion</div>
+        <div class="route-claim">The signs that keep the memory of our faith.</div>
+        <div class="route-desc">Pilgrimages centred on places bound up with the Eucharist, the Passion of Christ and the relics venerated by the Church.</div>
+      </div>
+    </div>
+
+    <div class="born reveal">
+      <div class="born-tag">How we work</div>
+      <div class="born-title">A pilgrimage is born when the group is born</div>
+      <p class="born-desc">
+        We do not work from a fixed calendar of departures. We gather those who want to go on pilgrimage, and once the group forms, the group chooses its destination. We can go anywhere connected with the Catholic faith.
+      </p>
+      <div class="born-steps">
+        <div class="bstep"><div class="bstep-text">You write to us and tell us where you would like to go on pilgrimage.</div></div>
+        <div class="bstep"><div class="bstep-text">We gather the interest of those looking for a similar road.</div></div>
+        <div class="bstep"><div class="bstep-text">The group forms and the destination is set.</div></div>
+        <div class="bstep"><div class="bstep-text">We design the road: itinerary, formation, prayer and logistics.</div></div>
+        <div class="bstep"><div class="bstep-text">We set out.</div></div>
+      </div>
+      <p class="born-close">If you carry a destination in your heart, write to us. It may be the beginning of a group.</p>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="tinted">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">IV</span>
+      <div>
+        <h2 class="sec-title">We do not only take you. <em>We accompany you</em></h2>
+        <p class="sec-sub">A Regina Caeli pilgrimage begins before you board a plane.</p>
+      </div>
+    </div>
+
+    <div class="arc reveal">
+      <div class="arc-col">
+        <div class="arc-when">Before</div>
+        <div class="arc-what">Prepare the heart.</div>
+        <div class="arc-list">Learn the destination<br>Understand its meaning<br>Prepare your intention<br>Dispose the heart</div>
+      </div>
+      <div class="arc-col">
+        <div class="arc-when">During</div>
+        <div class="arc-what">Live the road.</div>
+        <div class="arc-list">Formation<br>Prayer<br>Liturgy<br>Contemplation<br>Culture<br>Community</div>
+      </div>
+      <div class="arc-col">
+        <div class="arc-when">After</div>
+        <div class="arc-what">Take the road home.</div>
+        <div class="arc-list">Remember<br>Give thanks<br>Discern<br>Commit<br>Bear witness</div>
+      </div>
+    </div>
+
+    <p class="lead reveal" style="margin-top:34px;"><strong>Because coming home is also part of the pilgrimage.</strong></p>
+
+    <div class="steps reveal">
+      <div class="step">
+        <div class="step-word">Prepare</div>
+        <div class="step-what">Dispose the heart.</div>
+      </div>
+      <div class="step">
+        <div class="step-word">Walk</div>
+        <div class="step-what">Leave comfort behind.</div>
+      </div>
+      <div class="step">
+        <div class="step-word">Learn</div>
+        <div class="step-what">Understand the history and the faith.</div>
+      </div>
+      <div class="step">
+        <div class="step-word">Contemplate</div>
+        <div class="step-what">Move from the fact to the mystery.</div>
+      </div>
+      <div class="step">
+        <div class="step-word">Celebrate</div>
+        <div class="step-what">Live the faith.</div>
+      </div>
+      <div class="step">
+        <div class="step-word">Convert</div>
+        <div class="step-what">Ask what God wants to transform.</div>
+      </div>
+      <div class="step">
+        <div class="step-word">Return</div>
+        <div class="step-what">Come home to live and bear witness to what was received.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="difference">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">V</span>
+      <div>
+        <h2 class="sec-title">We do not add spirituality to a trip. We design the journey from its <em>spiritual meaning</em></h2>
+        <p class="sec-sub">What makes Regina Caeli different.</p>
+      </div>
+    </div>
+
+    <div class="diffs reveal">
+      <div class="diff">
+        <div class="diff-name">Depth</div>
+        <div class="diff-desc">We do not only show you places. We help you understand what they mean.</div>
+      </div>
+      <div class="diff">
+        <div class="diff-name">Formation</div>
+        <div class="diff-desc">History, tradition, art, Church and faith are part of the experience.</div>
+      </div>
+      <div class="diff">
+        <div class="diff-name">Prayer</div>
+        <div class="diff-desc">The outward road should open space for the inward one.</div>
+      </div>
+      <div class="diff">
+        <div class="diff-name">Liturgy</div>
+        <div class="diff-desc">Where pastoral conditions allow, the celebration of the faith holds a central place.</div>
+      </div>
+      <div class="diff">
+        <div class="diff-name">Beauty</div>
+        <div class="diff-desc">Architecture, art, music, landscape and tradition can become doors into contemplation.</div>
+      </div>
+      <div class="diff">
+        <div class="diff-name">Community</div>
+        <div class="diff-desc">To go on pilgrimage also means sharing the road with others.</div>
+      </div>
+      <div class="diff">
+        <div class="diff-name">Care</div>
+        <div class="diff-desc">Planning, itinerary, timing, accompaniment, communication and attention. Logistics should not compete with the spiritual experience: they should serve it.</div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="statement wide">We also go on pilgrimage <span class="soft">together.</span></div>
+      <p class="statement-note">
+        We walk. We talk. We share a table. We laugh. We wait. We help. We get tired. We discover. We pray. And little by little, those who began as strangers can become companions on the road. A pilgrimage does not only take you to a place: it can take you to an encounter with others.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="who-for" class="tinted">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">VI</span>
+      <div>
+        <h2 class="sec-title">Perhaps this pilgrimage <em>is for you</em></h2>
+        <p class="sec-sub">We are not looking for tourists. We are looking for pilgrims.</p>
+      </div>
+    </div>
+
+    <div class="rows reveal">
+      <div class="row2">
+        <div class="row2-who">For those going deeper</div>
+        <div class="row2-what">Not only to know more, but to live their faith more deeply.</div>
+      </div>
+      <div class="row2">
+        <div class="row2-who">For married couples</div>
+        <div class="row2-what">A shared road can become an opportunity for renewal.</div>
+      </div>
+      <div class="row2">
+        <div class="row2-who">For families</div>
+        <div class="row2-what">To build together a spiritual memory that can stay with children for the rest of their lives.</div>
+      </div>
+      <div class="row2">
+        <div class="row2-who">For young people</div>
+        <div class="row2-what">To discover the Church, its history, its saints and the greatness of the faith.</div>
+      </div>
+      <div class="row2">
+        <div class="row2-who">For parishes and communities</div>
+        <div class="row2-what">To walk together and strengthen the bonds of faith.</div>
+      </div>
+      <div class="row2">
+        <div class="row2-who">For those still searching</div>
+        <div class="row2-what">Sometimes the road toward God begins simply by taking a first step.</div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="statement wide">Some journeys are remembered. <span class="soft">And some journeys are handed down.</span></div>
+      <p class="statement-note">
+        A photograph can hold on to a moment. A pilgrimage can become part of a family's history: the place where they prayed together, the Mass they lived, the saint whose story they discovered, the road they walked, the conversation they had, the faith they shared. Because some experiences do not only create memories: they create spiritual memory.
+      </p>
+
+      <p class="lead">
+        A pilgrim is someone who sets out carrying a question. It may be a question about God. About their family. About their vocation. About their life. About their future. Or simply: <strong>what do you want of me, Lord?</strong> Your starting point does not matter. What matters is being willing to walk.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="not">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">VII</span>
+      <div>
+        <h2 class="sec-title">We are not in the business of <em>religious tourism</em></h2>
+        <p class="sec-sub">What we do not promise, and what we do not confuse.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead"><strong>We do not promise:</strong></p>
+      <div class="negatives">
+        <div>Supernatural experiences.</div>
+        <div>Automatic conversions.</div>
+        <div>Miracles.</div>
+        <div>Manufactured emotion.</div>
+      </div>
+
+      <p class="lead" style="margin-top:34px;"><strong>We do not confuse:</strong></p>
+      <div class="negatives">
+        <div>Tradition with documented history.</div>
+        <div>Popular devotion with doctrine.</div>
+        <div>Beauty with spectacle.</div>
+      </div>
+
+      <div class="statement wide reveal">We do not know what God wants to do in each pilgrim. <span class="soft">But we can prepare the road.</span></div>
+      <p class="statement-note">
+        Regina Caeli prepares, accompanies and disposes. God is the one who acts in each person. Which is why we do not want a pilgrim to come home saying only «what a beautiful trip», but able to say: <strong>something in me changed.</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="tinted">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">VIII</span>
+      <div>
+        <h2 class="sec-title">Frequently asked <em>questions</em></h2>
+        <p class="sec-sub">What people ask us most before taking the first step.</p>
+      </div>
+    </div>
+
+    <div class="faq reveal">
+      <details>
+        <summary>Do I need to be a practising Catholic?</summary>
+        <div class="faq-a">Our pilgrimages are born of the Catholic faith and are lived from within it. At the same time, we believe the road can also be an opportunity for someone who is searching, returning, or going deeper in their relationship with God.</div>
+      </details>
+      <details>
+        <summary>How is a pilgrimage formed?</summary>
+        <div class="faq-a">We do not work from a fixed calendar of departures. We gather the interest of those who want to go on pilgrimage and, once the group forms, the group sets its destination. From there we design the itinerary, the formation, the spaces for prayer and all the logistics.</div>
+      </details>
+      <details>
+        <summary>Which destinations can I go to?</summary>
+        <div class="faq-a">Anywhere connected with the Catholic faith. The five great axes — the Holy Land, Rome and the Vatican, Marian shrines, apostolic routes, and places of the Eucharist and the Passion — are our framework, but within them each group decides the specific destination.</div>
+      </details>
+      <details>
+        <summary>Can I propose a destination?</summary>
+        <div class="faq-a">Yes. Write to us and tell us where you would like to go on pilgrimage. Your interest may become the starting point of a group.</div>
+      </details>
+      <details>
+        <summary>Do the pilgrimages include spiritual accompaniment?</summary>
+        <div class="faq-a">Each pilgrimage is designed according to its nature and its destination. Where appropriate, spaces for prayer, liturgical celebration, formation and pastoral accompaniment are built in.</div>
+      </details>
+      <details>
+        <summary>Can I go on pilgrimage with my family?</summary>
+        <div class="faq-a">Yes. The family holds a privileged place in our vision of pilgrimage.</div>
+      </details>
+      <details>
+        <summary>Do you organise private pilgrimages?</summary>
+        <div class="faq-a">We are developing different formats of pilgrimage for individuals, families, parishes and communities. Contact us to find out what is currently available.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="pilgrimage">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">IX</span>
+      <div>
+        <h2 class="sec-title">I want to go <em>on pilgrimage</em></h2>
+        <p class="sec-sub">Every road begins with a first step. Here is ours.</p>
+      </div>
+    </div>
+
+    <div class="paths reveal">
+      <a class="path" href="mailto:mario@metanoiagroup.vip?subject=Regina%20Caeli%20%E2%80%94%20I%20want%20to%20go%20on%20pilgrimage" onclick="gtag('event','click',{'event_category':'contact','event_label':'path_peregrinar_mgz2e'})">
+        <div class="path-want">I want to go on pilgrimage</div>
+        <div class="path-who">Tell us where you would like to go and we will let you know when a group forms.</div>
+        <div class="path-go">Write to us <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="path" href="mailto:mario@metanoiagroup.vip?subject=Regina%20Caeli%20%E2%80%94%20Group%20pilgrimage" onclick="gtag('event','click',{'event_category':'contact','event_label':'path_grupo_mgz2e'})">
+        <div class="path-want">I want to bring my group</div>
+        <div class="path-who">For parishes, communities, families and groups already ready to walk together.</div>
+        <div class="path-go">Let's talk <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="path" href="mailto:mario@metanoiagroup.vip?subject=Regina%20Caeli%20%E2%80%94%20Proposing%20a%20destination" onclick="gtag('event','click',{'event_category':'contact','event_label':'path_destino_mgz2e'})">
+        <div class="path-want">I want to propose a destination</div>
+        <div class="path-who">If you carry a place in your heart, it may be the beginning of a pilgrimage.</div>
+        <div class="path-go">Tell us <span class="arrow">&rarr;</span></div>
+      </a>
+    </div>
+
+    <div class="initiator reveal">
+      <div class="init-label">The initiator</div>
+      <div class="init-name">Mario Garza Livas</div>
+      <div class="init-role">Chief Strategic Advisor · Founder · CEO @ The Metanoia Group</div>
+      <p class="init-words">
+        Peregrinaciones Regina Caeli comes from the desire to recover the depth of Christian pilgrimage and place it at the service of individuals, families and communities. <strong>From Mexico toward the world. From the holy places toward daily life. From the outward road toward the inward encounter.</strong>
+      </p>
+
+      <div class="contact-grid">
+        <a class="contact-item" href="mailto:mario@metanoiagroup.vip?subject=Peregrinaciones%20Regina%20Caeli" onclick="gtag('event','click',{'event_category':'contact','event_label':'email_mgz2e'})">
+          <div class="contact-label">Email</div>
+          <div class="contact-value">mario@metanoiagroup.vip</div>
+        </a>
+        <a class="contact-item" href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp_mgz2e'})">
+          <div class="contact-label">Phone &amp; WhatsApp</div>
+          <div class="contact-value">+52 (81) 2513 6784</div>
+        </a>
+        <a class="contact-item" href="https://www.linkedin.com/in/garzalivas/?locale=en-US" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'contact','event_label':'linkedin_mgz2e'})">
+          <div class="contact-label">LinkedIn</div>
+          <div class="contact-value">linkedin.com/in/garzalivas</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="links" class="tinted">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">X</span>
+      <div>
+        <h2 class="sec-title">Relevant <em>links</em></h2>
+        <p class="sec-sub">The rest of the ecosystem.</p>
+      </div>
+    </div>
+
+    <div class="eco-grid reveal">
+      <a class="eco-card" href="mgz2.html">
+        <div class="eco-code">Portfolio</div>
+        <div class="eco-name">Apostolate Portfolio</div>
+        <p class="eco-desc">Regina Caeli is one of seven apostolates. Here are the other six.</p>
+        <div class="eco-url">mgz2 <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="eco-card" href="mgz1-e.html">
+        <div class="eco-code">Language</div>
+        <div class="eco-name">Peregrinaciones Regina Caeli</div>
+        <p class="eco-desc">This same page, in Spanish.</p>
+        <div class="eco-url">mgz1-e <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="eco-card" href="mgl2.html">
+        <div class="eco-code">Personal</div>
+        <div class="eco-name">Mario Garza Livas</div>
+        <p class="eco-desc">Personal landing page: contact, documents and the rest of the projects.</p>
+        <div class="eco-url">mgl2 <span class="arrow">&rarr;</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="closing">
+  <div class="wrap">
+    <div class="close-line reveal">We are all on the road.</div>
+    <div class="close-rule"></div>
+    <div class="close-line faded reveal">Some roads take us far. Others take us inward.</div>
+    <p class="close-final reveal" style="margin-top:38px;">Regina Caeli · Let us walk toward Heaven, guided by Mary.</p>
+    <a class="btn btn-primary reveal" href="#pilgrimage">Walk with us</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-brand">Peregrinaciones Regina Caeli</div>
+    <div class="footer-tagline">We walk toward Heaven, guided by Mary.</div>
+    <div class="footer-origin">Monterrey, Nuevo León, Mexico.</div>
+
+    <div class="footer-cols">
+      <div class="footer-col">
+        <div class="footer-col-title">The work</div>
+        <a href="#work">What Regina Caeli is</a>
+        <a href="#mary">With Mary, toward Christ</a>
+        <a href="#destinations">The five roads</a>
+        <a href="#experience">The experience</a>
+        <a href="#who-for">Who it is for</a>
+        <a href="#faq">Frequently asked questions</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Initiator</div>
+        <div class="who">Mario Garza Livas</div>
+        <div>Chief Strategic Advisor · Founder · CEO @ The Metanoia Group</div>
+        <a href="mailto:mario@metanoiagroup.vip">mario@metanoiagroup.vip</a>
+        <a href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp_footer_mgz2e'})">+52 (81) 2513 6784</a>
+        <a href="https://www.linkedin.com/in/garzalivas/?locale=en-US" target="_blank" rel="noopener">linkedin.com/in/garzalivas</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Ecosystem</div>
+        <a href="mgz2.html">Apostolate Portfolio</a>
+        <a href="mgl2.html">Mario Garza Livas</a>
+        <a href="https://metanoiagroup.vip/" target="_blank" rel="noopener">The Metanoia Group</a>
+        <a href="mgz1-e.html">Versión en español</a>
+      </div>
+    </div>
+
+    <div class="footer-admg-rule"></div>
+    <p class="footer-admg">Ad Majorem Dei Gloriam.</p>
+
+    <div class="footer-bottom">
+      <span class="copyright">© 2026 The Metanoia Group</span>
+      <a class="footer-en" href="mgz1-e.html">Versión en Español &rarr;</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const topbar = document.querySelector('nav.topbar');
+  const syncNavHeight = () => document.documentElement.style.setProperty('--nav-h', topbar.offsetHeight + 'px');
+  syncNavHeight();
+  if(window.ResizeObserver){ new ResizeObserver(syncNavHeight).observe(topbar); }
+  else { window.addEventListener('resize', syncNavHeight); }
+
+  const els = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    },{rootMargin:'0px 0px -8% 0px', threshold:0.08});
+    els.forEach(el=>io.observe(el));
+  } else {
+    els.forEach(el=>el.classList.add('in'));
+  }
+</script>
+
+</body>
+</html>

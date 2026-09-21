@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="new_favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lumen Terrae — Portafolio de Apostolados</title>
+<meta name="description" content="Lumen Terrae — Apostolado Católico por la Ecología Integral. Formamos custodios de la casa común: contemplar, convertirse, cuidar, servir y evangelizar. Retiros, comunidades y misiones. Monterrey, Nuevo León, México.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Lumen Terrae — Portafolio de Apostolados">
+<meta property="og:description" content="Formamos custodios de la casa común. No buscamos solamente cambiar hábitos: buscamos transformar la mirada que los origina.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<meta property="og:site_name" content="The Metanoia Group">
+<meta property="og:image" content="https://metanoiagroup.vip/og-image-1.jpg">
+<meta property="og:url" content="https://metanoiagroup.vip/mgz1-c">
+<link rel="alternate" hreflang="es" href="https://metanoiagroup.vip/mgz1-c.html">
+<link rel="alternate" hreflang="en" href="https://metanoiagroup.vip/mgz2-c.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff;
+    --bg-alt:#f6f8f2;
+    --bg-card:#e9eddf;
+    --text:#243026;
+    --text-dim:#9aa196;
+    --text-muted:#586158;
+    --accent:#5f7748;
+    --accent-dim:#b0bd9e;
+    --accent-deep:#445832;
+    --earth:#8e6130;
+    --earth-deep:#6f4a22;
+    --sky:#78a8c0;
+    --line:#24302614;
+    --line-strong:#24302624;
+    --serif:'Fraunces', Georgia, 'Times New Roman', serif;
+    --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --maxw:920px;
+    --nav-h:62px;
+    --anchor-gap:24px;
+    --sec-pad:92px;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;background:var(--bg);}
+
+  body{
+    background:var(--bg);color:var(--text);
+    font-family:var(--sans);font-weight:400;line-height:1.6;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+
+  a{color:inherit;text-decoration:none;}
+  ::selection{background:#5f774826;color:var(--text);}
+  a:focus-visible, button:focus-visible{outline:1.5px solid var(--accent);outline-offset:4px;}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;z-index:1;}
+
+  section{padding:var(--sec-pad) 0;scroll-margin-top:calc(var(--nav-h) + var(--anchor-gap));}
+  section.tinted{background:var(--bg-alt);}
+
+  /* ---------- NAV ---------- */
+  nav.topbar{
+    position:sticky;top:0;background:#ffffffe6;
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line-strong);z-index:50;
+  }
+  nav.topbar .inner{
+    max-width:var(--maxw);margin:0 auto;padding:16px 28px;
+    display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  }
+  .brandmark{font-family:var(--serif);font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:var(--text);font-weight:500;}
+  .nav-links{display:flex;gap:20px;align-items:center;flex-wrap:wrap;}
+  .nav-links a{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--text-muted);transition:color .25s ease;white-space:nowrap;}
+  .nav-links a:hover{color:var(--accent-deep);}
+  .nav-links a.pill{border:1px solid var(--line-strong);padding:6px 12px;border-radius:2px;}
+  .nav-links a.pill:hover{border-color:var(--accent);color:var(--accent-deep);}
+  .nav-links a.home{color:var(--accent-deep);}
+
+  /* ---------- HERO ---------- */
+  header.hero{padding:96px 0 78px;}
+  .hero-logo{height:126px;width:auto;max-width:180px;object-fit:contain;display:block;margin-bottom:44px;}
+  .hero-eyebrow{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--earth-deep);margin-bottom:26px;}
+  h1.name{
+    font-family:var(--serif);font-size:clamp(35px,6.4vw,64px);
+    line-height:1.08;font-weight:400;letter-spacing:-.018em;max-width:14ch;margin-bottom:30px;
+  }
+  h1.name .faint{color:var(--text-muted);font-weight:300;}
+  .hero-rule{width:54px;height:2px;background:var(--accent);margin-bottom:30px;}
+  p.lede{font-size:clamp(16.5px,2vw,18.5px);color:var(--text-muted);max-width:58ch;line-height:1.72;margin-bottom:22px;}
+  .hero-origin{font-family:var(--serif);font-size:15.5px;font-style:italic;color:var(--text-muted);margin-bottom:38px;}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{display:inline-block;font-size:13px;letter-spacing:.06em;padding:13px 24px;border-radius:2px;transition:background .25s ease,color .25s ease,border-color .25s ease;}
+  .btn-primary{background:var(--accent-deep);color:#fff;border:1px solid var(--accent-deep);}
+  .btn-primary:hover{background:var(--text);border-color:var(--text);}
+  .btn-ghost{border:1px solid var(--line-strong);color:var(--text-muted);}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent-deep);}
+
+  /* ---------- DARK OPENING BAND ---------- */
+  .dusk{background:var(--text);color:#e8ece2;padding:100px 0;}
+  .dusk-q{
+    font-family:var(--serif);font-size:clamp(26px,4.8vw,44px);
+    line-height:1.18;font-weight:400;letter-spacing:-.016em;max-width:21ch;
+    color:#f0f3ea;
+  }
+  .dusk-q .soft{color:#e8ece299;font-weight:300;}
+  .dusk-list{margin-top:44px;max-width:54ch;}
+  .dusk-list div{
+    font-family:var(--serif);font-size:clamp(16px,2.3vw,19px);
+    line-height:1.5;padding:13px 0;border-bottom:1px solid #ffffff17;color:#e8ece2cc;
+  }
+  .dusk-list div:last-child{border-bottom:none;}
+  .dusk-note{font-size:15.5px;color:#e8ece2aa;max-width:56ch;margin-top:40px;line-height:1.78;}
+  .dusk-note strong{color:var(--accent-dim);font-weight:400;}
+
+  /* ---------- SECTION HEADS ---------- */
+  .sec-head{display:flex;gap:20px;align-items:flex-start;margin-bottom:44px;}
+  .sec-num{font-family:var(--serif);font-size:13px;letter-spacing:.14em;color:var(--earth);padding-top:10px;min-width:34px;font-weight:500;}
+  h2.sec-title{font-family:var(--serif);font-size:clamp(27px,4.1vw,38px);font-weight:400;line-height:1.16;letter-spacing:-.012em;margin-bottom:10px;}
+  h2.sec-title em{font-style:italic;color:var(--accent-deep);font-weight:400;}
+  .sec-sub{font-size:15px;color:var(--text-muted);max-width:62ch;line-height:1.66;}
+
+  p.lead{font-size:16.5px;line-height:1.78;color:var(--text-muted);max-width:66ch;margin-bottom:22px;}
+  p.lead strong{color:var(--text);font-weight:500;}
+
+  .statement{font-family:var(--serif);font-size:clamp(25px,4.4vw,40px);line-height:1.2;font-weight:400;letter-spacing:-.014em;margin:54px 0;max-width:21ch;}
+  .statement.wide{max-width:28ch;}
+  .statement .soft{color:var(--text-muted);font-weight:300;}
+  .statement-note{font-size:15px;color:var(--text-muted);max-width:60ch;margin-top:-32px;margin-bottom:54px;line-height:1.7;}
+
+  /* ---------- RELATIONS ---------- */
+  .relations{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);margin:34px 0 10px;}
+  .relation{background:var(--bg);padding:28px 24px;}
+  .relation-name{font-family:var(--serif);font-size:15px;letter-spacing:.09em;text-transform:uppercase;color:var(--earth-deep);margin-bottom:12px;}
+  .relation-q{font-family:var(--serif);font-size:17px;font-style:italic;color:var(--text);line-height:1.5;}
+
+  /* ---------- METHOD ---------- */
+  .method{margin:38px 0 10px;border-top:1px solid var(--line-strong);}
+  .mstep{display:grid;grid-template-columns:200px 1fr;gap:24px;padding:24px 0;border-bottom:1px solid var(--line);align-items:baseline;}
+  .mstep-word{font-family:var(--serif);font-size:clamp(20px,3vw,26px);letter-spacing:.05em;text-transform:uppercase;color:var(--accent-deep);}
+  .mstep-what{font-family:var(--serif);font-size:18px;font-style:italic;color:var(--text);line-height:1.5;}
+  @media (max-width:640px){.mstep{grid-template-columns:1fr;gap:6px;}}
+
+  /* ---------- INTEGRAL ---------- */
+  .integral{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);margin:36px 0 10px;}
+  .integ{background:var(--bg);padding:26px 22px;}
+  .integ-word{font-family:var(--serif);font-size:16px;letter-spacing:.07em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:9px;}
+  .integ-desc{font-size:14px;color:var(--text-muted);line-height:1.65;}
+
+  /* ---------- TRAITS ---------- */
+  .traits{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);margin-top:36px;}
+  .trait{background:var(--bg);padding:24px 20px;}
+  .trait-word{font-family:var(--serif);font-size:16px;letter-spacing:.07em;text-transform:uppercase;color:var(--earth-deep);margin-bottom:8px;}
+  .trait-desc{font-size:14px;color:var(--text-muted);line-height:1.65;}
+
+  /* ---------- JOURNEY ---------- */
+  .journey{counter-reset:jr;margin:34px 0 8px;border-top:1px solid var(--line-strong);}
+  .jstep{counter-increment:jr;display:grid;grid-template-columns:52px 176px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid var(--line);align-items:baseline;}
+  .jstep::before{content:counter(jr,decimal-leading-zero);font-family:var(--serif);font-size:13px;color:var(--text-dim);letter-spacing:.1em;}
+  .jstep-word{font-family:var(--serif);font-size:17px;letter-spacing:.05em;text-transform:uppercase;}
+  .jstep-desc{font-size:14.5px;color:var(--text-muted);line-height:1.7;}
+  @media (max-width:640px){.jstep{grid-template-columns:44px 1fr;gap:8px 16px;}.jstep-desc{grid-column:2;}}
+
+  /* ---------- RETREAT ---------- */
+  .retreat{border:1px solid var(--accent-dim);border-radius:3px;background:var(--bg-alt);padding:34px 32px;margin-top:38px;}
+  .retreat-tag{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--earth-deep);margin-bottom:16px;}
+  .retreat-title{font-family:var(--serif);font-size:clamp(22px,3.2vw,28px);font-weight:500;margin-bottom:14px;line-height:1.28;}
+  .retreat-desc{font-size:15.5px;color:var(--text-muted);line-height:1.76;max-width:62ch;}
+  .retreat-verbs{display:grid;grid-template-columns:repeat(auto-fit,minmax(178px,1fr));gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);margin-top:26px;}
+  .rv{background:var(--bg);padding:20px 18px;}
+  .rv-word{font-family:var(--serif);font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:6px;}
+  .rv-note{font-size:13.5px;color:var(--text-muted);line-height:1.6;}
+  .retreat-close{font-family:var(--serif);font-size:19px;font-style:italic;color:var(--text);margin-top:26px;line-height:1.5;}
+
+  /* ---------- SUPPORT ---------- */
+  .support{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);margin-top:36px;}
+  .sup{background:var(--bg);padding:24px 20px;}
+  .sup-name{font-family:var(--serif);font-size:16px;letter-spacing:.07em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:8px;}
+  .sup-desc{font-size:14px;color:var(--text-muted);line-height:1.65;}
+
+  /* ---------- WHERE / FOR YOU ---------- */
+  .rows{border-top:1px solid var(--line-strong);margin-top:8px;}
+  .row2{display:grid;grid-template-columns:216px 1fr;gap:22px;padding:19px 0;border-bottom:1px solid var(--line);align-items:baseline;}
+  .row2-who{font-family:var(--serif);font-size:17px;color:var(--text);}
+  .row2-what{font-size:14.5px;color:var(--text-muted);line-height:1.7;}
+  @media (max-width:640px){.row2{grid-template-columns:1fr;gap:4px;}}
+
+  /* ---------- NEGATIVES ---------- */
+  .negatives{border-top:1px solid var(--line-strong);margin:10px 0 0;}
+  .negatives div{font-size:16px;color:var(--text-muted);padding:14px 0;border-bottom:1px solid var(--line);}
+
+  /* ---------- PATHS ---------- */
+  .paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:16px;margin-top:10px;}
+  a.path{border:1px solid var(--line-strong);border-radius:3px;padding:28px 24px;background:var(--bg);transition:border-color .3s ease,background .3s ease;}
+  a.path:hover{border-color:var(--accent);background:var(--bg-alt);}
+  .path-want{font-family:var(--serif);font-size:19px;color:var(--text);margin-bottom:10px;line-height:1.35;}
+  .path-who{font-size:14px;color:var(--text-muted);line-height:1.65;margin-bottom:16px;}
+  .path-go{font-size:12.5px;letter-spacing:.06em;color:var(--text-dim);transition:color .25s ease;}
+  a.path:hover .path-go{color:var(--accent-deep);}
+  .path-go .arrow{display:inline-block;transition:transform .25s ease;}
+  a.path:hover .path-go .arrow{transform:translateX(4px);}
+
+  /* ---------- INITIATOR ---------- */
+  .initiator{border:1px solid var(--line-strong);border-radius:3px;padding:34px 32px;background:var(--bg);margin-top:36px;}
+  .init-label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--earth-deep);margin-bottom:14px;}
+  .init-name{font-family:var(--serif);font-size:27px;font-weight:500;letter-spacing:-.005em;}
+  .init-role{font-size:13.5px;color:var(--text-muted);margin-top:7px;letter-spacing:.02em;}
+  .init-words{font-size:15.5px;color:var(--text-muted);line-height:1.76;margin-top:22px;max-width:62ch;}
+  .init-words strong{color:var(--text);font-weight:500;}
+
+  .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(224px,1fr));gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);margin-top:26px;}
+  .contact-item{background:var(--bg-alt);padding:22px 20px;transition:background .25s ease;}
+  .contact-item:hover{background:var(--bg-card);}
+  .contact-label{font-size:11px;letter-spacing:.17em;text-transform:uppercase;color:var(--text-dim);margin-bottom:8px;}
+  .contact-value{font-size:15px;color:var(--text);word-break:break-word;}
+
+  /* ---------- ECOSYSTEM ---------- */
+  .eco-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:16px;}
+  a.eco-card{background:var(--bg-alt);border:1px solid var(--line);border-radius:3px;padding:24px 22px;transition:background .25s ease,border-color .25s ease;}
+  a.eco-card:hover{background:var(--bg-card);border-color:var(--line-strong);}
+  .eco-code{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--earth-deep);margin-bottom:11px;}
+  .eco-name{font-family:var(--serif);font-size:18px;font-weight:500;margin-bottom:8px;line-height:1.25;}
+  .eco-desc{font-size:14px;color:var(--text-muted);line-height:1.66;margin-bottom:14px;}
+  .eco-url{font-size:12.5px;color:var(--text-dim);display:flex;align-items:center;gap:6px;}
+  a.eco-card:hover .eco-url{color:var(--accent-deep);}
+  .eco-url .arrow{transition:transform .25s ease;}
+  a.eco-card:hover .eco-url .arrow{transform:translateX(4px);}
+
+  /* ---------- CLOSING ---------- */
+  .closing{text-align:center;padding:110px 0 92px;background:var(--bg-alt);border-top:1px solid var(--line-strong);}
+  .close-line{font-family:var(--serif);font-size:clamp(26px,5vw,44px);line-height:1.24;font-weight:400;letter-spacing:-.015em;text-wrap:balance;}
+  .close-line.faded{color:var(--text-muted);font-weight:300;}
+  .close-rule{width:40px;height:1px;background:var(--earth);margin:32px auto;}
+  .close-final{font-family:var(--serif);font-size:clamp(19px,3vw,26px);line-height:1.4;max-width:62ch;text-wrap:balance;margin:0 auto 38px;color:var(--accent-deep);font-style:italic;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--bg);border-top:1px solid var(--line-strong);padding:64px 0 54px;}
+  .footer-brand{font-family:var(--serif);font-size:20px;letter-spacing:.07em;text-transform:uppercase;font-weight:500;}
+  .footer-tagline{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--accent-deep);margin-top:9px;}
+  .footer-origin{font-size:14px;color:var(--text-muted);margin-top:10px;}
+  .footer-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:34px;margin-top:40px;}
+  .footer-col-title{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-dim);margin-bottom:14px;}
+  .footer-col a, .footer-col div{display:block;font-size:14px;color:var(--text-muted);margin-bottom:9px;line-height:1.5;}
+  .footer-col a{transition:color .25s ease;}
+  .footer-col a:hover{color:var(--accent-deep);}
+  .footer-col .who{color:var(--text);font-weight:500;}
+  .footer-admg-rule{width:28px;height:1px;background:var(--earth);margin-top:40px;}
+  .footer-admg{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--text-dim);margin-top:14px;}
+  .footer-bottom{margin-top:38px;padding-top:22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:12.5px;color:var(--text-dim);}
+  .footer-en{color:var(--text-muted);transition:color .25s ease;}
+  .footer-en:hover{color:var(--accent-deep);}
+
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}
+    .reveal{opacity:1;transform:none;}
+  }
+</style>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lumen Terrae — Portafolio de Apostolados">
+<meta name="twitter:description" content="Formamos custodios de la casa común. No buscamos solamente cambiar hábitos: buscamos transformar la mirada que los origina.">
+<meta name="twitter:image" content="https://metanoiagroup.vip/og-image-1.jpg">
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KHNZVPJX1N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KHNZVPJX1N');
+</script>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="inner">
+    <div class="brandmark">Lumen Terrae</div>
+    <div class="nav-links">
+      <a href="#apostolado">El apostolado</a>
+      <a href="#camino">El camino</a>
+      <a href="#custodio">El custodio</a>
+      <a href="#experiencias">Experiencias</a>
+      <a class="home" href="mgz1.html">Portafolio</a>
+      <a class="pill" href="mgz2-c.html">EN</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="hero-logo" src="lumen-terrae-logo.png" alt="Lumen Terrae" width="180" height="126">
+    <div class="hero-eyebrow">Apostolado Católico por la Ecología Integral</div>
+    <h1 class="name">Formamos custodios <span class="faint">de la casa común.</span></h1>
+    <div class="hero-rule"></div>
+    <p class="lede">
+      Una invitación a contemplar la creación, transformar el corazón y convertir la fe en una forma concreta de cuidar, servir y evangelizar.
+    </p>
+    <p class="hero-origin">Monterrey, Nuevo León, México.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#camino">Descubre el camino</a>
+      <a class="btn btn-ghost" href="#experiencias">El Retiro Lumen Terrae</a>
+    </div>
+  </div>
+</header>
+
+<div class="dusk">
+  <div class="wrap">
+    <p class="dusk-q reveal">¿Y si cuidar la creación fuera también <span class="soft">una forma de vivir nuestra fe?</span></p>
+    <div class="dusk-list reveal">
+      <div>¿Qué significa realmente que el mundo sea creación?</div>
+      <div>¿Qué lugar ocupa el ser humano dentro de ella?</div>
+      <div>¿Qué hemos recibido?</div>
+      <div>¿Qué estamos llamados a custodiar?</div>
+      <div>¿Y qué tiene que cambiar primero en nosotros para que podamos transformar aquello que nos rodea?</div>
+    </div>
+    <p class="dusk-note reveal">
+      Lumen Terrae nace de una convicción sencilla y profunda: <strong>la crisis de la casa común también nos llama a una conversión del corazón.</strong>
+    </p>
+  </div>
+</div>
+
+<section id="apostolado">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">I</span>
+      <div>
+        <h2 class="sec-title">No somos simplemente un <em>proyecto ambiental</em></h2>
+        <p class="sec-sub">Qué es Lumen Terrae y desde dónde mira.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        Lumen Terrae es un apostolado católico por la ecología integral. Ayudamos a personas, familias y comunidades a descubrir la creación como don de Dios y a comprender que el cuidado de la casa común forma parte de una vida cristiana vivida con coherencia.
+      </p>
+      <p class="lead">
+        Integramos <strong>espiritualidad, formación, comunidad y acción concreta</strong> para acompañar un camino que comienza en la contemplación y conduce hacia la conversión, el cuidado, el servicio y el testimonio.
+      </p>
+
+      <div class="statement wide reveal">No buscamos solamente cambiar hábitos. <span class="soft">Buscamos transformar la mirada que los origina.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="crisis" class="tinted">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">II</span>
+      <div>
+        <h2 class="sec-title">La crisis exterior también revela una <em>crisis interior</em></h2>
+        <p class="sec-sub">Por qué Lumen Terrae empieza por dentro y no por fuera.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        Hemos aprendido a relacionarnos con muchas cosas desde la lógica de la posesión, el consumo y la utilidad. Consumimos sin siempre preguntarnos qué necesitamos. Utilizamos sin siempre preguntarnos qué hemos recibido. Deseamos sin siempre preguntarnos qué nos hace verdaderamente libres.
+      </p>
+      <p class="lead">
+        Y muchas veces hablamos de cuidar el mundo sin detenernos a preguntarnos <strong>qué necesita ser transformado primero en nosotros.</strong>
+      </p>
+
+      <div class="relations">
+        <div class="relation">
+          <div class="relation-name">Relación con Dios</div>
+          <div class="relation-q">¿Reconocemos a Dios como Creador?</div>
+        </div>
+        <div class="relation">
+          <div class="relation-name">Relación con los bienes</div>
+          <div class="relation-q">¿Vivimos como propietarios absolutos o como administradores de lo recibido?</div>
+        </div>
+        <div class="relation">
+          <div class="relation-name">Relación con los demás</div>
+          <div class="relation-q">¿Comprendemos que cuidar la casa común también implica cuidar la dignidad y el bien de nuestros hermanos?</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="camino">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">III</span>
+      <div>
+        <h2 class="sec-title">La respuesta no comienza afuera. Comienza <em>en el corazón</em></h2>
+        <p class="sec-sub">Antes de actuar, contemplamos. Antes de transformar, nos convertimos.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        Antes de hablar de cuidado, aprendemos a agradecer. Antes de querer cambiar el mundo, aprendemos a reconocer aquello que Dios nos ha confiado.
+      </p>
+
+      <div class="method">
+        <div class="mstep">
+          <div class="mstep-word">Contemplar</div>
+          <div class="mstep-what">Reconocer el don.</div>
+        </div>
+        <div class="mstep">
+          <div class="mstep-word">Convertirse</div>
+          <div class="mstep-what">Ordenar el corazón.</div>
+        </div>
+        <div class="mstep">
+          <div class="mstep-word">Cuidar</div>
+          <div class="mstep-what">Transformar la manera de vivir.</div>
+        </div>
+        <div class="mstep">
+          <div class="mstep-word">Servir</div>
+          <div class="mstep-what">Poner la conversión al bien común.</div>
+        </div>
+        <div class="mstep">
+          <div class="mstep-word">Evangelizar</div>
+          <div class="mstep-what">Hacer de la propia vida un testimonio.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="integral" class="tinted">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">IV</span>
+      <div>
+        <h2 class="sec-title">La casa común es más que <em>el medio ambiente</em></h2>
+        <p class="sec-sub">Qué es la ecología integral, sin tecnicismos.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        La ecología integral nos invita a reconocer que todo está relacionado. La manera en que tratamos la creación está vinculada con nuestra manera de vivir, consumir, trabajar, producir, relacionarnos y servir. Por eso el cuidado de la casa común no puede separarse de la dignidad humana, la familia, la comunidad, la economía, la cultura y el bien común.
+      </p>
+
+      <div class="integral">
+        <div class="integ">
+          <div class="integ-word">Creación</div>
+          <div class="integ-desc">La recibimos como don.</div>
+        </div>
+        <div class="integ">
+          <div class="integ-word">Persona</div>
+          <div class="integ-desc">Reconocemos su dignidad.</div>
+        </div>
+        <div class="integ">
+          <div class="integ-word">Comunidad</div>
+          <div class="integ-desc">Construimos relaciones de cuidado.</div>
+        </div>
+        <div class="integ">
+          <div class="integ-word">Bien común</div>
+          <div class="integ-desc">Buscamos el bien que compartimos.</div>
+        </div>
+        <div class="integ">
+          <div class="integ-word">Casa común</div>
+          <div class="integ-desc">Custodiamos aquello que hemos recibido.</div>
+        </div>
+      </div>
+
+      <p class="lead" style="margin-top:34px;">
+        <strong>No se trata únicamente de cuidar el lugar donde vivimos. Se trata de aprender a vivir de una manera digna de aquello que hemos recibido.</strong>
+      </p>
+
+      <p class="lead">
+        Y no separamos el cuidado de la creación del cuidado de las personas. Por eso ponemos especial atención en quienes experimentan de manera más directa las consecuencias de la degradación ambiental, la pobreza, la vulnerabilidad y la exclusión. No cuidamos la tierra para olvidarnos del hombre: cuidamos la casa común porque en ella vivimos todos.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="custodio">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">V</span>
+      <div>
+        <h2 class="sec-title">¿Qué es un <em>custodio</em>?</h2>
+        <p class="sec-sub">Alguien que comprende que lo que ha recibido no le pertenece de manera absoluta.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        Es quien contempla antes de consumir. Discierne antes de decidir. Agradece antes de exigir. Cuida antes de desechar. Sirve antes de reclamar. Y entiende que sus decisiones pueden convertirse en una forma concreta de amar a Dios y al prójimo.
+      </p>
+
+      <div class="statement wide reveal">No necesitas ser ambientalista. <span class="soft">Necesitas estar dispuesto a convertirte.</span></div>
+
+      <div class="traits">
+        <div class="trait">
+          <div class="trait-word">Contempla</div>
+          <div class="trait-desc">Aprende a reconocer la belleza y el don de la creación.</div>
+        </div>
+        <div class="trait">
+          <div class="trait-word">Agradece</div>
+          <div class="trait-desc">Reconoce que ha recibido antes de poseer.</div>
+        </div>
+        <div class="trait">
+          <div class="trait-word">Discierne</div>
+          <div class="trait-desc">Examina sus decisiones a la luz de la fe.</div>
+        </div>
+        <div class="trait">
+          <div class="trait-word">Vive con sobriedad</div>
+          <div class="trait-desc">Aprende a distinguir entre necesidad, deseo y exceso.</div>
+        </div>
+        <div class="trait">
+          <div class="trait-word">Cuida</div>
+          <div class="trait-desc">Convierte sus convicciones en hábitos.</div>
+        </div>
+        <div class="trait">
+          <div class="trait-word">Sirve</div>
+          <div class="trait-desc">Pone sus capacidades al servicio de otros.</div>
+        </div>
+        <div class="trait">
+          <div class="trait-word">Construye comunidad</div>
+          <div class="trait-desc">Comprende que la conversión también tiene una dimensión comunitaria.</div>
+        </div>
+        <div class="trait">
+          <div class="trait-word">Lidera</div>
+          <div class="trait-desc">Transforma aquello que Dios ha puesto bajo su responsabilidad.</div>
+        </div>
+        <div class="trait">
+          <div class="trait-word">Evangeliza</div>
+          <div class="trait-desc">Hace visible su fe a través de su manera de vivir.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experiencias" class="tinted">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">VI</span>
+      <div>
+        <h2 class="sec-title">Esto no es una charla aislada. Es <em>un camino</em></h2>
+        <p class="sec-sub">Siete pasos, y las experiencias que los sostienen.</p>
+      </div>
+    </div>
+
+    <div class="journey reveal">
+      <div class="jstep">
+        <div class="jstep-word">Descubrir</div>
+        <div class="jstep-desc">Que la creación es un don y que nuestra relación con ella también puede ser expresión de nuestra fe.</div>
+      </div>
+      <div class="jstep">
+        <div class="jstep-word">Contemplar</div>
+        <div class="jstep-desc">Detenernos. Hacer silencio. Mirar. Agradecer.</div>
+      </div>
+      <div class="jstep">
+        <div class="jstep-word">Convertir</div>
+        <div class="jstep-desc">Reconocer aquello que necesita ser ordenado en nuestra propia vida.</div>
+      </div>
+      <div class="jstep">
+        <div class="jstep-word">Cuidar</div>
+        <div class="jstep-desc">Llevar la conversión a nuestros hábitos, decisiones y relaciones.</div>
+      </div>
+      <div class="jstep">
+        <div class="jstep-word">Servir</div>
+        <div class="jstep-desc">Poner nuestras capacidades al servicio del bien común.</div>
+      </div>
+      <div class="jstep">
+        <div class="jstep-word">Pertenecer</div>
+        <div class="jstep-desc">Encontrar una comunidad que comparta el mismo camino.</div>
+      </div>
+      <div class="jstep">
+        <div class="jstep-word">Liderar</div>
+        <div class="jstep-desc">Convertirnos en agentes de cambio en nuestra familia, parroquia, escuela, empresa o comunidad.</div>
+      </div>
+    </div>
+
+    <div class="retreat reveal">
+      <div class="retreat-tag">El punto de partida</div>
+      <div class="retreat-title">Retiro Lumen Terrae</div>
+      <p class="retreat-desc">
+        Todo camino comienza deteniéndose. Una experiencia de silencio, contemplación, formación y conversión para redescubrir la creación como don de Dios y reconocer nuestra responsabilidad como custodios de la casa común.
+      </p>
+      <div class="retreat-verbs">
+        <div class="rv"><div class="rv-word">Detenerte</div><div class="rv-note">Salir por un momento del ruido.</div></div>
+        <div class="rv"><div class="rv-word">Contemplar</div><div class="rv-note">Aprender a mirar la creación desde la fe.</div></div>
+        <div class="rv"><div class="rv-word">Escuchar</div><div class="rv-note">Abrir espacio para Dios.</div></div>
+        <div class="rv"><div class="rv-word">Discernir</div><div class="rv-note">Reconocer aquello que necesita cambiar.</div></div>
+        <div class="rv"><div class="rv-word">Convertirte</div><div class="rv-note">Ordenar la relación con los bienes, el consumo y la creación.</div></div>
+        <div class="rv"><div class="rv-word">Comprometerte</div><div class="rv-note">Traducir la conversión en acciones concretas.</div></div>
+      </div>
+      <p class="retreat-close">El retiro no termina cuando sales. Ahí comienza el camino.</p>
+    </div>
+
+    <div class="reveal">
+      <p class="lead" style="margin-top:44px;">
+        <strong>La conversión necesita una vida que la sostenga.</strong> Por eso el camino continúa después del retiro.
+      </p>
+
+      <div class="support">
+        <div class="sup">
+          <div class="sup-name">Formación</div>
+          <div class="sup-desc">Cursos, encuentros, contenidos y experiencias sobre ecología integral y espiritualidad de la creación.</div>
+        </div>
+        <div class="sup">
+          <div class="sup-name">Comunidades</div>
+          <div class="sup-desc">Espacios donde personas y familias profundizan, comparten, revisan hábitos, sirven juntos y se acompañan. Nadie custodia solo.</div>
+        </div>
+        <div class="sup">
+          <div class="sup-name">Vida cotidiana</div>
+          <div class="sup-desc">Hábitos y prácticas que permiten llevar la conversión a la realidad de todos los días.</div>
+        </div>
+        <div class="sup">
+          <div class="sup-name">Misiones</div>
+          <div class="sup-desc">Acciones concretas de cuidado y restauración: restaurar, cuidar, educar, servir, acompañar, construir.</div>
+        </div>
+        <div class="sup">
+          <div class="sup-name">Liderazgo</div>
+          <div class="sup-desc">Formación de personas capaces de impulsar procesos de transformación en sus comunidades.</div>
+        </div>
+      </div>
+
+      <p class="lead" style="margin-top:34px;">
+        La contemplación nos mueve. La conversión nos transforma. Y la transformación nos envía. <strong>Porque la casa común no es una idea: es el lugar donde viven personas concretas.</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="para-quien">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">VII</span>
+      <div>
+        <h2 class="sec-title">Lumen Terrae puede vivir en <em>tu comunidad</em></h2>
+        <p class="sec-sub">Dónde puede entrar este camino, y para quién es.</p>
+      </div>
+    </div>
+
+    <div class="rows reveal">
+      <div class="row2">
+        <div class="row2-who">Parroquias</div>
+        <div class="row2-what">Integrar la ecología integral en la vida y la pastoral parroquial.</div>
+      </div>
+      <div class="row2">
+        <div class="row2-who">Colegios</div>
+        <div class="row2-what">Formar niños, jóvenes, profesores y familias desde una visión cristiana de la creación.</div>
+      </div>
+      <div class="row2">
+        <div class="row2-who">Familias</div>
+        <div class="row2-what">Llevar la conversión ecológica al hogar y a la vida cotidiana.</div>
+      </div>
+      <div class="row2">
+        <div class="row2-who">Movimientos</div>
+        <div class="row2-what">Incorporar la espiritualidad de la creación a procesos de formación y comunidad.</div>
+      </div>
+      <div class="row2">
+        <div class="row2-who">Comunidades religiosas</div>
+        <div class="row2-what">Profundizar una espiritualidad de custodia, sobriedad y servicio.</div>
+      </div>
+      <div class="row2">
+        <div class="row2-who">Jóvenes</div>
+        <div class="row2-what">Ofrecer experiencias de contemplación, formación, comunidad y misión.</div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="statement">¿Este camino <span class="soft">es para ti?</span></div>
+      <p class="statement-note">
+        Si quieres vivir tu fe con mayor coherencia en tu vida cotidiana. Si eres una familia que quiere transmitir a sus hijos una relación de gratitud, sobriedad y responsabilidad. Si eres joven y buscas una fe viva y comprometida con el mundo que te toca transformar. Si eres líder y tomas decisiones que afectan a otros. Si eres una comunidad que quiere pasar de la preocupación a la acción.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="no-somos" class="tinted">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">VIII</span>
+      <div>
+        <h2 class="sec-title">Lumen Terrae <em>no es</em></h2>
+        <p class="sec-sub">Dónde están los límites de este apostolado.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="negatives">
+        <div>Una campaña ambiental.</div>
+        <div>Un movimiento político.</div>
+        <div>Una ONG ambiental.</div>
+        <div>Una moda verde.</div>
+        <div>Una colección de consejos de reciclaje.</div>
+        <div>Una espiritualidad que confunde la creación con Dios.</div>
+        <div>Un activismo que olvida al ser humano.</div>
+        <div>Una sustitución de la catequesis, la parroquia o la vida sacramental.</div>
+      </div>
+
+      <p class="lead" style="margin-top:34px;">
+        <strong>Es un apostolado católico. Y por eso, Cristo está en el centro.</strong>
+      </p>
+
+      <div class="statement wide reveal">No prometemos cambiar el mundo <span class="soft">en un día.</span></div>
+      <p class="statement-note">
+        Prometemos algo más humilde: ayudarte a detenerte, a mirar, a agradecer, a reconocer, a convertirte, a cuidar, a servir, y a descubrir que una vida transformada puede convertirse en el comienzo de una transformación mucho mayor.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="comenzar">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">IX</span>
+      <div>
+        <h2 class="sec-title">¿Dónde quieres <em>comenzar</em>?</h2>
+        <p class="sec-sub">Tres caminos de entrada. Todos llegan al mismo lugar.</p>
+      </div>
+    </div>
+
+    <div class="paths reveal">
+      <a class="path" href="mailto:mario@metanoiagroup.vip?subject=Lumen%20Terrae%20%E2%80%94%20Quiero%20vivir%20el%20camino" onclick="gtag('event','click',{'event_category':'contact','event_label':'path_camino_mgz1c'})">
+        <div class="path-want">Quiero vivir el camino</div>
+        <div class="path-who">Para personas y familias que quieren comenzar por el retiro y la formación.</div>
+        <div class="path-go">Conocer las experiencias <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="path" href="mailto:mario@metanoiagroup.vip?subject=Lumen%20Terrae%20%E2%80%94%20Llevarlo%20a%20mi%20comunidad" onclick="gtag('event','click',{'event_category':'contact','event_label':'path_comunidad_mgz1c'})">
+        <div class="path-want">Quiero llevarlo a mi comunidad</div>
+        <div class="path-who">Para parroquias, colegios, movimientos y comunidades religiosas.</div>
+        <div class="path-go">Hablemos <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="path" href="mailto:mario@metanoiagroup.vip?subject=Lumen%20Terrae%20%E2%80%94%20Quiero%20servir" onclick="gtag('event','click',{'event_category':'contact','event_label':'path_servir_mgz1c'})">
+        <div class="path-want">Quiero servir</div>
+        <div class="path-who">Para quienes quieren convertirse en agentes de cambio y sumarse a las misiones.</div>
+        <div class="path-go">Únete <span class="arrow">&rarr;</span></div>
+      </a>
+    </div>
+
+    <div class="initiator reveal">
+      <div class="init-label">El iniciador</div>
+      <div class="init-name">Mario Garza Livas</div>
+      <div class="init-role">Chief Strategic Advisor · Founder · CEO @ The Metanoia Group</div>
+      <p class="init-words">
+        Lumen Terrae nace en Monterrey, pero la casa común no tiene fronteras. Nuestro deseo es formar comunidades de custodios capaces de llevar esta espiritualidad a parroquias, colegios, familias, movimientos y comunidades en distintos lugares. Una persona. Una familia. Una comunidad. Una generación. <strong>Una casa común que aprendemos nuevamente a custodiar.</strong>
+      </p>
+
+      <div class="contact-grid">
+        <a class="contact-item" href="mailto:mario@metanoiagroup.vip?subject=Lumen%20Terrae" onclick="gtag('event','click',{'event_category':'contact','event_label':'email_mgz1c'})">
+          <div class="contact-label">Correo</div>
+          <div class="contact-value">mario@metanoiagroup.vip</div>
+        </a>
+        <a class="contact-item" href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp_mgz1c'})">
+          <div class="contact-label">Teléfono &amp; WhatsApp</div>
+          <div class="contact-value">+52 (81) 2513 6784</div>
+        </a>
+        <a class="contact-item" href="https://linkedin.com/in/garzalivas" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'contact','event_label':'linkedin_mgz1c'})">
+          <div class="contact-label">LinkedIn</div>
+          <div class="contact-value">linkedin.com/in/garzalivas</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="enlaces" class="tinted">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">X</span>
+      <div>
+        <h2 class="sec-title">Enlaces <em>relevantes</em></h2>
+        <p class="sec-sub">El resto del ecosistema.</p>
+      </div>
+    </div>
+
+    <div class="eco-grid reveal">
+      <a class="eco-card" href="mgz1.html">
+        <div class="eco-code">Portafolio</div>
+        <div class="eco-name">Portafolio de Apostolados</div>
+        <p class="eco-desc">Lumen Terrae es uno de siete apostolados. Aquí están los otros seis.</p>
+        <div class="eco-url">mgz1 <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="eco-card" href="mgz2-c.html">
+        <div class="eco-code">Idioma</div>
+        <div class="eco-name">Lumen Terrae</div>
+        <p class="eco-desc">Esta misma página, en inglés.</p>
+        <div class="eco-url">mgz2-c <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="eco-card" href="mgl1.html">
+        <div class="eco-code">Personal</div>
+        <div class="eco-name">Mario Garza Livas</div>
+        <p class="eco-desc">Landing page personal: contacto, documentos y el resto de los proyectos.</p>
+        <div class="eco-url">mgl1 <span class="arrow">&rarr;</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="closing">
+  <div class="wrap">
+    <div class="close-line reveal">La casa común</div>
+    <div class="close-line faded reveal">nos fue confiada.</div>
+    <div class="close-rule"></div>
+    <div class="close-line reveal">¿Qué vas a hacer con lo que has recibido?</div>
+    <p class="close-final reveal" style="margin-top:38px;">Lumen Terrae · Formamos custodios de la casa común.</p>
+    <a class="btn btn-ghost reveal" href="mgz1.html">Volver al portafolio</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-brand">Lumen Terrae</div>
+    <div class="footer-tagline">Contemplar · Convertirse · Cuidar · Servir · Evangelizar</div>
+    <div class="footer-origin">Monterrey, Nuevo León, México.</div>
+
+    <div class="footer-cols">
+      <div class="footer-col">
+        <div class="footer-col-title">El apostolado</div>
+        <a href="#apostolado">Qué es Lumen Terrae</a>
+        <a href="#camino">El método</a>
+        <a href="#integral">Ecología integral</a>
+        <a href="#custodio">El custodio</a>
+        <a href="#experiencias">El camino y las experiencias</a>
+        <a href="#para-quien">Para quién es</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Iniciador</div>
+        <div class="who">Mario Garza Livas</div>
+        <div>Chief Strategic Advisor · Founder · CEO @ The Metanoia Group</div>
+        <a href="mailto:mario@metanoiagroup.vip">mario@metanoiagroup.vip</a>
+        <a href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp_footer_mgz1c'})">+52 (81) 2513 6784</a>
+        <a href="https://linkedin.com/in/garzalivas" target="_blank" rel="noopener">linkedin.com/in/garzalivas</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Ecosistema</div>
+        <a href="mgz1.html">Portafolio de Apostolados</a>
+        <a href="mgl1.html">Mario Garza Livas</a>
+        <a href="https://metanoiagroup.vip/" target="_blank" rel="noopener">The Metanoia Group</a>
+        <a href="mgz2-c.html">English version</a>
+      </div>
+    </div>
+
+    <div class="footer-admg-rule"></div>
+    <p class="footer-admg">Ad Majorem Dei Gloriam.</p>
+
+    <div class="footer-bottom">
+      <span class="copyright">© 2026 The Metanoia Group</span>
+      <a class="footer-en" href="mgz2-c.html">English Version &rarr;</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const topbar = document.querySelector('nav.topbar');
+  const syncNavHeight = () => document.documentElement.style.setProperty('--nav-h', topbar.offsetHeight + 'px');
+  syncNavHeight();
+  if(window.ResizeObserver){ new ResizeObserver(syncNavHeight).observe(topbar); }
+  else { window.addEventListener('resize', syncNavHeight); }
+
+  const els = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    },{rootMargin:'0px 0px -8% 0px', threshold:0.08});
+    els.forEach(el=>io.observe(el));
+  } else {
+    els.forEach(el=>el.classList.add('in'));
+  }
+</script>
+
+</body>
+</html>

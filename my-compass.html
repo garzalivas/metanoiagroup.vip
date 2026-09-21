@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="new_favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Compass — Mario Garza Livas</title>
+<meta name="description" content="My Compass — The 32 guiding principles of Mario Garza Livas' life. The criteria behind every decision.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="My Compass — Mario Garza Livas">
+<meta property="og:description" content="The 32 guiding principles of my life. Thirty-two criteria, five blocks, one single north.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="The Metanoia Group">
+<meta property="og:image" content="https://metanoiagroup.vip/og-image-2.jpg">
+<meta property="og:url" content="https://metanoiagroup.vip/my-compass.html">
+<link rel="alternate" hreflang="es" href="https://metanoiagroup.vip/mi-compas.html">
+<link rel="alternate" hreflang="en" href="https://metanoiagroup.vip/my-compass.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0a0b;
+    --bg-alt:#111113;
+    --bg-card:#141416;
+    --text:#ece8e0;
+    --text-dim:#96908780;
+    --text-muted:#9b968c;
+    --accent:#b6905c;
+    --accent-dim:#7d6743;
+    --line:#26242066;
+    --line-strong:#2f2c27;
+    --serif:'Fraunces', Georgia, 'Times New Roman', serif;
+    --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --maxw:920px;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;scroll-padding-top:150px;}
+
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  a{color:inherit;text-decoration:none;}
+
+  ::selection{background:var(--accent-dim);color:var(--bg);}
+
+  a:focus-visible, button:focus-visible{
+    outline:1.5px solid var(--accent);
+    outline-offset:4px;
+  }
+
+  /* background texture */
+  body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+    background:
+      radial-gradient(ellipse 900px 500px at 15% -10%, #b6905c10, transparent 60%),
+      radial-gradient(ellipse 700px 500px at 100% 20%, #b6905c08, transparent 60%);
+    pointer-events:none;
+    z-index:0;
+  }
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;z-index:1;}
+
+  /* ---------- NAV ---------- */
+  nav.topbar{
+    position:sticky;top:0;
+    background:#0a0a0bd9;
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+    z-index:50;
+  }
+  nav.topbar .inner{
+    max-width:var(--maxw);margin:0 auto;padding:18px 28px;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:14px;flex-wrap:wrap;
+  }
+  .brandmark{
+    font-family:var(--serif);
+    font-size:15px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--text);
+    font-weight:500;
+  }
+  .brandmark span{color:var(--text-muted);font-weight:400;}
+  .nav-links{display:flex;gap:26px;align-items:center;flex-wrap:wrap;}
+  .nav-links a{
+    font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--text-muted);
+    transition:color .25s ease;
+    white-space:nowrap;
+  }
+  .nav-links a:hover{color:var(--accent);}
+  .nav-links a.en{
+    border:1px solid var(--line-strong);
+    padding:6px 12px;
+    border-radius:2px;
+  }
+  .nav-links a.en:hover{border-color:var(--accent);}
+
+  /* ---------- HERO ---------- */
+  header.hero{
+    padding:120px 0 90px;
+    position:relative;
+  }
+  .eyebrow{
+    font-size:12px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--accent);
+    font-weight:500;
+    display:flex;align-items:center;gap:12px;
+    opacity:0;
+    animation:fadeUp .9s ease .1s forwards;
+  }
+  .eyebrow::before{
+    content:'';display:inline-block;width:28px;height:1px;background:var(--accent);
+  }
+  h1.name{
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:clamp(42px, 7vw, 74px);
+    line-height:1.04;
+    letter-spacing:-.01em;
+    margin-top:22px;
+    opacity:0;
+    animation:fadeUp .9s ease .25s forwards;
+  }
+  h1.name em{font-style:italic;font-weight:400;color:var(--accent);font-size:0.52em;display:block;margin-top:18px;line-height:1.2;}
+
+  p.roles{
+    margin-top:26px;
+    font-size:clamp(15px,2vw,18px);
+    color:var(--text-muted);
+    max-width:640px;
+    line-height:1.7;
+    font-weight:300;
+    opacity:0;
+    animation:fadeUp .9s ease .4s forwards;
+  }
+  p.roles .sep{color:var(--accent-dim);margin:0 10px;}
+
+  .locbar{
+    margin-top:34px;
+    display:flex;align-items:center;gap:10px;
+    font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);
+    opacity:0;
+    animation:fadeUp .9s ease .55s forwards;
+  }
+  .locbar .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none;
+    box-shadow:0 0 8px 1px #b6905c80;
+  }
+
+  .hero-cta{
+    margin-top:46px;
+    display:flex;gap:16px;flex-wrap:wrap;
+    opacity:0;
+    animation:fadeUp .9s ease .7s forwards;
+  }
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:14px 24px;
+    font-size:12.5px;letter-spacing:.09em;text-transform:uppercase;
+    border-radius:2px;
+    transition:all .25s ease;
+  }
+  .btn-primary{
+    background:var(--accent);color:#0a0a0b;font-weight:600;
+  }
+  .btn-primary:hover{background:#c9a06d;transform:translateY(-1px);}
+  .btn-ghost{
+    border:1px solid var(--line-strong);color:var(--text);
+  }
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+
+  @keyframes fadeUp{
+    from{opacity:0;transform:translateY(16px);}
+    to{opacity:1;transform:translateY(0);}
+  }
+
+  /* ---------- SECTION SHELL ---------- */
+  section{
+    padding:86px 0;
+    border-top:1px solid var(--line);
+    position:relative;
+  }
+  .sec-head{
+    display:flex;align-items:baseline;gap:18px;margin-bottom:48px;
+  }
+  .sec-num{
+    font-family:var(--serif);font-style:italic;font-size:15px;color:var(--accent-dim);
+    letter-spacing:.05em;
+  }
+  h2.sec-title{
+    font-family:var(--serif);font-weight:400;font-size:clamp(26px,3.4vw,36px);
+    letter-spacing:-.01em;
+  }
+  h2.sec-title em{font-style:italic;color:var(--accent);font-weight:400;}
+  .sec-sub{
+    color:var(--text-muted);font-size:14.5px;font-weight:300;max-width:520px;margin-top:14px;line-height:1.7;
+  }
+  .sec-sub.wide{max-width:none;}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease, transform .8s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  /* ---------- LEAD PARAGRAPHS ---------- */
+  .lead{
+    font-size:15.5px;color:var(--text-muted);line-height:1.9;font-weight:300;max-width:720px;
+  }
+  .lead + .lead{margin-top:20px;}
+  .lead strong{color:var(--text);font-weight:500;}
+
+  /* ---------- NORTH (opening statement) ---------- */
+  .offering{
+    border:1px solid var(--line-strong);
+    background:var(--bg-alt);
+    padding:44px 40px;
+    position:relative;
+    overflow:hidden;
+  }
+  .offering::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--accent);}
+  .offering-tag{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);}
+  .offering-text{
+    font-family:var(--serif);font-style:italic;font-weight:300;
+    font-size:clamp(19px,2.6vw,25px);
+    line-height:1.65;color:var(--text);margin-top:20px;max-width:720px;
+  }
+
+  @media (max-width:640px){
+    .offering{padding:30px 24px;}
+  }
+
+  /* ---------- STAT ROW ---------- */
+  .stat-row{
+    display:flex;flex-wrap:wrap;
+    margin-top:52px;
+    border-top:1px solid var(--line-strong);
+    border-bottom:1px solid var(--line-strong);
+  }
+  .stat-item{flex:1 1 140px;padding:26px 26px 26px 0;}
+  .stat-item + .stat-item{border-left:1px solid var(--line-strong);padding-left:26px;}
+  .stat-num{font-family:var(--serif);font-size:34px;color:var(--accent);line-height:1;}
+  .stat-label{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin-top:10px;}
+
+  @media (max-width:640px){
+    .stat-item{flex:1 1 45%;border-left:none !important;padding-left:0 !important;}
+  }
+
+  /* ---------- BLOCK INDEX CARDS ---------- */
+  .eco-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:1px;
+    background:var(--line-strong);
+    border:1px solid var(--line-strong);
+  }
+  .eco-card{
+    background:var(--bg-alt);
+    padding:34px 30px;
+    display:block;
+    transition:background .3s ease, transform .3s ease;
+  }
+  .eco-card:hover{background:var(--bg-card);transform:translateY(-2px);}
+  .eco-code{
+    font-family:var(--serif);font-style:italic;font-size:13px;color:var(--accent);
+    letter-spacing:.06em;
+  }
+  .eco-name{
+    font-family:var(--serif);font-size:21px;margin-top:10px;font-weight:400;
+  }
+  .eco-desc{
+    color:var(--text-muted);font-size:13.5px;margin-top:10px;line-height:1.65;font-weight:300;
+  }
+  .eco-url{
+    margin-top:18px;font-size:11px;letter-spacing:.08em;color:var(--accent-dim);
+    display:flex;align-items:center;gap:8px;
+    text-transform:lowercase;
+  }
+  .eco-card:hover .eco-url{color:var(--accent);}
+  .eco-url .arrow{transition:transform .25s ease;}
+  .eco-card:hover .eco-url .arrow{transform:translateX(4px);}
+  .eco-tag{text-transform:none;}
+  .eco-card.full{grid-column:1 / -1;}
+
+  @media (max-width:640px){
+    .eco-grid{grid-template-columns:1fr;}
+    .eco-card.full{grid-column:auto;}
+  }
+
+  /* ---------- BLOCK HEADERS ---------- */
+  .cat-block{margin-bottom:64px;scroll-margin-top:150px;}
+  .cat-block:last-child{margin-bottom:0;}
+  .cat-header{
+    display:flex;align-items:baseline;gap:16px;
+    margin-bottom:26px;padding-bottom:18px;
+    border-bottom:1px solid var(--line-strong);
+    flex-wrap:wrap;
+  }
+  .cat-letter{
+    font-family:var(--serif);font-style:italic;font-size:26px;color:var(--accent);flex:none;
+  }
+  .cat-titlewrap{flex:1;min-width:200px;}
+  .cat-title{font-family:var(--serif);font-size:19px;font-weight:400;color:var(--text);}
+  .cat-gloss{font-size:13px;color:var(--text-muted);font-weight:300;margin-top:6px;line-height:1.65;max-width:560px;}
+  .cat-count{
+    font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);
+    flex:none;
+  }
+
+  /* ---------- PRINCIPLE CARDS ---------- */
+  .principle-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:1px;
+    background:var(--line-strong);
+    border:1px solid var(--line-strong);
+  }
+  .principle{
+    background:var(--bg-alt);
+    padding:26px 26px 28px;
+    transition:background .3s ease;
+  }
+  .principle:hover{background:var(--bg-card);}
+  .principle-head{
+    display:flex;align-items:baseline;gap:12px;
+  }
+  .principle-num{
+    font-family:var(--serif);font-size:15px;color:var(--accent-dim);flex:none;
+    letter-spacing:.04em;
+    transition:color .3s ease;
+  }
+  .principle:hover .principle-num{color:var(--accent);}
+  .principle-name{
+    font-family:var(--serif);font-size:21px;font-weight:400;color:var(--text);
+    line-height:1.2;
+  }
+  .principle-text{
+    color:var(--text-muted);font-size:13.5px;line-height:1.8;font-weight:300;
+    margin-top:12px;
+  }
+
+  @media (max-width:640px){
+    .principle-grid{grid-template-columns:1fr;}
+    .principle{padding:24px 22px;}
+  }
+
+  /* ---------- CLOSING ---------- */
+  .closing{
+    border-top:1px solid var(--line-strong);
+    border-bottom:1px solid var(--line-strong);
+    padding:52px 0;
+    text-align:center;
+  }
+  .closing p{
+    font-family:var(--serif);font-style:italic;font-weight:300;
+    font-size:clamp(18px,2.4vw,26px);
+    line-height:1.6;color:var(--text);
+    max-width:none;margin:0 auto;
+    text-wrap:balance;
+  }
+  .closing-rule{width:30px;height:1px;background:var(--accent);margin:0 auto 30px;}
+  .closing p.closing-amdg{
+    margin-top:38px;font-family:var(--serif);font-style:italic;font-size:14px;color:var(--accent);
+    letter-spacing:.04em;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    padding:70px 0 46px;
+    border-top:1px solid var(--line);
+  }
+  .footer-brand{
+    font-family:var(--serif);font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted);
+  }
+  .footer-tagline{
+    font-family:var(--serif);font-style:italic;font-size:19px;color:var(--text);margin-top:14px;
+  }
+  .footer-role{
+    margin-top:22px;font-size:13px;color:var(--text-muted);
+  }
+  .footer-role strong{color:var(--text);font-weight:500;}
+  .footer-contacts{
+    margin-top:10px;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--text-muted);
+  }
+  .footer-contacts a:hover{color:var(--accent);}
+  .footer-bottom{
+    margin-top:40px;padding-top:22px;border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;
+  }
+  .copyright{font-size:11.5px;color:var(--text-dim);letter-spacing:.04em;}
+  .footer-en{
+    font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);
+    border:1px solid var(--line-strong);padding:7px 14px;border-radius:2px;
+  }
+  .footer-en:hover{color:var(--accent);border-color:var(--accent);}
+  .footer-admg-rule{width:28px;height:1px;background:var(--accent-dim);margin-top:30px;}
+  .footer-admg{
+    margin-top:16px;font-family:var(--serif);font-style:italic;font-size:13.5px;
+    color:var(--accent);letter-spacing:.02em;
+  }
+
+  @media (max-width:640px){
+    header.hero{padding:56px 0 60px;}
+    section{padding:60px 0;}
+    nav.topbar .inner{padding:16px 20px;}
+    .nav-links{gap:12px 16px;width:100%;}
+    .nav-links a{font-size:11px;}
+    .nav-links a.en{margin-left:auto;}
+    .brandmark{font-size:13px;}
+    .footer-bottom{flex-direction:column;align-items:flex-start;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}
+  }
+</style>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="My Compass — Mario Garza Livas">
+<meta name="twitter:description" content="The 32 guiding principles of my life. Thirty-two criteria, five blocks, one single north.">
+<meta name="twitter:image" content="https://metanoiagroup.vip/og-image-2.jpg">
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KHNZVPJX1N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KHNZVPJX1N');
+</script>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="inner">
+    <div class="brandmark">MY COMPASS <span>· MARIO GARZA LIVAS</span></div>
+    <div class="nav-links">
+      <a href="#north">The North</a>
+      <a href="#blocks">Blocks</a>
+      <a href="#principles">The 32</a>
+      <a href="my-pathway.html">My Pathway</a>
+      <a class="en" href="mi-compas.html">Español</a>
+      <a href="mgl2.html">Personal Landing Page</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Personal · My Compass</p>
+    <h1 class="name">My Compass<em>the 32 guiding principles of my life</em></h1>
+    <p class="roles">
+      Mario Garza Livas<br><span class="sep">·</span>Thirty-two principles<br><span class="sep">·</span>Five blocks<br><span class="sep">·</span>One single north
+    </p>
+    <div class="locbar"><span class="dot"></span>Monterrey, Nuevo León, Mexico · September 20, 2026</div>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#principles">See the 32 principles</a>
+      <a class="btn btn-ghost" href="#north">What a compass is for</a>
+      <a class="btn btn-ghost" href="my-pathway.html">My Pathway</a>
+    </div>
+  </div>
+</header>
+
+<section id="north">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">I</span>
+      <div>
+        <h2 class="sec-title">The <em>north</em></h2>
+        <p class="sec-sub">A compass does not tell you where to go. It tells you where north is, so that you can decide the next step yourself.</p>
+      </div>
+    </div>
+
+    <div class="offering reveal">
+      <div class="offering-tag">First principle</div>
+      <p class="offering-text">
+        “Love and honor God in everything, offering every moment to His will and consecrating your entire life to Him: family, work, money, body, time and rest; nothing is left out.”
+      </p>
+    </div>
+
+    <div class="reveal" style="margin-top:44px;">
+      <p class="lead">
+        These <strong>32 principles</strong> are not aspirations or words of encouragement. They are the criteria I decide with: what I accept and what I refuse, what I hold on to when it costs and what I let go of when it gets in the way. They are written in the second person because that is how they read best — the way a man speaks to himself before acting.
+      </p>
+      <p class="lead">
+        If <strong>My Pathway</strong> answers where I am going, <strong>My Compass</strong> answers what I decide with. Goals change shape over the years; these principles are what should not change while the pathway is being corrected.
+      </p>
+    </div>
+
+    <div class="stat-row reveal">
+      <div class="stat-item">
+        <div class="stat-num">32</div>
+        <div class="stat-label">Guiding Principles</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">5</div>
+        <div class="stat-label">Blocks</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">1</div>
+        <div class="stat-label">Single North</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="blocks">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">II</span>
+      <div>
+        <h2 class="sec-title">The five <em>blocks</em></h2>
+        <p class="sec-sub">The 32 principles are read in their original order. The blocks only group contiguous stretches so that one can be revisited without going through them all.</p>
+      </div>
+    </div>
+
+    <div class="eco-grid reveal">
+      <a class="eco-card" href="#block-i">
+        <div class="eco-code">Block I</div>
+        <div class="eco-name">The Foundation</div>
+        <p class="eco-desc">How I stand before God and before myself: consecration, gratitude, dignity, listening, wisdom, honor and joy.</p>
+        <div class="eco-url"><span class="eco-tag">Principles 01–08</span> <span class="arrow">→</span></div>
+      </a>
+      <a class="eco-card" href="#block-ii">
+        <div class="eco-code">Block II</div>
+        <div class="eco-name">Conduct</div>
+        <p class="eco-desc">How I work, decide and relate to others: balance, growth, adaptation, service, discipline and vocation.</p>
+        <div class="eco-url"><span class="eco-tag">Principles 09–16</span> <span class="arrow">→</span></div>
+      </a>
+      <a class="eco-card" href="#block-iii">
+        <div class="eco-code">Block III</div>
+        <div class="eco-name">Life in Christ</div>
+        <p class="eco-desc">Where all of the above is fed and sustained: communion, holiness, redemption, grace, Mary and the Church.</p>
+        <div class="eco-url"><span class="eco-tag">Principles 17–22</span> <span class="arrow">→</span></div>
+      </a>
+      <a class="eco-card" href="#block-iv">
+        <div class="eco-code">Block IV</div>
+        <div class="eco-name">Abandonment</div>
+        <p class="eco-desc">What to do with what cannot be controlled: faith, surrender, discernment, purity, the cross and stewardship.</p>
+        <div class="eco-url"><span class="eco-tag">Principles 23–28</span> <span class="arrow">→</span></div>
+      </a>
+      <a class="eco-card full" href="#block-v">
+        <div class="eco-code">Block V</div>
+        <div class="eco-name">The Destination</div>
+        <p class="eco-desc">Where everything points in the end: eternity as the criterion, authority as service, faith turned into works, and mercy as the measure.</p>
+        <div class="eco-url"><span class="eco-tag">Principles 29–32</span> <span class="arrow">→</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="principles">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">III</span>
+      <div>
+        <h2 class="sec-title">The 32 <em>principles</em></h2>
+        <p class="sec-sub">In the order they were written, from the first to the last.</p>
+      </div>
+    </div>
+
+    <!-- BLOCK I -->
+    <div class="cat-block reveal" id="block-i">
+      <div class="cat-header">
+        <span class="cat-letter">I</span>
+        <div class="cat-titlewrap">
+          <div class="cat-title">The Foundation</div>
+          <p class="cat-gloss">How I stand before God and before myself.</p>
+        </div>
+        <span class="cat-count">01 — 08</span>
+      </div>
+      <div class="principle-grid">
+        <article class="principle">
+          <div class="principle-head">
+            <span class="principle-num">01</span>
+            <h3 class="principle-name">Consecration</h3>
+          </div>
+          <p class="principle-text">Love and honor God in everything, offering every moment to His will and consecrating your entire life to Him: family, work, money, body, time and rest; nothing is left out.</p>
+        </article>
+        <article class="principle">
+          <div class="principle-head">
+            <span class="principle-num">02</span>
+            <h3 class="principle-name">Gratitude</h3>
+          </div>
+          <p class="principle-text">Live with gratitude and humility, seeing everything as a gift from God, embracing life with holy detachment and always trusting in His providence.</p>
+        </article>
+        <article class="principle">
+          <div class="principle-head">
+            <span class="principle-num">03</span>
+            <h3 class="principle-name">Dignity</h3>
+          </div>
+          <p class="principle-text">Know yourself as a creature loved by God. Know you are loved unconditionally and love from that Love: what you do is born of who you are in Christ, and what you have is a means to serve better.</p>
+        </article>
+        <article class="principle">
+          <div class="principle-head">
+            <span class="principle-num">04</span>
+            <h3 class="principle-name">Attunement</h3>
+          </div>
+          <p class="principle-text">Recognize the movements of God in prayer, with humility and in the light of the Gospel and the Church; let the Holy Spirit guide your step and live a daily “yes” of docility and obedience.</p>
+        </article>
+        <article class="principle">
+          <div class="principle-head">
+            <span class="principle-num">05</span>
+            <h3 class="principle-name">Illumination</h3>
+          </div>
+          <p class="principle-text">Open your mind and heart to divine inspiration; recognize that God can use your creativity to open paths of goodness, truth and beauty in service of the Gospel and of your neighbor.</p>
+        </article>
+        <article class="principle">
+          <div class="principle-head">
+            <span class="principle-num">06</span>
+            <h3 class="principle-name">Wisdom</h3>
+          </div>
+          <p class="principle-text">Seek divine wisdom in the Word, in prayer and in the sacraments; release what clouds your vision and build your path toward God in Christ upon that sacred nourishment.</p>
+        </article>
+        <article class="principle">
+          <div class="principle-head">
+            <span class="principle-num">07</span>
+            <h3 class="principle-name">Honor</h3>
+          </div>
+          <p class="principle-text">Honor your word and conduct yourself with dignity and justice before God and men, treating your neighbor as you wish to be treated, according to the command of Christ.</p>
+        </article>
+        <article class="principle">
+          <div class="principle-head">
+            <span class="principle-num">08</span>
+            <h3 class="principle-name">Joy</h3>
+          </div>
+          <p class="principle-text">Keep the wonder and trust of a child, and seek memorable experiences with your family and friends, recognizing God as the source of all true joy.</p>
+        </article>
+      </div>
+    </div>
+
+    <!-- BLOCK II -->
+    <div class="cat-block reveal" id="block-ii">
+      <div class="cat-header">
+        <span class="cat-letter">II</span>
+        <div class="cat-titlewrap">
+          <div class="cat-title">Conduct</div>
+          <p class="cat-gloss">How I work, decide and relate to others.</p>
+        </div>
+        <span class="cat-count">09 — 16</span>
+      </div>
+      <div class="principle-grid">
+        <article class="principle">
+          <div class="principle-head">
+            <span class="principle-num">09</span>
+            <h3 class="principle-name">Balance</h3>
+          </div>
+          <p class="principle-text">Seek equilibrium and harmony through moderation and healthy limits. Saying “no” to what pulls you away from God opens space to heal and to say “yes” to what strengthens your vocation.</p>
+        </article>
+        <article class="principle">
+          <div class="principle-head">
+            <span class="principle-num">10</span>
+            <h3 class="principle-name">Growth</h3>
+          </div>
+          <p class="principle-text">Always use reason and seek to grow in virtue and holiness, without fear of failing, knowing that with God's grace every challenge well lived forms you in wisdom, humility and love.</p>
+        </article>
+        <article class="principle">
+          <div class="principle-head">
+            <span class="principle-num">11</span>
+            <h3 class="principle-name">Intelligence</h3>
+          </div>
+          <p class="principle-text">Adapt with interior freedom, give yourself over to the truth, align your decisions with your vocation and turn uncertainty into growth and redemptive meaning.</p>
+        </article>
+        <article class="principle">
+          <div class="principle-head">
+            <span class="principle-num">12</span>
+            <h3 class="principle-name">Cooperation</h3>
+          </div>
+          <p class="principle-text">Listen, be generous and of service; cooperate with humility, quieting the ego and placing God at the center. As part of the Body of Christ, use your gifts to serve your neighbor.</p>
+        </article>
+        <article class="principle">
+          <div class="principle-head">
+            <span class="principle-num">13</span>
+            <h3 class="principle-name">Proactivity</h3>
+          </div>
+          <p class="principle-text">Be proactive and responsible: do what you can and align your mind and your efforts with what God places in your heart and with the opportunities for grace and service He offers you.</p>
+        </article>
+        <article class="principle">
+          <div class="principle-head">
+            <span class="principle-num">14</span>
+            <h3 class="principle-name">Effectiveness</h3>
+          </div>
+          <p class="principle-text">Establish routines and good habits; be consistent, plan and prioritize, managing everything in service of your vocation and of God's will in your life.</p>
+        </article>
+        <article class="principle">
+          <div class="principle-head">
+            <span class="principle-num">15</span>
+            <h3 class="principle-name">Dedication</h3>
+          </div>
+          <p class="principle-text">Have strength, courage and discipline; work with dedication and give your best, offering your effort to God, enjoying the process and without attachment to the outcome, trusting in His will.</p>
+        </article>
+        <article class="principle">
+          <div class="principle-head">
+            <span class="principle-num">16</span>
+            <h3 class="principle-name">Vocation</h3>
+          </div>
+          <p class="principle-text">Make your life and your talents a response to God's call, directing them to serve others and to build the world according to the Gospel, for the glory of God and the good of your neighbor.</p>
+        </article>
+      </div>
+    </div>
+
+    <!-- BLOCK III -->
+    <div class="cat-block reveal" id="block-iii">
+      <div class="cat-header">
+        <span class="cat-letter">III</span>
+        <div class="cat-titlewrap">
+          <div class="cat-title">Life in Christ</div>
+          <p class="cat-gloss">Where everything above is fed and sustained.</p>
+        </div>
+        <span class="cat-count">17 — 22</span>
+      </div>
+      <div class="principle-grid">
+        <article class="principle">
+          <div class="principle-head">
+            <span class="principle-num">17</span>
+            <h3 class="principle-name">Communion</h3>
+          </div>
+          <p class="principle-text">Love God above all things, seek His communion in prayer and the sacraments, and be His instrument wherever He places you, aligning thought, word and deed with His will.</p>
+        </article>
+        <article class="principle">
+          <div class="principle-head">
+            <span class="principle-num">18</span>
+            <h3 class="principle-name">Holiness</h3>
+          </div>
+          <p class="principle-text">Live your call to holiness, growing more like Christ each day. Grow in virtue and charity, letting grace transform your mind and your works, faithful in small things.</p>
+        </article>
+        <article class="principle">
+          <div class="principle-head">
+            <span class="principle-num">19</span>
+            <h3 class="principle-name">Redemption</h3>
+          </div>
+          <p class="principle-text">Recognize that every good comes from God. Consecrate your life so that Christ may purify what is not His, raise up what is good and return it to its origin: God Himself.</p>
+        </article>
+        <article class="principle">
+          <div class="principle-head">
+            <span class="principle-num">20</span>
+            <h3 class="principle-name">Grace</h3>
+          </div>
+          <p class="principle-text">Live and remain in a state of grace, with a full sacramental life. Avoid mortal sin and return quickly to grace. If you fall, drift away or lose your way, always return to God.</p>
+        </article>
+        <article class="principle">
+          <div class="principle-head">
+            <span class="principle-num">21</span>
+            <h3 class="principle-name">Marian Devotion</h3>
+          </div>
+          <p class="principle-text">Live as a son in the school of Mary: consecrate yourself to her guidance, learn her humility and give your trusting yes to God, letting yourself be led to Christ.</p>
+        </article>
+        <article class="principle">
+          <div class="principle-head">
+            <span class="principle-num">22</span>
+            <h3 class="principle-name">Ecclesiality</h3>
+          </div>
+          <p class="principle-text">Live your faith in communion with the Church, form your conscience in her Magisterium and serve with active humility within the Body of Christ.</p>
+        </article>
+      </div>
+    </div>
+
+    <!-- BLOCK IV -->
+    <div class="cat-block reveal" id="block-iv">
+      <div class="cat-header">
+        <span class="cat-letter">IV</span>
+        <div class="cat-titlewrap">
+          <div class="cat-title">Abandonment</div>
+          <p class="cat-gloss">What to do with what cannot be controlled.</p>
+        </div>
+        <span class="cat-count">23 — 28</span>
+      </div>
+      <div class="principle-grid">
+        <article class="principle">
+          <div class="principle-head">
+            <span class="principle-num">23</span>
+            <h3 class="principle-name">Faith</h3>
+          </div>
+          <p class="principle-text">Let God's providence work; trust that He guides your story. Embrace every ending as a new beginning and say: “Jesus, I trust in You,” even without understanding the way.</p>
+        </article>
+        <article class="principle">
+          <div class="principle-head">
+            <span class="principle-num">24</span>
+            <h3 class="principle-name">Abandonment</h3>
+          </div>
+          <p class="principle-text">Give yourself over to God's will, offering your plans and fears to His providence and trusting in His care. Accept what you do not control and say: “Jesus, I abandon myself to You.”</p>
+        </article>
+        <article class="principle">
+          <div class="principle-head">
+            <span class="principle-num">25</span>
+            <h3 class="principle-name">Discernment</h3>
+          </div>
+          <p class="principle-text">Discern your interior life: in consolation, give thanks without making major decisions; in desolation, change nothing essential, limit your actions and stay faithful; in calm, build habits and move forward with reason.</p>
+        </article>
+        <article class="principle">
+          <div class="principle-head">
+            <span class="principle-num">26</span>
+            <h3 class="principle-name">Purity</h3>
+          </div>
+          <p class="principle-text">Abstain from what darkens God's light in you; flee from sin and from all harm to your soul. Seek purification and repentance, letting yourself be transformed by His grace.</p>
+        </article>
+        <article class="principle">
+          <div class="principle-head">
+            <span class="principle-num">27</span>
+            <h3 class="principle-name">Oblation</h3>
+          </div>
+          <p class="principle-text">Carry your cross with love: offer up suffering, choose healthy sacrifices and unite every trial to Christ, so that pain becomes offering and charity, not bitterness or self-pity.</p>
+        </article>
+        <article class="principle">
+          <div class="principle-head">
+            <span class="principle-num">28</span>
+            <h3 class="principle-name">Stewardship</h3>
+          </div>
+          <p class="principle-text">Be a faithful guardian of the responsibilities and blessings God entrusts to you, remembering that you are a steward and not an owner. Use everything to serve, to love and to give glory to God.</p>
+        </article>
+      </div>
+    </div>
+
+    <!-- BLOCK V -->
+    <div class="cat-block reveal" id="block-v">
+      <div class="cat-header">
+        <span class="cat-letter">V</span>
+        <div class="cat-titlewrap">
+          <div class="cat-title">The Destination</div>
+          <p class="cat-gloss">Where everything points in the end.</p>
+        </div>
+        <span class="cat-count">29 — 32</span>
+      </div>
+      <div class="principle-grid">
+        <article class="principle">
+          <div class="principle-head">
+            <span class="principle-num">29</span>
+            <h3 class="principle-name">Eternity</h3>
+          </div>
+          <p class="principle-text">Live oriented toward the final end: remember your eternal destiny, order your decisions to the judgment of God and act in the light of heaven, not of temporal success.</p>
+        </article>
+        <article class="principle">
+          <div class="principle-head">
+            <span class="principle-num">30</span>
+            <h3 class="principle-name">Governance</h3>
+          </div>
+          <p class="principle-text">Exercise with humility the authority God entrusts to you to lead others in His name, without ego, without attachment, discerning, correcting and justly accepting the consequences.</p>
+        </article>
+        <article class="principle">
+          <div class="principle-head">
+            <span class="principle-num">31</span>
+            <h3 class="principle-name">Incarnation</h3>
+          </div>
+          <p class="principle-text">Embody the values of the Gospel in your actions, turning faith into concrete works in service of your neighbor and the glory of God, with fidelity and trust in Providence.</p>
+        </article>
+        <article class="principle">
+          <div class="principle-head">
+            <span class="principle-num">32</span>
+            <h3 class="principle-name">Mercy</h3>
+          </div>
+          <p class="principle-text">Make God's love visible by serving the vulnerable generously, seeing Christ in every face and placing charity above your own comfort.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="closing">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">IV</span>
+      <div>
+        <h2 class="sec-title">Pathway and <em>compass</em></h2>
+        <p class="sec-sub wide">The two documents are meant to be read together: one says where, the other says with what.</p>
+      </div>
+    </div>
+
+    <div class="closing reveal">
+      <div class="closing-rule"></div>
+      <p>“Make your life and your talents a response to God's call.”</p>
+      <p class="closing-amdg">Ad Majorem Dei Gloriam.</p>
+    </div>
+
+    <div class="reveal" style="margin-top:56px;">
+      <div class="hero-cta" style="opacity:1;animation:none;margin-top:0;">
+        <a class="btn btn-primary" href="my-pathway.html">Go to My Pathway</a>
+        <a class="btn btn-ghost" href="mgl2.html">Back to the Personal Landing Page</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-brand">My Compass</div>
+    <div class="footer-tagline">The 32 guiding principles of my life.</div>
+    <div class="footer-role"><strong>Mario Garza Livas</strong> — Personal document · Monterrey, Nuevo León</div>
+    <div class="footer-contacts">
+      <a href="mailto:mario@metanoiagroup.vip">mario@metanoiagroup.vip</a>
+      <a href="my-pathway.html">My Pathway — my transcendent goals</a>
+      <a href="mgl2.html">Personal Landing Page</a>
+    </div>
+    <div class="footer-admg-rule"></div>
+    <p class="footer-admg">Ad Majorem Dei Gloriam.</p>
+
+    <div class="footer-bottom">
+      <span class="copyright">© 2026 Mario Garza Livas</span>
+      <a class="footer-en" href="mi-compas.html">Español →</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.12});
+  els.forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>

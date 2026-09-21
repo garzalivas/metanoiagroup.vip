@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="new_favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Obra Escrita — Mario Garza Livas</title>
+<meta name="description" content="La obra escrita de Mario Garza Livas: veintiséis libros sobre aprendizaje, carácter, vocación, juicio, asesoría, empresa, inteligencia artificial, patrimonio, incertidumbre, instituciones y fe. Dieciséis categorías temáticas, veintisiete volúmenes en PDF, descarga libre.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="La Obra Escrita — Mario Garza Livas">
+<meta property="og:description" content="Veintiséis libros, una sola arquitectura. Persona, juicio, empresa, patrimonio y sentido, tratados como un mismo sistema.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<meta property="og:site_name" content="The Metanoia Group">
+<meta property="og:image" content="https://metanoiagroup.vip/og-image-1.jpg">
+<meta property="og:url" content="https://metanoiagroup.vip/MGW1">
+<link rel="alternate" hreflang="es" href="https://metanoiagroup.vip/mgw1.html">
+<link rel="alternate" hreflang="en" href="https://metanoiagroup.vip/mgw2.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0a0b;
+    --bg-alt:#111113;
+    --bg-card:#141416;
+    --text:#ece8e0;
+    --text-dim:#96908780;
+    --text-muted:#9b968c;
+    --accent:#b6905c;
+    --accent-dim:#7d6743;
+    --line:#26242066;
+    --line-strong:#2f2c27;
+    --tag-p:#7d9d6a;
+    --tag-p-text:#a9c496;
+    --tag-s:#d0a63f;
+    --tag-s-text:#ddbd72;
+    --serif:'Fraunces', Georgia, 'Times New Roman', serif;
+    --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --maxw:920px;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;scroll-padding-top:150px;}
+
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  a{color:inherit;text-decoration:none;}
+
+  ::selection{background:var(--accent-dim);color:var(--bg);}
+
+  a:focus-visible, button:focus-visible{
+    outline:1.5px solid var(--accent);
+    outline-offset:4px;
+  }
+
+  /* background texture */
+  body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+    background:
+      radial-gradient(ellipse 900px 500px at 15% -10%, #b6905c10, transparent 60%),
+      radial-gradient(ellipse 700px 500px at 100% 20%, #b6905c08, transparent 60%);
+    pointer-events:none;
+    z-index:0;
+  }
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;z-index:1;}
+
+  /* ---------- NAV ---------- */
+  nav.topbar{
+    position:sticky;top:0;
+    background:#0a0a0bd9;
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+    z-index:50;
+  }
+  nav.topbar .inner{
+    max-width:var(--maxw);margin:0 auto;padding:18px 28px;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:14px;flex-wrap:wrap;
+  }
+  .brandmark{
+    font-family:var(--serif);
+    font-size:15px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--text);
+    font-weight:500;
+  }
+  .brandmark span{color:var(--text-muted);font-weight:400;}
+  .nav-links{display:flex;gap:26px;align-items:center;flex-wrap:wrap;}
+  .nav-links a{
+    font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--text-muted);
+    transition:color .25s ease;
+    white-space:nowrap;
+  }
+  .nav-links a:hover{color:var(--accent);}
+  .nav-links a.en{
+    border:1px solid var(--line-strong);
+    padding:6px 12px;
+    border-radius:2px;
+  }
+  .nav-links a.en:hover{border-color:var(--accent);}
+
+  /* ---------- HERO ---------- */
+  header.hero{
+    padding:120px 0 90px;
+    position:relative;
+  }
+  .eyebrow{
+    font-size:12px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--accent);
+    font-weight:500;
+    display:flex;align-items:center;gap:12px;
+    opacity:0;
+    animation:fadeUp .9s ease .1s forwards;
+  }
+  .eyebrow::before{
+    content:'';display:inline-block;width:28px;height:1px;background:var(--accent);
+  }
+  h1.name{
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:clamp(42px, 7vw, 74px);
+    line-height:1.04;
+    letter-spacing:-.01em;
+    margin-top:22px;
+    opacity:0;
+    animation:fadeUp .9s ease .25s forwards;
+  }
+  h1.name em{font-style:italic;font-weight:400;color:var(--accent);font-size:0.90em;display:inline;}
+
+  p.roles{
+    margin-top:26px;
+    font-size:clamp(15px,2vw,18px);
+    color:var(--text-muted);
+    max-width:640px;
+    line-height:1.7;
+    font-weight:300;
+    opacity:0;
+    animation:fadeUp .9s ease .4s forwards;
+  }
+  p.roles .sep{color:var(--accent-dim);margin:0 10px;}
+
+  .locbar{
+    margin-top:34px;
+    display:flex;align-items:center;gap:10px;
+    font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);
+    opacity:0;
+    animation:fadeUp .9s ease .55s forwards;
+  }
+  .locbar .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none;
+    box-shadow:0 0 8px 1px #b6905c80;
+  }
+
+  .hero-cta{
+    margin-top:46px;
+    display:flex;gap:16px;flex-wrap:wrap;
+    opacity:0;
+    animation:fadeUp .9s ease .7s forwards;
+  }
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:14px 24px;
+    font-size:12.5px;letter-spacing:.09em;text-transform:uppercase;
+    border-radius:2px;
+    transition:all .25s ease;
+  }
+  .btn-primary{
+    background:var(--accent);color:#0a0a0b;font-weight:600;
+  }
+  .btn-primary:hover{background:#c9a06d;transform:translateY(-1px);}
+  .btn-ghost{
+    border:1px solid var(--line-strong);color:var(--text);
+  }
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+
+  @keyframes fadeUp{
+    from{opacity:0;transform:translateY(16px);}
+    to{opacity:1;transform:translateY(0);}
+  }
+
+  /* ---------- SECTION SHELL ---------- */
+  section{
+    padding:86px 0;
+    border-top:1px solid var(--line);
+    position:relative;
+  }
+  .sec-head{
+    display:flex;align-items:baseline;gap:18px;margin-bottom:48px;
+  }
+  .sec-num{
+    font-family:var(--serif);font-style:italic;font-size:15px;color:var(--accent-dim);
+    letter-spacing:.05em;
+  }
+  h2.sec-title{
+    font-family:var(--serif);font-weight:400;font-size:clamp(26px,3.4vw,36px);
+    letter-spacing:-.01em;
+  }
+  h2.sec-title em{font-style:italic;color:var(--accent);font-weight:400;}
+  h2.sec-title .name-accent{color:var(--accent);font-style:italic;font-weight:400;}
+  .sec-sub{
+    color:var(--text-muted);font-size:14.5px;font-weight:300;max-width:560px;margin-top:14px;line-height:1.7;
+  }
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease, transform .8s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  /* ---------- LEAD PARAGRAPHS ---------- */
+  .lead{
+    font-size:15.5px;color:var(--text-muted);line-height:1.9;font-weight:300;max-width:720px;
+  }
+  .lead + .lead{margin-top:20px;}
+  .lead strong{color:var(--text);font-weight:500;}
+  .lead em{font-style:italic;color:var(--text);}
+
+  /* ---------- STAT ROW ---------- */
+  .stat-row{
+    display:flex;flex-wrap:wrap;
+    margin-top:52px;
+    border-top:1px solid var(--line-strong);
+    border-bottom:1px solid var(--line-strong);
+  }
+  .stat-item{flex:1 1 140px;padding:26px 26px 26px 0;}
+  .stat-item + .stat-item{border-left:1px solid var(--line-strong);padding-left:26px;}
+  .stat-num{font-family:var(--serif);font-size:34px;color:var(--accent);line-height:1;}
+  .stat-label{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin-top:10px;}
+
+  @media (max-width:640px){
+    .stat-item{flex:1 1 45%;border-left:none !important;padding-left:0 !important;}
+  }
+
+  /* ---------- SHARED VOCABULARY ---------- */
+  .vocab-grid{
+    display:grid;grid-template-columns:repeat(2,1fr);
+    gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);
+  }
+  .vocab-card{background:var(--bg-alt);padding:30px 28px;}
+  .vocab-term{font-family:var(--serif);font-size:19px;color:var(--accent);font-weight:400;line-height:1.3;}
+  .vocab-def{color:var(--text-muted);font-size:13.5px;line-height:1.75;margin-top:12px;font-weight:300;}
+  .vocab-where{
+    margin-top:16px;font-size:11.5px;color:var(--text-dim);line-height:1.6;
+    border-top:1px solid var(--line);padding-top:12px;font-style:italic;font-family:var(--serif);
+  }
+  @media (max-width:640px){ .vocab-grid{grid-template-columns:1fr;} }
+
+  /* ---------- TAGS ---------- */
+  .tag{
+    display:inline-flex;align-items:center;gap:7px;
+    font-size:10.5px;letter-spacing:.07em;
+    padding:5px 11px;border-radius:2px;border:1px solid;
+    white-space:nowrap;line-height:1.4;
+    transition:all .22s ease;
+  }
+  .tag::before{content:'';width:5px;height:5px;border-radius:50%;flex:none;}
+  .tag-p{color:var(--tag-p-text);border-color:#7d9d6a4d;background:#7d9d6a14;}
+  .tag-p::before{background:var(--tag-p);}
+  .tag-s{color:var(--tag-s-text);border-color:#d0a63f40;background:#d0a63f10;}
+  .tag-s::before{background:var(--tag-s);}
+  a.tag:hover{transform:translateY(-1px);}
+  a.tag-p:hover{border-color:var(--tag-p);background:#7d9d6a24;}
+  a.tag-s:hover{border-color:var(--tag-s);background:#d0a63f20;}
+  .tag-row{display:flex;flex-wrap:wrap;gap:8px;}
+
+  .legend{
+    display:flex;flex-wrap:wrap;gap:26px;align-items:center;
+    margin-top:30px;padding:20px 0;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  }
+  .legend-item{display:flex;align-items:center;gap:10px;font-size:12.5px;color:var(--text-muted);font-weight:300;}
+  .legend-swatch{width:9px;height:9px;border-radius:50%;flex:none;}
+
+  /* ---------- CATEGORY BLOCKS ---------- */
+  .cat-block{
+    padding:38px 0 34px;
+    border-bottom:1px solid var(--line-strong);
+  }
+  .cat-block:last-child{border-bottom:none;}
+  .cat-top{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;}
+  .cat-letter{
+    font-family:var(--serif);font-style:italic;font-size:26px;color:var(--accent);flex:none;
+    min-width:34px;
+  }
+  .cat-titlewrap{flex:1;min-width:220px;}
+  .cat-title{font-family:var(--serif);font-size:23px;font-weight:400;color:var(--text);line-height:1.25;display:block;}
+  .cat-count{
+    font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);flex:none;
+  }
+  .cat-body{margin-top:18px;padding-left:50px;}
+  .cat-body p{
+    color:var(--text-muted);font-size:14px;line-height:1.85;font-weight:300;max-width:720px;
+  }
+  .cat-body p + p{margin-top:16px;}
+  .cat-body strong{color:var(--text);font-weight:500;}
+  .cat-body em{font-style:italic;color:var(--text);}
+  .cat-books{
+    margin-top:22px;padding-top:18px;border-top:1px solid var(--line);
+    display:flex;flex-direction:column;gap:10px;
+  }
+  .cat-books-line{font-size:12.5px;color:var(--text-muted);line-height:1.8;font-weight:300;}
+  .cat-books-line .bl{
+    font-family:var(--serif);font-size:14px;color:var(--text);font-style:italic;
+  }
+  .cat-books-line a.bl:hover{color:var(--accent);}
+  .cat-books-label{
+    display:inline-flex;align-items:center;gap:7px;
+    font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;margin-right:10px;
+  }
+  .cat-books-label::before{content:'';width:5px;height:5px;border-radius:50%;}
+  .lbl-p{color:var(--tag-p-text);}
+  .lbl-p::before{background:var(--tag-p);}
+  .lbl-s{color:var(--tag-s-text);}
+  .lbl-s::before{background:var(--tag-s);}
+  @media (max-width:640px){
+    .cat-body{padding-left:0;}
+    .cat-letter{min-width:auto;}
+  }
+
+  /* ---------- FILTER BAR ---------- */
+  .filterbar{
+    margin-bottom:40px;padding:24px 0 26px;
+    border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong);
+  }
+  .filter-caption{
+    font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px;
+  }
+  .filter-chips{display:flex;flex-wrap:wrap;gap:8px;}
+  .fchip{
+    font-family:var(--sans);
+    font-size:11.5px;letter-spacing:.03em;
+    padding:7px 13px;border-radius:2px;
+    border:1px solid var(--line-strong);
+    background:transparent;color:var(--text-muted);
+    cursor:pointer;transition:all .22s ease;
+  }
+  .fchip:hover{border-color:var(--accent-dim);color:var(--text);}
+  .fchip[aria-pressed="true"]{
+    background:var(--accent);border-color:var(--accent);color:#0a0a0b;font-weight:600;
+  }
+  .filter-status{
+    margin-top:18px;font-size:12.5px;color:var(--text-dim);font-style:italic;font-family:var(--serif);
+  }
+
+  /* ---------- BOOK CARDS ---------- */
+  .book-card{
+    padding:36px 4px;border-bottom:1px solid var(--line-strong);
+  }
+  .book-card:last-child{border-bottom:none;}
+  .book-card.hidden{display:none;}
+  .book-title{font-family:var(--serif);font-size:24px;font-weight:400;color:var(--text);line-height:1.25;}
+  .book-thesis{
+    font-family:var(--serif);font-style:italic;font-size:15.5px;color:var(--accent);
+    line-height:1.65;margin-top:12px;max-width:700px;
+    padding-left:16px;border-left:1px solid var(--accent-dim);
+  }
+  .book-tags{margin-top:18px;}
+  .book-abstract{
+    color:var(--text-muted);font-size:13.5px;line-height:1.8;font-weight:300;margin-top:16px;max-width:780px;
+  }
+  .book-abstract strong{color:var(--text);font-weight:500;}
+  .book-abstract em{font-style:italic;}
+  .book-dl-row{display:flex;flex-wrap:wrap;gap:26px;align-items:center;}
+  .paper-dl{
+    margin-top:22px;display:inline-flex;align-items:center;gap:12px;
+    font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent-dim);
+    transition:color .25s ease;
+  }
+  .paper-dl:hover{color:var(--accent);}
+  .paper-dl .dl-icon{
+    width:32px;height:32px;border-radius:50%;
+    border:1px solid var(--line-strong);
+    display:flex;align-items:center;justify-content:center;
+    transition:all .25s ease;flex:none;
+  }
+  .paper-dl:hover .dl-icon{border-color:var(--accent);background:var(--accent);}
+  .paper-dl svg{width:12px;height:12px;stroke:var(--text-muted);transition:stroke .25s ease;}
+  .paper-dl:hover svg{stroke:#0a0a0b;}
+
+  .empty-state{
+    padding:60px 0;color:var(--text-muted);font-size:14px;font-weight:300;
+  }
+  .empty-state.hidden{display:none;}
+
+  /* ---------- ECOSYSTEM CARDS ---------- */
+  .eco-grid{
+    display:grid;grid-template-columns:repeat(2,1fr);
+    gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);
+  }
+  .eco-card{
+    background:var(--bg-alt);padding:34px 30px;
+    display:flex;flex-direction:column;
+    transition:background .3s ease, transform .3s ease;
+  }
+  .eco-card:hover{background:var(--bg-card);transform:translateY(-2px);}
+  .eco-code{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--accent);letter-spacing:.06em;}
+  .eco-name{font-family:var(--serif);font-size:21px;margin-top:10px;font-weight:400;}
+  .eco-desc{color:var(--text-muted);font-size:13.5px;margin-top:10px;line-height:1.65;font-weight:300;}
+  .eco-url{
+    margin-top:auto;padding-top:18px;font-size:11px;letter-spacing:.08em;color:var(--accent-dim);
+    display:flex;align-items:center;gap:8px;text-transform:lowercase;
+  }
+  .eco-card:hover .eco-url{color:var(--accent);}
+  .eco-url .arrow{transition:transform .25s ease;}
+  .eco-card:hover .eco-url .arrow{transform:translateX(4px);}
+  .eco-card.full{grid-column:1 / -1;}
+  @media (max-width:640px){
+    .eco-grid{grid-template-columns:1fr;}
+    .eco-card.full{grid-column:auto;}
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{padding:70px 0 46px;border-top:1px solid var(--line);}
+  .footer-brand{font-family:var(--serif);font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted);}
+  .footer-tagline{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--text);margin-top:14px;}
+  .footer-role{margin-top:22px;font-size:13px;color:var(--text-muted);}
+  .footer-role strong{color:var(--text);font-weight:500;}
+  .footer-contacts{margin-top:10px;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--text-muted);}
+  .footer-contacts a:hover{color:var(--accent);}
+  .footer-motto{margin-top:36px;font-size:12.5px;color:var(--text-dim);line-height:1.9;font-style:italic;font-family:var(--serif);}
+  .footer-bottom{
+    margin-top:40px;padding-top:22px;border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;
+  }
+  .copyright{font-size:11.5px;color:var(--text-dim);letter-spacing:.04em;}
+  .footer-en{
+    font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);
+    border:1px solid var(--line-strong);padding:7px 14px;border-radius:2px;
+  }
+  .footer-en:hover{color:var(--accent);border-color:var(--accent);}
+  .footer-admg-rule{width:28px;height:1px;background:var(--accent-dim);margin-top:30px;}
+  .footer-admg{margin-top:16px;font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--accent);letter-spacing:.02em;}
+
+  @media (max-width:640px){
+    header.hero{padding:56px 0 60px;}
+    section{padding:60px 0;}
+    nav.topbar .inner{padding:16px 20px;}
+    .nav-links{gap:12px 16px;width:100%;}
+    .nav-links a{font-size:11px;}
+    .nav-links a.en{margin-left:auto;}
+    .brandmark{font-size:13px;}
+    .footer-bottom{flex-direction:column;align-items:flex-start;}
+    .book-thesis{padding-left:14px;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}
+  }
+</style>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="La Obra Escrita — Mario Garza Livas">
+<meta name="twitter:description" content="Veintiséis libros sobre aprendizaje, carácter, vocación, juicio, empresa, inteligencia artificial, patrimonio, incertidumbre, instituciones y fe. Descarga libre en PDF.">
+<meta name="twitter:image" content="https://metanoiagroup.vip/og-image-1.jpg">
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KHNZVPJX1N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KHNZVPJX1N');
+</script>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="inner">
+    <div class="brandmark">LA OBRA ESCRITA <span>· MARIO GARZA LIVAS</span></div>
+    <div class="nav-links">
+      <a href="#sobre">Acerca de</a>
+      <a href="#vocabulario">Vocabulario</a>
+      <a href="#categorias">Categorías</a>
+      <a href="#libros">Libros</a>
+      <a href="#enlaces">Enlaces</a>
+      <a class="en" href="mgw2.html">English</a>
+      <a href="mgl1.html">Landing Personal</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">La Obra Escrita · Veintiséis Libros</p>
+    <h1 class="name">Una sola arquitectura,<br><em>veintiséis</em> libros</h1>
+    <p class="roles">
+      Mario Garza Livas<br><span class="sep">·</span>Arquitecto de Sistemas de Alto Rendimiento<br><span class="sep">·</span>Asesor Estratégico<br><span class="sep">·</span>Consultor en Negocios de Fútbol<br><span class="sep">·</span>Agente Deportivo<br><span class="sep">·</span>CIO de Family Office<br><span class="sep">·</span>Profesor de Cátedra
+    </p>
+    <div class="locbar"><span class="dot"></span>Monterrey, Nuevo León, México</div>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#libros">Explorar los 26 libros</a>
+      <a class="btn btn-ghost" href="#categorias">Las 16 categorías</a>
+      <a class="btn btn-ghost" href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp'})">Escribir por WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<section id="sobre">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">I</span>
+      <div>
+        <h2 class="sec-title">Acerca de <span class="name-accent">Mario Garza Livas</span> y de esta <em>obra</em></h2>
+        <p class="sec-sub">Quién escribe, qué se escribió, y por qué los veintiséis libros son un solo cuerpo de trabajo.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        <strong>Mario Garza Livas</strong> es un estratega dedicado al diseño de sistemas capaces de sostener desempeño bajo presión: en la persona, en la empresa, en el patrimonio y en las instituciones. Fundador y director de <strong>The Metanoia Group</strong>, asesor estratégico, CIO de family office, consultor en negocios de fútbol, agente deportivo y profesor de cátedra, su práctica profesional atraviesa dominios que rara vez se piensan juntos. Esta obra escrita es el lugar donde sí se piensan juntos.
+      </p>
+      <p class="lead">
+        Los <strong>veintiséis libros</strong> reunidos aquí —veintisiete volúmenes en PDF, porque <em>Aprenderse</em> se publicó en dos tomos— no son una colección de intereses dispersos. Son la misma investigación aplicada a niveles distintos de la realidad: cómo una persona aprende, decide y se gobierna; cómo un experto transfiere criterio a otro; cómo una empresa nace, opera, se desacopla de su fundador y asigna su capital; cómo la inteligencia artificial altera lo que una organización puede llegar a hacer; cómo un patrimonio se convierte en capacidad de elegir; cómo una estructura sobrevive a lo que no supo prever; cómo el poder conserva su propósito cuando nadie lo vigila; y desde qué centro se ordena todo lo anterior.
+      </p>
+      <p class="lead">
+        Esa unidad no es retórica: es verificable. Los conceptos migran de un libro a otro y significan lo mismo en todos. <strong>La prueba de la ausencia</strong> —qué permanece cuando quien sostiene el sistema desaparece— es el criterio final de <em>Segunda Mente</em>, la pregunta decisiva de <em>Arquitectura Empresarial</em>, el instrumento de diagnóstico de <em>La Ventana Gradual</em> y el estándar de gobierno de <em>El Barco No Es el Viaje</em>. La <strong>custodia</strong> es el principio correctivo de <em>La Gran Inversión</em>, la transformación final de <em>No Controlas la Cosecha</em> y el marco patrimonial de <em>Hágase Tu Voluntad</em>. La secuencia <strong>SER → HACER → TENER</strong> estructura tanto <em>ineXorable</em> como <em>Hágase Tu Voluntad</em>. Leer dos libros del corpus es empezar a leer el tercero con ventaja.
+      </p>
+      <p class="lead">
+        La tesis de fondo que los atraviesa a todos puede enunciarse en una frase: <strong>la ventaja sostenible no proviene del esfuerzo extraordinario ni del talento aislado, sino de la arquitectura capaz de convertir potencial en capacidad realizada, de forma reproducible y a lo largo del tiempo.</strong> De ahí la insistencia del corpus en desplazar el foco desde el resultado hacia el sistema que lo produce, desde la predicción hacia la estructura que absorbe el error, y desde la acumulación hacia la pregunta que la vuelve inteligible: capacidad, ¿para qué?
+      </p>
+      <p class="lead">
+        Dos de estos libros —<em>Football Intelligence</em> y <em>Margen Cero</em>— pertenecen también al corpus de <strong>Metanoia Football</strong>, donde conviven con veinticinco papers de investigación aplicada al fútbol profesional. Otros dos —<em>ineXorable</em> y <em>Hágase Tu Voluntad</em>— dieron origen a proyectos propios que exceden el formato del libro. El resto encuentra aquí su casa. Todos se descargan sin costo, en PDF, sin registro y sin contraprestación.
+      </p>
+    </div>
+
+    <div class="stat-row reveal">
+      <div class="stat-item">
+        <div class="stat-num">26</div>
+        <div class="stat-label">Libros publicados</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">27</div>
+        <div class="stat-label">Volúmenes en PDF</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">16</div>
+        <div class="stat-label">Categorías temáticas</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">1</div>
+        <div class="stat-label">Arquitectura común</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="vocabulario">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">II</span>
+      <div>
+        <h2 class="sec-title">El vocabulario <em>común</em></h2>
+        <p class="sec-sub">Ocho conceptos que reaparecen a lo largo del corpus y significan lo mismo en cada libro. Son la evidencia de que los veintiséis títulos comparten una sola arquitectura intelectual.</p>
+      </div>
+    </div>
+
+    <div class="vocab-grid reveal">
+      <div class="vocab-card">
+        <div class="vocab-term">Arquitectura</div>
+        <p class="vocab-def">El conjunto de estructuras, mecanismos y relaciones que determina lo que un sistema puede producir de forma sostenida. Frente a la intervención puntual —el consejo, el esfuerzo, la decisión aislada—, la arquitectura es lo que sigue operando cuando nadie está empujando. Todo el corpus desplaza la atención desde el acto hacia la arquitectura que lo hace posible o lo impide.</p>
+        <p class="vocab-where">Aprenderse · Arquitectura de Decisión · Arquitectura Empresarial · ineXorable · Margen Cero</p>
+      </div>
+
+      <div class="vocab-card">
+        <div class="vocab-term">Capacidad</div>
+        <p class="vocab-def">Lo que un sistema puede hacer, durante cuánto tiempo y con cuánta independencia. Es la unidad de medida que el corpus propone en lugar del resultado, la cifra o el inventario. Una empresa que crece sin volverse más capaz no progresó; un patrimonio mayor que sostiene menos tiempo no es más rico; un aprendizaje que no sobrevive fuera del aula no ocurrió.</p>
+        <p class="vocab-where">El Dinero es una Promesa · La Empresa Imposible · Espacio de Acción · Complejidad Ganada</p>
+      </div>
+
+      <div class="vocab-card">
+        <div class="vocab-term">La prueba de la ausencia</div>
+        <p class="vocab-def">El criterio más exigente del corpus: qué permanece funcionando cuando quien sostenía el sistema deja de estar. Aplicada al experto, mide si instaló capacidad o dependencia. Aplicada al fundador, revela si construyó una empresa o un cuello de botella. Aplicada a un patrimonio o a una institución, distingue lo que fue diseñado de lo que sólo fue sostenido.</p>
+        <p class="vocab-where">Segunda Mente · Arquitectura Empresarial · La Ventana Gradual · El Barco No Es el Viaje</p>
+      </div>
+
+      <div class="vocab-card">
+        <div class="vocab-term">Margen</div>
+        <p class="vocab-def">La distancia entre lo que un sistema soporta y lo que se le está exigiendo. Liquidez, holgura, redundancia, tiempo sin comprometer: el margen no es ineficiencia, es la infraestructura material de la libertad. Sin margen, toda decisión se vuelve forzada y el error deja de ser corregible.</p>
+        <p class="vocab-where">ineXorable · La Ventana Gradual · Autonomía · El Dinero es una Promesa</p>
+      </div>
+
+      <div class="vocab-card">
+        <div class="vocab-term">Juicio calibrado</div>
+        <p class="vocab-def">La capacidad de decidir bien cuando la información es incompleta, el tiempo escaso y el error irreversible. No se acredita con conocimiento ni con credenciales: se forja por exposición prolongada a entornos donde no existen revisión, dilación ni absorción del error, y puede transferirse —o falsificarse— hacia otros dominios.</p>
+        <p class="vocab-where">Margen Cero · Arquitectura de Decisión · El Interés Compuesto del Juicio · Football Intelligence</p>
+      </div>
+
+      <div class="vocab-card">
+        <div class="vocab-term">Custodia</div>
+        <p class="vocab-def">La inversión del vínculo con lo que se posee: quien tiene poder, capital o capacidad de decisión no los recibe sólo como prerrogativa, sino como responsabilidad hacia quienes soportan las consecuencias y hacia quienes heredarán lo construido. Es el punto donde el corpus deja de ser técnico y se vuelve explícitamente moral.</p>
+        <p class="vocab-where">La Gran Inversión · No Controlas la Cosecha · Hágase Tu Voluntad · El Barco No Es el Viaje</p>
+      </div>
+
+      <div class="vocab-card">
+        <div class="vocab-term">Sistema sobre voluntad</div>
+        <p class="vocab-def">Ninguna arquitectura seria puede tener la disciplina personal como sistema operativo. Cuando el desempeño depende de que alguien no falle —el fundador, el alumno, el asesor, el gobernante—, la fragilidad ya está instalada. El corpus diseña entornos, mecanismos y gobernanza precisamente para no depender de héroes.</p>
+        <p class="vocab-where">Aprenderse · El Barniz del Carácter · Arquitectura de Decisión · No Controlas la Cosecha</p>
+      </div>
+
+      <div class="vocab-card">
+        <div class="vocab-term">SER → HACER → TENER</div>
+        <p class="vocab-def">El orden en que el corpus insiste en trabajar: primero quién es la persona y desde qué centro decide, después qué construye y cómo, y sólo entonces qué acumula y para qué. Invertir la secuencia —organizar la vida desde el tener— es el diagnóstico compartido de varios de estos libros.</p>
+        <p class="vocab-where">ineXorable · Hágase Tu Voluntad · El Centro que no se Mueve · Los Cuatro Jardines</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="categorias">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">III</span>
+      <div>
+        <h2 class="sec-title">Las dieciséis <em>categorías</em></h2>
+        <p class="sec-sub">Ningún libro de este corpus pertenece a un solo tema, y forzarlo a uno empobrecería lo que dice. Cada obra lleva por tanto las etiquetas que realmente la describen: en verde aquellas de las que es un texto central, en ámbar aquellas a las que contribuye sin ser su asunto principal.</p>
+      </div>
+    </div>
+
+    <div class="legend reveal">
+      <div class="legend-item"><span class="legend-swatch" style="background:#7d9d6a"></span>Etiqueta primaria — el libro es un texto central de esa materia.</div>
+      <div class="legend-item"><span class="legend-swatch" style="background:#d0a63f"></span>Etiqueta secundaria — el libro aporta a esa materia sin ser su tema principal.</div>
+    </div>
+
+    <div style="margin-top:20px">
+
+    <div id="cat-aprendizaje" class="cat-block reveal">
+      <div class="cat-top">
+        <span class="cat-letter">A</span>
+        <div class="cat-titlewrap"><span class="cat-title">Aprendizaje y Capacidad Cognitiva</span></div>
+        <span class="cat-count">1 primaria · 3 secundarias</span>
+      </div>
+      <div class="cat-body">
+        <p>Esta categoría trata la competencia que antecede a todas las demás: la de volverse competente en aquello que todavía no se sabe hacer. No es una materia sobre estudio, memoria o productividad personal. Es una materia sobre <strong>control</strong>: quién decide qué se aprende, con qué evidencia se verifica que se aprendió, y qué ocurre cuando desaparece la instrucción.</p>
+        <p>El desplazamiento que proponen estos textos es el mismo que atraviesa el corpus, aplicado a la mente: dejar de tratar el aprendizaje como acumulación de información y empezar a tratarlo como diseño de un sistema de control que se corrige a sí mismo. De ahí su insistencia en definir el desempeño antes de estudiar, en descomponer habilidades en lugar de temas, en recuperar en vez de releer, en usar el error como instrumento de diagnóstico y no como veredicto, y en diseñar el entorno porque la fuerza de voluntad nunca puede ser el sistema operativo.</p>
+        <p>Su criterio de éxito es deliberadamente incómodo para quien enseña: la arquitectura funciona cuando el aprendiz deja de necesitarla. Por eso la categoría toca de lleno la pedagogía y la asesoría —un experto que no produce autonomía produce dependencia— y toca también el carácter, porque una identidad que se rompe con el error no puede sostener ningún ciclo largo de aprendizaje.</p>
+      </div>
+      <div class="cat-books">
+        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primaria</span><a class="bl" href="#libro-aprenderse">Aprenderse</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundaria</span><a class="bl" href="#libro-el-barniz">El Barniz del Carácter</a> · <a class="bl" href="#libro-la-puerta">La Puerta entre dos Mentes</a> · <a class="bl" href="#libro-segunda-mente">Segunda Mente</a></div>
+      </div>
+    </div>
+
+    <div id="cat-caracter" class="cat-block reveal">
+      <div class="cat-top">
+        <span class="cat-letter">B</span>
+        <div class="cat-titlewrap"><span class="cat-title">Carácter y Vida Interior</span></div>
+        <span class="cat-count">1 primaria · 6 secundarias</span>
+      </div>
+      <div class="cat-body">
+        <p>Aquí se trabaja el sustrato desde el que una persona responde antes de haber deliberado: los patrones automáticos que gobiernan la reacción, la interpretación y el trato consigo misma. La tesis central de la categoría es que el objeto del desarrollo personal no es el resultado ni una supuesta mejor versión, sino el <strong>carácter</strong> desde el cual se vive, se decide y se responde a lo que ocurre.</p>
+        <p>El aparato conceptual proviene de la integración entre el estoicismo clásico y el entrenamiento de la atención: los <em>constructos</em> —interpretaciones aprendidas que siguen operando aunque las condiciones que las produjeron hayan desaparecido—, la ampliación de la dicotomía de control en control, influencia y no-control, y la distinción entre sentir una emoción y obedecerla. La metáfora del barniz resume el método: no hay transformación por un único insight, sino capas sucesivas de atención, discernimiento, elección y práctica hasta que las nuevas respuestas se vuelven disposiciones estables.</p>
+        <p>Es la categoría con más presencia secundaria del corpus, y no por casualidad. El carácter aparece cada vez que un sistema depende de una persona: el aprendiz que debe tolerar la frustración sin abandonar, el interlocutor dispuesto a ser transformado por una conversación, quien discierne una vocación sin dejarse gobernar por la impaciencia, quien trabaja con excelencia sin exigirle a la vida una cosecha, y quien administra poder sin dejar que el resultado sustituya al propósito.</p>
+      </div>
+      <div class="cat-books">
+        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primaria</span><a class="bl" href="#libro-el-barniz">El Barniz del Carácter</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundaria</span><a class="bl" href="#libro-aprenderse">Aprenderse</a> · <a class="bl" href="#libro-el-centro">El Centro que no se Mueve</a> · <a class="bl" href="#libro-la-puerta">La Puerta entre dos Mentes</a> · <a class="bl" href="#libro-los-cuatro-jardines">Los Cuatro Jardines</a> · <a class="bl" href="#libro-no-controlas-la-cosecha">No Controlas la Cosecha</a> · <a class="bl" href="#libro-inexorable">ineXorable</a></div>
+      </div>
+    </div>
+
+    <div id="cat-vocacion" class="cat-block reveal">
+      <div class="cat-top">
+        <span class="cat-letter">C</span>
+        <div class="cat-titlewrap"><span class="cat-title">Vocación, Obra y Trayectoria</span></div>
+        <span class="cat-count">3 primarias · 1 secundaria</span>
+      </div>
+      <div class="cat-body">
+        <p>Qué se construye con una vida profesional, con qué evidencia se decide el rumbo, y qué queda cuando la trayectoria termina. Los tres libros centrales de esta categoría atacan el mismo error por tres flancos distintos: tratar la vocación como un descubrimiento, la reputación como una acumulación de visibilidad y el resultado como una deuda que la realidad debe pagar.</p>
+        <p>Frente al primero, la propuesta es sustituir al adivino por el agricultor: la vocación no se descubre de una vez, se cultiva en cuatro dimensiones observables —propósito, disfrute, competencia y viabilidad—, distinguiendo con claridad entre <strong>misión</strong> y <strong>sustento</strong>, explorando antes de concentrar y acumulando evidencia antes de comprometerse. Frente al segundo, la propuesta es la voz propia como activo: una posición excavada desde la experiencia real, no fabricada para la atención, que gana fuerza con el tiempo y no depende por completo de ninguna empresa, cargo o plataforma. Frente al tercero, la asimetría fundamental entre lo que se siembra y lo que se cosecha.</p>
+        <p>El hilo común es la responsabilidad precisa: asumir por completo el proceso —oficio, palabra, hábitos, excelencia— sin confundirlo con un control sobre el desenlace que nunca se tuvo. De ahí que la categoría termine, en los tres casos, desplazándose hacia la pregunta de para quién se construye y en qué condiciones se entrega lo construido.</p>
+      </div>
+      <div class="cat-books">
+        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primarias</span><a class="bl" href="#libro-los-cuatro-jardines">Los Cuatro Jardines</a> · <a class="bl" href="#libro-voz-soberana">Voz Soberana</a> · <a class="bl" href="#libro-no-controlas-la-cosecha">No Controlas la Cosecha</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundaria</span><a class="bl" href="#libro-hagase-tu-voluntad">Hágase Tu Voluntad</a></div>
+      </div>
+    </div>
+
+    <div id="cat-conversacion" class="cat-block reveal">
+      <div class="cat-top">
+        <span class="cat-letter">D</span>
+        <div class="cat-titlewrap"><span class="cat-title">Conversación y Vínculo Humano</span></div>
+        <span class="cat-count">1 primaria · 1 secundaria</span>
+      </div>
+      <div class="cat-body">
+        <p>La categoría más pequeña del corpus y, probablemente, la que más se juega. Trata el encuentro real entre dos personas: no el intercambio de información, sino la conversación capaz de producir algo que ninguno de los dos habría alcanzado por separado. La distinción entre comunicar y conversar no es semántica; es la diferencia entre transmitir y ser transformado.</p>
+        <p>El diagnóstico es contemporáneo y estructural: la economía de la atención, la polarización, la instrumentalización del otro y la desaparición de los espacios comunes han encarecido enormemente una capacidad que solíamos dar por descontada. La respuesta no es la técnica conversacional ni los buenos modales, sino condiciones más exigentes: atención sostenida, tolerancia al silencio, vulnerabilidad intelectual, disenso sin destrucción, y la disposición a comprender sin que comprender signifique conceder.</p>
+        <p>Su vínculo con el resto del corpus es directo. La transferencia de criterio entre un experto y quien lo consulta ocurre dentro de una conversación o no ocurre; el diagnóstico que precede a cualquier intervención seria depende de la calidad de las preguntas; y la atención, tratada aquí como recurso escaso, es la misma que en otros libros aparece como capital cognitivo e infraestructura estratégica.</p>
+      </div>
+      <div class="cat-books">
+        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primaria</span><a class="bl" href="#libro-la-puerta">La Puerta entre dos Mentes</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundaria</span><a class="bl" href="#libro-segunda-mente">Segunda Mente</a></div>
+      </div>
+    </div>
+
+    <div id="cat-juicio" class="cat-block reveal">
+      <div class="cat-top">
+        <span class="cat-letter">E</span>
+        <div class="cat-titlewrap"><span class="cat-title">Juicio y Arquitectura de Decisión</span></div>
+        <span class="cat-count">2 primarias · 10 secundarias</span>
+      </div>
+      <div class="cat-body">
+        <p>El núcleo técnico del corpus, y la categoría con mayor alcance transversal: prácticamente todos los demás libros pasan por aquí. Su objeto no es la decisión individual sino el <strong>sistema que produce decisiones</strong>. Una decisión correcta puede provenir de una arquitectura frágil —y entonces no es repetible—, del mismo modo que un sistema bien diseñado convierte incluso sus errores en capacidad para decidir mejor la próxima vez.</p>
+        <p>De ahí un conjunto de distinciones que reaparece en todo el corpus: proceso frente a resultado como criterio para juzgar una decisión; contexto frente a memoria; capacidad adaptativa frente a acierto puntual; mapa de incertidumbre como parte obligatoria de toda recomendación importante. Y de ahí también la tesis sobre la calibración: el juicio de alto nivel no se acredita con conocimiento ni credenciales, sino que se forja por exposición prolongada a entornos donde desaparecen la revisión, la dilación y la absorción del error —con la advertencia correspondiente sobre la falsa transferencia y el sesgo de supervivencia.</p>
+        <p>La consecuencia práctica es una inversión de la pregunta habitual. No «¿qué debo decidir?», sino «¿qué tan bueno es el sistema desde el cual estoy decidiendo, y qué está aprendiendo de lo que ya decidí?». Es la categoría que conecta la empresa con el patrimonio, la asesoría con la inteligencia artificial, y el fútbol de élite con la vida ordinaria.</p>
+      </div>
+      <div class="cat-books">
+        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primarias</span><a class="bl" href="#libro-arquitectura-de-decision">Arquitectura de Decisión</a> · <a class="bl" href="#libro-margen-cero">Margen Cero</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundarias</span><a class="bl" href="#libro-arquitectura-empresarial">Arquitectura Empresarial</a> · <a class="bl" href="#libro-autonomia">Autonomía</a> · <a class="bl" href="#libro-complejidad-ganada">Complejidad Ganada</a> · <a class="bl" href="#libro-el-dinero">El Dinero es una Promesa</a> · <a class="bl" href="#libro-el-interes">El Interés Compuesto del Juicio</a> · <a class="bl" href="#libro-espacio-de-accion">Espacio de Acción</a> · <a class="bl" href="#libro-football-intelligence">Football Intelligence</a> · <a class="bl" href="#libro-la-empresa-imposible">La Empresa Imposible</a> · <a class="bl" href="#libro-la-ventana-gradual">La Ventana Gradual</a> · <a class="bl" href="#libro-los-cuatro-jardines">Los Cuatro Jardines</a></div>
+      </div>
+    </div>
+
+    <div id="cat-asesoria" class="cat-block reveal">
+      <div class="cat-top">
+        <span class="cat-letter">F</span>
+        <div class="cat-titlewrap"><span class="cat-title">Asesoría y Transferencia de Expertise</span></div>
+        <span class="cat-count">4 primarias · 1 secundaria</span>
+      </div>
+      <div class="cat-body">
+        <p>Qué significa realmente ayudar a alguien a decidir mejor. La categoría reúne cuatro respuestas complementarias: una doctrina de intervención, una crítica económica al modelo tradicional de advisory, una arquitectura tecnológica para sostenerlo y un estándar de calibración para juzgar a quien aconseja.</p>
+        <p>El principio rector es contraintuitivo: el trabajo del experto no consiste en transmitir conocimiento ni en entregar respuestas, sino en transformar la arquitectura desde la que otra persona comprende, decide y actúa. Eso obliga a diagnosticar antes de intervenir, a diseñar desde el resultado hacia atrás, a usar la fricción como instrumento de comprensión y no como demostración de poder, y a verificar el cambio con evidencia en lugar de impresiones. Su métrica final es la prueba de la ausencia: lo que permanece cuando el experto ya no está.</p>
+        <p>A esa doctrina se suma un diagnóstico estructural: si el conocimiento acumulado sobre un principal es el activo más valioso de la relación, el modelo episódico de sesiones lo deja depreciarse entre encuentro y encuentro. La propuesta —capital de contexto, memoria viva, presencia continua, deliberación multi-agente e integración entre dominios— convierte ese conocimiento en un activo que compone. Y el criterio de selección se endurece: la calibración de un asesor no se detecta en una buena presentación, sino en lo que ya sobrevivió a la tormenta.</p>
+      </div>
+      <div class="cat-books">
+        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primarias</span><a class="bl" href="#libro-segunda-mente">Segunda Mente</a> · <a class="bl" href="#libro-el-interes">El Interés Compuesto del Juicio</a> · <a class="bl" href="#libro-asesoria-aumentada">Asesoría Aumentada</a> · <a class="bl" href="#libro-margen-cero">Margen Cero</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundaria</span><a class="bl" href="#libro-aprenderse">Aprenderse</a></div>
+      </div>
+    </div>
+
+    <div id="cat-futbol" class="cat-block reveal">
+      <div class="cat-top">
+        <span class="cat-letter">G</span>
+        <div class="cat-titlewrap"><span class="cat-title">Fútbol y Entornos de Error Irreversible</span></div>
+        <span class="cat-count">1 primaria · 1 secundaria</span>
+      </div>
+      <div class="cat-body">
+        <p>El fútbol profesional de élite aparece en este corpus por una razón metodológica, no biográfica: es uno de los pocos entornos donde el error no admite revisión, no puede postergarse y no es absorbido por la organización. Esa ausencia de subsidios lo convierte en un laboratorio privilegiado para estudiar cómo se forja —y cómo se falsifica— el juicio bajo presión.</p>
+        <p>De ahí salen las dos aportaciones de la categoría. Una es técnica: entender la analítica no como colección de datos y modelos, sino como ingeniería de decisiones, donde la causalidad, la incertidumbre explícita, la gobernanza, la adopción y la evaluación posterior pesan tanto como la sofisticación del modelo. La otra es epistemológica: las siete capacidades que forja un entorno de margen cero, desde el diagnóstico estructural y la decisión irreversible hasta la lectura del poder y la ingeniería de valor bajo restricciones duras.</p>
+        <p>Estos dos libros pertenecen también al corpus de <strong>Metanoia Football</strong>, donde conviven con veinticinco papers de investigación aplicada al ecosistema del fútbol profesional. Aquí funcionan como puente: muestran de dónde viene buena parte del vocabulario del resto de la obra y por qué un entorno deportivo puede enseñarle algo serio a una empresa, a un patrimonio y a quien los aconseja.</p>
+      </div>
+      <div class="cat-books">
+        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primaria</span><a class="bl" href="#libro-football-intelligence">Football Intelligence</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundaria</span><a class="bl" href="#libro-margen-cero">Margen Cero</a></div>
+      </div>
+    </div>
+
+    <div id="cat-emprendimiento" class="cat-block reveal">
+      <div class="cat-top">
+        <span class="cat-letter">H</span>
+        <div class="cat-titlewrap"><span class="cat-title">Emprendimiento y Construcción Temprana</span></div>
+        <span class="cat-count">2 primarias</span>
+      </div>
+      <div class="cat-body">
+        <p>Esta categoría existe porque una empresa que todavía no existe y una empresa que ya opera plantean problemas distintos, y tratarlas con el mismo manual es una de las formas más caras de equivocarse. Aquí el asunto es el paso del cero al uno: qué construir, en qué orden, y bajo qué evidencia se gana el derecho a comprometer recursos.</p>
+        <p>El concepto central es la <strong>complejidad ganada</strong>. Una organización no debería volverse más compleja porque creció, porque levantó capital o porque otras compañías operan así: la estructura, los procesos, las personas y los sistemas deben incorporarse como respuesta a una necesidad que la realidad ya demostró. De ahí la disciplina de distinguir entre complejidad heredada, copiada y ganada, de gestionar la incertidumbre con experimentos mínimos y reversibilidad, de tratar la opcionalidad como el verdadero activo mientras la duda persiste, y de eliminar lo que dejó de justificarse.</p>
+        <p>El segundo frente es la transformación del propio oficio emprendedor cuando la inteligencia deja de ser escasa. Si una capacidad ya no exige personas, departamento y estructura, sino acceso y una arquitectura mínima, la pregunta deja de ser qué se puede intentar y pasa a ser qué merece ser intentado. Ahí la nueva escasez no es inteligencia: es juicio, atención, memoria y compromiso.</p>
+      </div>
+      <div class="cat-books">
+        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primarias</span><a class="bl" href="#libro-complejidad-ganada">Complejidad Ganada</a> · <a class="bl" href="#libro-espacio-de-accion">Espacio de Acción</a></div>
+      </div>
+    </div>
+
+    <div id="cat-direccion" class="cat-block reveal">
+      <div class="cat-top">
+        <span class="cat-letter">I</span>
+        <div class="cat-titlewrap"><span class="cat-title">Dirección de Empresas en Marcha</span></div>
+        <span class="cat-count">2 primarias · 6 secundarias</span>
+      </div>
+      <div class="cat-body">
+        <p>La contraparte de la categoría anterior: la empresa que ya opera, ya factura y ya tiene historia. Su problema no es qué construir, sino por qué el sistema produce lo que produce —y por qué sigue dependiendo del esfuerzo extraordinario de quien lo dirige. El desplazamiento que proponen estos libros es de <strong>operador a arquitecto</strong>: dejar de empujar personas y resolver problemas uno a uno, y empezar a diseñar el sistema que produce los resultados.</p>
+        <p>Eso exige mirar la empresa como un sistema económico completo, donde la utilidad puede ser una ilusión si no llega a convertirse en efectivo, la restricción determina el rendimiento mientras todo lo demás determina el costo, el promedio esconde el fracaso de los casos extremos, la automatización amplifica el diseño existente en lugar de corregirlo, la cultura es la conducta que se tolera y no el discurso que se enuncia, y todo capital retenido está invertido aunque nadie haya decidido invertirlo.</p>
+        <p>La segunda línea de trabajo cambia la unidad misma del diseño organizativo: dejar de pensar primero en puestos y empezar a pensar en capacidades, distribuyendo ejecución, coordinación y juicio entre personas y sistemas digitales bajo criterios de medición, responsabilidad y trazabilidad. En ambos casos la prueba final es la misma, y es la prueba de la ausencia aplicada a la dirección: qué ocurre con esta empresa si su director deja de empujar.</p>
+      </div>
+      <div class="cat-books">
+        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primarias</span><a class="bl" href="#libro-arquitectura-empresarial">Arquitectura Empresarial</a> · <a class="bl" href="#libro-la-empresa-imposible">La Empresa Imposible</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundarias</span><a class="bl" href="#libro-arquitectura-de-decision">Arquitectura de Decisión</a> · <a class="bl" href="#libro-asesoria-aumentada">Asesoría Aumentada</a> · <a class="bl" href="#libro-complejidad-ganada">Complejidad Ganada</a> · <a class="bl" href="#libro-football-intelligence">Football Intelligence</a> · <a class="bl" href="#libro-la-gran-inversion">La Gran Inversión</a> · <a class="bl" href="#libro-la-ventana-gradual">La Ventana Gradual</a></div>
+      </div>
+    </div>
+
+    <div id="cat-familiar" class="cat-block reveal">
+      <div class="cat-top">
+        <span class="cat-letter">J</span>
+        <div class="cat-titlewrap"><span class="cat-title">Empresa Familiar, Propiedad y Sucesión</span></div>
+        <span class="cat-count">1 primaria</span>
+      </div>
+      <div class="cat-body">
+        <p>La empresa familiar merece categoría propia porque contiene sistemas que obedecen lógicas incompatibles y que suelen operar como si fueran uno solo. La familia funciona con pertenencia incondicional; la empresa, con competencia demostrada; la propiedad, con derechos patrimoniales; el gobierno, con responsabilidad fiduciaria. Confundirlos es lo que convierte una fuente de prosperidad en una fuente de conflicto.</p>
+        <p>La respuesta es estructural antes que emocional: consejos que gobiernen en lugar de ratificar, un protocolo familiar que funcione como constitución y no como declaración de buenas intenciones, mecanismos de salida que existan antes de necesitarse, sucesión entendida como preparación y desprendimiento, y un sistema diseñado para la crisis y no para los días tranquilos. La buena voluntad no es un sistema de gobierno, y el apellido da pertenencia pero no garantiza competencia.</p>
+        <p>Su tesis final es la que le da nombre y la que la conecta con el resto del corpus: la empresa es el barco, no el viaje. El indicador definitivo no es la supervivencia del negocio, sino la libertad, las relaciones y el propósito de las personas que lo sostienen —lo que abre, en su segunda mitad, el paso del buen gobierno a la mayordomía.</p>
+      </div>
+      <div class="cat-books">
+        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primaria</span><a class="bl" href="#libro-el-barco">El Barco No Es el Viaje</a></div>
+      </div>
+    </div>
+
+    <div id="cat-ia" class="cat-block reveal">
+      <div class="cat-top">
+        <span class="cat-letter">K</span>
+        <div class="cat-titlewrap"><span class="cat-title">Inteligencia Artificial y Capacidad Aumentada</span></div>
+        <span class="cat-count">3 primarias · 3 secundarias</span>
+      </div>
+      <div class="cat-body">
+        <p>La inteligencia artificial aparece en este corpus como variable estructural, no como herramienta de productividad. La pregunta no es qué tareas se pueden automatizar, sino qué cambia en una organización cuando la capacidad intelectual deja de ser escasa: qué puede intentar, con qué estructura, con qué gobierno y con qué riesgos nuevos.</p>
+        <p>La tesis compartida es que el valor estratégico no reside en el modelo sino en la <strong>arquitectura construida a su alrededor</strong>: memoria de largo plazo, datos como infraestructura cognitiva, agentes con autonomía proporcional al riesgo, trazabilidad y auditabilidad como condición de confianza, un punto deliberadamente diseñado donde interviene el humano, y una economía que gobierne la automatización en lugar de perseguirla. La autonomía se compra con gobernanza; la automatización se gana con evidencia.</p>
+        <p>De ahí las advertencias que recorren la categoría: la fluidez no es verdad, el progreso sintético puede simular avance sin contacto con la realidad, la abundancia de opciones produce parálisis si no existe un criterio para descartar, y la peor arquitectura posible es una feria de agentes sin integración. El apalancamiento real no consiste en ahorrar tiempo, sino en aumentar capacidad —y la frontera competitiva no será tener inteligencia artificial, sino gobernarla mejor.</p>
+      </div>
+      <div class="cat-books">
+        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primarias</span><a class="bl" href="#libro-asesoria-aumentada">Asesoría Aumentada</a> · <a class="bl" href="#libro-la-empresa-imposible">La Empresa Imposible</a> · <a class="bl" href="#libro-espacio-de-accion">Espacio de Acción</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundarias</span><a class="bl" href="#libro-arquitectura-de-decision">Arquitectura de Decisión</a> · <a class="bl" href="#libro-el-interes">El Interés Compuesto del Juicio</a> · <a class="bl" href="#libro-football-intelligence">Football Intelligence</a></div>
+      </div>
+    </div>
+
+    <div id="cat-patrimonio" class="cat-block reveal">
+      <div class="cat-top">
+        <span class="cat-letter">L</span>
+        <div class="cat-titlewrap"><span class="cat-title">Patrimonio y Autonomía Económica</span></div>
+        <span class="cat-count">2 primarias · 5 secundarias</span>
+      </div>
+      <div class="cat-body">
+        <p>El patrimonio tratado como sistema de gobierno y no como colección de inversiones. La categoría sustituye la pregunta habitual —cuánto tengo— por otra que cambia todo el análisis: <strong>qué puedo hacer, durante cuánto tiempo y con cuánta independencia</strong>. El dinero deja de ser el territorio y pasa a ser una promesa de capacidad futura, sujeta a una realidad que no controla.</p>
+        <p>Sobre esa base se ordenan las decisiones: la supervivencia precede a la optimización, la preparación es superior a la predicción, la liquidez es una reserva de libertad antes que un costo de oportunidad, la holgura es una inversión y no una ineficiencia, la diversificación auténtica consiste en diversificar promesas y no en contar activos, la deuda es una decisión sobre el futuro que compromete opciones, y una decisión debe juzgarse por su proceso antes de conocerse su resultado.</p>
+        <p>El destino final de esta arquitectura es explícito y no es financiero. Un patrimonio existe para producir opciones: tiempo, margen de maniobra y capacidad de elegir sin depender ciegamente de mercados, instituciones o asesores. De ahí que la categoría desemboque siempre en la misma pregunta —capacidad, ¿para qué?— y en la noción de suficiencia como límite deliberado a la acumulación, además de en el problema de la continuidad: un patrimonio que sólo funciona mientras vive su propietario está incompleto.</p>
+      </div>
+      <div class="cat-books">
+        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primarias</span><a class="bl" href="#libro-autonomia">Autonomía</a> · <a class="bl" href="#libro-el-dinero">El Dinero es una Promesa</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundarias</span><a class="bl" href="#libro-arquitectura-empresarial">Arquitectura Empresarial</a> · <a class="bl" href="#libro-el-barco">El Barco No Es el Viaje</a> · <a class="bl" href="#libro-la-ventana-gradual">La Ventana Gradual</a> · <a class="bl" href="#libro-voz-soberana">Voz Soberana</a> · <a class="bl" href="#libro-inexorable">ineXorable</a></div>
+      </div>
+    </div>
+
+    <div id="cat-incertidumbre" class="cat-block reveal">
+      <div class="cat-top">
+        <span class="cat-letter">M</span>
+        <div class="cat-titlewrap"><span class="cat-title">Incertidumbre, Fragilidad y Antifragilidad</span></div>
+        <span class="cat-count">2 primarias · 6 secundarias</span>
+      </div>
+      <div class="cat-body">
+        <p>Esta categoría abandona deliberadamente el terreno de la predicción. Su premisa es que las grandes rupturas rara vez crean la fragilidad: la revelan. Antes del colapso existe un periodo —la ventana gradual— en el que las dependencias se profundizan, los márgenes se estrechan y las fragilidades se acumulan en silencio mientras todo parece funcionar con normalidad.</p>
+        <p>El objeto de gestión, por tanto, no es el acontecimiento sino la <strong>estructura</strong>: capacidad de absorber, de esperar, de elegir, de adaptarse y de continuar. Eso se construye con liquidez, redundancia, reversibilidad, diversificación real medida a nivel de sistema y no de inventario, y decisiones importantes tomadas parcialmente antes de que llegue la presión. El riesgo contemporáneo vive en las interacciones más que en las piezas, y el tamaño no equivale a resistencia.</p>
+        <p>Su versión más ambiciosa convierte la incertidumbre en un problema de diseño en los tres niveles —persona, obra y patrimonio—: identificar dependencias, preservar margen, desarrollar capacidades transferibles y construir sistemas que no sólo resistan el cambio, sino que aprendan de él. La conclusión no es prudencia ni invulnerabilidad: es capacidad. Sobrevivir por diseño y no por inercia, conservando la capacidad de decidir precisamente cuando ocurre aquello que no se pudo prever.</p>
+      </div>
+      <div class="cat-books">
+        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primarias</span><a class="bl" href="#libro-la-ventana-gradual">La Ventana Gradual</a> · <a class="bl" href="#libro-inexorable">ineXorable</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundarias</span><a class="bl" href="#libro-autonomia">Autonomía</a> · <a class="bl" href="#libro-complejidad-ganada">Complejidad Ganada</a> · <a class="bl" href="#libro-el-dinero">El Dinero es una Promesa</a> · <a class="bl" href="#libro-el-mundo">El Mundo que ya no Existe</a> · <a class="bl" href="#libro-no-controlas-la-cosecha">No Controlas la Cosecha</a> · <a class="bl" href="#libro-voz-soberana">Voz Soberana</a></div>
+      </div>
+    </div>
+
+    <div id="cat-poder" class="cat-block reveal">
+      <div class="cat-top">
+        <span class="cat-letter">N</span>
+        <div class="cat-titlewrap"><span class="cat-title">Poder, Instituciones y Custodia</span></div>
+        <span class="cat-count">2 primarias · 4 secundarias</span>
+      </div>
+      <div class="cat-body">
+        <p>Aquí el corpus sube de escala y examina los sistemas colectivos: empresas, mercados, Estados, instituciones democráticas. Dos patologías estructurales organizan la categoría. La primera es la <strong>inversión</strong>: el momento en que los resultados dejan de ser consecuencia del propósito y pasan a sustituirlo. Ocurre sin villanos —basta con que incentivos, métricas y estructuras de decisión empujen progresivamente a personas razonables hacia comportamientos que contradicen la finalidad original.</p>
+        <p>La segunda es el <strong>desfase</strong>: instituciones diseñadas para resolver los problemas de un mundo cuyas condiciones ya cambiaron. La respuesta no es modernizarlas ni digitalizarlas, sino distinguir con rigor entre la función que deben preservar y la forma histórica con la que intentaron cumplirla, y aceptar que cada nueva capacidad debe venir acompañada de una nueva salvaguarda.</p>
+        <p>El principio correctivo que la categoría propone es la custodia: quien decide no recibe poder únicamente como prerrogativa, sino como responsabilidad proporcional al radio de consecuencias de sus decisiones, hacia quienes las soportan y hacia quienes heredarán lo construido. Traducido a diseño institucional, eso significa verdad como infraestructura, reversibilidad y experimentación, memoria capaz de producir aprendizaje sin convertirse en instrumento de persecución, y sistemas que sigan haciendo lo correcto cuando nadie los vigila y quienes los crearon ya no están.</p>
+      </div>
+      <div class="cat-books">
+        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primarias</span><a class="bl" href="#libro-la-gran-inversion">La Gran Inversión</a> · <a class="bl" href="#libro-el-mundo">El Mundo que ya no Existe</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundarias</span><a class="bl" href="#libro-asesoria-aumentada">Asesoría Aumentada</a> · <a class="bl" href="#libro-el-barco">El Barco No Es el Viaje</a> · <a class="bl" href="#libro-hagase-tu-voluntad">Hágase Tu Voluntad</a> · <a class="bl" href="#libro-no-controlas-la-cosecha">No Controlas la Cosecha</a></div>
+      </div>
+    </div>
+
+    <div id="cat-fe" class="cat-block reveal">
+      <div class="cat-top">
+        <span class="cat-letter">O</span>
+        <div class="cat-titlewrap"><span class="cat-title">Fe, Trascendencia y Sentido</span></div>
+        <span class="cat-count">3 primarias · 2 secundarias</span>
+      </div>
+      <div class="cat-body">
+        <p>La categoría donde el corpus declara su fundamento. Su punto de partida es un diagnóstico que no admite consuelo: una persona puede ser exitosa, productiva, disciplinada e incluso religiosamente practicante, y permanecer interiormente desordenada si ha colocado su centro en el desempeño, el control, el dinero, la aprobación o en sí misma. La propuesta no es mejorar la vida, sino desplazar su centro de gravedad.</p>
+        <p>De ahí se derivan tres trabajos distintos. Uno es la arquitectura de una vida interior ordenada: identidad recibida y no conquistada, discernimiento sin control absoluto, sufrimiento, anclaje sacramental, vida ordinaria como lugar de la santidad y una regla de vida que convierta principios en ritmos sostenibles. Otro es el examen de un fenómeno concreto —Garabandal— reconstruido con rigor histórico, teológico y espiritual, distinguiendo con cuidado entre hechos documentados, hipótesis del autor y doctrina definida, y desplazando el foco desde la expectativa de acontecimientos futuros hacia la conversión del presente.</p>
+        <p>El tercero es la integración: ordenar una sola vida —persona, vocación, trabajo, dinero, autoridad y relaciones— bajo una misma pregunta, discerniendo la voluntad de Dios antes de optimizar resultados. Es también la categoría donde el corpus asume con mayor claridad el precio de sus convicciones: la verdadera prueba de una convicción es su costo, y la libertad se mide también por aquello a lo que uno es capaz de renunciar.</p>
+      </div>
+      <div class="cat-books">
+        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primarias</span><a class="bl" href="#libro-el-centro">El Centro que no se Mueve</a> · <a class="bl" href="#libro-hagase-tu-voluntad">Hágase Tu Voluntad</a> · <a class="bl" href="#libro-garabandal">Garabandal: La Convergencia</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundarias</span><a class="bl" href="#libro-el-barco">El Barco No Es el Viaje</a> · <a class="bl" href="#libro-los-cuatro-jardines">Los Cuatro Jardines</a></div>
+      </div>
+    </div>
+
+    <div id="cat-integracion" class="cat-block reveal">
+      <div class="cat-top">
+        <span class="cat-letter">P</span>
+        <div class="cat-titlewrap"><span class="cat-title">Integración: SER, HACER y TENER</span></div>
+        <span class="cat-count">2 primarias · 2 secundarias</span>
+      </div>
+      <div class="cat-body">
+        <p>La última categoría no agrupa un tema: agrupa una ambición. Reúne las obras que se niegan a tratar la persona, su obra y su patrimonio como compartimentos separados, y que proponen gobernarlos bajo una sola arquitectura. Son los libros que más difícilmente admitirían una etiqueta única, porque su objeto es precisamente la costura entre todas las demás.</p>
+        <p>El diagnóstico compartido es la fragmentación: vivir aplicando criterios distintos según el ámbito —una ética para la familia, otra para el negocio, otra para el dinero— hasta que las decisiones dejan de responder a una misma orientación. La corrección propuesta es un orden, no una lista: primero el <strong>ser</strong> —quién es la persona y desde qué centro decide—, después el <strong>hacer</strong> —qué construye y con qué criterio—, y sólo entonces el <strong>tener</strong> —qué acumula, con qué propósito y bajo qué responsabilidad.</p>
+        <p>Cada obra recorre esa secuencia desde un fundamento distinto. Una lo hace desde el diseño: estructura, propósito y adaptación como las tres dimensiones de cualquier arquitectura capaz de absorber el cambio y convertirlo en capacidad de actuar con más libertad. La otra lo hace desde la fe: discernir antes de optimizar, y administrar con fidelidad lo recibido. Coinciden en el resultado que buscan —una vida coherente— y en lo que rechazan: la promesa de control sobre el desenlace.</p>
+      </div>
+      <div class="cat-books">
+        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primarias</span><a class="bl" href="#libro-inexorable">ineXorable</a> · <a class="bl" href="#libro-hagase-tu-voluntad">Hágase Tu Voluntad</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundarias</span><a class="bl" href="#libro-el-centro">El Centro que no se Mueve</a> · <a class="bl" href="#libro-margen-cero">Margen Cero</a></div>
+      </div>
+    </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="libros">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">IV</span>
+      <div>
+        <h2 class="sec-title">Los veintiséis <em>libros</em></h2>
+        <p class="sec-sub">Cada obra incluye su tesis en una frase, sus etiquetas temáticas, el abstract completo y la descarga directa en PDF. Veintisiete volúmenes en total: <em>Aprenderse</em> se publicó en dos tomos. Sin costo, sin registro.</p>
+      </div>
+    </div>
+
+    <div class="filterbar reveal">
+      <div class="filter-caption">Filtrar por categoría</div>
+      <div class="filter-chips" id="filter-chips">
+        <button class="fchip" type="button" data-filter="all" aria-pressed="true">Todos los libros (26)</button>
+        <button class="fchip" type="button" data-filter="aprendizaje" aria-pressed="false">Aprendizaje y Capacidad Cognitiva (4)</button>
+        <button class="fchip" type="button" data-filter="caracter" aria-pressed="false">Carácter y Vida Interior (7)</button>
+        <button class="fchip" type="button" data-filter="vocacion" aria-pressed="false">Vocación, Obra y Trayectoria (4)</button>
+        <button class="fchip" type="button" data-filter="conversacion" aria-pressed="false">Conversación y Vínculo Humano (2)</button>
+        <button class="fchip" type="button" data-filter="juicio" aria-pressed="false">Juicio y Arquitectura de Decisión (12)</button>
+        <button class="fchip" type="button" data-filter="asesoria" aria-pressed="false">Asesoría y Transferencia de Expertise (5)</button>
+        <button class="fchip" type="button" data-filter="futbol" aria-pressed="false">Fútbol y Error Irreversible (2)</button>
+        <button class="fchip" type="button" data-filter="emprendimiento" aria-pressed="false">Emprendimiento y Construcción Temprana (2)</button>
+        <button class="fchip" type="button" data-filter="direccion" aria-pressed="false">Dirección de Empresas en Marcha (8)</button>
+        <button class="fchip" type="button" data-filter="familiar" aria-pressed="false">Empresa Familiar, Propiedad y Sucesión (1)</button>
+        <button class="fchip" type="button" data-filter="ia" aria-pressed="false">Inteligencia Artificial y Capacidad Aumentada (6)</button>
+        <button class="fchip" type="button" data-filter="patrimonio" aria-pressed="false">Patrimonio y Autonomía Económica (7)</button>
+        <button class="fchip" type="button" data-filter="incertidumbre" aria-pressed="false">Incertidumbre, Fragilidad y Antifragilidad (8)</button>
+        <button class="fchip" type="button" data-filter="poder" aria-pressed="false">Poder, Instituciones y Custodia (6)</button>
+        <button class="fchip" type="button" data-filter="fe" aria-pressed="false">Fe, Trascendencia y Sentido (5)</button>
+        <button class="fchip" type="button" data-filter="integracion" aria-pressed="false">Integración: SER, HACER y TENER (4)</button>
+      </div>
+      <div class="filter-status" id="filter-status">Mostrando los 26 libros del corpus.</div>
+    </div>
+
+    <div id="book-list">
+      <article class="book-card reveal" id="libro-aprenderse" data-tags="aprendizaje asesoria caracter">
+        <h3 class="book-title">Aprenderse</h3>
+        <p class="book-thesis">El verdadero dominio no es saberlo todo, sino saber cómo empezar cuando aparece algo que todavía no sabemos hacer.</p>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-aprendizaje">Aprendizaje y Capacidad Cognitiva</a><a class="tag tag-s" href="#cat-asesoria">Asesoría y Transferencia de Expertise</a><a class="tag tag-s" href="#cat-caracter">Carácter y Vida Interior</a></div>
+        <p class="book-abstract">Aprenderse propone una idea sencilla pero profunda: la competencia más valiosa no consiste en acumular conocimientos, sino en aprender a convertirse en competente frente a aquello que todavía no se sabe. A través de dos volúmenes, el libro desarrolla un sistema para transformar la curiosidad en capacidad: definir qué se quiere lograr, descomponer una habilidad, practicar deliberadamente, recuperar en lugar de releer, utilizar el error como información, diagnosticar las propias brechas y comprobar el aprendizaje en situaciones reales.</p>
+        <p class="book-abstract">Pero la propuesta va más allá de aprender mejor una materia concreta. Su objetivo final es construir un sistema de autoactualización: una forma de aprender que se perfecciona con cada nuevo aprendizaje. El lector pasa así de ser consumidor de información a arquitecto de su propio aprendizaje, capaz de utilizar profesores, instituciones y herramientas —incluida la inteligencia artificial— sin convertirse en dependiente de ellas. En última instancia, Aprenderse plantea que el verdadero dominio no es saberlo todo, sino saber cómo empezar cuando aparece algo que todavía no sabemos hacer.</p>
+        <div class="book-dl-row">
+          <a class="paper-dl" href="https://metanoiagroup.vip/downloads/Aprenderse_Vol_I.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_aprenderse_tomo_i'})">
+            <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+            Descargar Tomo I (PDF)
+          </a>
+          <a class="paper-dl" href="https://metanoiagroup.vip/downloads/Aprenderse_Vol_II.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_aprenderse_tomo_ii'})">
+            <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+            Descargar Tomo II (PDF)
+          </a>
+        </div>
+      </article>
+
+      <article class="book-card reveal" id="libro-arquitectura-de-decision" data-tags="juicio ia direccion">
+        <h3 class="book-title">Arquitectura de Decisión</h3>
+        <p class="book-thesis">Una decisión correcta puede provenir de un sistema frágil; un sistema bien diseñado convierte incluso sus errores en capacidad para decidir mejor.</p>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-juicio">Juicio y Arquitectura de Decisión</a><a class="tag tag-s" href="#cat-ia">Inteligencia Artificial y Capacidad Aumentada</a><a class="tag tag-s" href="#cat-direccion">Dirección de Empresas en Marcha</a></div>
+        <p class="book-abstract">Arquitectura de Decisión parte de una premisa sencilla pero profunda: en entornos cada vez más complejos, inciertos y acelerados, el verdadero problema no es únicamente tomar buenas decisiones, sino diseñar el sistema desde el cual esas decisiones se producen. El libro propone pasar de una visión puntual de la decisión a una arquitectura integral que incorpore información, diversidad de perspectivas, deliberación adversarial, memoria, aprendizaje, adaptación y gobernanza. Su objetivo es mostrar por qué una decisión aparentemente correcta puede surgir de un sistema frágil y por qué, a la inversa, un sistema bien diseñado puede convertir cada decisión —incluidos sus errores— en capacidad para decidir mejor en el futuro.</p>
+        <p class="book-abstract">A partir de este marco, el texto desarrolla herramientas prácticas para evaluar y fortalecer la arquitectura de decisión a nivel personal, organizacional y tecnológico, incluyendo el uso de inteligencia artificial como segunda mente: no como sustituto del juicio humano, sino como infraestructura para ampliar la percepción, preservar memoria, desafiar supuestos y acelerar el aprendizaje. La tesis final es que la ventaja sostenible no pertenece necesariamente a quien tiene más información, más talento o mejor tecnología, sino a quien consigue construir un sistema que aprende sistemáticamente de sus propias decisiones y se vuelve más capaz con el tiempo.</p>
+        <div class="book-dl-row">
+          <a class="paper-dl" href="https://metanoiagroup.vip/downloads/Arquitectura_de_Decision.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_arquitectura-de-decision'})">
+            <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+            Descargar libro (PDF)
+          </a>
+        </div>
+      </article>
+
+      <article class="book-card reveal" id="libro-arquitectura-empresarial" data-tags="direccion patrimonio juicio">
+        <h3 class="book-title">Arquitectura Empresarial</h3>
+        <p class="book-thesis">Dejar de preguntar cómo hacemos más, y empezar a preguntar qué debemos diseñar para que la empresa pueda hacer más.</p>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-direccion">Dirección de Empresas en Marcha</a><a class="tag tag-s" href="#cat-patrimonio">Patrimonio y Autonomía Económica</a><a class="tag tag-s" href="#cat-juicio">Juicio y Arquitectura de Decisión</a></div>
+        <p class="book-abstract">Arquitectura Empresarial propone una forma distinta de entender la dirección de una empresa: no como el arte de empujar personas, resolver problemas uno a uno o perseguir resultados, sino como la disciplina de diseñar el sistema que produce esos resultados. El libro recorre la empresa como un sistema económico y operativo —desde la creación de valor y la estrategia hasta la caja, la operación, las personas, el crecimiento y la asignación de capital— para mostrar por qué muchas organizaciones crecen sin volverse más capaces, generan utilidad sin generar efectivo o delegan responsabilidades sin conseguir verdadera autonomía.</p>
+        <p class="book-abstract">Su propuesta central es pasar de una lógica de operador a arquitecto: identificar las restricciones que realmente gobiernan el sistema, intervenir en las causas y no sólo en los síntomas, convertir la estrategia en mecanismos concretos y construir una organización capaz de producir resultados sin depender permanentemente del esfuerzo extraordinario de su director. En última instancia, el libro invita a sustituir la pregunta «¿cómo hacemos más?» por una mucho más poderosa: «¿qué debemos diseñar para que la empresa pueda hacer más, mejor y de forma sostenible?»</p>
+        <div class="book-dl-row">
+          <a class="paper-dl" href="https://metanoiagroup.vip/downloads/Arquitectura_Empresarial.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_arquitectura-empresarial'})">
+            <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+            Descargar libro (PDF)
+          </a>
+        </div>
+      </article>
+
+      <article class="book-card reveal" id="libro-asesoria-aumentada" data-tags="ia asesoria direccion poder">
+        <h3 class="book-title">Asesoría Aumentada</h3>
+        <p class="book-thesis">El valor estratégico de la inteligencia artificial no reside en la inteligencia del modelo, sino en la arquitectura que se construye a su alrededor.</p>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-ia">Inteligencia Artificial y Capacidad Aumentada</a><a class="tag tag-p" href="#cat-asesoria">Asesoría y Transferencia de Expertise</a><a class="tag tag-s" href="#cat-direccion">Dirección de Empresas en Marcha</a><a class="tag tag-s" href="#cat-poder">Poder, Instituciones y Custodia</a></div>
+        <p class="book-abstract">Asesoría Aumentada presenta una visión integral de la inteligencia artificial que trasciende el uso de modelos generativos como simples herramientas de productividad. La obra explora cómo construir sistemas capaces de combinar IA, memoria de largo plazo, datos, agentes autónomos y conocimiento especializado para transformar la asesoría profesional en una capacidad continua, contextual y escalable. A lo largo de sus distintos libros, desarrolla los fundamentos técnicos y metodológicos necesarios para comprender cómo estos sistemas recuerdan, razonan, actúan y evolucionan.</p>
+        <p class="book-abstract">Pero el verdadero propósito de la obra va más allá de la tecnología. El texto propone un marco para gobernar, evaluar y desplegar la IA de manera responsable, abordando cuestiones de autonomía, seguridad, privacidad, sesgos, ética, economía, gestión del cambio y aprendizaje continuo. Su tesis fundamental es que el valor estratégico de la IA no reside únicamente en la inteligencia del modelo, sino en la arquitectura que se construye alrededor de él y en la capacidad de una organización para convertir esa inteligencia en conocimiento acumulativo, decisiones de mayor calidad y relaciones de largo plazo.</p>
+        <div class="book-dl-row">
+          <a class="paper-dl" href="https://metanoiagroup.vip/downloads/Asesoria_Aumentada.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_asesoria-aumentada'})">
+            <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+            Descargar libro (PDF)
+          </a>
+        </div>
+      </article>
+
+      <article class="book-card reveal" id="libro-autonomia" data-tags="patrimonio incertidumbre juicio">
+        <h3 class="book-title">Autonomía</h3>
+        <p class="book-thesis">Un patrimonio no existe para acumular dinero: existe para producir opciones.</p>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-patrimonio">Patrimonio y Autonomía Económica</a><a class="tag tag-s" href="#cat-incertidumbre">Incertidumbre, Fragilidad y Antifragilidad</a><a class="tag tag-s" href="#cat-juicio">Juicio y Arquitectura de Decisión</a></div>
+        <p class="book-abstract"><strong>Autonomía</strong>, de Mario Garza Livas, propone una forma integral de entender y gobernar el patrimonio: no como una simple acumulación de dinero o una colección de inversiones, sino como un sistema diseñado para preservar la estabilidad, protegerse frente a riesgos, crecer de manera coherente y, sobre todo, ampliar la capacidad de elegir. A lo largo de sus distintas etapas —despertar, mapear, construir, asignar, proteger, adaptar, liberar y gobernar—, el libro ofrece un marco para comprender qué se posee, de qué depende, cómo debe asignarse y qué puede ponerlo en peligro.</p>
+        <p class="book-abstract">Más allá de las finanzas y la inversión, <strong>Autonomía</strong> plantea una pregunta fundamental: ¿para qué sirve realmente un patrimonio? Su respuesta conduce desde la acumulación hacia la libertad: disponer de tiempo, margen de maniobra y opciones, sin depender ciegamente de mercados, instituciones, asesores o circunstancias externas. El resultado es una propuesta de gobierno patrimonial orientada no únicamente a conservar o multiplicar el dinero, sino a convertirlo en una herramienta consciente para vivir, decidir y asegurar la continuidad del sistema a lo largo del tiempo.</p>
+        <div class="book-dl-row">
+          <a class="paper-dl" href="https://metanoiagroup.vip/downloads/Autonomia.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_autonomia'})">
+            <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+            Descargar libro (PDF)
+          </a>
+        </div>
+      </article>
+
+      <article class="book-card reveal" id="libro-complejidad-ganada" data-tags="emprendimiento direccion incertidumbre juicio">
+        <h3 class="book-title">Complejidad Ganada</h3>
+        <p class="book-thesis">Una empresa no debería volverse más compleja porque crece, sino porque la realidad demostró que lo necesita.</p>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-emprendimiento">Emprendimiento y Construcción Temprana</a><a class="tag tag-s" href="#cat-direccion">Dirección de Empresas en Marcha</a><a class="tag tag-s" href="#cat-incertidumbre">Incertidumbre, Fragilidad y Antifragilidad</a><a class="tag tag-s" href="#cat-juicio">Juicio y Arquitectura de Decisión</a></div>
+        <p class="book-abstract">Complejidad Ganada propone una idea sencilla pero profunda: una empresa no debería volverse más compleja simplemente porque crece, dispone de capital o porque otras compañías operan de determinada manera. La estructura, los procesos, las personas y los sistemas deben incorporarse como respuesta a necesidades que la realidad haya demostrado. El libro ofrece un marco para distinguir entre la complejidad heredada, copiada y ganada, y para decidir cuándo una empresa tiene realmente derecho a añadir capacidad.</p>
+        <p class="book-abstract">A través de casos, principios y herramientas prácticas, la obra enseña a gestionar la incertidumbre mediante evidencia, experimentación, reversibilidad y revisión continua. Su propuesta no consiste en construir menos, sino en construir en el momento adecuado y por las razones adecuadas: añadir complejidad cuando una restricción real la exige, mantener abiertas las opciones mientras persiste la incertidumbre y eliminar aquello que deja de aportar valor. En última instancia, el libro plantea una disciplina de crecimiento basada en una pregunta esencial: ¿qué capacidad ha demostrado necesitar nuestra empresa y cuál es la forma mínima de construirla?</p>
+        <div class="book-dl-row">
+          <a class="paper-dl" href="https://metanoiagroup.vip/downloads/Complejidad_Ganada.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_complejidad-ganada'})">
+            <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+            Descargar libro (PDF)
+          </a>
+        </div>
+      </article>
+
+      <article class="book-card reveal" id="libro-el-barco" data-tags="familiar patrimonio poder fe">
+        <h3 class="book-title">El Barco No Es el Viaje</h3>
+        <p class="book-thesis">La empresa es el barco, no el viaje: el éxito no consiste en que el negocio sobreviva, sino en que la familia conserve su libertad.</p>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-familiar">Empresa Familiar, Propiedad y Sucesión</a><a class="tag tag-s" href="#cat-patrimonio">Patrimonio y Autonomía Económica</a><a class="tag tag-s" href="#cat-poder">Poder, Instituciones y Custodia</a><a class="tag tag-s" href="#cat-fe">Fe, Trascendencia y Sentido</a></div>
+        <p class="book-abstract">El Barco No Es El Viaje es una reflexión profunda y práctica sobre uno de los mayores desafíos de las empresas familiares: cómo preservar simultáneamente la empresa, el patrimonio y, sobre todo, las relaciones que les dan sentido. A través de sus distintas partes, el texto muestra cómo la confusión entre familia, propiedad, gobierno y operación puede convertir una fuente de prosperidad en una fuente de conflicto, y propone principios y estructuras concretas —gobierno corporativo, Consejo Familiar, protocolo, sucesión, mecanismos de salida y gestión patrimonial— para evitar que las tensiones inevitables terminen destruyendo aquello que realmente importa.</p>
+        <p class="book-abstract">Pero la obra va más allá de la profesionalización de la empresa familiar. Su tesis última es que la empresa es el barco, no el viaje: el verdadero éxito no consiste simplemente en lograr que el negocio sobreviva, sino en construir un sistema que permita a la familia conservar su libertad, sus relaciones, su propósito y su dignidad, incluso si algún día el negocio cambia, se vende o desaparece. En su dimensión trascendente, el libro profundiza además en la idea de la empresa y el patrimonio como instrumentos de servicio y mayordomía, situando a la persona y su propósito por encima de la riqueza, el control y la continuidad empresarial.</p>
+        <div class="book-dl-row">
+          <a class="paper-dl" href="https://metanoiagroup.vip/downloads/El_Barco_No_Es_El_Viaje.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_el-barco'})">
+            <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+            Descargar libro (PDF)
+          </a>
+        </div>
+      </article>
+
+      <article class="book-card reveal" id="libro-el-barniz" data-tags="caracter aprendizaje">
+        <h3 class="book-title">El Barniz del Carácter</h3>
+        <p class="book-thesis">El carácter no se transforma con un único insight, sino con capas sucesivas de atención, discernimiento, elección y práctica.</p>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-caracter">Carácter y Vida Interior</a><a class="tag tag-s" href="#cat-aprendizaje">Aprendizaje y Capacidad Cognitiva</a></div>
+        <p class="book-abstract"><em>El barniz del carácter</em> propone una revisión profunda de la idea contemporánea de desarrollo personal: en lugar de centrar la transformación en alcanzar resultados, metas o una supuesta «mejor versión» de uno mismo, plantea que el verdadero trabajo consiste en construir deliberadamente el carácter desde el que vivimos, decidimos y respondemos ante las circunstancias. El libro parte de una premisa central: muchas de nuestras reacciones automáticas están gobernadas por <strong>constructos</strong>, interpretaciones aprendidas que continúan operando en el presente aunque las condiciones que les dieron origen hayan cambiado.</p>
+        <p class="book-abstract">A partir de una integración práctica de principios estoicos y herramientas de entrenamiento de la atención, el libro desarrolla un recorrido que va del <strong>diagnóstico de esos patrones a su reconstrucción y posterior integración en la vida cotidiana</strong>. La metáfora del «barniz» resume su propuesta: el carácter no se transforma de una vez ni mediante un único insight, sino mediante capas sucesivas de atención, discernimiento, elección y práctica. El objetivo no es alcanzar la perfección, sino desarrollar progresivamente mayor claridad, coraje, templanza y justicia hasta que nuevas formas de responder puedan convertirse, con el tiempo, en disposiciones cada vez más estables.</p>
+        <div class="book-dl-row">
+          <a class="paper-dl" href="https://metanoiagroup.vip/downloads/El_Barniz_del_Caracter.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_el-barniz'})">
+            <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+            Descargar libro (PDF)
+          </a>
+        </div>
+      </article>
+
+      <article class="book-card reveal" id="libro-el-centro" data-tags="fe caracter integracion">
+        <h3 class="book-title">El Centro que no se Mueve</h3>
+        <p class="book-thesis">Se puede ser exitoso, disciplinado y practicante, y permanecer interiormente desordenado si el centro está puesto en el lugar equivocado.</p>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-fe">Fe, Trascendencia y Sentido</a><a class="tag tag-s" href="#cat-caracter">Carácter y Vida Interior</a><a class="tag tag-s" href="#cat-integracion">Integración: SER, HACER y TENER</a></div>
+        <p class="book-abstract">El centro que no se mueve parte de una pregunta sencilla pero decisiva: ¿qué sostiene realmente tu vida cuando aquello en lo que has depositado tu identidad, seguridad o valor deja de funcionar? El libro sostiene que una persona puede ser exitosa, productiva, disciplinada e incluso religiosamente practicante, y permanecer, sin embargo, interiormente desordenada si ha colocado su centro en el desempeño, el control, el dinero, la aprobación, las relaciones o en sí misma. Frente a ello, propone una transformación más profunda que la simple mejora personal: desplazar el centro de gravedad hacia Dios.</p>
+        <p class="book-abstract">A partir de ese cambio, la obra desarrolla una arquitectura práctica para aprender a vivir desde una identidad recibida y no conquistada; ordenar el trabajo, el dinero, las relaciones, la atención y el tiempo; discernir sin quedar gobernado por emociones o impulsos; atravesar el sufrimiento y el fracaso; vivir una fe verdaderamente sacramental; y convertir la integración personal en capacidad concreta de amar y servir. Su propuesta final no es alcanzar una vida perfecta o inmune a las crisis, sino construir una vida capaz de volver al centro una y otra vez, mediante ritmos sostenibles, perseverancia y una relación viva con Cristo.</p>
+        <div class="book-dl-row">
+          <a class="paper-dl" href="https://metanoiagroup.vip/downloads/El_Centro_que_no_se_mueve.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_el-centro'})">
+            <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+            Descargar libro (PDF)
+          </a>
+        </div>
+      </article>
+
+      <article class="book-card reveal" id="libro-el-dinero" data-tags="patrimonio juicio incertidumbre">
+        <h3 class="book-title">El Dinero es una Promesa</h3>
+        <p class="book-thesis">La riqueza no es una cifra: es lo que puedes hacer, durante cuánto tiempo y con cuánta independencia.</p>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-patrimonio">Patrimonio y Autonomía Económica</a><a class="tag tag-s" href="#cat-juicio">Juicio y Arquitectura de Decisión</a><a class="tag tag-s" href="#cat-incertidumbre">Incertidumbre, Fragilidad y Antifragilidad</a></div>
+        <p class="book-abstract"><strong>El dinero es una promesa</strong> propone una mirada distinta sobre el dinero, la riqueza y la libertad económica. En lugar de reducir el patrimonio a una cifra o al rendimiento de los activos, el libro invita a entender el dinero como una promesa de capacidad futura y a evaluar la verdadera riqueza en términos de lo que una persona puede hacer, durante cuánto tiempo y con cuánta independencia. A través de conceptos como liquidez, deuda, concentración, diversificación, holgura, deterioro y capacidad invisible, la obra cuestiona algunas de las métricas habituales con las que medimos nuestra situación financiera.</p>
+        <p class="book-abstract">Más que ofrecer una colección de fórmulas para acumular más, <strong>El dinero es una promesa</strong> plantea una pregunta más profunda: ¿capacidad para qué? Su propuesta consiste en construir estructuras económicas capaces de sobrevivir a la incertidumbre, conservar opciones y sostener aquello que realmente importa, sin confundir el crecimiento de los números con el crecimiento de la riqueza. En última instancia, el libro convierte las finanzas en una reflexión sobre autonomía, tiempo, decisiones y propósito.</p>
+        <div class="book-dl-row">
+          <a class="paper-dl" href="https://metanoiagroup.vip/downloads/El_dinero_es_una_promesa.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_el-dinero'})">
+            <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+            Descargar libro (PDF)
+          </a>
+        </div>
+      </article>
+
+      <article class="book-card reveal" id="libro-el-interes" data-tags="asesoria ia juicio">
+        <h3 class="book-title">El Interés Compuesto del Juicio</h3>
+        <p class="book-thesis">Cuando el conocimiento de una relación deja de depreciarse y empieza a componer, cada interacción mejora todas las decisiones siguientes.</p>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-asesoria">Asesoría y Transferencia de Expertise</a><a class="tag tag-s" href="#cat-ia">Inteligencia Artificial y Capacidad Aumentada</a><a class="tag tag-s" href="#cat-juicio">Juicio y Arquitectura de Decisión</a></div>
+        <p class="book-abstract">El interés compuesto del juicio plantea una pregunta de fondo sobre el futuro del asesoramiento estratégico: si el conocimiento profundo que un advisor acumula sobre un principal es uno de los activos más valiosos de la relación, ¿por qué el modelo tradicional permite que ese conocimiento se pierda, se fragmente y se degrade entre una sesión y otra? El libro propone una respuesta radical: dejar de entender el advisory como una sucesión de encuentros episódicos y comenzar a construir una infraestructura permanente de capital de contexto, capaz de acumular, estructurar y conectar el conocimiento sobre la historia, los patrones decisionales, los riesgos y las circunstancias del principal.</p>
+        <p class="book-abstract">A partir de esta tesis, la obra desarrolla una nueva arquitectura de asesoramiento apoyada en memoria viva, presencia continua, deliberación multi-agente, integración entre dominios y anticipación de riesgos. Su promesa central es que, cuando el conocimiento de una relación deja de depreciarse y comienza a componer, cada interacción puede aumentar la calidad de las decisiones futuras. La inteligencia artificial aparece aquí no como sustituto del juicio humano, sino como la infraestructura que permite preservar y multiplicar ese contexto, mientras que el advisor conserva la responsabilidad, la interpretación y el juicio que siguen siendo esencialmente humanos.</p>
+        <div class="book-dl-row">
+          <a class="paper-dl" href="https://metanoiagroup.vip/downloads/El_Interes_Compuesto_del_Juicio.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_el-interes'})">
+            <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+            Descargar libro (PDF)
+          </a>
+        </div>
+      </article>
+
+      <article class="book-card reveal" id="libro-el-mundo" data-tags="poder incertidumbre">
+        <h3 class="book-title">El Mundo que ya no Existe</h3>
+        <p class="book-thesis">El desafío no es modernizar las instituciones, sino distinguir la función que deben preservar de la forma con la que intentaron cumplirla.</p>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-poder">Poder, Instituciones y Custodia</a><a class="tag tag-s" href="#cat-incertidumbre">Incertidumbre, Fragilidad y Antifragilidad</a></div>
+        <p class="book-abstract">El mundo que ya no existe parte de una pregunta sencilla pero incómoda: ¿qué ocurre cuando las instituciones que organizan nuestra vida pública siguen diseñadas para resolver los problemas de un mundo que ya cambió? El libro examina cómo la tecnología, la disponibilidad de información y la reducción de los costos de coordinación han transformado las condiciones bajo las cuales fueron concebidas muchas instituciones democráticas, y sostiene que el desafío no consiste simplemente en “modernizarlas”, sino en distinguir entre la función que deben preservar y la forma histórica con la que han intentado cumplirla.</p>
+        <p class="book-abstract">A partir de esta premisa, la obra propone una arquitectura de renovación institucional basada en participación de mayor resolución, nuevas capacidades estatales, salvaguardas frente a la concentración de poder, experimentación reversible, continuidad administrativa y memoria institucional. Su tesis final va más allá de diseñar “mejores instituciones”: plantea la necesidad de construir una democracia auto-renovable, capaz de detectar cuándo sus propias reglas dejan de cumplir su propósito, experimentar con alternativas, aprender de los resultados y cambiar sin destruir las garantías fundamentales que la sostienen.</p>
+        <div class="book-dl-row">
+          <a class="paper-dl" href="https://metanoiagroup.vip/downloads/El_Mundo_que_ya_no_Existe.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_el-mundo'})">
+            <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+            Descargar libro (PDF)
+          </a>
+        </div>
+      </article>
+
+      <article class="book-card reveal" id="libro-espacio-de-accion" data-tags="emprendimiento ia juicio">
+        <h3 class="book-title">Espacio de Acción</h3>
+        <p class="book-thesis">Cuando la inteligencia se vuelve abundante, la escasez se desplaza: ya no falta capacidad de pensar, falta juicio.</p>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-emprendimiento">Emprendimiento y Construcción Temprana</a><a class="tag tag-p" href="#cat-ia">Inteligencia Artificial y Capacidad Aumentada</a><a class="tag tag-s" href="#cat-juicio">Juicio y Arquitectura de Decisión</a></div>
+        <p class="book-abstract">Espacio de Acción explora qué ocurre con el emprendimiento cuando la inteligencia deja de ser un recurso escaso y pasa a estar disponible de forma abundante. En este nuevo escenario, el desafío ya no consiste únicamente en acceder a información, analizarla o producir soluciones, sino en determinar qué puede hacerse realmente con los recursos disponibles: tiempo, capital, conocimiento, estructura y atención. El libro introduce el concepto de espacio de acción para describir esa frontera y propone una nueva forma de pensar la empresa: no desde los departamentos o las herramientas, sino desde las capacidades que necesita producir.</p>
+        <p class="book-abstract">A lo largo de sus capítulos, el texto desarrolla un método para diagnosticar restricciones, ampliar capacidades, experimentar, aprender y diseñar organizaciones capaces de aprovechar la inteligencia artificial sin perder contacto con la realidad. Su tesis de fondo es que, a medida que la capacidad intelectual se vuelve más accesible, adquieren mayor importancia el juicio, la atención, la memoria, el aprendizaje, el compromiso y la capacidad de decidir. Más que un manual sobre tecnología, Espacio de Acción es una propuesta para comprender cómo cambia la naturaleza del trabajo emprendedor y cómo construir organizaciones pequeñas, capaces y adaptables en una época de inteligencia abundante.</p>
+        <div class="book-dl-row">
+          <a class="paper-dl" href="https://metanoiagroup.vip/downloads/Espacio_de_Accion.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_espacio-de-accion'})">
+            <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+            Descargar libro (PDF)
+          </a>
+        </div>
+      </article>
+
+      <article class="book-card reveal" id="libro-football-intelligence" data-tags="futbol ia juicio direccion">
+        <h3 class="book-title">Football Intelligence</h3>
+        <p class="book-thesis">La ventaja no la da tener más datos, sino construir una organización que convierta evidencia en decisiones y decisiones en aprendizaje.</p>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-futbol">Fútbol y Error Irreversible</a><a class="tag tag-s" href="#cat-ia">Inteligencia Artificial y Capacidad Aumentada</a><a class="tag tag-s" href="#cat-juicio">Juicio y Arquitectura de Decisión</a><a class="tag tag-s" href="#cat-direccion">Dirección de Empresas en Marcha</a></div>
+        <p class="book-abstract">Football Intelligence propone una nueva forma de entender la analítica aplicada al fútbol de élite: no como una colección de datos, métricas, modelos o herramientas tecnológicas, sino como una disciplina de ingeniería de decisiones. El texto explora cómo un club puede integrar conocimiento táctico, datos, inferencia causal, machine learning, inteligencia artificial generativa, simulación y juicio experto para transformar información compleja en decisiones concretas, explicables y evaluables en ámbitos como el recruitment, la construcción de plantilla, el rendimiento, la prevención del riesgo y la preparación táctica.</p>
+        <p class="book-abstract">La tesis central de la obra es que la ventaja competitiva no depende de disponer de más datos ni de la tecnología más sofisticada, sino de la capacidad de construir una arquitectura organizacional que convierta sistemáticamente la evidencia en mejores decisiones y las decisiones en aprendizaje. Para ello, el libro sitúa en el mismo nivel de importancia la calidad técnica, la causalidad, la incertidumbre, la gobernanza, la adopción, el liderazgo y la evaluación ex post, planteando Football Intelligence como una capacidad institucional sostenible y no como un proyecto tecnológico aislado.</p>
+        <div class="book-dl-row">
+          <a class="paper-dl" href="https://metanoiagroup.vip/downloads/Football_Intelligence.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_football-intelligence'})">
+            <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+            Descargar libro (PDF)
+          </a>
+        </div>
+      </article>
+
+      <article class="book-card reveal" id="libro-garabandal" data-tags="fe">
+        <h3 class="book-title">Garabandal: La Convergencia</h3>
+        <p class="book-thesis">La pregunta no es qué podría ocurrir en el futuro, sino qué debería cambiar hoy en quien toma el mensaje en serio.</p>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-fe">Fe, Trascendencia y Sentido</a></div>
+        <p class="book-abstract"><strong>Garabandal: La Convergencia</strong> propone una lectura integral del fenómeno de Garabandal que va mucho más allá de la narración de las apariciones. A través de su recorrido histórico, teológico y espiritual, la obra examina los testimonios de las videntes, los mensajes de 1961 y 1965, los fenómenos extraordinarios, la respuesta de la Iglesia y los frutos espirituales surgidos durante más de seis décadas. Sobre esta base, desarrolla una interpretación más amplia en la que Garabandal es presentado como parte de una convergencia cuyo centro último es Cristo y, de manera particular, la Eucaristía.</p>
+        <p class="book-abstract">En su tramo final, el libro aborda la dimensión profética y escatológica del fenómeno, incluyendo las condiciones transmitidas por Conchita González y la hipótesis cronológica que conduce al 14 de abril de 2033, distinguiendo cuidadosamente entre los hechos documentados y las interpretaciones propuestas por el autor. Pero la obra termina desplazando deliberadamente el foco desde la expectativa de acontecimientos futuros hacia la transformación del presente: conversión, penitencia, oración, Eucaristía, familia, trabajo, discernimiento y una vida cristiana centrada en Cristo. En definitiva, <strong>La Convergencia</strong> no invita simplemente a preguntarse qué podría suceder en el futuro, sino a preguntarse qué debería cambiar hoy en la vida de quien toma en serio su mensaje.</p>
+        <div class="book-dl-row">
+          <a class="paper-dl" href="https://metanoiagroup.vip/downloads/Garabandal_La_Convergencia.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_garabandal'})">
+            <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+            Descargar libro (PDF)
+          </a>
+        </div>
+      </article>
+
+      <article class="book-card reveal" id="libro-hagase-tu-voluntad" data-tags="fe integracion poder vocacion">
+        <h3 class="book-title">Hágase Tu Voluntad</h3>
+        <p class="book-thesis">Discernir la voluntad de Dios antes de optimizar resultados, y ordenar la vida desde el ser, hacia el hacer y finalmente hacia el tener.</p>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-fe">Fe, Trascendencia y Sentido</a><a class="tag tag-p" href="#cat-integracion">Integración: SER, HACER y TENER</a><a class="tag tag-s" href="#cat-poder">Poder, Instituciones y Custodia</a><a class="tag tag-s" href="#cat-vocacion">Vocación, Obra y Trayectoria</a></div>
+        <p class="book-abstract">Hágase Tu Voluntad propone una pregunta sencilla pero radical: ¿cómo ordenar una sola vida para que la persona, la vocación, el trabajo, el dinero, la autoridad y las relaciones respondan a una misma orientación? El texto parte de un diagnóstico: muchas personas viven fragmentadas, aplicando criterios distintos según el ámbito en el que se encuentran. Frente a ello, propone pasar de la fragmentación a la integración mediante un principio rector: discernir la voluntad de Dios antes de optimizar resultados, y ordenar la vida desde el ser, hacia el hacer y finalmente hacia el tener.</p>
+        <p class="book-abstract">A partir de esta idea, el libro desarrolla una visión práctica de la vocación, la libertad, el carácter, el liderazgo, la empresa, el patrimonio, la tecnología y la responsabilidad. Su invitación final no es simplemente a conseguir más, sino a administrar con fidelidad aquello que se ha recibido: capacidades, tiempo, recursos, influencia y responsabilidades. En ese sentido, es una reflexión sobre cómo convertir una vida aparentemente dividida en una vida coherente, en la que las decisiones cotidianas puedan responder a una misma pregunta: «¿Estoy haciendo Su Voluntad?»</p>
+        <div class="book-dl-row">
+          <a class="paper-dl" href="https://metanoiagroup.vip/downloads/Hagase_Tu_Voluntad.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_hagase-tu-voluntad'})">
+            <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+            Descargar libro (PDF)
+          </a>
+        </div>
+      </article>
+
+      <article class="book-card reveal" id="libro-inexorable" data-tags="incertidumbre integracion patrimonio caracter">
+        <h3 class="book-title">ineXorable</h3>
+        <p class="book-thesis">No se trata de acertar el futuro, sino de construir una vida, una obra y un patrimonio que dependan cada vez menos de acertarlo.</p>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-incertidumbre">Incertidumbre, Fragilidad y Antifragilidad</a><a class="tag tag-p" href="#cat-integracion">Integración: SER, HACER y TENER</a><a class="tag tag-s" href="#cat-patrimonio">Patrimonio y Autonomía Económica</a><a class="tag tag-s" href="#cat-caracter">Carácter y Vida Interior</a></div>
+        <p class="book-abstract"><em>ineXorable</em> propone una forma distinta de entender la seguridad, el éxito y la adaptación: no se trata de predecir correctamente qué ocurrirá en el futuro, sino de <strong>construir una vida, una obra y un patrimonio que dependan cada vez menos de acertar el futuro</strong>. A través de una arquitectura basada en estructura, propósito y adaptación, el libro analiza cómo identificar dependencias, reducir fragilidades, preservar margen de maniobra y desarrollar capacidades transferibles que permitan seguir funcionando cuando cambian las condiciones.</p>
+        <p class="book-abstract">Más que un manual para afrontar crisis concretas, <em>ineXorable</em> plantea un método para <strong>diseñar sistemas capaces de sostenerse, evolucionar y generar valor en entornos inciertos</strong>. Su propuesta abarca tres niveles —<strong>SER, HACER y TENER</strong>— y culmina en una idea central: la verdadera fortaleza no consiste en evitar el cambio, sino en construir una arquitectura que pueda absorberlo, aprender de él y convertirlo en capacidad para actuar con mayor libertad.</p>
+        <div class="book-dl-row">
+          <a class="paper-dl" href="https://metanoiagroup.vip/downloads/ineXorable.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_inexorable'})">
+            <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+            Descargar libro (PDF)
+          </a>
+        </div>
+      </article>
+
+      <article class="book-card reveal" id="libro-la-empresa-imposible" data-tags="direccion ia juicio">
+        <h3 class="book-title">La Empresa Imposible</h3>
+        <p class="book-thesis">Aumentar radicalmente la capacidad de pensar, decidir y ejecutar sin crecer proporcionalmente en personas, estructura y complejidad.</p>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-direccion">Dirección de Empresas en Marcha</a><a class="tag tag-p" href="#cat-ia">Inteligencia Artificial y Capacidad Aumentada</a><a class="tag tag-s" href="#cat-juicio">Juicio y Arquitectura de Decisión</a></div>
+        <p class="book-abstract">La Empresa Imposible plantea una pregunta central para el futuro de las organizaciones: ¿cómo puede una empresa aumentar radicalmente su capacidad para pensar, decidir y ejecutar sin tener que crecer proporcionalmente en personas, estructura y complejidad? El libro propone cambiar la unidad fundamental del diseño organizativo: dejar de pensar primero en puestos de trabajo y empezar a pensar en capacidades. Desde esta perspectiva, la inteligencia artificial y la automatización no son el objetivo, sino herramientas para construir nuevas formas de capacidad organizacional.</p>
+        <p class="book-abstract">A partir de esta idea, el texto desarrolla una arquitectura que combina personas, sistemas digitales, mando intermedio, consejo ejecutivo, deliberación y mecanismos de gobierno. Su tesis no es simplemente que las empresas puedan hacer más con menos, sino que pueden rediseñar cómo se distribuyen la ejecución, la coordinación, el juicio y la toma de decisiones, siempre bajo criterios de medición, responsabilidad y trazabilidad. El resultado es una visión de la empresa como un sistema que puede aumentar su capacidad de actuar y aprender sin aumentar necesariamente su estructura al mismo ritmo.</p>
+        <div class="book-dl-row">
+          <a class="paper-dl" href="https://metanoiagroup.vip/downloads/La_Empresa_Imposible.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_la-empresa-imposible'})">
+            <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+            Descargar libro (PDF)
+          </a>
+        </div>
+      </article>
+
+      <article class="book-card reveal" id="libro-la-gran-inversion" data-tags="poder direccion">
+        <h3 class="book-title">La Gran Inversión</h3>
+        <p class="book-thesis">No hacen falta villanos: basta con que los incentivos empujen a personas razonables para que el resultado termine sustituyendo al propósito.</p>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-poder">Poder, Instituciones y Custodia</a><a class="tag tag-s" href="#cat-direccion">Dirección de Empresas en Marcha</a></div>
+        <p class="book-abstract">La Gran Inversión propone una lectura estructural de uno de los problemas más profundos de las organizaciones contemporáneas: el momento en que los resultados dejan de ser consecuencia del propósito y pasan a convertirse en su sustituto. A través de un recorrido que abarca el poder, la economía, las instituciones, la política, la tecnología, el derecho y la relación con el futuro, el libro sostiene que esta inversión puede producirse sin necesidad de villanos: basta con que los incentivos, las métricas y las estructuras de decisión empujen progresivamente a personas razonables hacia comportamientos que terminan contradiciendo la finalidad original.</p>
+        <p class="book-abstract">Frente a ello, la obra plantea un principio alternativo: la custodia. Quien posee poder, recursos o capacidad de decisión no los recibe únicamente como una prerrogativa, sino como una responsabilidad hacia quienes soportan las consecuencias de sus decisiones y hacia quienes recibirán lo que hoy se construye. La propuesta no se limita a formular principios morales, sino que busca traducirlos en criterios de selección, medición, diseño institucional y mecanismos de autocorrección, con una pregunta como hilo conductor: ¿cómo construir sistemas que sigan haciendo lo correcto incluso cuando nadie los está vigilando y cuando quienes los crearon ya no están?</p>
+        <div class="book-dl-row">
+          <a class="paper-dl" href="https://metanoiagroup.vip/downloads/La_Gran_Inversion.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_la-gran-inversion'})">
+            <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+            Descargar libro (PDF)
+          </a>
+        </div>
+      </article>
+
+      <article class="book-card reveal" id="libro-la-puerta" data-tags="conversacion caracter aprendizaje">
+        <h3 class="book-title">La Puerta entre dos Mentes</h3>
+        <p class="book-thesis">Una buena conversación no consiste en que uno convenza al otro, sino en llegar juntos a donde ninguno habría llegado solo.</p>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-conversacion">Conversación y Vínculo Humano</a><a class="tag tag-s" href="#cat-caracter">Carácter y Vida Interior</a><a class="tag tag-s" href="#cat-aprendizaje">Aprendizaje y Capacidad Cognitiva</a></div>
+        <p class="book-abstract"><strong>La puerta entre dos mentes</strong>, de Mario Garza Livas, es una exploración del arte perdido de la conversación y de lo que está en juego cuando dos personas dejan de limitarse a intercambiar palabras para encontrarse realmente. El libro distingue entre comunicación y conversación, analiza las fuerzas que hoy dificultan ese encuentro —la economía de la atención, la polarización, la instrumentalización del otro y la pérdida de espacios comunes— y muestra que conversar profundamente no es una cuestión de buenos modales, sino una capacidad humana que requiere atención, presencia, curiosidad y disposición a ser transformado por el otro.</p>
+        <p class="book-abstract">A partir de ahí, la obra propone una filosofía práctica de la conversación: escuchar antes de responder, preguntar para descubrir, pensar en voz alta sin miedo a equivocarse, disentir sin destruir, tolerar el silencio y crear las condiciones para que ambos participantes salgan de la conversación intelectualmente más amplios. Su tesis central puede resumirse en una idea: una buena conversación no consiste en que uno convenza al otro, sino en que la presencia de ambos haga posible algo que ninguno habría alcanzado por sí solo.</p>
+        <div class="book-dl-row">
+          <a class="paper-dl" href="https://metanoiagroup.vip/downloads/La_Puerta_entre_Dos_Mentes.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_la-puerta'})">
+            <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+            Descargar libro (PDF)
+          </a>
+        </div>
+      </article>
+
+      <article class="book-card reveal" id="libro-la-ventana-gradual" data-tags="incertidumbre patrimonio juicio direccion">
+        <h3 class="book-title">La Ventana Gradual</h3>
+        <p class="book-thesis">La ruptura no crea la fragilidad: la revela. Antes del colapso siempre existió una ventana para corregirla.</p>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-incertidumbre">Incertidumbre, Fragilidad y Antifragilidad</a><a class="tag tag-s" href="#cat-patrimonio">Patrimonio y Autonomía Económica</a><a class="tag tag-s" href="#cat-juicio">Juicio y Arquitectura de Decisión</a><a class="tag tag-s" href="#cat-direccion">Dirección de Empresas en Marcha</a></div>
+        <p class="book-abstract">La ventana gradual explora una idea central: las grandes crisis rara vez comienzan cuando se hacen visibles. Antes del colapso existe un periodo en el que las fragilidades se acumulan silenciosamente, los márgenes de seguridad se reducen y las dependencias se vuelven más profundas. El libro propone cambiar el foco desde la predicción de acontecimientos hacia el diseño de estructuras capaces de absorber incertidumbre: estructuras con liquidez, redundancia, reversibilidad, diversificación real y capacidad de esperar.</p>
+        <p class="book-abstract">A través de veinte leyes y de su aplicación a la persona, la organización y el patrimonio, la obra desarrolla un método para detectar fragilidades mientras todavía existe margen para corregirlas. Su pregunta fundamental no es qué ocurrirá ni cuándo ocurrirá, sino algo más práctico: ¿qué podemos construir hoy para que, cuando llegue aquello que no podemos prever, todavía conservemos la capacidad de decidir?</p>
+        <div class="book-dl-row">
+          <a class="paper-dl" href="https://metanoiagroup.vip/downloads/La_Ventana_Gradual.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_la-ventana-gradual'})">
+            <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+            Descargar libro (PDF)
+          </a>
+        </div>
+      </article>
+
+      <article class="book-card reveal" id="libro-los-cuatro-jardines" data-tags="vocacion caracter fe juicio">
+        <h3 class="book-title">Los Cuatro Jardines</h3>
+        <p class="book-thesis">La vocación no se descubre de una vez: se cultiva. Tú cultivas, tú integras, la realidad corona.</p>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-vocacion">Vocación, Obra y Trayectoria</a><a class="tag tag-s" href="#cat-caracter">Carácter y Vida Interior</a><a class="tag tag-s" href="#cat-fe">Fe, Trascendencia y Sentido</a><a class="tag tag-s" href="#cat-juicio">Juicio y Arquitectura de Decisión</a></div>
+        <p class="book-abstract">Los Cuatro Jardines propone una nueva manera de comprender la vocación y el desarrollo profesional: en lugar de intentar descubrir de una vez una supuesta «vocación perfecta», invita a cultivarla progresivamente a través de la experiencia, la evidencia y el discernimiento. Para ello, presenta cuatro dimensiones que deben desarrollarse y observarse a lo largo del tiempo —Propósito, Disfrute, Competencia y Viabilidad— y las articula con dos realidades fundamentales de la vida: la Misión, aquello que estamos llamados a servir, y el Sustento, aquello que permite sostener dignamente nuestra vida y nuestras responsabilidades.</p>
+        <p class="book-abstract">Más que ofrecer una fórmula para encontrar «el trabajo ideal», el libro presenta una arquitectura práctica para navegar la incertidumbre vocacional: explorar antes de concentrar, acumular evidencia antes de comprometerse, desarrollar competencia antes de reclamar maestría, distinguir entre lo que podemos cultivar y aquello que depende de la realidad externa, y recorrer las distintas etapas sin intentar saltarlas. Todo ello se completa con una dimensión esencial: la virtud, entendida como la raíz que determina si el éxito alcanzado es simplemente eficaz o verdaderamente valioso. En última instancia, el libro propone pasar de la obsesión por descubrir la vocación a una disciplina de cultivarla: «Tú cultivas. Tú integras. La realidad corona.»</p>
+        <div class="book-dl-row">
+          <a class="paper-dl" href="https://metanoiagroup.vip/downloads/Los_Cuatro_Jardines.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_los-cuatro-jardines'})">
+            <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+            Descargar libro (PDF)
+          </a>
+        </div>
+      </article>
+
+      <article class="book-card reveal" id="libro-margen-cero" data-tags="juicio asesoria futbol integracion">
+        <h3 class="book-title">Margen Cero</h3>
+        <p class="book-thesis">¿Qué diferencia existe entre saber mucho y saber decidir cuando el costo del error es irreversible?</p>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-juicio">Juicio y Arquitectura de Decisión</a><a class="tag tag-p" href="#cat-asesoria">Asesoría y Transferencia de Expertise</a><a class="tag tag-s" href="#cat-futbol">Fútbol y Error Irreversible</a><a class="tag tag-s" href="#cat-integracion">Integración: SER, HACER y TENER</a></div>
+        <p class="book-abstract">Margen Cero explora una pregunta fundamental para la asesoría estratégica de alto nivel: ¿qué diferencia existe entre saber mucho y saber decidir cuando el costo del error es irreversible? El libro sostiene que el verdadero juicio estratégico no se calibra únicamente mediante conocimiento, credenciales o experiencia institucional, sino a través de la exposición prolongada a entornos donde desaparecen la revisión, la dilación y la absorción del error. A partir del fútbol profesional de élite como laboratorio de referencia, desarrolla las condiciones que generan esta calibración y las capacidades que puede forjar: diagnóstico estructural, decisión bajo incertidumbre, pensamiento de segundo y tercer orden, lectura del poder, evaluación sistémica del talento, ingeniería de valor bajo restricciones y ejecución sostenida bajo presión.</p>
+        <p class="book-abstract">Pero Margen Cero va más allá de defender la experiencia extrema: examina cómo ese juicio puede transferirse —y cómo puede falsificarse— en otros contextos, desde la empresa hasta el patrimonio personal. Su propuesta final es una nueva forma de entender la asesoría: no como la suma de especialistas o recomendaciones puntuales, sino como una arquitectura capaz de sostener la coherencia entre persona, empresa y patrimonio cuando las condiciones se vuelven adversas. Al mismo tiempo, el libro reconoce los límites de su propio marco y plantea que la verdadera excelencia consiste no solo en saber actuar bajo presión, sino en saber cuándo el margen cero es la herramienta adecuada y cuándo deja de serlo.</p>
+        <div class="book-dl-row">
+          <a class="paper-dl" href="https://metanoiagroup.vip/downloads/Margen_Cero.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_margen-cero'})">
+            <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+            Descargar libro (PDF)
+          </a>
+        </div>
+      </article>
+
+      <article class="book-card reveal" id="libro-no-controlas-la-cosecha" data-tags="vocacion caracter poder incertidumbre">
+        <h3 class="book-title">No Controlas la Cosecha</h3>
+        <p class="book-thesis">Puedes responder por completo de lo que siembras, pero nunca tendrás un control equivalente sobre lo que cosechas.</p>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-vocacion">Vocación, Obra y Trayectoria</a><a class="tag tag-s" href="#cat-caracter">Carácter y Vida Interior</a><a class="tag tag-s" href="#cat-poder">Poder, Instituciones y Custodia</a><a class="tag tag-s" href="#cat-incertidumbre">Incertidumbre, Fragilidad y Antifragilidad</a></div>
+        <p class="book-abstract">No controlas la cosecha parte de una idea sencilla pero profundamente incómoda: podemos asumir una responsabilidad enorme sobre lo que sembramos —nuestras decisiones, hábitos, capacidades, trabajo y carácter—, pero nunca tendremos un control equivalente sobre lo que finalmente cosechamos. A través de las metáforas del terreno, la semilla, el cultivo, la construcción y la intemperie, el texto explora cómo vivir y actuar con ambición y excelencia sin convertir el resultado en una obligación que la vida deba cumplir.</p>
+        <p class="book-abstract">Más que un manual para alcanzar el éxito, es una propuesta para relacionarnos de otra manera con la incertidumbre, el fracaso, el dinero, el tiempo y nuestros propios logros. Su recorrido conduce desde aprender a trabajar bien sin garantías hasta una pregunta más profunda: qué hacemos con aquello que recibimos y conseguimos, y en qué condiciones lo entregamos a quienes vienen después. En última instancia, el libro plantea que una vida bien cultivada no se mide únicamente por la cosecha obtenida, sino también por la calidad de la semilla que dejamos preparada para la siguiente.</p>
+        <div class="book-dl-row">
+          <a class="paper-dl" href="https://metanoiagroup.vip/downloads/No_controlas_la_cosecha.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_no-controlas-la-cosecha'})">
+            <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+            Descargar libro (PDF)
+          </a>
+        </div>
+      </article>
+
+      <article class="book-card reveal" id="libro-segunda-mente" data-tags="asesoria aprendizaje conversacion">
+        <h3 class="book-title">Segunda Mente</h3>
+        <p class="book-thesis">La excelencia de un experto se mide por lo que permanece cuando su presencia desaparece.</p>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-asesoria">Asesoría y Transferencia de Expertise</a><a class="tag tag-s" href="#cat-aprendizaje">Aprendizaje y Capacidad Cognitiva</a><a class="tag tag-s" href="#cat-conversacion">Conversación y Vínculo Humano</a></div>
+        <p class="book-abstract">Segunda Mente propone una idea central y profundamente contraintuitiva: el verdadero trabajo de un experto no consiste en transmitir conocimiento ni en proporcionar respuestas, sino en transformar la arquitectura desde la que otra persona comprende, decide y actúa. Desde la pedagogía hasta la asesoría estratégica, el libro desarrolla una doctrina para diagnosticar antes de intervenir, diseñar desde el resultado, utilizar la fricción como instrumento de transformación y verificar el cambio mediante evidencia, no mediante impresiones.</p>
+        <p class="book-abstract">A lo largo de sus capítulos, esta propuesta conduce hacia un principio definitivo: la excelencia de un experto se mide por lo que permanece cuando su presencia desaparece. El objetivo no es crear dependencia, sino instalar capacidad, criterio, autocorrección y autonomía; no convertirse en la primera autoridad de otra persona, sino actuar como una segunda mente capaz de ampliar su juicio sin sustituirlo. En ese sentido, Segunda Mente es, en esencia, una reflexión sobre cómo ayudar a alguien a pensar mejor, hasta el punto de que pueda hacerlo por sí mismo.</p>
+        <div class="book-dl-row">
+          <a class="paper-dl" href="https://metanoiagroup.vip/downloads/Segunda_Mente.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_segunda-mente'})">
+            <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+            Descargar libro (PDF)
+          </a>
+        </div>
+      </article>
+
+      <article class="book-card reveal" id="libro-voz-soberana" data-tags="vocacion patrimonio incertidumbre">
+        <h3 class="book-title">Voz Soberana</h3>
+        <p class="book-thesis">¿Qué queda de una persona cuando desaparecen la empresa, el cargo, el patrimonio o el mercado que sostenían su posición?</p>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-vocacion">Vocación, Obra y Trayectoria</a><a class="tag tag-s" href="#cat-patrimonio">Patrimonio y Autonomía Económica</a><a class="tag tag-s" href="#cat-incertidumbre">Incertidumbre, Fragilidad y Antifragilidad</a></div>
+        <p class="book-abstract">Voz Soberana parte de una pregunta esencial: ¿qué queda de una persona cuando desaparecen las estructuras que hoy sostienen su posición profesional —la empresa, el cargo, el patrimonio o el mercado? El libro propone una respuesta: construir una voz propia, fundada en experiencia real, comprensión profunda y criterio independiente, hasta convertirla en un activo que no dependa por completo de ninguna institución, plataforma o circunstancia externa.</p>
+        <p class="book-abstract">A través de un recorrido que va desde la excavación de esa voz hasta su articulación, posicionamiento, difusión, monetización y permanencia, el texto explica cómo transformar conocimiento y experiencia en reconocimiento, confianza y capital. Su tesis final es que el verdadero valor no está en ser visible ni en acumular audiencia, sino en desarrollar una posición auténtica y consistente que gane fuerza con el tiempo, resista las crisis y, eventualmente, siga teniendo impacto incluso cuando su autor deje de hablar.</p>
+        <div class="book-dl-row">
+          <a class="paper-dl" href="https://metanoiagroup.vip/downloads/Voz_Soberana.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_voz-soberana'})">
+            <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+            Descargar libro (PDF)
+          </a>
+        </div>
+      </article>
+    </div>
+    <div class="empty-state hidden" id="empty-state">No hay libros con esa combinación.</div>
+  </div>
+</section>
+
+<section id="enlaces">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">V</span>
+      <div>
+        <h2 class="sec-title">Enlaces <em>relevantes</em></h2>
+        <p class="sec-sub">Más contenido, más contexto, y el resto del ecosistema.</p>
+      </div>
+    </div>
+
+    <div class="eco-grid reveal">
+      <a class="eco-card" href="mfb1.html" target="_blank" rel="noopener">
+        <div class="eco-code">Enlace 1</div>
+        <div class="eco-name">Metanoia Football</div>
+        <p class="eco-desc">El corpus dedicado al fútbol profesional: veinticinco papers de investigación aplicada, más los dos libros que también viven en esta página.</p>
+        <div class="eco-url">metanoiagroup.vip/mfb1 <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="eco-card" href="mgl1.html" target="_blank" rel="noopener">
+        <div class="eco-code">Enlace 2</div>
+        <div class="eco-name">Landing Page Personal</div>
+        <p class="eco-desc">Contacto directo, CV, documentos y el ecosistema completo de Mario Garza Livas.</p>
+        <div class="eco-url">metanoiagroup.vip/mgl1 <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="eco-card" href="https://www.linkedin.com/in/garzalivas/recent-activity/articles/" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'contact','event_label':'linkedin'})">
+        <div class="eco-code">Enlace 3</div>
+        <div class="eco-name">Artículos en LinkedIn</div>
+        <p class="eco-desc">Más ensayos y artículos de Mario Garza Livas, publicados de forma continua en LinkedIn.</p>
+        <div class="eco-url">linkedin.com/in/garzalivas <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="eco-card" href="https://metanoiagroup.vip/" target="_blank" rel="noopener">
+        <div class="eco-code">Enlace 4</div>
+        <div class="eco-name">The Metanoia Group</div>
+        <p class="eco-desc">Arquitectura de antifragilidad para el líder, su empresa y su patrimonio.</p>
+        <div class="eco-url">metanoiagroup.vip <span class="arrow">&rarr;</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-brand">La Obra Escrita</div>
+    <div class="footer-tagline">Veintiséis libros, una sola arquitectura.</div>
+    <div class="footer-role"><strong>Mario Garza Livas</strong> — Chief Strategic Advisor · Founder · CEO</div>
+    <div class="footer-contacts">
+      <a href="mailto:mario@metanoiagroup.vip">mario@metanoiagroup.vip</a>
+      <a href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp'})">+52 (81) 2513 6784</a>
+      <a href="https://linkedin.com/in/garzalivas" onclick="gtag('event','click',{'event_category':'contact','event_label':'linkedin'})">linkedin.com/in/garzalivas</a>
+    </div>
+    <p class="footer-motto">Estructura estabiliza.<br>Propósito dirige.<br>Adaptación sostiene.</p>
+    <div class="footer-admg-rule"></div>
+    <p class="footer-admg">Ad Majorem Dei Gloriam.</p>
+
+    <div class="footer-bottom">
+      <span class="copyright">© 2026 The Metanoia Group</span>
+      <a class="footer-en" href="mgw2.html">English →</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.12});
+  els.forEach(el=>io.observe(el));
+
+  (function(){
+    const chips  = Array.from(document.querySelectorAll('#filter-chips .fchip'));
+    const cards  = Array.from(document.querySelectorAll('#book-list .book-card'));
+    const status = document.getElementById('filter-status');
+    const empty  = document.getElementById('empty-state');
+
+    function apply(key, label){
+      let shown = 0;
+      cards.forEach(c=>{
+        const on = key === 'all' || c.dataset.tags.split(' ').indexOf(key) !== -1;
+        c.classList.toggle('hidden', !on);
+        if(on){ shown++; c.classList.add('in'); }
+      });
+      chips.forEach(ch=>ch.setAttribute('aria-pressed', String(ch.dataset.filter === key)));
+      empty.classList.toggle('hidden', shown !== 0);
+      status.textContent = key === 'all'
+        ? 'Mostrando los 26 libros del corpus.'
+        : 'Mostrando ' + shown + (shown === 1 ? ' libro' : ' libros') + ' en «' + label + '».';
+      if(key !== 'all'){
+        gtag('event','filter',{'event_category':'books','event_label':key});
+      }
+    }
+
+    chips.forEach(ch=>{
+      ch.addEventListener('click', ()=>apply(ch.dataset.filter, ch.textContent.replace(/\s*\(\d+\)\s*$/,'')));
+    });
+
+  })();
+</script>
+
+</body>
+</html>

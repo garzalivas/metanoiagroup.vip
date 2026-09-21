@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="new_favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Camino — Mario Garza Livas</title>
+<meta name="description" content="Mi Camino — Las metas trascendentes de la vida de Mario Garza Livas. Trece metas ordenadas en cinco horizontes, puestas en manos de Cristo.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Mi Camino — Mario Garza Livas">
+<meta property="og:description" content="Las metas trascendentes de mi vida. Trece metas, cinco horizontes, una sola voluntad.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<meta property="og:site_name" content="The Metanoia Group">
+<meta property="og:image" content="https://metanoiagroup.vip/og-image-1.jpg">
+<meta property="og:url" content="https://metanoiagroup.vip/mi-camino.html">
+<link rel="alternate" hreflang="es" href="https://metanoiagroup.vip/mi-camino.html">
+<link rel="alternate" hreflang="en" href="https://metanoiagroup.vip/my-pathway.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0a0b;
+    --bg-alt:#111113;
+    --bg-card:#141416;
+    --text:#ece8e0;
+    --text-dim:#96908780;
+    --text-muted:#9b968c;
+    --accent:#b6905c;
+    --accent-dim:#7d6743;
+    --line:#26242066;
+    --line-strong:#2f2c27;
+    --serif:'Fraunces', Georgia, 'Times New Roman', serif;
+    --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --maxw:920px;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;scroll-padding-top:150px;}
+
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  a{color:inherit;text-decoration:none;}
+
+  ::selection{background:var(--accent-dim);color:var(--bg);}
+
+  a:focus-visible, button:focus-visible{
+    outline:1.5px solid var(--accent);
+    outline-offset:4px;
+  }
+
+  /* background texture */
+  body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+    background:
+      radial-gradient(ellipse 900px 500px at 15% -10%, #b6905c10, transparent 60%),
+      radial-gradient(ellipse 700px 500px at 100% 20%, #b6905c08, transparent 60%);
+    pointer-events:none;
+    z-index:0;
+  }
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;z-index:1;}
+
+  /* ---------- NAV ---------- */
+  nav.topbar{
+    position:sticky;top:0;
+    background:#0a0a0bd9;
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+    z-index:50;
+  }
+  nav.topbar .inner{
+    max-width:var(--maxw);margin:0 auto;padding:18px 28px;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:14px;flex-wrap:wrap;
+  }
+  .brandmark{
+    font-family:var(--serif);
+    font-size:15px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--text);
+    font-weight:500;
+  }
+  .brandmark span{color:var(--text-muted);font-weight:400;}
+  .nav-links{display:flex;gap:26px;align-items:center;flex-wrap:wrap;}
+  .nav-links a{
+    font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--text-muted);
+    transition:color .25s ease;
+    white-space:nowrap;
+  }
+  .nav-links a:hover{color:var(--accent);}
+  .nav-links a.en{
+    border:1px solid var(--line-strong);
+    padding:6px 12px;
+    border-radius:2px;
+  }
+  .nav-links a.en:hover{border-color:var(--accent);}
+
+  /* ---------- HERO ---------- */
+  header.hero{
+    padding:120px 0 90px;
+    position:relative;
+  }
+  .eyebrow{
+    font-size:12px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--accent);
+    font-weight:500;
+    display:flex;align-items:center;gap:12px;
+    opacity:0;
+    animation:fadeUp .9s ease .1s forwards;
+  }
+  .eyebrow::before{
+    content:'';display:inline-block;width:28px;height:1px;background:var(--accent);
+  }
+  h1.name{
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:clamp(42px, 7vw, 74px);
+    line-height:1.04;
+    letter-spacing:-.01em;
+    margin-top:22px;
+    opacity:0;
+    animation:fadeUp .9s ease .25s forwards;
+  }
+  h1.name em{font-style:italic;font-weight:400;color:var(--accent);font-size:0.52em;display:block;margin-top:18px;line-height:1.2;}
+
+  p.roles{
+    margin-top:26px;
+    font-size:clamp(15px,2vw,18px);
+    color:var(--text-muted);
+    max-width:640px;
+    line-height:1.7;
+    font-weight:300;
+    opacity:0;
+    animation:fadeUp .9s ease .4s forwards;
+  }
+  p.roles .sep{color:var(--accent-dim);margin:0 10px;}
+
+  .locbar{
+    margin-top:34px;
+    display:flex;align-items:center;gap:10px;
+    font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);
+    opacity:0;
+    animation:fadeUp .9s ease .55s forwards;
+  }
+  .locbar .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none;
+    box-shadow:0 0 8px 1px #b6905c80;
+  }
+
+  .hero-cta{
+    margin-top:46px;
+    display:flex;gap:16px;flex-wrap:wrap;
+    opacity:0;
+    animation:fadeUp .9s ease .7s forwards;
+  }
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:14px 24px;
+    font-size:12.5px;letter-spacing:.09em;text-transform:uppercase;
+    border-radius:2px;
+    transition:all .25s ease;
+  }
+  .btn-primary{
+    background:var(--accent);color:#0a0a0b;font-weight:600;
+  }
+  .btn-primary:hover{background:#c9a06d;transform:translateY(-1px);}
+  .btn-ghost{
+    border:1px solid var(--line-strong);color:var(--text);
+  }
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+
+  @keyframes fadeUp{
+    from{opacity:0;transform:translateY(16px);}
+    to{opacity:1;transform:translateY(0);}
+  }
+
+  /* ---------- SECTION SHELL ---------- */
+  section{
+    padding:86px 0;
+    border-top:1px solid var(--line);
+    position:relative;
+  }
+  .sec-head{
+    display:flex;align-items:baseline;gap:18px;margin-bottom:48px;
+  }
+  .sec-num{
+    font-family:var(--serif);font-style:italic;font-size:15px;color:var(--accent-dim);
+    letter-spacing:.05em;
+  }
+  h2.sec-title{
+    font-family:var(--serif);font-weight:400;font-size:clamp(26px,3.4vw,36px);
+    letter-spacing:-.01em;
+  }
+  h2.sec-title em{font-style:italic;color:var(--accent);font-weight:400;}
+  .sec-sub{
+    color:var(--text-muted);font-size:14.5px;font-weight:300;max-width:520px;margin-top:14px;line-height:1.7;
+  }
+  .sec-sub.wide{max-width:none;}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease, transform .8s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  /* ---------- LEAD PARAGRAPHS ---------- */
+  .lead{
+    font-size:15.5px;color:var(--text-muted);line-height:1.9;font-weight:300;max-width:720px;
+  }
+  .lead + .lead{margin-top:20px;}
+  .lead strong{color:var(--text);font-weight:500;}
+
+  /* ---------- OFRENDA (opening consecration) ---------- */
+  .offering{
+    border:1px solid var(--line-strong);
+    background:var(--bg-alt);
+    padding:44px 40px;
+    position:relative;
+    overflow:hidden;
+  }
+  .offering::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--accent);}
+  .offering-tag{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);}
+  .offering-text{
+    font-family:var(--serif);font-style:italic;font-weight:300;
+    font-size:clamp(19px,2.6vw,25px);
+    line-height:1.65;color:var(--text);margin-top:20px;max-width:720px;
+  }
+
+  @media (max-width:640px){
+    .offering{padding:30px 24px;}
+  }
+
+  /* ---------- STAT ROW ---------- */
+  .stat-row{
+    display:flex;flex-wrap:wrap;
+    margin-top:52px;
+    border-top:1px solid var(--line-strong);
+    border-bottom:1px solid var(--line-strong);
+  }
+  .stat-item{flex:1 1 140px;padding:26px 26px 26px 0;}
+  .stat-item + .stat-item{border-left:1px solid var(--line-strong);padding-left:26px;}
+  .stat-num{font-family:var(--serif);font-size:34px;color:var(--accent);line-height:1;}
+  .stat-label{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin-top:10px;}
+
+  @media (max-width:640px){
+    .stat-item{flex:1 1 45%;border-left:none !important;padding-left:0 !important;}
+  }
+
+  /* ---------- HORIZON INDEX CARDS ---------- */
+  .eco-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:1px;
+    background:var(--line-strong);
+    border:1px solid var(--line-strong);
+  }
+  .eco-card{
+    background:var(--bg-alt);
+    padding:34px 30px;
+    display:block;
+    transition:background .3s ease, transform .3s ease;
+  }
+  .eco-card:hover{background:var(--bg-card);transform:translateY(-2px);}
+  .eco-code{
+    font-family:var(--serif);font-style:italic;font-size:13px;color:var(--accent);
+    letter-spacing:.06em;
+  }
+  .eco-name{
+    font-family:var(--serif);font-size:21px;margin-top:10px;font-weight:400;
+  }
+  .eco-desc{
+    color:var(--text-muted);font-size:13.5px;margin-top:10px;line-height:1.65;font-weight:300;
+  }
+  .eco-url{
+    margin-top:18px;font-size:11px;letter-spacing:.08em;color:var(--accent-dim);
+    display:flex;align-items:center;gap:8px;
+    text-transform:lowercase;
+  }
+  .eco-card:hover .eco-url{color:var(--accent);}
+  .eco-url .arrow{transition:transform .25s ease;}
+  .eco-card:hover .eco-url .arrow{transform:translateX(4px);}
+  .eco-tag{text-transform:none;}
+  .eco-card.full{grid-column:1 / -1;}
+
+  @media (max-width:640px){
+    .eco-grid{grid-template-columns:1fr;}
+    .eco-card.full{grid-column:auto;}
+  }
+
+  /* ---------- HORIZON BLOCKS ---------- */
+  .cat-block{margin-bottom:64px;scroll-margin-top:150px;}
+  .cat-block:last-child{margin-bottom:0;}
+  .cat-header{
+    display:flex;align-items:baseline;gap:16px;
+    margin-bottom:26px;padding-bottom:18px;
+    border-bottom:1px solid var(--line-strong);
+    flex-wrap:wrap;
+  }
+  .cat-letter{
+    font-family:var(--serif);font-style:italic;font-size:26px;color:var(--accent);flex:none;
+  }
+  .cat-titlewrap{flex:1;min-width:200px;}
+  .cat-title{font-family:var(--serif);font-size:19px;font-weight:400;color:var(--text);}
+  .cat-gloss{font-size:13px;color:var(--text-muted);font-weight:300;margin-top:6px;line-height:1.65;max-width:560px;}
+  .cat-count{
+    font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);
+    flex:none;
+  }
+
+  /* ---------- GOAL CARDS ---------- */
+  .goal-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(255px,1fr));
+    gap:14px;
+  }
+  .goal{
+    background:var(--bg-alt);
+    border:1px solid var(--line-strong);
+    border-left:2px solid var(--accent-dim);
+    padding:28px 26px;
+    transition:background .3s ease, border-left-color .3s ease, transform .3s ease;
+  }
+  .goal:hover{background:var(--bg-card);border-left-color:var(--accent);transform:translateY(-2px);}
+  .goal-role{
+    font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);
+    font-weight:500;
+  }
+  .goal-name{
+    font-family:var(--serif);font-size:22px;font-weight:400;color:var(--text);
+    margin-top:12px;line-height:1.25;
+  }
+  .goal-desc{
+    color:var(--text-muted);font-size:13.5px;line-height:1.8;font-weight:300;margin-top:12px;
+  }
+  .goal-projects{
+    margin-top:18px;display:flex;flex-wrap:wrap;gap:7px;
+  }
+  .goal-chip{
+    font-size:10.5px;letter-spacing:.04em;color:var(--text-muted);
+    border:1px solid var(--line-strong);border-radius:32px;
+    padding:5px 11px;white-space:nowrap;
+    transition:all .25s ease;
+  }
+  .goal:hover .goal-chip{border-color:var(--accent-dim);color:var(--text);}
+
+  /* ---------- PRAYER ---------- */
+  .prayer{
+    border-top:1px solid var(--line-strong);
+    border-bottom:1px solid var(--line-strong);
+    padding:52px 0;
+    text-align:center;
+  }
+  .prayer p{
+    font-family:var(--serif);font-style:italic;font-weight:300;
+    font-size:clamp(18px,2.4vw,26px);
+    line-height:1.6;color:var(--text);
+    max-width:none;margin:0 auto;
+    text-wrap:balance;
+  }
+  .prayer p + p{margin-top:26px;color:var(--text-muted);font-size:clamp(16px,2vw,21px);}
+  .prayer-rule{width:30px;height:1px;background:var(--accent);margin:0 auto 30px;}
+  .prayer p.prayer-amdg{
+    margin-top:38px;font-family:var(--serif);font-style:italic;font-size:14px;color:var(--accent);
+    letter-spacing:.04em;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    padding:70px 0 46px;
+    border-top:1px solid var(--line);
+  }
+  .footer-brand{
+    font-family:var(--serif);font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted);
+  }
+  .footer-tagline{
+    font-family:var(--serif);font-style:italic;font-size:19px;color:var(--text);margin-top:14px;
+  }
+  .footer-role{
+    margin-top:22px;font-size:13px;color:var(--text-muted);
+  }
+  .footer-role strong{color:var(--text);font-weight:500;}
+  .footer-contacts{
+    margin-top:10px;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--text-muted);
+  }
+  .footer-contacts a:hover{color:var(--accent);}
+  .footer-bottom{
+    margin-top:40px;padding-top:22px;border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;
+  }
+  .copyright{font-size:11.5px;color:var(--text-dim);letter-spacing:.04em;}
+  .footer-en{
+    font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);
+    border:1px solid var(--line-strong);padding:7px 14px;border-radius:2px;
+  }
+  .footer-en:hover{color:var(--accent);border-color:var(--accent);}
+  .footer-admg-rule{width:28px;height:1px;background:var(--accent-dim);margin-top:30px;}
+  .footer-admg{
+    margin-top:16px;font-family:var(--serif);font-style:italic;font-size:13.5px;
+    color:var(--accent);letter-spacing:.02em;
+  }
+
+  @media (max-width:640px){
+    header.hero{padding:56px 0 60px;}
+    section{padding:60px 0;}
+    nav.topbar .inner{padding:16px 20px;}
+    .nav-links{gap:12px 16px;width:100%;}
+    .nav-links a{font-size:11px;}
+    .nav-links a.en{margin-left:auto;}
+    .brandmark{font-size:13px;}
+    .footer-bottom{flex-direction:column;align-items:flex-start;}
+    .goal{padding:24px 22px;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}
+  }
+</style>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mi Camino — Mario Garza Livas">
+<meta name="twitter:description" content="Las metas trascendentes de mi vida. Trece metas, cinco horizontes, una sola voluntad.">
+<meta name="twitter:image" content="https://metanoiagroup.vip/og-image-1.jpg">
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KHNZVPJX1N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KHNZVPJX1N');
+</script>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="inner">
+    <div class="brandmark">MI CAMINO <span>· MARIO GARZA LIVAS</span></div>
+    <div class="nav-links">
+      <a href="#ofrenda">Ofrenda</a>
+      <a href="#horizontes">Horizontes</a>
+      <a href="#metas">Las metas</a>
+      <a href="#oracion">Oración</a>
+      <a href="mi-compas.html">Mi Compás</a>
+      <a class="en" href="my-pathway.html">English</a>
+      <a href="mgl1.html">Landing Personal</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Personal · Mi Camino</p>
+    <h1 class="name">Mi Camino<em>las metas trascendentes de mi vida</em></h1>
+    <p class="roles">
+      Mario Garza Livas<br><span class="sep">·</span>Trece metas<br><span class="sep">·</span>Cinco horizontes<br><span class="sep">·</span>Una sola voluntad
+    </p>
+    <div class="locbar"><span class="dot"></span>Monterrey, Nuevo León, México · 20 de septiembre de 2026</div>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#metas">Ver las trece metas</a>
+      <a class="btn btn-ghost" href="#ofrenda">Leer la ofrenda</a>
+      <a class="btn btn-ghost" href="mi-compas.html">Mi Compás</a>
+    </div>
+  </div>
+</header>
+
+<section id="ofrenda">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">I</span>
+      <div>
+        <h2 class="sec-title">La <em>ofrenda</em></h2>
+        <p class="sec-sub">Ninguna de estas metas se sostiene por sí sola. Todas se entregan primero.</p>
+      </div>
+    </div>
+
+    <div class="offering reveal">
+      <div class="offering-tag">Acto de entrega</div>
+      <p class="offering-text">
+        “Pongo estas metas en manos de Cristo, dispuesto a vivir solo lo que Él quiera para mí, abandonándome con confianza en Su providencia y en Su perfecta voluntad.”
+      </p>
+    </div>
+
+    <div class="reveal" style="margin-top:44px;">
+      <p class="lead">
+        Este documento no es un plan de carrera ni una lista de deseos. Es el orden de las cosas que quiero que mi vida produzca, escrito para poder revisarlo, corregirlo y —cuando haga falta— soltarlo. <strong>Trece metas</strong> repartidas en <strong>cinco horizontes</strong>, desde lo que arde hoy hasta lo que debe seguir en pie mucho después de mí.
+      </p>
+      <p class="lead">
+        Cada meta se nombra desde el lugar que ocupo al perseguirla: hombre libre, hijo de Dios, padre de familia, peregrino, ciudadano. No son roles profesionales. Son las formas concretas en que una sola vocación se reparte a lo largo de una vida.
+      </p>
+    </div>
+
+    <div class="stat-row reveal">
+      <div class="stat-item">
+        <div class="stat-num">13</div>
+        <div class="stat-label">Metas Trascendentes</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">5</div>
+        <div class="stat-label">Horizontes</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">20</div>
+        <div class="stat-label">Años de Alcance</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">1</div>
+        <div class="stat-label">Sola Voluntad</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="horizontes">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">II</span>
+      <div>
+        <h2 class="sec-title">Los cinco <em>horizontes</em></h2>
+        <p class="sec-sub">No todas las metas viven en el mismo tiempo. Unas arden hoy, otras sostienen en silencio, otras solo se verán completas en veinte años.</p>
+      </div>
+    </div>
+
+    <div class="eco-grid reveal">
+      <a class="eco-card" href="#horizonte-i">
+        <div class="eco-code">Horizonte I</div>
+        <div class="eco-name">Desafíos conflagrados</div>
+        <p class="eco-desc">Lo que está ardiendo ahora mismo y exige resolución antes que cualquier otra cosa. Mientras esto siga abierto, todo lo demás avanza a medias.</p>
+        <div class="eco-url"><span class="eco-tag">2 desafíos</span> <span class="arrow">→</span></div>
+      </a>
+      <a class="eco-card" href="#horizonte-ii">
+        <div class="eco-code">Horizonte II</div>
+        <div class="eco-name">Metas bajo el agua</div>
+        <p class="eco-desc">Lo que no se ve desde la superficie y sin embargo sostiene el peso de todo lo demás: salud, hábitos, recursos, memoria compartida.</p>
+        <div class="eco-url"><span class="eco-tag">3 metas</span> <span class="arrow">→</span></div>
+      </a>
+      <a class="eco-card" href="#horizonte-iii">
+        <div class="eco-code">Horizonte III</div>
+        <div class="eco-name">Metas para ahora</div>
+        <p class="eco-desc">Lo que no admite aplazamiento porque se juega cada día: el estado del alma, el anuncio de Cristo, la familia que se construye en presente.</p>
+        <div class="eco-url"><span class="eco-tag">3 metas</span> <span class="arrow">→</span></div>
+      </a>
+      <a class="eco-card" href="#horizonte-iv">
+        <div class="eco-code">Horizonte IV</div>
+        <div class="eco-name">Metas a 3–5 años</div>
+        <p class="eco-desc">La construcción de mediano plazo: el patrimonio que se custodia y la obra empresarial que lo hace crecer con ética cristiana.</p>
+        <div class="eco-url"><span class="eco-tag">2 metas</span> <span class="arrow">→</span></div>
+      </a>
+      <a class="eco-card full" href="#horizonte-v">
+        <div class="eco-code">Horizonte V</div>
+        <div class="eco-name">Metas a 5–20 años</div>
+        <p class="eco-desc">Lo que debe trascender: la comunidad donde eche raíces mi familia, las obras que conviertan potencial en vidas transformadas, y un modelo político-económico que sobreviva a quien lo propone.</p>
+        <div class="eco-url"><span class="eco-tag">3 metas</span> <span class="arrow">→</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="metas">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">III</span>
+      <div>
+        <h2 class="sec-title">Las trece <em>metas</em></h2>
+        <p class="sec-sub">Cada meta nombra el lugar desde el que se persigue, el nombre corto que la identifica y lo que significa cumplirla.</p>
+      </div>
+    </div>
+
+    <!-- HORIZONTE I -->
+    <div class="cat-block reveal" id="horizonte-i">
+      <div class="cat-header">
+        <span class="cat-letter">I</span>
+        <div class="cat-titlewrap">
+          <div class="cat-title">Desafíos conflagrados</div>
+          <p class="cat-gloss">Lo que arde ahora y exige resolución antes que nada.</p>
+        </div>
+        <span class="cat-count">2 desafíos</span>
+      </div>
+      <div class="goal-grid">
+        <article class="goal">
+          <div class="goal-role">Como hombre libre</div>
+          <h3 class="goal-name">Sepultar VALSA</h3>
+          <p class="goal-desc">Hacer lo necesario para darle pronta y correcta sepultura al negocio familiar.</p>
+        </article>
+        <article class="goal">
+          <div class="goal-role">Como hombre de trabajo</div>
+          <h3 class="goal-name">Reactivación profesional</h3>
+          <p class="goal-desc">Encontrar un empleo decente donde pueda aportar mis talentos y desarrollarme profesionalmente.</p>
+        </article>
+      </div>
+    </div>
+
+    <!-- HORIZONTE II -->
+    <div class="cat-block reveal" id="horizonte-ii">
+      <div class="cat-header">
+        <span class="cat-letter">II</span>
+        <div class="cat-titlewrap">
+          <div class="cat-title">Metas bajo el agua</div>
+          <p class="cat-gloss">Lo que sostiene todo lo demás sin verse desde la superficie.</p>
+        </div>
+        <span class="cat-count">3 metas</span>
+      </div>
+      <div class="goal-grid">
+        <article class="goal">
+          <div class="goal-role">Como persona</div>
+          <h3 class="goal-name">Cimientos sólidos</h3>
+          <p class="goal-desc">Llevar una vida consagrada a Cristo, balanceada, saludable, de buenos hábitos y constante crecimiento.</p>
+        </article>
+        <article class="goal">
+          <div class="goal-role">Como proveedor</div>
+          <h3 class="goal-name">Plenitud financiera</h3>
+          <p class="goal-desc">Facilitar los recursos suficientes para que aquellos que Dios puso a mi cuidado tengan una vida plena.</p>
+        </article>
+        <article class="goal">
+          <div class="goal-role">Como peregrino</div>
+          <h3 class="goal-name">Historias compartidas</h3>
+          <p class="goal-desc">Conocer, disfrutar y compartir en Cristo las experiencias fascinantes que nos ofrece Su jardín.</p>
+        </article>
+      </div>
+    </div>
+
+    <!-- HORIZONTE III -->
+    <div class="cat-block reveal" id="horizonte-iii">
+      <div class="cat-header">
+        <span class="cat-letter">III</span>
+        <div class="cat-titlewrap">
+          <div class="cat-title">Metas para ahora</div>
+          <p class="cat-gloss">Lo que se juega hoy, todos los días, sin posibilidad de aplazarlo.</p>
+        </div>
+        <span class="cat-count">3 metas</span>
+      </div>
+      <div class="goal-grid">
+        <article class="goal">
+          <div class="goal-role">Como hijo de Dios</div>
+          <h3 class="goal-name">Estado de gracia</h3>
+          <p class="goal-desc">Llevar una vida en estado de gracia, con plenitud sacramental, llena de virtud y alejada del pecado.</p>
+        </article>
+        <article class="goal">
+          <div class="goal-role">Como apóstol de Cristo</div>
+          <h3 class="goal-name">Ignis</h3>
+          <p class="goal-desc">Anunciar a Cristo con mi vida y mis obras, acercando a otros con testimonio, servicio y amor cristiano.</p>
+          <div class="goal-projects">
+            <span class="goal-chip">Fraternitas Catholica</span>
+            <span class="goal-chip">Sintonía Católica</span>
+            <span class="goal-chip">Luz en el Camino</span>
+            <span class="goal-chip">y otros apostolados</span>
+          </div>
+        </article>
+        <article class="goal">
+          <div class="goal-role">Como padre de familia</div>
+          <h3 class="goal-name">Familia unida</h3>
+          <p class="goal-desc">Formar un matrimonio y una familia unida, católica y de principios.</p>
+        </article>
+      </div>
+    </div>
+
+    <!-- HORIZONTE IV -->
+    <div class="cat-block reveal" id="horizonte-iv">
+      <div class="cat-header">
+        <span class="cat-letter">IV</span>
+        <div class="cat-titlewrap">
+          <div class="cat-title">Metas a 3–5 años</div>
+          <p class="cat-gloss">La construcción de mediano plazo: custodiar y hacer crecer lo recibido.</p>
+        </div>
+        <span class="cat-count">2 metas</span>
+      </div>
+      <div class="goal-grid">
+        <article class="goal">
+          <div class="goal-role">Como inversionista</div>
+          <h3 class="goal-name">Custodia Capital</h3>
+          <p class="goal-desc">Acrecentar, consolidar, diversificar y santificar el patrimonio familiar para mayor gloria de Dios.</p>
+        </article>
+        <article class="goal">
+          <div class="goal-role">Como empresario</div>
+          <h3 class="goal-name">Custodia Holdings</h3>
+          <p class="goal-desc">Consolidarme como hombre de negocios y desarrollar una labor empresarial cristiana, ética y exitosa.</p>
+        </article>
+      </div>
+    </div>
+
+    <!-- HORIZONTE V -->
+    <div class="cat-block reveal" id="horizonte-v">
+      <div class="cat-header">
+        <span class="cat-letter">V</span>
+        <div class="cat-titlewrap">
+          <div class="cat-title">Metas a 5–20 años</div>
+          <p class="cat-gloss">Lo que debe seguir en pie mucho después de mí.</p>
+        </div>
+        <span class="cat-count">3 metas</span>
+      </div>
+      <div class="goal-grid">
+        <article class="goal">
+          <div class="goal-role">Como ciudadano</div>
+          <h3 class="goal-name">Primer mundo</h3>
+          <p class="goal-desc">Establecer e integrar a mi familia en una comunidad próspera, desarrollada, tolerante y civilizada.</p>
+        </article>
+        <article class="goal">
+          <div class="goal-role">Como agente de cambio</div>
+          <h3 class="goal-name">Entelékheia</h3>
+          <p class="goal-desc">Realizar la vocación humana, transformando potencial en vidas, obras y patrimonio que trasciendan.</p>
+          <div class="goal-projects">
+            <span class="goal-chip">The Metanoia Group</span>
+            <span class="goal-chip">ineXorable</span>
+            <span class="goal-chip">Hágase Tu Voluntad</span>
+            <span class="goal-chip">El Atelier MX</span>
+          </div>
+        </article>
+        <article class="goal">
+          <div class="goal-role">Como promotor</div>
+          <h3 class="goal-name">Guardianismo</h3>
+          <p class="goal-desc">Promover el concepto de “guardianismo” (stewardism) como un nuevo modelo político-económico.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="oracion">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">IV</span>
+      <div>
+        <h2 class="sec-title">La <em>oración</em></h2>
+        <p class="sec-sub wide">Con lo que empieza este camino y con lo que puede terminar.</p>
+      </div>
+    </div>
+
+    <div class="prayer reveal">
+      <div class="prayer-rule"></div>
+      <p>“Señor Jesucristo, ilumina y purifica mi camino según Tu voluntad.”</p>
+      <p>“Y si este no es el sendero que quieres para mí, ciérralo con Tu amor y condúceme al verdadero.”</p>
+      <p class="prayer-amdg">Ad Majorem Dei Gloriam.</p>
+    </div>
+
+    <div class="reveal" style="margin-top:56px;">
+      <p class="lead">
+        Si <strong>Mi Camino</strong> es hacia dónde voy, <strong>Mi Compás</strong> es con qué decido cada paso. Los dos documentos se leen juntos.
+      </p>
+      <div class="hero-cta" style="opacity:1;animation:none;margin-top:30px;">
+        <a class="btn btn-primary" href="mi-compas.html">Ir a Mi Compás</a>
+        <a class="btn btn-ghost" href="mgl1.html">Volver a la Landing Personal</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-brand">Mi Camino</div>
+    <div class="footer-tagline">Las metas trascendentes de mi vida.</div>
+    <div class="footer-role"><strong>Mario Garza Livas</strong> — Documento personal · Monterrey, Nuevo León</div>
+    <div class="footer-contacts">
+      <a href="mailto:mario@metanoiagroup.vip">mario@metanoiagroup.vip</a>
+      <a href="mi-compas.html">Mi Compás — mis valores personales</a>
+      <a href="mgl1.html">Landing Personal</a>
+    </div>
+    <div class="footer-admg-rule"></div>
+    <p class="footer-admg">Ad Majorem Dei Gloriam.</p>
+
+    <div class="footer-bottom">
+      <span class="copyright">© 2026 Mario Garza Livas</span>
+      <a class="footer-en" href="my-pathway.html">English →</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.12});
+  els.forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>

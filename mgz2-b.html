@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="new_favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fraternitas Catholica — Apostolate Portfolio</title>
+<meta name="description" content="Fraternitas Catholica — A fraternity of Catholic leaders for living the faith in the decisions that matter. Formation, fraternity and discernment. Faith, prudence and responsibility. Monterrey, Nuevo León, Mexico.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Fraternitas Catholica — Apostolate Portfolio">
+<meta property="og:description" content="Form leaders. Discern decisions. Transform realities. Lead from within, transform outward.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="The Metanoia Group">
+<meta property="og:image" content="https://metanoiagroup.vip/og-image-2.jpg">
+<meta property="og:url" content="https://metanoiagroup.vip/mgz2-b">
+<link rel="alternate" hreflang="es" href="https://metanoiagroup.vip/mgz1-b.html">
+<link rel="alternate" hreflang="en" href="https://metanoiagroup.vip/mgz2-b.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff;
+    --bg-alt:#faf8f3;
+    --bg-card:#f2ebdf;
+    --text:#0b1020;
+    --text-dim:#9a9caa;
+    --text-muted:#565d70;
+    --accent:#a87830;
+    --accent-dim:#d6c199;
+    --accent-deep:#7d571d;
+    --line:#0b102014;
+    --line-strong:#0b102022;
+    --serif:'Fraunces', Georgia, 'Times New Roman', serif;
+    --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --maxw:920px;
+    --nav-h:62px;
+    --anchor-gap:24px;
+    --sec-pad:92px;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;background:var(--bg);}
+
+  body{
+    background:var(--bg);color:var(--text);
+    font-family:var(--sans);font-weight:400;line-height:1.6;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+
+  a{color:inherit;text-decoration:none;}
+  ::selection{background:#a8783026;color:var(--text);}
+  a:focus-visible, button:focus-visible{outline:1.5px solid var(--accent);outline-offset:4px;}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;z-index:1;}
+
+  section{padding:var(--sec-pad) 0;scroll-margin-top:calc(var(--nav-h) + var(--anchor-gap));}
+  section.tinted{background:var(--bg-alt);}
+
+  /* ---------- NAV ---------- */
+  nav.topbar{
+    position:sticky;top:0;background:#ffffffe6;
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line-strong);z-index:50;
+  }
+  nav.topbar .inner{
+    max-width:var(--maxw);margin:0 auto;padding:16px 28px;
+    display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  }
+  .brandmark{font-family:var(--serif);font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:var(--text);font-weight:500;}
+  .nav-links{display:flex;gap:20px;align-items:center;flex-wrap:wrap;}
+  .nav-links a{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--text-muted);transition:color .25s ease;white-space:nowrap;}
+  .nav-links a:hover{color:var(--accent-deep);}
+  .nav-links a.pill{border:1px solid var(--line-strong);padding:6px 12px;border-radius:2px;}
+  .nav-links a.pill:hover{border-color:var(--accent);color:var(--accent-deep);}
+  .nav-links a.home{color:var(--accent-deep);}
+
+  /* ---------- HERO ---------- */
+  header.hero{padding:96px 0 78px;}
+  .hero-logo{height:112px;width:auto;max-width:200px;object-fit:contain;display:block;margin-bottom:46px;}
+  h1.name{
+    font-family:var(--serif);font-size:clamp(33px,5.9vw,58px);
+    line-height:1.1;font-weight:400;letter-spacing:-.018em;max-width:17ch;margin-bottom:32px;
+  }
+  h1.name .faint{color:var(--text-muted);font-weight:300;}
+  .hero-rule{width:54px;height:2px;background:var(--accent);margin-bottom:30px;}
+  .hero-triad{
+    font-family:var(--serif);font-size:clamp(17px,2.4vw,21px);
+    line-height:1.5;color:var(--text);margin-bottom:26px;max-width:32ch;
+  }
+  p.lede{font-size:clamp(16.5px,2vw,18.5px);color:var(--text-muted);max-width:58ch;line-height:1.72;margin-bottom:22px;}
+  .hero-origin{font-family:var(--serif);font-size:15.5px;font-style:italic;color:var(--text-muted);margin-bottom:38px;}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{display:inline-block;font-size:13px;letter-spacing:.06em;padding:13px 24px;border-radius:2px;transition:background .25s ease,color .25s ease,border-color .25s ease;}
+  .btn-primary{background:var(--accent-deep);color:#fff;border:1px solid var(--accent-deep);}
+  .btn-primary:hover{background:var(--text);border-color:var(--text);}
+  .btn-ghost{border:1px solid var(--line-strong);color:var(--text-muted);}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent-deep);}
+
+  /* ---------- BANDS ---------- */
+  .band{background:var(--bg-alt);border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong);padding:86px 0;}
+  .band-q{
+    font-family:var(--serif);font-size:clamp(26px,4.8vw,44px);
+    line-height:1.18;font-weight:400;letter-spacing:-.016em;max-width:20ch;
+  }
+  .band-q .soft{color:var(--text-muted);font-weight:300;}
+  .band-note{font-size:15.5px;color:var(--text-muted);max-width:60ch;margin-top:32px;line-height:1.76;}
+
+  /* ---------- SECTION HEADS ---------- */
+  .sec-head{display:flex;gap:20px;align-items:flex-start;margin-bottom:44px;}
+  .sec-num{font-family:var(--serif);font-size:13px;letter-spacing:.14em;color:var(--accent);padding-top:10px;min-width:34px;font-weight:500;}
+  h2.sec-title{font-family:var(--serif);font-size:clamp(27px,4.1vw,38px);font-weight:400;line-height:1.16;letter-spacing:-.012em;margin-bottom:10px;}
+  h2.sec-title em{font-style:italic;color:var(--accent-deep);font-weight:400;}
+  .sec-sub{font-size:15px;color:var(--text-muted);max-width:62ch;line-height:1.66;}
+
+  p.lead{font-size:16.5px;line-height:1.78;color:var(--text-muted);max-width:66ch;margin-bottom:22px;}
+  p.lead strong{color:var(--text);font-weight:500;}
+
+  .statement{font-family:var(--serif);font-size:clamp(25px,4.4vw,40px);line-height:1.2;font-weight:400;letter-spacing:-.014em;margin:54px 0;max-width:21ch;}
+  .statement.wide{max-width:28ch;}
+  .statement .soft{color:var(--text-muted);font-weight:300;}
+  .statement-note{font-size:15px;color:var(--text-muted);max-width:60ch;margin-top:-32px;margin-bottom:54px;line-height:1.7;}
+
+  /* ---------- DECISIONS ---------- */
+  .decisions{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);margin:8px 0 34px;}
+  .decisions div{background:var(--bg);padding:18px 20px;font-family:var(--serif);font-size:16px;color:var(--text-muted);}
+
+  /* ---------- PILLARS ---------- */
+  .pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);margin:36px 0 10px;}
+  .pillar{background:var(--bg);padding:30px 24px;}
+  .pillar-word{font-family:var(--serif);font-size:20px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:8px;}
+  .pillar-do{font-family:var(--serif);font-size:16px;font-style:italic;color:var(--text);margin-bottom:12px;}
+  .pillar-desc{font-size:14px;color:var(--text-muted);line-height:1.68;}
+
+  /* ---------- DIMENSIONS ---------- */
+  .dims{border-top:1px solid var(--line-strong);margin-top:8px;}
+  .dimrow{display:grid;grid-template-columns:168px 1fr;gap:22px;padding:24px 0;border-bottom:1px solid var(--line);align-items:baseline;}
+  .dim-name{font-family:var(--serif);font-size:18px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-deep);}
+  .dim-q{font-family:var(--serif);font-size:18px;font-style:italic;color:var(--text);margin-bottom:8px;line-height:1.4;}
+  .dim-keys{font-size:13.5px;color:var(--text-dim);letter-spacing:.03em;}
+  @media (max-width:640px){.dimrow{grid-template-columns:1fr;gap:8px;}}
+
+  /* ---------- AUDIENCE ---------- */
+  .audience{border-top:1px solid var(--line-strong);margin-top:8px;}
+  .aud{display:grid;grid-template-columns:230px 1fr;gap:22px;padding:19px 0;border-bottom:1px solid var(--line);align-items:baseline;}
+  .aud-who{font-family:var(--serif);font-size:17px;color:var(--text);}
+  .aud-what{font-size:14.5px;color:var(--text-muted);line-height:1.7;}
+  @media (max-width:640px){.aud{grid-template-columns:1fr;gap:4px;}}
+
+  /* ---------- NEGATIVES ---------- */
+  .negatives{border-top:1px solid var(--line-strong);margin:10px 0 0;}
+  .negatives div{font-size:16px;color:var(--text-muted);padding:14px 0;border-bottom:1px solid var(--line);}
+
+  /* ---------- CIRCLE RULES ---------- */
+  .rules{margin:36px 0 10px;}
+  .rule-row{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line);}
+  .rule-row:last-child{border-bottom:none;}
+  .rule-neg, .rule-pos{font-family:var(--serif);font-size:clamp(17px,2.6vw,22px);line-height:1.35;padding:20px 0;}
+  .rule-neg{color:var(--text-dim);font-weight:300;}
+  .rule-pos{color:var(--accent-deep);font-style:italic;}
+  @media (max-width:640px){
+    .rule-row{grid-template-columns:1fr;}
+    .rule-neg{padding-bottom:2px;}
+    .rule-pos{padding-top:2px;}
+  }
+
+  /* ---------- TOPICS ---------- */
+  .topics{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);margin-top:36px;}
+  .topic{background:var(--bg);padding:24px 20px;}
+  .topic-name{font-family:var(--serif);font-size:16px;letter-spacing:.07em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:8px;}
+  .topic-desc{font-size:14px;color:var(--text-muted);line-height:1.65;}
+
+  /* ---------- PROCESS ---------- */
+  .process{counter-reset:pr;margin:34px 0 8px;border-top:1px solid var(--line-strong);}
+  .step{counter-increment:pr;display:grid;grid-template-columns:52px 176px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid var(--line);align-items:baseline;}
+  .step::before{content:counter(pr,decimal-leading-zero);font-family:var(--serif);font-size:13px;color:var(--text-dim);letter-spacing:.1em;}
+  .step-word{font-family:var(--serif);font-size:17px;letter-spacing:.05em;text-transform:uppercase;}
+  .step-q{font-size:14.5px;color:var(--text-muted);line-height:1.7;}
+  @media (max-width:640px){.step{grid-template-columns:44px 1fr;gap:8px 16px;}.step-q{grid-column:2;}}
+
+  /* ---------- FORMATION ---------- */
+  .formation{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);margin-top:34px;}
+  .form-col{background:var(--bg);padding:28px 24px;}
+  .form-title{font-family:var(--serif);font-size:17px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:14px;}
+  .form-list{font-size:14.5px;color:var(--text-muted);line-height:1.9;}
+
+  /* ---------- SHIFT ---------- */
+  .shift{margin:36px 0 10px;border-top:1px solid var(--line-strong);}
+  .shift-row{display:grid;grid-template-columns:1fr 44px 1fr;gap:12px;align-items:center;padding:20px 0;border-bottom:1px solid var(--line);}
+  .shift-from{font-family:var(--serif);font-size:clamp(16px,2.3vw,20px);color:var(--text-dim);font-weight:300;}
+  .shift-arrow{color:var(--accent);text-align:center;font-size:15px;}
+  .shift-to{font-family:var(--serif);font-size:clamp(16px,2.3vw,20px);color:var(--text);font-style:italic;}
+  @media (max-width:560px){
+    .shift-row{grid-template-columns:1fr;gap:2px;}
+    .shift-arrow{text-align:left;}
+  }
+
+  /* ---------- PHASES ---------- */
+  .phases{counter-reset:ph;margin-top:34px;border-top:1px solid var(--line-strong);}
+  .phase{counter-increment:ph;display:grid;grid-template-columns:78px 1fr auto;gap:20px;padding:22px 0;border-bottom:1px solid var(--line);align-items:baseline;}
+  .phase::before{content:"Phase " counter(ph);font-family:var(--serif);font-size:13px;letter-spacing:.06em;color:var(--text-dim);text-transform:uppercase;}
+  .phase-where{font-family:var(--serif);font-size:18px;color:var(--text-muted);}
+  .phase.now .phase-where{color:var(--text);}
+  .phase-tag{font-size:11px;letter-spacing:.17em;text-transform:uppercase;color:var(--text-dim);}
+  .phase.now .phase-tag{color:var(--accent-deep);}
+  @media (max-width:560px){.phase{grid-template-columns:1fr auto;}.phase::before{grid-column:1/-1;}}
+
+  /* ---------- CREED ---------- */
+  .creed{background:var(--text);color:#f3efe6;padding:96px 0;}
+  .creed-title{font-family:var(--serif);font-size:clamp(30px,5.4vw,50px);letter-spacing:.04em;text-transform:uppercase;font-weight:400;margin-bottom:44px;color:var(--accent-dim);}
+  .creed-line{font-family:var(--serif);font-size:clamp(17px,2.5vw,21px);line-height:1.5;padding:13px 0;border-bottom:1px solid #ffffff14;max-width:52ch;}
+  .creed-line:last-of-type{border-bottom:none;}
+  .creed-close{margin-top:44px;}
+  .creed-verbs{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:34px;}
+  .creed-verbs span{font-family:var(--serif);font-size:17px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-dim);border:1px solid #ffffff26;padding:10px 18px;border-radius:2px;}
+  .creed-final{font-family:var(--serif);font-size:clamp(23px,4vw,36px);line-height:1.24;max-width:22ch;}
+  .creed-final .soft{color:#f3efe680;font-weight:300;}
+
+  /* ---------- INITIATOR ---------- */
+  .initiator{border:1px solid var(--line-strong);border-radius:3px;padding:34px 32px;background:var(--bg);}
+  .init-label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:14px;}
+  .init-name{font-family:var(--serif);font-size:27px;font-weight:500;letter-spacing:-.005em;}
+  .init-role{font-size:13.5px;color:var(--text-muted);margin-top:7px;letter-spacing:.02em;}
+  .init-quote{font-family:var(--serif);font-size:17px;font-style:italic;line-height:1.66;color:var(--text);margin-top:24px;max-width:58ch;padding-left:20px;border-left:2px solid var(--accent-dim);}
+  .init-words{font-size:15.5px;color:var(--text-muted);line-height:1.76;margin-top:22px;max-width:62ch;}
+  .init-words strong{color:var(--text);font-weight:500;}
+
+  .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(224px,1fr));gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);margin-top:26px;}
+  .contact-item{background:var(--bg-alt);padding:22px 20px;transition:background .25s ease;}
+  .contact-item:hover{background:var(--bg-card);}
+  .contact-label{font-size:11px;letter-spacing:.17em;text-transform:uppercase;color:var(--text-dim);margin-bottom:8px;}
+  .contact-value{font-size:15px;color:var(--text);word-break:break-word;}
+
+  /* ---------- ECOSYSTEM ---------- */
+  .eco-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:16px;}
+  a.eco-card{background:var(--bg-alt);border:1px solid var(--line);border-radius:3px;padding:24px 22px;transition:background .25s ease,border-color .25s ease;}
+  a.eco-card:hover{background:var(--bg-card);border-color:var(--line-strong);}
+  .eco-code{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:11px;}
+  .eco-name{font-family:var(--serif);font-size:18px;font-weight:500;margin-bottom:8px;line-height:1.25;}
+  .eco-desc{font-size:14px;color:var(--text-muted);line-height:1.66;margin-bottom:14px;}
+  .eco-url{font-size:12.5px;color:var(--text-dim);display:flex;align-items:center;gap:6px;}
+  a.eco-card:hover .eco-url{color:var(--accent-deep);}
+  .eco-url .arrow{transition:transform .25s ease;}
+  a.eco-card:hover .eco-url .arrow{transform:translateX(4px);}
+
+  /* ---------- CLOSING ---------- */
+  .closing{text-align:center;padding:104px 0 88px;background:var(--bg-alt);border-top:1px solid var(--line-strong);}
+  .close-line{font-family:var(--serif);font-size:clamp(28px,5.4vw,48px);line-height:1.22;font-weight:400;letter-spacing:-.015em;text-wrap:balance;}
+  .close-line.dim{color:var(--text-muted);font-weight:300;}
+  .close-rule{width:40px;height:1px;background:var(--accent);margin:30px auto;}
+  .close-final{font-family:var(--serif);font-size:clamp(19px,3vw,26px);line-height:1.4;max-width:62ch;text-wrap:balance;margin:0 auto 38px;color:var(--accent-deep);font-style:italic;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--bg);border-top:1px solid var(--line-strong);padding:64px 0 54px;}
+  .footer-brand{font-family:var(--serif);font-size:20px;letter-spacing:.07em;text-transform:uppercase;font-weight:500;}
+  .footer-tagline{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--accent-deep);margin-top:9px;}
+  .footer-origin{font-size:14px;color:var(--text-muted);margin-top:10px;}
+  .footer-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:34px;margin-top:40px;}
+  .footer-col-title{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-dim);margin-bottom:14px;}
+  .footer-col a, .footer-col div{display:block;font-size:14px;color:var(--text-muted);margin-bottom:9px;line-height:1.5;}
+  .footer-col a{transition:color .25s ease;}
+  .footer-col a:hover{color:var(--accent-deep);}
+  .footer-col .who{color:var(--text);font-weight:500;}
+  .footer-admg-rule{width:28px;height:1px;background:var(--accent);margin-top:40px;}
+  .footer-admg{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--text-dim);margin-top:14px;}
+  .footer-bottom{margin-top:38px;padding-top:22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:12.5px;color:var(--text-dim);}
+  .footer-en{color:var(--text-muted);transition:color .25s ease;}
+  .footer-en:hover{color:var(--accent-deep);}
+
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}
+    .reveal{opacity:1;transform:none;}
+  }
+</style>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fraternitas Catholica — Apostolate Portfolio">
+<meta name="twitter:description" content="Form leaders. Discern decisions. Transform realities. Lead from within, transform outward.">
+<meta name="twitter:image" content="https://metanoiagroup.vip/og-image-2.jpg">
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KHNZVPJX1N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KHNZVPJX1N');
+</script>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="inner">
+    <div class="brandmark">Fraternitas Catholica</div>
+    <div class="nav-links">
+      <a href="#fraternitas">The fraternity</a>
+      <a href="#pillars">The pillars</a>
+      <a href="#circles">The circles</a>
+      <a href="#method">How it works</a>
+      <a class="home" href="mgz2.html">Portfolio</a>
+      <a class="pill" href="mgz1-b.html">ES</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="hero-logo" src="fraternitas-logo.png" alt="Fraternitas Catholica" width="200" height="112">
+    <h1 class="name">Who are you when <span class="faint">no one is watching?</span></h1>
+    <div class="hero-rule"></div>
+    <p class="hero-triad">Form leaders.<br>Discern decisions.<br>Transform realities.</p>
+    <p class="lede">
+      A fraternity of Catholic leaders for living the faith in the decisions that matter. Formation, fraternity and discernment.
+    </p>
+    <p class="hero-origin">Monterrey, Nuevo León, Mexico.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#fraternitas">Learn about Fraternitas</a>
+      <a class="btn btn-ghost" href="#circles">The Fraternal Circles</a>
+    </div>
+  </div>
+</header>
+
+<div class="band">
+  <div class="wrap">
+    <p class="band-q reveal">What if the real test of leadership were not knowing what to do, <span class="soft">but knowing what you ought to do?</span></p>
+    <p class="band-note reveal">
+      In professional life there are decisions that no financial model, business strategy or leadership framework can settle on its own. Decisions where truth, justice, human dignity, responsibility, power, wealth, family and the common good are all in play. That is where Fraternitas Catholica begins.
+    </p>
+  </div>
+</div>
+
+<section id="fracture">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">I</span>
+      <div>
+        <h2 class="sec-title">A leader lives in a world of <em>decisions</em></h2>
+        <p class="sec-sub">And there is not always a simple answer.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="decisions">
+        <div>Grow or hold.</div>
+        <div>Hire or let go.</div>
+        <div>Invest or wait.</div>
+        <div>Compete or collaborate.</div>
+        <div>Accept or decline.</div>
+        <div>Maximise or limit.</div>
+        <div>Speak or stay silent.</div>
+        <div>Win or serve.</div>
+      </div>
+
+      <p class="lead">
+        When a decision affects people, organisations, families, capital or communities, <strong>technical ability stops being enough.</strong> It takes judgement. It takes formation. It takes prudence. And often, it takes someone to think with.
+      </p>
+
+      <div class="statement reveal">We do not believe in a <span class="soft">divided life.</span></div>
+      <p class="statement-note">
+        Catholic at church. Professional at the company. Investor in front of capital. Father or mother at home. Citizen in society. Leader in front of a team. These are not different people: it is one person. Which is why we believe faith cannot be confined to private life. It has to reach how we think, how we work, how we lead, how we steward, how we invest, how we exercise authority and how we serve.
+      </p>
+
+      <div class="statement wide reveal">Faith is not one part of life. <span class="soft">It is the horizon from which the whole of life is ordered.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="fraternitas" class="tinted">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">II</span>
+      <div>
+        <h2 class="sec-title">A fraternity for those who carry <em>real responsibility</em></h2>
+        <p class="sec-sub">What Fraternitas Catholica is, and what it exists for.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        Fraternitas Catholica is a fraternity of Catholic lay leaders seeking to live their Christian vocation in the middle of real responsibility. A space to think, to discern, to decide and to act. <strong>Together.</strong>
+      </p>
+      <p class="lead">
+        It comes from a simple conviction: those with the capacity to transform realities also need to form the interior capacity to do it well.
+      </p>
+
+      <div class="statement reveal">The world does not only need more capable leaders. <span class="soft">It needs leaders of greater integrity.</span></div>
+      <p class="statement-note">
+        Leaders able to place their intelligence, authority, experience and resources at the service of truth, human dignity and the common good.
+      </p>
+
+      <p class="lead">
+        <strong>Our purpose:</strong> to help Catholic leaders order their interior life and form their judgement, so they can carry their professional, entrepreneurial, institutional and financial responsibilities in a way that is coherent with their faith and directed toward the common good.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="pillars">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">III</span>
+      <div>
+        <h2 class="sec-title">Three words. One way of living <em>leadership</em></h2>
+        <p class="sec-sub">Faith, prudence and responsibility — and the three dimensions they seek to integrate.</p>
+      </div>
+    </div>
+
+    <div class="pillars reveal">
+      <div class="pillar">
+        <div class="pillar-word">Faith</div>
+        <div class="pillar-do">To see reality from God.</div>
+        <div class="pillar-desc">Faith provides the horizon from which we understand the person, work, authority, wealth, freedom and service.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-word">Prudence</div>
+        <div class="pillar-do">To discern what to do.</div>
+        <div class="pillar-desc">Prudence makes it possible to read reality, weigh the circumstances and make concrete decisions without losing sight of what is true and good.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-word">Responsibility</div>
+        <div class="pillar-do">To answer for what is entrusted.</div>
+        <div class="pillar-desc">To lead is to affect the lives of others. Authority, resources and opportunities received are not only privileges: they are responsibilities.</div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="statement wide">Three dimensions. <span class="soft">One single life.</span></div>
+
+      <div class="dims">
+        <div class="dimrow">
+          <div class="dim-name">Person</div>
+          <div>
+            <div class="dim-q">Who am I becoming?</div>
+            <div class="dim-keys">Character · Virtue · Purpose · Vocation · Interior life</div>
+          </div>
+        </div>
+        <div class="dimrow">
+          <div class="dim-name">Profession</div>
+          <div>
+            <div class="dim-q">How am I carrying my responsibility?</div>
+            <div class="dim-keys">Leadership · Company · Work · Authority · Culture</div>
+          </div>
+        </div>
+        <div class="dimrow">
+          <div class="dim-name">Wealth</div>
+          <div>
+            <div class="dim-q">What am I doing with what has been entrusted to me?</div>
+            <div class="dim-keys">Capital · Investment · Riches · Generosity · Legacy</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="who" class="tinted">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">IV</span>
+      <div>
+        <h2 class="sec-title">It is not for everyone. And that is <em>deliberate</em></h2>
+        <p class="sec-sub">For Catholic men and women who carry real responsibility for decisions and impact.</p>
+      </div>
+    </div>
+
+    <div class="audience reveal">
+      <div class="aud">
+        <div class="aud-who">Business owners</div>
+        <div class="aud-what">Who build and direct organisations.</div>
+      </div>
+      <div class="aud">
+        <div class="aud-who">Executives</div>
+        <div class="aud-what">Who make decisions that affect people and teams.</div>
+      </div>
+      <div class="aud">
+        <div class="aud-who">Investors</div>
+        <div class="aud-what">Who steward and allocate capital.</div>
+      </div>
+      <div class="aud">
+        <div class="aud-who">Entrepreneurs</div>
+        <div class="aud-what">Who are creating new realities.</div>
+      </div>
+      <div class="aud">
+        <div class="aud-who">Institutional leaders</div>
+        <div class="aud-what">Who hold responsibility over organisations and communities.</div>
+      </div>
+      <div class="aud">
+        <div class="aud-who">Professionals</div>
+        <div class="aud-what">Who carry significant responsibility in their field.</div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="statement">But we are not looking for successful people. <span class="soft">We are looking for people willing to grow.</span></div>
+      <p class="statement-note">
+        People able to ask themselves: am I living according to what I believe? Am I making the right decisions? What am I doing with what has been entrusted to me? What kind of leader am I becoming? What consequences do my decisions have on others?
+      </p>
+
+      <p class="lead"><strong>Fraternitas is not…</strong></p>
+      <div class="negatives">
+        <div>A business club.</div>
+        <div>A networking group.</div>
+        <div>A chamber of commerce.</div>
+        <div>A business school.</div>
+        <div>A political group.</div>
+        <div>A platform for self-promotion.</div>
+        <div>A commercial platform.</div>
+        <div>Nor a place to pretend we have all the answers.</div>
+      </div>
+
+      <p class="lead" style="margin-top:34px;">
+        <strong>It is a fraternity.</strong> A place where we can think deeply, speak honestly, discern together and grow in community.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="circles">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">V</span>
+      <div>
+        <h2 class="sec-title">The Fraternal <em>Circles</em></h2>
+        <p class="sec-sub">The heart of Fraternitas, and where everything else actually happens.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        Small communities of leaders who meet in an atmosphere of trust and confidentiality to form themselves, share, discern and accompany one another.
+      </p>
+
+      <div class="rules">
+        <div class="rule-row">
+          <div class="rule-neg">You do not come to impress.</div>
+          <div class="rule-pos">You come to listen.</div>
+        </div>
+        <div class="rule-row">
+          <div class="rule-neg">You do not come to sell.</div>
+          <div class="rule-pos">You come to share.</div>
+        </div>
+        <div class="rule-row">
+          <div class="rule-neg">You do not come to prove you know.</div>
+          <div class="rule-pos">You come to learn.</div>
+        </div>
+        <div class="rule-row">
+          <div class="rule-neg">You do not come for ready-made answers.</div>
+          <div class="rule-pos">You come to discern better.</div>
+        </div>
+      </div>
+
+      <div class="topics">
+        <div class="topic">
+          <div class="topic-name">Decisions</div>
+          <div class="topic-desc">Professional and business dilemmas.</div>
+        </div>
+        <div class="topic">
+          <div class="topic-name">Leadership</div>
+          <div class="topic-desc">Authority, power, culture and responsibility.</div>
+        </div>
+        <div class="topic">
+          <div class="topic-name">Wealth</div>
+          <div class="topic-desc">Capital, investment, riches and legacy.</div>
+        </div>
+        <div class="topic">
+          <div class="topic-name">Family</div>
+          <div class="topic-desc">Vocation, priorities and balance.</div>
+        </div>
+        <div class="topic">
+          <div class="topic-name">Faith</div>
+          <div class="topic-desc">Conversion, prayer, the sacraments and Christian life.</div>
+        </div>
+        <div class="topic">
+          <div class="topic-name">Vocation</div>
+          <div class="topic-desc">What does God want of me precisely where He has placed me?</div>
+        </div>
+      </div>
+
+      <div class="statement wide reveal">What is shared in Fraternitas <span class="soft">is treated with fraternity.</span></div>
+      <p class="statement-note">
+        Trust is not a detail: it is a condition of possibility. Because only where there is trust can a leader say «I don't know what to do», «I was wrong», «I'm afraid», «I'm facing this decision», «I need another perspective». Fraternity begins when we can speak honestly.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="method" class="tinted">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">VI</span>
+      <div>
+        <h2 class="sec-title">Form. Share. Discern. <em>Act</em></h2>
+        <p class="sec-sub">And then form again, because growth does not end.</p>
+      </div>
+    </div>
+
+    <div class="process reveal">
+      <div class="step">
+        <div class="step-word">Form</div>
+        <div class="step-q">Intellectual, spiritual and ethical formation.</div>
+      </div>
+      <div class="step">
+        <div class="step-word">Share</div>
+        <div class="step-q">A community of peers who know the reality of leadership.</div>
+      </div>
+      <div class="step">
+        <div class="step-word">Discern</div>
+        <div class="step-q">Bringing real questions and decisions into a space of trust.</div>
+      </div>
+      <div class="step">
+        <div class="step-word">Act</div>
+        <div class="step-q">Returning to the world and turning discernment into concrete decisions.</div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="statement wide">A faith able to <span class="soft">speak with the world.</span></div>
+
+      <div class="formation">
+        <div class="form-col">
+          <div class="form-title">Spiritual formation</div>
+          <div class="form-list">
+            Faith<br>Virtues<br>Prayer<br>Discernment<br>Vocation<br>Holiness in ordinary life
+          </div>
+        </div>
+        <div class="form-col">
+          <div class="form-title">Intellectual formation</div>
+          <div class="form-list">
+            Anthropology<br>Ethics<br>Catholic Social Teaching<br>Business and economics<br>Finance<br>Leadership, culture and the common good
+          </div>
+        </div>
+      </div>
+      <p class="lead" style="margin-top:34px;">
+        The aim is not to <strong>form professionals who can talk about faith, but leaders able to live their faith when they have to decide.</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="transformation">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">VII</span>
+      <div>
+        <h2 class="sec-title">We do not form spectators. We form <em>agents of change</em></h2>
+        <p class="sec-sub">Christian leadership is not an aesthetic. It is a demand.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        It does not consist of talking about values, being pleasant, having an inspiring line or hanging a crucifix in the office. It consists of something far more demanding: <strong>letting the truth transform the way we exercise our authority.</strong>
+      </p>
+      <p class="lead">
+        Because the question is not only what results I am achieving, but <strong>who I am becoming while I achieve them.</strong>
+      </p>
+
+      <div class="statement wide reveal">Capital also <span class="soft">needs a vocation.</span></div>
+      <p class="statement-note">
+        Wealth is not simply something possessed: it is also something stewarded. Wealth creation, responsible investment, stewardship, generosity, philanthropy, legacy, the common good. The question is not how much I have, but what I am doing with what has been entrusted to me.
+      </p>
+
+      <p class="lead">
+        And behind every decision there are people. A company is not only its balance sheet; an investment does not exist only on a screen; an institution is not only an org chart. Which is why we look for leaders able to ask: <strong>this decision works — but does it also contribute to the good?</strong>
+      </p>
+
+      <div class="shift">
+        <div class="shift-row">
+          <div class="shift-from">What suits me?</div>
+          <div class="shift-arrow">&rarr;</div>
+          <div class="shift-to">What is right?</div>
+        </div>
+        <div class="shift-row">
+          <div class="shift-from">What can I do?</div>
+          <div class="shift-arrow">&rarr;</div>
+          <div class="shift-to">What must I do?</div>
+        </div>
+        <div class="shift-row">
+          <div class="shift-from">What do I have?</div>
+          <div class="shift-arrow">&rarr;</div>
+          <div class="shift-to">What has been entrusted to me?</div>
+        </div>
+        <div class="shift-row">
+          <div class="shift-from">How do I succeed?</div>
+          <div class="shift-arrow">&rarr;</div>
+          <div class="shift-to">How do I bear fruit?</div>
+        </div>
+      </div>
+
+      <p class="lead" style="margin-top:38px;">
+        An agent of change is someone whose interior transformation produces an exterior transformation in the realities under their responsibility. They do not need to be famous. They do not need millions. They do not need public office. They need something else: <strong>coherence.</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="phases" class="tinted">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">VIII</span>
+      <div>
+        <h2 class="sec-title">No one should lead <em>alone</em></h2>
+        <p class="sec-sub">Fraternity first, network second. Relationship first, expansion second.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        You can have a board, a team, a mentor, a coach, a director, a consultant. And still face decisions you need to talk through with someone who <strong>understands both your faith and the weight you carry.</strong> That is fraternity: not simply being together, but walking together.
+      </p>
+      <p class="lead">
+        Fraternitas begins in Monterrey and grows in stages, in this order and without skipping any of them.
+      </p>
+
+      <div class="phases">
+        <div class="phase now">
+          <div class="phase-where">Monterrey, Nuevo León</div>
+          <div class="phase-tag">Current stage</div>
+        </div>
+        <div class="phase">
+          <div class="phase-where">Mexico</div>
+          <div class="phase-tag">Next</div>
+        </div>
+        <div class="phase">
+          <div class="phase-where">The Americas: Latin America, United States and Canada</div>
+          <div class="phase-tag">Horizon</div>
+        </div>
+        <div class="phase">
+          <div class="phase-where">The rest of the world</div>
+          <div class="phase-tag">Horizon</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="creed">
+  <div class="wrap">
+    <div class="creed-title reveal">We believe</div>
+    <div class="reveal">
+      <div class="creed-line">That faith cannot live apart from life.</div>
+      <div class="creed-line">That leadership is a responsibility.</div>
+      <div class="creed-line">That authority must be exercised as service.</div>
+      <div class="creed-line">That success is not enough without virtue.</div>
+      <div class="creed-line">That wealth must be stewarded with responsibility.</div>
+      <div class="creed-line">That decisions have human consequences.</div>
+      <div class="creed-line">That intelligence needs formation.</div>
+      <div class="creed-line">That decision needs prudence.</div>
+      <div class="creed-line">That the leader needs fraternity.</div>
+      <div class="creed-line">That exterior transformation begins with interior conversion.</div>
+      <div class="creed-line">That Christians are called to transform the world from within.</div>
+    </div>
+    <div class="creed-close reveal">
+      <div class="creed-verbs">
+        <span>We form</span><span>We accompany</span><span>We discern</span><span>We act</span>
+      </div>
+      <p class="creed-final">Not to withdraw from the world, <span class="soft">but to transform it from within.</span></p>
+    </div>
+  </div>
+</div>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">IX</span>
+      <div>
+        <h2 class="sec-title">The question is not whether you carry responsibility. It is what <em>you will do with it</em></h2>
+        <p class="sec-sub">Fraternitas seeks to build relationships rather than accumulate members. The first step is a conversation.</p>
+      </div>
+    </div>
+
+    <div class="initiator reveal">
+      <div class="init-label">The initiator</div>
+      <div class="init-name">Mario Garza Livas</div>
+      <div class="init-role">Chief Strategic Advisor · Founder · CEO @ The Metanoia Group</div>
+      <p class="init-quote">
+        Fraternitas Catholica comes from a conviction: those who carry the responsibility of transforming realities also need a place to form their interior life, deepen their faith and discern together the decisions that matter.
+      </p>
+      <p class="init-words">
+        If you are a Catholic leader seeking to integrate your faith deeply with your professional life and the decisions under your responsibility, <strong>we would like to meet you.</strong>
+      </p>
+
+      <div class="contact-grid">
+        <a class="contact-item" href="mailto:mario@metanoiagroup.vip?subject=Fraternitas%20Catholica" onclick="gtag('event','click',{'event_category':'contact','event_label':'email_mgz2b'})">
+          <div class="contact-label">Email</div>
+          <div class="contact-value">mario@metanoiagroup.vip</div>
+        </a>
+        <a class="contact-item" href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp_mgz2b'})">
+          <div class="contact-label">Phone &amp; WhatsApp</div>
+          <div class="contact-value">+52 (81) 2513 6784</div>
+        </a>
+        <a class="contact-item" href="https://www.linkedin.com/in/garzalivas/?locale=en-US" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'contact','event_label':'linkedin_mgz2b'})">
+          <div class="contact-label">LinkedIn</div>
+          <div class="contact-value">linkedin.com/in/garzalivas</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="links" class="tinted">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">X</span>
+      <div>
+        <h2 class="sec-title">Relevant <em>links</em></h2>
+        <p class="sec-sub">The rest of the ecosystem.</p>
+      </div>
+    </div>
+
+    <div class="eco-grid reveal">
+      <a class="eco-card" href="mgz2.html">
+        <div class="eco-code">Portfolio</div>
+        <div class="eco-name">Apostolate Portfolio</div>
+        <p class="eco-desc">Fraternitas Catholica is one of seven apostolates. Here are the other six.</p>
+        <div class="eco-url">mgz2 <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="eco-card" href="mgz1-b.html">
+        <div class="eco-code">Language</div>
+        <div class="eco-name">Fraternitas Catholica</div>
+        <p class="eco-desc">This same page, in Spanish.</p>
+        <div class="eco-url">mgz1-b <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="eco-card" href="mgl2.html">
+        <div class="eco-code">Personal</div>
+        <div class="eco-name">Mario Garza Livas</div>
+        <p class="eco-desc">Personal landing page: contact, documents and the rest of the projects.</p>
+        <div class="eco-url">mgl2 <span class="arrow">&rarr;</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="closing">
+  <div class="wrap">
+    <div class="close-line reveal">Faith.</div>
+    <div class="close-line dim reveal">Prudence.</div>
+    <div class="close-line dim reveal">Responsibility.</div>
+    <div class="close-rule"></div>
+    <p class="close-final reveal">Lead from within. Transform outward.</p>
+    <a class="btn btn-ghost reveal" href="mgz2.html">Back to the portfolio</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-brand">Fraternitas Catholica</div>
+    <div class="footer-tagline">Faith · Prudence · Responsibility</div>
+    <div class="footer-origin">Monterrey, Nuevo León, Mexico.</div>
+
+    <div class="footer-cols">
+      <div class="footer-col">
+        <div class="footer-col-title">The fraternity</div>
+        <a href="#fraternitas">What Fraternitas is</a>
+        <a href="#pillars">The pillars</a>
+        <a href="#who">Who it is for</a>
+        <a href="#circles">The Fraternal Circles</a>
+        <a href="#method">How it works</a>
+        <a href="#phases">The stages</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Initiator</div>
+        <div class="who">Mario Garza Livas</div>
+        <div>Chief Strategic Advisor · Founder · CEO @ The Metanoia Group</div>
+        <a href="mailto:mario@metanoiagroup.vip">mario@metanoiagroup.vip</a>
+        <a href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp_footer_mgz2b'})">+52 (81) 2513 6784</a>
+        <a href="https://www.linkedin.com/in/garzalivas/?locale=en-US" target="_blank" rel="noopener">linkedin.com/in/garzalivas</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Ecosystem</div>
+        <a href="mgz2.html">Apostolate Portfolio</a>
+        <a href="mgl2.html">Mario Garza Livas</a>
+        <a href="https://metanoiagroup.vip/" target="_blank" rel="noopener">The Metanoia Group</a>
+        <a href="mgz1-b.html">Versión en español</a>
+      </div>
+    </div>
+
+    <div class="footer-admg-rule"></div>
+    <p class="footer-admg">Ad Majorem Dei Gloriam.</p>
+
+    <div class="footer-bottom">
+      <span class="copyright">© 2026 The Metanoia Group</span>
+      <a class="footer-en" href="mgz1-b.html">Versión en Español &rarr;</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const topbar = document.querySelector('nav.topbar');
+  const syncNavHeight = () => document.documentElement.style.setProperty('--nav-h', topbar.offsetHeight + 'px');
+  syncNavHeight();
+  if(window.ResizeObserver){ new ResizeObserver(syncNavHeight).observe(topbar); }
+  else { window.addEventListener('resize', syncNavHeight); }
+
+  const els = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    },{rootMargin:'0px 0px -8% 0px', threshold:0.08});
+    els.forEach(el=>io.observe(el));
+  } else {
+    els.forEach(el=>el.classList.add('in'));
+  }
+</script>
+
+</body>
+</html>

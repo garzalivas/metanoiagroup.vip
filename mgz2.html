@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="new_favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apostolate Portfolio — Mario Garza Livas</title>
+<meta name="description" content="A portfolio of Catholic apostolates born in Monterrey, Nuevo León, Mexico. Seven initiatives with their own identity and one shared root: Thy Will Be Done, Fraternitas Catholica, Sintonía Católica, Peregrinaciones Regina Caeli, Blue Mantle Studio, Luz en el Camino and Lumen Terrae.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Apostolate Portfolio — Mario Garza Livas">
+<meta property="og:description" content="One faith. One life. Seven paths. Seven Catholic apostolates born in Monterrey, held together by one conviction: faith is called to enter into life.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="The Metanoia Group">
+<meta property="og:image" content="https://metanoiagroup.vip/og-image-2.jpg">
+<meta property="og:url" content="https://metanoiagroup.vip/mgz2">
+<link rel="alternate" hreflang="es" href="https://metanoiagroup.vip/mgz1.html">
+<link rel="alternate" hreflang="en" href="https://metanoiagroup.vip/mgz2.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff;
+    --bg-alt:#f8f7f4;
+    --bg-card:#f0eee8;
+    --text:#1c2430;
+    --text-dim:#9aa0ae;
+    --text-muted:#5b6374;
+    --accent:#b6905c;
+    --accent-dim:#8a6c42;
+    --accent-deep:#6d5330;
+    --line:#1c243014;
+    --line-strong:#1c243026;
+    --serif:'Fraunces', Georgia, 'Times New Roman', serif;
+    --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --maxw:920px;
+    --nav-h:62px;
+    --anchor-gap:24px;
+    --sec-pad:86px;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;background:var(--bg);}
+
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  a{color:inherit;text-decoration:none;}
+
+  ::selection{background:#b6905c33;color:var(--text);}
+
+  a:focus-visible, button:focus-visible{
+    outline:1.5px solid var(--accent-dim);
+    outline-offset:4px;
+  }
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;z-index:1;}
+
+  section{padding:var(--sec-pad) 0;scroll-margin-top:calc(var(--nav-h) + var(--anchor-gap));}
+  section.tinted{background:var(--bg-alt);}
+
+  /* ---------- NAV ---------- */
+  nav.topbar{
+    position:sticky;top:0;
+    background:#ffffffe6;
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line-strong);
+    z-index:50;
+  }
+  nav.topbar .inner{
+    max-width:var(--maxw);margin:0 auto;padding:16px 28px;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:14px;flex-wrap:wrap;
+  }
+  .brandmark{
+    font-family:var(--serif);
+    font-size:15px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--text);
+    font-weight:500;
+  }
+  .brandmark span{color:var(--text-muted);font-weight:400;letter-spacing:.06em;}
+  .nav-links{display:flex;gap:22px;align-items:center;flex-wrap:wrap;}
+  .nav-links a{
+    font-size:12px;letter-spacing:.09em;text-transform:uppercase;
+    color:var(--text-muted);
+    transition:color .25s ease;
+    white-space:nowrap;
+  }
+  .nav-links a:hover{color:var(--accent-deep);}
+  .nav-links a.pill{
+    border:1px solid var(--line-strong);
+    padding:6px 12px;
+    border-radius:2px;
+  }
+  .nav-links a.pill:hover{border-color:var(--accent);color:var(--accent-deep);}
+
+  /* ---------- HERO ---------- */
+  header.hero{padding:104px 0 78px;}
+  .hero-eyebrow{
+    font-family:var(--sans);
+    font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--accent-deep);
+    margin-bottom:30px;
+  }
+  h1.name{
+    font-family:var(--serif);
+    font-size:clamp(40px,7.4vw,74px);
+    line-height:1.04;
+    font-weight:400;
+    letter-spacing:-.018em;
+    margin-bottom:30px;
+  }
+  h1.name .faint{color:var(--text-muted);font-weight:300;}
+  .hero-rule{width:54px;height:2px;background:var(--accent);margin-bottom:30px;}
+  p.lede{
+    font-size:clamp(16.5px,2vw,18.5px);
+    color:var(--text-muted);
+    max-width:60ch;
+    line-height:1.72;
+    margin-bottom:22px;
+  }
+  .hero-origin{
+    font-family:var(--serif);
+    font-size:15.5px;font-style:italic;
+    color:var(--text-muted);
+    margin-bottom:38px;
+  }
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{
+    display:inline-block;
+    font-size:13px;letter-spacing:.06em;
+    padding:13px 24px;
+    border-radius:2px;
+    transition:background .25s ease, color .25s ease, border-color .25s ease;
+  }
+  .btn-primary{background:var(--text);color:#fff;border:1px solid var(--text);}
+  .btn-primary:hover{background:var(--accent-deep);border-color:var(--accent-deep);}
+  .btn-ghost{border:1px solid var(--line-strong);color:var(--text-muted);}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent-deep);}
+
+  /* ---------- SECTION HEADS ---------- */
+  .sec-head{display:flex;gap:20px;align-items:flex-start;margin-bottom:44px;}
+  .sec-num{
+    font-family:var(--serif);
+    font-size:13px;letter-spacing:.14em;
+    color:var(--accent);
+    padding-top:10px;
+    min-width:34px;
+    font-weight:500;
+  }
+  h2.sec-title{
+    font-family:var(--serif);
+    font-size:clamp(27px,4.1vw,38px);
+    font-weight:400;
+    line-height:1.16;
+    letter-spacing:-.012em;
+    margin-bottom:10px;
+  }
+  h2.sec-title em{font-style:italic;color:var(--accent-deep);font-weight:400;}
+  .sec-sub{font-size:15px;color:var(--text-muted);max-width:62ch;line-height:1.66;}
+
+  p.lead{font-size:16.5px;line-height:1.78;color:var(--text-muted);max-width:68ch;margin-bottom:22px;}
+  p.lead strong{color:var(--text);font-weight:500;}
+
+  /* ---------- STATEMENT ---------- */
+  .statement{
+    font-family:var(--serif);
+    font-size:clamp(25px,4.4vw,40px);
+    line-height:1.2;
+    font-weight:400;
+    letter-spacing:-.014em;
+    margin:54px 0;
+    max-width:19ch;
+  }
+  .statement.wide{max-width:26ch;}
+  .statement .soft{color:var(--text-muted);font-weight:300;}
+  .statement-note{
+    font-size:15px;color:var(--text-muted);max-width:60ch;
+    margin-top:-32px;margin-bottom:54px;line-height:1.7;
+  }
+
+  /* ---------- FRAGMENT LIST ---------- */
+  .fragments{
+    display:flex;flex-wrap:nowrap;align-items:baseline;
+    margin:6px 0 40px;
+  }
+  .fragments span{
+    font-family:var(--serif);
+    font-size:clamp(13.5px,1.85vw,17px);
+    color:var(--text-muted);
+    white-space:nowrap;
+    padding:6px 15px 6px 0;
+    margin-right:15px;
+    border-right:1px solid var(--line-strong);
+  }
+  .fragments span:last-child{border-right:none;margin-right:0;padding-right:0;}
+  @media (max-width:620px){
+    .fragments{flex-direction:column;align-items:stretch;border-top:1px solid var(--line-strong);margin-top:14px;}
+    .fragments span{
+      font-size:16px;white-space:normal;
+      padding:12px 0;margin-right:0;
+      border-right:none;border-bottom:1px solid var(--line);
+    }
+    .fragments span:last-child{padding-bottom:12px;border-bottom:none;}
+  }
+
+  /* ---------- CHAIN ---------- */
+  .chain{
+    display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px;
+    padding:28px 0 6px;
+  }
+  .chain .node{
+    font-family:var(--serif);
+    font-size:15px;letter-spacing:.02em;
+    border:1px solid var(--line-strong);
+    padding:8px 15px;border-radius:2px;
+    background:var(--bg);
+  }
+  .chain .node.lit{border-color:var(--accent);color:var(--accent-deep);}
+  .chain .link{color:var(--text-dim);font-size:14px;}
+  .chain-note{font-size:14px;color:var(--text-dim);margin-top:16px;max-width:60ch;line-height:1.66;}
+
+  /* ---------- REALITIES ---------- */
+  .realities{border-top:1px solid var(--line-strong);margin-top:8px;}
+  .reality{
+    display:grid;
+    grid-template-columns:150px 108px 1fr;
+    gap:22px;
+    padding:22px 0;
+    border-bottom:1px solid var(--line);
+    align-items:baseline;
+  }
+  .reality-name{
+    font-family:var(--serif);
+    font-size:16px;letter-spacing:.05em;text-transform:uppercase;
+    color:var(--text);
+  }
+  .reality-verb{
+    font-family:var(--serif);
+    font-size:16px;font-style:italic;
+    color:var(--accent-deep);
+  }
+  .reality-desc{font-size:14.5px;color:var(--text-muted);line-height:1.7;}
+  @media (max-width:640px){
+    .reality{grid-template-columns:1fr;gap:6px;padding:20px 0;}
+    .reality-verb{font-size:15px;}
+  }
+
+  /* ---------- DOORS ---------- */
+  .doors{display:flex;flex-direction:column;gap:18px;}
+  a.door{
+    display:block;
+    border:1px solid var(--line-strong);
+    border-radius:3px;
+    padding:30px 30px 26px;
+    background:var(--bg);
+    transition:border-color .3s ease, background .3s ease;
+  }
+  a.door:hover{border-color:var(--accent);background:var(--bg-alt);}
+  .door-top{
+    display:flex;align-items:center;gap:26px;flex-wrap:wrap;
+    margin-bottom:20px;
+  }
+  .door-logo{
+    height:78px;width:auto;
+    max-width:232px;
+    object-fit:contain;
+    flex-shrink:0;
+  }
+  .door-reality{
+    font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--accent-deep);
+  }
+  .door-name{
+    font-family:var(--serif);
+    font-size:23px;font-weight:500;letter-spacing:.01em;
+    margin-top:7px;line-height:1.2;
+  }
+  .door-claim{
+    font-family:var(--serif);
+    font-size:19px;font-style:italic;
+    color:var(--text);
+    line-height:1.4;
+    margin-bottom:12px;
+    max-width:44ch;
+  }
+  .door-desc{font-size:15px;color:var(--text-muted);line-height:1.72;max-width:66ch;margin-bottom:18px;}
+  .door-keys{
+    font-size:12.5px;letter-spacing:.05em;
+    color:var(--text-dim);
+    padding-top:16px;
+    border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;
+  }
+  .door-go{color:var(--text-muted);white-space:nowrap;transition:color .25s ease;}
+  a.door:hover .door-go{color:var(--accent-deep);}
+  .door-go .arrow{display:inline-block;transition:transform .25s ease;}
+  a.door:hover .door-go .arrow{transform:translateX(4px);}
+  @media (max-width:560px){
+    a.door{padding:24px 22px 22px;}
+    .door-top{gap:18px;}
+    .door-logo{height:62px;max-width:180px;}
+    .door-claim{font-size:17.5px;}
+  }
+
+  /* ---------- ROOTS ---------- */
+  .roots{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+    gap:1px;
+    background:var(--line-strong);
+    border:1px solid var(--line-strong);
+    margin:38px 0 10px;
+  }
+  .root{background:var(--bg);padding:26px 22px;}
+  .root-word{
+    font-family:var(--serif);
+    font-size:17px;letter-spacing:.07em;text-transform:uppercase;
+    color:var(--accent-deep);
+    margin-bottom:9px;
+  }
+  .root-desc{font-size:14px;color:var(--text-muted);line-height:1.65;}
+
+  /* ---------- MOVEMENT ---------- */
+  .movement{counter-reset:mv;margin:34px 0 8px;border-top:1px solid var(--line-strong);}
+  .move{
+    counter-increment:mv;
+    display:grid;grid-template-columns:52px 190px 1fr;gap:20px;
+    padding:20px 0;border-bottom:1px solid var(--line);
+    align-items:baseline;
+  }
+  .move::before{
+    content:counter(mv,decimal-leading-zero);
+    font-family:var(--serif);font-size:13px;color:var(--text-dim);letter-spacing:.1em;
+  }
+  .move-word{
+    font-family:var(--serif);font-size:17px;letter-spacing:.05em;text-transform:uppercase;
+  }
+  .move-desc{font-size:14.5px;color:var(--text-muted);line-height:1.7;}
+  @media (max-width:640px){
+    .move{grid-template-columns:44px 1fr;gap:8px 16px;}
+    .move-desc{grid-column:2;}
+  }
+
+  /* ---------- CONVERGENCES ---------- */
+  .converge{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));
+    gap:1px;background:var(--line-strong);
+    border:1px solid var(--line-strong);margin-top:30px;
+  }
+  .conv{background:var(--bg);padding:22px 20px;}
+  .conv-pair{font-family:var(--serif);font-size:15.5px;line-height:1.4;margin-bottom:6px;}
+  .conv-axis{font-size:13px;color:var(--text-dim);letter-spacing:.03em;}
+
+  /* ---------- START LIST ---------- */
+  .starts{border-top:1px solid var(--line-strong);margin-top:8px;}
+  a.start{
+    display:grid;grid-template-columns:1fr auto;gap:18px;
+    padding:24px 0;border-bottom:1px solid var(--line);
+    align-items:center;
+    transition:padding-left .3s ease;
+  }
+  a.start:hover{padding-left:12px;}
+  .start-want{
+    font-family:var(--serif);font-size:19px;font-style:italic;
+    color:var(--text);margin-bottom:7px;line-height:1.35;
+  }
+  .start-to{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-deep);}
+  .start-keys{font-size:13px;color:var(--text-dim);margin-top:5px;}
+  .start-go{font-size:13px;color:var(--text-dim);white-space:nowrap;transition:color .25s ease;}
+  a.start:hover .start-go{color:var(--accent-deep);}
+
+  /* ---------- INITIATOR ---------- */
+  .initiator{
+    border:1px solid var(--line-strong);border-radius:3px;
+    padding:34px 32px;background:var(--bg);
+  }
+  .init-label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:14px;}
+  .init-name{font-family:var(--serif);font-size:27px;font-weight:500;letter-spacing:-.005em;}
+  .init-role{font-size:13.5px;color:var(--text-muted);margin-top:7px;letter-spacing:.02em;}
+  .init-words{font-size:15.5px;color:var(--text-muted);line-height:1.76;margin-top:22px;max-width:64ch;}
+  .init-words strong{color:var(--text);font-weight:500;}
+
+  .contact-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(224px,1fr));
+    gap:1px;background:var(--line-strong);
+    border:1px solid var(--line-strong);margin-top:26px;
+  }
+  .contact-item{background:var(--bg-alt);padding:22px 20px;transition:background .25s ease;}
+  .contact-item:hover{background:var(--bg-card);}
+  .contact-label{font-size:11px;letter-spacing:.17em;text-transform:uppercase;color:var(--text-dim);margin-bottom:8px;}
+  .contact-value{font-size:15px;color:var(--text);word-break:break-word;}
+
+  /* ---------- ECOSYSTEM ---------- */
+  .eco-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:16px;}
+  a.eco-card{
+    background:var(--bg-alt);
+    border:1px solid var(--line);
+    border-radius:3px;
+    padding:24px 22px;
+    transition:background .25s ease, border-color .25s ease;
+  }
+  a.eco-card:hover{background:var(--bg-card);border-color:var(--line-strong);}
+  .eco-code{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:11px;}
+  .eco-name{font-family:var(--serif);font-size:18px;font-weight:500;margin-bottom:8px;line-height:1.25;}
+  .eco-desc{font-size:14px;color:var(--text-muted);line-height:1.66;margin-bottom:14px;}
+  .eco-url{font-size:12.5px;color:var(--text-dim);display:flex;align-items:center;gap:6px;}
+  a.eco-card:hover .eco-url{color:var(--accent-deep);}
+  .eco-url .arrow{transition:transform .25s ease;}
+  a.eco-card:hover .eco-url .arrow{transform:translateX(4px);}
+
+  /* ---------- CLOSING ---------- */
+  .closing{text-align:center;padding:96px 0 84px;background:var(--bg-alt);border-top:1px solid var(--line-strong);}
+  .close-line{
+    font-family:var(--serif);
+    font-size:clamp(26px,5vw,44px);
+    line-height:1.24;font-weight:400;letter-spacing:-.015em;
+  text-wrap:balance;}
+  .close-line.dim{color:var(--text-muted);font-weight:300;}
+  .close-rule{width:40px;height:1px;background:var(--accent);margin:30px auto;}
+  .close-final{
+    font-family:var(--serif);
+    font-size:clamp(20px,3.2vw,27px);
+    line-height:1.36;max-width:34ch;text-wrap:balance;margin:0 auto 38px;
+    color:var(--accent-deep);
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--bg);border-top:1px solid var(--line-strong);padding:64px 0 54px;}
+  .footer-brand{font-family:var(--serif);font-size:20px;letter-spacing:.07em;text-transform:uppercase;font-weight:500;}
+  .footer-tagline{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--accent-deep);margin-top:9px;}
+  .footer-origin{font-size:14px;color:var(--text-muted);margin-top:10px;}
+  .footer-cols{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+    gap:34px;margin-top:40px;
+  }
+  .footer-col-title{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-dim);margin-bottom:14px;}
+  .footer-col a, .footer-col div{display:block;font-size:14px;color:var(--text-muted);margin-bottom:9px;line-height:1.5;}
+  .footer-col a{transition:color .25s ease;}
+  .footer-col a:hover{color:var(--accent-deep);}
+  .footer-col .who{color:var(--text);font-weight:500;}
+  .footer-admg-rule{width:28px;height:1px;background:var(--accent-dim);margin-top:40px;}
+  .footer-admg{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--text-dim);margin-top:14px;}
+  .footer-bottom{
+    margin-top:38px;padding-top:22px;border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
+    font-size:12.5px;color:var(--text-dim);
+  }
+  .footer-en{color:var(--text-muted);transition:color .25s ease;}
+  .footer-en:hover{color:var(--accent-deep);}
+
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}
+    .reveal{opacity:1;transform:none;}
+  }
+</style>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Apostolate Portfolio — Mario Garza Livas">
+<meta name="twitter:description" content="One faith. One life. Seven paths. Seven Catholic apostolates born in Monterrey, held together by one conviction: faith is called to enter into life.">
+<meta name="twitter:image" content="https://metanoiagroup.vip/og-image-2.jpg">
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KHNZVPJX1N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KHNZVPJX1N');
+</script>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="inner">
+    <div class="brandmark">Apostolate Portfolio</div>
+    <div class="nav-links">
+      <a href="#realities">The realities</a>
+      <a href="#apostolates">The seven</a>
+      <a href="#root">The root</a>
+      <a href="#begin">Begin</a>
+      <a class="pill" href="mgz1.html">ES</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-eyebrow">Catholic Apostolates</div>
+    <h1 class="name">One faith.<br>One life.<br><span class="faint">Seven paths.</span></h1>
+    <div class="hero-rule"></div>
+    <p class="lede">
+      Seven initiatives, each with its own identity, that seek to bring the Catholic faith into different realities of life: vocation, leadership, the body, the road, culture, our neighbour and creation. Seven distinct works. One shared conviction: faith is called to enter into life.
+    </p>
+    <p class="hero-origin">Born in Monterrey, Nuevo León, Mexico.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#apostolates">Discover the apostolates</a>
+      <a class="btn btn-ghost" href="#begin">Where do I begin?</a>
+    </div>
+  </div>
+</header>
+
+<section id="question" class="tinted">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">I</span>
+      <div>
+        <h2 class="sec-title">Life does not come <em>in parts</em></h2>
+        <p class="sec-sub">Why this is a portfolio and not seven unrelated projects.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        We have learned to live in parts. Faith on one side. Work on another. Money on another. The body on another. Culture on another. Charity on another. Our relationship with creation on another. Each area with its own logic, its own schedule and its own language.
+      </p>
+
+      <div class="fragments">
+        <span>Faith</span><span>Work</span><span>Money</span><span>The body</span><span>Culture</span><span>Charity</span><span>Creation</span>
+      </div>
+
+      <p class="lead">
+        <strong>But we are not seven people. We are one.</strong> And we live one single life. The Catholic faith is not a compartment of existence: it does not belong only to the church building, it does not end when we walk out the door, it does not begin only when we stop working, and it is not limited to what we think. It is called to transform the way we live.
+      </p>
+
+      <div class="statement reveal">Can a single faith <span class="soft">illuminate an entire life?</span></div>
+      <p class="statement-note">
+        Can it enter our decisions, our work, our leadership, our bodies, our culture, our roads, our relationships with others and with creation? We believe it can. And each of these seven apostolates is a concrete attempt to show it.
+      </p>
+
+      <div class="chain reveal">
+        <span class="node">Faith</span><span class="link">&rarr;</span>
+        <span class="node">Life</span><span class="link">&rarr;</span>
+        <span class="node lit">Service</span>
+      </div>
+      <p class="chain-note">
+        A faith that is contemplated, that is formed, that is discerned, that is lived, that becomes service, and that is able to transform reality.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="apostolate">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">II</span>
+      <div>
+        <h2 class="sec-title">What an <em>apostolate</em> is</h2>
+        <p class="sec-sub">No academic definitions: in human terms.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="statement wide" style="margin-top:0;">A conviction of faith <span class="soft">that becomes a mission.</span></div>
+
+      <p class="lead">
+        An apostolate is born when what we believe stops being only an interior conviction and becomes a concrete response to the world around us. It is faith that organises itself. Faith that forms. Faith that serves. Faith that becomes life.
+      </p>
+
+      <div class="chain">
+        <span class="node">Believe</span><span class="link">&rarr;</span>
+        <span class="node">Convert</span><span class="link">&rarr;</span>
+        <span class="node">Live</span><span class="link">&rarr;</span>
+        <span class="node">Serve</span><span class="link">&rarr;</span>
+        <span class="node lit">Transform</span>
+      </div>
+      <p class="chain-note">
+        None of the seven apostolates is a random project. Each one has its own identity, language, community, experience and mission. But all of them grow from the same root: the conviction that a faith truly lived must become life, responsibility and service.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="realities" class="tinted">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">III</span>
+      <div>
+        <h2 class="sec-title">Seven realities, <em>seven paths</em></h2>
+        <p class="sec-sub">Before the names, the realities of life that each apostolate chooses to enter.</p>
+      </div>
+    </div>
+
+    <div class="realities reveal">
+      <div class="reality">
+        <div class="reality-name">Life</div>
+        <div class="reality-verb">Order</div>
+        <div class="reality-desc">Vocation. Decisions. Work. Leadership. Wealth.</div>
+      </div>
+      <div class="reality">
+        <div class="reality-name">Leadership</div>
+        <div class="reality-verb">Discern</div>
+        <div class="reality-desc">Authority. Responsibility. Decisions. Capital. The common good.</div>
+      </div>
+      <div class="reality">
+        <div class="reality-name">The body</div>
+        <div class="reality-verb">Live</div>
+        <div class="reality-desc">Discipline. Sport. Competition. Friendship. Community.</div>
+      </div>
+      <div class="reality">
+        <div class="reality-name">The road</div>
+        <div class="reality-verb">Walk</div>
+        <div class="reality-desc">Pilgrimage. Tradition. Holy places. Contemplation. Encounter.</div>
+      </div>
+      <div class="reality">
+        <div class="reality-name">Culture</div>
+        <div class="reality-verb">Express</div>
+        <div class="reality-desc">Beauty. Design. Symbols. Identity. Tradition.</div>
+      </div>
+      <div class="reality">
+        <div class="reality-name">Our neighbour</div>
+        <div class="reality-verb">Serve</div>
+        <div class="reality-desc">Dignity. Childhood. Family. Protection. Community.</div>
+      </div>
+      <div class="reality">
+        <div class="reality-name">Creation</div>
+        <div class="reality-verb">Steward</div>
+        <div class="reality-desc">Contemplation. Sobriety. Responsibility. The common good. Our common home.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="apostolates">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">IV</span>
+      <div>
+        <h2 class="sec-title">The seven <em>apostolates</em></h2>
+        <p class="sec-sub">Each one is a different door into the same house. Not everyone enters through the same one.</p>
+      </div>
+    </div>
+
+    <div class="doors">
+
+      <a class="door reveal" href="mgy2.html">
+        <div class="door-top">
+          <img class="door-logo" src="hagase-logo.png" alt="Thy Will Be Done" loading="lazy">
+          <div>
+            <div class="door-reality">Life · Order</div>
+            <div class="door-name">Thy Will Be Done</div>
+          </div>
+        </div>
+        <p class="door-claim">Am I doing His Will?</p>
+        <p class="door-desc">
+          A space for formation and reflection that integrates faith, reason and action across personal, professional and financial life. One life, one direction. Book, podcast and conferences.
+        </p>
+        <div class="door-keys">
+          <span>Person · Works · Wealth</span>
+          <span class="door-go">Enter <span class="arrow">&rarr;</span></span>
+        </div>
+      </a>
+
+      <a class="door reveal" href="mgz2-b.html">
+        <div class="door-top">
+          <img class="door-logo" src="fraternitas-logo.png" alt="Fraternitas Catholica" loading="lazy">
+          <div>
+            <div class="door-reality">Leadership · Discern</div>
+            <div class="door-name">Fraternitas Catholica</div>
+          </div>
+        </div>
+        <p class="door-claim">Form leaders. Discern decisions. Transform realities.</p>
+        <p class="door-desc">
+          A fraternity of Catholic leaders for living the faith in the decisions that matter. Lead from within, transform outward.
+        </p>
+        <div class="door-keys">
+          <span>Faith · Prudence · Responsibility</span>
+          <span class="door-go">Enter <span class="arrow">&rarr;</span></span>
+        </div>
+      </a>
+
+      <a class="door reveal" href="mgz2-f.html">
+        <div class="door-top">
+          <img class="door-logo" src="sintonia-logo.png" alt="Sintonía Católica" loading="lazy">
+          <div>
+            <div class="door-reality">The body · Live</div>
+            <div class="door-name">Sintonía Católica</div>
+          </div>
+        </div>
+        <p class="door-claim">Sport brings us together. Faith holds us together.</p>
+        <p class="door-desc">
+          We compete with intensity, live with coherence and build community. A sporting community where faith meets training, friendship and family.
+        </p>
+        <div class="door-keys">
+          <span>Faith · Community · Sport</span>
+          <span class="door-go">Enter <span class="arrow">&rarr;</span></span>
+        </div>
+      </a>
+
+      <a class="door reveal" href="mgz2-e.html">
+        <div class="door-top">
+          <img class="door-logo" src="regina-caeli-logo.png" alt="Peregrinaciones Regina Caeli" loading="lazy">
+          <div>
+            <div class="door-reality">The road · Walk</div>
+            <div class="door-name">Peregrinaciones Regina Caeli</div>
+          </div>
+        </div>
+        <p class="door-claim">We walk toward Heaven, guided by Mary.</p>
+        <p class="door-desc">
+          Catholic pilgrimages to the places where faith became history and grace left its mark. From the outward road to the inward encounter.
+        </p>
+        <div class="door-keys">
+          <span>Holy Land · Rome · Marian shrines · Apostolic routes</span>
+          <span class="door-go">Enter <span class="arrow">&rarr;</span></span>
+        </div>
+      </a>
+
+      <a class="door reveal" href="mgz2-a.html">
+        <div class="door-top">
+          <img class="door-logo" src="blue-mantle-logo.png" alt="Blue Mantle Studio" loading="lazy">
+          <div>
+            <div class="door-reality">Culture · Express</div>
+            <div class="door-name">Blue Mantle Studio</div>
+          </div>
+        </div>
+        <p class="door-claim">It does not declare. It suggests.</p>
+        <p class="door-desc">
+          Design drawn from the beauty of the Catholic tradition. Contemporary, minimal pieces that carry meaning. Some things are not said: they are worn.
+        </p>
+        <div class="door-keys">
+          <span>Beauty · Devotion · Simplicity · Fortitude · Inner light</span>
+          <span class="door-go">Enter <span class="arrow">&rarr;</span></span>
+        </div>
+      </a>
+
+      <a class="door reveal" href="mgz2-d.html">
+        <div class="door-top">
+          <img class="door-logo" src="luz-en-el-camino-logo.png" alt="Luz en el Camino" loading="lazy">
+          <div>
+            <div class="door-reality">Our neighbour · Serve</div>
+            <div class="door-name">Luz en el Camino</div>
+          </div>
+        </div>
+        <p class="door-claim">We protect childhood while the journey continues.</p>
+        <p class="door-desc">
+          An apostolate devoted to accompanying and protecting children and adolescents from migrant families in situations of vulnerability. Migration can be temporary; childhood cannot be recovered.
+        </p>
+        <div class="door-keys">
+          <span>Welcome · Protect · Promote · Accompany</span>
+          <span class="door-go">Enter <span class="arrow">&rarr;</span></span>
+        </div>
+      </a>
+
+      <a class="door reveal" href="mgz2-c.html">
+        <div class="door-top">
+          <img class="door-logo" src="lumen-terrae-logo.png" alt="Lumen Terrae" loading="lazy">
+          <div>
+            <div class="door-reality">Creation · Steward</div>
+            <div class="door-name">Lumen Terrae</div>
+          </div>
+        </div>
+        <p class="door-claim">We form stewards of our common home.</p>
+        <p class="door-desc">
+          A Catholic apostolate for integral ecology. We are not only trying to change habits: we are trying to transform the way of seeing that produces them.
+        </p>
+        <div class="door-keys">
+          <span>Contemplate · Convert · Care · Serve · Evangelise</span>
+          <span class="door-go">Enter <span class="arrow">&rarr;</span></span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section id="root" class="tinted">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">V</span>
+      <div>
+        <h2 class="sec-title">We do not do the same thing. But the root <em>is one</em></h2>
+        <p class="sec-sub">What turns seven distinct works into a single portfolio.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        We do not do the same thing, and that is precisely the point. Because life is not a single reality either: it has vocation, it has work, it has a body, it has relationships, it has culture, it has responsibility, it has a neighbour and it has creation. <strong>Each apostolate enters through a different door.</strong>
+      </p>
+
+      <div class="roots">
+        <div class="root">
+          <div class="root-word">Faith</div>
+          <div class="root-desc">The Catholic faith is the foundation.</div>
+        </div>
+        <div class="root">
+          <div class="root-word">Formation</div>
+          <div class="root-desc">Transformation requires depth.</div>
+        </div>
+        <div class="root">
+          <div class="root-word">Community</div>
+          <div class="root-desc">Mission is lived with others.</div>
+        </div>
+        <div class="root">
+          <div class="root-word">Responsibility</div>
+          <div class="root-desc">What we receive commits us.</div>
+        </div>
+        <div class="root">
+          <div class="root-word">Service</div>
+          <div class="root-desc">A transformed faith moves outward.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="statement wide">Outward transformation <span class="soft">begins within.</span></div>
+
+      <div class="movement">
+        <div class="move">
+          <div class="move-word">Conversion</div>
+          <div class="move-desc">Recognising that something can change.</div>
+        </div>
+        <div class="move">
+          <div class="move-word">Formation</div>
+          <div class="move-desc">Learning to see and to understand.</div>
+        </div>
+        <div class="move">
+          <div class="move-word">Discernment</div>
+          <div class="move-desc">Asking what ought to be done.</div>
+        </div>
+        <div class="move">
+          <div class="move-word">Action</div>
+          <div class="move-desc">Turning convictions into decisions.</div>
+        </div>
+        <div class="move">
+          <div class="move-word">Service</div>
+          <div class="move-desc">Placing what we received at the good of others.</div>
+        </div>
+        <div class="move">
+          <div class="move-word">Witness</div>
+          <div class="move-desc">Making faith visible through one's own life.</div>
+        </div>
+      </div>
+      <p class="chain-note">
+        This sequence belongs to the portfolio, not to each apostolate. Every work has its own method: Fraternitas follows Form, Share, Discern and Act; Lumen Terrae follows Contemplate, Convert, Care, Serve and Evangelise; Sintonía follows Train, Compete, Gather, Grow and Serve.
+      </p>
+    </div>
+
+    <div class="reveal">
+      <div class="statement">We do not form spectators. <span class="soft">We form agents of change.</span></div>
+      <p class="statement-note">
+        People capable of ordering their interior life, recognising their responsibility and placing what they have received at the service of God and of others. Someone who contemplates before acting, forms themselves before giving an opinion, discerns before deciding, takes responsibility before making demands, and serves before seeking recognition.
+      </p>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        And the paths can meet. You may arrive looking for answers about your own life and find a community; arrive through sport and discover a responsibility; arrive through beauty and find a tradition. <strong>Apostolates do not need to be sealed compartments: they are doors that can meet.</strong>
+      </p>
+
+      <div class="converge">
+        <div class="conv">
+          <div class="conv-pair">Thy Will Be Done ↔ Fraternitas</div>
+          <div class="conv-axis">Life ↔ leadership</div>
+        </div>
+        <div class="conv">
+          <div class="conv-pair">Sintonía ↔ Fraternitas</div>
+          <div class="conv-axis">Community ↔ responsibility</div>
+        </div>
+        <div class="conv">
+          <div class="conv-pair">Regina Caeli ↔ Thy Will Be Done</div>
+          <div class="conv-axis">Road ↔ vocation</div>
+        </div>
+        <div class="conv">
+          <div class="conv-pair">Blue Mantle ↔ Regina Caeli</div>
+          <div class="conv-axis">Beauty ↔ tradition</div>
+        </div>
+        <div class="conv">
+          <div class="conv-pair">Luz en el Camino ↔ Fraternitas</div>
+          <div class="conv-axis">Responsibility ↔ service</div>
+        </div>
+        <div class="conv">
+          <div class="conv-pair">Lumen Terrae ↔ Thy Will Be Done</div>
+          <div class="conv-axis">Stewardship ↔ responsibility</div>
+        </div>
+      </div>
+      <p class="chain-note">
+        Conceptual convergences between the works. They do not describe formally established collaborations.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="origin">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">VI</span>
+      <div>
+        <h2 class="sec-title">Born in Monterrey, <em>open to the world</em></h2>
+        <p class="sec-sub">A specific city, a specific reality, a starting point.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        Monterrey, Nuevo León, Mexico. This is where these initiatives begin. A calling that looks much further than its origin, built from a real place rather than an abstract aspiration. <strong>Our origin is local. Our calling, open.</strong>
+      </p>
+    </div>
+
+    <div class="initiator reveal">
+      <div class="init-label">The initiator</div>
+      <div class="init-name">Mario Garza Livas</div>
+      <div class="init-role">Chief Strategic Advisor · Founder · CEO @ The Metanoia Group</div>
+      <p class="init-words">
+        The seven apostolates grow out of a single concern: to create concrete paths for living the Catholic faith with depth, coherence and responsibility in the realities of the contemporary world. Each one has its own identity, but all share the same root and the same orientation: <strong>that faith become life, and that a transformed life become service.</strong>
+      </p>
+
+      <div class="contact-grid">
+        <a class="contact-item" href="mailto:mario@metanoiagroup.vip?subject=Apostolate%20Portfolio" onclick="gtag('event','click',{'event_category':'contact','event_label':'email_mgz2'})">
+          <div class="contact-label">Email</div>
+          <div class="contact-value">mario@metanoiagroup.vip</div>
+        </a>
+        <a class="contact-item" href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp_mgz2'})">
+          <div class="contact-label">Phone &amp; WhatsApp</div>
+          <div class="contact-value">+52 (81) 2513 6784</div>
+        </a>
+        <a class="contact-item" href="https://www.linkedin.com/in/garzalivas/?locale=en-US" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'contact','event_label':'linkedin_mgz2'})">
+          <div class="contact-label">LinkedIn</div>
+          <div class="contact-value">linkedin.com/in/garzalivas</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="begin" class="tinted">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">VII</span>
+      <div>
+        <h2 class="sec-title">Not everyone enters through the <em>same door</em></h2>
+        <p class="sec-sub">Where would you like to begin?</p>
+      </div>
+    </div>
+
+    <div class="starts reveal">
+      <a class="start" href="mgy2.html">
+        <div>
+          <div class="start-want">I want to order my life</div>
+          <div class="start-to">Thy Will Be Done</div>
+          <div class="start-keys">Faith · Vocation · Leadership · Wealth</div>
+        </div>
+        <span class="start-go">Enter &rarr;</span>
+      </a>
+      <a class="start" href="mgz2-b.html">
+        <div>
+          <div class="start-want">I want to lead with greater integrity</div>
+          <div class="start-to">Fraternitas Catholica</div>
+          <div class="start-keys">Faith · Prudence · Responsibility</div>
+        </div>
+        <span class="start-go">Enter &rarr;</span>
+      </a>
+      <a class="start" href="mgz2-f.html">
+        <div>
+          <div class="start-want">I want to live my faith in sport too</div>
+          <div class="start-to">Sintonía Católica</div>
+          <div class="start-keys">Faith · Community · Sport</div>
+        </div>
+        <span class="start-go">Enter &rarr;</span>
+      </a>
+      <a class="start" href="mgz2-e.html">
+        <div>
+          <div class="start-want">I want to set out on the road</div>
+          <div class="start-to">Peregrinaciones Regina Caeli</div>
+          <div class="start-keys">Pilgrimage · Tradition · Mary</div>
+        </div>
+        <span class="start-go">Enter &rarr;</span>
+      </a>
+      <a class="start" href="mgz2-a.html">
+        <div>
+          <div class="start-want">I want to discover beauty</div>
+          <div class="start-to">Blue Mantle Studio</div>
+          <div class="start-keys">Beauty · Devotion · Identity</div>
+        </div>
+        <span class="start-go">Enter &rarr;</span>
+      </a>
+      <a class="start" href="mgz2-d.html">
+        <div>
+          <div class="start-want">I want to serve</div>
+          <div class="start-to">Luz en el Camino</div>
+          <div class="start-keys">Childhood · Dignity · Protection · Community</div>
+        </div>
+        <span class="start-go">Enter &rarr;</span>
+      </a>
+      <a class="start" href="mgz2-c.html">
+        <div>
+          <div class="start-want">I want to be a steward</div>
+          <div class="start-to">Lumen Terrae</div>
+          <div class="start-keys">Creation · Conversion · Stewardship · Service</div>
+        </div>
+        <span class="start-go">Enter &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="links">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">VIII</span>
+      <div>
+        <h2 class="sec-title">Relevant <em>links</em></h2>
+        <p class="sec-sub">The rest of the ecosystem.</p>
+      </div>
+    </div>
+
+    <div class="eco-grid reveal">
+      <a class="eco-card" href="mgz1.html">
+        <div class="eco-code">Language</div>
+        <div class="eco-name">Portafolio de Apostolados</div>
+        <p class="eco-desc">This same page, in Spanish.</p>
+        <div class="eco-url">mgz1 <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="eco-card" href="mgl2.html">
+        <div class="eco-code">Personal</div>
+        <div class="eco-name">Mario Garza Livas</div>
+        <p class="eco-desc">Personal landing page: contact, documents and the rest of the projects.</p>
+        <div class="eco-url">mgl2 <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="eco-card" href="https://metanoiagroup.vip/" target="_blank" rel="noopener">
+        <div class="eco-code">Firm</div>
+        <div class="eco-name">The Metanoia Group</div>
+        <p class="eco-desc">Antifragility architecture for the leader, the company and the estate.</p>
+        <div class="eco-url">metanoiagroup.vip <span class="arrow">&rarr;</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="closing">
+  <div class="wrap">
+    <div class="close-line reveal">Seven paths.</div>
+    <div class="close-line dim reveal">One same faith.</div>
+    <div class="close-line dim reveal">One single life.</div>
+    <div class="close-rule"></div>
+    <p class="close-final reveal">One mission: to live the faith and place it at the service of others.</p>
+    <a class="btn btn-primary reveal" href="#apostolates">Find your path</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-brand">Apostolate Portfolio</div>
+    <div class="footer-tagline">One faith. One life. Seven paths.</div>
+    <div class="footer-origin">Born in Monterrey, Nuevo León, Mexico.</div>
+
+    <div class="footer-cols">
+      <div class="footer-col">
+        <div class="footer-col-title">Apostolates</div>
+        <a href="mgy2.html">Thy Will Be Done</a>
+        <a href="mgz2-b.html">Fraternitas Catholica</a>
+        <a href="mgz2-f.html">Sintonía Católica</a>
+        <a href="mgz2-e.html">Peregrinaciones Regina Caeli</a>
+        <a href="mgz2-a.html">Blue Mantle Studio</a>
+        <a href="mgz2-d.html">Luz en el Camino</a>
+        <a href="mgz2-c.html">Lumen Terrae</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Initiator</div>
+        <div class="who">Mario Garza Livas</div>
+        <div>Chief Strategic Advisor · Founder · CEO @ The Metanoia Group</div>
+        <a href="mailto:mario@metanoiagroup.vip">mario@metanoiagroup.vip</a>
+        <a href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp_footer_mgz2'})">+52 (81) 2513 6784</a>
+        <a href="https://www.linkedin.com/in/garzalivas/?locale=en-US" target="_blank" rel="noopener">linkedin.com/in/garzalivas</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Ecosystem</div>
+        <a href="mgl2.html">Mario Garza Livas</a>
+        <a href="https://metanoiagroup.vip/" target="_blank" rel="noopener">The Metanoia Group</a>
+        <a href="mgz1.html">Versión en español</a>
+      </div>
+    </div>
+
+    <div class="footer-admg-rule"></div>
+    <p class="footer-admg">Ad Majorem Dei Gloriam.</p>
+
+    <div class="footer-bottom">
+      <span class="copyright">© 2026 The Metanoia Group</span>
+      <a class="footer-en" href="mgz1.html">Versión en Español &rarr;</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const topbar = document.querySelector('nav.topbar');
+  const syncNavHeight = () => document.documentElement.style.setProperty('--nav-h', topbar.offsetHeight + 'px');
+  syncNavHeight();
+  if(window.ResizeObserver){ new ResizeObserver(syncNavHeight).observe(topbar); }
+  else { window.addEventListener('resize', syncNavHeight); }
+
+  const els = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    },{rootMargin:'0px 0px -8% 0px', threshold:0.08});
+    els.forEach(el=>io.observe(el));
+  } else {
+    els.forEach(el=>el.classList.add('in'));
+  }
+</script>
+
+</body>
+</html>

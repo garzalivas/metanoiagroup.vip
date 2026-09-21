@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="new_favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blue Mantle Studio — Apostolate Portfolio</title>
+<meta name="description" content="Blue Mantle Studio — Design drawn from the beauty of the Catholic tradition. Contemporary, minimal pieces that carry meaning. Beauty, devotion, simplicity, fortitude and inner light. Monterrey, Nuevo León, Mexico.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Blue Mantle Studio — Apostolate Portfolio">
+<meta property="og:description" content="It does not declare. It suggests. Design drawn from the beauty of the Catholic tradition. Some things are not said: they are worn.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="The Metanoia Group">
+<meta property="og:image" content="https://metanoiagroup.vip/og-image-2.jpg">
+<meta property="og:url" content="https://metanoiagroup.vip/mgz2-a">
+<link rel="alternate" hreflang="es" href="https://metanoiagroup.vip/mgz1-a.html">
+<link rel="alternate" hreflang="en" href="https://metanoiagroup.vip/mgz2-a.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff;
+    --bg-alt:#f6f7fa;
+    --bg-card:#eaeef6;
+    --text:#17203a;
+    --text-dim:#98a0b4;
+    --text-muted:#5a6478;
+    --accent:#1b4a96;
+    --accent-dim:#7d96c2;
+    --accent-deep:#123a66;
+    --gold:#b08234;
+    --gold-deep:#8c6526;
+    --line:#17203a14;
+    --line-strong:#17203a24;
+    --serif:'Fraunces', Georgia, 'Times New Roman', serif;
+    --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --maxw:920px;
+    --nav-h:62px;
+    --anchor-gap:24px;
+    --sec-pad:92px;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;background:var(--bg);}
+
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  a{color:inherit;text-decoration:none;}
+
+  ::selection{background:#1b4a9620;color:var(--text);}
+
+  a:focus-visible, button:focus-visible{
+    outline:1.5px solid var(--accent);
+    outline-offset:4px;
+  }
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;z-index:1;}
+
+  section{padding:var(--sec-pad) 0;scroll-margin-top:calc(var(--nav-h) + var(--anchor-gap));}
+  section.tinted{background:var(--bg-alt);}
+
+  /* ---------- NAV ---------- */
+  nav.topbar{
+    position:sticky;top:0;
+    background:#ffffffe6;
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line-strong);
+    z-index:50;
+  }
+  nav.topbar .inner{
+    max-width:var(--maxw);margin:0 auto;padding:16px 28px;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:14px;flex-wrap:wrap;
+  }
+  .brandmark{
+    font-family:var(--serif);
+    font-size:15px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--text);font-weight:500;
+  }
+  .nav-links{display:flex;gap:20px;align-items:center;flex-wrap:wrap;}
+  .nav-links a{
+    font-size:12px;letter-spacing:.09em;text-transform:uppercase;
+    color:var(--text-muted);transition:color .25s ease;white-space:nowrap;
+  }
+  .nav-links a:hover{color:var(--accent);}
+  .nav-links a.pill{border:1px solid var(--line-strong);padding:6px 12px;border-radius:2px;}
+  .nav-links a.pill:hover{border-color:var(--accent);color:var(--accent);}
+  .nav-links a.home{color:var(--accent);}
+
+  /* ---------- HERO ---------- */
+  header.hero{padding:96px 0 78px;}
+  .hero-logo{
+    height:96px;width:auto;max-width:340px;object-fit:contain;
+    display:block;margin-bottom:46px;
+  }
+  h1.name{
+    font-family:var(--serif);
+    font-size:clamp(34px,6.2vw,62px);
+    line-height:1.1;font-weight:400;letter-spacing:-.018em;
+    max-width:16ch;margin-bottom:32px;
+  }
+  h1.name .faint{color:var(--text-muted);font-weight:300;}
+  .hero-rule{width:54px;height:2px;background:var(--gold);margin-bottom:30px;}
+  p.lede{
+    font-size:clamp(16.5px,2vw,18.5px);
+    color:var(--text-muted);max-width:56ch;line-height:1.72;margin-bottom:22px;
+  }
+  .hero-origin{
+    font-family:var(--serif);font-size:15.5px;font-style:italic;
+    color:var(--text-muted);margin-bottom:38px;
+  }
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{
+    display:inline-block;font-size:13px;letter-spacing:.06em;
+    padding:13px 24px;border-radius:2px;
+    transition:background .25s ease, color .25s ease, border-color .25s ease;
+  }
+  .btn-primary{background:var(--accent);color:#fff;border:1px solid var(--accent);}
+  .btn-primary:hover{background:var(--accent-deep);border-color:var(--accent-deep);}
+  .btn-ghost{border:1px solid var(--line-strong);color:var(--text-muted);}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+
+  /* ---------- MANIFESTO STRIP ---------- */
+  .manifesto{background:var(--bg-alt);border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong);padding:82px 0;}
+  .mani-row{
+    display:grid;grid-template-columns:1fr 1fr;
+    gap:0;border-bottom:1px solid var(--line);
+  }
+  .mani-row:last-child{border-bottom:none;}
+  .mani-neg, .mani-pos{
+    font-family:var(--serif);
+    font-size:clamp(24px,4.6vw,42px);
+    line-height:1.15;letter-spacing:-.015em;
+    padding:26px 0;
+  }
+  .mani-neg{color:var(--text-dim);font-weight:300;}
+  .mani-pos{color:var(--accent);font-style:italic;font-weight:400;}
+  .mani-note{
+    font-size:15px;color:var(--text-muted);max-width:52ch;
+    margin-top:38px;line-height:1.72;
+  }
+  @media (max-width:640px){
+    .mani-row{grid-template-columns:1fr;}
+    .mani-neg{padding-bottom:2px;}
+    .mani-pos{padding-top:2px;}
+  }
+
+  /* ---------- SECTION HEADS ---------- */
+  .sec-head{display:flex;gap:20px;align-items:flex-start;margin-bottom:44px;}
+  .sec-num{
+    font-family:var(--serif);font-size:13px;letter-spacing:.14em;
+    color:var(--gold);padding-top:10px;min-width:34px;font-weight:500;
+  }
+  h2.sec-title{
+    font-family:var(--serif);
+    font-size:clamp(27px,4.1vw,38px);
+    font-weight:400;line-height:1.16;letter-spacing:-.012em;margin-bottom:10px;
+  }
+  h2.sec-title em{font-style:italic;color:var(--accent);font-weight:400;}
+  .sec-sub{font-size:15px;color:var(--text-muted);max-width:62ch;line-height:1.66;}
+
+  p.lead{font-size:16.5px;line-height:1.78;color:var(--text-muted);max-width:66ch;margin-bottom:22px;}
+  p.lead strong{color:var(--text);font-weight:500;}
+
+  /* ---------- STATEMENT ---------- */
+  .statement{
+    font-family:var(--serif);
+    font-size:clamp(25px,4.4vw,40px);
+    line-height:1.2;font-weight:400;letter-spacing:-.014em;
+    margin:54px 0;max-width:20ch;
+  }
+  .statement.wide{max-width:27ch;}
+  .statement .soft{color:var(--text-muted);font-weight:300;}
+  .statement-note{
+    font-size:15px;color:var(--text-muted);max-width:58ch;
+    margin-top:-32px;margin-bottom:54px;line-height:1.7;
+  }
+
+  /* ---------- TERRITORY ---------- */
+  .territory{display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px;padding:26px 0 6px;}
+  .territory .node{
+    font-family:var(--serif);font-size:15px;letter-spacing:.02em;
+    border:1px solid var(--line-strong);padding:8px 15px;border-radius:2px;background:var(--bg);
+  }
+  .territory .node.lit{border-color:var(--accent);color:var(--accent);}
+  .territory .link{color:var(--text-dim);font-size:14px;}
+  .chain-note{font-size:14px;color:var(--text-dim);margin-top:16px;max-width:58ch;line-height:1.66;}
+
+  /* ---------- SOURCES ---------- */
+  .sources{
+    display:flex;flex-wrap:wrap;gap:0;margin:8px 0 34px;max-width:64ch;
+  }
+  .sources span{
+    font-family:var(--serif);font-size:17px;color:var(--text-muted);
+    padding:6px 18px 6px 0;margin-right:18px;border-right:1px solid var(--line-strong);
+  }
+  .sources span:last-child{border-right:none;margin-right:0;}
+
+  /* ---------- PROCESS ---------- */
+  .process{counter-reset:pr;margin:34px 0 8px;border-top:1px solid var(--line-strong);}
+  .step{
+    counter-increment:pr;
+    display:grid;grid-template-columns:52px 176px 1fr;gap:20px;
+    padding:20px 0;border-bottom:1px solid var(--line);align-items:baseline;
+  }
+  .step::before{
+    content:counter(pr,decimal-leading-zero);
+    font-family:var(--serif);font-size:13px;color:var(--text-dim);letter-spacing:.1em;
+  }
+  .step-word{font-family:var(--serif);font-size:17px;letter-spacing:.05em;text-transform:uppercase;}
+  .step-q{font-size:14.5px;color:var(--text-muted);line-height:1.7;font-style:italic;}
+  @media (max-width:640px){
+    .step{grid-template-columns:44px 1fr;gap:8px 16px;}
+    .step-q{grid-column:2;}
+  }
+
+  /* ---------- COMING SOON ---------- */
+  .coming{
+    border:1px solid var(--line-strong);border-radius:3px;
+    background:var(--bg-alt);padding:32px 30px;margin-top:34px;
+  }
+  .coming-tag{
+    font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--gold-deep);margin-bottom:16px;
+  }
+  .coming-title{font-family:var(--serif);font-size:22px;font-weight:500;margin-bottom:12px;line-height:1.3;}
+  .coming-desc{font-size:15px;color:var(--text-muted);line-height:1.74;max-width:60ch;}
+  .coming-items{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);margin-top:24px;
+  }
+  .coming-item{background:var(--bg);padding:20px 18px;}
+  .coming-item-name{font-family:var(--serif);font-size:16px;margin-bottom:6px;}
+  .coming-item-note{font-size:13.5px;color:var(--text-dim);line-height:1.6;}
+
+  /* ---------- VALUES ---------- */
+  .values{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));
+    gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);margin:36px 0 10px;
+  }
+  .value{background:var(--bg);padding:26px 22px;}
+  .value-word{
+    font-family:var(--serif);font-size:17px;letter-spacing:.07em;text-transform:uppercase;
+    color:var(--accent);margin-bottom:9px;
+  }
+  .value-desc{font-size:14px;color:var(--text-muted);line-height:1.65;}
+
+  /* ---------- NOT / IS ---------- */
+  .negatives{border-top:1px solid var(--line-strong);margin:10px 0 0;}
+  .negatives div{
+    font-size:16px;color:var(--text-muted);
+    padding:15px 0;border-bottom:1px solid var(--line);
+  }
+  .affirm{
+    display:flex;flex-wrap:wrap;gap:12px;margin-top:36px;
+  }
+  .affirm span{
+    font-family:var(--serif);font-size:19px;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--accent);border:1px solid var(--accent-dim);
+    padding:11px 20px;border-radius:2px;
+  }
+
+  /* ---------- INITIATOR ---------- */
+  .initiator{border:1px solid var(--line-strong);border-radius:3px;padding:34px 32px;background:var(--bg);}
+  .init-label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:14px;}
+  .init-name{font-family:var(--serif);font-size:27px;font-weight:500;letter-spacing:-.005em;}
+  .init-role{font-size:13.5px;color:var(--text-muted);margin-top:7px;letter-spacing:.02em;}
+  .init-words{font-size:15.5px;color:var(--text-muted);line-height:1.76;margin-top:22px;max-width:62ch;}
+  .init-words strong{color:var(--text);font-weight:500;}
+
+  .contact-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(224px,1fr));
+    gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);margin-top:26px;
+  }
+  .contact-item{background:var(--bg-alt);padding:22px 20px;transition:background .25s ease;}
+  .contact-item:hover{background:var(--bg-card);}
+  .contact-label{font-size:11px;letter-spacing:.17em;text-transform:uppercase;color:var(--text-dim);margin-bottom:8px;}
+  .contact-value{font-size:15px;color:var(--text);word-break:break-word;}
+
+  /* ---------- ECOSYSTEM ---------- */
+  .eco-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:16px;}
+  a.eco-card{
+    background:var(--bg-alt);border:1px solid var(--line);border-radius:3px;padding:24px 22px;
+    transition:background .25s ease, border-color .25s ease;
+  }
+  a.eco-card:hover{background:var(--bg-card);border-color:var(--line-strong);}
+  .eco-code{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:11px;}
+  .eco-name{font-family:var(--serif);font-size:18px;font-weight:500;margin-bottom:8px;line-height:1.25;}
+  .eco-desc{font-size:14px;color:var(--text-muted);line-height:1.66;margin-bottom:14px;}
+  .eco-url{font-size:12.5px;color:var(--text-dim);display:flex;align-items:center;gap:6px;}
+  a.eco-card:hover .eco-url{color:var(--accent);}
+  .eco-url .arrow{transition:transform .25s ease;}
+  a.eco-card:hover .eco-url .arrow{transform:translateX(4px);}
+
+  /* ---------- CLOSING ---------- */
+  .closing{text-align:center;padding:104px 0 88px;background:var(--bg-alt);border-top:1px solid var(--line-strong);}
+  .close-line{font-family:var(--serif);font-size:clamp(26px,5vw,44px);line-height:1.24;font-weight:400;letter-spacing:-.015em;text-wrap:balance;}
+  .close-line.dim{color:var(--text-muted);font-weight:300;}
+  .close-rule{width:40px;height:1px;background:var(--gold);margin:30px auto;}
+  .close-final{
+    font-family:var(--serif);font-size:clamp(19px,3vw,25px);
+    line-height:1.4;max-width:62ch;text-wrap:balance;margin:0 auto 38px;color:var(--accent);
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--bg);border-top:1px solid var(--line-strong);padding:64px 0 54px;}
+  .footer-brand{font-family:var(--serif);font-size:20px;letter-spacing:.07em;text-transform:uppercase;font-weight:500;}
+  .footer-tagline{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--accent);margin-top:9px;}
+  .footer-origin{font-size:14px;color:var(--text-muted);margin-top:10px;}
+  .footer-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:34px;margin-top:40px;}
+  .footer-col-title{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-dim);margin-bottom:14px;}
+  .footer-col a, .footer-col div{display:block;font-size:14px;color:var(--text-muted);margin-bottom:9px;line-height:1.5;}
+  .footer-col a{transition:color .25s ease;}
+  .footer-col a:hover{color:var(--accent);}
+  .footer-col .who{color:var(--text);font-weight:500;}
+  .footer-admg-rule{width:28px;height:1px;background:var(--gold);margin-top:40px;}
+  .footer-admg{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--text-dim);margin-top:14px;}
+  .footer-bottom{
+    margin-top:38px;padding-top:22px;border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
+    font-size:12.5px;color:var(--text-dim);
+  }
+  .footer-en{color:var(--text-muted);transition:color .25s ease;}
+  .footer-en:hover{color:var(--accent);}
+
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}
+    .reveal{opacity:1;transform:none;}
+  }
+</style>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blue Mantle Studio — Apostolate Portfolio">
+<meta name="twitter:description" content="It does not declare. It suggests. Design drawn from the beauty of the Catholic tradition. Some things are not said: they are worn.">
+<meta name="twitter:image" content="https://metanoiagroup.vip/og-image-2.jpg">
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KHNZVPJX1N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KHNZVPJX1N');
+</script>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="inner">
+    <div class="brandmark">Blue Mantle Studio</div>
+    <div class="nav-links">
+      <a href="#beauty">Beauty</a>
+      <a href="#tradition">Tradition</a>
+      <a href="#design">Design</a>
+      <a href="#pieces">The pieces</a>
+      <a class="home" href="mgz2.html">Portfolio</a>
+      <a class="pill" href="mgz1-a.html">ES</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="hero-logo" src="blue-mantle-logo.png" alt="Blue Mantle Studio" width="340" height="96">
+    <h1 class="name">Not everything that matters <span class="faint">needs to make noise.</span></h1>
+    <div class="hero-rule"></div>
+    <p class="lede">
+      Design drawn from the beauty of the Catholic tradition. Contemporary, minimal pieces that carry meaning, for those who find significance in what is essential.
+    </p>
+    <p class="hero-origin">Monterrey, Nuevo León, Mexico.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#beauty">Discover Blue Mantle</a>
+      <a class="btn btn-ghost" href="#pieces">The pieces</a>
+    </div>
+  </div>
+</header>
+
+<div class="manifesto">
+  <div class="wrap">
+    <div class="mani-row reveal">
+      <div class="mani-neg">It does not declare.</div>
+      <div class="mani-pos">It suggests.</div>
+    </div>
+    <div class="mani-row reveal">
+      <div class="mani-neg">It does not impose.</div>
+      <div class="mani-pos">It inspires.</div>
+    </div>
+    <div class="mani-row reveal">
+      <div class="mani-neg">It does not explain.</div>
+      <div class="mani-pos">It evokes.</div>
+    </div>
+    <p class="mani-note reveal">
+      Because not every meaning needs to be obvious at first glance. Some things are meant to be discovered.
+    </p>
+  </div>
+</div>
+
+<section id="beauty">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">I</span>
+      <div>
+        <h2 class="sec-title">Some beauty is contemplated. And some beauty <em>is worn</em></h2>
+        <p class="sec-sub">What Blue Mantle Studio is, and the conviction it comes from.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        Blue Mantle Studio is a design and apparel studio of Catholic inspiration, born in Monterrey. We take symbols, stories, virtues and references from the Catholic tradition and translate them into a contemporary, minimal and timeless language.
+      </p>
+      <p class="lead">
+        <strong>We are not trying to turn faith into decoration. We are trying to turn design into a vehicle for meaning.</strong> Faith can also inhabit everyday culture: in what we wear, in what we contemplate, in what we share.
+      </p>
+
+      <div class="territory">
+        <span class="node">Tradition</span><span class="link">&rarr;</span>
+        <span class="node">Beauty</span><span class="link">&rarr;</span>
+        <span class="node">Design</span><span class="link">&rarr;</span>
+        <span class="node">Identity</span><span class="link">&rarr;</span>
+        <span class="node lit">Everyday life</span>
+      </div>
+      <p class="chain-note">An ancient tradition. A contemporary language.</p>
+
+      <div class="statement reveal">We believe in beauty <span class="soft">that endures.</span></div>
+      <p class="statement-note">
+        In symbols that cross generations. In what does not need to follow a trend in order to have worth. In harmony, in proportion, in the essential. In what, when contemplated, awakens something that was already within us. Beauty can be a road toward meaning.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="tradition" class="tinted">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">II</span>
+      <div>
+        <h2 class="sec-title">We do not begin with a trend. We begin with a <em>tradition</em></h2>
+        <p class="sec-sub">Where every piece comes from before it exists as a piece.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="sources">
+        <span>Christ</span><span>Mary</span><span>The saints</span><span>Scripture</span><span>The liturgy</span><span>The virtues</span><span>The symbols</span><span>History</span><span>Memory</span>
+      </div>
+
+      <p class="lead">
+        Everything that has helped express the faith across centuries can become the starting point for a new conversation with the present.
+      </p>
+      <p class="lead">
+        <strong>We do not copy the tradition. We contemplate it, interpret it and translate it.</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="design">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">III</span>
+      <div>
+        <h2 class="sec-title">Fewer elements. <em>More meaning</em></h2>
+        <p class="sec-sub">The studio's visual language, and why it is deliberately quiet.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        Our language is minimal. We look for clean forms, careful proportions, selected materials and designs able to outlast trends. Every element has to earn its place. So does every absence.
+      </p>
+      <p class="lead">
+        <strong>We design so that meaning has room to breathe.</strong>
+      </p>
+
+      <div class="statement reveal">At first glance, beauty. <span class="soft">At second glance, meaning.</span></div>
+      <p class="statement-note">
+        A form. A symbol. A word. A reference. A story. Perhaps not everyone will recognise it, and that is fine. Blue Mantle is not trying to say everything: it is trying to leave something to be discovered.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="process" class="tinted">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">IV</span>
+      <div>
+        <h2 class="sec-title">Before we design, <em>we contemplate</em></h2>
+        <p class="sec-sub">Six questions every piece passes through before it exists.</p>
+      </div>
+    </div>
+
+    <div class="process reveal">
+      <div class="step">
+        <div class="step-word">Contemplate</div>
+        <div class="step-q">What lies behind it?</div>
+      </div>
+      <div class="step">
+        <div class="step-word">Interpret</div>
+        <div class="step-q">What does it mean?</div>
+      </div>
+      <div class="step">
+        <div class="step-word">Design</div>
+        <div class="step-q">How can it be expressed today?</div>
+      </div>
+      <div class="step">
+        <div class="step-word">Refine</div>
+        <div class="step-q">What is unnecessary?</div>
+      </div>
+      <div class="step">
+        <div class="step-word">Signify</div>
+        <div class="step-q">What story does it carry?</div>
+      </div>
+      <div class="step">
+        <div class="step-word">Wear</div>
+        <div class="step-q">What can it become once it enters someone's life?</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pieces">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">V</span>
+      <div>
+        <h2 class="sec-title">Pieces that carry <em>meaning</em></h2>
+        <p class="sec-sub">Every piece begins with an idea, a story, a virtue, a symbol.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        Each collection explores a different reality of the Catholic tradition. Some speak of faith. Others of Mary. Others of virtue, fortitude, light, the road or belonging. All of them start from the same question: <strong>how can an ancient truth take a contemporary form without losing its essence?</strong>
+      </p>
+    </div>
+
+    <div class="coming reveal">
+      <div class="coming-tag">Coming soon</div>
+      <div class="coming-title">The first collection</div>
+      <p class="coming-desc">
+        The first collection is currently being designed. Once it is ready, this is where it will live: you will be able to download the catalogue and enter the online store from here.
+      </p>
+      <div class="coming-items">
+        <div class="coming-item">
+          <div class="coming-item-name">Collection catalogue</div>
+          <div class="coming-item-note">Available here as a PDF download.</div>
+        </div>
+        <div class="coming-item">
+          <div class="coming-item-name">Online store</div>
+          <div class="coming-item-note">The purchase link will appear in this section.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="wear" class="tinted">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">VI</span>
+      <div>
+        <h2 class="sec-title">Faith is also lived in <em>the everyday</em></h2>
+        <p class="sec-sub">What a piece does once it enters someone's life.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        What we wear speaks. Not always out loud, but it speaks: of who we are, of what we value, of what we belong to. Blue Mantle offers a contemporary way of carrying that identity, with beauty, with restraint and with freedom.
+      </p>
+
+      <div class="statement reveal">You do not need to shout who you are. <span class="soft">You can simply live it.</span></div>
+      <p class="statement-note">
+        For those who do not need to turn every expression of their faith into a proclamation, but do not want to hide it either. For those who value tradition. For those who look for beauty. For those who find meaning in details. For those who know that identity can also be expressed in silence.
+      </p>
+
+      <div class="values">
+        <div class="value">
+          <div class="value-word">Beauty</div>
+          <div class="value-desc">To create what deserves to be contemplated.</div>
+        </div>
+        <div class="value">
+          <div class="value-word">Devotion</div>
+          <div class="value-desc">To design out of respect for what inspires us.</div>
+        </div>
+        <div class="value">
+          <div class="value-word">Simplicity</div>
+          <div class="value-desc">To remove the excess so the essential can appear.</div>
+        </div>
+        <div class="value">
+          <div class="value-word">Fortitude</div>
+          <div class="value-desc">To carry one's identity with conviction.</div>
+        </div>
+        <div class="value">
+          <div class="value-word">Inner light</div>
+          <div class="value-desc">To remember that the outward always points to something deeper.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="whoweare">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">VII</span>
+      <div>
+        <h2 class="sec-title">What we are not, and what <em>we are</em></h2>
+        <p class="sec-sub">Where the studio draws its limits.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="negatives">
+        <div>We are not a souvenir brand.</div>
+        <div>We do not design to cover garments in symbols.</div>
+        <div>We do not chase religious trends.</div>
+        <div>We do not use tradition as decoration.</div>
+        <div>We are not trying to make noise.</div>
+        <div>We do not want to say everything.</div>
+      </div>
+
+      <p class="lead" style="margin-top:34px;">
+        <strong>We want to do few things well. And to do them with meaning.</strong>
+      </p>
+
+      <div class="affirm">
+        <span>Design</span>
+        <span>Tradition</span>
+        <span>Beauty</span>
+        <span>Meaning</span>
+      </div>
+
+      <p class="lead" style="margin-top:34px;">
+        Blue Mantle is an invitation to discover that an everyday piece can also carry a story, a memory, an identity, a question and a light.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="origin" class="tinted">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">VIII</span>
+      <div>
+        <h2 class="sec-title">Born in Monterrey. Made for <em>the world</em></h2>
+        <p class="sec-sub">A city of character, industry and transformation.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        Blue Mantle Studio was born in Monterrey, Nuevo León, Mexico. From here we build a contemporary expression of a tradition that belongs to no single place. <strong>Our origin is local. Our calling, universal.</strong>
+      </p>
+    </div>
+
+    <div class="initiator reveal">
+      <div class="init-label">The initiator</div>
+      <div class="init-name">Mario Garza Livas</div>
+      <div class="init-role">Chief Strategic Advisor · Founder · CEO @ The Metanoia Group</div>
+      <p class="init-words">
+        Blue Mantle Studio is part of the Apostolate Portfolio: seven works with their own identity and one shared root. If you would like to know the studio, propose a collaboration, or find out when the first collection will be available, <strong>write to us.</strong>
+      </p>
+
+      <div class="contact-grid">
+        <a class="contact-item" href="mailto:mario@metanoiagroup.vip?subject=Blue%20Mantle%20Studio" onclick="gtag('event','click',{'event_category':'contact','event_label':'email_mgz2a'})">
+          <div class="contact-label">Email</div>
+          <div class="contact-value">mario@metanoiagroup.vip</div>
+        </a>
+        <a class="contact-item" href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp_mgz2a'})">
+          <div class="contact-label">Phone &amp; WhatsApp</div>
+          <div class="contact-value">+52 (81) 2513 6784</div>
+        </a>
+        <a class="contact-item" href="https://www.linkedin.com/in/garzalivas/?locale=en-US" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'contact','event_label':'linkedin_mgz2a'})">
+          <div class="contact-label">LinkedIn</div>
+          <div class="contact-value">linkedin.com/in/garzalivas</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="links">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">IX</span>
+      <div>
+        <h2 class="sec-title">Relevant <em>links</em></h2>
+        <p class="sec-sub">The rest of the ecosystem.</p>
+      </div>
+    </div>
+
+    <div class="eco-grid reveal">
+      <a class="eco-card" href="mgz2.html">
+        <div class="eco-code">Portfolio</div>
+        <div class="eco-name">Apostolate Portfolio</div>
+        <p class="eco-desc">Blue Mantle Studio is one of seven apostolates. Here are the other six.</p>
+        <div class="eco-url">mgz2 <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="eco-card" href="mgz1-a.html">
+        <div class="eco-code">Language</div>
+        <div class="eco-name">Blue Mantle Studio</div>
+        <p class="eco-desc">This same page, in Spanish.</p>
+        <div class="eco-url">mgz1-a <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="eco-card" href="mgl2.html">
+        <div class="eco-code">Personal</div>
+        <div class="eco-name">Mario Garza Livas</div>
+        <p class="eco-desc">Personal landing page: contact, documents and the rest of the projects.</p>
+        <div class="eco-url">mgl2 <span class="arrow">&rarr;</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="closing">
+  <div class="wrap">
+    <div class="close-line reveal">Some things</div>
+    <div class="close-line dim reveal">are not said.</div>
+    <div class="close-rule"></div>
+    <div class="close-line reveal">They are worn.</div>
+    <p class="close-final reveal" style="margin-top:36px;">Blue Mantle Studio · Beauty with meaning.</p>
+    <a class="btn btn-ghost reveal" href="mgz2.html">Back to the portfolio</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-brand">Blue Mantle Studio</div>
+    <div class="footer-tagline">Beauty · Devotion · Simplicity · Fortitude · Inner light</div>
+    <div class="footer-origin">Monterrey, Nuevo León, Mexico.</div>
+
+    <div class="footer-cols">
+      <div class="footer-col">
+        <div class="footer-col-title">The studio</div>
+        <a href="#beauty">Beauty</a>
+        <a href="#tradition">Tradition</a>
+        <a href="#design">Design</a>
+        <a href="#process">The process</a>
+        <a href="#pieces">The pieces</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Initiator</div>
+        <div class="who">Mario Garza Livas</div>
+        <div>Chief Strategic Advisor · Founder · CEO @ The Metanoia Group</div>
+        <a href="mailto:mario@metanoiagroup.vip">mario@metanoiagroup.vip</a>
+        <a href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp_footer_mgz2a'})">+52 (81) 2513 6784</a>
+        <a href="https://www.linkedin.com/in/garzalivas/?locale=en-US" target="_blank" rel="noopener">linkedin.com/in/garzalivas</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Ecosystem</div>
+        <a href="mgz2.html">Apostolate Portfolio</a>
+        <a href="mgl2.html">Mario Garza Livas</a>
+        <a href="https://metanoiagroup.vip/" target="_blank" rel="noopener">The Metanoia Group</a>
+        <a href="mgz1-a.html">Versión en español</a>
+      </div>
+    </div>
+
+    <div class="footer-admg-rule"></div>
+    <p class="footer-admg">Ad Majorem Dei Gloriam.</p>
+
+    <div class="footer-bottom">
+      <span class="copyright">© 2026 The Metanoia Group</span>
+      <a class="footer-en" href="mgz1-a.html">Versión en Español &rarr;</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const topbar = document.querySelector('nav.topbar');
+  const syncNavHeight = () => document.documentElement.style.setProperty('--nav-h', topbar.offsetHeight + 'px');
+  syncNavHeight();
+  if(window.ResizeObserver){ new ResizeObserver(syncNavHeight).observe(topbar); }
+  else { window.addEventListener('resize', syncNavHeight); }
+
+  const els = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    },{rootMargin:'0px 0px -8% 0px', threshold:0.08});
+    els.forEach(el=>io.observe(el));
+  } else {
+    els.forEach(el=>el.classList.add('in'));
+  }
+</script>
+
+</body>
+</html>

@@ -251,7 +251,7 @@
   .eco-card{
     background:var(--bg-alt);
     padding:34px 30px;
-    display:block;
+    display:flex;flex-direction:column;
     transition:background .3s ease, transform .3s ease;
   }
   .eco-card:hover{background:var(--bg-card);transform:translateY(-2px);}
@@ -266,7 +266,7 @@
     color:var(--text-muted);font-size:13.5px;margin-top:10px;line-height:1.65;font-weight:300;
   }
   .eco-url{
-    margin-top:18px;font-size:11px;letter-spacing:.08em;color:var(--accent-dim);
+    margin-top:auto;padding-top:18px;font-size:11px;letter-spacing:.08em;color:var(--accent-dim);
     display:flex;align-items:center;gap:8px;
     text-transform:lowercase;
   }
@@ -1099,35 +1099,41 @@
     </div>
 
     <div class="eco-grid reveal">
-      <a class="eco-card full" href="https://www.linkedin.com/in/garzalivas/recent-activity/articles/" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'contact','event_label':'linkedin'})">
+      <a class="eco-card" href="https://www.linkedin.com/in/garzalivas/recent-activity/articles/" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'contact','event_label':'linkedin'})">
         <div class="eco-code">Enlace 1</div>
         <div class="eco-name">Artículos en LinkedIn</div>
         <p class="eco-desc">Más ensayos y artículos de Mario Garza Livas, publicados de forma continua en LinkedIn.</p>
-        <div class="eco-url">linkedin.com/in/garzalivas <span class="arrow">→</span></div>
+        <div class="eco-url">linkedin.com/in/garzalivas <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="eco-card" href="mgw1.html" target="_blank" rel="noopener">
+        <div class="eco-code">Enlace 2</div>
+        <div class="eco-name">La Obra Escrita</div>
+        <p class="eco-desc">Los veintiséis libros de Mario Garza Livas, incluidos <em>Football Intelligence</em> y <em>Margen Cero</em>, organizados en dieciséis categorías temáticas.</p>
+        <div class="eco-url">metanoiagroup.vip/mgw1 <span class="arrow">&rarr;</span></div>
       </a>
       <a class="eco-card" href="mgl1.html" target="_blank" rel="noopener">
-        <div class="eco-code">Enlace 2</div>
+        <div class="eco-code">Enlace 3</div>
         <div class="eco-name">Landing Page Personal</div>
         <p class="eco-desc">Contacto directo, CV, documentos y el ecosistema completo de Mario Garza Livas.</p>
-        <div class="eco-url">metanoiagroup.vip/mgl1 <span class="arrow">→</span></div>
+        <div class="eco-url">metanoiagroup.vip/mgl1 <span class="arrow">&rarr;</span></div>
       </a>
       <a class="eco-card" href="https://metanoiagroup.vip/" target="_blank" rel="noopener">
-        <div class="eco-code">Enlace 3</div>
+        <div class="eco-code">Enlace 4</div>
         <div class="eco-name">The Metanoia Group</div>
         <p class="eco-desc">Arquitectura de antifragilidad para el líder, su empresa y su patrimonio.</p>
-        <div class="eco-url">metanoiagroup.vip <span class="arrow">→</span></div>
+        <div class="eco-url">metanoiagroup.vip <span class="arrow">&rarr;</span></div>
       </a>
       <a class="eco-card" href="https://natio.one" target="_blank" rel="noopener">
-        <div class="eco-code">Enlace 4</div>
+        <div class="eco-code">Enlace 5</div>
         <div class="eco-name">Natio</div>
         <p class="eco-desc">Representación de deportistas.</p>
-        <div class="eco-url">natio.one <span class="arrow">→</span></div>
+        <div class="eco-url">natio.one <span class="arrow">&rarr;</span></div>
       </a>
       <a class="eco-card" href="https://www.fournations.football" target="_blank" rel="noopener">
-        <div class="eco-code">Enlace 5</div>
+        <div class="eco-code">Enlace 6</div>
         <div class="eco-name">Four Nations Football Consulting</div>
         <p class="eco-desc">Consultoría en negocios de fútbol.</p>
-        <div class="eco-url">fournations.football <span class="arrow">→</span></div>
+        <div class="eco-url">fournations.football <span class="arrow">&rarr;</span></div>
       </a>
     </div>
   </div>

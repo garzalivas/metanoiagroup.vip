@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="new_favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luz en el Camino — Apostolate Portfolio</title>
+<meta name="description" content="Luz en el Camino — A Catholic apostolate devoted to accompanying and protecting children and adolescents from migrant families in situations of vulnerability in Mexico. Welcome, protect, promote and accompany.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Luz en el Camino — Apostolate Portfolio">
+<meta property="og:description" content="We protect childhood while the journey continues. Migration can be temporary; childhood cannot be recovered.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="The Metanoia Group">
+<meta property="og:image" content="https://metanoiagroup.vip/og-image-2.jpg">
+<meta property="og:url" content="https://metanoiagroup.vip/mgz2-d">
+<link rel="alternate" hreflang="es" href="https://metanoiagroup.vip/mgz1-d.html">
+<link rel="alternate" hreflang="en" href="https://metanoiagroup.vip/mgz2-d.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff;
+    --bg-alt:#fdf9f1;
+    --bg-card:#f7ecd8;
+    --text:#0f2a4a;
+    --text-dim:#95a0ae;
+    --text-muted:#4f5d70;
+    --accent:#00305f;
+    --accent-deep:#001f3f;
+    --accent-soft:#c3d2e3;
+    --amber:#e0940f;
+    --amber-deep:#a86c07;
+    --amber-dim:#f6d79a;
+    --line:#0f2a4a14;
+    --line-strong:#0f2a4a24;
+    --serif:'Fraunces', Georgia, 'Times New Roman', serif;
+    --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --maxw:920px;
+    --nav-h:62px;
+    --anchor-gap:24px;
+    --sec-pad:92px;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;background:var(--bg);}
+
+  body{
+    background:var(--bg);color:var(--text);
+    font-family:var(--sans);font-weight:400;line-height:1.6;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+
+  a{color:inherit;text-decoration:none;}
+  ::selection{background:#e0940f2e;color:var(--text);}
+  a:focus-visible, button:focus-visible{outline:1.5px solid var(--amber-deep);outline-offset:4px;}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;z-index:1;}
+
+  section{padding:var(--sec-pad) 0;scroll-margin-top:calc(var(--nav-h) + var(--anchor-gap));}
+  section.tinted{background:var(--bg-alt);}
+
+  /* ---------- NAV ---------- */
+  nav.topbar{
+    position:sticky;top:0;background:#ffffffe6;
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line-strong);z-index:50;
+  }
+  nav.topbar .inner{
+    max-width:var(--maxw);margin:0 auto;padding:16px 28px;
+    display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  }
+  .brandmark{font-family:var(--serif);font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:var(--text);font-weight:500;}
+  .nav-links{display:flex;gap:20px;align-items:center;flex-wrap:wrap;}
+  .nav-links a{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--text-muted);transition:color .25s ease;white-space:nowrap;}
+  .nav-links a:hover{color:var(--amber-deep);}
+  .nav-links a.pill{border:1px solid var(--line-strong);padding:6px 12px;border-radius:2px;}
+  .nav-links a.pill:hover{border-color:var(--amber);color:var(--amber-deep);}
+  .nav-links a.home{color:var(--amber-deep);}
+
+  /* ---------- HERO ---------- */
+  header.hero{padding:96px 0 78px;}
+  .hero-logo{height:130px;width:auto;max-width:150px;object-fit:contain;display:block;margin-bottom:44px;}
+  h1.name{
+    font-family:var(--serif);font-size:clamp(34px,6.1vw,60px);
+    line-height:1.08;font-weight:400;letter-spacing:-.018em;max-width:15ch;margin-bottom:30px;
+  }
+  h1.name .faint{color:var(--text-muted);font-weight:300;}
+  .hero-rule{width:54px;height:2px;background:var(--amber);margin-bottom:30px;}
+  p.lede{font-size:clamp(16.5px,2vw,18.5px);color:var(--text-muted);max-width:58ch;line-height:1.72;margin-bottom:22px;}
+  .hero-vision{
+    font-family:var(--serif);font-size:clamp(16px,2.2vw,19px);font-style:italic;
+    color:var(--text);line-height:1.5;max-width:44ch;
+    padding-left:20px;border-left:2px solid var(--amber-dim);margin-bottom:26px;
+  }
+  .hero-origin{font-family:var(--serif);font-size:15.5px;font-style:italic;color:var(--text-muted);margin-bottom:38px;}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{display:inline-block;font-size:13px;letter-spacing:.06em;padding:13px 24px;border-radius:2px;transition:background .25s ease,color .25s ease,border-color .25s ease;}
+  .btn-primary{background:var(--accent);color:#fff;border:1px solid var(--accent);}
+  .btn-primary:hover{background:var(--amber-deep);border-color:var(--amber-deep);}
+  .btn-ghost{border:1px solid var(--line-strong);color:var(--text-muted);}
+  .btn-ghost:hover{border-color:var(--amber);color:var(--amber-deep);}
+
+  /* ---------- NAVY BAND ---------- */
+  .band{background:var(--accent);color:#eaf0f7;padding:100px 0;}
+  .band-a{
+    font-family:var(--serif);font-size:clamp(26px,4.8vw,44px);
+    line-height:1.2;font-weight:300;letter-spacing:-.016em;max-width:19ch;color:#eaf0f7b3;
+  }
+  .band-b{
+    font-family:var(--serif);font-size:clamp(28px,5.2vw,48px);
+    line-height:1.18;font-weight:400;letter-spacing:-.018em;max-width:19ch;color:#ffffff;margin-top:14px;
+  }
+  .band-rule{width:44px;height:2px;background:var(--amber);margin:38px 0;}
+  .band-note{font-size:15.5px;color:#eaf0f7aa;max-width:56ch;line-height:1.78;}
+  .band-note strong{color:var(--amber-dim);font-weight:400;}
+
+  /* ---------- SECTION HEADS ---------- */
+  .sec-head{display:flex;gap:20px;align-items:flex-start;margin-bottom:44px;}
+  .sec-num{font-family:var(--serif);font-size:13px;letter-spacing:.14em;color:var(--amber-deep);padding-top:10px;min-width:34px;font-weight:500;}
+  h2.sec-title{font-family:var(--serif);font-size:clamp(27px,4.1vw,38px);font-weight:400;line-height:1.16;letter-spacing:-.012em;margin-bottom:10px;}
+  h2.sec-title em{font-style:italic;color:var(--amber-deep);font-weight:400;}
+  .sec-sub{font-size:15px;color:var(--text-muted);max-width:62ch;line-height:1.66;}
+
+  p.lead{font-size:16.5px;line-height:1.78;color:var(--text-muted);max-width:66ch;margin-bottom:22px;}
+  p.lead strong{color:var(--text);font-weight:500;}
+
+  .statement{font-family:var(--serif);font-size:clamp(25px,4.4vw,40px);line-height:1.2;font-weight:400;letter-spacing:-.014em;margin:54px 0;max-width:21ch;}
+  .statement.wide{max-width:28ch;}
+  .statement .soft{color:var(--text-muted);font-weight:300;}
+  .statement-note{font-size:15px;color:var(--text-muted);max-width:60ch;margin-top:-32px;margin-bottom:54px;line-height:1.7;}
+
+  /* ---------- WORDS ---------- */
+  .words{display:flex;flex-wrap:wrap;gap:12px;margin:8px 0 34px;}
+  .words span{
+    font-family:var(--serif);font-size:clamp(17px,2.4vw,21px);
+    color:var(--text);border:1px solid var(--amber-dim);
+    padding:11px 20px;border-radius:2px;background:var(--bg);
+  }
+
+  /* ---------- SCRIPTURE ---------- */
+  .scripture{
+    border-left:2px solid var(--amber);padding:6px 0 6px 24px;
+    margin:38px 0;max-width:50ch;
+  }
+  .scripture-text{font-family:var(--serif);font-size:clamp(19px,2.9vw,25px);font-style:italic;line-height:1.45;color:var(--text);}
+  .scripture-ref{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-deep);margin-top:14px;}
+
+  /* ---------- DOINGS ---------- */
+  .doings{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);margin:34px 0 10px;}
+  .doing{background:var(--bg);padding:24px 20px;}
+  .doing-word{font-family:var(--serif);font-size:17px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:8px;}
+  .doing-desc{font-size:14px;color:var(--text-muted);line-height:1.66;}
+
+  /* ---------- PILLARS ---------- */
+  .pillars{counter-reset:pl;margin-top:36px;border-top:1px solid var(--line-strong);}
+  .pillar{counter-increment:pl;display:grid;grid-template-columns:52px 176px 1fr;gap:20px;padding:24px 0;border-bottom:1px solid var(--line);align-items:baseline;}
+  .pillar::before{content:counter(pl,decimal-leading-zero);font-family:var(--serif);font-size:13px;color:var(--amber-deep);letter-spacing:.1em;}
+  .pillar-name{font-family:var(--serif);font-size:17px;letter-spacing:.06em;text-transform:uppercase;color:var(--text);}
+  .pillar-claim{font-family:var(--serif);font-size:17px;font-style:italic;color:var(--text);line-height:1.45;margin-bottom:9px;}
+  .pillar-desc{font-size:14px;color:var(--text-muted);line-height:1.68;}
+  @media (max-width:640px){.pillar{grid-template-columns:44px 1fr;gap:8px 16px;}.pillar-name{grid-column:2;}.pillar > div:last-child{grid-column:2;}}
+
+  /* ---------- METHOD ---------- */
+  .method{margin:34px 0 8px;border-top:1px solid var(--line-strong);}
+  .mstep{display:grid;grid-template-columns:186px 1fr;gap:22px;padding:21px 0;border-bottom:1px solid var(--line);align-items:baseline;}
+  .mstep-word{font-family:var(--serif);font-size:clamp(18px,2.6vw,22px);letter-spacing:.06em;text-transform:uppercase;color:var(--accent);}
+  .mstep-what{font-size:14.5px;color:var(--text-muted);line-height:1.7;}
+  @media (max-width:640px){.mstep{grid-template-columns:1fr;gap:5px;}}
+
+  /* ---------- CENTRE ---------- */
+  .centre{border:1px solid var(--amber-dim);border-radius:3px;background:var(--bg-alt);padding:34px 32px;margin-top:10px;}
+  .centre-tag{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--amber-deep);margin-bottom:16px;}
+  .centre-title{font-family:var(--serif);font-size:clamp(22px,3.2vw,28px);font-weight:500;margin-bottom:14px;line-height:1.28;}
+  .centre-desc{font-size:15.5px;color:var(--text-muted);line-height:1.76;max-width:62ch;}
+  .centre-items{display:grid;grid-template-columns:repeat(auto-fit,minmax(172px,1fr));gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);margin-top:26px;}
+  .ci{background:var(--bg);padding:20px 18px;}
+  .ci-word{font-family:var(--serif);font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;}
+  .ci-note{font-size:13.5px;color:var(--text-muted);line-height:1.6;}
+  .centre-close{font-family:var(--serif);font-size:19px;font-style:italic;color:var(--text);margin-top:26px;line-height:1.5;}
+
+  /* ---------- NETWORK ---------- */
+  .network{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px;}
+  .network span{
+    font-size:13.5px;letter-spacing:.04em;color:var(--text-muted);
+    border:1px solid var(--line-strong);padding:9px 16px;border-radius:2px;background:var(--bg);
+  }
+
+  /* ---------- GUARDIAN ---------- */
+  .guardian-verbs{display:flex;flex-wrap:wrap;gap:12px;margin:32px 0;}
+  .guardian-verbs span{
+    font-family:var(--serif);font-size:clamp(19px,2.8vw,24px);letter-spacing:.06em;text-transform:uppercase;
+    color:var(--amber-deep);border:1px solid var(--amber-dim);padding:12px 22px;border-radius:2px;
+  }
+
+  /* ---------- LIMITS ---------- */
+  .limits{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 32px;}
+  .limits span{
+    font-size:14px;color:var(--text-muted);
+    border:1px solid var(--line-strong);padding:9px 16px;border-radius:2px;
+  }
+  .doweare{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px;}
+  .doweare span{
+    font-family:var(--serif);font-size:18px;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--accent);border:1px solid var(--accent-soft);padding:11px 20px;border-radius:2px;
+  }
+
+  /* ---------- IMPACT ---------- */
+  .impact{border-top:1px solid var(--line-strong);margin-top:8px;}
+  .impact div{
+    font-family:var(--serif);font-size:clamp(17px,2.5vw,21px);
+    color:var(--text);padding:17px 0;border-bottom:1px solid var(--line);line-height:1.45;
+  }
+
+  /* ---------- PATHS ---------- */
+  .paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:10px;}
+  a.path{border:1px solid var(--line-strong);border-radius:3px;padding:28px 24px;background:var(--bg);transition:border-color .3s ease,background .3s ease;}
+  a.path:hover{border-color:var(--amber);background:var(--bg-alt);}
+  .path-want{font-family:var(--serif);font-size:19px;color:var(--text);margin-bottom:10px;line-height:1.35;}
+  .path-who{font-size:14px;color:var(--text-muted);line-height:1.65;margin-bottom:16px;}
+  .path-go{font-size:12.5px;letter-spacing:.06em;color:var(--text-dim);transition:color .25s ease;}
+  a.path:hover .path-go{color:var(--amber-deep);}
+  .path-go .arrow{display:inline-block;transition:transform .25s ease;}
+  a.path:hover .path-go .arrow{transform:translateX(4px);}
+
+  /* ---------- INITIATOR ---------- */
+  .initiator{border:1px solid var(--line-strong);border-radius:3px;padding:34px 32px;background:var(--bg);margin-top:36px;}
+  .init-label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--amber-deep);margin-bottom:14px;}
+  .init-name{font-family:var(--serif);font-size:27px;font-weight:500;letter-spacing:-.005em;}
+  .init-role{font-size:13.5px;color:var(--text-muted);margin-top:7px;letter-spacing:.02em;}
+  .init-words{font-size:15.5px;color:var(--text-muted);line-height:1.76;margin-top:22px;max-width:62ch;}
+  .init-words strong{color:var(--text);font-weight:500;}
+
+  .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(224px,1fr));gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);margin-top:26px;}
+  .contact-item{background:var(--bg-alt);padding:22px 20px;transition:background .25s ease;}
+  .contact-item:hover{background:var(--bg-card);}
+  .contact-label{font-size:11px;letter-spacing:.17em;text-transform:uppercase;color:var(--text-dim);margin-bottom:8px;}
+  .contact-value{font-size:15px;color:var(--text);word-break:break-word;}
+
+  /* ---------- ECOSYSTEM ---------- */
+  .eco-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:16px;}
+  a.eco-card{background:var(--bg-alt);border:1px solid var(--line);border-radius:3px;padding:24px 22px;transition:background .25s ease,border-color .25s ease;}
+  a.eco-card:hover{background:var(--bg-card);border-color:var(--line-strong);}
+  .eco-code{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--amber-deep);margin-bottom:11px;}
+  .eco-name{font-family:var(--serif);font-size:18px;font-weight:500;margin-bottom:8px;line-height:1.25;}
+  .eco-desc{font-size:14px;color:var(--text-muted);line-height:1.66;margin-bottom:14px;}
+  .eco-url{font-size:12.5px;color:var(--text-dim);display:flex;align-items:center;gap:6px;}
+  a.eco-card:hover .eco-url{color:var(--amber-deep);}
+  .eco-url .arrow{transition:transform .25s ease;}
+  a.eco-card:hover .eco-url .arrow{transform:translateX(4px);}
+
+  /* ---------- CLOSING ---------- */
+  .closing{text-align:center;padding:110px 0 92px;background:var(--bg-alt);border-top:1px solid var(--line-strong);}
+  .close-line{font-family:var(--serif);font-size:clamp(27px,5.2vw,46px);line-height:1.22;font-weight:400;letter-spacing:-.015em;text-wrap:balance;}
+  .close-line.faded{color:var(--text-muted);font-weight:300;}
+  .close-rule{width:40px;height:1px;background:var(--amber);margin:32px auto;}
+  .close-final{font-family:var(--serif);font-size:clamp(19px,3vw,26px);line-height:1.4;max-width:62ch;text-wrap:balance;margin:0 auto 38px;color:var(--amber-deep);font-style:italic;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--bg);border-top:1px solid var(--line-strong);padding:64px 0 54px;}
+  .footer-brand{font-family:var(--serif);font-size:20px;letter-spacing:.07em;text-transform:uppercase;font-weight:500;}
+  .footer-tagline{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--amber-deep);margin-top:9px;}
+  .footer-origin{font-size:14px;color:var(--text-muted);margin-top:10px;}
+  .footer-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:34px;margin-top:40px;}
+  .footer-col-title{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-dim);margin-bottom:14px;}
+  .footer-col a, .footer-col div{display:block;font-size:14px;color:var(--text-muted);margin-bottom:9px;line-height:1.5;}
+  .footer-col a{transition:color .25s ease;}
+  .footer-col a:hover{color:var(--amber-deep);}
+  .footer-col .who{color:var(--text);font-weight:500;}
+  .footer-admg-rule{width:28px;height:1px;background:var(--amber);margin-top:40px;}
+  .footer-admg{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--text-dim);margin-top:14px;}
+  .footer-bottom{margin-top:38px;padding-top:22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:12.5px;color:var(--text-dim);}
+  .footer-en{color:var(--text-muted);transition:color .25s ease;}
+  .footer-en:hover{color:var(--amber-deep);}
+
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}
+    .reveal{opacity:1;transform:none;}
+  }
+</style>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Luz en el Camino — Apostolate Portfolio">
+<meta name="twitter:description" content="We protect childhood while the journey continues. Migration can be temporary; childhood cannot be recovered.">
+<meta name="twitter:image" content="https://metanoiagroup.vip/og-image-2.jpg">
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KHNZVPJX1N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KHNZVPJX1N');
+</script>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="inner">
+    <div class="brandmark">Luz en el Camino</div>
+    <div class="nav-links">
+      <a href="#why">Why we exist</a>
+      <a href="#mission">Our mission</a>
+      <a href="#centres">Centres &amp; network</a>
+      <a href="#guardians">Guardians</a>
+      <a class="home" href="mgz2.html">Portfolio</a>
+      <a class="pill" href="mgz1-d.html">ES</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="hero-logo" src="luz-en-el-camino-logo.png" alt="Luz en el Camino" width="150" height="130">
+    <h1 class="name">We protect childhood <span class="faint">while the journey continues.</span></h1>
+    <div class="hero-rule"></div>
+    <p class="lede">
+      A Catholic apostolate devoted to accompanying and protecting children and adolescents from migrant families in situations of vulnerability in Mexico.
+    </p>
+    <p class="hero-vision">That no migrant child in Mexico should lose their childhood because of migration.</p>
+    <p class="hero-origin">Monterrey, Nuevo León, Mexico.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#why">See our mission</a>
+      <a class="btn btn-ghost" href="#guardians">Become a Guardian</a>
+    </div>
+  </div>
+</header>
+
+<div class="band">
+  <div class="wrap">
+    <p class="band-a reveal">Migration can be temporary.</p>
+    <p class="band-b reveal">Childhood cannot be recovered.</p>
+    <div class="band-rule reveal"></div>
+    <p class="band-note reveal">
+      A family may be passing through. It may be waiting. It may not know how long the road will last. But a child still needs safety, education, play, affection, community and hope. <strong>Which is why we cannot wait for the journey to end before protecting their childhood.</strong>
+    </p>
+  </div>
+</div>
+
+<section id="child">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">I</span>
+      <div>
+        <h2 class="sec-title">Before a migrant, <em>a child</em></h2>
+        <p class="sec-sub">Who we are talking about when we talk about this work.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        Before being a migrant, a foreigner, a refugee, a displaced person or any other condition that describes their situation, there is a child. A child who needs to play. To learn. To feel safe. To have friends. To be heard. To be with their family. To dream. To grow. <strong>To be a child.</strong>
+      </p>
+
+      <div class="statement wide reveal">Their migration status <span class="soft">does not define their dignity.</span></div>
+      <p class="statement-note">
+        And their circumstances should not decide how much of their childhood they get to live.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="tinted">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">II</span>
+      <div>
+        <h2 class="sec-title">Because there are childhoods being left <em>along the way</em></h2>
+        <p class="sec-sub">Why we exist.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        When a family migrates, the adults carry with them decisions, responsibilities, uncertainties and problems that are often beyond their control. But children live through those circumstances without having chosen them.
+      </p>
+      <p class="lead">
+        Constant movement can interrupt their education, their routines, their bonds, their emotional stability and their space to play. <strong>A family's mobility should not become the immobility of their children's future.</strong>
+      </p>
+
+      <div class="words">
+        <span>School</span><span>Safety</span><span>Family</span><span>Play</span><span>Friendship</span><span>Stability</span><span>Belonging</span><span>Hope</span>
+      </div>
+
+      <p class="lead"><strong>That is what we want to protect.</strong></p>
+
+      <div class="statement reveal">We do not simply want to meet needs. <span class="soft">We want to protect childhood.</span></div>
+      <p class="statement-note">
+        We believe every child has a dignity that does not depend on their nationality, their papers, their economic situation or the circumstances their family is going through. And that protecting a child means far more than keeping them physically safe: it means helping them keep learning, playing, relating to others, recovering stability, strengthening their bonds and looking ahead.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="faith">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">III</span>
+      <div>
+        <h2 class="sec-title">Our faith teaches us to recognise a face, <em>not a statistic</em></h2>
+        <p class="sec-sub">Where this work comes from.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        Luz en el Camino comes from a deeply Catholic conviction: <strong>every person holds a dignity received from God.</strong> Which is why we serve the child in front of us, not an abstract category. We do not see only migrants. We see people. We see families. We see children. And in the vulnerable we recognise a concrete call to live charity.
+      </p>
+
+      <div class="scripture reveal">
+        <div class="scripture-text">Whoever receives one such child in my name receives me.</div>
+        <div class="scripture-ref">Matthew 18, 5</div>
+      </div>
+
+      <div class="statement wide reveal">They too <span class="soft">knew the road.</span></div>
+      <p class="statement-note">
+        Jesus was a child. Mary was a mother. Joseph was a guardian. And the Holy Family also had to set out on a journey to protect the life of the Child. So when we look at a migrant family, we are not looking at something foreign to the Gospel. Where there is a child who needs protection, there is an opportunity to live guardianship, charity and hope.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="mission" class="tinted">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">IV</span>
+      <div>
+        <h2 class="sec-title">What we <em>do</em></h2>
+        <p class="sec-sub">Six verbs, and the five concrete ways of protecting a childhood.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="doings">
+        <div class="doing">
+          <div class="doing-word">We welcome</div>
+          <div class="doing-desc">We receive children and families with dignity, respect and humanity.</div>
+        </div>
+        <div class="doing">
+          <div class="doing-word">We protect</div>
+          <div class="doing-desc">We create safe environments and identify situations that need specialised attention.</div>
+        </div>
+        <div class="doing">
+          <div class="doing-word">We promote</div>
+          <div class="doing-desc">We make education, play, development and opportunity possible so the child keeps growing.</div>
+        </div>
+        <div class="doing">
+          <div class="doing-word">We accompany</div>
+          <div class="doing-desc">We walk alongside children and their families throughout the process.</div>
+        </div>
+        <div class="doing">
+          <div class="doing-word">We strengthen</div>
+          <div class="doing-desc">We help strengthen the capacities and support networks of families.</div>
+        </div>
+        <div class="doing">
+          <div class="doing-word">We integrate</div>
+          <div class="doing-desc">We connect families with schools, communities, parishes, professionals and organisations.</div>
+        </div>
+      </div>
+
+      <div class="pillars">
+        <div class="pillar">
+          <div class="pillar-name">Protection</div>
+          <div>
+            <div class="pillar-claim">A child needs to be safe.</div>
+            <div class="pillar-desc">Safe spaces, prevention, risk identification, protocols and referral to specialised services when necessary.</div>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-name">Education</div>
+          <div>
+            <div class="pillar-claim">An uncertain road should not interrupt their learning.</div>
+            <div class="pillar-desc">Educational support, re-enrolment, school continuity, reading, creativity and links with educational institutions.</div>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-name">Wellbeing</div>
+          <div>
+            <div class="pillar-claim">They also need a place to play, express themselves and recover stability.</div>
+            <div class="pillar-desc">Play, sport, art, community life and psychosocial accompaniment through professionals where appropriate.</div>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-name">Family</div>
+          <div>
+            <div class="pillar-claim">Protecting a child also means strengthening their environment.</div>
+            <div class="pillar-desc">Guidance, accompaniment, referral and strengthening of the family's protective capacities.</div>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-name">Community</div>
+          <div>
+            <div class="pillar-claim">No family should walk alone.</div>
+            <div class="pillar-desc">Parishes, shelters, schools, professionals, companies, universities, volunteers and partner organisations.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="method">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">V</span>
+      <div>
+        <h2 class="sec-title">How we accompany <em>the road</em></h2>
+        <p class="sec-sub">Because the road does not end when an activity does.</p>
+      </div>
+    </div>
+
+    <div class="method reveal">
+      <div class="mstep">
+        <div class="mstep-word">See</div>
+        <div class="mstep-what">We come to know the reality of the child and their family.</div>
+      </div>
+      <div class="mstep">
+        <div class="mstep-word">Welcome</div>
+        <div class="mstep-what">We create a first encounter that is dignified, human and safe.</div>
+      </div>
+      <div class="mstep">
+        <div class="mstep-word">Protect</div>
+        <div class="mstep-what">We identify risks and activate the corresponding measures.</div>
+      </div>
+      <div class="mstep">
+        <div class="mstep-word">Promote</div>
+        <div class="mstep-what">We make education, play, development and opportunity possible.</div>
+      </div>
+      <div class="mstep">
+        <div class="mstep-word">Strengthen</div>
+        <div class="mstep-what">We accompany the family and its protective capacities.</div>
+      </div>
+      <div class="mstep">
+        <div class="mstep-word">Integrate</div>
+        <div class="mstep-what">We connect with community, school and support networks.</div>
+      </div>
+      <div class="mstep">
+        <div class="mstep-word">Accompany</div>
+        <div class="mstep-what">We stay present after the activity is over.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="centres" class="tinted">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">VI</span>
+      <div>
+        <h2 class="sec-title">A place where a child can feel like <em>a child again</em></h2>
+        <p class="sec-sub">The Centres, and the network that makes them possible.</p>
+      </div>
+    </div>
+
+    <div class="centre reveal">
+      <div class="centre-tag">Luz en el Camino Centres</div>
+      <div class="centre-title">Safe community spaces</div>
+      <p class="centre-desc">
+        Places where children and adolescents can find protection, accompaniment, education, play and community while their families go through situations of mobility. Today the Centres operate informally, through direct contact with those who accompany these families. That contact is the way in.
+      </p>
+      <div class="centre-items">
+        <div class="ci"><div class="ci-word">Learn</div><div class="ci-note">Educational support and formative activities.</div></div>
+        <div class="ci"><div class="ci-word">Play</div><div class="ci-note">Sport, art, recreation and time together.</div></div>
+        <div class="ci"><div class="ci-word">Be heard</div><div class="ci-note">Accompaniment and space to express themselves.</div></div>
+        <div class="ci"><div class="ci-word">Connect</div><div class="ci-note">Access to support networks and services.</div></div>
+        <div class="ci"><div class="ci-word">Grow</div><div class="ci-note">An environment that gives childhood back some stability.</div></div>
+      </div>
+      <p class="centre-close">We do not only want to build centres. We want to build places of belonging.</p>
+    </div>
+
+    <div class="reveal">
+      <div class="statement wide">One light <span class="soft">can light another.</span></div>
+      <p class="statement-note">
+        Luz en el Camino is conceived as a network, because protecting childhood takes more than a single organisation. It takes communities willing to open their doors, professionals willing to put their knowledge at the service of others, schools willing to receive, parishes willing to accompany, shelters willing to collaborate, companies willing to contribute and people willing to serve.
+      </p>
+
+      <div class="network">
+        <span>Parishes</span><span>Shelters</span><span>Schools</span><span>Professionals</span><span>Companies</span><span>Universities</span><span>Volunteers</span><span>Partner organisations</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="guardians">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">VII</span>
+      <div>
+        <h2 class="sec-title">There are people who decide <em>not to walk past</em></h2>
+        <p class="sec-sub">They are the Guardians of Childhood.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        A Guardian is not simply someone who wants to help. It is someone who decides to be prepared to accompany. Who understands that a child's vulnerability demands prudence. Who knows how to listen. Who knows how to respect limits. Who knows when to act. And above all, who understands that <strong>serving a child is a responsibility.</strong>
+      </p>
+
+      <div class="guardian-verbs">
+        <span>Sees</span><span>Listens</span><span>Protects</span><span>Accompanies</span><span>Serves</span>
+      </div>
+
+      <div class="statement wide reveal">Good will <span class="soft">needs preparation.</span></div>
+      <p class="statement-note">
+        When we work with vulnerable children, wanting to help is not enough. Charity needs prudence. Service needs preparation. Trust needs responsibility. Which is why we are building a culture of child protection based on protocols, training, supervision, confidentiality and professional referral.
+      </p>
+
+      <div class="statement reveal">We never improvise with <span class="soft">a child's vulnerability.</span></div>
+
+      <div class="reveal">
+        <p class="lead"><strong>And we know where our limits are.</strong> Luz en el Camino does not replace:</p>
+        <div class="limits">
+          <span>the family</span><span>the authorities</span><span>schools</span><span>health professionals</span><span>psychologists</span><span>lawyers</span><span>shelters</span><span>specialised institutions</span>
+        </div>
+        <p class="lead">What we do:</p>
+        <div class="doweare">
+          <span>Accompany</span><span>Protect</span><span>Coordinate</span><span>Strengthen</span><span>Refer</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="dignity" class="tinted">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">VIII</span>
+      <div>
+        <h2 class="sec-title">Dignity before <em>pity</em></h2>
+        <p class="sec-sub">Our promise about how we tell this story.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="statement wide" style="margin-top:0;">We will never use a child's suffering <span class="soft">to sell compassion.</span></div>
+      <p class="statement-note">
+        We do not want a child to be known for their pain. We want them to be known for their dignity. We do not want to display vulnerability: we want to protect it. We do not want to tell stories that provoke pity, but stories that awaken responsibility and hope.
+      </p>
+
+      <p class="lead">
+        For the same reason, we do not measure this work in figures that do not yet exist. <strong>Our impact is not measured only in people served.</strong>
+      </p>
+
+      <div class="impact">
+        <div>A child who goes back to school.</div>
+        <div>A child who plays again.</div>
+        <div>A family that finds a network.</div>
+        <div>A situation of risk that was caught in time.</div>
+        <div>A volunteer who learned how to protect.</div>
+        <div>A parish that opened its doors.</div>
+        <div>A community that learned how to welcome.</div>
+      </div>
+
+      <p class="lead" style="margin-top:34px;">
+        Because the real result is not how many children we served. <strong>It is how many children got to keep being children.</strong>
+      </p>
+
+      <div class="statement wide reveal">That no migrant child in Mexico <span class="soft">should lose their childhood because of migration.</span></div>
+      <p class="statement-note">
+        We dream of a national network of communities able to welcome, protect, promote, accompany and integrate children and families in contexts of mobility. A network that makes it possible for no child to have to walk alone, even in the middle of an uncertain road.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="take-part">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">IX</span>
+      <div>
+        <h2 class="sec-title">You can put a light <em>on the road</em></h2>
+        <p class="sec-sub">Four ways in. All of them start with a conversation.</p>
+      </div>
+    </div>
+
+    <div class="paths reveal">
+      <a class="path" href="mailto:mario@metanoiagroup.vip?subject=Luz%20en%20el%20Camino%20%E2%80%94%20I%20want%20to%20be%20a%20Guardian" onclick="gtag('event','click',{'event_category':'contact','event_label':'path_guardian_mgz2d'})">
+        <div class="path-want">I want to serve</div>
+        <div class="path-who">Become a Guardian of Childhood.</div>
+        <div class="path-go">Let's talk <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="path" href="mailto:mario@metanoiagroup.vip?subject=Luz%20en%20el%20Camino%20%E2%80%94%20I%20want%20to%20partner" onclick="gtag('event','click',{'event_category':'contact','event_label':'path_aliado_mgz2d'})">
+        <div class="path-want">I want to partner</div>
+        <div class="path-who">Put your company, school, parish, profession or institution at the service of this work.</div>
+        <div class="path-go">Let's talk <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="path" href="mailto:mario@metanoiagroup.vip?subject=Luz%20en%20el%20Camino%20%E2%80%94%20I%20want%20to%20support" onclick="gtag('event','click',{'event_category':'contact','event_label':'path_apoyar_mgz2d'})">
+        <div class="path-want">I want to support</div>
+        <div class="path-who">Help us protect and accompany more children. Write to us and we will explain how.</div>
+        <div class="path-go">Let's talk <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="path" href="mailto:mario@metanoiagroup.vip?subject=Luz%20en%20el%20Camino%20%E2%80%94%20I%20want%20to%20know%20more" onclick="gtag('event','click',{'event_category':'contact','event_label':'path_conocer_mgz2d'})">
+        <div class="path-want">I want to know more</div>
+        <div class="path-who">Learn about the work and how we could collaborate.</div>
+        <div class="path-go">Let's talk <span class="arrow">&rarr;</span></div>
+      </a>
+    </div>
+
+    <div class="initiator reveal">
+      <div class="init-label">The initiator</div>
+      <div class="init-name">Mario Garza Livas</div>
+      <div class="init-role">Chief Strategic Advisor · Founder · CEO @ The Metanoia Group</div>
+      <p class="init-words">
+        Today Luz en el Camino runs through direct contact. <strong>If you want to serve, partner, support or simply get to know the work, that contact is me.</strong> Write to me and let's talk.
+      </p>
+
+      <div class="contact-grid">
+        <a class="contact-item" href="mailto:mario@metanoiagroup.vip?subject=Luz%20en%20el%20Camino" onclick="gtag('event','click',{'event_category':'contact','event_label':'email_mgz2d'})">
+          <div class="contact-label">Email</div>
+          <div class="contact-value">mario@metanoiagroup.vip</div>
+        </a>
+        <a class="contact-item" href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp_mgz2d'})">
+          <div class="contact-label">Phone &amp; WhatsApp</div>
+          <div class="contact-value">+52 (81) 2513 6784</div>
+        </a>
+        <a class="contact-item" href="https://www.linkedin.com/in/garzalivas/?locale=en-US" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'contact','event_label':'linkedin_mgz2d'})">
+          <div class="contact-label">LinkedIn</div>
+          <div class="contact-value">linkedin.com/in/garzalivas</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="links" class="tinted">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">X</span>
+      <div>
+        <h2 class="sec-title">Relevant <em>links</em></h2>
+        <p class="sec-sub">The rest of the ecosystem.</p>
+      </div>
+    </div>
+
+    <div class="eco-grid reveal">
+      <a class="eco-card" href="mgz2.html">
+        <div class="eco-code">Portfolio</div>
+        <div class="eco-name">Apostolate Portfolio</div>
+        <p class="eco-desc">Luz en el Camino is one of seven apostolates. Here are the other six.</p>
+        <div class="eco-url">mgz2 <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="eco-card" href="mgz1-d.html">
+        <div class="eco-code">Language</div>
+        <div class="eco-name">Luz en el Camino</div>
+        <p class="eco-desc">This same page, in Spanish.</p>
+        <div class="eco-url">mgz1-d <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="eco-card" href="mgl2.html">
+        <div class="eco-code">Personal</div>
+        <div class="eco-name">Mario Garza Livas</div>
+        <p class="eco-desc">Personal landing page: contact, documents and the rest of the projects.</p>
+        <div class="eco-url">mgl2 <span class="arrow">&rarr;</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="closing">
+  <div class="wrap">
+    <div class="close-line reveal">The road can be uncertain.</div>
+    <div class="close-rule"></div>
+    <div class="close-line faded reveal">Childhood should not be.</div>
+    <p class="close-final reveal" style="margin-top:38px;">Luz en el Camino · We protect childhood while the journey continues.</p>
+    <a class="btn btn-ghost reveal" href="mgz2.html">Back to the portfolio</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-brand">Luz en el Camino</div>
+    <div class="footer-tagline">Welcome · Protect · Promote · Accompany</div>
+    <div class="footer-origin">Monterrey, Nuevo León, Mexico.</div>
+
+    <div class="footer-cols">
+      <div class="footer-col">
+        <div class="footer-col-title">The work</div>
+        <a href="#why">Why we exist</a>
+        <a href="#faith">Our faith</a>
+        <a href="#mission">What we do</a>
+        <a href="#method">Our method</a>
+        <a href="#centres">Centres &amp; network</a>
+        <a href="#guardians">Guardians of Childhood</a>
+        <a href="#dignity">Dignity before pity</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Initiator</div>
+        <div class="who">Mario Garza Livas</div>
+        <div>Chief Strategic Advisor · Founder · CEO @ The Metanoia Group</div>
+        <a href="mailto:mario@metanoiagroup.vip">mario@metanoiagroup.vip</a>
+        <a href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp_footer_mgz2d'})">+52 (81) 2513 6784</a>
+        <a href="https://www.linkedin.com/in/garzalivas/?locale=en-US" target="_blank" rel="noopener">linkedin.com/in/garzalivas</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Ecosystem</div>
+        <a href="mgz2.html">Apostolate Portfolio</a>
+        <a href="mgl2.html">Mario Garza Livas</a>
+        <a href="https://metanoiagroup.vip/" target="_blank" rel="noopener">The Metanoia Group</a>
+        <a href="mgz1-d.html">Versión en español</a>
+      </div>
+    </div>
+
+    <div class="footer-admg-rule"></div>
+    <p class="footer-admg">Ad Majorem Dei Gloriam.</p>
+
+    <div class="footer-bottom">
+      <span class="copyright">© 2026 The Metanoia Group</span>
+      <a class="footer-en" href="mgz1-d.html">Versión en Español &rarr;</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const topbar = document.querySelector('nav.topbar');
+  const syncNavHeight = () => document.documentElement.style.setProperty('--nav-h', topbar.offsetHeight + 'px');
+  syncNavHeight();
+  if(window.ResizeObserver){ new ResizeObserver(syncNavHeight).observe(topbar); }
+  else { window.addEventListener('resize', syncNavHeight); }
+
+  const els = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    },{rootMargin:'0px 0px -8% 0px', threshold:0.08});
+    els.forEach(el=>io.observe(el));
+  } else {
+    els.forEach(el=>el.classList.add('in'));
+  }
+</script>
+
+</body>
+</html>

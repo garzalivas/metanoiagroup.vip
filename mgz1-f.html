@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="new_favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sintonía Católica — Portafolio de Apostolados</title>
+<meta name="description" content="Sintonía Católica — Fe, comunidad y deporte. Una comunidad deportiva católica nacida en Monterrey: competimos con intensidad, vivimos con coherencia y construimos comunidad. Running, triatlón, fútbol, tenis y más.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Sintonía Católica — Portafolio de Apostolados">
+<meta property="og:description" content="El deporte nos reúne. La fe nos une. Competimos con intensidad, vivimos con coherencia y construimos comunidad.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<meta property="og:site_name" content="The Metanoia Group">
+<meta property="og:image" content="https://metanoiagroup.vip/og-image-1.jpg">
+<meta property="og:url" content="https://metanoiagroup.vip/mgz1-f">
+<link rel="alternate" hreflang="es" href="https://metanoiagroup.vip/mgz1-f.html">
+<link rel="alternate" hreflang="en" href="https://metanoiagroup.vip/mgz2-f.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff;
+    --bg-alt:#f4f6f9;
+    --bg-card:#e4eaf1;
+    --text:#001830;
+    --text-dim:#93a0ae;
+    --text-muted:#4b5a6b;
+    --accent:#0a2e52;
+    --accent-deep:#001830;
+    --accent-soft:#b9c7d6;
+    --gold:#c0902f;
+    --gold-deep:#95701f;
+    --gold-dim:#e6ceA0;
+    --line:#00183014;
+    --line-strong:#00183024;
+    --serif:'Fraunces', Georgia, 'Times New Roman', serif;
+    --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --maxw:920px;
+    --nav-h:62px;
+    --anchor-gap:24px;
+    --sec-pad:88px;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;background:var(--bg);}
+
+  body{
+    background:var(--bg);color:var(--text);
+    font-family:var(--sans);font-weight:400;line-height:1.6;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+
+  a{color:inherit;text-decoration:none;}
+  ::selection{background:#c0902f33;color:var(--text);}
+  a:focus-visible, button:focus-visible{outline:1.5px solid var(--gold-deep);outline-offset:4px;}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;z-index:1;}
+
+  section{padding:var(--sec-pad) 0;scroll-margin-top:calc(var(--nav-h) + var(--anchor-gap));}
+  section.tinted{background:var(--bg-alt);}
+
+  /* ---------- NAV ---------- */
+  nav.topbar{
+    position:sticky;top:0;background:#ffffffe6;
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line-strong);z-index:50;
+  }
+  nav.topbar .inner{
+    max-width:var(--maxw);margin:0 auto;padding:16px 28px;
+    display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  }
+  .brandmark{font-family:var(--serif);font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:var(--text);font-weight:500;}
+  .nav-links{display:flex;gap:20px;align-items:center;flex-wrap:wrap;}
+  .nav-links a{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--text-muted);transition:color .25s ease;white-space:nowrap;}
+  .nav-links a:hover{color:var(--gold-deep);}
+  .nav-links a.pill{border:1px solid var(--line-strong);padding:6px 12px;border-radius:2px;}
+  .nav-links a.pill:hover{border-color:var(--gold);color:var(--gold-deep);}
+  .nav-links a.home{color:var(--gold-deep);}
+
+  /* ---------- HERO ---------- */
+  header.hero{padding:92px 0 74px;}
+  .hero-logo{height:132px;width:auto;max-width:128px;object-fit:contain;display:block;margin-bottom:42px;}
+  h1.name{
+    font-family:var(--serif);font-size:clamp(40px,7.6vw,76px);
+    line-height:1.02;font-weight:500;letter-spacing:-.022em;margin-bottom:30px;
+  }
+  h1.name .faint{color:var(--gold-deep);}
+  .hero-rule{width:54px;height:2px;background:var(--gold);margin-bottom:30px;}
+  .hero-triad{
+    font-family:var(--serif);font-size:clamp(18px,2.6vw,23px);
+    line-height:1.5;color:var(--text);margin-bottom:26px;max-width:30ch;
+  }
+  p.lede{font-size:clamp(16.5px,2vw,18.5px);color:var(--text-muted);max-width:58ch;line-height:1.72;margin-bottom:22px;}
+  .hero-origin{font-family:var(--serif);font-size:15.5px;font-style:italic;color:var(--text-muted);margin-bottom:38px;}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{display:inline-block;font-size:13px;letter-spacing:.06em;padding:13px 24px;border-radius:2px;transition:background .25s ease,color .25s ease,border-color .25s ease;}
+  .btn-primary{background:var(--accent-deep);color:#fff;border:1px solid var(--accent-deep);}
+  .btn-primary:hover{background:var(--gold-deep);border-color:var(--gold-deep);}
+  .btn-ghost{border:1px solid var(--line-strong);color:var(--text-muted);}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold-deep);}
+
+  /* ---------- DARK BAND ---------- */
+  .band{background:var(--text);color:#e6ecf3;padding:96px 0;}
+  .band-q{
+    font-family:var(--serif);font-size:clamp(28px,5.2vw,50px);
+    line-height:1.14;font-weight:400;letter-spacing:-.02em;max-width:18ch;color:#ffffff;
+  }
+  .band-list{margin-top:40px;max-width:52ch;}
+  .band-list div{
+    font-size:clamp(15px,2.1vw,17px);line-height:1.5;
+    padding:11px 0;border-bottom:1px solid #ffffff17;color:#e6ecf3b3;
+  }
+  .band-list div:last-child{border-bottom:none;}
+  .band-rule{width:44px;height:2px;background:var(--gold);margin:40px 0 34px;}
+  .band-triad{display:flex;flex-wrap:wrap;gap:12px;}
+  .band-triad span{
+    font-family:var(--serif);font-size:clamp(16px,2.3vw,20px);letter-spacing:.05em;
+    color:var(--gold-dim);border:1px solid #ffffff26;padding:11px 20px;border-radius:2px;
+  }
+  .band-note{font-size:15.5px;color:#e6ecf3aa;max-width:56ch;margin-top:34px;line-height:1.78;}
+  .band-note strong{color:#ffffff;font-weight:400;}
+
+  /* ---------- SECTION HEADS ---------- */
+  .sec-head{display:flex;gap:20px;align-items:flex-start;margin-bottom:44px;}
+  .sec-num{font-family:var(--serif);font-size:13px;letter-spacing:.14em;color:var(--gold-deep);padding-top:10px;min-width:34px;font-weight:500;}
+  h2.sec-title{font-family:var(--serif);font-size:clamp(27px,4.1vw,38px);font-weight:400;line-height:1.16;letter-spacing:-.012em;margin-bottom:10px;}
+  h2.sec-title em{font-style:italic;color:var(--gold-deep);font-weight:400;}
+  .sec-sub{font-size:15px;color:var(--text-muted);max-width:62ch;line-height:1.66;}
+
+  p.lead{font-size:16.5px;line-height:1.78;color:var(--text-muted);max-width:66ch;margin-bottom:22px;}
+  p.lead strong{color:var(--text);font-weight:500;}
+
+  .statement{font-family:var(--serif);font-size:clamp(26px,4.6vw,42px);line-height:1.18;font-weight:400;letter-spacing:-.016em;margin:54px 0;max-width:20ch;}
+  .statement.wide{max-width:28ch;}
+  .statement .soft{color:var(--text-muted);font-weight:300;}
+  .statement-note{font-size:15px;color:var(--text-muted);max-width:60ch;margin-top:-32px;margin-bottom:54px;line-height:1.7;}
+
+  /* ---------- TRIAD ---------- */
+  .triad{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);margin:36px 0 10px;}
+  .tri{background:var(--bg);padding:30px 24px;}
+  .tri-word{font-family:var(--serif);font-size:clamp(22px,3.2vw,28px);letter-spacing:.07em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;}
+  .tri-role{font-family:var(--serif);font-size:16px;font-style:italic;color:var(--gold-deep);margin-bottom:14px;}
+  .tri-desc{font-size:14px;color:var(--text-muted);line-height:1.68;}
+
+  /* ---------- METHOD ---------- */
+  .method{counter-reset:mt;margin:34px 0 8px;border-top:1px solid var(--line-strong);}
+  .mstep{counter-increment:mt;display:grid;grid-template-columns:52px 178px 1fr;gap:20px;padding:22px 0;border-bottom:1px solid var(--line);align-items:baseline;}
+  .mstep::before{content:counter(mt,decimal-leading-zero);font-family:var(--serif);font-size:13px;color:var(--gold-deep);letter-spacing:.1em;}
+  .mstep-word{font-family:var(--serif);font-size:clamp(18px,2.6vw,22px);letter-spacing:.06em;text-transform:uppercase;color:var(--accent);}
+  .mstep-tag{font-family:var(--serif);font-size:16px;font-style:italic;color:var(--text);margin-bottom:7px;}
+  .mstep-desc{font-size:14.5px;color:var(--text-muted);line-height:1.7;}
+  @media (max-width:640px){.mstep{grid-template-columns:44px 1fr;gap:8px 16px;}.mstep > div:last-child{grid-column:2;}}
+
+  /* ---------- WIN / LOSE ---------- */
+  .winlose{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);margin:36px 0 10px;}
+  .wl{background:var(--bg);padding:30px 26px;}
+  .wl-when{font-family:var(--serif);font-size:15px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:16px;}
+  .wl-list{font-family:var(--serif);font-size:17px;color:var(--text-muted);line-height:2;}
+  .wl-close{font-family:var(--serif);font-size:17px;font-style:italic;color:var(--text);margin-top:16px;padding-top:16px;border-top:1px solid var(--line);}
+
+  /* ---------- VIRTUES ---------- */
+  .virtues{display:flex;flex-wrap:wrap;gap:12px;margin:34px 0;}
+  .virtues span{
+    font-family:var(--serif);font-size:clamp(17px,2.5vw,22px);letter-spacing:.07em;text-transform:uppercase;
+    color:var(--accent);border:1px solid var(--accent-soft);padding:11px 20px;border-radius:2px;
+  }
+
+  /* ---------- SPORTS ---------- */
+  .sports{display:grid;grid-template-columns:repeat(auto-fit,minmax(192px,1fr));gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);margin:34px 0 10px;}
+  .sport{background:var(--bg);padding:26px 22px;}
+  .sport-name{font-family:var(--serif);font-size:19px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:8px;}
+  .sport-note{font-size:13.5px;color:var(--text-muted);line-height:1.6;}
+
+  /* ---------- IF YOU ---------- */
+  .ifyou{border-top:1px solid var(--line-strong);margin:8px 0 0;}
+  .ifyou div{
+    font-family:var(--serif);font-size:clamp(17px,2.5vw,21px);
+    color:var(--text);padding:16px 0;border-bottom:1px solid var(--line);line-height:1.45;
+  }
+
+  /* ---------- MEMBER ---------- */
+  .member{display:grid;grid-template-columns:repeat(auto-fit,minmax(196px,1fr));gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);margin-top:34px;}
+  .member div{background:var(--bg);padding:19px 20px;font-family:var(--serif);font-size:16px;color:var(--text-muted);}
+
+  /* ---------- CODE (dark) ---------- */
+  .code{background:var(--text);color:#e6ecf3;padding:96px 0;scroll-margin-top:calc(var(--nav-h) + var(--anchor-gap));}
+  .code-title{font-family:var(--serif);font-size:clamp(30px,5.4vw,50px);letter-spacing:.05em;text-transform:uppercase;font-weight:400;margin-bottom:12px;color:#ffffff;}
+  .code-sub{font-size:15px;color:#e6ecf399;margin-bottom:44px;max-width:52ch;line-height:1.7;}
+  .code-list{counter-reset:cd;}
+  .code-item{
+    counter-increment:cd;display:grid;grid-template-columns:56px 1fr;gap:18px;
+    padding:16px 0;border-bottom:1px solid #ffffff14;align-items:baseline;
+  }
+  .code-item:last-child{border-bottom:none;}
+  .code-item::before{
+    content:counter(cd,decimal-leading-zero);
+    font-family:var(--serif);font-size:13px;color:var(--gold-dim);letter-spacing:.1em;
+  }
+  .code-text{font-family:var(--serif);font-size:clamp(17px,2.5vw,21px);line-height:1.45;color:#f2f5f9;}
+
+  /* ---------- LADDER ---------- */
+  .ladder{display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px;margin:34px 0 8px;}
+  .ladder .node{
+    font-family:var(--serif);font-size:16px;letter-spacing:.06em;text-transform:uppercase;
+    border:1px solid var(--line-strong);padding:10px 18px;border-radius:2px;background:var(--bg);
+  }
+  .ladder .node.lit{border-color:var(--gold);color:var(--gold-deep);}
+  .ladder .link{color:var(--text-dim);font-size:14px;}
+
+  /* ---------- PATHS ---------- */
+  .paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:16px;margin-top:10px;}
+  a.path{border:1px solid var(--line-strong);border-radius:3px;padding:28px 24px;background:var(--bg);transition:border-color .3s ease,background .3s ease;}
+  a.path:hover{border-color:var(--gold);background:var(--bg-alt);}
+  .path-want{font-family:var(--serif);font-size:19px;color:var(--text);margin-bottom:10px;line-height:1.35;}
+  .path-who{font-size:14px;color:var(--text-muted);line-height:1.65;margin-bottom:16px;}
+  .path-go{font-size:12.5px;letter-spacing:.06em;color:var(--text-dim);transition:color .25s ease;}
+  a.path:hover .path-go{color:var(--gold-deep);}
+  .path-go .arrow{display:inline-block;transition:transform .25s ease;}
+  a.path:hover .path-go .arrow{transform:translateX(4px);}
+
+  /* ---------- INITIATOR ---------- */
+  .initiator{border:1px solid var(--line-strong);border-radius:3px;padding:34px 32px;background:var(--bg);margin-top:36px;}
+  .init-label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:14px;}
+  .init-name{font-family:var(--serif);font-size:27px;font-weight:500;letter-spacing:-.005em;}
+  .init-role{font-size:13.5px;color:var(--text-muted);margin-top:7px;letter-spacing:.02em;}
+  .init-words{font-size:15.5px;color:var(--text-muted);line-height:1.76;margin-top:22px;max-width:62ch;}
+  .init-words strong{color:var(--text);font-weight:500;}
+
+  .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(224px,1fr));gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);margin-top:26px;}
+  .contact-item{background:var(--bg-alt);padding:22px 20px;transition:background .25s ease;}
+  .contact-item:hover{background:var(--bg-card);}
+  .contact-label{font-size:11px;letter-spacing:.17em;text-transform:uppercase;color:var(--text-dim);margin-bottom:8px;}
+  .contact-value{font-size:15px;color:var(--text);word-break:break-word;}
+
+  /* ---------- ECOSYSTEM ---------- */
+  .eco-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:16px;}
+  a.eco-card{background:var(--bg-alt);border:1px solid var(--line);border-radius:3px;padding:24px 22px;transition:background .25s ease,border-color .25s ease;}
+  a.eco-card:hover{background:var(--bg-card);border-color:var(--line-strong);}
+  .eco-code{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:11px;}
+  .eco-name{font-family:var(--serif);font-size:18px;font-weight:500;margin-bottom:8px;line-height:1.25;}
+  .eco-desc{font-size:14px;color:var(--text-muted);line-height:1.66;margin-bottom:14px;}
+  .eco-url{font-size:12.5px;color:var(--text-dim);display:flex;align-items:center;gap:6px;}
+  a.eco-card:hover .eco-url{color:var(--gold-deep);}
+  .eco-url .arrow{transition:transform .25s ease;}
+  a.eco-card:hover .eco-url .arrow{transform:translateX(4px);}
+
+  /* ---------- CLOSING ---------- */
+  .closing{text-align:center;padding:104px 0 88px;background:var(--bg-alt);border-top:1px solid var(--line-strong);}
+  .close-line{font-family:var(--serif);font-size:clamp(28px,5.4vw,48px);line-height:1.2;font-weight:400;letter-spacing:-.018em;text-wrap:balance;}
+  .close-line.faded{color:var(--text-muted);font-weight:300;}
+  .close-rule{width:40px;height:1px;background:var(--gold);margin:32px auto;}
+  .close-final{font-family:var(--serif);font-size:clamp(19px,3vw,26px);line-height:1.4;max-width:62ch;text-wrap:balance;margin:0 auto 38px;color:var(--gold-deep);font-style:italic;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--bg);border-top:1px solid var(--line-strong);padding:64px 0 54px;}
+  .footer-brand{font-family:var(--serif);font-size:20px;letter-spacing:.07em;text-transform:uppercase;font-weight:500;}
+  .footer-tagline{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--gold-deep);margin-top:9px;}
+  .footer-origin{font-size:14px;color:var(--text-muted);margin-top:10px;}
+  .footer-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:34px;margin-top:40px;}
+  .footer-col-title{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-dim);margin-bottom:14px;}
+  .footer-col a, .footer-col div{display:block;font-size:14px;color:var(--text-muted);margin-bottom:9px;line-height:1.5;}
+  .footer-col a{transition:color .25s ease;}
+  .footer-col a:hover{color:var(--gold-deep);}
+  .footer-col .who{color:var(--text);font-weight:500;}
+  .footer-admg-rule{width:28px;height:1px;background:var(--gold);margin-top:40px;}
+  .footer-admg{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--text-dim);margin-top:14px;}
+  .footer-bottom{margin-top:38px;padding-top:22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:12.5px;color:var(--text-dim);}
+  .footer-en{color:var(--text-muted);transition:color .25s ease;}
+  .footer-en:hover{color:var(--gold-deep);}
+
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}
+    .reveal{opacity:1;transform:none;}
+  }
+</style>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sintonía Católica — Portafolio de Apostolados">
+<meta name="twitter:description" content="El deporte nos reúne. La fe nos une. Competimos con intensidad, vivimos con coherencia y construimos comunidad.">
+<meta name="twitter:image" content="https://metanoiagroup.vip/og-image-1.jpg">
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KHNZVPJX1N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KHNZVPJX1N');
+</script>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="inner">
+    <div class="brandmark">Sintonía Católica</div>
+    <div class="nav-links">
+      <a href="#que-es">Qué es</a>
+      <a href="#competencia">Competir</a>
+      <a href="#comunidad">Comunidad</a>
+      <a href="#codigo">El Código</a>
+      <a class="home" href="mgz1.html">Portafolio</a>
+      <a class="pill" href="mgz2-f.html">EN</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="hero-logo" src="sintonia-logo.png" alt="Sintonía Católica" width="128" height="132">
+    <h1 class="name">Fe.<br>Comunidad.<br><span class="faint">Deporte.</span></h1>
+    <div class="hero-rule"></div>
+    <p class="hero-triad">Competimos con intensidad.<br>Vivimos con coherencia.<br>Construimos comunidad.</p>
+    <p class="lede">
+      Una comunidad deportiva donde la fe se encuentra con el deporte, la amistad y la vida cotidiana.
+    </p>
+    <p class="hero-origin">Monterrey, Nuevo León, México.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#formar-parte">Quiero ser parte</a>
+      <a class="btn btn-ghost" href="#codigo">El Código Sintonía</a>
+    </div>
+  </div>
+</header>
+
+<div class="band">
+  <div class="wrap">
+    <p class="band-q reveal">La fe no termina al salir de la iglesia.</p>
+    <div class="band-list reveal">
+      <div>También está en el entrenamiento.</div>
+      <div>En el esfuerzo. En la disciplina.</div>
+      <div>En la manera en que competimos.</div>
+      <div>En cómo tratamos al rival.</div>
+      <div>En cómo reaccionamos ante la derrota.</div>
+      <div>En cómo celebramos la victoria.</div>
+      <div>En las amistades que construimos.</div>
+      <div>En las familias que acompañamos.</div>
+      <div>En el servicio que somos capaces de ofrecer.</div>
+    </div>
+    <div class="band-rule reveal"></div>
+    <div class="band-triad reveal">
+      <span>Entrenamos el cuerpo</span><span>Formamos el carácter</span><span>Construimos comunidad</span>
+    </div>
+    <p class="band-note reveal">
+      Por eso hacemos deporte. No para separar nuestra fe de nuestra vida, sino para aprender a vivirla también aquí. <strong>Esto es Sintonía Católica.</strong>
+    </p>
+  </div>
+</div>
+
+<section id="que-es">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">I</span>
+      <div>
+        <h2 class="sec-title">El deporte nos reúne. La fe <em>nos une</em></h2>
+        <p class="sec-sub">Qué es Sintonía Católica.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        Sintonía Católica es un apostolado deportivo nacido en Monterrey que reúne a personas y familias que comparten la fe católica alrededor de una pasión común: el deporte.
+      </p>
+      <p class="lead">
+        Participamos en entrenamientos y competencias —desde running, maratones y triatlones hasta fútbol, tenis y otras disciplinas— creando espacios donde las personas puedan conocerse, compartir, competir y construir relaciones <strong>que trasciendan la cancha.</strong>
+      </p>
+
+      <div class="statement wide reveal">El deporte es el punto de encuentro. <span class="soft">La comunidad es el destino.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="pilares" class="tinted">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">II</span>
+      <div>
+        <h2 class="sec-title">Fe, deporte y comunidad. <em>Una misma sintonía</em></h2>
+        <p class="sec-sub">Tres palabras, y el papel que juega cada una.</p>
+      </div>
+    </div>
+
+    <div class="triad reveal">
+      <div class="tri">
+        <div class="tri-word">Fe</div>
+        <div class="tri-role">El fundamento.</div>
+        <div class="tri-desc">Somos católicos y queremos vivir nuestra fe con naturalidad en todos los ámbitos de nuestra vida. No la entendemos como algo separado del entrenamiento, la competencia, la amistad o la familia.</div>
+      </div>
+      <div class="tri">
+        <div class="tri-word">Deporte</div>
+        <div class="tri-role">El vehículo.</div>
+        <div class="tri-desc">Entrenamos. Nos preparamos. Competimos. Nos tomamos el deporte en serio porque creemos que la disciplina, el esfuerzo y la excelencia también pueden formar el carácter.</div>
+      </div>
+      <div class="tri">
+        <div class="tri-word">Comunidad</div>
+        <div class="tri-role">El fruto.</div>
+        <div class="tri-desc">Venimos por el deporte, pero queremos quedarnos por las personas. Construimos amistades, integramos familias y generamos vínculos que pueden trascender mucho más allá de una competencia.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="metodo">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">III</span>
+      <div>
+        <h2 class="sec-title">Una forma distinta de vivir <em>el deporte</em></h2>
+        <p class="sec-sub">Cinco etapas, y ninguna termina cuando termina el partido.</p>
+      </div>
+    </div>
+
+    <div class="method reveal">
+      <div class="mstep">
+        <div class="mstep-word">Entrenar</div>
+        <div>
+          <div class="mstep-tag">Disciplina.</div>
+          <div class="mstep-desc">Prepararnos exige constancia, esfuerzo y compromiso.</div>
+        </div>
+      </div>
+      <div class="mstep">
+        <div class="mstep-word">Competir</div>
+        <div>
+          <div class="mstep-tag">Excelencia.</div>
+          <div class="mstep-desc">Entramos a la cancha, a la pista o al recorrido para dar lo mejor de nosotros.</div>
+        </div>
+      </div>
+      <div class="mstep">
+        <div class="mstep-word">Convivir</div>
+        <div>
+          <div class="mstep-tag">Amistad.</div>
+          <div class="mstep-desc">La competencia termina. La amistad permanece.</div>
+        </div>
+      </div>
+      <div class="mstep">
+        <div class="mstep-word">Crecer</div>
+        <div>
+          <div class="mstep-tag">Carácter.</div>
+          <div class="mstep-desc">La victoria enseña. La derrota también. Cada competencia puede revelar algo de nosotros mismos.</div>
+        </div>
+      </div>
+      <div class="mstep">
+        <div class="mstep-word">Servir</div>
+        <div>
+          <div class="mstep-tag">Apostolado.</div>
+          <div class="mstep-desc">Nuestros talentos, nuestras relaciones y nuestra comunidad pueden convertirse en instrumentos para algo más grande que nosotros mismos.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="competencia" class="tinted">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">IV</span>
+      <div>
+        <h2 class="sec-title">Queremos ganar. Pero no <em>a cualquier precio</em></h2>
+        <p class="sec-sub">Nuestra filosofía de la competencia.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        Sí. Nos gusta competir. Nos gusta mejorar. Nos gusta exigirnos. Nos gusta buscar la excelencia. <strong>Nos gusta ganar.</strong>
+      </p>
+      <p class="lead">
+        Y al mismo tiempo: una victoria no nos hace superiores. Una derrota no nos hace inferiores. El rival no es un enemigo. La intensidad no justifica la falta de respeto. El resultado importa, <strong>pero la persona importa más.</strong>
+      </p>
+
+      <div class="winlose">
+        <div class="wl">
+          <div class="wl-when">Cuando ganamos</div>
+          <div class="wl-list">Agradecemos.<br>Celebramos.<br>Reconocemos el esfuerzo.<br>Evitamos la soberbia.<br>Seguimos entrenando.</div>
+          <div class="wl-close">Ganar no nos define.</div>
+        </div>
+        <div class="wl">
+          <div class="wl-when">Cuando perdemos</div>
+          <div class="wl-list">Aprendemos.<br>Reconocemos errores.<br>Aceptamos la frustración.<br>Cuidamos al equipo.<br>Volvemos a entrenar.</div>
+          <div class="wl-close">Perder tampoco nos define.</div>
+        </div>
+      </div>
+
+      <div class="statement wide reveal">El marcador mide un resultado. <span class="soft">No mide el valor de una persona.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="caracter">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">V</span>
+      <div>
+        <h2 class="sec-title">El cuerpo entrena. El carácter <em>también</em></h2>
+        <p class="sec-sub">Lo que el deporte exige además de capacidad física.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="virtues">
+        <span>Disciplina</span><span>Fortaleza</span><span>Perseverancia</span><span>Templanza</span><span>Humildad</span><span>Respeto</span><span>Generosidad</span><span>Coherencia</span>
+      </div>
+
+      <p class="lead">
+        Cansancio. Presión. Frustración. Rivalidad. Derrota. Victoria. Trabajo en equipo. En cada una de esas situaciones existe una oportunidad para crecer.
+      </p>
+      <p class="lead">
+        <strong>No buscamos solamente mejores deportistas. Buscamos mejores personas.</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="comunidad" class="tinted">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">VI</span>
+      <div>
+        <h2 class="sec-title">Venimos por el deporte. Nos quedamos <em>por las personas</em></h2>
+        <p class="sec-sub">Lo que sucede después del partido.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        Sintonía no termina cuando termina el partido. Queremos que las personas se conozcan de verdad. Que los compañeros se conviertan en amigos. Que los amigos conozcan a sus familias. Que las familias encuentren otras familias. Que una competencia pueda convertirse en una amistad, y que una amistad pueda convertirse en comunidad.
+      </p>
+
+      <div class="statement wide reveal">El equipo es la puerta de entrada. <span class="soft">La comunidad es el verdadero patrimonio.</span></div>
+
+      <p class="lead">
+        Y creemos que la experiencia deportiva puede trascender al deportista. Queremos crear espacios donde esposos, padres, hijos y familias puedan acompañarse, convivir y formar parte de una comunidad más amplia. <strong>Porque una comunidad fuerte no solamente reúne individuos: construye vínculos entre familias.</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="disciplinas">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">VII</span>
+      <div>
+        <h2 class="sec-title">Muchos deportes. Una misma <em>identidad</em></h2>
+        <p class="sec-sub">No importa cuál sea tu disciplina: lo que compartimos está por encima de ella.</p>
+      </div>
+    </div>
+
+    <div class="sports reveal">
+      <div class="sport">
+        <div class="sport-name">Running</div>
+        <div class="sport-note">Carreras · Medio maratón · Maratón</div>
+      </div>
+      <div class="sport">
+        <div class="sport-name">Triatlón</div>
+        <div class="sport-note">Triatlón · Ironman</div>
+      </div>
+      <div class="sport">
+        <div class="sport-name">Fútbol</div>
+        <div class="sport-note">Equipos y torneos</div>
+      </div>
+      <div class="sport">
+        <div class="sport-name">Tenis</div>
+        <div class="sport-note">Individual y dobles</div>
+      </div>
+      <div class="sport">
+        <div class="sport-name">Y más</div>
+        <div class="sport-note">Nuevas disciplinas conforme crece la comunidad.</div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="statement">Quizá Sintonía <span class="soft">es para ti.</span></div>
+
+      <div class="ifyou">
+        <div>Si te gusta competir.</div>
+        <div>Si quieres entrenar con disciplina.</div>
+        <div>Si buscas amistades que compartan tu fe.</div>
+        <div>Si quieres vivir tu catolicismo con naturalidad.</div>
+        <div>Si quieres compartir el deporte con tu familia.</div>
+        <div>Si entiendes que ganar no lo es todo.</div>
+        <div>Si quieres formar parte de algo que trascienda una competencia.</div>
+        <div>Si quieres poner tus talentos al servicio de otros.</div>
+      </div>
+
+      <div class="statement wide reveal">No necesitas ser el mejor atleta. <span class="soft">Necesitas estar dispuesto a dar lo mejor de ti.</span></div>
+
+      <div class="member">
+        <div>Entrena con disciplina.</div>
+        <div>Compite con intensidad.</div>
+        <div>Respeta al rival.</div>
+        <div>Cuida al compañero.</div>
+        <div>Celebra sin soberbia.</div>
+        <div>Pierde sin resentimiento.</div>
+        <div>Construye amistad.</div>
+        <div>Integra a su familia.</div>
+        <div>Vive su fe.</div>
+        <div>Sirve.</div>
+      </div>
+
+      <p class="lead" style="margin-top:34px;">
+        <strong>El deportista de Sintonía no busca solamente mejorar su rendimiento. Busca convertirse en una mejor versión de sí mismo.</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="code" id="codigo">
+  <div class="wrap">
+    <div class="code-title reveal">Nuestro Código</div>
+    <p class="code-sub reveal">Doce puntos. No son reglas del reglamento: son la manera en que queremos estar en la cancha y fuera de ella.</p>
+    <div class="code-list reveal">
+      <div class="code-item"><div class="code-text">Entrenamos con disciplina.</div></div>
+      <div class="code-item"><div class="code-text">Competimos con intensidad.</div></div>
+      <div class="code-item"><div class="code-text">Respetamos al rival.</div></div>
+      <div class="code-item"><div class="code-text">Nunca sacrificamos la dignidad por una victoria.</div></div>
+      <div class="code-item"><div class="code-text">Ganamos con humildad.</div></div>
+      <div class="code-item"><div class="code-text">Perdemos con entereza.</div></div>
+      <div class="code-item"><div class="code-text">Cuidamos a nuestros compañeros.</div></div>
+      <div class="code-item"><div class="code-text">Construimos amistades que trascienden el deporte.</div></div>
+      <div class="code-item"><div class="code-text">Integramos a nuestras familias.</div></div>
+      <div class="code-item"><div class="code-text">Vivimos nuestra fe con coherencia.</div></div>
+      <div class="code-item"><div class="code-text">Servimos con nuestros talentos.</div></div>
+      <div class="code-item"><div class="code-text">Dejamos la comunidad mejor de como la encontramos.</div></div>
+    </div>
+  </div>
+</div>
+
+<section id="mas-alla" class="tinted">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">VIII</span>
+      <div>
+        <h2 class="sec-title">Lo que empieza en la cancha puede ir <em>mucho más lejos</em></h2>
+        <p class="sec-sub">Una amistad puede convertirse en comunidad, y una comunidad en misión.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="ladder">
+        <span class="node">Amistad</span><span class="link">&rarr;</span>
+        <span class="node">Familia</span><span class="link">&rarr;</span>
+        <span class="node">Comunidad</span><span class="link">&rarr;</span>
+        <span class="node">Servicio</span><span class="link">&rarr;</span>
+        <span class="node lit">Apostolado</span>
+      </div>
+
+      <p class="lead" style="margin-top:30px;">
+        Un equipo puede convertirse en comunidad. Una comunidad puede generar proyectos. Un talento puede convertirse en servicio. Una competencia puede abrir una puerta. Y una puerta puede conducir a un nuevo propósito.
+      </p>
+
+      <div class="statement wide reveal">Creemos que la fe <span class="soft">también se entrena.</span></div>
+      <p class="statement-note">
+        Se entrena cuando perseveramos. Se prueba cuando perdemos. Se revela cuando ganamos. Se comparte cuando hacemos comunidad. Y se hace visible cuando vivimos con coherencia.
+      </p>
+
+      <p class="lead">
+        Sintonía Católica nació en Monterrey con una idea sencilla: <strong>que hubiera un lugar donde católicos pudieran conocerse, compartir y competir juntos.</strong> Queremos que esa idea crezca. Que nuevas personas encuentren comunidad. Que nuevos equipos puedan formarse. Que nuevas disciplinas se incorporen. Que otras familias encuentren un lugar. Y que otras ciudades puedan algún día vivir esta misma experiencia.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="formar-parte">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">IX</span>
+      <div>
+        <h2 class="sec-title">¿Estás en <em>sintonía</em>?</h2>
+        <p class="sec-sub">Estamos construyendo una comunidad de personas y familias que quieren vivir la fe también en el deporte.</p>
+      </div>
+    </div>
+
+    <div class="paths reveal">
+      <a class="path" href="mailto:mario@metanoiagroup.vip?subject=Sinton%C3%ADa%20Cat%C3%B3lica%20%E2%80%94%20Quiero%20formar%20parte" onclick="gtag('event','click',{'event_category':'contact','event_label':'path_parte_mgz1f'})">
+        <div class="path-want">Quiero formar parte</div>
+        <div class="path-who">Entrena, compite y conoce la comunidad.</div>
+        <div class="path-go">Hablemos <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="path" href="mailto:mario@metanoiagroup.vip?subject=Sinton%C3%ADa%20Cat%C3%B3lica%20%E2%80%94%20Quiero%20integrar%20un%20equipo" onclick="gtag('event','click',{'event_category':'contact','event_label':'path_equipo_mgz1f'})">
+        <div class="path-want">Quiero integrar un equipo</div>
+        <div class="path-who">Para quienes quieren competir con nosotros o sumar una nueva disciplina.</div>
+        <div class="path-go">Hablemos <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="path" href="mailto:mario@metanoiagroup.vip?subject=Sinton%C3%ADa%20Cat%C3%B3lica%20%E2%80%94%20Quiero%20colaborar" onclick="gtag('event','click',{'event_category':'contact','event_label':'path_colaborar_mgz1f'})">
+        <div class="path-want">Quiero colaborar</div>
+        <div class="path-who">Para quienes quieren aportar a la comunidad o llevarla a su ciudad.</div>
+        <div class="path-go">Hablemos <span class="arrow">&rarr;</span></div>
+      </a>
+    </div>
+
+    <div class="initiator reveal">
+      <div class="init-label">El iniciador</div>
+      <div class="init-name">Mario Garza Livas</div>
+      <div class="init-role">Chief Strategic Advisor · Founder · CEO @ The Metanoia Group</div>
+      <p class="init-words">
+        Una misma fe. Una misma cultura. Muchas comunidades. <strong>Si quieres integrar un equipo, participar en una competencia, conocer la comunidad o colaborar con Sintonía, escríbeme.</strong>
+      </p>
+
+      <div class="contact-grid">
+        <a class="contact-item" href="mailto:mario@metanoiagroup.vip?subject=Sinton%C3%ADa%20Cat%C3%B3lica" onclick="gtag('event','click',{'event_category':'contact','event_label':'email_mgz1f'})">
+          <div class="contact-label">Correo</div>
+          <div class="contact-value">mario@metanoiagroup.vip</div>
+        </a>
+        <a class="contact-item" href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp_mgz1f'})">
+          <div class="contact-label">Teléfono &amp; WhatsApp</div>
+          <div class="contact-value">+52 (81) 2513 6784</div>
+        </a>
+        <a class="contact-item" href="https://linkedin.com/in/garzalivas" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'contact','event_label':'linkedin_mgz1f'})">
+          <div class="contact-label">LinkedIn</div>
+          <div class="contact-value">linkedin.com/in/garzalivas</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="enlaces" class="tinted">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">X</span>
+      <div>
+        <h2 class="sec-title">Enlaces <em>relevantes</em></h2>
+        <p class="sec-sub">El resto del ecosistema.</p>
+      </div>
+    </div>
+
+    <div class="eco-grid reveal">
+      <a class="eco-card" href="mgz1.html">
+        <div class="eco-code">Portafolio</div>
+        <div class="eco-name">Portafolio de Apostolados</div>
+        <p class="eco-desc">Sintonía Católica es uno de siete apostolados. Aquí están los otros seis.</p>
+        <div class="eco-url">mgz1 <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="eco-card" href="mgz2-f.html">
+        <div class="eco-code">Idioma</div>
+        <div class="eco-name">Sintonía Católica</div>
+        <p class="eco-desc">Esta misma página, en inglés.</p>
+        <div class="eco-url">mgz2-f <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="eco-card" href="mgl1.html">
+        <div class="eco-code">Personal</div>
+        <div class="eco-name">Mario Garza Livas</div>
+        <p class="eco-desc">Landing page personal: contacto, documentos y el resto de los proyectos.</p>
+        <div class="eco-url">mgl1 <span class="arrow">&rarr;</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="closing">
+  <div class="wrap">
+    <div class="close-line reveal">Competir con intensidad.</div>
+    <div class="close-line faded reveal">Vivir con coherencia.</div>
+    <div class="close-line faded reveal">Construir comunidad.</div>
+    <div class="close-rule"></div>
+    <p class="close-final reveal">Sintonía Católica · El deporte nos reúne. La fe nos une.</p>
+    <a class="btn btn-ghost reveal" href="mgz1.html">Volver al portafolio</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-brand">Sintonía Católica</div>
+    <div class="footer-tagline">Fe · Comunidad · Deporte</div>
+    <div class="footer-origin">Monterrey, Nuevo León, México.</div>
+
+    <div class="footer-cols">
+      <div class="footer-col">
+        <div class="footer-col-title">La comunidad</div>
+        <a href="#que-es">Qué es Sintonía</a>
+        <a href="#pilares">Fe, deporte y comunidad</a>
+        <a href="#metodo">Cómo lo vivimos</a>
+        <a href="#competencia">La competencia</a>
+        <a href="#disciplinas">Las disciplinas</a>
+        <a href="#codigo">El Código Sintonía</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Iniciador</div>
+        <div class="who">Mario Garza Livas</div>
+        <div>Chief Strategic Advisor · Founder · CEO @ The Metanoia Group</div>
+        <a href="mailto:mario@metanoiagroup.vip">mario@metanoiagroup.vip</a>
+        <a href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp_footer_mgz1f'})">+52 (81) 2513 6784</a>
+        <a href="https://linkedin.com/in/garzalivas" target="_blank" rel="noopener">linkedin.com/in/garzalivas</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Ecosistema</div>
+        <a href="mgz1.html">Portafolio de Apostolados</a>
+        <a href="mgl1.html">Mario Garza Livas</a>
+        <a href="https://metanoiagroup.vip/" target="_blank" rel="noopener">The Metanoia Group</a>
+        <a href="mgz2-f.html">English version</a>
+      </div>
+    </div>
+
+    <div class="footer-admg-rule"></div>
+    <p class="footer-admg">Ad Majorem Dei Gloriam.</p>
+
+    <div class="footer-bottom">
+      <span class="copyright">© 2026 The Metanoia Group</span>
+      <a class="footer-en" href="mgz2-f.html">English Version &rarr;</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const topbar = document.querySelector('nav.topbar');
+  const syncNavHeight = () => document.documentElement.style.setProperty('--nav-h', topbar.offsetHeight + 'px');
+  syncNavHeight();
+  if(window.ResizeObserver){ new ResizeObserver(syncNavHeight).observe(topbar); }
+  else { window.addEventListener('resize', syncNavHeight); }
+
+  const els = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    },{rootMargin:'0px 0px -8% 0px', threshold:0.08});
+    els.forEach(el=>io.observe(el));
+  } else {
+    els.forEach(el=>el.classList.add('in'));
+  }
+</script>
+
+</body>
+</html>
