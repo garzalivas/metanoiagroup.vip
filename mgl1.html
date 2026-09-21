@@ -328,6 +328,126 @@
     .eco-card-wide{grid-column:span 1;}
   }
 
+
+  /* ---------- FEATURE / SPOTLIGHT CARDS ---------- */
+  .eco-card.eco-feature{
+    grid-column:span 2;
+    padding:48px 40px 42px;
+    background:linear-gradient(180deg,#b6905c0d,transparent 60%),var(--bg-card);
+    position:relative;
+    overflow:hidden;
+  }
+  .eco-card.eco-feature::before{
+    content:'';position:absolute;left:0;top:0;height:2px;width:100%;
+    background:linear-gradient(90deg,var(--accent),#b6905c00 72%);
+  }
+  .eco-card.eco-feature::after{
+    content:'';position:absolute;right:-120px;top:-140px;width:420px;height:320px;
+    background:radial-gradient(circle,#b6905c14,transparent 68%);
+    pointer-events:none;opacity:0;transition:opacity .45s ease;
+  }
+  .eco-card.eco-feature:hover{
+    background:linear-gradient(180deg,#b6905c18,transparent 60%),var(--bg-card);
+  }
+  .eco-card.eco-feature:hover::after{opacity:1;}
+  .feature-head{
+    display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  }
+  .feature-chips{display:flex;gap:7px;flex-wrap:wrap;}
+  .chip{
+    font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--accent);border:1px solid var(--accent-dim);
+    border-radius:2px;padding:5px 10px;white-space:nowrap;
+    transition:border-color .25s ease,background .25s ease;
+  }
+  .eco-card.eco-feature:hover .chip{border-color:var(--accent);background:#b6905c12;}
+  .feature-name{
+    font-family:var(--serif);font-weight:400;
+    font-size:clamp(27px,3.8vw,40px);line-height:1.08;letter-spacing:-.01em;
+    margin-top:20px;
+  }
+  .feature-line{
+    font-family:var(--serif);font-style:italic;
+    font-size:clamp(16px,2.1vw,21px);line-height:1.5;
+    color:var(--accent);margin-top:14px;max-width:640px;
+  }
+  .feature-rule{width:34px;height:1px;background:var(--accent-dim);margin-top:24px;}
+  .feature-desc{
+    color:var(--text-muted);font-size:15px;line-height:1.78;font-weight:300;
+    margin-top:20px;max-width:700px;
+  }
+  .feature-url{text-transform:none;margin-top:30px;font-size:11.5px;letter-spacing:.1em;}
+
+  @media (max-width:640px){
+    .eco-card.eco-feature{grid-column:span 1;padding:34px 24px 30px;}
+    .feature-head{gap:12px;}
+  }
+
+
+  /* ---------- TRIAD PRELUDE ---------- */
+  .triad{
+    border:1px solid var(--line-strong);
+    background:linear-gradient(180deg,#b6905c0a,transparent 70%),var(--bg-alt);
+    padding:38px 34px 30px;
+    margin-bottom:34px;
+    position:relative;
+  }
+  .triad::before{
+    content:'';position:absolute;left:0;top:0;width:100%;height:1px;
+    background:linear-gradient(90deg,var(--accent),#b6905c00 80%);
+  }
+  .triad-label{
+    font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);
+    display:flex;align-items:center;gap:11px;
+  }
+  .triad-label::before{content:'';width:22px;height:1px;background:var(--accent);}
+  .triad-lead{
+    font-size:15px;line-height:1.8;font-weight:300;color:var(--text-muted);
+    margin-top:18px;max-width:720px;
+  }
+  .triad-lead strong{color:var(--text);font-weight:500;}
+  .triad-lead em{font-family:var(--serif);font-style:italic;color:var(--accent);}
+  .triad-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+    background:var(--line-strong);border:1px solid var(--line-strong);
+    margin-top:30px;
+  }
+  .triad-cell{background:var(--bg);padding:22px 20px;}
+  .triad-layer{
+    font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-dim);
+  }
+  .triad-name{
+    font-family:var(--serif);font-size:17px;margin-top:9px;color:var(--text);line-height:1.25;
+  }
+  .triad-q{
+    font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--accent);
+    margin-top:11px;line-height:1.5;
+  }
+  @media (max-width:700px){
+    .triad{padding:28px 22px 24px;}
+    .triad-grid{grid-template-columns:1fr;}
+  }
+
+  /* layer chip + key question inside feature cards */
+  .chip-layer{
+    background:var(--accent);color:#0a0a0b;border-color:var(--accent);font-weight:600;
+  }
+  .eco-card.eco-feature:hover .chip-layer{background:#c9a06d;border-color:#c9a06d;}
+  .feature-ask{
+    margin-top:24px;
+    border-left:2px solid var(--accent-dim);
+    padding:3px 0 3px 16px;
+    display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;
+  }
+  .feature-ask .ask-label{
+    font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);
+    flex:none;
+  }
+  .feature-ask .ask-q{
+    font-family:var(--serif);font-style:italic;font-size:17px;color:var(--accent);line-height:1.4;
+  }
+  .eco-card.eco-feature:hover .feature-ask{border-left-color:var(--accent);}
+
   /* ---------- DOCUMENTS ---------- */
   .doc-list{border-top:1px solid var(--line-strong);}
   .doc-row{
@@ -550,40 +670,119 @@
       <span class="sec-num">II</span>
       <div>
         <h2 class="sec-title">Enlaces <em>relevantes</em></h2>
-        <p class="sec-sub">Empresas con las que colaboro + AllMyLinks + Metanoia Football.</p>
+        <p class="sec-sub">La obra, los apostolados y las empresas con las que colaboro. Nueve puertas al ecosistema.</p>
+      </div>
+    </div>
+
+    <div class="triad reveal">
+      <div class="triad-label">Un mismo sistema en tres capas</div>
+      <p class="triad-lead"><strong>The Metanoia Group</strong>, <strong>ineXorable</strong> y <strong>H&aacute;gase Tu Voluntad</strong> no son tres proyectos independientes: son un mismo sistema visto desde tres alturas distintas. Las tres capas trabajan sobre la misma arquitectura humana &mdash;el individuo, sus obras y su patrimonio&mdash; y conducen a la misma figura: <em>el agente de cambio antifr&aacute;gil</em>. De forma secular en ineXorable, de forma cat&oacute;lica en H&aacute;gase Tu Voluntad, y operacionalizado en ambas versiones dentro de The Metanoia Group.</p>
+      <div class="triad-grid">
+        <div class="triad-cell">
+          <div class="triad-layer">Capa intelectual</div>
+          <div class="triad-name">ineXorable</div>
+          <div class="triad-q">&iquest;C&oacute;mo entender el mundo?</div>
+        </div>
+        <div class="triad-cell">
+          <div class="triad-layer">Capa espiritual</div>
+          <div class="triad-name">H&aacute;gase Tu Voluntad</div>
+          <div class="triad-q">&iquest;Por qu&eacute; vivir?</div>
+        </div>
+        <div class="triad-cell">
+          <div class="triad-layer">Capa operativa</div>
+          <div class="triad-name">The Metanoia Group</div>
+          <div class="triad-q">&iquest;C&oacute;mo actuar en el mundo?</div>
+        </div>
       </div>
     </div>
 
     <div class="eco-grid reveal">
-      <a class="eco-card" href="https://metanoiagroup.vip/" target="_blank" rel="noopener">
-        <div class="eco-code">Enlace 1</div>
-        <div class="eco-name">The Metanoia Group</div>
-        <p class="eco-desc">Arquitectura de antifragilidad para el líder, su empresa y su patrimonio.</p>
-        <div class="eco-url">metanoiagroup.vip <span class="arrow">→</span></div>
+      <a class="eco-card eco-feature" href="https://metanoiagroup.vip/" target="_blank" rel="noopener">
+        <div class="feature-head">
+          <div class="eco-code">Enlace 1</div>
+          <div class="feature-chips"><span class="chip chip-layer">Capa operativa</span><span class="chip">Asesor&iacute;a estrat&eacute;gica</span></div>
+        </div>
+        <h3 class="feature-name">The Metanoia Group</h3>
+        <p class="feature-line">Arquitectura estrat&eacute;gica para fortalecer l&iacute;deres, empresas y patrimonio.</p>
+        <div class="feature-rule"></div>
+        <p class="feature-desc">La firma desde la que trabajo, y la capa operativa del sistema. El &eacute;xito genera complejidad: a mayor crecimiento, m&aacute;s decisiones cr&iacute;ticas, m&aacute;s riesgos invisibles y m&aacute;s presi&oacute;n estrat&eacute;gica. The Metanoia Group es la arquitectura de asesor&iacute;a dise&ntilde;ada para navegar esa complejidad con claridad, estructura y resiliencia, a trav&eacute;s de tres verticales: <em>Executive Coaching</em> para el l&iacute;der, <em>Business Consulting</em> para la organizaci&oacute;n y <em>Wealth Strategies</em> para el patrimonio. El objetivo no se agota en mejorar resultados: es construir estructuras humanas, organizacionales y patrimoniales capaces de sostener el &eacute;xito a largo plazo.</p>
+        <div class="feature-ask"><span class="ask-label">Pregunta clave</span><span class="ask-q">&iquest;C&oacute;mo actuar en el mundo?</span></div>
+        <div class="eco-url feature-url">metanoiagroup.vip <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="eco-card eco-feature" href="mgx1.html">
+        <div class="feature-head">
+          <div class="eco-code">Enlace 2</div>
+          <div class="feature-chips"><span class="chip chip-layer">Capa intelectual</span><span class="chip">Libro</span><span class="chip">Podcast</span><span class="chip">Conferencias</span></div>
+        </div>
+        <h3 class="feature-name">ineXorable</h3>
+        <p class="feature-line">El cambio es inexorable. Tu capacidad no tiene por qu&eacute; serlo.</p>
+        <div class="feature-rule"></div>
+        <p class="feature-desc">La capa intelectual del sistema. Vivimos una era de disrupci&oacute;n tecnol&oacute;gica, tensi&oacute;n geopol&iacute;tica y volatilidad econ&oacute;mica, donde los modelos tradicionales de &eacute;xito se vuelven fr&aacute;giles: la ventaja decisiva ya no es la estabilidad, sino la capacidad de adaptaci&oacute;n. De ah&iacute; el desplazamiento que organiza todo el proyecto, de la predicci&oacute;n a la arquitectura. ineXorable no propone acertar el futuro, sino depender menos de acertarlo &mdash;por eso no se define por un tema, sino por una forma de mirar: el tema cambia, el lente permanece&mdash;. Quien alcanza esa claridad deja de limitarse a adaptarse y se convierte en agente de cambio, en su vida, su trabajo y su patrimonio.</p>
+        <div class="feature-ask"><span class="ask-label">Pregunta clave</span><span class="ask-q">&iquest;C&oacute;mo entender el mundo?</span></div>
+        <div class="eco-url feature-url">ineXorable <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="eco-card eco-feature" href="mgy1.html">
+        <div class="feature-head">
+          <div class="eco-code">Enlace 3</div>
+          <div class="feature-chips"><span class="chip chip-layer">Capa espiritual</span><span class="chip">Libro</span><span class="chip">Podcast</span><span class="chip">Conferencias</span></div>
+        </div>
+        <h3 class="feature-name">H&aacute;gase Tu Voluntad</h3>
+        <p class="feature-line">Una sola vida. Una sola direcci&oacute;n. Una sola pregunta.</p>
+        <div class="feature-rule"></div>
+        <p class="feature-desc">La capa espiritual del sistema, y el upgrade cat&oacute;lico de ineXorable: misma arquitectura, misma tr&iacute;ada, una orientaci&oacute;n distinta. Responde a lo que una cultura que separ&oacute; la fe de la vida cotidiana dej&oacute; sin resolver: c&oacute;mo vivir plenamente la fe sin abandonar las responsabilidades reales del mundo. Parte del diagn&oacute;stico de la fragmentaci&oacute;n y no propone a&ntilde;adir una dimensi&oacute;n m&aacute;s, sino ordenar la vida entera desde una misma jerarqu&iacute;a, iluminando la vida interior, el liderazgo, el trabajo, el uso del dinero, la responsabilidad cultural y el cuidado de la creaci&oacute;n. Quien vive as&iacute; deja de ser espectador de su tiempo: se vuelve ap&oacute;stol, disc&iacute;pulo y custodio de los tesoros que Dios le ha confiado.</p>
+        <div class="feature-ask"><span class="ask-label">Pregunta clave</span><span class="ask-q">&iquest;Por qu&eacute; vivir?</span></div>
+        <div class="eco-url feature-url">H&aacute;gase Tu Voluntad <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="eco-card eco-feature" href="mgw1.html">
+        <div class="feature-head">
+          <div class="eco-code">Enlace 4</div>
+          <div class="feature-chips"><span class="chip">26 libros</span><span class="chip">16 categor&iacute;as</span><span class="chip">Descarga libre</span></div>
+        </div>
+        <h3 class="feature-name">La Obra Escrita</h3>
+        <p class="feature-line">Una sola arquitectura, veintis&eacute;is libros.</p>
+        <div class="feature-rule"></div>
+        <p class="feature-desc">Veintis&eacute;is libros &mdash;veintisiete vol&uacute;menes en PDF, porque <em>Aprenderse</em> se public&oacute; en dos tomos&mdash; organizados en diecis&eacute;is categor&iacute;as tem&aacute;ticas. Es donde las tres capas se desarrollan por escrito y con rigor: la misma investigaci&oacute;n aplicada a distintos niveles de la realidad, desde c&oacute;mo una persona aprende, decide y se gobierna, hasta c&oacute;mo un patrimonio se convierte en capacidad de elegir. Cada obra incluye su tesis en una frase, sus etiquetas tem&aacute;ticas, el abstract completo y la descarga directa.</p>
+        <div class="eco-url feature-url">La Obra Escrita <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="eco-card eco-feature" href="mfb1.html">
+        <div class="feature-head">
+          <div class="eco-code">Enlace 5</div>
+          <div class="feature-chips"><span class="chip">Papers</span><span class="chip">Nueve &aacute;reas</span><span class="chip">F&uacute;tbol profesional</span></div>
+        </div>
+        <h3 class="feature-name">Corpus especializado en f&uacute;tbol</h3>
+        <p class="feature-line">Arquitectura estrat&eacute;gica para el ecosistema del f&uacute;tbol profesional.</p>
+        <div class="feature-rule"></div>
+        <p class="feature-desc">Un corpus de papers organizado en nueve &aacute;reas de especializaci&oacute;n, donde el trabajo como consultor en negocios de f&uacute;tbol y agente deportivo se vuelve m&eacute;todo escrito. El mismo sistema aplicado a una industria concreta: el f&uacute;tbol examinado como estructura, decisi&oacute;n y rendimiento sostenido.</p>
+        <div class="eco-url feature-url">Metanoia Football <span class="arrow">&rarr;</span></div>
       </a>
       <a class="eco-card" href="https://natio.one" target="_blank" rel="noopener">
-        <div class="eco-code">Enlace 2</div>
+        <div class="eco-code">Enlace 6</div>
         <div class="eco-name">Natio</div>
-        <p class="eco-desc">Representación de deportistas.</p>
-        <div class="eco-url">natio.one <span class="arrow">→</span></div>
+        <p class="eco-desc">Representaci&oacute;n de deportistas.</p>
+        <div class="eco-url">natio.one <span class="arrow">&rarr;</span></div>
       </a>
       <a class="eco-card" href="https://www.fournations.football" target="_blank" rel="noopener">
-        <div class="eco-code">Enlace 3</div>
+        <div class="eco-code">Enlace 7</div>
         <div class="eco-name">Four Nations Football Consulting</div>
-        <p class="eco-desc">Consultoría en negocios de fútbol.</p>
-        <div class="eco-url">fournations.football <span class="arrow">→</span></div>
+        <p class="eco-desc">Consultor&iacute;a en negocios de f&uacute;tbol.</p>
+        <div class="eco-url">fournations.football <span class="arrow">&rarr;</span></div>
       </a>
-      <a class="eco-card" href="https://allmylinks.com/garzalivas" target="_blank" rel="noopener">
-        <div class="eco-code">Enlace 4</div>
+      <a class="eco-card eco-feature" href="mgz1.html">
+        <div class="feature-head">
+          <div class="eco-code">Enlace 8</div>
+          <div class="feature-chips"><span class="chip">Siete apostolados</span><span class="chip">Monterrey, M&eacute;xico</span></div>
+        </div>
+        <h3 class="feature-name">Portafolio de Apostolados</h3>
+        <p class="feature-line">Una fe. Una vida. Siete caminos.</p>
+        <div class="feature-rule"></div>
+        <p class="feature-desc">Siete iniciativas cat&oacute;licas con identidad propia y una misma ra&iacute;z, que buscan llevar la fe a distintas realidades de la vida: la vocaci&oacute;n, el liderazgo, el cuerpo, el camino, la cultura, el pr&oacute;jimo y la creaci&oacute;n. Nacidas en Monterrey, Nuevo Le&oacute;n. Si H&aacute;gase Tu Voluntad es la capa espiritual pensada, el portafolio es esa misma capa puesta a trabajar: siete puertas distintas a la misma casa, y no todos entran por la misma.</p>
+        <div class="eco-url feature-url">Portafolio de Apostolados <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="eco-card eco-card-wide" href="https://allmylinks.com/garzalivas" target="_blank" rel="noopener">
+        <div class="eco-code">Enlace 9</div>
         <div class="eco-name">AllMyLinks</div>
         <p class="eco-desc">Directorio completo de enlaces, redes y contacto.</p>
-        <div class="eco-url">allmylinks.com/garzalivas <span class="arrow">→</span></div>
-      </a>
-      <a class="eco-card eco-card-wide" href="mfb1.html">
-        <div class="eco-code">Enlace 5</div>
-        <div class="eco-name">Corpus especializado en fútbol</div>
-        <p class="eco-desc">Arquitectura estratégica para el ecosistema del fútbol profesional. Un corpus de papers organizado en nueve áreas de especialización.</p>
-        <div class="eco-url">metanoia football<span class="arrow">→</span></div>
+        <div class="eco-url">allmylinks.com/garzalivas <span class="arrow">&rarr;</span></div>
       </a>
     </div>
   </div>
@@ -595,7 +794,7 @@
       <span class="sec-num">III</span>
       <div>
         <h2 class="sec-title">Documentos para <em>descargar</em></h2>
-        <p class="sec-sub">Trayectoria, referencias y marco de vida en tres documentos.</p>
+        <p class="sec-sub">Trayectoria y credenciales en dos documentos.</p>
       </div>
     </div>
 
@@ -610,22 +809,12 @@
         </div>
         <div class="doc-dl"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></div>
       </a>
-      <a class="doc-row" href="https://metanoiagroup.vip/downloads/Libros_Etc_Mario_Garza_Livas.pdf" target="_blank" rel="noopener">
+      <a class="doc-row" href="https://metanoiagroup.vip/downloads/Diplomas_Mario_Garza_Livas.pdf" target="_blank" rel="noopener">
         <div class="doc-left">
           <span class="doc-num">02</span>
           <div class="doc-text">
-            <div class="doc-title">Libros, Podcasts y Conferencias</div>
-            <div class="doc-hint">Publicaciones y participaciones públicas · PDF</div>
-          </div>
-        </div>
-        <div class="doc-dl"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></div>
-      </a>
-      <a class="doc-row" href="https://metanoiagroup.vip/downloads/Apostolados_Mario_Garza_Livas.pdf" target="_blank" rel="noopener">
-        <div class="doc-left">
-          <span class="doc-num">03</span>
-          <div class="doc-text">
-            <div class="doc-title">Apostolados</div>
-            <div class="doc-hint">Compromiso y servicio comunitario · PDF</div>
+            <div class="doc-title">Diplomas y Certificados</div>
+            <div class="doc-hint">Credenciales académicas y profesionales más relevantes · PDF</div>
           </div>
         </div>
         <div class="doc-dl"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></div>
