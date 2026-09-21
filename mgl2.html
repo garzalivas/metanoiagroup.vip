@@ -448,6 +448,34 @@
   }
   .eco-card.eco-feature:hover .feature-ask{border-left-color:var(--accent);}
 
+
+  /* ---------- FEATURE STATS STRIP ---------- */
+  .feature-stats{
+    display:flex;flex-wrap:wrap;gap:1px;
+    background:var(--line-strong);
+    border:1px solid var(--line-strong);
+    margin-top:28px;
+  }
+  .fstat{
+    background:var(--bg-alt);
+    padding:17px 24px;
+    flex:1 1 128px;
+    transition:background .3s ease;
+  }
+  .eco-card.eco-feature:hover .fstat{background:var(--bg);}
+  .fstat-n{
+    font-family:var(--serif);font-size:27px;line-height:1;color:var(--accent);font-weight:400;
+  }
+  .fstat-l{
+    font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;
+    color:var(--text-muted);margin-top:9px;line-height:1.4;
+  }
+  .feature-desc + .feature-desc{margin-top:16px;}
+  @media (max-width:640px){
+    .fstat{flex:1 1 44%;padding:15px 16px;}
+    .fstat-n{font-size:23px;}
+  }
+
   /* ---------- DOCUMENTS ---------- */
   .doc-list{border-top:1px solid var(--line-strong);}
   .doc-row{
@@ -747,13 +775,20 @@
       <a class="eco-card eco-feature" href="mfb2.html">
         <div class="feature-head">
           <div class="eco-code">Link 5</div>
-          <div class="feature-chips"><span class="chip">Papers</span><span class="chip">Nine areas</span><span class="chip">Professional football</span></div>
+          <div class="feature-chips"><span class="chip">Think tank</span><span class="chip">Strategy lab</span><span class="chip">Institutional design</span></div>
         </div>
-        <h3 class="feature-name">Specialized Football Corpus</h3>
+        <h3 class="feature-name">Metanoia Football</h3>
         <p class="feature-line">Strategic architecture for the professional football ecosystem.</p>
         <div class="feature-rule"></div>
-        <p class="feature-desc">A corpus of papers organized across nine areas of specialization, where the work as a football business consultant and sports agent becomes written method. The same system applied to one concrete industry: football examined as structure, decision and sustained performance.</p>
-        <div class="eco-url feature-url">Metanoia Football <span class="arrow">&rarr;</span></div>
+        <div class="feature-stats">
+          <div class="fstat"><div class="fstat-n">2</div><div class="fstat-l">Football books</div></div>
+          <div class="fstat"><div class="fstat-n">25</div><div class="fstat-l">Published papers</div></div>
+          <div class="fstat"><div class="fstat-n">9</div><div class="fstat-l">Areas of specialization</div></div>
+          <div class="fstat"><div class="fstat-n">1</div><div class="fstat-l">Integrated architecture</div></div>
+        </div>
+        <p class="feature-desc">The football industry vertical inside The Metanoia Group: the same system applied to one concrete field. MFB does not look at football as a collection of isolated organizations, but as an interdependent system where talent, institutions and governance decide competitive advantage. It runs on three complementary capabilities: as a <em>think tank</em> it produces applied research and frameworks; as a <em>strategy lab</em> it builds the conceptual models that resolve football&rsquo;s complex problems; and as a space for <em>institutional design</em> it carries that thinking all the way into structures and governance mechanisms, rather than stopping at a description of what is broken.</p>
+        <p class="feature-desc">The corpus gathers twenty-five applied research papers across nine areas &mdash;from the theoretical framework of talent and club-centered development, to national talent architecture, the institutional transformation of specific clubs, league and confederation governance, the professional player&rsquo;s operating system and the design of rules and incentives&mdash; plus two of the twenty-six books: <em>Football Intelligence</em> and <em>Margen Cero</em>. No document stands on its own: they share one technical vocabulary and one underlying thesis &mdash;sustainable competitive advantage does not rest on talent or available resources, but on the institutional architecture able to turn that potential into realized performance, reproducibly and over time.</p>
+        <div class="eco-url feature-url">metanoiagroup.vip/mfb2 <span class="arrow">&rarr;</span></div>
       </a>
       <a class="eco-card" href="https://natio.one" target="_blank" rel="noopener">
         <div class="eco-code">Link 6</div>
