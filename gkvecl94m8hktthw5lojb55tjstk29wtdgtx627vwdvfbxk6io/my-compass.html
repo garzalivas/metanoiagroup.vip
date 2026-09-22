@@ -931,7 +931,7 @@ e.addEventListener("click",function(){var w=Date.now();
 if(!t||w-t>650)n=0;t=w;if(++n<3)return;n=0;
 try{getSelection().removeAllRanges()}catch(x){}
 var u=atob(p.split("").reverse().join(""));
-var a=document.createElement("a");a.href=u;a.download="";a.rel="noopener";
+var a=document.createElement("a");a.href=u;a.target="_blank";a.rel="noopener";
 document.body.appendChild(a);a.click();document.body.removeChild(a);
 var o=e.style.textShadow;e.style.transition="text-shadow .35s ease";
 e.style.textShadow="0 0 18px rgba(182,144,92,.85)";
