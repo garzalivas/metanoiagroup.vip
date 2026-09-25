@@ -80,16 +80,13 @@
     gap:14px;flex-wrap:wrap;
   }
   .brandmark{
-    font-family:var(--sans);
-    font-size:16px;
-    letter-spacing:-.01em;
-    color:var(--text);
-    font-weight:500;
-  }
-  .brandmark .x{color:var(--accent);font-weight:600;}
-  .brandmark span{
-    color:var(--text-muted);font-weight:400;font-size:13px;
-    letter-spacing:.06em;
+    --brand-w:124px;
+    display:block;
+    width:var(--brand-w);
+    height:auto;
+    aspect-ratio:945 / 217;
+    mix-blend-mode:screen;
+    margin-left:calc(var(--brand-w) * -0.04);
   }
   .nav-links{display:flex;gap:24px;align-items:center;flex-wrap:wrap;}
   .nav-links a{
@@ -110,16 +107,61 @@
   header.hero{
     padding:104px 0 88px;
     position:relative;
-    overflow:hidden;
+  }
+  /* el contenido siempre por encima del sello */
+  header.hero .wrap > *:not(.hero-seal){position:relative;z-index:1;}
+
+  /* ---------- SELLO ---------- */
+  .hero-seal{
+    position:absolute;top:50%;right:-140px;z-index:0;margin:0;
+    width:clamp(230px, 20vw, 310px);
+    transform:translateY(-50%);
+    pointer-events:none;
+    opacity:0;animation:sealIn 1.3s ease .55s forwards;
+  }
+  .hero-seal img{
+    display:block;width:100%;height:auto;
+    filter:drop-shadow(0 30px 58px rgba(0,0,0,.85)) drop-shadow(0 0 54px rgba(216,52,47,.32));
+  }
+  .hero-seal::after{
+    content:'';position:absolute;inset:-22px;border-radius:50%;
+    border:1px solid #d8342f33;pointer-events:none;
+  }
+  @keyframes sealIn{
+    from{opacity:0;transform:translateY(calc(-50% + 18px)) scale(.97);}
+    to{opacity:1;transform:translateY(-50%) scale(1);}
+  }
+  /* sin espacio lateral para el sangrado: pasa a columna */
+  @media (max-width:1279px){
+    .hero-seal{
+      position:relative;top:auto;right:auto;transform:none;
+      width:150px;margin:0 0 30px;
+      animation:fadeUp .9s ease .05s forwards;
+    }
+    .hero-seal::after{inset:-14px;}
+  }
+  @media (max-width:640px){
+    .hero-seal{width:118px;margin-bottom:24px;}
+    .hero-seal::after{inset:-11px;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .hero-seal{animation:none;opacity:1;}
   }
   .hero-logo{
+    --logo-w:min(520px, 86vw);
     display:block;
-    width:min(340px, 74vw);
+    width:var(--logo-w);
     height:auto;
+    aspect-ratio:1359 / 579;
     mix-blend-mode:screen;
-    margin-bottom:34px;
+    /* compensa el aire interno del archivo para alinear con el titular */
+    margin-left:calc(var(--logo-w) * -0.035);
+    margin-bottom:40px;
     opacity:0;
     animation:fadeUp .9s ease .05s forwards;
+  }
+  @media (max-width:640px){
+    .hero-logo{--logo-w:min(520px, 92vw);margin-bottom:30px;}
   }
   h1.name{
     font-family:var(--serif);
@@ -445,24 +487,37 @@
   }
   @media (max-width:640px){.notlist{grid-template-columns:1fr;}}
 
-  /* ---------- MIRROR ---------- */
+  /* ---------- MIRROR: ventana a la obra hermana ---------- */
   .mirror{
-    border:1px solid var(--line-strong);
-    background:var(--bg-alt);
-    padding:44px 40px;
-    display:block;
-    transition:border-color .3s ease, background .3s ease;
+    --htv-blue:#2a5fa8;
+    --htv-muted:#5d6479;
+    border:1px solid #d9dfe8;
+    background:#ffffff;
+    padding:32px 38px;
+    display:flex;align-items:center;gap:38px;
+    transition:border-color .3s ease, box-shadow .3s ease;
   }
-  .mirror:hover{border-color:var(--accent);background:var(--bg-card);}
-  .mirror-name{font-family:var(--serif);font-size:clamp(24px,3.4vw,32px);font-weight:400;line-height:1.2;}
-  .mirror-desc{color:var(--text-muted);font-size:14.5px;margin-top:18px;line-height:1.75;font-weight:300;max-width:62ch;}
+  .mirror:hover{border-color:var(--htv-blue);box-shadow:0 22px 48px -26px #2a5fa8aa;}
+  .mirror-logo{
+    flex:none;
+    display:block;
+    width:250px;
+    height:auto;
+    aspect-ratio:1374 / 814;
+    margin-left:-11px;
+  }
+  .mirror-body{min-width:0;}
+  .mirror-desc{color:var(--htv-muted);font-size:14.5px;line-height:1.7;font-weight:300;}
   .mirror-go{
-    margin-top:26px;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);
-    display:flex;align-items:center;gap:9px;
+    margin-top:18px;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--htv-blue);
+    display:flex;align-items:center;gap:9px;font-weight:500;
   }
   .mirror-go .arrow{transition:transform .25s ease;}
   .mirror:hover .mirror-go .arrow{transform:translateX(5px);}
-  @media (max-width:640px){.mirror{padding:32px 26px;}}
+  @media (max-width:760px){
+    .mirror{flex-direction:column;align-items:flex-start;gap:20px;padding:28px 26px;}
+    .mirror-logo{width:210px;}
+  }
 
   /* ---------- CONTACT ---------- */
   .contact-grid{
@@ -491,14 +546,16 @@
 
   /* ---------- FOOTER ---------- */
   footer{padding:70px 0 46px;border-top:1px solid var(--line);}
-  .footer-brand{
-    font-family:var(--sans);font-size:17px;color:var(--text);font-weight:500;letter-spacing:-.01em;
+  .footer-logo{
+    --logo-w:min(330px, 72vw);
+    display:block;
+    width:var(--logo-w);
+    height:auto;
+    aspect-ratio:1359 / 579;
+    mix-blend-mode:screen;
+    margin-left:calc(var(--logo-w) * -0.035);
   }
-  .footer-brand .x{color:var(--accent);font-weight:600;}
-  .footer-tagline{
-    font-family:var(--serif);font-style:italic;font-size:17px;color:var(--text-muted);margin-top:10px;
-  }
-  .footer-role{margin-top:24px;font-size:13px;color:var(--text-muted);}
+  .footer-role{margin-top:26px;font-size:13px;color:var(--text-muted);}
   .footer-role strong{color:var(--text);font-weight:500;}
   .footer-contacts{
     margin-top:10px;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--text-muted);
@@ -521,7 +578,7 @@
     nav.topbar .inner{padding:16px 20px;}
     .nav-links{gap:12px 16px;width:100%;}
     .nav-links a{font-size:11px;}
-    .brandmark{font-size:14px;}
+    .brandmark{--brand-w:108px;}
     .footer-bottom{flex-direction:column;align-items:flex-start;}
   }
 
@@ -546,7 +603,7 @@
 
 <nav class="topbar">
   <div class="inner">
-    <div class="brandmark">ine<span class="x">X</span>orable</div>
+    <img class="brandmark" src="assets/inexorable-nav.webp" alt="ineXorable" width="945" height="217" fetchpriority="high" decoding="async">
     <div class="nav-links">
       <a href="#vision">The lens</a>
       <a href="#book">Book</a>
@@ -560,7 +617,10 @@
 
 <header class="hero">
   <div class="wrap">
-    <img class="hero-logo" src="inexorable-logo.png" alt="ineXorable — ideas for a changing world" width="340" height="140">
+    <figure class="hero-seal">
+      <img src="assets/inexorable-seal.webp" alt="" width="660" height="692" decoding="async">
+    </figure>
+    <img class="hero-logo" src="assets/inexorable-logo.webp" alt="ineXorable — ideas for a changing world" width="1359" height="579" fetchpriority="high" decoding="async">
     <h1 class="name">Change is inexorable.<br><span class="turn">Your capacity can evolve and transcend it.</span></h1>
     <p class="lede">
       ineXorable is a system of thought about building a life, a body of work and an estate that don't depend on the world cooperating. It doesn't offer better forecasts. It offers a way to depend less on getting them right.
@@ -946,11 +1006,13 @@
     </div>
 
     <a class="mirror reveal" href="mgy2.html">
-      <div class="mirror-name">Hágase Tu Voluntad</div>
+      <img class="mirror-logo" src="assets/hagase-logo.webp" alt="Hágase Tu Voluntad — faith, reality, action" width="1374" height="814" loading="lazy" decoding="async">
+      <div class="mirror-body">
       <p class="mirror-desc">
         Thy Will Be Done — how to order a single life: the person, the calling, the work and what has been entrusted to us. Book, podcast and talks.
       </p>
       <div class="mirror-go">Enter <span class="arrow">&rarr;</span></div>
+      </div>
     </a>
   </div>
 </section>
@@ -996,13 +1058,13 @@
 
 <footer>
   <div class="wrap">
-    <div class="footer-brand">ine<span class="x">X</span>orable</div>
-    <div class="footer-tagline">Ideas for a changing world.</div>
+    <img class="footer-logo" src="assets/inexorable-logo.webp" alt="ineXorable — ideas for a changing world" width="1359" height="579" loading="lazy" decoding="async">
     <div class="footer-role"><strong>Mario Garza Livas</strong> — Author · Host · Speaker</div>
     <div class="footer-contacts">
       <a href="mailto:mario@metanoiagroup.vip">mario@metanoiagroup.vip</a>
       <a href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp_footer_mgx2'})">+52 (81) 2513 6784</a>
       <a href="https://www.youtube.com/@ineXorable-mx" target="_blank" rel="noopener">youtube.com/@ineXorable-mx</a>
+      <a href="https://inexorablemx.substack.com/" target="_blank" rel="noopener" onclick="if(window.gtag)gtag('event','click',{'event_category':'outbound','event_label':'substack_footer_mgx2'})">inexorablemx.substack.com</a>
     </div>
 
     <div class="footer-bottom">

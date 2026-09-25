@@ -76,22 +76,18 @@
     z-index:50;
   }
   nav.topbar .inner{
-    max-width:var(--maxw);margin:0 auto;padding:18px 28px;
+    max-width:var(--maxw);margin:0 auto;padding:15px 28px;
     display:flex;align-items:center;justify-content:space-between;
     gap:14px;flex-wrap:wrap;
   }
   .brandmark{
-    font-family:var(--serif);
-    font-size:15px;
-    letter-spacing:.08em;
-    text-transform:uppercase;
-    color:var(--text);
-    font-weight:500;
-  }
-  .brandmark .tu{color:var(--trace);}
-  .brandmark span{
-    color:var(--text-muted);font-weight:400;
-    letter-spacing:.06em;text-transform:none;font-family:var(--sans);font-size:13px;
+    --brand-w:132px;
+    display:block;
+    width:var(--brand-w);
+    height:auto;
+    aspect-ratio:817 / 253;
+    mix-blend-mode:multiply;
+    margin-left:calc(var(--brand-w) * -0.023);
   }
   .nav-links{display:flex;gap:24px;align-items:center;flex-wrap:wrap;}
   .nav-links a{
@@ -113,16 +109,63 @@
   header.hero{
     padding:104px 0 88px;
     position:relative;
-    overflow:hidden;
+  }
+  /* el contenido siempre por encima del sello */
+  header.hero .wrap > *:not(.hero-seal){position:relative;z-index:1;}
+
+  /* ---------- SELLO ---------- */
+  .hero-seal{
+    position:absolute;top:50%;right:-130px;z-index:0;margin:0;
+    width:clamp(210px, 18vw, 280px);
+    aspect-ratio:1;
+    transform:translateY(-50%);
+    pointer-events:none;
+    opacity:0;animation:sealIn 1.3s ease .55s forwards;
+  }
+  /* el lienzo cuadrado permite que el anillo sea un circulo y no una elipse */
+  .hero-seal img{
+    display:block;height:100%;width:auto;margin:0 auto;
+    filter:drop-shadow(0 26px 52px rgba(20,33,61,.28)) drop-shadow(0 0 48px rgba(42,95,168,.22));
+  }
+  .hero-seal::after{
+    content:'';position:absolute;inset:-22px;border-radius:50%;
+    border:1px solid #2a5fa838;pointer-events:none;
+  }
+  @keyframes sealIn{
+    from{opacity:0;transform:translateY(calc(-50% + 18px)) scale(.97);}
+    to{opacity:1;transform:translateY(-50%) scale(1);}
+  }
+  /* sin espacio lateral para el sangrado: pasa a columna */
+  @media (max-width:1279px){
+    .hero-seal{
+      position:relative;top:auto;right:auto;transform:none;
+      width:130px;margin:0 0 30px;
+      animation:fadeUp .9s ease .05s forwards;
+    }
+    .hero-seal::after{inset:-14px;}
+  }
+  @media (max-width:640px){
+    .hero-seal{width:104px;margin-bottom:24px;}
+    .hero-seal::after{inset:-11px;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .hero-seal{animation:none;opacity:1;}
   }
   .hero-logo{
+    --logo-w:min(470px, 88vw);
     display:block;
-    width:min(400px, 84vw);
+    width:var(--logo-w);
     height:auto;
+    aspect-ratio:1374 / 814;
     mix-blend-mode:multiply;
-    margin:-30px 0 24px -14px;
+    /* compensa el aire interno del archivo para alinear con el titular */
+    margin-left:calc(var(--logo-w) * -0.045);
+    margin-bottom:34px;
     opacity:0;
     animation:fadeUp .9s ease .05s forwards;
+  }
+  @media (max-width:640px){
+    .hero-logo{--logo-w:min(470px, 94vw);margin-bottom:26px;}
   }
   h1.name{
     font-family:var(--serif);
@@ -449,25 +492,38 @@
   }
   @media (max-width:640px){.notlist{grid-template-columns:1fr;}}
 
-  /* ---------- MIRROR (trace of the X) ---------- */
+  /* ---------- MIRROR: ventana a la obra hermana ---------- */
   .mirror{
-    border:1px solid var(--line-strong);
-    background:var(--bg-alt);
-    padding:44px 40px;
-    display:block;
-    transition:border-color .3s ease, background .3s ease;
+    --ix-red:#e6615c;
+    --ix-muted:#9b968c;
+    border:1px solid #2f2c27;
+    background:#000000;
+    padding:32px 38px;
+    display:flex;align-items:center;gap:38px;
+    transition:border-color .3s ease, box-shadow .3s ease;
   }
-  .mirror:hover{border-color:var(--trace);background:var(--bg-card);}
-  .mirror-name{font-family:var(--serif);font-size:clamp(24px,3.4vw,32px);font-weight:400;line-height:1.2;}
-  .mirror-name .x{color:var(--trace);}
-  .mirror-desc{color:var(--text-muted);font-size:14.5px;margin-top:18px;line-height:1.75;font-weight:300;max-width:62ch;}
+  .mirror:hover{border-color:var(--ix-red);box-shadow:0 22px 48px -26px #d8342f66;}
+  .mirror-logo{
+    flex:none;
+    display:block;
+    width:300px;
+    height:auto;
+    aspect-ratio:1359 / 579;
+    mix-blend-mode:screen;
+    margin-left:-11px;
+  }
+  .mirror-body{min-width:0;}
+  .mirror-desc{color:var(--ix-muted);font-size:14.5px;line-height:1.7;font-weight:300;}
   .mirror-go{
-    margin-top:26px;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--trace);
-    display:flex;align-items:center;gap:9px;
+    margin-top:18px;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ix-red);
+    display:flex;align-items:center;gap:9px;font-weight:500;
   }
   .mirror-go .arrow{transition:transform .25s ease;}
   .mirror:hover .mirror-go .arrow{transform:translateX(5px);}
-  @media (max-width:640px){.mirror{padding:32px 26px;}}
+  @media (max-width:760px){
+    .mirror{flex-direction:column;align-items:flex-start;gap:20px;padding:28px 26px;}
+    .mirror-logo{width:250px;}
+  }
 
   /* ---------- CONTACT ---------- */
   .contact-grid{
@@ -496,14 +552,16 @@
 
   /* ---------- FOOTER ---------- */
   footer{padding:70px 0 46px;border-top:1px solid var(--line);}
-  .footer-brand{
-    font-family:var(--serif);font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--text);font-weight:500;
+  .footer-logo{
+    --logo-w:min(300px, 70vw);
+    display:block;
+    width:var(--logo-w);
+    height:auto;
+    aspect-ratio:833 / 325;
+    mix-blend-mode:multiply;
+    margin-left:calc(var(--logo-w) * -0.032);
   }
-  .footer-brand .tu{color:var(--trace);}
-  .footer-tagline{
-    font-family:var(--serif);font-style:italic;font-size:17px;color:var(--text-muted);margin-top:12px;
-  }
-  .footer-role{margin-top:24px;font-size:13px;color:var(--text-muted);}
+  .footer-role{margin-top:22px;font-size:13px;color:var(--text-muted);}
   .footer-role strong{color:var(--text);font-weight:500;}
   .footer-contacts{
     margin-top:10px;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--text-muted);
@@ -531,7 +589,7 @@
     nav.topbar .inner{padding:16px 20px;}
     .nav-links{gap:12px 16px;width:100%;}
     .nav-links a{font-size:11px;}
-    .brandmark{font-size:13px;}
+    .brandmark{--brand-w:116px;}
     .hero-logo{margin-left:0;}
     .footer-bottom{flex-direction:column;align-items:flex-start;}
   }
@@ -557,7 +615,7 @@
 
 <nav class="topbar">
   <div class="inner">
-    <div class="brandmark">Hágase <span class="tu">Tu</span> Voluntad</div>
+    <img class="brandmark" src="assets/hagase-nav.webp" alt="Hágase Tu Voluntad" width="817" height="253" fetchpriority="high" decoding="async">
     <div class="nav-links">
       <a href="#vision">The vision</a>
       <a href="#book">Book</a>
@@ -571,7 +629,10 @@
 
 <header class="hero">
   <div class="wrap">
-    <img class="hero-logo" src="hagase-logo.png" alt="Hágase Tu Voluntad — faith, reality, action" width="400" height="200">
+    <figure class="hero-seal">
+      <img src="assets/hagase-seal.webp" alt="" width="418" height="580" decoding="async">
+    </figure>
+    <img class="hero-logo" src="assets/hagase-logo.webp" alt="Hágase Tu Voluntad — faith, reality, action" width="1374" height="814" fetchpriority="high" decoding="async">
     <h1 class="name">One life.<br>One direction.<br><span class="turn">One question.</span></h1>
     <p class="lede">
       We don't have one life for faith and another for work, one for family and another for money. We are one person living one life. <em>Hágase Tu Voluntad</em> — Thy Will Be Done — is about ordering that life whole, around a single question: am I doing His will?
@@ -942,11 +1003,13 @@
     </div>
 
     <a class="mirror reveal" href="mgx2.html">
-      <div class="mirror-name">ine<span class="x">X</span>orable</div>
+      <img class="mirror-logo" src="assets/inexorable-logo.webp" alt="ineXorable — ideas for a changing world" width="1359" height="579" loading="lazy" decoding="async">
+      <div class="mirror-body">
       <p class="mirror-desc">
         How to build a life, a body of work and an estate that don't depend on the world cooperating. Book, podcast and talks.
       </p>
       <div class="mirror-go">Enter <span class="arrow">&rarr;</span></div>
+      </div>
     </a>
   </div>
 </section>
@@ -998,13 +1061,13 @@
 
 <footer>
   <div class="wrap">
-    <div class="footer-brand">Hágase <span class="tu">Tu</span> Voluntad</div>
-    <div class="footer-tagline">Faith. Reality. Action.</div>
+    <img class="footer-logo" src="assets/hagase-wordmark.webp" alt="Hágase Tu Voluntad — faith, reality, action" width="833" height="325" loading="lazy" decoding="async">
     <div class="footer-role"><strong>Mario Garza Livas</strong> — Author · Host · Speaker</div>
     <div class="footer-contacts">
       <a href="mailto:mario@metanoiagroup.vip">mario@metanoiagroup.vip</a>
       <a href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp_footer_mgy2'})">+52 (81) 2513 6784</a>
       <a href="https://www.youtube.com/@Hagase-Tu-Voluntad" target="_blank" rel="noopener">youtube.com/@Hagase-Tu-Voluntad</a>
+      <a href="https://hagasetuvoluntad.substack.com/" target="_blank" rel="noopener" onclick="if(window.gtag)gtag('event','click',{'event_category':'outbound','event_label':'substack_footer_mgy2'})">hagasetuvoluntad.substack.com</a>
     </div>
     <div class="footer-admg-rule"></div>
     <p class="footer-admg">Ad Majorem Dei Gloriam.</p>
