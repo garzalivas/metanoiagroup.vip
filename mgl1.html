@@ -552,6 +552,29 @@
   @media (prefers-reduced-motion: reduce){
     *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}
   }
+
+  /* ---------- EMBLEMA PERSONAL ---------- */
+  .brandmark .avatar{display:inline-block;width:24px;height:24px;vertical-align:-6px;margin-right:10px;}
+  .hero-qr{display:flex;flex-direction:column;align-items:center;gap:30px;}
+  .hero-portrait{margin:0;width:280px;position:relative;}
+  .hero-portrait img{display:block;width:100%;height:auto;
+    filter:drop-shadow(0 34px 60px rgba(0,0,0,.75)) drop-shadow(0 0 46px rgba(182,144,92,.28));}
+  .hero-portrait::after{content:'';position:absolute;inset:-16px;border-radius:50%;
+    border:1px solid #b6905c30;pointer-events:none;}
+  .footer-portrait{display:block;width:104px;height:auto;margin:0 0 26px;
+    filter:drop-shadow(0 0 30px rgba(182,144,92,.25));}
+  @media (min-width:1280px){ .hero-qr{margin-right:-130px;} }
+  @media (max-width:1279px) and (min-width:821px){ .hero-portrait{width:220px;} }
+  @media (max-width:820px){
+    .hero-qr{display:contents;}
+    .hero-portrait{order:-1;width:190px;opacity:0;animation:fadeUp .9s ease .05s forwards;}
+    .qr-card{align-self:center;opacity:0;animation:fadeUp .9s ease .85s forwards;}
+  }
+  @media (max-width:640px){
+    .hero-portrait{width:160px;}
+    .hero-portrait::after{inset:-11px;}
+  }
+  @media (prefers-reduced-motion:reduce){ .hero-portrait,.qr-card{animation:none;opacity:1;} }
 </style>
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mario Garza Livas — The Metanoia Group">
@@ -570,7 +593,7 @@
 
 <nav class="topbar">
   <div class="inner">
-    <div class="brandmark">MARIO GARZA LIVAS <span>· LANDING PAGE</span></div>
+    <div class="brandmark"><img class="avatar" src="assets/mgl-avatar.webp" alt="" width="24" height="24">MARIO GARZA LIVAS <span>· LANDING PAGE</span></div>
     <div class="nav-links">
       <a href="#contacto">Contacto</a>
       <a href="#enlaces">Enlaces</a>
@@ -598,6 +621,7 @@
         </div>
       </div>
       <aside class="hero-qr">
+        <figure class="hero-portrait"><img src="assets/mgl-portrait.webp" alt="Mario Garza Livas" width="640" height="640" decoding="async" fetchpriority="high"></figure>
         <div class="qr-card">
           <img src="QR.png" alt="Código QR para visitar esta página desde tu smartphone" width="118" height="118" loading="lazy">
           <p class="qr-label">Escanéame desde tu teléfono</p>
@@ -866,6 +890,7 @@
 
 <footer>
   <div class="wrap">
+    <img class="footer-portrait" src="assets/mgl-portrait.webp" alt="" width="104" height="104" loading="lazy" decoding="async">
     <div class="footer-brand">The Metanoia Group</div>
     <div class="footer-tagline"><span data-m="3">Persona</span>. Empresa. Patrimonio.</div>
     <div class="footer-role"><strong>Mario Garza Livas</strong> — Chief Strategic Advisor · Founder · CEO</div>
