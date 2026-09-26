@@ -254,6 +254,31 @@
   .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease, transform .8s ease;}
   .reveal.in{opacity:1;transform:translateY(0);}
 
+  /* ---------- ABOUT ---------- */
+  .about{max-width:720px;}
+  .about-lead{
+    font-family:var(--serif);font-style:italic;font-weight:400;
+    font-size:clamp(23px,3.2vw,32px);line-height:1.35;letter-spacing:-.005em;
+    color:var(--text);
+    padding-left:22px;border-left:1px solid var(--accent);
+  }
+  .about-body{margin-top:44px;max-width:650px;}
+  .about-body p{
+    font-family:var(--serif);font-weight:300;
+    font-size:clamp(16.5px,1.9vw,18.5px);line-height:1.85;
+    color:#d6d1c7;
+  }
+  .about-body p + p{margin-top:1.15em;}
+  .about-body em{font-style:italic;color:var(--accent);}
+  .about-sign{margin-top:48px;}
+  .about-rule{display:block;width:34px;height:1px;background:var(--accent-dim);}
+  .about-name{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--accent);margin-top:18px;}
+  .about-place{font-size:12px;letter-spacing:.06em;color:var(--text-muted);margin-top:4px;font-weight:300;}
+  @media (max-width:640px){
+    .about-lead{padding-left:16px;}
+    .about-body{margin-top:34px;}
+  }
+
   /* ---------- CONTACT ---------- */
   .contact-grid{
     display:grid;
@@ -595,6 +620,7 @@
   <div class="inner">
     <div class="brandmark"><img class="avatar" src="assets/mgl-avatar.webp" alt="" width="24" height="24">MARIO GARZA LIVAS <span>· LANDING PAGE</span></div>
     <div class="nav-links">
+      <a href="#about">About</a>
       <a href="#contact">Contact</a>
       <a href="#links">Links</a>
       <a href="#documents">Documents</a>
@@ -632,10 +658,43 @@
   </div>
 </header>
 
-<section id="contact">
+<section id="about">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="sec-num">I</span>
+      <div>
+        <h2 class="sec-title">About <em>me</em></h2>
+        <p class="sec-sub">Not my résumé: how I see the world, what shaped me, and what I stand on.</p>
+      </div>
+    </div>
+
+    <div class="about reveal">
+      <p class="about-lead">Almost everything I do began as a question that wouldn't leave me alone.</p>
+      <div class="about-body">
+        <p>For years I thought I was doing very different things. I started out in an industrial plant, moved into finance, founded a microfinance company, manage an investment portfolio, work in football, teach, and write. From the outside, my path looks like a series of leaps. From the inside, it was always the same question, asked in different places: <em>what keeps something from breaking when conditions change?</em></p>
+        <p>The answers I kept finding were almost never where everyone was looking. The problem is rarely in the part that fails; it is almost always in the relationship between the parts. A profitable company that depends on its founder never being away. A large estate that can't withstand a single bad year. A brilliant person who falls apart after losing a title, because at some point they confused what they do with who they are.</p>
+        <p>I didn't learn this in a classroom. I learned it up close, with real consequences. I have watched things that seemed solid come down, and I have been there at the moment when you have to decide what to protect, knowing you can no longer protect everything. Those decisions are not made on a spreadsheet, and they cost far more than anyone sees from the outside. But they left me with something I have never been able to unsee: a company, a title, or an estate is a means, not an end, and when someone places their worth in what they own, life can take it all without asking permission.</p>
+        <p>Those experiences changed the way I see. The Greeks had a word for it, <em>metanoia</em>, and I chose it as the name of my firm because it describes what happened to me before it describes what I do: not an improvement, but a change in the way of seeing.</p>
+        <p>Since then, I have held a few convictions quite firmly. That reality is disordered and always will be, and that the real risk is not chaos, but building as if it will never come. That the person comes first, then what they build, and last what they own, and that reversing that order is the quietest way to become fragile. And that nothing truly belongs to us: <em>everything is entrusted to us</em>. A child, a company, an estate, a student, a planet. In the end, what we safeguarded matters less than who we became while doing it.</p>
+        <p>That is why the idea of someone depending on me makes me uneasy. When I walk alongside a leader, represent a footballer, or teach a class, what I am after is that, on the day I am no longer there, something stays in place. I write for the same reason: so that others don't have to stumble over stones someone already pointed out. My books are not a collection of topics; they are the same question looking at business, money, marriage, fatherhood, truth, and faith.</p>
+        <p>I don't have definitive answers, and I am a little wary of anyone who claims to. What I do have is the habit of asking where a decision is being made from before asking what to decide, and of trying to examine my own convictions with the same rigor I apply to other people's. Sometimes I manage it. I move forward like almost everyone: a few steps ahead, one or two back, trying to make sure the balance comes out in my favor.</p>
+        <p>Outside of work, I am a good deal simpler than this page suggests. I have been married for ten years and have a four-year-old daughter who is a handful and is my whole life; much of what I write about marriage and fatherhood I write with the two of them in mind, and with the husband and father I want to be. I love to think, and to write about what I think. I love to read and to learn something new, all the time: curiosity has been my most constant teacher. I am also passionate about football, travel, and the history of the places I visit. I play the piano, compose, and play chess.</p>
+        <p>And there is something that holds up everything else. I am Catholic, and faith is not a compartment of my life but its center. I don't impose it or use it as an argument; whoever works with me doesn't need to share it. But it would be dishonest to introduce myself without saying so. In the hardest moments, I stopped needing other people's approval, because I understood that the only gaze that truly mattered was God's. Today I try to do my part as well as I can and let go of the result. I don't control the harvest; I answer for what I sow.</p>
+        <p>I believe the most valuable things a person can do are born where what they are good at meets what they love. This page is, in large part, a map of that meeting point. If anything here is useful to you, I will be very glad. And if you would like to talk, the doors are right below.</p>
+      </div>
+      <div class="about-sign">
+        <span class="about-rule"></span>
+        <p class="about-name">Mario Garza Livas</p>
+        <p class="about-place">Monterrey, Nuevo León, Mexico</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">II</span>
       <div>
         <h2 class="sec-title">Direct <em>contact</em></h2>
         <p class="sec-sub">Phone, WhatsApp, LinkedIn and 4 email addresses.</p>
@@ -692,7 +751,7 @@
 <section id="links">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="sec-num">II</span>
+      <span class="sec-num">III</span>
       <div>
         <h2 class="sec-title">Relevant <em>links</em></h2>
         <p class="sec-sub">The written work, the apostolates and the companies I work with. Eleven doors into the ecosystem.</p>
@@ -833,7 +892,7 @@
 <section id="documents">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="sec-num">III</span>
+      <span class="sec-num">IV</span>
       <div>
         <h2 class="sec-title">Documents to <em>download</em></h2>
         <p class="sec-sub">Track record and credentials in two documents.</p>
@@ -868,7 +927,7 @@
 <section id="social">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="sec-num">IV</span>
+      <span class="sec-num">V</span>
       <div>
         <h2 class="sec-title">Social <em>media</em></h2>
         <p class="sec-sub">Public presence, platform by platform.</p>

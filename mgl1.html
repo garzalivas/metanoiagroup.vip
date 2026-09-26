@@ -254,6 +254,32 @@
   .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease, transform .8s ease;}
   .reveal.in{opacity:1;transform:translateY(0);}
 
+
+  /* ---------- ABOUT ---------- */
+  .about{max-width:720px;}
+  .about-lead{
+    font-family:var(--serif);font-style:italic;font-weight:400;
+    font-size:clamp(23px,3.2vw,32px);line-height:1.35;letter-spacing:-.005em;
+    color:var(--text);
+    padding-left:22px;border-left:1px solid var(--accent);
+  }
+  .about-body{margin-top:44px;max-width:650px;}
+  .about-body p{
+    font-family:var(--serif);font-weight:300;
+    font-size:clamp(16.5px,1.9vw,18.5px);line-height:1.85;
+    color:#d6d1c7;
+  }
+  .about-body p + p{margin-top:1.15em;}
+  .about-body em{font-style:italic;color:var(--accent);}
+  .about-sign{margin-top:48px;}
+  .about-rule{display:block;width:34px;height:1px;background:var(--accent-dim);}
+  .about-name{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--accent);margin-top:18px;}
+  .about-place{font-size:12px;letter-spacing:.06em;color:var(--text-muted);margin-top:4px;font-weight:300;}
+  @media (max-width:640px){
+    .about-lead{padding-left:16px;}
+    .about-body{margin-top:34px;}
+  }
+
   /* ---------- CONTACT ---------- */
   .contact-grid{
     display:grid;
@@ -595,6 +621,7 @@
   <div class="inner">
     <div class="brandmark"><img class="avatar" src="assets/mgl-avatar.webp" alt="" width="24" height="24">MARIO GARZA LIVAS <span>· LANDING PAGE</span></div>
     <div class="nav-links">
+      <a href="#acerca">Acerca de</a>
       <a href="#contacto">Contacto</a>
       <a href="#enlaces">Enlaces</a>
       <a href="#documentos">Documentos</a>
@@ -632,10 +659,43 @@
   </div>
 </header>
 
-<section id="contacto">
+<section id="acerca">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="sec-num">I</span>
+      <div>
+        <h2 class="sec-title">Acerca de <em>mí</em></h2>
+        <p class="sec-sub">No mi currículum: cómo veo el mundo, qué me formó y desde dónde vivo.</p>
+      </div>
+    </div>
+
+    <div class="about reveal">
+      <p class="about-lead">Casi todo lo que hago empezó como una pregunta que no me dejó en paz.</p>
+      <div class="about-body">
+        <p>Durante años creí que estaba haciendo cosas muy distintas. Empecé en una planta industrial, pasé a las finanzas, fundé una microfinanciera, administro un portafolio, trabajo en el fútbol, doy clase y escribo. Vista desde fuera, mi trayectoria parece una colección de saltos. Vista desde dentro, siempre fue la misma pregunta, hecha en lugares distintos: <em>¿qué hace que algo no se rompa cuando las condiciones cambian?</em></p>
+        <p>La respuesta que fui encontrando casi nunca estaba donde todos miraban. Rara vez el problema está en la pieza que falla; casi siempre está en la relación entre las piezas. Una empresa rentable que depende de que su fundador nunca se ausente. Un patrimonio grande que no aguanta un mal año. Una persona brillante que se desmorona cuando pierde el cargo, porque en algún momento confundió lo que hace con lo que es.</p>
+        <p>No lo aprendí en un aula. Lo aprendí de cerca, con consecuencias reales. He visto caer cosas que parecían sólidas, y me ha tocado estar en el momento en que hay que decidir qué se protege cuando ya no se puede proteger todo. Esas decisiones no se toman con una hoja de cálculo, y cuestan mucho más de lo que se ve desde fuera. Pero de ahí salió algo que ya no he podido dejar de ver: que una empresa, un cargo o un patrimonio son medios y no fines, y que cuando alguien pone su valor en lo que tiene, la vida se lo puede quitar todo sin pedir permiso.</p>
+        <p>Esas experiencias me cambiaron la forma de mirar. Los griegos tenían una palabra para eso, <em>metanoia</em>, y la elegí como nombre de mi firma porque describe lo que me pasó a mí antes de describir lo que hago: no una mejora, sino un cambio en la manera de ver.</p>
+        <p>Desde entonces creo algunas cosas con bastante firmeza. Que la realidad es desordenada y siempre lo será, y que el verdadero riesgo no es el caos, sino construir como si nunca fuera a llegar. Que la persona va primero, después lo que construye y al final lo que tiene, y que invertir ese orden es la forma más silenciosa de volverse frágil. Y que nada nos pertenece del todo: <em>todo se nos confía</em>. Un hijo, una empresa, un patrimonio, un alumno, un planeta. Al final importa menos lo que custodiamos que en quién nos convertimos mientras lo hacíamos.</p>
+        <p>Por eso me incomoda la idea de que alguien dependa de mí. Cuando acompaño a un líder, cuando represento a un futbolista o cuando doy clase, lo que busco es que el día que yo no esté, algo quede instalado. Escribo por la misma razón: para que otros no tengan que tropezar con piedras que alguien ya señaló. Mis libros no son una colección de temas; son la misma pregunta mirando la empresa, el dinero, el matrimonio, la paternidad, la verdad o la fe.</p>
+        <p>No tengo respuestas definitivas, y desconfío un poco de quien dice tenerlas. Lo que sí tengo es la costumbre de preguntar desde dónde se está decidiendo antes de preguntar qué decidir, y de intentar examinar mis propias convicciones con el mismo rigor que las ajenas. A veces lo logro. Avanzo como casi todos: unos pasos hacia adelante, alguno hacia atrás, procurando que la cuenta salga a favor.</p>
+        <p>Fuera del trabajo soy bastante más sencillo de lo que esta página sugiere. Llevo diez años casado y tengo una hija de cuatro que es tremenda y es mi vida entera; mucho de lo que escribo sobre matrimonio y paternidad lo escribo pensando en ellas, y en el esposo y padre que quiero ser. Me apasiona pensar, y escribir sobre lo que pienso. Me apasiona leer y aprender cosas nuevas, todo el tiempo: la curiosidad ha sido mi maestra más constante. Me apasionan también el fútbol, viajar y la historia de los lugares que visito. Toco el piano, compongo y juego ajedrez.</p>
+        <p>Y hay algo que sostiene todo lo anterior. Soy católico, y la fe no es un apartado de mi vida sino su centro. No la impongo ni la uso como argumento; quien trabaja conmigo no tiene que compartirla. Pero sería deshonesto presentarme sin decirlo. En los momentos más difíciles dejé de necesitar la aprobación de los demás porque entendí que la única mirada que de verdad importaba era la de Dios. Hoy intento hacer mi parte lo mejor que puedo y entregar el resultado. No controlo la cosecha; respondo por lo que siembro.</p>
+        <p>Creo que lo más valioso que una persona puede hacer nace donde se cruzan lo que sabe hacer y lo que ama. Esta página es, en buena medida, el mapa de ese cruce. Si algo de lo que hay aquí te sirve, me dará mucho gusto. Y si quieres conversar, las puertas están justo debajo.</p>
+      </div>
+      <div class="about-sign">
+        <span class="about-rule"></span>
+        <p class="about-name">Mario Garza Livas</p>
+        <p class="about-place">Monterrey, Nuevo León, México</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">II</span>
       <div>
         <h2 class="sec-title">Contacto <em>directo</em></h2>
         <p class="sec-sub">Teléfono, WhatsApp, LinkedIn y 4 correos.</p>
@@ -692,7 +752,7 @@
 <section id="enlaces">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="sec-num">II</span>
+      <span class="sec-num">III</span>
       <div>
         <h2 class="sec-title">Enlaces <em>relevantes</em></h2>
         <p class="sec-sub">La obra, los apostolados y las empresas con las que colaboro. Once puertas al ecosistema.</p>
@@ -833,7 +893,7 @@
 <section id="documentos">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="sec-num">III</span>
+      <span class="sec-num">IV</span>
       <div>
         <h2 class="sec-title">Documentos para <em>descargar</em></h2>
         <p class="sec-sub">Trayectoria y credenciales en dos documentos.</p>
@@ -868,7 +928,7 @@
 <section id="redes">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="sec-num">IV</span>
+      <span class="sec-num">V</span>
       <div>
         <h2 class="sec-title">Redes <em>sociales</em></h2>
         <p class="sec-sub">Presencia pública, plataforma por plataforma.</p>
