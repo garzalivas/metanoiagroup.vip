@@ -362,6 +362,20 @@
     margin-top:18px;font-size:12.5px;color:var(--text-dim);font-style:italic;font-family:var(--serif);
   }
 
+  .search-wrap{
+    display:flex;align-items:center;gap:12px;
+    border:1px solid var(--line-strong);border-radius:2px;
+    padding:12px 16px;margin-bottom:18px;
+    background:#0f0f11;transition:border-color .22s ease;
+  }
+  .search-wrap:focus-within{border-color:var(--accent-dim);}
+  .search-wrap svg{width:15px;height:15px;stroke:var(--text-dim);flex:none;}
+  .search-wrap input{
+    flex:1;background:transparent;border:none;outline:none;
+    color:var(--text);font-family:var(--sans);font-size:14px;font-weight:300;
+  }
+  .search-wrap input::placeholder{color:var(--text-dim);}
+
   /* ---------- BOOK CARDS ---------- */
   .book-card{
     padding:36px 4px;border-bottom:1px solid var(--line-strong);
@@ -588,10 +602,13 @@
         Son <strong>treinta y dos libros</strong> —treinta y tres volúmenes en PDF, porque <em>Aprenderse</em> se publicó en dos tomos— y no constituyen una colección de intereses dispersos. Son la misma investigación aplicada a seis niveles distintos de la realidad, cada uno con sus propias reglas y todos gobernados por la misma lógica.
       </p>
       <p class="lead">
-        <strong>La persona:</strong> cómo alguien aprende, se gobierna cuando aparece el impulso, forma su carácter y distingue lo que es de lo que le gustaría que fuera. <strong>El vínculo:</strong> la conversación que transforma, el matrimonio entendido como sistema y la paternidad entendida como formación de criterio. <strong>El juicio:</strong> cómo se decide bien cuando la información es incompleta y el error irreversible, y cómo se transfiere ese criterio a otro sin volverlo dependiente. <strong>La obra:</strong> cómo una empresa nace, opera, se desacopla de su fundador y asigna su capital, y qué cambia cuando la inteligencia deja de ser escasa. <strong>El patrimonio:</strong> cómo el dinero se convierte en capacidad de elegir y cómo una estructura sobrevive a lo que no supo prever. <strong>El mundo:</strong> cómo el poder conserva su propósito cuando nadie lo vigila, cómo se convive sin diluir lo que se cree, y qué se le entrega a quien viene después.
+        <strong>La persona:</strong> cómo alguien aprende, se gobierna cuando aparece el impulso y forma su carácter —<em>Aprenderse</em>, <em>El Barniz del Carácter</em>, <em>¿Quién Gobierna?</em>—. <strong>El vínculo:</strong> la conversación que transforma, el matrimonio entendido como sistema y la paternidad como formación de criterio —<em>La Puerta entre dos Mentes</em>, <em>1 + 1 = N</em>, <em>Brújula Mata Plataforma</em>—. <strong>El juicio:</strong> cómo se ve antes de decidir, cómo se decide cuando el error es irreversible y cómo se transfiere ese criterio a otro sin volverlo dependiente —<em>Lo que Es, Es</em>, <em>Arquitectura de Decisión</em>, <em>Margen Cero</em>, <em>Segunda Mente</em>, <em>El Interés Compuesto del Juicio</em>—. <strong>La obra:</strong> cómo una empresa nace, opera, se desacopla de su fundador y asigna su capital, y qué cambia cuando la inteligencia deja de ser escasa —<em>Complejidad Ganada</em>, <em>Arquitectura Empresarial</em>, <em>La Empresa Imposible</em>, <em>Espacio de Acción</em>, <em>Asesoría Aumentada</em>—. <strong>El patrimonio:</strong> cómo el dinero se convierte en capacidad de elegir y cómo una estructura sobrevive a lo que no supo prever —<em>El Dinero es una Promesa</em>, <em>Autonomía</em>, <em>La Ventana Gradual</em>, <em>El Barco No Es el Viaje</em>—. <strong>El mundo:</strong> cómo el poder conserva su propósito cuando nadie lo vigila, cómo se convive sin diluir lo que se cree y qué se le entrega a quien viene después —<em>El Mundo que ya no Existe</em>, <em>La Gran Inversión</em>, <em>Sin Abandonar la Orilla</em>, <em>Entregarla Viva</em>—.
       </p>
       <p class="lead">
-        Esa unidad no es retórica: es verificable, porque los conceptos migran de un libro a otro y significan lo mismo en todos. <strong>La prueba de la ausencia</strong> —qué permanece cuando quien sostiene el sistema desaparece— es el criterio final de <em>Segunda Mente</em>, la pregunta decisiva de <em>Arquitectura Empresarial</em>, el instrumento de diagnóstico de <em>La Ventana Gradual</em> y, en su formulación más dura, la tesis de <em>Brújula Mata Plataforma</em>: el éxito de un padre consiste en dejar de ser necesario. <strong>No confundir renta con capital</strong> ordena un patrimonio en <em>El Dinero es una Promesa</em> y un planeta entero en <em>Entregarla Viva</em>. <strong>El margen</strong> es infraestructura de libertad en <em>Autonomía</em> y condición de resiliencia conyugal en <em>1 + 1 = N</em>. <strong>La custodia</strong> corrige el poder en <em>La Gran Inversión</em> y define una civilización en <em>Entregarla Viva</em>. Leer dos libros de este corpus es empezar el tercero con ventaja.
+        Atravesando los seis niveles está la pregunta que el corpus nunca delega, la del sentido: la vocación como algo que se cultiva y no se descubre en <em>Los Cuatro Jardines</em> y <em>Voz Soberana</em>, el desprendimiento del resultado en <em>No Controlas la Cosecha</em>, el centro interior en <em>El Centro que no se Mueve</em> y <em>Garabandal: La Convergencia</em>, y la arquitectura que integra los tres órdenes en <em>ineXorable</em> y <em>Hágase Tu Voluntad</em>. Ningún libro de esta obra pertenece del todo a un solo nivel, y eso es deliberado.
+      </p>
+      <p class="lead">
+        Esa unidad no es retórica: es verificable, porque los conceptos migran de un libro a otro y significan lo mismo en todos. <strong>La prueba de la ausencia</strong> —qué permanece cuando quien sostiene el sistema desaparece— es el criterio final de <em>Segunda Mente</em>, la pregunta decisiva de <em>Arquitectura Empresarial</em>, el instrumento de diagnóstico de <em>La Ventana Gradual</em> y, en su formulación más dura, la tesis de <em>Brújula Mata Plataforma</em>. <strong>El sistema por encima de la voluntad</strong> ordena el aprendizaje en <em>Aprenderse</em>, la formación del carácter en <em>El Barniz del Carácter</em> y el gobierno de sí en <em>¿Quién Gobierna?</em>. <strong>El margen</strong> es infraestructura de libertad en <em>Autonomía</em>, condición de supervivencia en <em>La Ventana Gradual</em> y condición de resiliencia conyugal en <em>1 + 1 = N</em>. <strong>No confundir renta con capital</strong> gobierna un patrimonio en <em>El Dinero es una Promesa</em> y una civilización entera en <em>Entregarla Viva</em>. <strong>La custodia</strong> corrige el poder en <em>La Gran Inversión</em>, transforma al propietario en administrador en <em>No Controlas la Cosecha</em> y ordena lo recibido en <em>Hágase Tu Voluntad</em>. Leer dos libros de este corpus es empezar el tercero con ventaja.
       </p>
       <p class="lead">
         La tesis de fondo que los atraviesa a todos puede enunciarse en una frase: <strong>la ventaja sostenible no proviene del esfuerzo extraordinario ni del talento aislado, sino de la arquitectura capaz de convertir potencial en capacidad realizada, de forma reproducible y a lo largo del tiempo.</strong> De ahí la insistencia del corpus en desplazar el foco desde el resultado hacia el sistema que lo produce, desde la predicción hacia la estructura que absorbe el error, y desde la acumulación hacia la pregunta que la vuelve inteligible: capacidad, ¿para qué?
@@ -691,6 +708,18 @@
         <div class="vocab-term">Renta y capital</div>
         <p class="vocab-def">Vivir de los frutos de un sistema es sostenible; consumir su principal es liquidación disfrazada de prosperidad. La distinción gobierna un patrimonio, una empresa, un cuerpo, una reputación y un planeta: en todos los casos, una fotografía puede parecer saludable mientras la trayectoria ya está decidida.</p>
         <p class="vocab-where">Entregarla Viva · El Dinero es una Promesa · Autonomía · La Ventana Gradual</p>
+      </div>
+
+      <div class="vocab-card">
+        <div class="vocab-term">Identidad segura</div>
+        <p class="vocab-def">Sólo quien conoce y vive lo que cree puede acercarse a quien piensa distinto sin miedo a desaparecer en el proceso. La identidad prestada se defiende con hostilidad porque no resiste el examen; la identidad recibida y trabajada puede escuchar, reconocer errores propios y sostener el disenso sin convertirlo en amenaza.</p>
+        <p class="vocab-where">Sin Abandonar la Orilla · El Centro que no se Mueve · Voz Soberana · Garabandal: La Convergencia</p>
+      </div>
+
+      <div class="vocab-card">
+        <div class="vocab-term">La buena voluntad no gobierna</div>
+        <p class="vocab-def">Ninguna institución —una empresa, una familia, un consejo, un sistema de inteligencia artificial— se sostiene sobre las buenas intenciones de quienes la integran. Lo que gobierna son los mecanismos: reglas escritas antes de necesitarse, responsabilidades trazables, procedimientos de salida y criterios que siguen operando cuando las personas fallan.</p>
+        <p class="vocab-where">El Barco No Es el Viaje · 1 + 1 = N · Asesoría Aumentada · El Mundo que ya no Existe</p>
       </div>
     </div>
   </div>
@@ -1114,7 +1143,7 @@
         <ol class="path-list">
           <li><span class="step">1</span><a href="#libro-el-dinero">El Dinero es una Promesa</a></li>
           <li><span class="step">2</span><a href="#libro-autonomia">Autonomía</a></li>
-          <li><span class="step">3</span><a href="#libro-la-ventana-gradual">La Ventana Gradual</a></li>
+          <li><span class="step">3</span><a href="#libro-inexorable">ineXorable</a></li>
           <li><span class="step">4</span><a href="#libro-el-barco">El Barco No Es el Viaje</a></li>
         </ol>
       </div>
@@ -1125,8 +1154,8 @@
         <p class="path-desc">Instalar capacidad en lugar de dependencia, dentro y fuera de la casa.</p>
         <ol class="path-list">
           <li><span class="step">1</span><a href="#libro-segunda-mente">Segunda Mente</a></li>
-          <li><span class="step">2</span><a href="#libro-aprenderse">Aprenderse</a></li>
-          <li><span class="step">3</span><a href="#libro-el-interes">El Interés Compuesto del Juicio</a></li>
+          <li><span class="step">2</span><a href="#libro-la-puerta">La Puerta entre dos Mentes</a></li>
+          <li><span class="step">3</span><a href="#libro-aprenderse">Aprenderse</a></li>
           <li><span class="step">4</span><a href="#libro-brujula">Brújula Mata Plataforma</a></li>
         </ol>
       </div>
@@ -1138,7 +1167,7 @@
         <ol class="path-list">
           <li><span class="step">1</span><a href="#libro-quien-gobierna">¿Quién Gobierna?</a></li>
           <li><span class="step">2</span><a href="#libro-el-barniz">El Barniz del Carácter</a></li>
-          <li><span class="step">3</span><a href="#libro-los-cuatro-jardines">Los Cuatro Jardines</a></li>
+          <li><span class="step">3</span><a href="#libro-lo-que-es-es">Lo que Es, Es</a></li>
           <li><span class="step">4</span><a href="#libro-el-centro">El Centro que no se Mueve</a></li>
         </ol>
       </div>
@@ -1157,25 +1186,49 @@
 
       <div class="path-card">
         <div class="path-num">Recorrido 07</div>
-        <div class="path-title">Si quieres pensar mejor sobre el mundo</div>
-        <p class="path-desc">Ver antes de reaccionar, y convivir sin diluir lo que se cree.</p>
+        <div class="path-title">Si te preocupa el rumbo del mundo</div>
+        <p class="path-desc">Instituciones desfasadas, poder sin custodia y lo que se le entrega a quien viene después.</p>
         <ol class="path-list">
-          <li><span class="step">1</span><a href="#libro-lo-que-es-es">Lo que Es, Es</a></li>
-          <li><span class="step">2</span><a href="#libro-el-mundo">El Mundo que ya no Existe</a></li>
-          <li><span class="step">3</span><a href="#libro-la-gran-inversion">La Gran Inversión</a></li>
-          <li><span class="step">4</span><a href="#libro-sin-abandonar-la-orilla">Sin Abandonar la Orilla</a></li>
+          <li><span class="step">1</span><a href="#libro-el-mundo">El Mundo que ya no Existe</a></li>
+          <li><span class="step">2</span><a href="#libro-la-gran-inversion">La Gran Inversión</a></li>
+          <li><span class="step">3</span><a href="#libro-sin-abandonar-la-orilla">Sin Abandonar la Orilla</a></li>
+          <li><span class="step">4</span><a href="#libro-entregarla-viva">Entregarla Viva</a></li>
         </ol>
       </div>
 
       <div class="path-card">
         <div class="path-num">Recorrido 08</div>
-        <div class="path-title">Si quieres la arquitectura completa</div>
-        <p class="path-desc">Los libros que se niegan a separar la persona, la obra y el patrimonio.</p>
+        <div class="path-title">Si trabajas con inteligencia artificial</div>
+        <p class="path-desc">La ventaja no está en el modelo, sino en la arquitectura construida a su alrededor.</p>
         <ol class="path-list">
-          <li><span class="step">1</span><a href="#libro-inexorable">ineXorable</a></li>
-          <li><span class="step">2</span><a href="#libro-hagase-tu-voluntad">Hágase Tu Voluntad</a></li>
-          <li><span class="step">3</span><a href="#libro-entregarla-viva">Entregarla Viva</a></li>
-          <li><span class="step">4</span><a href="#libro-el-centro">El Centro que no se Mueve</a></li>
+          <li><span class="step">1</span><a href="#libro-asesoria-aumentada">Asesoría Aumentada</a></li>
+          <li><span class="step">2</span><a href="#libro-espacio-de-accion">Espacio de Acción</a></li>
+          <li><span class="step">3</span><a href="#libro-la-empresa-imposible">La Empresa Imposible</a></li>
+          <li><span class="step">4</span><a href="#libro-el-interes">El Interés Compuesto del Juicio</a></li>
+        </ol>
+      </div>
+
+      <div class="path-card">
+        <div class="path-num">Recorrido 09</div>
+        <div class="path-title">Si decides donde el error es irreversible</div>
+        <p class="path-desc">El fútbol de élite como laboratorio del juicio bajo presión, y su traducción.</p>
+        <ol class="path-list">
+          <li><span class="step">1</span><a href="#libro-football-intelligence">Football Intelligence</a></li>
+          <li><span class="step">2</span><a href="#libro-margen-cero">Margen Cero</a></li>
+          <li><span class="step">3</span><a href="#libro-arquitectura-de-decision">Arquitectura de Decisión</a></li>
+          <li><span class="step">4</span><a href="#libro-complejidad-ganada">Complejidad Ganada</a></li>
+        </ol>
+      </div>
+
+      <div class="path-card">
+        <div class="path-num">Recorrido 10</div>
+        <div class="path-title">Si buscas a Dios en la vida ordinaria</div>
+        <p class="path-desc">La vocación, el centro interior y lo que sostiene todo lo demás.</p>
+        <ol class="path-list">
+          <li><span class="step">1</span><a href="#libro-los-cuatro-jardines">Los Cuatro Jardines</a></li>
+          <li><span class="step">2</span><a href="#libro-el-centro">El Centro que no se Mueve</a></li>
+          <li><span class="step">3</span><a href="#libro-garabandal">Garabandal: La Convergencia</a></li>
+          <li><span class="step">4</span><a href="#libro-hagase-tu-voluntad">Hágase Tu Voluntad</a></li>
         </ol>
       </div>
     </div>
@@ -1193,6 +1246,10 @@
     </div>
 
     <div class="filterbar reveal">
+      <label class="search-wrap" for="book-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input id="book-search" type="search" autocomplete="off" placeholder="Buscar por título, tesis o tema…">
+      </label>
       <div class="filter-caption">Filtrar por categoría</div>
       <div class="filter-chips" id="filter-chips">
         <button class="fchip" type="button" data-filter="all" aria-pressed="true">Todos los libros (32)</button>
@@ -1753,33 +1810,51 @@
   }, {threshold:0.12});
   els.forEach(el=>io.observe(el));
 
+    function STATUS(n, key, label, q){
+      if(key === 'all' && !q) return 'Mostrando los 32 libros del corpus.';
+      const word = n === 1 ? ' libro' : ' libros';
+      if(key === 'all') return 'Mostrando ' + n + word + ' para «' + q + '».';
+      if(!q) return 'Mostrando ' + n + word + ' en «' + label + '».';
+      return 'Mostrando ' + n + word + ' en «' + label + '» para «' + q + '».';
+    }
   (function(){
     const chips  = Array.from(document.querySelectorAll('#filter-chips .fchip'));
     const cards  = Array.from(document.querySelectorAll('#book-list .book-card'));
     const status = document.getElementById('filter-status');
     const empty  = document.getElementById('empty-state');
+    const search = document.getElementById('book-search');
+    let key = 'all', label = '';
 
-    function apply(key, label){
+    const norm = t => t.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+    cards.forEach(c => { c.dataset.haystack = norm(c.textContent); });
+
+    function apply(){
+      const q = norm((search && search.value || '').trim());
       let shown = 0;
       cards.forEach(c=>{
-        const on = key === 'all' || c.dataset.tags.split(' ').indexOf(key) !== -1;
+        const byTag = key === 'all' || c.dataset.tags.split(' ').indexOf(key) !== -1;
+        const byText = !q || c.dataset.haystack.indexOf(q) !== -1;
+        const on = byTag && byText;
         c.classList.toggle('hidden', !on);
         if(on){ shown++; c.classList.add('in'); }
       });
       chips.forEach(ch=>ch.setAttribute('aria-pressed', String(ch.dataset.filter === key)));
       empty.classList.toggle('hidden', shown !== 0);
-      status.textContent = key === 'all'
-        ? 'Mostrando los 32 libros del corpus.'
-        : 'Mostrando ' + shown + (shown === 1 ? ' libro' : ' libros') + ' en «' + label + '».';
-      if(key !== 'all'){
-        gtag('event','filter',{'event_category':'books','event_label':key});
-      }
+      status.textContent = STATUS(shown, key, label, q);
     }
 
     chips.forEach(ch=>{
-      ch.addEventListener('click', ()=>apply(ch.dataset.filter, ch.textContent.replace(/\s*\(\d+\)\s*$/,'')));
+      ch.addEventListener('click', ()=>{
+        key = ch.dataset.filter;
+        label = ch.textContent.replace(/\s*\(\d+\)\s*$/,'');
+        apply();
+        if(key !== 'all'){ gtag('event','filter',{'event_category':'books','event_label':key}); }
+      });
     });
-
+    if(search){
+      let t;
+      search.addEventListener('input', ()=>{ clearTimeout(t); t = setTimeout(apply, 120); });
+    }
   })();
 </script>
 
