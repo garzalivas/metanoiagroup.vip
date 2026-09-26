@@ -5,10 +5,10 @@
 <link rel="icon" type="image/svg+xml" href="new_favicon.svg">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>La Obra Escrita — Mario Garza Livas</title>
-<meta name="description" content="La obra escrita de Mario Garza Livas: veintisiete libros sobre aprendizaje, carácter, vocación, juicio, asesoría, empresa, inteligencia artificial, patrimonio, incertidumbre, instituciones y fe. Diecisiete categorías temáticas, veintiocho volúmenes en PDF, descarga libre.">
+<meta name="description" content="La obra escrita de Mario Garza Livas: treinta y dos libros sobre aprendizaje, carácter, vocación, juicio, asesoría, empresa, inteligencia artificial, patrimonio, incertidumbre, instituciones y fe. Veintiuna categorías temáticas, treinta y tres volúmenes en PDF, descarga libre.">
 <meta name="robots" content="index, follow">
 <meta property="og:title" content="La Obra Escrita — Mario Garza Livas">
-<meta property="og:description" content="Veintisiete libros, una sola arquitectura. Persona, juicio, empresa, patrimonio y sentido, tratados como un mismo sistema.">
+<meta property="og:description" content="Treinta y dos libros, una sola arquitectura. Persona, juicio, empresa, patrimonio y sentido, tratados como un mismo sistema.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_MX">
 <meta property="og:site_name" content="The Metanoia Group">
@@ -402,6 +402,22 @@
   }
   .empty-state.hidden{display:none;}
 
+  /* ---------- READING PATHS ---------- */
+  .path-grid{
+    display:grid;grid-template-columns:repeat(2,1fr);
+    gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);
+  }
+  .path-card{background:var(--bg-alt);padding:30px 28px;display:flex;flex-direction:column;}
+  .path-num{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--accent);letter-spacing:.05em;}
+  .path-title{font-family:var(--serif);font-size:19px;color:var(--text);font-weight:400;margin-top:8px;line-height:1.3;}
+  .path-desc{color:var(--text-muted);font-size:13px;line-height:1.7;margin-top:10px;font-weight:300;}
+  .path-list{list-style:none;margin-top:18px;padding-top:16px;border-top:1px solid var(--line);}
+  .path-list li{display:flex;gap:12px;align-items:baseline;padding:5px 0;}
+  .path-list .step{font-family:var(--serif);font-style:italic;font-size:12px;color:var(--accent-dim);flex:none;min-width:14px;}
+  .path-list a{font-family:var(--serif);font-size:15px;color:var(--text);line-height:1.4;transition:color .2s ease;}
+  .path-list a:hover{color:var(--accent);}
+  @media (max-width:640px){ .path-grid{grid-template-columns:1fr;} }
+
   /* ---------- ECOSYSTEM CARDS ---------- */
   .eco-grid{
     display:grid;grid-template-columns:repeat(2,1fr);
@@ -508,7 +524,7 @@
 </style>
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="La Obra Escrita — Mario Garza Livas">
-<meta name="twitter:description" content="Veintisiete libros sobre aprendizaje, carácter, vocación, juicio, empresa, inteligencia artificial, patrimonio, incertidumbre, instituciones y fe. Descarga libre en PDF.">
+<meta name="twitter:description" content="Treinta y dos libros sobre aprendizaje, carácter, vocación, juicio, empresa, inteligencia artificial, patrimonio, incertidumbre, instituciones y fe. Descarga libre en PDF.">
 <meta name="twitter:image" content="https://metanoiagroup.vip/og-image-1.jpg">
 <!-- Google Analytics GA4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KHNZVPJX1N"></script>
@@ -528,6 +544,7 @@
       <a href="#sobre">Acerca de</a>
       <a href="#vocabulario">Vocabulario</a>
       <a href="#categorias">Categorías</a>
+      <a href="#empezar">Por dónde empezar</a>
       <a href="#libros">Libros</a>
       <a href="#enlaces">Enlaces</a>
       <a class="pill" href="mgl1.html" title="Landing Page Personal">mgL</a>
@@ -539,15 +556,15 @@
 <header class="hero">
   <div class="wrap">
     <figure class="hero-seal"><img src="assets/mgw-emblem-firma.webp" alt="Emblema personal de Mario Garza Livas" width="860" height="656" decoding="async" fetchpriority="high"></figure>
-    <p class="eyebrow">La Obra Escrita · Veintisiete Libros</p>
-    <h1 class="name">Una sola arquitectura,<br><em>veintisiete</em> libros</h1>
+    <p class="eyebrow">La Obra Escrita · Treinta y Dos Libros</p>
+    <h1 class="name">Una sola arquitectura,<br><em>treinta y dos</em> libros</h1>
     <p class="roles">
       Mario Garza Livas<br><span class="sep">·</span>Arquitecto de Sistemas de Alto Rendimiento<br><span class="sep">·</span>Asesor Estratégico<br><span class="sep">·</span>Consultor en Negocios de Fútbol<br><span class="sep">·</span>Agente Deportivo<br><span class="sep">·</span>CIO de Family Office<br><span class="sep">·</span>Profesor de Cátedra
     </p>
     <div class="locbar"><span class="dot"></span>Monterrey, Nuevo León, México</div>
     <div class="hero-cta">
-      <a class="btn btn-primary" href="#libros">Explorar los 27 libros</a>
-      <a class="btn btn-ghost" href="#categorias">Las 17 categorías</a>
+      <a class="btn btn-primary" href="#libros">Explorar los 32 libros</a>
+      <a class="btn btn-ghost" href="#categorias">Las 21 categorías</a>
       <a class="btn btn-ghost" href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp'})">Escribir por WhatsApp</a>
     </div>
   </div>
@@ -565,13 +582,16 @@
 
     <div class="reveal">
       <p class="lead">
-        <strong>Mario Garza Livas</strong> es un estratega dedicado al diseño de sistemas capaces de sostener desempeño bajo presión: en la persona, en la empresa, en el patrimonio y en las instituciones. Fundador y director de <strong>The Metanoia Group</strong>, asesor estratégico, CIO de family office, consultor en negocios de fútbol, agente deportivo y profesor de cátedra, su práctica profesional atraviesa dominios que rara vez se piensan juntos. Esta obra escrita es el lugar donde sí se piensan juntos.
+        <strong>Mario Garza Livas</strong> es un estratega dedicado al diseño de sistemas capaces de sostener desempeño bajo presión: en la persona, en la casa, en la empresa, en el patrimonio y en las instituciones. Fundador y director de <strong>The Metanoia Group</strong>, asesor estratégico, CIO de family office, consultor en negocios de fútbol, agente deportivo y profesor de cátedra, su práctica profesional atraviesa dominios que rara vez se piensan juntos. Esta obra escrita es el lugar donde sí se piensan juntos.
       </p>
       <p class="lead">
-        Los <strong>veintisiete libros</strong> reunidos aquí —veintiocho volúmenes en PDF, porque <em>Aprenderse</em> se publicó en dos tomos— no son una colección de intereses dispersos. Son la misma investigación aplicada a niveles distintos de la realidad: cómo una persona aprende, decide y se gobierna; cómo un experto transfiere criterio a otro; cómo una empresa nace, opera, se desacopla de su fundador y asigna su capital; cómo la inteligencia artificial altera lo que una organización puede llegar a hacer; cómo un patrimonio se convierte en capacidad de elegir; cómo una estructura sobrevive a lo que no supo prever; cómo el poder conserva su propósito cuando nadie lo vigila; y desde qué centro se ordena todo lo anterior.
+        Son <strong>treinta y dos libros</strong> —treinta y tres volúmenes en PDF, porque <em>Aprenderse</em> se publicó en dos tomos— y no constituyen una colección de intereses dispersos. Son la misma investigación aplicada a seis niveles distintos de la realidad, cada uno con sus propias reglas y todos gobernados por la misma lógica.
       </p>
       <p class="lead">
-        Esa unidad no es retórica: es verificable. Los conceptos migran de un libro a otro y significan lo mismo en todos. <strong>La prueba de la ausencia</strong> —qué permanece cuando quien sostiene el sistema desaparece— es el criterio final de <em>Segunda Mente</em>, la pregunta decisiva de <em>Arquitectura Empresarial</em>, el instrumento de diagnóstico de <em>La Ventana Gradual</em> y el estándar de gobierno de <em>El Barco No Es el Viaje</em>. La <strong>custodia</strong> es el principio correctivo de <em>La Gran Inversión</em>, la transformación final de <em>No Controlas la Cosecha</em> y el marco patrimonial de <em>Hágase Tu Voluntad</em>. La secuencia <strong>SER → HACER → TENER</strong> estructura tanto <em>ineXorable</em> como <em>Hágase Tu Voluntad</em>. Leer dos libros del corpus es empezar a leer el tercero con ventaja.
+        <strong>La persona:</strong> cómo alguien aprende, se gobierna cuando aparece el impulso, forma su carácter y distingue lo que es de lo que le gustaría que fuera. <strong>El vínculo:</strong> la conversación que transforma, el matrimonio entendido como sistema y la paternidad entendida como formación de criterio. <strong>El juicio:</strong> cómo se decide bien cuando la información es incompleta y el error irreversible, y cómo se transfiere ese criterio a otro sin volverlo dependiente. <strong>La obra:</strong> cómo una empresa nace, opera, se desacopla de su fundador y asigna su capital, y qué cambia cuando la inteligencia deja de ser escasa. <strong>El patrimonio:</strong> cómo el dinero se convierte en capacidad de elegir y cómo una estructura sobrevive a lo que no supo prever. <strong>El mundo:</strong> cómo el poder conserva su propósito cuando nadie lo vigila, cómo se convive sin diluir lo que se cree, y qué se le entrega a quien viene después.
+      </p>
+      <p class="lead">
+        Esa unidad no es retórica: es verificable, porque los conceptos migran de un libro a otro y significan lo mismo en todos. <strong>La prueba de la ausencia</strong> —qué permanece cuando quien sostiene el sistema desaparece— es el criterio final de <em>Segunda Mente</em>, la pregunta decisiva de <em>Arquitectura Empresarial</em>, el instrumento de diagnóstico de <em>La Ventana Gradual</em> y, en su formulación más dura, la tesis de <em>Brújula Mata Plataforma</em>: el éxito de un padre consiste en dejar de ser necesario. <strong>No confundir renta con capital</strong> ordena un patrimonio en <em>El Dinero es una Promesa</em> y un planeta entero en <em>Entregarla Viva</em>. <strong>El margen</strong> es infraestructura de libertad en <em>Autonomía</em> y condición de resiliencia conyugal en <em>1 + 1 = N</em>. <strong>La custodia</strong> corrige el poder en <em>La Gran Inversión</em> y define una civilización en <em>Entregarla Viva</em>. Leer dos libros de este corpus es empezar el tercero con ventaja.
       </p>
       <p class="lead">
         La tesis de fondo que los atraviesa a todos puede enunciarse en una frase: <strong>la ventaja sostenible no proviene del esfuerzo extraordinario ni del talento aislado, sino de la arquitectura capaz de convertir potencial en capacidad realizada, de forma reproducible y a lo largo del tiempo.</strong> De ahí la insistencia del corpus en desplazar el foco desde el resultado hacia el sistema que lo produce, desde la predicción hacia la estructura que absorbe el error, y desde la acumulación hacia la pregunta que la vuelve inteligible: capacidad, ¿para qué?
@@ -583,15 +603,15 @@
 
     <div class="stat-row reveal">
       <div class="stat-item">
-        <div class="stat-num">27</div>
+        <div class="stat-num">32</div>
         <div class="stat-label">Libros publicados</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">28</div>
+        <div class="stat-num">33</div>
         <div class="stat-label">Volúmenes en PDF</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">17</div>
+        <div class="stat-num">21</div>
         <div class="stat-label">Categorías temáticas</div>
       </div>
       <div class="stat-item">
@@ -608,7 +628,7 @@
       <span class="sec-num">II</span>
       <div>
         <h2 class="sec-title">El vocabulario <em>común</em></h2>
-        <p class="sec-sub">Ocho conceptos que reaparecen a lo largo del corpus y significan lo mismo en cada libro. Son la evidencia de que los veintisiete títulos comparten una sola arquitectura intelectual.</p>
+        <p class="sec-sub">Ocho conceptos que reaparecen a lo largo del corpus y significan lo mismo en cada libro. Son la evidencia de que los treinta y dos títulos comparten una sola arquitectura intelectual.</p>
       </div>
     </div>
 
@@ -628,7 +648,7 @@
       <div class="vocab-card">
         <div class="vocab-term">La prueba de la ausencia</div>
         <p class="vocab-def">El criterio más exigente del corpus: qué permanece funcionando cuando quien sostenía el sistema deja de estar. Aplicada al experto, mide si instaló capacidad o dependencia. Aplicada al fundador, revela si construyó una empresa o un cuello de botella. Aplicada a un patrimonio o a una institución, distingue lo que fue diseñado de lo que sólo fue sostenido.</p>
-        <p class="vocab-where">Segunda Mente · Arquitectura Empresarial · La Ventana Gradual · El Barco No Es el Viaje</p>
+        <p class="vocab-where">Segunda Mente · Arquitectura Empresarial · La Ventana Gradual · Brújula Mata Plataforma</p>
       </div>
 
       <div class="vocab-card">
@@ -646,7 +666,7 @@
       <div class="vocab-card">
         <div class="vocab-term">Custodia</div>
         <p class="vocab-def">La inversión del vínculo con lo que se posee: quien tiene poder, capital o capacidad de decisión no los recibe sólo como prerrogativa, sino como responsabilidad hacia quienes soportan las consecuencias y hacia quienes heredarán lo construido. Es el punto donde el corpus deja de ser técnico y se vuelve explícitamente moral.</p>
-        <p class="vocab-where">La Gran Inversión · No Controlas la Cosecha · Hágase Tu Voluntad · El Barco No Es el Viaje</p>
+        <p class="vocab-where">La Gran Inversión · Entregarla Viva · No Controlas la Cosecha · Hágase Tu Voluntad</p>
       </div>
 
       <div class="vocab-card">
@@ -660,6 +680,18 @@
         <p class="vocab-def">El orden en que el corpus insiste en trabajar: primero quién es la persona y desde qué centro decide, después qué construye y cómo, y sólo entonces qué acumula y para qué. Invertir la secuencia —organizar la vida desde el tener— es el diagnóstico compartido de varios de estos libros.</p>
         <p class="vocab-where">ineXorable · Hágase Tu Voluntad · El Centro que no se Mueve · Los Cuatro Jardines</p>
       </div>
+
+      <div class="vocab-card">
+        <div class="vocab-term">Simetría</div>
+        <p class="vocab-def">La prueba de integridad intelectual: examinar las convicciones propias con el mismo rigor con que se examinan las ajenas. Sin ella, el pensamiento crítico se degrada en un arma de un solo filo —escepticismo severo para el adversario, credulidad generosa para uno mismo— y la búsqueda de la verdad se vuelve indistinguible de la defensa de la identidad.</p>
+        <p class="vocab-where">Lo que Es, Es · La Puerta entre dos Mentes · Arquitectura de Decisión · Sin Abandonar la Orilla</p>
+      </div>
+
+      <div class="vocab-card">
+        <div class="vocab-term">Renta y capital</div>
+        <p class="vocab-def">Vivir de los frutos de un sistema es sostenible; consumir su principal es liquidación disfrazada de prosperidad. La distinción gobierna un patrimonio, una empresa, un cuerpo, una reputación y un planeta: en todos los casos, una fotografía puede parecer saludable mientras la trayectoria ya está decidida.</p>
+        <p class="vocab-where">Entregarla Viva · El Dinero es una Promesa · Autonomía · La Ventana Gradual</p>
+      </div>
     </div>
   </div>
 </section>
@@ -669,7 +701,7 @@
     <div class="sec-head reveal">
       <span class="sec-num">III</span>
       <div>
-        <h2 class="sec-title">Las diecisiete <em>categorías</em></h2>
+        <h2 class="sec-title">Las veintiuna <em>categorías</em></h2>
         <p class="sec-sub">Ningún libro de este corpus pertenece a un solo tema, y forzarlo a uno empobrecería lo que dice. Cada obra lleva por tanto las etiquetas que realmente la describen: en verde aquellas de las que es un texto central, en ámbar aquellas a las que contribuye sin ser su asunto principal.</p>
       </div>
     </div>
@@ -685,7 +717,7 @@
       <div class="cat-top">
         <span class="cat-letter">A</span>
         <div class="cat-titlewrap"><span class="cat-title">Aprendizaje y Capacidad Cognitiva</span></div>
-        <span class="cat-count">1 primaria · 4 secundarias</span>
+        <span class="cat-count">1 Primaria · 4 Secundarias</span>
       </div>
       <div class="cat-body">
         <p>Esta categoría trata la competencia que antecede a todas las demás: la de volverse competente en aquello que todavía no se sabe hacer. No es una materia sobre estudio, memoria o productividad personal. Es una materia sobre <strong>control</strong>: quién decide qué se aprende, con qué evidencia se verifica que se aprendió, y qué ocurre cuando desaparece la instrucción.</p>
@@ -694,7 +726,7 @@
       </div>
       <div class="cat-books">
         <div class="cat-books-line"><span class="cat-books-label lbl-p">Primaria</span><a class="bl" href="#libro-aprenderse">Aprenderse</a></div>
-        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundaria</span><a class="bl" href="#libro-el-barniz">El Barniz del Carácter</a> · <a class="bl" href="#libro-la-puerta">La Puerta entre dos Mentes</a> · <a class="bl" href="#libro-segunda-mente">Segunda Mente</a> · <a class="bl" href="#libro-quien-gobierna">¿Quién Gobierna?</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundarias</span><a class="bl" href="#libro-el-barniz">El Barniz del Carácter</a> · <a class="bl" href="#libro-la-puerta">La Puerta entre dos Mentes</a> · <a class="bl" href="#libro-quien-gobierna">¿Quién Gobierna?</a> · <a class="bl" href="#libro-segunda-mente">Segunda Mente</a></div>
       </div>
     </div>
 
@@ -702,7 +734,7 @@
       <div class="cat-top">
         <span class="cat-letter">B</span>
         <div class="cat-titlewrap"><span class="cat-title">Carácter y Vida Interior</span></div>
-        <span class="cat-count">2 primarias · 6 secundarias</span>
+        <span class="cat-count">3 Primarias · 9 Secundarias</span>
       </div>
       <div class="cat-body">
         <p>Aquí se trabaja el sustrato desde el que una persona responde antes de haber deliberado: los patrones automáticos que gobiernan la reacción, la interpretación y el trato consigo misma. La tesis central de la categoría es que el objeto del desarrollo personal no es el resultado ni una supuesta mejor versión, sino el <strong>carácter</strong> desde el cual se vive, se decide y se responde a lo que ocurre.</p>
@@ -710,8 +742,8 @@
         <p>Es la categoría con más presencia secundaria del corpus, y no por casualidad. El carácter aparece cada vez que un sistema depende de una persona: el aprendiz que debe tolerar la frustración sin abandonar, el interlocutor dispuesto a ser transformado por una conversación, quien discierne una vocación sin dejarse gobernar por la impaciencia, quien trabaja con excelencia sin exigirle a la vida una cosecha, y quien administra poder sin dejar que el resultado sustituya al propósito.</p>
       </div>
       <div class="cat-books">
-        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primaria</span><a class="bl" href="#libro-el-barniz">El Barniz del Carácter</a> · <a class="bl" href="#libro-quien-gobierna">¿Quién Gobierna?</a></div>
-        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundarias</span><a class="bl" href="#libro-aprenderse">Aprenderse</a> · <a class="bl" href="#libro-el-centro">El Centro que no se Mueve</a> · <a class="bl" href="#libro-la-puerta">La Puerta entre dos Mentes</a> · <a class="bl" href="#libro-los-cuatro-jardines">Los Cuatro Jardines</a> · <a class="bl" href="#libro-no-controlas-la-cosecha">No Controlas la Cosecha</a> · <a class="bl" href="#libro-inexorable">ineXorable</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primarias</span><a class="bl" href="#libro-el-barniz">El Barniz del Carácter</a> · <a class="bl" href="#libro-lo-que-es-es">Lo que Es, Es</a> · <a class="bl" href="#libro-quien-gobierna">¿Quién Gobierna?</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundarias</span><a class="bl" href="#libro-uno-mas-uno">1 + 1 = N</a> · <a class="bl" href="#libro-aprenderse">Aprenderse</a> · <a class="bl" href="#libro-brujula">Brújula Mata Plataforma</a> · <a class="bl" href="#libro-el-centro">El Centro que no se Mueve</a> · <a class="bl" href="#libro-inexorable">ineXorable</a> · <a class="bl" href="#libro-la-puerta">La Puerta entre dos Mentes</a> · <a class="bl" href="#libro-los-cuatro-jardines">Los Cuatro Jardines</a> · <a class="bl" href="#libro-no-controlas-la-cosecha">No Controlas la Cosecha</a> · <a class="bl" href="#libro-sin-abandonar-la-orilla">Sin Abandonar la Orilla</a></div>
       </div>
     </div>
 
@@ -719,7 +751,7 @@
       <div class="cat-top">
         <span class="cat-letter">C</span>
         <div class="cat-titlewrap"><span class="cat-title">Atención, Deseo y Autogobierno</span></div>
-        <span class="cat-count">1 primaria · 3 secundarias</span>
+        <span class="cat-count">1 Primaria · 5 Secundarias</span>
       </div>
       <div class="cat-body">
         <p>Existe una pregunta anterior a cualquier decisión, a cualquier estrategia y a cualquier arquitectura: <strong>quién gobierna</strong>. No quién manda en una organización, sino quién dirige realmente a una persona en el instante en que aparece un impulso. Esta categoría trata esa frontera —deseo, atención, hábito, entorno— y lo hace en un momento histórico en el que la captura de la atención dejó de ser un efecto secundario del diseño tecnológico para convertirse en su objetivo explícito.</p>
@@ -728,7 +760,7 @@
       </div>
       <div class="cat-books">
         <div class="cat-books-line"><span class="cat-books-label lbl-p">Primaria</span><a class="bl" href="#libro-quien-gobierna">¿Quién Gobierna?</a></div>
-        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundarias</span><a class="bl" href="#libro-el-barniz">El Barniz del Carácter</a> · <a class="bl" href="#libro-aprenderse">Aprenderse</a> · <a class="bl" href="#libro-la-puerta">La Puerta entre dos Mentes</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundarias</span><a class="bl" href="#libro-aprenderse">Aprenderse</a> · <a class="bl" href="#libro-brujula">Brújula Mata Plataforma</a> · <a class="bl" href="#libro-el-barniz">El Barniz del Carácter</a> · <a class="bl" href="#libro-la-puerta">La Puerta entre dos Mentes</a> · <a class="bl" href="#libro-lo-que-es-es">Lo que Es, Es</a></div>
       </div>
     </div>
 
@@ -736,7 +768,7 @@
       <div class="cat-top">
         <span class="cat-letter">D</span>
         <div class="cat-titlewrap"><span class="cat-title">Vocación, Obra y Trayectoria</span></div>
-        <span class="cat-count">3 primarias · 2 secundarias</span>
+        <span class="cat-count">3 Primarias · 3 Secundarias</span>
       </div>
       <div class="cat-body">
         <p>Qué se construye con una vida profesional, con qué evidencia se decide el rumbo, y qué queda cuando la trayectoria termina. Los tres libros centrales de esta categoría atacan el mismo error por tres flancos distintos: tratar la vocación como un descubrimiento, la reputación como una acumulación de visibilidad y el resultado como una deuda que la realidad debe pagar.</p>
@@ -744,8 +776,8 @@
         <p>El hilo común es la responsabilidad precisa: asumir por completo el proceso —oficio, palabra, hábitos, excelencia— sin confundirlo con un control sobre el desenlace que nunca se tuvo. De ahí que la categoría termine, en los tres casos, desplazándose hacia la pregunta de para quién se construye y en qué condiciones se entrega lo construido.</p>
       </div>
       <div class="cat-books">
-        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primarias</span><a class="bl" href="#libro-los-cuatro-jardines">Los Cuatro Jardines</a> · <a class="bl" href="#libro-voz-soberana">Voz Soberana</a> · <a class="bl" href="#libro-no-controlas-la-cosecha">No Controlas la Cosecha</a></div>
-        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundarias</span><a class="bl" href="#libro-hagase-tu-voluntad">Hágase Tu Voluntad</a> · <a class="bl" href="#libro-quien-gobierna">¿Quién Gobierna?</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primarias</span><a class="bl" href="#libro-los-cuatro-jardines">Los Cuatro Jardines</a> · <a class="bl" href="#libro-no-controlas-la-cosecha">No Controlas la Cosecha</a> · <a class="bl" href="#libro-voz-soberana">Voz Soberana</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundarias</span><a class="bl" href="#libro-brujula">Brújula Mata Plataforma</a> · <a class="bl" href="#libro-hagase-tu-voluntad">Hágase Tu Voluntad</a> · <a class="bl" href="#libro-quien-gobierna">¿Quién Gobierna?</a></div>
       </div>
     </div>
 
@@ -753,7 +785,7 @@
       <div class="cat-top">
         <span class="cat-letter">E</span>
         <div class="cat-titlewrap"><span class="cat-title">Conversación y Vínculo Humano</span></div>
-        <span class="cat-count">1 primaria · 1 secundaria</span>
+        <span class="cat-count">1 Primaria · 3 Secundarias</span>
       </div>
       <div class="cat-body">
         <p>La categoría más pequeña del corpus y, probablemente, la que más se juega. Trata el encuentro real entre dos personas: no el intercambio de información, sino la conversación capaz de producir algo que ninguno de los dos habría alcanzado por separado. La distinción entre comunicar y conversar no es semántica; es la diferencia entre transmitir y ser transformado.</p>
@@ -762,15 +794,49 @@
       </div>
       <div class="cat-books">
         <div class="cat-books-line"><span class="cat-books-label lbl-p">Primaria</span><a class="bl" href="#libro-la-puerta">La Puerta entre dos Mentes</a></div>
-        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundaria</span><a class="bl" href="#libro-segunda-mente">Segunda Mente</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundarias</span><a class="bl" href="#libro-uno-mas-uno">1 + 1 = N</a> · <a class="bl" href="#libro-segunda-mente">Segunda Mente</a> · <a class="bl" href="#libro-sin-abandonar-la-orilla">Sin Abandonar la Orilla</a></div>
+      </div>
+    </div>
+
+    <div id="cat-hogar" class="cat-block reveal">
+      <div class="cat-top">
+        <span class="cat-letter">F</span>
+        <div class="cat-titlewrap"><span class="cat-title">Matrimonio, Paternidad y Vida Familiar</span></div>
+        <span class="cat-count">2 Primarias · 3 Secundarias</span>
+      </div>
+      <div class="cat-body">
+        <p>El corpus trata la empresa, el patrimonio y las instituciones como sistemas que se diseñan. Esta categoría aplica el mismo rigor a la institución que la mayoría de la gente deja enteramente en manos del azar, la buena intención o la costumbre: <strong>la casa</strong>. El matrimonio y la paternidad no aparecen aquí como asuntos privados sobre los que se opina, sino como arquitecturas que producen —o destruyen— capacidad humana durante décadas.</p>
+        <p>La primera tesis es que un matrimonio no es la suma de dos personas sino un sistema nuevo, y que su calidad depende menos de la decisión extraordinaria tomada una vez que de miles de decisiones pequeñas sostenidas en el tiempo. De ahí que el conflicto no sea la anomalía sino parte del sistema, que la reparación sea una capacidad y no un gesto, que la confianza se componga como cualquier otro capital, que muchos problemas emocionales sean en realidad problemas de diseño, y que el margen vuelva a aparecer —igual que en el patrimonio y en la empresa— como condición de resiliencia. La conclusión es incómoda y exacta: prevenir es mucho más barato que reparar.</p>
+        <p>La segunda tesis desplaza la paternidad desde la provisión hacia la formación. Dar recursos, educación, seguridad y oportunidades —la plataforma— es necesario pero insuficiente; la tarea real es formar una brújula: carácter, autodominio, criterio y responsabilidad para decidir bien cuando el padre ya no esté para indicar qué hacer. Es la prueba de la ausencia aplicada al lugar donde más duele, y de ahí su formulación más dura: el éxito del padre consiste en dejar de ser necesario.</p>
+      </div>
+      <div class="cat-books">
+        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primarias</span><a class="bl" href="#libro-uno-mas-uno">1 + 1 = N</a> · <a class="bl" href="#libro-brujula">Brújula Mata Plataforma</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundarias</span><a class="bl" href="#libro-el-barco">El Barco No Es el Viaje</a> · <a class="bl" href="#libro-hagase-tu-voluntad">Hágase Tu Voluntad</a> · <a class="bl" href="#libro-no-controlas-la-cosecha">No Controlas la Cosecha</a></div>
+      </div>
+    </div>
+
+    <div id="cat-verdad" class="cat-block reveal">
+      <div class="cat-top">
+        <span class="cat-letter">G</span>
+        <div class="cat-titlewrap"><span class="cat-title">Verdad, Evidencia y Discernimiento</span></div>
+        <span class="cat-count">1 Primaria · 4 Secundarias</span>
+      </div>
+      <div class="cat-body">
+        <p>Antes de decidir bien hay que ver bien. Esta categoría trata la operación previa a todo juicio —distinguir hechos de interpretaciones y de narrativas— en una época donde el engaño ganó velocidad, escala y personalización, y donde la dificultad ya no consiste en acceder a la información sino en calibrar cuánta confianza merece.</p>
+        <p>Su primera defensa es recuperar el espacio entre la impresión y el asentimiento: el instante en que algo nos parece cierto y el instante en que lo damos por cierto no son el mismo, y casi todo el trabajo intelectual serio ocurre entre ambos. De ahí la disciplina de ir a la fuente, de sospechar de las historias demasiado buenas, de tratar la emoción como señal y no como prueba, y de exigir que una afirmación pueda ser falsada antes de convertirla en identidad.</p>
+        <p>Pero el giro decisivo de la categoría no apunta hacia afuera. La pregunta no es sólo quién nos manipula, sino qué manipulador llevamos dentro: el criterio de integridad es la <strong>simetría</strong>, examinar las convicciones propias con el mismo rigor con que examinamos las ajenas. Y termina donde el corpus suele terminar, en el carácter: la verdad no es una posesión del ego ni un arma contra el adversario, sino una realidad ante la cual conviene vivir con humildad, y que debe transformar cómo hablamos, discutimos, compartimos información y tratamos a quien piensa distinto.</p>
+      </div>
+      <div class="cat-books">
+        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primaria</span><a class="bl" href="#libro-lo-que-es-es">Lo que Es, Es</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundarias</span><a class="bl" href="#libro-arquitectura-de-decision">Arquitectura de Decisión</a> · <a class="bl" href="#libro-asesoria-aumentada">Asesoría Aumentada</a> · <a class="bl" href="#libro-la-puerta">La Puerta entre dos Mentes</a> · <a class="bl" href="#libro-sin-abandonar-la-orilla">Sin Abandonar la Orilla</a></div>
       </div>
     </div>
 
     <div id="cat-juicio" class="cat-block reveal">
       <div class="cat-top">
-        <span class="cat-letter">F</span>
+        <span class="cat-letter">H</span>
         <div class="cat-titlewrap"><span class="cat-title">Juicio y Arquitectura de Decisión</span></div>
-        <span class="cat-count">2 primarias · 10 secundarias</span>
+        <span class="cat-count">2 Primarias · 11 Secundarias</span>
       </div>
       <div class="cat-body">
         <p>El núcleo técnico del corpus, y la categoría con mayor alcance transversal: prácticamente todos los demás libros pasan por aquí. Su objeto no es la decisión individual sino el <strong>sistema que produce decisiones</strong>. Una decisión correcta puede provenir de una arquitectura frágil —y entonces no es repetible—, del mismo modo que un sistema bien diseñado convierte incluso sus errores en capacidad para decidir mejor la próxima vez.</p>
@@ -779,15 +845,15 @@
       </div>
       <div class="cat-books">
         <div class="cat-books-line"><span class="cat-books-label lbl-p">Primarias</span><a class="bl" href="#libro-arquitectura-de-decision">Arquitectura de Decisión</a> · <a class="bl" href="#libro-margen-cero">Margen Cero</a></div>
-        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundarias</span><a class="bl" href="#libro-arquitectura-empresarial">Arquitectura Empresarial</a> · <a class="bl" href="#libro-autonomia">Autonomía</a> · <a class="bl" href="#libro-complejidad-ganada">Complejidad Ganada</a> · <a class="bl" href="#libro-el-dinero">El Dinero es una Promesa</a> · <a class="bl" href="#libro-el-interes">El Interés Compuesto del Juicio</a> · <a class="bl" href="#libro-espacio-de-accion">Espacio de Acción</a> · <a class="bl" href="#libro-football-intelligence">Football Intelligence</a> · <a class="bl" href="#libro-la-empresa-imposible">La Empresa Imposible</a> · <a class="bl" href="#libro-la-ventana-gradual">La Ventana Gradual</a> · <a class="bl" href="#libro-los-cuatro-jardines">Los Cuatro Jardines</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundarias</span><a class="bl" href="#libro-arquitectura-empresarial">Arquitectura Empresarial</a> · <a class="bl" href="#libro-autonomia">Autonomía</a> · <a class="bl" href="#libro-complejidad-ganada">Complejidad Ganada</a> · <a class="bl" href="#libro-el-dinero">El Dinero es una Promesa</a> · <a class="bl" href="#libro-el-interes">El Interés Compuesto del Juicio</a> · <a class="bl" href="#libro-espacio-de-accion">Espacio de Acción</a> · <a class="bl" href="#libro-football-intelligence">Football Intelligence</a> · <a class="bl" href="#libro-la-empresa-imposible">La Empresa Imposible</a> · <a class="bl" href="#libro-la-ventana-gradual">La Ventana Gradual</a> · <a class="bl" href="#libro-lo-que-es-es">Lo que Es, Es</a> · <a class="bl" href="#libro-los-cuatro-jardines">Los Cuatro Jardines</a></div>
       </div>
     </div>
 
     <div id="cat-asesoria" class="cat-block reveal">
       <div class="cat-top">
-        <span class="cat-letter">G</span>
+        <span class="cat-letter">I</span>
         <div class="cat-titlewrap"><span class="cat-title">Asesoría y Transferencia de Expertise</span></div>
-        <span class="cat-count">4 primarias · 1 secundaria</span>
+        <span class="cat-count">4 Primarias · 2 Secundarias</span>
       </div>
       <div class="cat-body">
         <p>Qué significa realmente ayudar a alguien a decidir mejor. La categoría reúne cuatro respuestas complementarias: una doctrina de intervención, una crítica económica al modelo tradicional de advisory, una arquitectura tecnológica para sostenerlo y un estándar de calibración para juzgar a quien aconseja.</p>
@@ -795,16 +861,16 @@
         <p>A esa doctrina se suma un diagnóstico estructural: si el conocimiento acumulado sobre un principal es el activo más valioso de la relación, el modelo episódico de sesiones lo deja depreciarse entre encuentro y encuentro. La propuesta —capital de contexto, memoria viva, presencia continua, deliberación multi-agente e integración entre dominios— convierte ese conocimiento en un activo que compone. Y el criterio de selección se endurece: la calibración de un asesor no se detecta en una buena presentación, sino en lo que ya sobrevivió a la tormenta.</p>
       </div>
       <div class="cat-books">
-        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primarias</span><a class="bl" href="#libro-segunda-mente">Segunda Mente</a> · <a class="bl" href="#libro-el-interes">El Interés Compuesto del Juicio</a> · <a class="bl" href="#libro-asesoria-aumentada">Asesoría Aumentada</a> · <a class="bl" href="#libro-margen-cero">Margen Cero</a></div>
-        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundaria</span><a class="bl" href="#libro-aprenderse">Aprenderse</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primarias</span><a class="bl" href="#libro-asesoria-aumentada">Asesoría Aumentada</a> · <a class="bl" href="#libro-el-interes">El Interés Compuesto del Juicio</a> · <a class="bl" href="#libro-margen-cero">Margen Cero</a> · <a class="bl" href="#libro-segunda-mente">Segunda Mente</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundarias</span><a class="bl" href="#libro-aprenderse">Aprenderse</a> · <a class="bl" href="#libro-brujula">Brújula Mata Plataforma</a></div>
       </div>
     </div>
 
     <div id="cat-futbol" class="cat-block reveal">
       <div class="cat-top">
-        <span class="cat-letter">H</span>
+        <span class="cat-letter">J</span>
         <div class="cat-titlewrap"><span class="cat-title">Fútbol y Entornos de Error Irreversible</span></div>
-        <span class="cat-count">1 primaria · 1 secundaria</span>
+        <span class="cat-count">1 Primaria · 1 Secundaria</span>
       </div>
       <div class="cat-body">
         <p>El fútbol profesional de élite aparece en este corpus por una razón metodológica, no biográfica: es uno de los pocos entornos donde el error no admite revisión, no puede postergarse y no es absorbido por la organización. Esa ausencia de subsidios lo convierte en un laboratorio privilegiado para estudiar cómo se forja —y cómo se falsifica— el juicio bajo presión.</p>
@@ -819,9 +885,9 @@
 
     <div id="cat-emprendimiento" class="cat-block reveal">
       <div class="cat-top">
-        <span class="cat-letter">I</span>
+        <span class="cat-letter">K</span>
         <div class="cat-titlewrap"><span class="cat-title">Emprendimiento y Construcción Temprana</span></div>
-        <span class="cat-count">2 primarias</span>
+        <span class="cat-count">2 Primarias</span>
       </div>
       <div class="cat-body">
         <p>Esta categoría existe porque una empresa que todavía no existe y una empresa que ya opera plantean problemas distintos, y tratarlas con el mismo manual es una de las formas más caras de equivocarse. Aquí el asunto es el paso del cero al uno: qué construir, en qué orden, y bajo qué evidencia se gana el derecho a comprometer recursos.</p>
@@ -835,9 +901,9 @@
 
     <div id="cat-direccion" class="cat-block reveal">
       <div class="cat-top">
-        <span class="cat-letter">J</span>
+        <span class="cat-letter">L</span>
         <div class="cat-titlewrap"><span class="cat-title">Dirección de Empresas en Marcha</span></div>
-        <span class="cat-count">2 primarias · 6 secundarias</span>
+        <span class="cat-count">2 Primarias · 6 Secundarias</span>
       </div>
       <div class="cat-body">
         <p>La contraparte de la categoría anterior: la empresa que ya opera, ya factura y ya tiene historia. Su problema no es qué construir, sino por qué el sistema produce lo que produce —y por qué sigue dependiendo del esfuerzo extraordinario de quien lo dirige. El desplazamiento que proponen estos libros es de <strong>operador a arquitecto</strong>: dejar de empujar personas y resolver problemas uno a uno, y empezar a diseñar el sistema que produce los resultados.</p>
@@ -852,9 +918,9 @@
 
     <div id="cat-familiar" class="cat-block reveal">
       <div class="cat-top">
-        <span class="cat-letter">K</span>
+        <span class="cat-letter">M</span>
         <div class="cat-titlewrap"><span class="cat-title">Empresa Familiar, Propiedad y Sucesión</span></div>
-        <span class="cat-count">1 primaria</span>
+        <span class="cat-count">1 Primaria</span>
       </div>
       <div class="cat-body">
         <p>La empresa familiar merece categoría propia porque contiene sistemas que obedecen lógicas incompatibles y que suelen operar como si fueran uno solo. La familia funciona con pertenencia incondicional; la empresa, con competencia demostrada; la propiedad, con derechos patrimoniales; el gobierno, con responsabilidad fiduciaria. Confundirlos es lo que convierte una fuente de prosperidad en una fuente de conflicto.</p>
@@ -868,9 +934,9 @@
 
     <div id="cat-ia" class="cat-block reveal">
       <div class="cat-top">
-        <span class="cat-letter">L</span>
+        <span class="cat-letter">N</span>
         <div class="cat-titlewrap"><span class="cat-title">Inteligencia Artificial y Capacidad Aumentada</span></div>
-        <span class="cat-count">3 primarias · 3 secundarias</span>
+        <span class="cat-count">3 Primarias · 3 Secundarias</span>
       </div>
       <div class="cat-body">
         <p>La inteligencia artificial aparece en este corpus como variable estructural, no como herramienta de productividad. La pregunta no es qué tareas se pueden automatizar, sino qué cambia en una organización cuando la capacidad intelectual deja de ser escasa: qué puede intentar, con qué estructura, con qué gobierno y con qué riesgos nuevos.</p>
@@ -878,16 +944,16 @@
         <p>De ahí las advertencias que recorren la categoría: la fluidez no es verdad, el progreso sintético puede simular avance sin contacto con la realidad, la abundancia de opciones produce parálisis si no existe un criterio para descartar, y la peor arquitectura posible es una feria de agentes sin integración. El apalancamiento real no consiste en ahorrar tiempo, sino en aumentar capacidad —y la frontera competitiva no será tener inteligencia artificial, sino gobernarla mejor.</p>
       </div>
       <div class="cat-books">
-        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primarias</span><a class="bl" href="#libro-asesoria-aumentada">Asesoría Aumentada</a> · <a class="bl" href="#libro-la-empresa-imposible">La Empresa Imposible</a> · <a class="bl" href="#libro-espacio-de-accion">Espacio de Acción</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primarias</span><a class="bl" href="#libro-asesoria-aumentada">Asesoría Aumentada</a> · <a class="bl" href="#libro-espacio-de-accion">Espacio de Acción</a> · <a class="bl" href="#libro-la-empresa-imposible">La Empresa Imposible</a></div>
         <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundarias</span><a class="bl" href="#libro-arquitectura-de-decision">Arquitectura de Decisión</a> · <a class="bl" href="#libro-el-interes">El Interés Compuesto del Juicio</a> · <a class="bl" href="#libro-football-intelligence">Football Intelligence</a></div>
       </div>
     </div>
 
     <div id="cat-patrimonio" class="cat-block reveal">
       <div class="cat-top">
-        <span class="cat-letter">M</span>
+        <span class="cat-letter">O</span>
         <div class="cat-titlewrap"><span class="cat-title">Patrimonio y Autonomía Económica</span></div>
-        <span class="cat-count">2 primarias · 5 secundarias</span>
+        <span class="cat-count">2 Primarias · 7 Secundarias</span>
       </div>
       <div class="cat-body">
         <p>El patrimonio tratado como sistema de gobierno y no como colección de inversiones. La categoría sustituye la pregunta habitual —cuánto tengo— por otra que cambia todo el análisis: <strong>qué puedo hacer, durante cuánto tiempo y con cuánta independencia</strong>. El dinero deja de ser el territorio y pasa a ser una promesa de capacidad futura, sujeta a una realidad que no controla.</p>
@@ -896,15 +962,15 @@
       </div>
       <div class="cat-books">
         <div class="cat-books-line"><span class="cat-books-label lbl-p">Primarias</span><a class="bl" href="#libro-autonomia">Autonomía</a> · <a class="bl" href="#libro-el-dinero">El Dinero es una Promesa</a></div>
-        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundarias</span><a class="bl" href="#libro-arquitectura-empresarial">Arquitectura Empresarial</a> · <a class="bl" href="#libro-el-barco">El Barco No Es el Viaje</a> · <a class="bl" href="#libro-la-ventana-gradual">La Ventana Gradual</a> · <a class="bl" href="#libro-voz-soberana">Voz Soberana</a> · <a class="bl" href="#libro-inexorable">ineXorable</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundarias</span><a class="bl" href="#libro-uno-mas-uno">1 + 1 = N</a> · <a class="bl" href="#libro-arquitectura-empresarial">Arquitectura Empresarial</a> · <a class="bl" href="#libro-el-barco">El Barco No Es el Viaje</a> · <a class="bl" href="#libro-entregarla-viva">Entregarla Viva: La Civilización de la Custodia</a> · <a class="bl" href="#libro-inexorable">ineXorable</a> · <a class="bl" href="#libro-la-ventana-gradual">La Ventana Gradual</a> · <a class="bl" href="#libro-voz-soberana">Voz Soberana</a></div>
       </div>
     </div>
 
     <div id="cat-incertidumbre" class="cat-block reveal">
       <div class="cat-top">
-        <span class="cat-letter">N</span>
+        <span class="cat-letter">P</span>
         <div class="cat-titlewrap"><span class="cat-title">Incertidumbre, Fragilidad y Antifragilidad</span></div>
-        <span class="cat-count">2 primarias · 6 secundarias</span>
+        <span class="cat-count">2 Primarias · 8 Secundarias</span>
       </div>
       <div class="cat-body">
         <p>Esta categoría abandona deliberadamente el terreno de la predicción. Su premisa es que las grandes rupturas rara vez crean la fragilidad: la revelan. Antes del colapso existe un periodo —la ventana gradual— en el que las dependencias se profundizan, los márgenes se estrechan y las fragilidades se acumulan en silencio mientras todo parece funcionar con normalidad.</p>
@@ -912,16 +978,16 @@
         <p>Su versión más ambiciosa convierte la incertidumbre en un problema de diseño en los tres niveles —persona, obra y patrimonio—: identificar dependencias, preservar margen, desarrollar capacidades transferibles y construir sistemas que no sólo resistan el cambio, sino que aprendan de él. La conclusión no es prudencia ni invulnerabilidad: es capacidad. Sobrevivir por diseño y no por inercia, conservando la capacidad de decidir precisamente cuando ocurre aquello que no se pudo prever.</p>
       </div>
       <div class="cat-books">
-        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primarias</span><a class="bl" href="#libro-la-ventana-gradual">La Ventana Gradual</a> · <a class="bl" href="#libro-inexorable">ineXorable</a></div>
-        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundarias</span><a class="bl" href="#libro-autonomia">Autonomía</a> · <a class="bl" href="#libro-complejidad-ganada">Complejidad Ganada</a> · <a class="bl" href="#libro-el-dinero">El Dinero es una Promesa</a> · <a class="bl" href="#libro-el-mundo">El Mundo que ya no Existe</a> · <a class="bl" href="#libro-no-controlas-la-cosecha">No Controlas la Cosecha</a> · <a class="bl" href="#libro-voz-soberana">Voz Soberana</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primarias</span><a class="bl" href="#libro-inexorable">ineXorable</a> · <a class="bl" href="#libro-la-ventana-gradual">La Ventana Gradual</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundarias</span><a class="bl" href="#libro-uno-mas-uno">1 + 1 = N</a> · <a class="bl" href="#libro-autonomia">Autonomía</a> · <a class="bl" href="#libro-complejidad-ganada">Complejidad Ganada</a> · <a class="bl" href="#libro-el-dinero">El Dinero es una Promesa</a> · <a class="bl" href="#libro-el-mundo">El Mundo que ya no Existe</a> · <a class="bl" href="#libro-entregarla-viva">Entregarla Viva: La Civilización de la Custodia</a> · <a class="bl" href="#libro-no-controlas-la-cosecha">No Controlas la Cosecha</a> · <a class="bl" href="#libro-voz-soberana">Voz Soberana</a></div>
       </div>
     </div>
 
     <div id="cat-poder" class="cat-block reveal">
       <div class="cat-top">
-        <span class="cat-letter">O</span>
+        <span class="cat-letter">Q</span>
         <div class="cat-titlewrap"><span class="cat-title">Poder, Instituciones y Custodia</span></div>
-        <span class="cat-count">2 primarias · 4 secundarias</span>
+        <span class="cat-count">3 Primarias · 4 Secundarias</span>
       </div>
       <div class="cat-body">
         <p>Aquí el corpus sube de escala y examina los sistemas colectivos: empresas, mercados, Estados, instituciones democráticas. Dos patologías estructurales organizan la categoría. La primera es la <strong>inversión</strong>: el momento en que los resultados dejan de ser consecuencia del propósito y pasan a sustituirlo. Ocurre sin villanos —basta con que incentivos, métricas y estructuras de decisión empujen progresivamente a personas razonables hacia comportamientos que contradicen la finalidad original.</p>
@@ -929,16 +995,50 @@
         <p>El principio correctivo que la categoría propone es la custodia: quien decide no recibe poder únicamente como prerrogativa, sino como responsabilidad proporcional al radio de consecuencias de sus decisiones, hacia quienes las soportan y hacia quienes heredarán lo construido. Traducido a diseño institucional, eso significa verdad como infraestructura, reversibilidad y experimentación, memoria capaz de producir aprendizaje sin convertirse en instrumento de persecución, y sistemas que sigan haciendo lo correcto cuando nadie los vigila y quienes los crearon ya no están.</p>
       </div>
       <div class="cat-books">
-        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primarias</span><a class="bl" href="#libro-la-gran-inversion">La Gran Inversión</a> · <a class="bl" href="#libro-el-mundo">El Mundo que ya no Existe</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primarias</span><a class="bl" href="#libro-el-mundo">El Mundo que ya no Existe</a> · <a class="bl" href="#libro-entregarla-viva">Entregarla Viva: La Civilización de la Custodia</a> · <a class="bl" href="#libro-la-gran-inversion">La Gran Inversión</a></div>
         <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundarias</span><a class="bl" href="#libro-asesoria-aumentada">Asesoría Aumentada</a> · <a class="bl" href="#libro-el-barco">El Barco No Es el Viaje</a> · <a class="bl" href="#libro-hagase-tu-voluntad">Hágase Tu Voluntad</a> · <a class="bl" href="#libro-no-controlas-la-cosecha">No Controlas la Cosecha</a></div>
+      </div>
+    </div>
+
+    <div id="cat-ecologia" class="cat-block reveal">
+      <div class="cat-top">
+        <span class="cat-letter">R</span>
+        <div class="cat-titlewrap"><span class="cat-title">Ecología, Capital Natural y Generaciones Futuras</span></div>
+        <span class="cat-count">1 Primaria · 3 Secundarias</span>
+      </div>
+      <div class="cat-body">
+        <p>La categoría donde la custodia deja de ser un principio ético y se vuelve un problema de contabilidad civilizatoria. Su diagnóstico es que hemos confundido progreso con expansión, y su ruptura conceptual consiste en cambiar la pregunta: no cuántas personas soporta la Tierra, sino qué tipo de civilización permite que la humanidad prospere sin consumir el capital del que depende.</p>
+        <p>El instrumento es una distinción que el resto del corpus ya usa en el terreno patrimonial y que aquí se aplica al planeta: <strong>no confundir renta con capital</strong>. Vivir de los frutos es sostenible; consumir el principal es liquidación disfrazada de prosperidad. De ahí la noción de capacidad custodial, la advertencia de que una fotografía puede engañar cuando lo que importa es la trayectoria, y la transformación de la propiedad en administración.</p>
+        <p>Su programa no es una lista de sacrificios sino cinco transformaciones interdependientes —espiritual, cultural, tecnológica, económica y demográfica— traducidas después a decisiones concretas sobre consumo, energía, dinero, trabajo, familia y vida comunitaria, con la advertencia de que la virtud individual es necesaria pero insuficiente y de que no existe ninguna bala de plata. El horizonte que propone es deliberadamente largo: cien generaciones después. Y la pregunta que lo ordena todo es la misma que atraviesa el corpus entero, aplicada aquí a su escala máxima: ¿qué estamos preparando para quienes recibirán lo que hoy está en nuestras manos?</p>
+      </div>
+      <div class="cat-books">
+        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primaria</span><a class="bl" href="#libro-entregarla-viva">Entregarla Viva: La Civilización de la Custodia</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundarias</span><a class="bl" href="#libro-el-dinero">El Dinero es una Promesa</a> · <a class="bl" href="#libro-la-gran-inversion">La Gran Inversión</a> · <a class="bl" href="#libro-no-controlas-la-cosecha">No Controlas la Cosecha</a></div>
+      </div>
+    </div>
+
+    <div id="cat-convivencia" class="cat-block reveal">
+      <div class="cat-top">
+        <span class="cat-letter">S</span>
+        <div class="cat-titlewrap"><span class="cat-title">Pluralidad, Convivencia y Testimonio</span></div>
+        <span class="cat-count">1 Primaria · 2 Secundarias</span>
+      </div>
+      <div class="cat-body">
+        <p>Cómo vivir la propia fe y las propias convicciones en una sociedad que no las comparte, sin diluirlas y sin convertirlas en hostilidad. El diagnóstico es preciso: una diferencia se vuelve hostilidad cuando la persona queda reducida a su etiqueta, y las dos salidas fáciles —el tribalismo, que niega la dignidad del otro, y el relativismo, que niega que la verdad importe— fracasan por la misma razón.</p>
+        <p>La condición previa que propone la categoría es la <strong>identidad segura</strong>: sólo quien conoce y vive lo que cree puede construir puentes sin miedo a desaparecer en el proceso. Sobre esa base se ordena un sistema de principios que no admite uso selectivo —dignidad, reciprocidad, libertad de conciencia, honestidad, cooperación y no deshumanización— y una escala que va de la tolerancia, entendida como comienzo y no como destino, hacia el respeto, la comprensión, la cooperación y la fraternidad.</p>
+        <p>Su consecuencia misionera es la más exigente. «Convertir por ejemplo» significa que el testimonio precede al discurso, que escuchar no es una táctica sino una forma de reconocer al otro, que verdad y caridad no son alternativas, y que nadie es un proyecto: la dignidad de una persona no depende de que termine pensando como nosotros. La pregunta no es cómo cambiar al otro, sino qué transformación debe producir la propia fe para que nuestra presencia haga posible el encuentro. Y la prueba definitiva no aparece con el amigo, sino con el adversario.</p>
+      </div>
+      <div class="cat-books">
+        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primaria</span><a class="bl" href="#libro-sin-abandonar-la-orilla">Sin Abandonar la Orilla</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundarias</span><a class="bl" href="#libro-el-mundo">El Mundo que ya no Existe</a> · <a class="bl" href="#libro-la-puerta">La Puerta entre dos Mentes</a></div>
       </div>
     </div>
 
     <div id="cat-fe" class="cat-block reveal">
       <div class="cat-top">
-        <span class="cat-letter">P</span>
+        <span class="cat-letter">T</span>
         <div class="cat-titlewrap"><span class="cat-title">Fe, Trascendencia y Sentido</span></div>
-        <span class="cat-count">3 primarias · 3 secundarias</span>
+        <span class="cat-count">4 Primarias · 5 Secundarias</span>
       </div>
       <div class="cat-body">
         <p>La categoría donde el corpus declara su fundamento. Su punto de partida es un diagnóstico que no admite consuelo: una persona puede ser exitosa, productiva, disciplinada e incluso religiosamente practicante, y permanecer interiormente desordenada si ha colocado su centro en el desempeño, el control, el dinero, la aprobación o en sí misma. La propuesta no es mejorar la vida, sino desplazar su centro de gravedad.</p>
@@ -946,16 +1046,16 @@
         <p>El tercero es la integración: ordenar una sola vida —persona, vocación, trabajo, dinero, autoridad y relaciones— bajo una misma pregunta, discerniendo la voluntad de Dios antes de optimizar resultados. Es también la categoría donde el corpus asume con mayor claridad el precio de sus convicciones: la verdadera prueba de una convicción es su costo, y la libertad se mide también por aquello a lo que uno es capaz de renunciar.</p>
       </div>
       <div class="cat-books">
-        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primarias</span><a class="bl" href="#libro-el-centro">El Centro que no se Mueve</a> · <a class="bl" href="#libro-hagase-tu-voluntad">Hágase Tu Voluntad</a> · <a class="bl" href="#libro-garabandal">Garabandal: La Convergencia</a></div>
-        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundarias</span><a class="bl" href="#libro-el-barco">El Barco No Es el Viaje</a> · <a class="bl" href="#libro-los-cuatro-jardines">Los Cuatro Jardines</a> · <a class="bl" href="#libro-quien-gobierna">¿Quién Gobierna?</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primarias</span><a class="bl" href="#libro-el-centro">El Centro que no se Mueve</a> · <a class="bl" href="#libro-garabandal">Garabandal: La Convergencia</a> · <a class="bl" href="#libro-hagase-tu-voluntad">Hágase Tu Voluntad</a> · <a class="bl" href="#libro-sin-abandonar-la-orilla">Sin Abandonar la Orilla</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundarias</span><a class="bl" href="#libro-el-barco">El Barco No Es el Viaje</a> · <a class="bl" href="#libro-entregarla-viva">Entregarla Viva: La Civilización de la Custodia</a> · <a class="bl" href="#libro-lo-que-es-es">Lo que Es, Es</a> · <a class="bl" href="#libro-los-cuatro-jardines">Los Cuatro Jardines</a> · <a class="bl" href="#libro-quien-gobierna">¿Quién Gobierna?</a></div>
       </div>
     </div>
 
     <div id="cat-integracion" class="cat-block reveal">
       <div class="cat-top">
-        <span class="cat-letter">Q</span>
+        <span class="cat-letter">U</span>
         <div class="cat-titlewrap"><span class="cat-title">Integración: SER, HACER y TENER</span></div>
-        <span class="cat-count">2 primarias · 2 secundarias</span>
+        <span class="cat-count">2 Primarias · 2 Secundarias</span>
       </div>
       <div class="cat-body">
         <p>La última categoría no agrupa un tema: agrupa una ambición. Reúne las obras que se niegan a tratar la persona, su obra y su patrimonio como compartimentos separados, y que proponen gobernarlos bajo una sola arquitectura. Son los libros que más difícilmente admitirían una etiqueta única, porque su objeto es precisamente la costura entre todas las demás.</p>
@@ -963,7 +1063,7 @@
         <p>Cada obra recorre esa secuencia desde un fundamento distinto. Una lo hace desde el diseño: estructura, propósito y adaptación como las tres dimensiones de cualquier arquitectura capaz de absorber el cambio y convertirlo en capacidad de actuar con más libertad. La otra lo hace desde la fe: discernir antes de optimizar, y administrar con fidelidad lo recibido. Coinciden en el resultado que buscan —una vida coherente— y en lo que rechazan: la promesa de control sobre el desenlace.</p>
       </div>
       <div class="cat-books">
-        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primarias</span><a class="bl" href="#libro-inexorable">ineXorable</a> · <a class="bl" href="#libro-hagase-tu-voluntad">Hágase Tu Voluntad</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primarias</span><a class="bl" href="#libro-hagase-tu-voluntad">Hágase Tu Voluntad</a> · <a class="bl" href="#libro-inexorable">ineXorable</a></div>
         <div class="cat-books-line"><span class="cat-books-label lbl-s">Secundarias</span><a class="bl" href="#libro-el-centro">El Centro que no se Mueve</a> · <a class="bl" href="#libro-margen-cero">Margen Cero</a></div>
       </div>
     </div>
@@ -972,42 +1072,170 @@
   </div>
 </section>
 
-<section id="libros">
+<section id="empezar">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="sec-num">IV</span>
       <div>
-        <h2 class="sec-title">Los veintisiete <em>libros</em></h2>
-        <p class="sec-sub">Cada obra incluye su tesis en una frase, sus etiquetas temáticas, el abstract completo y la descarga directa en PDF. Veintiocho volúmenes en total: <em>Aprenderse</em> se publicó en dos tomos. Sin costo, sin registro.</p>
+        <h2 class="sec-title">Por dónde <em>empezar</em></h2>
+        <p class="sec-sub">Treinta y dos libros son demasiados para empezar por el principio. Estos son ocho recorridos de cuatro libros cada uno, ordenados para que el segundo tenga sentido gracias al primero.</p>
+      </div>
+    </div>
+
+    <div class="path-grid reveal">
+      <div class="path-card">
+        <div class="path-num">Recorrido 01</div>
+        <div class="path-title">Si diriges una empresa que ya opera</div>
+        <p class="path-desc">El problema no es qué construir, sino por qué el sistema produce lo que produce.</p>
+        <ol class="path-list">
+          <li><span class="step">1</span><a href="#libro-arquitectura-empresarial">Arquitectura Empresarial</a></li>
+          <li><span class="step">2</span><a href="#libro-la-empresa-imposible">La Empresa Imposible</a></li>
+          <li><span class="step">3</span><a href="#libro-arquitectura-de-decision">Arquitectura de Decisión</a></li>
+          <li><span class="step">4</span><a href="#libro-la-ventana-gradual">La Ventana Gradual</a></li>
+        </ol>
+      </div>
+
+      <div class="path-card">
+        <div class="path-num">Recorrido 02</div>
+        <div class="path-title">Si estás construyendo algo desde cero</div>
+        <p class="path-desc">Cuándo se gana el derecho a añadir estructura, y qué merece ser intentado.</p>
+        <ol class="path-list">
+          <li><span class="step">1</span><a href="#libro-espacio-de-accion">Espacio de Acción</a></li>
+          <li><span class="step">2</span><a href="#libro-complejidad-ganada">Complejidad Ganada</a></li>
+          <li><span class="step">3</span><a href="#libro-voz-soberana">Voz Soberana</a></li>
+          <li><span class="step">4</span><a href="#libro-margen-cero">Margen Cero</a></li>
+        </ol>
+      </div>
+
+      <div class="path-card">
+        <div class="path-num">Recorrido 03</div>
+        <div class="path-title">Si administras un patrimonio</div>
+        <p class="path-desc">Del cuánto tengo al qué puedo hacer, durante cuánto tiempo y con cuánta independencia.</p>
+        <ol class="path-list">
+          <li><span class="step">1</span><a href="#libro-el-dinero">El Dinero es una Promesa</a></li>
+          <li><span class="step">2</span><a href="#libro-autonomia">Autonomía</a></li>
+          <li><span class="step">3</span><a href="#libro-la-ventana-gradual">La Ventana Gradual</a></li>
+          <li><span class="step">4</span><a href="#libro-el-barco">El Barco No Es el Viaje</a></li>
+        </ol>
+      </div>
+
+      <div class="path-card">
+        <div class="path-num">Recorrido 04</div>
+        <div class="path-title">Si tu trabajo es formar a otros</div>
+        <p class="path-desc">Instalar capacidad en lugar de dependencia, dentro y fuera de la casa.</p>
+        <ol class="path-list">
+          <li><span class="step">1</span><a href="#libro-segunda-mente">Segunda Mente</a></li>
+          <li><span class="step">2</span><a href="#libro-aprenderse">Aprenderse</a></li>
+          <li><span class="step">3</span><a href="#libro-el-interes">El Interés Compuesto del Juicio</a></li>
+          <li><span class="step">4</span><a href="#libro-brujula">Brújula Mata Plataforma</a></li>
+        </ol>
+      </div>
+
+      <div class="path-card">
+        <div class="path-num">Recorrido 05</div>
+        <div class="path-title">Si quieres ordenar tu vida interior</div>
+        <p class="path-desc">Quién gobierna cuando aparece el impulso, y desde qué centro se decide.</p>
+        <ol class="path-list">
+          <li><span class="step">1</span><a href="#libro-quien-gobierna">¿Quién Gobierna?</a></li>
+          <li><span class="step">2</span><a href="#libro-el-barniz">El Barniz del Carácter</a></li>
+          <li><span class="step">3</span><a href="#libro-los-cuatro-jardines">Los Cuatro Jardines</a></li>
+          <li><span class="step">4</span><a href="#libro-el-centro">El Centro que no se Mueve</a></li>
+        </ol>
+      </div>
+
+      <div class="path-card">
+        <div class="path-num">Recorrido 06</div>
+        <div class="path-title">Si estás construyendo una casa</div>
+        <p class="path-desc">El matrimonio y la paternidad tratados con el rigor que se reserva a la empresa.</p>
+        <ol class="path-list">
+          <li><span class="step">1</span><a href="#libro-uno-mas-uno">1 + 1 = N</a></li>
+          <li><span class="step">2</span><a href="#libro-brujula">Brújula Mata Plataforma</a></li>
+          <li><span class="step">3</span><a href="#libro-no-controlas-la-cosecha">No Controlas la Cosecha</a></li>
+          <li><span class="step">4</span><a href="#libro-hagase-tu-voluntad">Hágase Tu Voluntad</a></li>
+        </ol>
+      </div>
+
+      <div class="path-card">
+        <div class="path-num">Recorrido 07</div>
+        <div class="path-title">Si quieres pensar mejor sobre el mundo</div>
+        <p class="path-desc">Ver antes de reaccionar, y convivir sin diluir lo que se cree.</p>
+        <ol class="path-list">
+          <li><span class="step">1</span><a href="#libro-lo-que-es-es">Lo que Es, Es</a></li>
+          <li><span class="step">2</span><a href="#libro-el-mundo">El Mundo que ya no Existe</a></li>
+          <li><span class="step">3</span><a href="#libro-la-gran-inversion">La Gran Inversión</a></li>
+          <li><span class="step">4</span><a href="#libro-sin-abandonar-la-orilla">Sin Abandonar la Orilla</a></li>
+        </ol>
+      </div>
+
+      <div class="path-card">
+        <div class="path-num">Recorrido 08</div>
+        <div class="path-title">Si quieres la arquitectura completa</div>
+        <p class="path-desc">Los libros que se niegan a separar la persona, la obra y el patrimonio.</p>
+        <ol class="path-list">
+          <li><span class="step">1</span><a href="#libro-inexorable">ineXorable</a></li>
+          <li><span class="step">2</span><a href="#libro-hagase-tu-voluntad">Hágase Tu Voluntad</a></li>
+          <li><span class="step">3</span><a href="#libro-entregarla-viva">Entregarla Viva</a></li>
+          <li><span class="step">4</span><a href="#libro-el-centro">El Centro que no se Mueve</a></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="libros">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">V</span>
+      <div>
+        <h2 class="sec-title">Los treinta y dos <em>libros</em></h2>
+        <p class="sec-sub">Cada obra incluye su tesis en una frase, sus etiquetas temáticas, el abstract completo y la descarga directa en PDF. Treinta y tres volúmenes en total: <em>Aprenderse</em> se publicó en dos tomos. Sin costo, sin registro.</p>
       </div>
     </div>
 
     <div class="filterbar reveal">
       <div class="filter-caption">Filtrar por categoría</div>
       <div class="filter-chips" id="filter-chips">
-        <button class="fchip" type="button" data-filter="all" aria-pressed="true">Todos los libros (27)</button>
+        <button class="fchip" type="button" data-filter="all" aria-pressed="true">Todos los libros (32)</button>
         <button class="fchip" type="button" data-filter="aprendizaje" aria-pressed="false">Aprendizaje y Capacidad Cognitiva (5)</button>
-        <button class="fchip" type="button" data-filter="caracter" aria-pressed="false">Carácter y Vida Interior (8)</button>
-        <button class="fchip" type="button" data-filter="atencion" aria-pressed="false">Atención, Deseo y Autogobierno (4)</button>
-        <button class="fchip" type="button" data-filter="vocacion" aria-pressed="false">Vocación, Obra y Trayectoria (5)</button>
-        <button class="fchip" type="button" data-filter="conversacion" aria-pressed="false">Conversación y Vínculo Humano (2)</button>
-        <button class="fchip" type="button" data-filter="juicio" aria-pressed="false">Juicio y Arquitectura de Decisión (12)</button>
-        <button class="fchip" type="button" data-filter="asesoria" aria-pressed="false">Asesoría y Transferencia de Expertise (5)</button>
+        <button class="fchip" type="button" data-filter="caracter" aria-pressed="false">Carácter y Vida Interior (12)</button>
+        <button class="fchip" type="button" data-filter="atencion" aria-pressed="false">Atención, Deseo y Autogobierno (6)</button>
+        <button class="fchip" type="button" data-filter="vocacion" aria-pressed="false">Vocación, Obra y Trayectoria (6)</button>
+        <button class="fchip" type="button" data-filter="conversacion" aria-pressed="false">Conversación y Vínculo Humano (4)</button>
+        <button class="fchip" type="button" data-filter="hogar" aria-pressed="false">Matrimonio, Paternidad y Vida Familiar (5)</button>
+        <button class="fchip" type="button" data-filter="verdad" aria-pressed="false">Verdad, Evidencia y Discernimiento (5)</button>
+        <button class="fchip" type="button" data-filter="juicio" aria-pressed="false">Juicio y Arquitectura de Decisión (13)</button>
+        <button class="fchip" type="button" data-filter="asesoria" aria-pressed="false">Asesoría y Transferencia de Expertise (6)</button>
         <button class="fchip" type="button" data-filter="futbol" aria-pressed="false">Fútbol y Error Irreversible (2)</button>
         <button class="fchip" type="button" data-filter="emprendimiento" aria-pressed="false">Emprendimiento y Construcción Temprana (2)</button>
         <button class="fchip" type="button" data-filter="direccion" aria-pressed="false">Dirección de Empresas en Marcha (8)</button>
         <button class="fchip" type="button" data-filter="familiar" aria-pressed="false">Empresa Familiar, Propiedad y Sucesión (1)</button>
         <button class="fchip" type="button" data-filter="ia" aria-pressed="false">Inteligencia Artificial y Capacidad Aumentada (6)</button>
-        <button class="fchip" type="button" data-filter="patrimonio" aria-pressed="false">Patrimonio y Autonomía Económica (7)</button>
-        <button class="fchip" type="button" data-filter="incertidumbre" aria-pressed="false">Incertidumbre, Fragilidad y Antifragilidad (8)</button>
-        <button class="fchip" type="button" data-filter="poder" aria-pressed="false">Poder, Instituciones y Custodia (6)</button>
-        <button class="fchip" type="button" data-filter="fe" aria-pressed="false">Fe, Trascendencia y Sentido (6)</button>
+        <button class="fchip" type="button" data-filter="patrimonio" aria-pressed="false">Patrimonio y Autonomía Económica (9)</button>
+        <button class="fchip" type="button" data-filter="incertidumbre" aria-pressed="false">Incertidumbre, Fragilidad y Antifragilidad (10)</button>
+        <button class="fchip" type="button" data-filter="poder" aria-pressed="false">Poder, Instituciones y Custodia (7)</button>
+        <button class="fchip" type="button" data-filter="ecologia" aria-pressed="false">Ecología, Capital Natural y Generaciones Futuras (4)</button>
+        <button class="fchip" type="button" data-filter="convivencia" aria-pressed="false">Pluralidad, Convivencia y Testimonio (3)</button>
+        <button class="fchip" type="button" data-filter="fe" aria-pressed="false">Fe, Trascendencia y Sentido (9)</button>
         <button class="fchip" type="button" data-filter="integracion" aria-pressed="false">Integración: SER, HACER y TENER (4)</button>
       </div>
-      <div class="filter-status" id="filter-status">Mostrando los 27 libros del corpus.</div>
+      <div class="filter-status" id="filter-status">Mostrando los 32 libros del corpus.</div>
     </div>
 
     <div id="book-list">
+      <article class="book-card reveal" id="libro-uno-mas-uno" data-tags="hogar caracter conversacion patrimonio incertidumbre">
+        <h3 class="book-title">1 + 1 = N</h3>
+        <p class="book-thesis">Un gran matrimonio no es una decisión extraordinaria tomada una vez, sino miles de decisiones pequeñas sostenidas durante décadas.</p>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-hogar">Matrimonio, Paternidad y Vida Familiar</a><a class="tag tag-s" href="#cat-caracter">Carácter y Vida Interior</a><a class="tag tag-s" href="#cat-conversacion">Conversación y Vínculo Humano</a><a class="tag tag-s" href="#cat-patrimonio">Patrimonio y Autonomía Económica</a><a class="tag tag-s" href="#cat-incertidumbre">Incertidumbre, Fragilidad y Antifragilidad</a></div>
+        <p class="book-abstract">1 + 1 = N propone una manera distinta de comprender el matrimonio: no como la simple suma de dos personas, sino como la construcción progresiva de un nuevo sistema —un «nosotros»— cuya calidad depende de las personas que lo forman, de la elección que las une y, sobre todo, de lo que ambas hacen con el paso del tiempo. El libro recorre este proceso desde la preparación personal y el discernimiento de pareja hasta la convivencia, el conflicto, la reparación, la confianza, el dinero, los hijos, la familia y el legado.</p>
+        <p class="book-abstract">Más que ofrecer una fórmula para encontrar una pareja perfecta, el texto plantea una pregunta más profunda: ¿cómo se construye deliberadamente una vida compartida que haga florecer a quienes la forman y pueda sostenerse durante décadas? Su propuesta combina prudencia, carácter, virtud, conversación, responsabilidad y visión de largo plazo, y culmina en una idea sencilla: un gran matrimonio no es el resultado de una decisión extraordinaria tomada una sola vez, sino de miles de pequeñas decisiones correctas sostenidas a lo largo del tiempo.</p>
+        <div class="book-dl-row">
+          <a class="paper-dl" href="https://metanoiagroup.vip/downloads/Uno_Mas_Uno_Igua_a_N.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_uno-mas-uno'})">
+            <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+            Descargar libro (PDF)
+          </a>
+        </div>
+      </article>
+
       <article class="book-card reveal" id="libro-aprenderse" data-tags="atencion aprendizaje asesoria caracter">
         <h3 class="book-title">Aprenderse</h3>
         <p class="book-thesis">El verdadero dominio no es saberlo todo, sino saber cómo empezar cuando aparece algo que todavía no sabemos hacer.</p>
@@ -1026,10 +1254,10 @@
         </div>
       </article>
 
-      <article class="book-card reveal" id="libro-arquitectura-de-decision" data-tags="juicio ia direccion">
+      <article class="book-card reveal" id="libro-arquitectura-de-decision" data-tags="juicio ia direccion verdad">
         <h3 class="book-title">Arquitectura de Decisión</h3>
         <p class="book-thesis">Una decisión correcta puede provenir de un sistema frágil; un sistema bien diseñado convierte incluso sus errores en capacidad para decidir mejor.</p>
-        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-juicio">Juicio y Arquitectura de Decisión</a><a class="tag tag-s" href="#cat-ia">Inteligencia Artificial y Capacidad Aumentada</a><a class="tag tag-s" href="#cat-direccion">Dirección de Empresas en Marcha</a></div>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-juicio">Juicio y Arquitectura de Decisión</a><a class="tag tag-s" href="#cat-ia">Inteligencia Artificial y Capacidad Aumentada</a><a class="tag tag-s" href="#cat-direccion">Dirección de Empresas en Marcha</a><a class="tag tag-s" href="#cat-verdad">Verdad, Evidencia y Discernimiento</a></div>
         <p class="book-abstract">Arquitectura de Decisión parte de una premisa sencilla pero profunda: en entornos cada vez más complejos, inciertos y acelerados, el verdadero problema no es únicamente tomar buenas decisiones, sino diseñar el sistema desde el cual esas decisiones se producen. El libro propone pasar de una visión puntual de la decisión a una arquitectura integral que incorpore información, diversidad de perspectivas, deliberación adversarial, memoria, aprendizaje, adaptación y gobernanza. Su objetivo es mostrar por qué una decisión aparentemente correcta puede surgir de un sistema frágil y por qué, a la inversa, un sistema bien diseñado puede convertir cada decisión —incluidos sus errores— en capacidad para decidir mejor en el futuro.</p>
         <p class="book-abstract">A partir de este marco, el texto desarrolla herramientas prácticas para evaluar y fortalecer la arquitectura de decisión a nivel personal, organizacional y tecnológico, incluyendo el uso de inteligencia artificial como segunda mente: no como sustituto del juicio humano, sino como infraestructura para ampliar la percepción, preservar memoria, desafiar supuestos y acelerar el aprendizaje. La tesis final es que la ventaja sostenible no pertenece necesariamente a quien tiene más información, más talento o mejor tecnología, sino a quien consigue construir un sistema que aprende sistemáticamente de sus propias decisiones y se vuelve más capaz con el tiempo.</p>
         <div class="book-dl-row">
@@ -1054,10 +1282,10 @@
         </div>
       </article>
 
-      <article class="book-card reveal" id="libro-asesoria-aumentada" data-tags="ia asesoria direccion poder">
+      <article class="book-card reveal" id="libro-asesoria-aumentada" data-tags="ia asesoria direccion poder verdad">
         <h3 class="book-title">Asesoría Aumentada</h3>
         <p class="book-thesis">El valor estratégico de la inteligencia artificial no reside en la inteligencia del modelo, sino en la arquitectura que se construye a su alrededor.</p>
-        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-ia">Inteligencia Artificial y Capacidad Aumentada</a><a class="tag tag-p" href="#cat-asesoria">Asesoría y Transferencia de Expertise</a><a class="tag tag-s" href="#cat-direccion">Dirección de Empresas en Marcha</a><a class="tag tag-s" href="#cat-poder">Poder, Instituciones y Custodia</a></div>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-ia">Inteligencia Artificial y Capacidad Aumentada</a><a class="tag tag-p" href="#cat-asesoria">Asesoría y Transferencia de Expertise</a><a class="tag tag-s" href="#cat-direccion">Dirección de Empresas en Marcha</a><a class="tag tag-s" href="#cat-poder">Poder, Instituciones y Custodia</a><a class="tag tag-s" href="#cat-verdad">Verdad, Evidencia y Discernimiento</a></div>
         <p class="book-abstract">Asesoría Aumentada presenta una visión integral de la inteligencia artificial que trasciende el uso de modelos generativos como simples herramientas de productividad. La obra explora cómo construir sistemas capaces de combinar IA, memoria de largo plazo, datos, agentes autónomos y conocimiento especializado para transformar la asesoría profesional en una capacidad continua, contextual y escalable. A lo largo de sus distintos libros, desarrolla los fundamentos técnicos y metodológicos necesarios para comprender cómo estos sistemas recuerdan, razonan, actúan y evolucionan.</p>
         <p class="book-abstract">Pero el verdadero propósito de la obra va más allá de la tecnología. El texto propone un marco para gobernar, evaluar y desplegar la IA de manera responsable, abordando cuestiones de autonomía, seguridad, privacidad, sesgos, ética, economía, gestión del cambio y aprendizaje continuo. Su tesis fundamental es que el valor estratégico de la IA no reside únicamente en la inteligencia del modelo, sino en la arquitectura que se construye alrededor de él y en la capacidad de una organización para convertir esa inteligencia en conocimiento acumulativo, decisiones de mayor calidad y relaciones de largo plazo.</p>
         <div class="book-dl-row">
@@ -1082,6 +1310,20 @@
         </div>
       </article>
 
+      <article class="book-card reveal" id="libro-brujula" data-tags="hogar caracter asesoria atencion vocacion">
+        <h3 class="book-title">Brújula Mata Plataforma</h3>
+        <p class="book-thesis">El éxito de un padre consiste en dejar de ser necesario: la prueba de la ausencia aplicada al lugar donde más duele.</p>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-hogar">Matrimonio, Paternidad y Vida Familiar</a><a class="tag tag-s" href="#cat-caracter">Carácter y Vida Interior</a><a class="tag tag-s" href="#cat-asesoria">Asesoría y Transferencia de Expertise</a><a class="tag tag-s" href="#cat-atencion">Atención, Deseo y Autogobierno</a><a class="tag tag-s" href="#cat-vocacion">Vocación, Obra y Trayectoria</a></div>
+        <p class="book-abstract"><em>Brújula mata plataforma</em> propone una reflexión profunda sobre la paternidad y sobre aquello que realmente significa preparar a un hijo para la vida. El libro parte de una distinción fundamental: proporcionar recursos, educación, seguridad y oportunidades —la «plataforma»— es necesario, pero no suficiente. La verdadera tarea del padre consiste en formar una «brújula»: carácter, autodominio, criterio, responsabilidad, fortaleza y capacidad para tomar buenas decisiones cuando el padre ya no esté presente para indicarle qué hacer.</p>
+        <p class="book-abstract">A lo largo de sus páginas, la obra invita al padre a pasar de proveedor a mentor, comenzando por revisar su propia herencia y su propio ejemplo, para después acompañar progresivamente al hijo desde la dependencia hacia la autonomía. La propuesta culmina en una visión más amplia de la libertad, la vocación, el servicio y el sentido, y ofrece herramientas para convertir estas ideas en hábitos y rituales familiares. En última instancia, el libro plantea una pregunta que funciona como hilo conductor de toda la obra: ¿qué podemos hacer hoy para aumentar la capacidad futura de nuestros hijos para gobernar correctamente su propia vida?</p>
+        <div class="book-dl-row">
+          <a class="paper-dl" href="https://metanoiagroup.vip/downloads/Brujula_Mata_Plataforma.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_brujula'})">
+            <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+            Descargar libro (PDF)
+          </a>
+        </div>
+      </article>
+
       <article class="book-card reveal" id="libro-complejidad-ganada" data-tags="emprendimiento direccion incertidumbre juicio">
         <h3 class="book-title">Complejidad Ganada</h3>
         <p class="book-thesis">Una empresa no debería volverse más compleja porque crece, sino porque la realidad demostró que lo necesita.</p>
@@ -1096,10 +1338,10 @@
         </div>
       </article>
 
-      <article class="book-card reveal" id="libro-el-barco" data-tags="familiar patrimonio poder fe">
+      <article class="book-card reveal" id="libro-el-barco" data-tags="familiar patrimonio poder fe hogar">
         <h3 class="book-title">El Barco No Es el Viaje</h3>
         <p class="book-thesis">La empresa es el barco, no el viaje: el éxito no consiste en que el negocio sobreviva, sino en que la familia conserve su libertad.</p>
-        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-familiar">Empresa Familiar, Propiedad y Sucesión</a><a class="tag tag-s" href="#cat-patrimonio">Patrimonio y Autonomía Económica</a><a class="tag tag-s" href="#cat-poder">Poder, Instituciones y Custodia</a><a class="tag tag-s" href="#cat-fe">Fe, Trascendencia y Sentido</a></div>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-familiar">Empresa Familiar, Propiedad y Sucesión</a><a class="tag tag-s" href="#cat-patrimonio">Patrimonio y Autonomía Económica</a><a class="tag tag-s" href="#cat-poder">Poder, Instituciones y Custodia</a><a class="tag tag-s" href="#cat-fe">Fe, Trascendencia y Sentido</a><a class="tag tag-s" href="#cat-hogar">Matrimonio, Paternidad y Vida Familiar</a></div>
         <p class="book-abstract">El Barco No Es El Viaje es una reflexión profunda y práctica sobre uno de los mayores desafíos de las empresas familiares: cómo preservar simultáneamente la empresa, el patrimonio y, sobre todo, las relaciones que les dan sentido. A través de sus distintas partes, el texto muestra cómo la confusión entre familia, propiedad, gobierno y operación puede convertir una fuente de prosperidad en una fuente de conflicto, y propone principios y estructuras concretas —gobierno corporativo, Consejo Familiar, protocolo, sucesión, mecanismos de salida y gestión patrimonial— para evitar que las tensiones inevitables terminen destruyendo aquello que realmente importa.</p>
         <p class="book-abstract">Pero la obra va más allá de la profesionalización de la empresa familiar. Su tesis última es que la empresa es el barco, no el viaje: el verdadero éxito no consiste simplemente en lograr que el negocio sobreviva, sino en construir un sistema que permita a la familia conservar su libertad, sus relaciones, su propósito y su dignidad, incluso si algún día el negocio cambia, se vende o desaparece. En su dimensión trascendente, el libro profundiza además en la idea de la empresa y el patrimonio como instrumentos de servicio y mayordomía, situando a la persona y su propósito por encima de la riqueza, el control y la continuidad empresarial.</p>
         <div class="book-dl-row">
@@ -1138,10 +1380,10 @@
         </div>
       </article>
 
-      <article class="book-card reveal" id="libro-el-dinero" data-tags="patrimonio juicio incertidumbre">
+      <article class="book-card reveal" id="libro-el-dinero" data-tags="patrimonio juicio incertidumbre ecologia">
         <h3 class="book-title">El Dinero es una Promesa</h3>
         <p class="book-thesis">La riqueza no es una cifra: es lo que puedes hacer, durante cuánto tiempo y con cuánta independencia.</p>
-        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-patrimonio">Patrimonio y Autonomía Económica</a><a class="tag tag-s" href="#cat-juicio">Juicio y Arquitectura de Decisión</a><a class="tag tag-s" href="#cat-incertidumbre">Incertidumbre, Fragilidad y Antifragilidad</a></div>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-patrimonio">Patrimonio y Autonomía Económica</a><a class="tag tag-s" href="#cat-juicio">Juicio y Arquitectura de Decisión</a><a class="tag tag-s" href="#cat-incertidumbre">Incertidumbre, Fragilidad y Antifragilidad</a><a class="tag tag-s" href="#cat-ecologia">Ecología, Capital Natural y Generaciones Futuras</a></div>
         <p class="book-abstract"><strong>El dinero es una promesa</strong> propone una mirada distinta sobre el dinero, la riqueza y la libertad económica. En lugar de reducir el patrimonio a una cifra o al rendimiento de los activos, el libro invita a entender el dinero como una promesa de capacidad futura y a evaluar la verdadera riqueza en términos de lo que una persona puede hacer, durante cuánto tiempo y con cuánta independencia. A través de conceptos como liquidez, deuda, concentración, diversificación, holgura, deterioro y capacidad invisible, la obra cuestiona algunas de las métricas habituales con las que medimos nuestra situación financiera.</p>
         <p class="book-abstract">Más que ofrecer una colección de fórmulas para acumular más, <strong>El dinero es una promesa</strong> plantea una pregunta más profunda: ¿capacidad para qué? Su propuesta consiste en construir estructuras económicas capaces de sobrevivir a la incertidumbre, conservar opciones y sostener aquello que realmente importa, sin confundir el crecimiento de los números con el crecimiento de la riqueza. En última instancia, el libro convierte las finanzas en una reflexión sobre autonomía, tiempo, decisiones y propósito.</p>
         <div class="book-dl-row">
@@ -1166,14 +1408,28 @@
         </div>
       </article>
 
-      <article class="book-card reveal" id="libro-el-mundo" data-tags="poder incertidumbre">
+      <article class="book-card reveal" id="libro-el-mundo" data-tags="poder incertidumbre convivencia">
         <h3 class="book-title">El Mundo que ya no Existe</h3>
         <p class="book-thesis">El desafío no es modernizar las instituciones, sino distinguir la función que deben preservar de la forma con la que intentaron cumplirla.</p>
-        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-poder">Poder, Instituciones y Custodia</a><a class="tag tag-s" href="#cat-incertidumbre">Incertidumbre, Fragilidad y Antifragilidad</a></div>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-poder">Poder, Instituciones y Custodia</a><a class="tag tag-s" href="#cat-incertidumbre">Incertidumbre, Fragilidad y Antifragilidad</a><a class="tag tag-s" href="#cat-convivencia">Pluralidad, Convivencia y Testimonio</a></div>
         <p class="book-abstract">El mundo que ya no existe parte de una pregunta sencilla pero incómoda: ¿qué ocurre cuando las instituciones que organizan nuestra vida pública siguen diseñadas para resolver los problemas de un mundo que ya cambió? El libro examina cómo la tecnología, la disponibilidad de información y la reducción de los costos de coordinación han transformado las condiciones bajo las cuales fueron concebidas muchas instituciones democráticas, y sostiene que el desafío no consiste simplemente en “modernizarlas”, sino en distinguir entre la función que deben preservar y la forma histórica con la que han intentado cumplirla.</p>
         <p class="book-abstract">A partir de esta premisa, la obra propone una arquitectura de renovación institucional basada en participación de mayor resolución, nuevas capacidades estatales, salvaguardas frente a la concentración de poder, experimentación reversible, continuidad administrativa y memoria institucional. Su tesis final va más allá de diseñar “mejores instituciones”: plantea la necesidad de construir una democracia auto-renovable, capaz de detectar cuándo sus propias reglas dejan de cumplir su propósito, experimentar con alternativas, aprender de los resultados y cambiar sin destruir las garantías fundamentales que la sostienen.</p>
         <div class="book-dl-row">
           <a class="paper-dl" href="https://metanoiagroup.vip/downloads/El_Mundo_que_ya_no_Existe.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_el-mundo'})">
+            <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+            Descargar libro (PDF)
+          </a>
+        </div>
+      </article>
+
+      <article class="book-card reveal" id="libro-entregarla-viva" data-tags="ecologia poder patrimonio fe incertidumbre">
+        <h3 class="book-title">Entregarla Viva: La Civilización de la Custodia</h3>
+        <p class="book-thesis">Vivir de los frutos es sostenible; consumir el principal es liquidación disfrazada de prosperidad.</p>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-ecologia">Ecología, Capital Natural y Generaciones Futuras</a><a class="tag tag-p" href="#cat-poder">Poder, Instituciones y Custodia</a><a class="tag tag-s" href="#cat-patrimonio">Patrimonio y Autonomía Económica</a><a class="tag tag-s" href="#cat-fe">Fe, Trascendencia y Sentido</a><a class="tag tag-s" href="#cat-incertidumbre">Incertidumbre, Fragilidad y Antifragilidad</a></div>
+        <p class="book-abstract"><em>Entregarla Viva: La civilización de la custodia</em> propone una pregunta que cambia el modo habitual de abordar la crisis ecológica: no se trata únicamente de preguntarnos cuántas personas puede soportar la Tierra, sino qué tipo de civilización puede permitir que la humanidad prospere sin consumir el capital natural del que depende. A partir de esta perspectiva, el libro revisa nuestra idea de progreso, la relación entre propiedad y responsabilidad, el concepto de capital natural, la capacidad custodial y la responsabilidad hacia las generaciones que todavía no han nacido.</p>
+        <p class="book-abstract">La propuesta culmina en una civilización de la custodia, basada en cinco transformaciones interdependientes —espiritual, cultural, tecnológica, económica y demográfica— y traducida después a decisiones concretas sobre consumo, alimentación, energía, dinero, trabajo, familia y vida comunitaria. Más que ofrecer una lista de sacrificios, el libro invita a cambiar nuestra forma de mirar y actuar: pasar de la lógica de la extracción a la de la administración, restauración y entrega, con una pregunta como horizonte: ¿qué mundo estamos preparando para quienes recibirán lo que hoy está en nuestras manos?</p>
+        <div class="book-dl-row">
+          <a class="paper-dl" href="https://metanoiagroup.vip/downloads/Entregarla_Viva.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_entregarla-viva'})">
             <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
             Descargar libro (PDF)
           </a>
@@ -1222,10 +1478,10 @@
         </div>
       </article>
 
-      <article class="book-card reveal" id="libro-hagase-tu-voluntad" data-tags="fe integracion poder vocacion">
+      <article class="book-card reveal" id="libro-hagase-tu-voluntad" data-tags="fe integracion poder vocacion hogar">
         <h3 class="book-title">Hágase Tu Voluntad</h3>
         <p class="book-thesis">Discernir la voluntad de Dios antes de optimizar resultados, y ordenar la vida desde el ser, hacia el hacer y finalmente hacia el tener.</p>
-        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-fe">Fe, Trascendencia y Sentido</a><a class="tag tag-p" href="#cat-integracion">Integración: SER, HACER y TENER</a><a class="tag tag-s" href="#cat-poder">Poder, Instituciones y Custodia</a><a class="tag tag-s" href="#cat-vocacion">Vocación, Obra y Trayectoria</a></div>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-fe">Fe, Trascendencia y Sentido</a><a class="tag tag-p" href="#cat-integracion">Integración: SER, HACER y TENER</a><a class="tag tag-s" href="#cat-poder">Poder, Instituciones y Custodia</a><a class="tag tag-s" href="#cat-vocacion">Vocación, Obra y Trayectoria</a><a class="tag tag-s" href="#cat-hogar">Matrimonio, Paternidad y Vida Familiar</a></div>
         <p class="book-abstract">Hágase Tu Voluntad propone una pregunta sencilla pero radical: ¿cómo ordenar una sola vida para que la persona, la vocación, el trabajo, el dinero, la autoridad y las relaciones respondan a una misma orientación? El texto parte de un diagnóstico: muchas personas viven fragmentadas, aplicando criterios distintos según el ámbito en el que se encuentran. Frente a ello, propone pasar de la fragmentación a la integración mediante un principio rector: discernir la voluntad de Dios antes de optimizar resultados, y ordenar la vida desde el ser, hacia el hacer y finalmente hacia el tener.</p>
         <p class="book-abstract">A partir de esta idea, el libro desarrolla una visión práctica de la vocación, la libertad, el carácter, el liderazgo, la empresa, el patrimonio, la tecnología y la responsabilidad. Su invitación final no es simplemente a conseguir más, sino a administrar con fidelidad aquello que se ha recibido: capacidades, tiempo, recursos, influencia y responsabilidades. En ese sentido, es una reflexión sobre cómo convertir una vida aparentemente dividida en una vida coherente, en la que las decisiones cotidianas puedan responder a una misma pregunta: «¿Estoy haciendo Su Voluntad?»</p>
         <div class="book-dl-row">
@@ -1264,10 +1520,10 @@
         </div>
       </article>
 
-      <article class="book-card reveal" id="libro-la-gran-inversion" data-tags="poder direccion">
+      <article class="book-card reveal" id="libro-la-gran-inversion" data-tags="poder direccion ecologia">
         <h3 class="book-title">La Gran Inversión</h3>
         <p class="book-thesis">No hacen falta villanos: basta con que los incentivos empujen a personas razonables para que el resultado termine sustituyendo al propósito.</p>
-        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-poder">Poder, Instituciones y Custodia</a><a class="tag tag-s" href="#cat-direccion">Dirección de Empresas en Marcha</a></div>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-poder">Poder, Instituciones y Custodia</a><a class="tag tag-s" href="#cat-direccion">Dirección de Empresas en Marcha</a><a class="tag tag-s" href="#cat-ecologia">Ecología, Capital Natural y Generaciones Futuras</a></div>
         <p class="book-abstract">La Gran Inversión propone una lectura estructural de uno de los problemas más profundos de las organizaciones contemporáneas: el momento en que los resultados dejan de ser consecuencia del propósito y pasan a convertirse en su sustituto. A través de un recorrido que abarca el poder, la economía, las instituciones, la política, la tecnología, el derecho y la relación con el futuro, el libro sostiene que esta inversión puede producirse sin necesidad de villanos: basta con que los incentivos, las métricas y las estructuras de decisión empujen progresivamente a personas razonables hacia comportamientos que terminan contradiciendo la finalidad original.</p>
         <p class="book-abstract">Frente a ello, la obra plantea un principio alternativo: la custodia. Quien posee poder, recursos o capacidad de decisión no los recibe únicamente como una prerrogativa, sino como una responsabilidad hacia quienes soportan las consecuencias de sus decisiones y hacia quienes recibirán lo que hoy se construye. La propuesta no se limita a formular principios morales, sino que busca traducirlos en criterios de selección, medición, diseño institucional y mecanismos de autocorrección, con una pregunta como hilo conductor: ¿cómo construir sistemas que sigan haciendo lo correcto incluso cuando nadie los está vigilando y cuando quienes los crearon ya no están?</p>
         <div class="book-dl-row">
@@ -1278,10 +1534,10 @@
         </div>
       </article>
 
-      <article class="book-card reveal" id="libro-la-puerta" data-tags="atencion conversacion caracter aprendizaje">
+      <article class="book-card reveal" id="libro-la-puerta" data-tags="atencion conversacion caracter aprendizaje verdad convivencia">
         <h3 class="book-title">La Puerta entre dos Mentes</h3>
         <p class="book-thesis">Una buena conversación no consiste en que uno convenza al otro, sino en llegar juntos a donde ninguno habría llegado solo.</p>
-        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-conversacion">Conversación y Vínculo Humano</a><a class="tag tag-s" href="#cat-caracter">Carácter y Vida Interior</a><a class="tag tag-s" href="#cat-aprendizaje">Aprendizaje y Capacidad Cognitiva</a><a class="tag tag-s" href="#cat-atencion">Atención, Deseo y Autogobierno</a></div>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-conversacion">Conversación y Vínculo Humano</a><a class="tag tag-s" href="#cat-caracter">Carácter y Vida Interior</a><a class="tag tag-s" href="#cat-aprendizaje">Aprendizaje y Capacidad Cognitiva</a><a class="tag tag-s" href="#cat-atencion">Atención, Deseo y Autogobierno</a><a class="tag tag-s" href="#cat-verdad">Verdad, Evidencia y Discernimiento</a><a class="tag tag-s" href="#cat-convivencia">Pluralidad, Convivencia y Testimonio</a></div>
         <p class="book-abstract"><strong>La puerta entre dos mentes</strong>, de Mario Garza Livas, es una exploración del arte perdido de la conversación y de lo que está en juego cuando dos personas dejan de limitarse a intercambiar palabras para encontrarse realmente. El libro distingue entre comunicación y conversación, analiza las fuerzas que hoy dificultan ese encuentro —la economía de la atención, la polarización, la instrumentalización del otro y la pérdida de espacios comunes— y muestra que conversar profundamente no es una cuestión de buenos modales, sino una capacidad humana que requiere atención, presencia, curiosidad y disposición a ser transformado por el otro.</p>
         <p class="book-abstract">A partir de ahí, la obra propone una filosofía práctica de la conversación: escuchar antes de responder, preguntar para descubrir, pensar en voz alta sin miedo a equivocarse, disentir sin destruir, tolerar el silencio y crear las condiciones para que ambos participantes salgan de la conversación intelectualmente más amplios. Su tesis central puede resumirse en una idea: una buena conversación no consiste en que uno convenza al otro, sino en que la presencia de ambos haga posible algo que ninguno habría alcanzado por sí solo.</p>
         <div class="book-dl-row">
@@ -1300,6 +1556,20 @@
         <p class="book-abstract">A través de veinte leyes y de su aplicación a la persona, la organización y el patrimonio, la obra desarrolla un método para detectar fragilidades mientras todavía existe margen para corregirlas. Su pregunta fundamental no es qué ocurrirá ni cuándo ocurrirá, sino algo más práctico: ¿qué podemos construir hoy para que, cuando llegue aquello que no podemos prever, todavía conservemos la capacidad de decidir?</p>
         <div class="book-dl-row">
           <a class="paper-dl" href="https://metanoiagroup.vip/downloads/La_Ventana_Gradual.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_la-ventana-gradual'})">
+            <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+            Descargar libro (PDF)
+          </a>
+        </div>
+      </article>
+
+      <article class="book-card reveal" id="libro-lo-que-es-es" data-tags="verdad caracter juicio fe atencion">
+        <h3 class="book-title">Lo que Es, Es</h3>
+        <p class="book-thesis">La prueba de integridad no es cuánto dudamos del adversario, sino si examinamos nuestras convicciones con el mismo rigor.</p>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-verdad">Verdad, Evidencia y Discernimiento</a><a class="tag tag-p" href="#cat-caracter">Carácter y Vida Interior</a><a class="tag tag-s" href="#cat-juicio">Juicio y Arquitectura de Decisión</a><a class="tag tag-s" href="#cat-fe">Fe, Trascendencia y Sentido</a><a class="tag tag-s" href="#cat-atencion">Atención, Deseo y Autogobierno</a></div>
+        <p class="book-abstract"><em>Lo que es, es</em> es una invitación a recuperar una relación más honesta con la realidad en una época marcada por la sobreinformación, la polarización, la manipulación y la dificultad creciente para distinguir entre hechos, interpretaciones y narrativas. El libro propone un recorrido práctico para aprender a ver antes de reaccionar, juzgar antes de afirmar y discernir antes de tomar partido, examinando las propias convicciones con el mismo rigor que se aplicaría a las de los demás. Su propósito no es convertir al lector en alguien que desconfía de todo, sino en alguien capaz de calibrar su confianza, reconocer sus límites y corregirse cuando la evidencia lo exige.</p>
+        <p class="book-abstract">Pero el libro va más allá del pensamiento crítico. Plantea que buscar la verdad es también una cuestión de carácter: la verdad debe transformar la manera en que hablamos, discutimos, compartimos información, ejercemos el poder y tratamos a quienes piensan distinto. Desde una perspectiva que culmina en la fe cristiana, propone que la verdad no debe convertirse en un arma ni en una posesión del ego, sino en una realidad ante la cual aprender a vivir con humildad, responsabilidad y caridad. En última instancia, <em>Lo que es, es</em> no pretende enseñarnos simplemente a tener razón, sino a convertirnos en personas dispuestas a dejar que la realidad nos corrija.</p>
+        <div class="book-dl-row">
+          <a class="paper-dl" href="https://metanoiagroup.vip/downloads/Lo_Que_Es_Es.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_lo-que-es-es'})">
             <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
             Descargar libro (PDF)
           </a>
@@ -1334,10 +1604,10 @@
         </div>
       </article>
 
-      <article class="book-card reveal" id="libro-no-controlas-la-cosecha" data-tags="vocacion caracter poder incertidumbre">
+      <article class="book-card reveal" id="libro-no-controlas-la-cosecha" data-tags="vocacion caracter poder incertidumbre hogar ecologia">
         <h3 class="book-title">No Controlas la Cosecha</h3>
         <p class="book-thesis">Puedes responder por completo de lo que siembras, pero nunca tendrás un control equivalente sobre lo que cosechas.</p>
-        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-vocacion">Vocación, Obra y Trayectoria</a><a class="tag tag-s" href="#cat-caracter">Carácter y Vida Interior</a><a class="tag tag-s" href="#cat-poder">Poder, Instituciones y Custodia</a><a class="tag tag-s" href="#cat-incertidumbre">Incertidumbre, Fragilidad y Antifragilidad</a></div>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-vocacion">Vocación, Obra y Trayectoria</a><a class="tag tag-s" href="#cat-caracter">Carácter y Vida Interior</a><a class="tag tag-s" href="#cat-poder">Poder, Instituciones y Custodia</a><a class="tag tag-s" href="#cat-incertidumbre">Incertidumbre, Fragilidad y Antifragilidad</a><a class="tag tag-s" href="#cat-hogar">Matrimonio, Paternidad y Vida Familiar</a><a class="tag tag-s" href="#cat-ecologia">Ecología, Capital Natural y Generaciones Futuras</a></div>
         <p class="book-abstract">No controlas la cosecha parte de una idea sencilla pero profundamente incómoda: podemos asumir una responsabilidad enorme sobre lo que sembramos —nuestras decisiones, hábitos, capacidades, trabajo y carácter—, pero nunca tendremos un control equivalente sobre lo que finalmente cosechamos. A través de las metáforas del terreno, la semilla, el cultivo, la construcción y la intemperie, el texto explora cómo vivir y actuar con ambición y excelencia sin convertir el resultado en una obligación que la vida deba cumplir.</p>
         <p class="book-abstract">Más que un manual para alcanzar el éxito, es una propuesta para relacionarnos de otra manera con la incertidumbre, el fracaso, el dinero, el tiempo y nuestros propios logros. Su recorrido conduce desde aprender a trabajar bien sin garantías hasta una pregunta más profunda: qué hacemos con aquello que recibimos y conseguimos, y en qué condiciones lo entregamos a quienes vienen después. En última instancia, el libro plantea que una vida bien cultivada no se mide únicamente por la cosecha obtenida, sino también por la calidad de la semilla que dejamos preparada para la siguiente.</p>
         <div class="book-dl-row">
@@ -1376,6 +1646,20 @@
         </div>
       </article>
 
+      <article class="book-card reveal" id="libro-sin-abandonar-la-orilla" data-tags="convivencia fe conversacion caracter verdad">
+        <h3 class="book-title">Sin Abandonar la Orilla</h3>
+        <p class="book-thesis">La prueba definitiva de una convicción no aparece con el amigo que la comparte, sino con el adversario que la niega.</p>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-convivencia">Pluralidad, Convivencia y Testimonio</a><a class="tag tag-p" href="#cat-fe">Fe, Trascendencia y Sentido</a><a class="tag tag-s" href="#cat-conversacion">Conversación y Vínculo Humano</a><a class="tag tag-s" href="#cat-caracter">Carácter y Vida Interior</a><a class="tag tag-s" href="#cat-verdad">Verdad, Evidencia y Discernimiento</a></div>
+        <p class="book-abstract"><em>Sin abandonar la orilla: Convierte por ejemplo</em> propone una reflexión sobre cómo vivir la fe en una sociedad marcada por la diversidad religiosa, cultural y de convicciones. Su punto de partida es que la convivencia no exige renunciar a la propia identidad ni diluir las diferencias, sino aprender a construir puentes desde una identidad segura, reconociendo en el otro una dignidad que no depende de que piense, crea o viva como nosotros. Para ello, el texto desarrolla principios como la reciprocidad, la libertad de conciencia, la honestidad, la cooperación y la no deshumanización, y propone pasar de la mera tolerancia hacia formas más profundas de comprensión, servicio, amistad y fraternidad.</p>
+        <p class="book-abstract">Pero el libro va más allá de una propuesta de convivencia: plantea una forma de entender la misión cristiana. «Convertir por ejemplo» significa que el testimonio debe comenzar por la propia vida: conocer y vivir la propia fe, escuchar antes de juzgar, defender la verdad sin crueldad, reconocer los errores de la propia comunidad y relacionarse con los demás sin convertirlos en proyectos de conversión. La invitación final es exigente: no preguntarse primero cómo cambiar al otro, sino qué transformación debe producir la propia fe en nosotros para que nuestra presencia haga posible el encuentro, el respeto y el bien común.</p>
+        <div class="book-dl-row">
+          <a class="paper-dl" href="https://metanoiagroup.vip/downloads/Sin_Abandonar_la_Orilla.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_sin-abandonar-la-orilla'})">
+            <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+            Descargar libro (PDF)
+          </a>
+        </div>
+      </article>
+
       <article class="book-card reveal" id="libro-voz-soberana" data-tags="vocacion patrimonio incertidumbre">
         <h3 class="book-title">Voz Soberana</h3>
         <p class="book-thesis">¿Qué queda de una persona cuando desaparecen la empresa, el cargo, el patrimonio o el mercado que sostenían su posición?</p>
@@ -1397,7 +1681,7 @@
 <section id="enlaces">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="sec-num">V</span>
+      <span class="sec-num">VI</span>
       <div>
         <h2 class="sec-title">Enlaces <em>relevantes</em></h2>
         <p class="sec-sub">Más contenido, más contexto, y el resto del ecosistema.</p>
@@ -1408,7 +1692,7 @@
       <a class="eco-card full" href="https://garzalivas.substack.com" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'contact','event_label':'substack'})">
         <div class="eco-code">Enlace 1</div>
         <div class="eco-name">Substack — Mario Garza Livas</div>
-        <p class="eco-desc">Por este canal se publican de forma continua desarrollos, revisiones y nuevos ensayos sobre los temas que atraviesan los veintisiete libros de esta página. La suscripción está abierta.</p>
+        <p class="eco-desc">Por este canal se publican de forma continua desarrollos, revisiones y nuevos ensayos sobre los temas que atraviesan los treinta y dos libros de esta página. La suscripción está abierta.</p>
         <div class="eco-url">garzalivas.substack.com <span class="arrow">&rarr;</span></div>
       </a>
       <a class="eco-card" href="https://www.linkedin.com/in/garzalivas/recent-activity/articles/" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'contact','event_label':'linkedin'})">
@@ -1443,7 +1727,7 @@
   <div class="wrap">
     <img class="footer-seal" src="assets/mgw-emblem-firma.webp" alt="" width="148" height="113" loading="lazy" decoding="async">
     <div class="footer-brand">La Obra Escrita</div>
-    <div class="footer-tagline">Veintisiete libros, una sola arquitectura.</div>
+    <div class="footer-tagline">Treinta y dos libros, una sola arquitectura.</div>
     <div class="footer-role"><strong>Mario Garza Livas</strong> — Autor · Escritor · Pensador</div>
     <div class="footer-contacts">
       <a href="mailto:mario@metanoiagroup.vip">mario@metanoiagroup.vip</a>
@@ -1485,7 +1769,7 @@
       chips.forEach(ch=>ch.setAttribute('aria-pressed', String(ch.dataset.filter === key)));
       empty.classList.toggle('hidden', shown !== 0);
       status.textContent = key === 'all'
-        ? 'Mostrando los 27 libros del corpus.'
+        ? 'Mostrando los 32 libros del corpus.'
         : 'Mostrando ' + shown + (shown === 1 ? ' libro' : ' libros') + ' en «' + label + '».';
       if(key !== 'all'){
         gtag('event','filter',{'event_category':'books','event_label':key});
