@@ -535,6 +535,42 @@
   @media (prefers-reduced-motion:reduce){
     .hero-seal{animation:none;opacity:1;}
   }
+
+  /* ---------- EASTER EGG · LA MANITA (triple clic) ---------- */
+  .hero-seal,.footer-seal,.brandmark .mark{cursor:default;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;}
+  .manita{
+    width:min(620px,calc(100vw - 40px));max-height:calc(100dvh - 40px);margin:auto;padding:0;
+    background:linear-gradient(180deg,#141416 0%,#0d0d0e 100%);color:var(--text);
+    border:1px solid var(--line-strong);border-radius:2px;overflow:auto;
+    box-shadow:0 40px 120px rgba(0,0,0,.85),0 0 0 1px #b6905c1a,0 0 90px rgba(182,144,92,.12);
+  }
+  .manita::backdrop{background:rgba(5,5,6,.82);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);}
+  .manita[open]{animation:manitaIn .7s cubic-bezier(.2,.7,.2,1);}
+  .manita[open]::backdrop{animation:manitaFade .5s ease;}
+  @keyframes manitaIn{from{opacity:0;transform:translateY(14px) scale(.985);}to{opacity:1;transform:none;}}
+  @keyframes manitaFade{from{opacity:0;}to{opacity:1;}}
+  .manita-inner{position:relative;padding:56px 52px 48px;}
+  .manita-seal{display:block;width:64px;height:64px;margin:0 0 30px;border-radius:50%;
+    filter:drop-shadow(0 0 22px rgba(182,144,92,.35));}
+  .manita-eyebrow{display:flex;align-items:center;gap:14px;margin:0 0 34px;
+    font:500 11px/1.4 var(--sans);letter-spacing:.32em;text-transform:uppercase;color:var(--accent);}
+  .manita-eyebrow::before{content:'';width:38px;height:1px;background:var(--accent);opacity:.7;}
+  .manita-body p{font:400 clamp(17px,2.1vw,19px)/1.62 var(--serif);color:#d9d4ca;margin:0 0 1.35em;}
+  .manita-body em{font-style:italic;color:var(--accent);}
+  .manita-body strong{font-weight:500;color:var(--text);letter-spacing:.02em;}
+  .manita-body p{opacity:0;animation:manitaLine .9s ease forwards;}
+  .manita-body p:nth-child(1){animation-delay:.25s}.manita-body p:nth-child(2){animation-delay:.55s}
+  .manita-body p:nth-child(3){animation-delay:.85s}.manita-body p:nth-child(4){animation-delay:1.15s}
+  .manita-body p:nth-child(5){animation-delay:1.45s}.manita-body p:nth-child(6){animation-delay:1.75s}
+  @keyframes manitaLine{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
+  .manita-coda{margin-top:38px !important;padding-top:28px;border-top:1px solid var(--line-strong);
+    font-size:clamp(20px,2.6vw,23px) !important;line-height:1.5 !important;color:var(--text) !important;}
+  .manita-sign{display:block;margin-top:22px;font:500 11px/1 var(--sans);letter-spacing:.28em;text-transform:uppercase;color:var(--text-muted);}
+  .manita-close{position:absolute;top:18px;right:18px;width:40px;height:40px;display:grid;place-items:center;
+    background:none;border:1px solid transparent;color:var(--text-muted);font:300 26px/1 var(--sans);cursor:pointer;transition:color .2s,border-color .2s;}
+  .manita-close:hover,.manita-close:focus-visible{color:var(--accent);border-color:var(--line-strong);outline:none;}
+  @media (max-width:640px){.manita-inner{padding:48px 26px 36px;}.manita-seal{width:52px;height:52px;}}
+  @media (prefers-reduced-motion:reduce){.manita-body p{opacity:1;animation:none;}}
 </style>
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="La Obra Escrita — Mario Garza Livas">
@@ -1858,5 +1894,48 @@
   })();
 </script>
 
+
+<!-- EASTER EGG · LA MANITA — triple clic sobre el emblema -->
+<dialog class="manita" id="manita" aria-labelledby="manita-title">
+  <div class="manita-inner">
+    <button class="manita-close" type="button" aria-label="Cerrar" data-close>&times;</button>
+    <img class="manita-seal" src="assets/mgw-mark.webp" alt="" width="64" height="64">
+    <h2 class="manita-eyebrow" id="manita-title">La seña de la manita</h2>
+    <div class="manita-body">
+      <p>Nació como un símbolo de unidad en mi juventud:<br><em>“We are ONE.”</em><br>Significó para mí conexión, humanidad, totalidad.</p>
+      <p>Hoy la miro de otra manera.<br>No todo es Uno.<br><strong>El UNO es DIOS.</strong></p>
+      <p>Nosotros somos muchos:<br>criaturas distintas, libres, irrepetibles,<br>llamadas a vivir en comunión con Él<br>y entre nosotros.</p>
+      <p>Así que la manita permanece.<br>Solo cambió aquello hacia lo que apunta.</p>
+      <p>Como un guiño a mi pasado,<br>y como un puente entre aquel joven y quien soy hoy,<br>la rescato para convertirla en la imagen visual<br>de mi obra escrita y de mi identidad como autor.</p>
+      <p class="manita-coda">La misma mano.<br>Otra dirección.<br><em>Un mismo autor.</em><span class="manita-sign">— Mario Garza Livas</span></p>
+    </div>
+  </div>
+</dialog>
+<script>
+  (function(){
+    const dlg = document.getElementById('manita');
+    if(!dlg || typeof dlg.showModal !== 'function') return;
+    const targets = document.querySelectorAll('.hero-seal, .footer-seal, .brandmark .mark');
+    let n = 0, t0 = 0, timer;
+    function open(where){
+      if(dlg.open) return;
+      dlg.showModal();
+      dlg.querySelector('[data-close]').focus({preventScroll:true});
+      if(typeof gtag === 'function') gtag('event','easter_egg',{'event_category':'manita','event_label':where});
+    }
+    targets.forEach(el=>{
+      el.addEventListener('click', e=>{
+        const now = Date.now();
+        n = (now - t0 < 550) ? n + 1 : 1;
+        t0 = now;
+        clearTimeout(timer); timer = setTimeout(()=>{ n = 0; }, 600);
+        if(n >= 3){ n = 0; e.preventDefault(); window.getSelection && window.getSelection().removeAllRanges(); open(el.className.split(' ')[0] || 'mark'); }
+      });
+      el.addEventListener('dblclick', e=>e.preventDefault());
+    });
+    dlg.querySelector('[data-close]').addEventListener('click', ()=>dlg.close());
+    dlg.addEventListener('click', e=>{ if(e.target === dlg) dlg.close(); });
+  })();
+</script>
 </body>
 </html>
