@@ -152,3 +152,34 @@
   }
   window.TMG.buildOrbit = buildOrbit;
 })();
+
+/* Misión · Easter egg: tres clics rápidos en la flama (o en el logo del pie) revelan «Por qué la flama» */
+(function () {
+  const veil = document.getElementById('flama');
+  if (!veil) return;
+  document.body.classList.add('has-flama');
+  let last = null;
+  const open = () => {
+    last = document.activeElement;
+    if (window.getSelection) window.getSelection().removeAllRanges();
+    veil.hidden = false; document.body.classList.add('flama-open');
+    requestAnimationFrame(() => requestAnimationFrame(() => veil.classList.add('on')));
+    veil.scrollTop = 0; veil.focus({ preventScroll: true });
+    try { gtag('event', 'click', { event_category: 'cta', event_label: 'easter_flama' }); } catch (e) {}
+  };
+  const close = () => {
+    veil.classList.remove('on'); document.body.classList.remove('flama-open');
+    setTimeout(() => { veil.hidden = true; }, 700);
+    if (last && last.focus) last.focus({ preventScroll: true });
+  };
+  document.querySelectorAll('[data-flama], .sig').forEach(el => {
+    let n = 0, t;
+    el.addEventListener('click', () => {
+      n++; clearTimeout(t); t = setTimeout(() => { n = 0; }, 700);
+      if (n >= 3) { n = 0; open(); }
+    });
+  });
+  veil.querySelector('.flama-x').addEventListener('click', close);
+  veil.addEventListener('click', e => { if (e.target === veil) close(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !veil.hidden) close(); });
+})();

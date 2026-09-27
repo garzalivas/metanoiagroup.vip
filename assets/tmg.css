@@ -672,6 +672,50 @@ footer a:hover{color:var(--gold-light)}
   .seg{display:flex}
   .seg button{flex:1;padding:10px 8px}
 }
+
+/* ---------- Mario · retrato (medallón sutil, estilo mgl1) ---------- */
+.phero-art.portrait .stage{position:absolute;width:clamp(210px,19vw,280px);aspect-ratio:1/1;right:max(8vw,calc((100vw - 1240px)/2 + 40px));top:50%;transform:translateY(-62%)}
+.phero-art.portrait .ring{position:absolute;inset:-11%;border-radius:50%;border:1px solid rgba(212,180,90,.22);background:radial-gradient(circle,rgba(184,150,46,.10) 0%,rgba(184,150,46,.04) 45%,rgba(184,150,46,0) 70%);opacity:0;animation:fade 1.4s ease 1s forwards}
+.medal{position:absolute;inset:0;width:100%;height:auto;opacity:0;transform:scale(.97);animation:medal 1.4s var(--ease) .6s forwards;filter:drop-shadow(0 18px 36px rgba(0,0,0,.4))}
+@keyframes medal{to{opacity:1;transform:scale(1)}}
+.door-medal{display:block;width:clamp(96px,9vw,120px);height:auto;margin:0 auto 28px;filter:drop-shadow(0 12px 26px rgba(0,0,0,.4))}
+@media (max-width:960px){
+  .phero.has-portrait{flex-direction:column;justify-content:flex-start;align-items:stretch;min-height:auto}
+  .phero-art.portrait{position:relative;inset:auto;padding-top:calc(var(--nav-h) + 44px)}
+  .phero-art.portrait .stage{position:relative;right:auto;top:auto;transform:none;width:clamp(140px,36vw,200px);margin:0 0 0 calc(var(--gutter) + 24px)}
+  .phero.has-portrait .phero-in{padding-top:30px}
+}
+@media (prefers-reduced-motion:reduce){.medal,.phero-art.portrait .ring{opacity:1;transform:none;animation:none}}
+
+/* ---------- Misión · Easter egg «Por qué la flama» ---------- */
+[data-flama],.has-flama .sig{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.flama{position:fixed;inset:0;z-index:9999;background:radial-gradient(ellipse at 50% 22%,#22354a 0%,var(--navy-deep) 62%);color:var(--on-dark);overflow-y:auto;opacity:0;transition:opacity .9s var(--ease)}
+.flama[hidden]{display:none}
+.flama:focus{outline:none}
+.flama.on{opacity:1}
+.flama-in{max-width:620px;margin:0 auto;padding:clamp(72px,11vh,120px) var(--gutter) 90px;text-align:center}
+.flama-f{width:58px;height:auto;margin:0 auto 34px;display:block;animation:arde 4.8s ease-in-out infinite;filter:drop-shadow(0 0 18px rgba(212,180,90,.35))}
+@keyframes arde{0%,100%{transform:scale(1);filter:drop-shadow(0 0 14px rgba(212,180,90,.28))}50%{transform:scale(1.045);filter:drop-shadow(0 0 30px rgba(212,180,90,.55))}}
+.flama-k{font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-light)}
+.flama-t{font-family:var(--serif);font-weight:300;font-size:clamp(34px,5vw,50px);line-height:1.08;margin:18px 0 0}
+.flama-t em{font-style:italic;color:var(--gold-light)}
+.flama-q{font-family:var(--serif);font-style:italic;font-size:clamp(19px,2.2vw,23px);line-height:1.5;color:var(--on-dark);margin:44px auto 0;max-width:30em}
+.flama-q cite{display:block;font-style:normal;font-family:var(--sans);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-light);margin-top:14px}
+.flama-b{margin:44px auto 0;padding-top:40px;border-top:1px solid rgba(255,255,255,.12)}
+.flama-b p{font-size:clamp(15.5px,1.4vw,17px);line-height:1.8;color:var(--on-dark-soft);margin:0 0 18px}
+.flama-b em{color:var(--gold-light)}
+.flama-q2{margin-top:40px}
+.flama-amdg{font-family:var(--serif);font-style:italic;font-size:clamp(22px,2.4vw,28px);color:var(--gold-light);margin-top:48px}
+.flama-x{position:fixed;top:18px;right:22px;width:46px;height:46px;border:1px solid rgba(255,255,255,.2);border-radius:50%;background:transparent;color:var(--on-dark);font-size:26px;line-height:1;cursor:pointer;z-index:10000;transition:border-color .3s;outline:none}
+.flama-x:focus-visible{outline:1px solid var(--gold-light);outline-offset:4px}
+.flama-x:hover{border-color:var(--gold-light)}
+body.flama-open{overflow:hidden}
+.flama.on .flama-in>*{animation:sube 1.1s var(--ease) both}
+.flama.on .flama-in>:nth-child(2){animation-delay:.25s}.flama.on .flama-in>:nth-child(3){animation-delay:.4s}.flama.on .flama-in>:nth-child(4){animation-delay:.6s}
+.flama.on .flama-in>:nth-child(5){animation-delay:.8s}.flama.on .flama-in>:nth-child(6){animation-delay:1s}.flama.on .flama-in>:nth-child(7){animation-delay:1.2s}
+.flama.on .flama-f{animation:sube 1.1s var(--ease) both,arde 4.8s ease-in-out 1.1s infinite}
+@keyframes sube{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.flama,.flama.on .flama-in>*,.flama-f{animation:none!important;transition:none}}
 /* ============ HERO ============ */
 .hero{position:relative;height:210vh;background:var(--navy);color:var(--on-dark)}
 .hero-stick{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
