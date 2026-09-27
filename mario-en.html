@@ -814,7 +814,7 @@ footer a:hover{color:var(--gold-light)}
             <div class="prose"><p>He operates in the international professional football ecosystem — <br>the zero-margin-of-error environment, <br>winner takes all, <br>permanent pressure. <br>Where frameworks are forged or broken.</p></div>
           </li>
           <li class="dom" data-i="4" id="d-ia">
-            <h3><small>In the domain of artificial intelligence</small><a href="./gkvecl94m8hktthw5lojb55tjstk29wtdgtx627vwdvfbxk6io/TMG_Documento_Maestro_v3_0_AI_Capabilities.pdf" target="_blank" rel="noopener nofollow" data-ev="documento_maestro" style="color:inherit;text-decoration:none;cursor:text">Artificial intelligence</a></h3>
+            <h3><small>In the domain of artificial intelligence</small><span data-egg="./gkvecl94m8hktthw5lojb55tjstk29wtdgtx627vwdvfbxk6io/TMG_Documento_Maestro_v3_0_AI_Capabilities.pdf" style="touch-action:manipulation;-webkit-tap-highlight-color:transparent">Artificial intelligence</span></h3>
             <div class="prose"><p>He is currently pursuing a PhD in AI and Data Science <br>at <a href="./downloads/Doctoral_Research_Proposal_McCombs_The_Memory_of_Counsel_Mario_Garza_Livas.pdf" target="_blank" rel="noopener" data-ev="propuesta_doctoral" style="text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:1px;text-underline-offset:4px">McCombs School of Business</a> — <br>not as a credential, <br>but because he genuinely needs that tool <br>for what he is building.</p></div>
           </li>
       </ol>
@@ -1093,6 +1093,22 @@ footer a:hover{color:var(--gold-light)}
   doms.forEach(d => io.observe(d));
 })();
 
+</script>
+<script>
+/* Easter egg: tres clics rápidos sobre el título abren el Documento Maestro */
+(function(){
+  document.querySelectorAll('[data-egg]').forEach(function(el){
+    var n=0,t;
+    el.addEventListener('click',function(){
+      n++; clearTimeout(t); t=setTimeout(function(){n=0},700);
+      if(n<3) return;
+      n=0;
+      if(window.getSelection) window.getSelection().removeAllRanges();
+      try{ gtag('event','click',{event_category:'cta',event_label:'documento_maestro'}); }catch(e){}
+      window.open(el.getAttribute('data-egg'),'_blank','noopener');
+    });
+  });
+})();
 </script>
 </body>
 </html>
