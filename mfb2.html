@@ -1228,5 +1228,22 @@
   els.forEach(el=>io.observe(el));
 </script>
 
+<script>
+/* Easter egg: tres clics rápidos en el logo de Metanoia Football llevan al club del corazón */
+(function(){
+  document.querySelectorAll('.hero-seal, .footer-seal').forEach(function(el){
+    el.style.touchAction = 'manipulation'; el.style.webkitTapHighlightColor = 'transparent';
+    var n = 0, t;
+    el.addEventListener('click', function(){
+      n++; clearTimeout(t); t = setTimeout(function(){ n = 0; }, 700);
+      if (n < 3) return;
+      n = 0;
+      if (window.getSelection) window.getSelection().removeAllRanges();
+      try{ gtag('event','click',{'event_category':'easter_egg','event_label':'tigres_uanl'}); }catch(e){}
+      window.open('https://www.tigres.com.mx/','_blank','noopener');
+    });
+  });
+})();
+</script>
 </body>
 </html>
