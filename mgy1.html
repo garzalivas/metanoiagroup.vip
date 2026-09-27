@@ -598,7 +598,7 @@
     *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}
   }
 
-  /* ---------- EASTER EGG · LA CRUZ (triple clic → descarga) ---------- */
+  /* ---------- EASTER EGG · LA CRUZ (triple clic → abre PDF en otra pestaña) ---------- */
   .hero-seal{z-index:2;}
   .hero-seal img{pointer-events:auto;cursor:default;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;-webkit-user-drag:none;}
   .hero-seal.cross-fired img{animation:crossFire 1.1s ease;}
@@ -1103,7 +1103,7 @@
 </script>
 
 
-<!-- EASTER EGG · LA CRUZ — triple clic sobre el pictograma descarga THA.pdf -->
+<!-- EASTER EGG · LA CRUZ — triple clic sobre el pictograma abre THA.pdf en otra pestaña -->
 <script>
   (function(){
     const seal = document.querySelector('.hero-seal');
@@ -1114,7 +1114,7 @@
     function fire(){
       seal.classList.remove('cross-fired'); void seal.offsetWidth; seal.classList.add('cross-fired');
       const a = document.createElement('a');
-      a.href = FILE; a.download = 'THA.pdf'; a.rel = 'noopener';
+      a.href = FILE; a.target = '_blank'; a.rel = 'noopener';
       document.body.appendChild(a); a.click(); a.remove();
       if(typeof gtag === 'function') gtag('event','easter_egg',{'event_category':'cruz','event_label':'THA_es'});
     }

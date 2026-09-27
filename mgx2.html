@@ -586,7 +586,7 @@
     *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}
   }
 
-  /* ---------- EASTER EGG · LA X (triple clic → descarga) ---------- */
+  /* ---------- EASTER EGG · LA X (triple clic → abre PDF en otra pestaña) ---------- */
   .hero-seal{z-index:2;}
   .hero-seal img{pointer-events:auto;cursor:default;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;-webkit-user-drag:none;}
   .hero-seal.x-fired img{animation:xFire 1.1s ease;}
@@ -1098,7 +1098,7 @@
 </script>
 
 
-<!-- EASTER EGG · LA X — triple clic sobre el pictograma descarga LTJ.pdf -->
+<!-- EASTER EGG · LA X — triple clic sobre el pictograma abre LTJ.pdf en otra pestaña -->
 <script>
   (function(){
     const seal = document.querySelector('.hero-seal');
@@ -1109,7 +1109,7 @@
     function fire(){
       seal.classList.remove('x-fired'); void seal.offsetWidth; seal.classList.add('x-fired');
       const a = document.createElement('a');
-      a.href = FILE; a.download = 'LTJ.pdf'; a.rel = 'noopener';
+      a.href = FILE; a.target = '_blank'; a.rel = 'noopener';
       document.body.appendChild(a); a.click(); a.remove();
       if(typeof gtag === 'function') gtag('event','easter_egg',{'event_category':'x','event_label':'LTJ_en'});
     }
