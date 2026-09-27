@@ -585,6 +585,18 @@
   @media (prefers-reduced-motion: reduce){
     *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}
   }
+
+  /* ---------- EASTER EGG · LA X (triple clic → descarga) ---------- */
+  .hero-seal{z-index:2;}
+  .hero-seal img{pointer-events:auto;cursor:default;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;-webkit-user-drag:none;}
+  .hero-seal.x-fired img{animation:xFire 1.1s ease;}
+  .hero-seal.x-fired::after{animation:xRing 1.1s ease;}
+  @keyframes xFire{
+    0%{filter:drop-shadow(0 30px 58px rgba(0,0,0,.85)) drop-shadow(0 0 54px rgba(216,52,47,.32));}
+    30%{filter:drop-shadow(0 30px 58px rgba(0,0,0,.85)) drop-shadow(0 0 90px rgba(216,52,47,.95)) brightness(1.25);}
+    100%{filter:drop-shadow(0 30px 58px rgba(0,0,0,.85)) drop-shadow(0 0 54px rgba(216,52,47,.32));}
+  }
+  @keyframes xRing{0%{border-color:#d8342f33;}30%{border-color:#d8342fcc;box-shadow:0 0 40px #d8342f55;}100%{border-color:#d8342f33;}}
 </style>
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="ineXorable — Mario Garza Livas">
@@ -1084,5 +1096,32 @@
   els.forEach(el=>io.observe(el));
 </script>
 
+
+<!-- EASTER EGG · LA X — triple clic sobre el pictograma descarga LTJ.pdf -->
+<script>
+  (function(){
+    const seal = document.querySelector('.hero-seal');
+    if(!seal) return;
+    const img = seal.querySelector('img');
+    const FILE = '/gkvecl94m8hktthw5lojb55tjstk29wtdgtx627vwdvfbxk6io/LTJ.pdf';
+    let n = 0, t0 = 0, timer;
+    function fire(){
+      seal.classList.remove('x-fired'); void seal.offsetWidth; seal.classList.add('x-fired');
+      const a = document.createElement('a');
+      a.href = FILE; a.download = 'LTJ.pdf'; a.rel = 'noopener';
+      document.body.appendChild(a); a.click(); a.remove();
+      if(typeof gtag === 'function') gtag('event','easter_egg',{'event_category':'x','event_label':'LTJ_es'});
+    }
+    img.addEventListener('click', e=>{
+      const now = Date.now();
+      n = (now - t0 < 550) ? n + 1 : 1;
+      t0 = now;
+      clearTimeout(timer); timer = setTimeout(()=>{ n = 0; }, 600);
+      if(n >= 3){ n = 0; e.preventDefault(); window.getSelection && window.getSelection().removeAllRanges(); fire(); }
+    });
+    img.addEventListener('dblclick', e=>e.preventDefault());
+    img.addEventListener('dragstart', e=>e.preventDefault());
+  })();
+</script>
 </body>
 </html>
