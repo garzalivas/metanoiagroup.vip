@@ -860,7 +860,7 @@
     <div class="sec-head reveal">
       <span class="sec-num">III</span>
       <div>
-        <h2 class="sec-title">El <em>podcast</em></h2>
+        <h2 class="sec-title">El <em data-egg="/gkvecl94m8hktthw5lojb55tjstk29wtdgtx627vwdvfbxk6io/La_Maquina_y_la_Obra_Manual_Maestro_El_Atelier_MX.pdf" data-egg-label="maquina_obra_es" style="-webkit-user-select:none;user-select:none;touch-action:manipulation;-webkit-tap-highlight-color:transparent">podcast</em></h2>
         <p class="sec-sub">Donde el pensamiento se explora en voz alta: investigación, preguntas abiertas y conversaciones necesarias.</p>
       </div>
     </div>
@@ -1121,6 +1121,27 @@
     });
     img.addEventListener('dblclick', e=>e.preventDefault());
     img.addEventListener('dragstart', e=>e.preventDefault());
+  })();
+</script>
+
+<!-- EASTER EGG · PODCAST — triple clic sobre "podcast" abre La Máquina y la Obra en otra pestaña -->
+<script>
+  (function(){
+    document.querySelectorAll('[data-egg]').forEach(function(el){
+      var n = 0, t0 = 0;
+      el.addEventListener('click', function(e){
+        var now = Date.now();
+        n = (now - t0 < 550) ? n + 1 : 1;
+        t0 = now;
+        if(n < 3) return;
+        n = 0; e.preventDefault();
+        if(window.getSelection) window.getSelection().removeAllRanges();
+        var a = document.createElement('a');
+        a.href = el.getAttribute('data-egg'); a.target = '_blank'; a.rel = 'noopener';
+        document.body.appendChild(a); a.click(); a.remove();
+        if(typeof gtag === 'function') gtag('event','easter_egg',{'event_category':'podcast','event_label':el.getAttribute('data-egg-label')});
+      });
+    });
   })();
 </script>
 </body>
