@@ -469,6 +469,55 @@
     *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}
     .reveal{opacity:1;transform:none;}
   }
+
+  /* ---------- EASTER EGG · LLAVE MAESTRA (triple clic en el logo de Regina Caeli) ---------- */
+  .door-logo[data-k]{-webkit-user-select:none;user-select:none;-webkit-user-drag:none;touch-action:manipulation;-webkit-tap-highlight-color:transparent;}
+  .door-logo.k-fired{animation:kFire 1s ease;}
+  @keyframes kFire{0%{filter:none}35%{filter:drop-shadow(0 0 14px rgba(182,144,92,.95)) drop-shadow(0 0 30px rgba(182,144,92,.5)) brightness(1.08)}100%{filter:none}}
+  .kx{position:fixed;inset:0;z-index:1000;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;
+    background:rgba(248,247,244,.97);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+    opacity:0;transition:opacity .45s ease;padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px);}
+  .kx.on{opacity:1}
+  .kx:focus{outline:none}
+  body.kx-open{overflow:hidden}
+  .kx-x{position:fixed;top:calc(18px + env(safe-area-inset-top,0px));right:20px;z-index:2;width:44px;height:44px;display:grid;place-items:center;
+    background:var(--bg);border:1px solid var(--line-strong);border-radius:50%;color:var(--text-muted);font:300 24px/1 var(--sans);cursor:pointer;transition:color .2s,border-color .2s}
+  .kx-x:hover,.kx-x:focus-visible{color:var(--accent-deep);border-color:var(--accent);outline:none}
+  .kx-in{max-width:980px;margin:0 auto;padding:84px 28px 72px;transform:translateY(14px);transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+  .kx.on .kx-in{transform:none}
+  .kx-k{display:flex;align-items:center;gap:14px;margin:0 0 18px;font:500 11px/1.4 var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--accent-dim)}
+  .kx-k::before{content:'';width:38px;height:1px;background:var(--accent)}
+  .kx-t{font:400 clamp(38px,6vw,58px)/1.05 var(--serif);letter-spacing:-.01em;margin:0 0 18px;color:var(--text)}
+  .kx-t em{font-style:italic;color:var(--accent)}
+  .kx-r{margin:0 0 40px;color:var(--text-muted);font-size:16px;line-height:1.6}
+  .kx-r strong{color:var(--text);font-weight:500}
+  .kx-lg{display:inline-flex;align-items:center;gap:6px;margin-left:10px;font-size:13px;color:var(--text-dim);white-space:nowrap}
+  .kx-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  .kx-g{background:var(--bg);border:1px solid var(--line-strong);border-radius:3px;padding:20px 22px 12px}
+  .kx-g:first-child{grid-row:span 2}
+  .kx-g header{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-bottom:12px;margin-bottom:4px;border-bottom:1px solid var(--line)}
+  .kx-g h3{margin:0;font:500 19px/1.25 var(--serif);color:var(--text)}
+  .kx-p{display:flex;gap:6px;flex-shrink:0}
+  .kx-p code{font:500 11px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--accent-deep);background:#b6905c17;padding:4px 6px;border-radius:3px}
+  .kx-g ul{list-style:none;margin:0;padding:0}
+  .kx-g li{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:14px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45}
+  .kx-g li:last-child{border-bottom:0}
+  .kx-el{color:var(--text)}
+  .kx-el em,.kx-to em{font-family:var(--serif);font-size:1.07em}
+  .kx-to{color:var(--text-muted);position:relative;padding-left:18px}
+  .kx-to::before{content:'→';position:absolute;left:0;color:var(--accent)}
+  .kx-nt{margin-left:6px;color:var(--accent);font-size:.95em}
+  .kx-lg .kx-nt{margin:0}
+  .kx-h{margin:34px 0 0;font:400 italic 17px/1.5 var(--serif);color:var(--text-muted);text-align:center}
+  @media (max-width:760px){
+    .kx-in{padding:76px 18px 56px}
+    .kx-grid{grid-template-columns:1fr}
+    .kx-g:first-child{grid-row:auto}
+    .kx-g{padding:18px 16px 8px}
+    .kx-g li{grid-template-columns:1fr;gap:3px}
+    .kx-lg{display:flex;margin:8px 0 0}
+  }
+  @media (prefers-reduced-motion:reduce){.kx,.kx-in{transition:none}.door-logo.k-fired{animation:none}}
 </style>
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Portafolio de Apostolados — Mario Garza Livas">
@@ -704,7 +753,7 @@
 
       <a class="door reveal" href="mgz1-e.html">
         <div class="door-top">
-          <img class="door-logo" src="regina-caeli-logo.png" alt="Peregrinaciones Regina Caeli" loading="lazy">
+          <img class="door-logo" data-k draggable="false" src="regina-caeli-logo.png" alt="Peregrinaciones Regina Caeli" loading="lazy">
           <div>
             <div class="door-reality">El camino · Caminar</div>
             <div class="door-name">Peregrinaciones Regina Caeli</div>
@@ -1110,5 +1159,45 @@
   }
 </script>
 
+
+<div class="kx" id="kx" role="dialog" aria-modal="true" aria-label="Lista" tabindex="-1" hidden>
+  <button class="kx-x" type="button" aria-label="Cerrar">×</button>
+  <div class="kx-in" id="kx-in"></div>
+</div>
+<script>
+(function(){
+  var el=document.querySelector('.door-logo[data-k]'), v=document.getElementById('kx'); if(!el||!v) return;
+  var door=el.closest('a'), box=document.getElementById('kx-in'), n=0, t0=0, go=null, last=null, filled=false;
+  var c='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';
+  function u(s){var b=atob(s.split('').reverse().join(''));return new TextDecoder().decode(Uint8Array.from(b,function(ch){return ch.charCodeAt(0)}))}
+  function open(){
+    if(!filled){box.innerHTML=u(c);filled=true;}
+    last=document.activeElement; v.hidden=false; v.scrollTop=0; document.body.classList.add('kx-open');
+    requestAnimationFrame(function(){requestAnimationFrame(function(){v.classList.add('on')})});
+    v.focus({preventScroll:true});
+    try{gtag('event','easter_egg',{'event_category':'llave_maestra','event_label':'es'})}catch(x){}
+  }
+  function close(){
+    v.classList.remove('on'); document.body.classList.remove('kx-open');
+    setTimeout(function(){v.hidden=true},450);
+    if(last&&last.focus) last.focus({preventScroll:true});
+  }
+  el.addEventListener('click',function(e){
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button!==0) return;
+    e.preventDefault();
+    var now=Date.now(); n=(now-t0<550)?n+1:1; t0=now; clearTimeout(go);
+    if(n>=3){
+      n=0; try{getSelection().removeAllRanges()}catch(x){}
+      el.classList.remove('k-fired'); void el.offsetWidth; el.classList.add('k-fired');
+      open(); return;
+    }
+    go=setTimeout(function(){ if(door) location.href=door.href; },560);
+  });
+  el.addEventListener('dblclick',function(e){e.preventDefault()});
+  v.querySelector('.kx-x').addEventListener('click',close);
+  v.addEventListener('click',function(e){ if(e.target===v) close(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&!v.hidden) close(); });
+})();
+</script>
 </body>
 </html>
