@@ -25,6 +25,46 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-KHNZVPJX1N');</script>
 <link rel="icon" type="image/webp" href="assets/flame.webp">
 <link rel="stylesheet" href="assets/tmg.css">
+<style id="lib-css">
+/* IV · El libro — estilos acotados a esta sección */
+.lib{--lib-gold:var(--gold,#B8962E);--lib-navy:var(--navy,#1E2D3D);--lib-rule:var(--rule,#E2DDD6)}
+.lib .lib-grid{display:grid;gap:40px;margin-top:40px}
+@media(min-width:760px){.lib .lib-grid{grid-template-columns:minmax(200px,260px) 1fr;gap:64px;align-items:start}}
+.lib .lib-cover{margin:0;max-width:260px}
+.lib .lib-cover a{display:block;border-radius:2px;box-shadow:0 1px 2px rgba(30,45,61,.12),0 18px 40px -18px rgba(30,45,61,.45);transition:transform .4s ease,box-shadow .4s ease}
+.lib .lib-cover a:hover{transform:translateY(-3px);box-shadow:0 1px 2px rgba(30,45,61,.12),0 26px 50px -20px rgba(30,45,61,.5)}
+.lib .lib-cover a:focus-visible{outline:2px solid var(--lib-gold);outline-offset:4px}
+.lib .lib-cover img{display:block;width:100%;height:auto;border-radius:2px}
+.lib .lib-cover figcaption{margin-top:18px;font-family:'Jost',system-ui,sans-serif;font-size:.78rem;letter-spacing:.12em;line-height:1.9;opacity:.7}
+.lib .lib-h{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:clamp(2rem,4.2vw,3rem);line-height:1.08;margin:0}
+.lib .lib-h span{display:block;font-style:italic;color:var(--lib-gold)}
+.lib .lib-sub{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:clamp(1.25rem,2.2vw,1.5rem);line-height:1.35;margin:18px 0 28px;opacity:.85}
+.lib .lib-body .prose p+p{margin-top:1em}
+.lib .lib-body strong{font-weight:500}
+.lib .lib-ctas{display:flex;flex-wrap:wrap;gap:12px 16px;align-items:center;margin-top:32px}
+.lib .lib-lang{font-size:.85rem;opacity:.65;margin:14px 0 0}
+.lib .lib-band{margin-top:72px;background:var(--lib-navy);color:#F4EFE6;padding:clamp(32px,5vw,64px);border-top:1px solid var(--lib-gold)}
+.lib .lib-two{display:grid;gap:36px}
+@media(min-width:760px){.lib .lib-two{grid-template-columns:1fr 1fr;gap:56px}.lib .lib-two>div+div{border-left:1px solid rgba(184,150,46,.35);padding-left:56px}}
+.lib .lib-two .k{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:1.05rem;color:var(--lib-gold);margin:0 0 6px}
+.lib .lib-two h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:clamp(1.6rem,2.8vw,2.1rem);line-height:1.1;margin:0 0 14px;color:#fff}
+.lib .lib-two p{margin:0;line-height:1.7;color:rgba(244,239,230,.82)}
+.lib .lib-quote{margin:clamp(36px,5vw,56px) 0 0;padding-top:clamp(28px,4vw,44px);border-top:1px solid rgba(184,150,46,.35);font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(1.5rem,3.2vw,2.3rem);line-height:1.25;color:#fff;text-align:center}
+.lib .lib-quote span{display:block;font-style:italic;color:var(--lib-gold);margin-top:6px}
+.lib .lib-rules{margin-top:72px}
+.lib .lib-rules h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:clamp(1.6rem,2.8vw,2.1rem);margin:0 0 10px}
+.lib .lib-rules>p{max-width:62ch;margin:0;opacity:.8;line-height:1.7}
+.lib .lib-ol{list-style:none;counter-reset:r;margin:32px 0 0;padding:0;border-top:1px solid var(--lib-rule)}
+@media(min-width:760px){.lib .lib-ol{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(6,auto);grid-auto-flow:column;column-gap:56px}}
+.lib .lib-ol li{counter-increment:r;break-inside:avoid;display:grid;grid-template-columns:2.4em 1fr;padding:14px 0;border-bottom:1px solid var(--lib-rule);line-height:1.55}
+.lib .lib-ol li::before{content:counter(r);font-family:'Cormorant Garamond',Georgia,serif;font-size:1.15rem;line-height:1.35;color:var(--lib-gold)}
+.lib .lib-chain{margin:28px 0 0;max-width:62ch;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:1.2rem;line-height:1.5;opacity:.85}
+.lib .lib-close{margin-top:64px;padding-top:40px;border-top:1px solid var(--lib-rule);display:grid;gap:28px}
+@media(min-width:760px){.lib .lib-close{grid-template-columns:1fr auto;align-items:center}}
+.lib .lib-close p{margin:0;max-width:52ch;line-height:1.7}
+.lib .lib-close p b{font-weight:500}
+@media(prefers-reduced-motion:reduce){.lib .lib-cover a{transition:none}.lib .lib-cover a:hover{transform:none}}
+</style>
 </head>
 <body class="">
 <div class="progress" aria-hidden="true"></div>
@@ -68,6 +108,7 @@
       <li><a href="#mision"><i>I</i><span>Misión</span></a></li>
       <li><a href="#vision"><i>II</i><span>Visión 2040</span></a></li>
       <li><a href="#valores"><i>III</i><span>Valores</span></a></li>
+      <li><a href="#libro"><i>IV</i><span>El libro</span></a></li>
     </ol>
   </div>
 </section>
@@ -179,6 +220,78 @@
         <summary><span class="num">VIII</span><h3>Ad Majorem Dei Gloriam<small>La fuente que no se anuncia</small></h3><span class="pm" aria-hidden="true"></span></summary>
         <div class="body prose"><p>Para quienes lo reconocen, está en todo. No como decoración espiritual. Como fundamento operativo. El nombre mismo — Metanoia — es transformación radical de mentalidad, conversión de origen griego y profundamente teológico. El motto — Estructura estabiliza. Propósito dirige. Adaptación sostiene. — es una trinidad funcional. La dimensión trascendental no es un servicio opcional. Es la revelación de dónde Mario opera desde adentro. Este valor no se introduce. No se vende. Solo se reconoce.</p></div>
       </details>
+    </div>
+  </div>
+</section>
+
+<!-- IV · EL LIBRO -->
+<section class="sec lib" id="libro" data-toc="IV" data-toc-label="El libro" aria-labelledby="lib-t">
+  <div class="wrap">
+    <div class="chap"><span class="n">IV</span><span class="rl"></span><span class="t">El libro</span></div>
+    <div class="lib-grid rv">
+      <figure class="lib-cover">
+        <a href="downloads/Metanoia.pdf" download data-ev="libro_metanoia_es_portada" aria-label="Descargar Metanoia en PDF">
+          <img src="metanoia-portada.png" alt="Portada de Metanoia: Haz tu parte y deja que Dios haga el resto, de Mario Garza Livas" width="1024" height="1536" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Mario Garza Livas<br>PDF · Descarga libre</figcaption>
+      </figure>
+      <div class="lib-body">
+        <h2 class="lib-h" id="lib-t">Metanoia. <span>El libro donde todo comenzó.</span></h2>
+        <p class="lib-sub">Haz tu parte y deja que Dios haga el resto.</p>
+        <div class="prose">
+          <p>Antes de ser una firma, The Metanoia Group fue un libro. <em>Metanoia</em> no es una biografía, pero es análogo a una historia de vida real, y resume la filosofía y el propósito desde los cuales TMG existe. Lo que comenzó como un proyecto se convirtió en una empresa y, finalmente, en una vocación.</p>
+          <p>Su tesis es exigente: una vida puede estar extraordinariamente bien ejecutada y, sin embargo, estar mal orientada. El problema no siempre es no saber trabajar, decidir, liderar o construir. Puede ser haberlo aprendido todo sin preguntar nunca para qué. <strong>El libro parte de esa fractura entre capacidad y sentido.</strong></p>
+          <p>El recorrido va del mapa al centro, y del centro a la misión. Primero enseña a leer la realidad y a distinguir lo que depende de ti; después reconoce el límite de cualquier sistema de control; al final ordena la vida desde su fundamento: <strong>DIOS → SER → HACER → TENER</strong>. Es la misma arquitectura que TMG construye con cada cliente —la persona que lidera, la empresa que construye, el patrimonio que genera—, con la raíz a la vista.</p>
+          <p>No promete una vida sin pérdidas, sin incertidumbre ni fracasos. Promete una manera de atravesarlos sin perder el centro.</p>
+        </div>
+        <div class="lib-ctas">
+          <a href="downloads/Metanoia.pdf" class="btn" download data-ev="libro_metanoia_es">Descargar el libro (PDF)</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="lib-band rv">
+      <div class="lib-two">
+        <div>
+          <p class="k">La primera metanoia</p>
+          <h3>Cambiar el mapa.</h3>
+          <p>Mirar la realidad antes de decidir qué quieres que sea. Distinguir lo que controlas, lo que puedes influir y lo que no depende de ti. Sostener un centro estable con una configuración adaptable. Depende, en buena medida, de la decisión humana.</p>
+        </div>
+        <div>
+          <p class="k">La segunda metanoia</p>
+          <h3>Cambiar el centro.</h3>
+          <p>Reconocer que no eres tu propio fundamento: la vida es don antes que proyecto, y la dignidad precede al desempeño. Por eso puedes fracasar sin ser un fracaso. Esta transformación se recibe, y requiere cooperación.</p>
+        </div>
+      </div>
+      <p class="lib-quote">Tú cambias el mapa; Dios cambia el centro. <span>Haz tu parte, y deja que Él haga el resto.</span></p>
+    </div>
+
+    <div class="lib-rules rv">
+      <h3>Las doce reglas</h3>
+      <p>Todo el recorrido se condensa en doce reglas. No son consejos sueltos: forman una cadena, y romper cualquiera de sus eslabones produce una deformación.</p>
+      <ol class="lib-ol">
+        <li>Mira la realidad antes de decidir qué quieres que la realidad sea.</li>
+        <li>Distingue lo que controlas, lo que puedes influir y lo que no depende de ti.</li>
+        <li>Sostén un centro estable y una configuración adaptable.</li>
+        <li>Deja que la virtud fije los límites y la dirección de tu adaptación.</li>
+        <li>Cambia el mapa cuando la realidad lo exija.</li>
+        <li>No confundas el resultado con tu identidad.</li>
+        <li>Construye para futuros que no puedes predecir.</li>
+        <li>Reconoce que no eres tu propio fundamento.</li>
+        <li>Haz plenamente tu parte y entrega lo que nunca fue tuyo.</li>
+        <li>Ordena tu vida desde su centro: Dios, Ser, Hacer, Tener.</li>
+        <li>Practica una regla de vida.</li>
+        <li>Pregúntate siempre para quién.</li>
+      </ol>
+      <p class="lib-chain">Adaptarse sin virtud se convierte en oportunismo. Confiar sin responsabilidad, en pasividad. Responsabilizarse sin confianza, en control. Transformarse sin misión, en autorreferencia.</p>
+    </div>
+
+    <div class="lib-close rv">
+      <p><b><em>Metanoia</em> forma parte de una obra de 33 libros.</b> La obra completa de Mario Garza Livas está reunida en un solo lugar, con descarga libre.</p>
+      <div class="lib-ctas" style="margin-top:0">
+        <a href="downloads/Metanoia.pdf" class="btn" download data-ev="libro_metanoia_es_cierre">Descargar Metanoia</a>
+        <a href="mgw1.html" class="btn btn-ghost" data-ev="obra_completa">Ver la obra completa</a>
+      </div>
     </div>
   </div>
 </section>

@@ -5,10 +5,10 @@
 <link rel="icon" type="image/svg+xml" href="new_favicon.svg">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Written Work — Mario Garza Livas</title>
-<meta name="description" content="The written work of Mario Garza Livas: thirty-two books on learning, character, vocation, judgment, advisory, business, artificial intelligence, wealth, uncertainty, institutions and faith. Twenty-one thematic categories, thirty-three volumes in PDF, free download.">
+<meta name="description" content="The written work of Mario Garza Livas: thirty-three books on learning, character, vocation, judgment, advisory, business, artificial intelligence, wealth, uncertainty, institutions and faith. Twenty-one thematic categories, thirty-four volumes in PDF, free download.">
 <meta name="robots" content="index, follow">
 <meta property="og:title" content="The Written Work — Mario Garza Livas">
-<meta property="og:description" content="Thirty-two books, one architecture. Person, judgment, company, wealth and meaning, treated as a single system.">
+<meta property="og:description" content="Thirty-three books, one architecture. Person, judgment, company, wealth and meaning, treated as a single system.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="The Metanoia Group">
@@ -259,6 +259,9 @@
   .vocab-card{background:var(--bg-alt);padding:30px 28px;}
   .vocab-term{font-family:var(--serif);font-size:19px;color:var(--accent);font-weight:400;line-height:1.3;}
   .vocab-def{color:var(--text-muted);font-size:13.5px;line-height:1.75;margin-top:12px;font-weight:300;}
+  .vocab-card.full{grid-column:1 / -1;}
+  @media (max-width:640px){ .vocab-card.full{grid-column:auto;} }
+
   .vocab-where{
     margin-top:16px;font-size:11.5px;color:var(--text-dim);line-height:1.6;
     border-top:1px solid var(--line);padding-top:12px;font-style:italic;font-family:var(--serif);
@@ -375,6 +378,22 @@
     color:var(--text);font-family:var(--sans);font-size:14px;font-weight:300;
   }
   .search-wrap input::placeholder{color:var(--text-dim);}
+
+  .book-card.magnum{
+    border:1px solid var(--line-strong);
+    background:var(--bg-alt);
+    padding:36px 32px;
+    margin-bottom:34px;
+    position:relative;
+  }
+  .book-card.magnum::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--accent);}
+  .magnum-eyebrow{
+    font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);
+    display:flex;align-items:center;gap:11px;margin-bottom:14px;
+  }
+  .magnum-eyebrow::after{content:'';flex:1;height:1px;background:var(--line-strong);}
+  .book-card.magnum .book-title{font-size:28px;}
+  @media (max-width:640px){ .book-card.magnum{padding:28px 22px;} }
 
   /* ---------- BOOK CARDS ---------- */
   .book-card{
@@ -577,7 +596,7 @@
 </style>
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Written Work — Mario Garza Livas">
-<meta name="twitter:description" content="Thirty-two books on learning, character, vocation, judgment, business, artificial intelligence, wealth, uncertainty, institutions and faith. Free PDF download.">
+<meta name="twitter:description" content="Thirty-three books on learning, character, vocation, judgment, business, artificial intelligence, wealth, uncertainty, institutions and faith. Free PDF download.">
 <meta name="twitter:image" content="https://metanoiagroup.vip/og-image-2.jpg">
 <!-- Google Analytics GA4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KHNZVPJX1N"></script>
@@ -609,14 +628,14 @@
 <header class="hero">
   <div class="wrap">
     <figure class="hero-seal"><img src="assets/mgw-emblem-firma.webp" alt="Personal emblem of Mario Garza Livas" width="860" height="656" decoding="async" fetchpriority="high"></figure>
-    <p class="eyebrow">The Written Work · Thirty-Two Books</p>
-    <h1 class="name">One architecture,<br><em>thirty-two</em> books</h1>
+    <p class="eyebrow">The Written Work · Thirty-Three Books</p>
+    <h1 class="name">One architecture,<br><em>thirty-three</em> books</h1>
     <p class="roles">
       Mario Garza Livas<br><span class="sep">·</span>High Performance Systems Architect<br><span class="sep">·</span>Strategic Advisor<br><span class="sep">·</span>Football Business Consultant<br><span class="sep">·</span>Sports Agent<br><span class="sep">·</span>Family Office CIO<br><span class="sep">·</span>Adjunct Professor
     </p>
     <div class="locbar"><span class="dot"></span>Monterrey, Nuevo León, Mexico</div>
     <div class="hero-cta">
-      <a class="btn btn-primary" href="#books">Explore the 32 books</a>
+      <a class="btn btn-primary" href="#books">Explore the 33 books</a>
       <a class="btn btn-ghost" href="#categories">The 21 categories</a>
       <a class="btn btn-ghost" href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp'})">Message on WhatsApp</a>
     </div>
@@ -638,7 +657,7 @@
         <strong>Mario Garza Livas</strong> is a strategist devoted to designing systems capable of sustaining performance under pressure: in the person, in the home, in the company, in the family’s wealth and in institutions. Founder and director of <strong>The Metanoia Group</strong>, strategic advisor, family office CIO, football business consultant, sports agent and adjunct professor, his professional practice spans domains that are rarely thought about together. This written work is where they are.
       </p>
       <p class="lead">
-        There are <strong>thirty-two books</strong> —thirty-three PDF volumes, since <em>Learning Oneself</em> was published in two parts— and they are not a collection of scattered interests. They are the same investigation applied to six different levels of reality, each with its own rules and all governed by the same logic.
+        There are <strong>thirty-three books</strong> —thirty-four PDF volumes, since <em>Learning Oneself</em> was published in two parts— and they are not a collection of scattered interests. They are the same investigation applied to six different levels of reality, each with its own rules and all governed by the same logic.
       </p>
       <p class="lead">
         <strong>The person:</strong> how someone learns, governs herself when the impulse appears and forms her character —<em>Learning Oneself</em>, <em>The Varnish of Character</em>, <em>Who Governs?</em>—. <strong>The bond:</strong> the conversation that transforms, marriage understood as a system and fatherhood understood as the formation of judgment —<em>The Door Between Two Minds</em>, <em>1 + 1 = N</em>, <em>Compass Beats Platform</em>—. <strong>Judgment:</strong> how to see before deciding, how to decide when error is irreversible, and how to transfer that judgment to someone else without making them dependent —<em>What Is, Is</em>, <em>Decision Architecture</em>, <em>Zero Margin</em>, <em>Second Mind</em>, <em>The Compound Interest of Judgment</em>—. <strong>The work:</strong> how a company is born, operates, decouples from its founder and allocates its capital, and what changes when intelligence stops being scarce —<em>Earned Complexity</em>, <em>Business Architecture</em>, <em>The Impossible Company</em>, <em>Space of Action</em>, <em>Augmented Advisory</em>—. <strong>The wealth:</strong> how money becomes the capacity to choose and how a structure survives what it failed to anticipate —<em>Money Is a Promise</em>, <em>Autonomy</em>, <em>The Gradual Window</em>, <em>The Ship Is Not the Voyage</em>—. <strong>The world:</strong> how power keeps its purpose when no one is watching, how to coexist without diluting what one believes, and what gets handed to whoever comes next —<em>The World That No Longer Exists</em>, <em>The Great Inversion</em>, <em>Without Leaving the Shore</em>, <em>Deliver It Alive</em>—.
@@ -648,6 +667,9 @@
       </p>
       <p class="lead">
         That unity is not rhetorical — it is verifiable, because concepts migrate from one book to the next and mean the same thing in all of them. <strong>The test of absence</strong> —what remains when whoever holds the system together is gone— is the final criterion of <em>Second Mind</em>, the decisive question of <em>Business Architecture</em>, the diagnostic instrument of <em>The Gradual Window</em> and, in its harshest formulation, the thesis of <em>Compass Beats Platform</em>. <strong>System over willpower</strong> orders learning in <em>Learning Oneself</em>, the formation of character in <em>The Varnish of Character</em> and self-government in <em>Who Governs?</em>. <strong>Margin</strong> is the infrastructure of freedom in <em>Autonomy</em>, a condition of survival in <em>The Gradual Window</em> and a condition of marital resilience in <em>1 + 1 = N</em>. <strong>Never confusing income with capital</strong> governs a portfolio in <em>Money Is a Promise</em> and an entire civilization in <em>Deliver It Alive</em>. <strong>Stewardship</strong> corrects power in <em>The Great Inversion</em>, turns the owner into an administrator in <em>You Don't Control the Harvest</em> and orders what has been received in <em>Thy Will Be Done</em>. Reading two books of this corpus means starting the third with an advantage.
+      </p>
+      <p class="lead">
+        One book stands apart. <em>Metanoia: Do Your Part and Let God Do the Rest</em> is the work that gives its name to <strong>The Metanoia Group</strong> and to the domain where all of this is published, and the one that states in twelve rules the system the other books develop separately: look, distinguish, act, adapt, remain, do not confuse yourself with the outcome, rebuild, acknowledge your foundation, trust, order, practice, serve. Anyone who wants to understand where the rest of the corpus is written from starts there.
       </p>
       <p class="lead">
         The underlying thesis running through all of them can be stated in one sentence: <strong>sustainable advantage does not come from extraordinary effort or isolated talent, but from the architecture capable of turning potential into realized capacity, reproducibly and over time.</strong> Hence the corpus insists on shifting attention from the outcome to the system that produces it, from prediction to the structure that absorbs error, and from accumulation to the question that makes it intelligible: capacity for what?
@@ -662,11 +684,11 @@
 
     <div class="stat-row reveal">
       <div class="stat-item">
-        <div class="stat-num">32</div>
+        <div class="stat-num">33</div>
         <div class="stat-label">Published books</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">33</div>
+        <div class="stat-num">34</div>
         <div class="stat-label">PDF volumes</div>
       </div>
       <div class="stat-item">
@@ -687,11 +709,17 @@
       <span class="sec-num">II</span>
       <div>
         <h2 class="sec-title">The shared <em>vocabulary</em></h2>
-        <p class="sec-sub">Eight concepts that recur throughout the corpus and mean the same thing in every book. They are the evidence that the thirty-two titles share a single intellectual architecture.</p>
+        <p class="sec-sub">Eight concepts that recur throughout the corpus and mean the same thing in every book. They are the evidence that the thirty-three titles share a single intellectual architecture.</p>
       </div>
     </div>
 
     <div class="vocab-grid reveal">
+      <div class="vocab-card full">
+        <div class="vocab-term">Metanoia</div>
+        <p class="vocab-def">The concept that gives its name to this work, to The Metanoia Group and to the domain where all of this is published. It does not mean improving: it means changing the map when the map was wrong, changing the form when the form stopped working, changing one's relationship to the outcome once the outcome had become an identity and, finally, changing the center upon discovering that oneself was never enough to occupy it. The first three transformations depend largely on human decision; the fourth, according to the anthropology sustaining the corpus, is received and requires cooperation. Hence the formula that orders all thirty-three books: do exactly what is yours to do, and stop attempting what is not.</p>
+        <p class="vocab-where">Metanoia · ineXorable · Thy Will Be Done · The Center That Does Not Move · You Don't Control the Harvest</p>
+      </div>
+
       <div class="vocab-card">
         <div class="vocab-term">Architecture</div>
         <p class="vocab-def">The set of structures, mechanisms and relationships that determines what a system can produce on a sustained basis. As against the one-off intervention — the advice, the effort, the isolated decision — architecture is what keeps working when no one is pushing. The entire corpus shifts attention from the act to the architecture that makes it possible or prevents it.</p>
@@ -805,7 +833,7 @@
       <div class="cat-top">
         <span class="cat-letter">B</span>
         <div class="cat-titlewrap"><span class="cat-title">Character and Interior Life</span></div>
-        <span class="cat-count">3 Primary · 9 Secondary</span>
+        <span class="cat-count">4 Primary · 9 Secondary</span>
       </div>
       <div class="cat-body">
         <p>Here the work is on the substrate from which a person responds before having deliberated: the automatic patterns that govern reaction, interpretation and self-treatment. The central thesis is that the object of personal development is not the outcome, nor some supposed better version of oneself, but the <strong>character</strong> from which one lives, decides and responds to what happens.</p>
@@ -813,7 +841,7 @@
         <p>It is the category with the widest secondary presence in the corpus, and not by accident. Character shows up wherever a system depends on a person: the learner who must tolerate frustration without quitting, the interlocutor willing to be changed by a conversation, the person discerning a vocation without being governed by impatience, the one who works with excellence without demanding a harvest from life, and the one who administers power without letting the result replace the purpose.</p>
       </div>
       <div class="cat-books">
-        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primary</span><a class="bl" href="#libro-el-barniz">The Varnish of Character</a> · <a class="bl" href="#libro-lo-que-es-es">What Is, Is</a> · <a class="bl" href="#libro-quien-gobierna">Who Governs?</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primary</span><a class="bl" href="#libro-metanoia">Metanoia: Do Your Part and Let God Do the Rest</a> · <a class="bl" href="#libro-el-barniz">The Varnish of Character</a> · <a class="bl" href="#libro-lo-que-es-es">What Is, Is</a> · <a class="bl" href="#libro-quien-gobierna">Who Governs?</a></div>
         <div class="cat-books-line"><span class="cat-books-label lbl-s">Secondary</span><a class="bl" href="#libro-uno-mas-uno">1 + 1 = N</a> · <a class="bl" href="#libro-aprenderse">Learning Oneself</a> · <a class="bl" href="#libro-brujula">Compass Beats Platform</a> · <a class="bl" href="#libro-el-centro">The Center That Does Not Move</a> · <a class="bl" href="#libro-inexorable">ineXorable</a> · <a class="bl" href="#libro-la-puerta">The Door Between Two Minds</a> · <a class="bl" href="#libro-los-cuatro-jardines">The Four Gardens</a> · <a class="bl" href="#libro-no-controlas-la-cosecha">You Don&#x27;t Control the Harvest</a> · <a class="bl" href="#libro-sin-abandonar-la-orilla">Without Leaving the Shore</a></div>
       </div>
     </div>
@@ -839,7 +867,7 @@
       <div class="cat-top">
         <span class="cat-letter">D</span>
         <div class="cat-titlewrap"><span class="cat-title">Vocation, Work and Trajectory</span></div>
-        <span class="cat-count">3 Primary · 3 Secondary</span>
+        <span class="cat-count">3 Primary · 4 Secondary</span>
       </div>
       <div class="cat-body">
         <p>What a professional life builds, on what evidence its direction is decided, and what remains when the trajectory ends. The three central books of this category attack the same error from three different flanks: treating vocation as a discovery, reputation as accumulated visibility, and the outcome as a debt that reality is obliged to pay.</p>
@@ -848,7 +876,7 @@
       </div>
       <div class="cat-books">
         <div class="cat-books-line"><span class="cat-books-label lbl-p">Primary</span><a class="bl" href="#libro-los-cuatro-jardines">The Four Gardens</a> · <a class="bl" href="#libro-no-controlas-la-cosecha">You Don&#x27;t Control the Harvest</a> · <a class="bl" href="#libro-voz-soberana">Sovereign Voice</a></div>
-        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secondary</span><a class="bl" href="#libro-brujula">Compass Beats Platform</a> · <a class="bl" href="#libro-hagase-tu-voluntad">Thy Will Be Done</a> · <a class="bl" href="#libro-quien-gobierna">Who Governs?</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secondary</span><a class="bl" href="#libro-metanoia">Metanoia: Do Your Part and Let God Do the Rest</a> · <a class="bl" href="#libro-brujula">Compass Beats Platform</a> · <a class="bl" href="#libro-hagase-tu-voluntad">Thy Will Be Done</a> · <a class="bl" href="#libro-quien-gobierna">Who Governs?</a></div>
       </div>
     </div>
 
@@ -907,7 +935,7 @@
       <div class="cat-top">
         <span class="cat-letter">H</span>
         <div class="cat-titlewrap"><span class="cat-title">Judgment and Decision Architecture</span></div>
-        <span class="cat-count">2 Primary · 11 Secondary</span>
+        <span class="cat-count">2 Primary · 12 Secondary</span>
       </div>
       <div class="cat-body">
         <p>The technical core of the corpus, and the category with the widest reach: nearly every other book passes through here. Its object is not the individual decision but the <strong>system that produces decisions</strong>. A correct decision may come from a fragile architecture — and then it is not repeatable — just as a well-designed system turns even its errors into the capacity to decide better next time.</p>
@@ -916,7 +944,7 @@
       </div>
       <div class="cat-books">
         <div class="cat-books-line"><span class="cat-books-label lbl-p">Primary</span><a class="bl" href="#libro-arquitectura-de-decision">Decision Architecture</a> · <a class="bl" href="#libro-margen-cero">Zero Margin</a></div>
-        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secondary</span><a class="bl" href="#libro-arquitectura-empresarial">Business Architecture</a> · <a class="bl" href="#libro-autonomia">Autonomy</a> · <a class="bl" href="#libro-complejidad-ganada">Earned Complexity</a> · <a class="bl" href="#libro-el-dinero">Money Is a Promise</a> · <a class="bl" href="#libro-el-interes">The Compound Interest of Judgment</a> · <a class="bl" href="#libro-espacio-de-accion">Space of Action</a> · <a class="bl" href="#libro-football-intelligence">Football Intelligence</a> · <a class="bl" href="#libro-la-empresa-imposible">The Impossible Company</a> · <a class="bl" href="#libro-la-ventana-gradual">The Gradual Window</a> · <a class="bl" href="#libro-lo-que-es-es">What Is, Is</a> · <a class="bl" href="#libro-los-cuatro-jardines">The Four Gardens</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secondary</span><a class="bl" href="#libro-metanoia">Metanoia: Do Your Part and Let God Do the Rest</a> · <a class="bl" href="#libro-arquitectura-empresarial">Business Architecture</a> · <a class="bl" href="#libro-autonomia">Autonomy</a> · <a class="bl" href="#libro-complejidad-ganada">Earned Complexity</a> · <a class="bl" href="#libro-el-dinero">Money Is a Promise</a> · <a class="bl" href="#libro-el-interes">The Compound Interest of Judgment</a> · <a class="bl" href="#libro-espacio-de-accion">Space of Action</a> · <a class="bl" href="#libro-football-intelligence">Football Intelligence</a> · <a class="bl" href="#libro-la-empresa-imposible">The Impossible Company</a> · <a class="bl" href="#libro-la-ventana-gradual">The Gradual Window</a> · <a class="bl" href="#libro-lo-que-es-es">What Is, Is</a> · <a class="bl" href="#libro-los-cuatro-jardines">The Four Gardens</a></div>
       </div>
     </div>
 
@@ -1041,7 +1069,7 @@
       <div class="cat-top">
         <span class="cat-letter">P</span>
         <div class="cat-titlewrap"><span class="cat-title">Uncertainty, Fragility and Antifragility</span></div>
-        <span class="cat-count">2 Primary · 8 Secondary</span>
+        <span class="cat-count">2 Primary · 9 Secondary</span>
       </div>
       <div class="cat-body">
         <p>This category deliberately abandons the terrain of prediction. Its premise is that major ruptures rarely create fragility: they reveal it. Before the collapse there is a period — the gradual window — in which dependencies deepen, margins narrow and fragilities accumulate quietly while everything appears to be working normally.</p>
@@ -1050,7 +1078,7 @@
       </div>
       <div class="cat-books">
         <div class="cat-books-line"><span class="cat-books-label lbl-p">Primary</span><a class="bl" href="#libro-inexorable">ineXorable</a> · <a class="bl" href="#libro-la-ventana-gradual">The Gradual Window</a></div>
-        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secondary</span><a class="bl" href="#libro-uno-mas-uno">1 + 1 = N</a> · <a class="bl" href="#libro-autonomia">Autonomy</a> · <a class="bl" href="#libro-complejidad-ganada">Earned Complexity</a> · <a class="bl" href="#libro-el-dinero">Money Is a Promise</a> · <a class="bl" href="#libro-el-mundo">The World That No Longer Exists</a> · <a class="bl" href="#libro-entregarla-viva">Deliver It Alive: The Civilization of Stewardship</a> · <a class="bl" href="#libro-no-controlas-la-cosecha">You Don&#x27;t Control the Harvest</a> · <a class="bl" href="#libro-voz-soberana">Sovereign Voice</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secondary</span><a class="bl" href="#libro-metanoia">Metanoia: Do Your Part and Let God Do the Rest</a> · <a class="bl" href="#libro-uno-mas-uno">1 + 1 = N</a> · <a class="bl" href="#libro-autonomia">Autonomy</a> · <a class="bl" href="#libro-complejidad-ganada">Earned Complexity</a> · <a class="bl" href="#libro-el-dinero">Money Is a Promise</a> · <a class="bl" href="#libro-el-mundo">The World That No Longer Exists</a> · <a class="bl" href="#libro-entregarla-viva">Deliver It Alive: The Civilization of Stewardship</a> · <a class="bl" href="#libro-no-controlas-la-cosecha">You Don&#x27;t Control the Harvest</a> · <a class="bl" href="#libro-voz-soberana">Sovereign Voice</a></div>
       </div>
     </div>
 
@@ -1058,7 +1086,7 @@
       <div class="cat-top">
         <span class="cat-letter">Q</span>
         <div class="cat-titlewrap"><span class="cat-title">Power, Institutions and Stewardship</span></div>
-        <span class="cat-count">3 Primary · 4 Secondary</span>
+        <span class="cat-count">3 Primary · 5 Secondary</span>
       </div>
       <div class="cat-body">
         <p>Here the corpus moves up in scale and examines collective systems: companies, markets, states, democratic institutions. Two structural pathologies organize the category. The first is the <strong>inversion</strong>: the moment when results stop being a consequence of purpose and start replacing it. It happens without villains — it is enough for incentives, metrics and decision structures to push reasonable people, step by step, toward behavior that contradicts the original end.</p>
@@ -1067,7 +1095,7 @@
       </div>
       <div class="cat-books">
         <div class="cat-books-line"><span class="cat-books-label lbl-p">Primary</span><a class="bl" href="#libro-el-mundo">The World That No Longer Exists</a> · <a class="bl" href="#libro-entregarla-viva">Deliver It Alive: The Civilization of Stewardship</a> · <a class="bl" href="#libro-la-gran-inversion">The Great Inversion</a></div>
-        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secondary</span><a class="bl" href="#libro-asesoria-aumentada">Augmented Advisory</a> · <a class="bl" href="#libro-el-barco">The Ship Is Not the Voyage</a> · <a class="bl" href="#libro-hagase-tu-voluntad">Thy Will Be Done</a> · <a class="bl" href="#libro-no-controlas-la-cosecha">You Don&#x27;t Control the Harvest</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-s">Secondary</span><a class="bl" href="#libro-metanoia">Metanoia: Do Your Part and Let God Do the Rest</a> · <a class="bl" href="#libro-asesoria-aumentada">Augmented Advisory</a> · <a class="bl" href="#libro-el-barco">The Ship Is Not the Voyage</a> · <a class="bl" href="#libro-hagase-tu-voluntad">Thy Will Be Done</a> · <a class="bl" href="#libro-no-controlas-la-cosecha">You Don&#x27;t Control the Harvest</a></div>
       </div>
     </div>
 
@@ -1109,7 +1137,7 @@
       <div class="cat-top">
         <span class="cat-letter">T</span>
         <div class="cat-titlewrap"><span class="cat-title">Faith, Transcendence and Meaning</span></div>
-        <span class="cat-count">4 Primary · 5 Secondary</span>
+        <span class="cat-count">5 Primary · 5 Secondary</span>
       </div>
       <div class="cat-body">
         <p>The category where the corpus declares its foundation. Its starting point is a diagnosis that offers no consolation: a person can be successful, productive, disciplined and even religiously observant, and still remain interiorly disordered if she has placed her center in performance, control, money, approval or in herself. The proposal is not to improve a life, but to displace its center of gravity.</p>
@@ -1117,7 +1145,7 @@
         <p>The third is integration: ordering a single life — person, vocation, work, money, authority and relationships — under one question, discerning God's will before optimizing results. It is also the category where the corpus most clearly accepts the price of its convictions: the real test of a conviction is its cost, and freedom is measured too by what one is capable of renouncing.</p>
       </div>
       <div class="cat-books">
-        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primary</span><a class="bl" href="#libro-el-centro">The Center That Does Not Move</a> · <a class="bl" href="#libro-garabandal">Garabandal: The Convergence</a> · <a class="bl" href="#libro-hagase-tu-voluntad">Thy Will Be Done</a> · <a class="bl" href="#libro-sin-abandonar-la-orilla">Without Leaving the Shore</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primary</span><a class="bl" href="#libro-metanoia">Metanoia: Do Your Part and Let God Do the Rest</a> · <a class="bl" href="#libro-el-centro">The Center That Does Not Move</a> · <a class="bl" href="#libro-garabandal">Garabandal: The Convergence</a> · <a class="bl" href="#libro-hagase-tu-voluntad">Thy Will Be Done</a> · <a class="bl" href="#libro-sin-abandonar-la-orilla">Without Leaving the Shore</a></div>
         <div class="cat-books-line"><span class="cat-books-label lbl-s">Secondary</span><a class="bl" href="#libro-el-barco">The Ship Is Not the Voyage</a> · <a class="bl" href="#libro-entregarla-viva">Deliver It Alive: The Civilization of Stewardship</a> · <a class="bl" href="#libro-lo-que-es-es">What Is, Is</a> · <a class="bl" href="#libro-los-cuatro-jardines">The Four Gardens</a> · <a class="bl" href="#libro-quien-gobierna">Who Governs?</a></div>
       </div>
     </div>
@@ -1126,7 +1154,7 @@
       <div class="cat-top">
         <span class="cat-letter">U</span>
         <div class="cat-titlewrap"><span class="cat-title">Integration: BEING, DOING and HAVING</span></div>
-        <span class="cat-count">2 Primary · 2 Secondary</span>
+        <span class="cat-count">3 Primary · 2 Secondary</span>
       </div>
       <div class="cat-body">
         <p>The last category does not group a subject: it groups an ambition. It gathers the works that refuse to treat the person, her work and her wealth as separate compartments, and that propose governing them under a single architecture. These are the books that would least tolerate a single label, because their object is precisely the seam between all the others.</p>
@@ -1134,7 +1162,7 @@
         <p>Each work walks that sequence from a different foundation. One does it through design: structure, purpose and adaptation as the three dimensions of any architecture capable of absorbing change and turning it into the freedom to act. The other does it through faith: discern before optimizing, and administer faithfully what has been received. They agree on the result they seek — a coherent life — and on what they reject: the promise of control over the outcome.</p>
       </div>
       <div class="cat-books">
-        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primary</span><a class="bl" href="#libro-hagase-tu-voluntad">Thy Will Be Done</a> · <a class="bl" href="#libro-inexorable">ineXorable</a></div>
+        <div class="cat-books-line"><span class="cat-books-label lbl-p">Primary</span><a class="bl" href="#libro-metanoia">Metanoia: Do Your Part and Let God Do the Rest</a> · <a class="bl" href="#libro-hagase-tu-voluntad">Thy Will Be Done</a> · <a class="bl" href="#libro-inexorable">ineXorable</a></div>
         <div class="cat-books-line"><span class="cat-books-label lbl-s">Secondary</span><a class="bl" href="#libro-el-centro">The Center That Does Not Move</a> · <a class="bl" href="#libro-margen-cero">Zero Margin</a></div>
       </div>
     </div>
@@ -1149,7 +1177,7 @@
       <span class="sec-num">IV</span>
       <div>
         <h2 class="sec-title">Where to <em>start</em></h2>
-        <p class="sec-sub">Thirty-two books are too many to start at the beginning. These are eight routes of four books each, ordered so that the second one makes better sense because of the first.</p>
+        <p class="sec-sub">Thirty-three books are too many to start at the beginning. These are eight routes of four books each, ordered so that the second one makes better sense because of the first.</p>
       </div>
     </div>
 
@@ -1267,10 +1295,11 @@
         <div class="path-title">If you are looking for God in ordinary life</div>
         <p class="path-desc">Vocation, the interior center, and what holds everything else up.</p>
         <ol class="path-list">
-          <li><span class="step">1</span><a href="#libro-los-cuatro-jardines">The Four Gardens</a></li>
-          <li><span class="step">2</span><a href="#libro-el-centro">The Center That Does Not Move</a></li>
-          <li><span class="step">3</span><a href="#libro-garabandal">Garabandal: The Convergence</a></li>
-          <li><span class="step">4</span><a href="#libro-hagase-tu-voluntad">Thy Will Be Done</a></li>
+          <li><span class="step">1</span><a href="#libro-metanoia">Metanoia</a></li>
+          <li><span class="step">2</span><a href="#libro-los-cuatro-jardines">The Four Gardens</a></li>
+          <li><span class="step">3</span><a href="#libro-el-centro">The Center That Does Not Move</a></li>
+          <li><span class="step">4</span><a href="#libro-garabandal">Garabandal: The Convergence</a></li>
+          <li><span class="step">5</span><a href="#libro-hagase-tu-voluntad">Thy Will Be Done</a></li>
         </ol>
       </div>
     </div>
@@ -1282,8 +1311,8 @@
     <div class="sec-head reveal">
       <span class="sec-num">V</span>
       <div>
-        <h2 class="sec-title">The thirty-two <em>books</em></h2>
-        <p class="sec-sub">Each work includes its thesis in a single sentence, its thematic labels, the full abstract and a direct PDF download. Thirty-three volumes in total: <em>Learning Oneself</em> was published in two parts. Every PDF is the Spanish edition. Free, no registration.</p>
+        <h2 class="sec-title">The thirty-three <em>books</em></h2>
+        <p class="sec-sub">Each work includes its thesis in a single sentence, its thematic labels, the full abstract and a direct PDF download. Thirty-four volumes in total: <em>Learning Oneself</em> was published in two parts. Every PDF is the Spanish edition. Free, no registration.</p>
       </div>
     </div>
 
@@ -1294,15 +1323,15 @@
       </label>
       <div class="filter-caption">Filter by category</div>
       <div class="filter-chips" id="filter-chips">
-        <button class="fchip" type="button" data-filter="all" aria-pressed="true">All books (32)</button>
+        <button class="fchip" type="button" data-filter="all" aria-pressed="true">All books (33)</button>
         <button class="fchip" type="button" data-filter="aprendizaje" aria-pressed="false">Learning and Cognitive Capacity (5)</button>
-        <button class="fchip" type="button" data-filter="caracter" aria-pressed="false">Character and Interior Life (12)</button>
+        <button class="fchip" type="button" data-filter="caracter" aria-pressed="false">Character and Interior Life (13)</button>
         <button class="fchip" type="button" data-filter="atencion" aria-pressed="false">Attention, Desire and Self-Government (6)</button>
-        <button class="fchip" type="button" data-filter="vocacion" aria-pressed="false">Vocation, Work and Trajectory (6)</button>
+        <button class="fchip" type="button" data-filter="vocacion" aria-pressed="false">Vocation, Work and Trajectory (7)</button>
         <button class="fchip" type="button" data-filter="conversacion" aria-pressed="false">Conversation and Human Connection (4)</button>
         <button class="fchip" type="button" data-filter="hogar" aria-pressed="false">Marriage, Fatherhood and Family Life (5)</button>
         <button class="fchip" type="button" data-filter="verdad" aria-pressed="false">Truth, Evidence and Discernment (5)</button>
-        <button class="fchip" type="button" data-filter="juicio" aria-pressed="false">Judgment and Decision Architecture (13)</button>
+        <button class="fchip" type="button" data-filter="juicio" aria-pressed="false">Judgment and Decision Architecture (14)</button>
         <button class="fchip" type="button" data-filter="asesoria" aria-pressed="false">Advisory and Transfer of Expertise (6)</button>
         <button class="fchip" type="button" data-filter="futbol" aria-pressed="false">Football and Irreversible Error (2)</button>
         <button class="fchip" type="button" data-filter="emprendimiento" aria-pressed="false">Entrepreneurship and Early Construction (2)</button>
@@ -1310,17 +1339,33 @@
         <button class="fchip" type="button" data-filter="familiar" aria-pressed="false">Family Business, Ownership and Succession (1)</button>
         <button class="fchip" type="button" data-filter="ia" aria-pressed="false">Artificial Intelligence and Augmented Capacity (6)</button>
         <button class="fchip" type="button" data-filter="patrimonio" aria-pressed="false">Wealth and Economic Autonomy (9)</button>
-        <button class="fchip" type="button" data-filter="incertidumbre" aria-pressed="false">Uncertainty, Fragility and Antifragility (10)</button>
-        <button class="fchip" type="button" data-filter="poder" aria-pressed="false">Power, Institutions and Stewardship (7)</button>
+        <button class="fchip" type="button" data-filter="incertidumbre" aria-pressed="false">Uncertainty, Fragility and Antifragility (11)</button>
+        <button class="fchip" type="button" data-filter="poder" aria-pressed="false">Power, Institutions and Stewardship (8)</button>
         <button class="fchip" type="button" data-filter="ecologia" aria-pressed="false">Ecology, Natural Capital and Future Generations (4)</button>
         <button class="fchip" type="button" data-filter="convivencia" aria-pressed="false">Pluralism, Coexistence and Witness (3)</button>
-        <button class="fchip" type="button" data-filter="fe" aria-pressed="false">Faith, Transcendence and Meaning (9)</button>
-        <button class="fchip" type="button" data-filter="integracion" aria-pressed="false">Integration: BEING, DOING and HAVING (4)</button>
+        <button class="fchip" type="button" data-filter="fe" aria-pressed="false">Faith, Transcendence and Meaning (10)</button>
+        <button class="fchip" type="button" data-filter="integracion" aria-pressed="false">Integration: BEING, DOING and HAVING (5)</button>
       </div>
       <div class="filter-status" id="filter-status">Showing all 32 books in the corpus.</div>
     </div>
 
     <div id="book-list">
+      <article class="book-card magnum reveal" id="libro-metanoia" data-tags="integracion fe caracter juicio incertidumbre vocacion poder">
+        <div class="magnum-eyebrow">Central work of the corpus</div>
+        <h3 class="book-title">Metanoia: Do Your Part and Let God Do the Rest</h3>
+        <p class="book-orig">Original Spanish title: Metanoia: Haz tu parte y deja que Dios haga el resto</p>
+        <p class="book-thesis">Do your part. Let God do the rest. Not an invitation to do less, but to do exactly what is yours and stop attempting what never was.</p>
+        <div class="book-tags tag-row"><a class="tag tag-p" href="#cat-integracion">Integration: BEING, DOING and HAVING</a><a class="tag tag-p" href="#cat-fe">Faith, Transcendence and Meaning</a><a class="tag tag-p" href="#cat-caracter">Character and Interior Life</a><a class="tag tag-s" href="#cat-juicio">Judgment and Decision Architecture</a><a class="tag tag-s" href="#cat-incertidumbre">Uncertainty, Fragility and Antifragility</a><a class="tag tag-s" href="#cat-vocacion">Vocation, Work and Trajectory</a><a class="tag tag-s" href="#cat-poder">Power, Institutions and Stewardship</a></div>
+        <p class="book-abstract"><em>Metanoia: Do Your Part and Let God Do the Rest</em> is a deep reflection on how to live with clarity, responsibility and trust in a world marked by uncertainty and change. The book starts from a fundamental question: what is the point of learning to control, optimize and do things ever better if we never ask what we are doing them for? Through a combination of practical philosophy, Christian anthropology and concrete tools for living, it argues for the need to distinguish between what depends on us, what we can influence and what we must learn to hand over; to adapt our life without losing our center; and to separate our identity from our results, possessions and achievements.</p>
+        <p class="book-abstract">Along its course, <em>Metanoia</em> leads the reader from the map —the way we interpret and act upon reality— toward the center from which we live. Its proposal culminates in a simple but demanding idea: fully assuming the responsibility that belongs to us without pretending to control what was never in our hands. Transformation, therefore, does not aim at turning us into a more efficient version of ourselves, but at preparing us to serve, to love and to live a mission. Ultimately, the book invites us to move from "what can I obtain?" to "what is good?", "what has been entrusted to me?" and, finally, "for whom do I live?".</p>
+        <div class="book-dl-row">
+          <a class="paper-dl" href="https://metanoiagroup.vip/downloads/Metanoia.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'book_metanoia'})">
+            <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+            Download book (PDF, Spanish)
+          </a>
+        </div>
+      </article>
+
       <article class="book-card reveal" id="libro-uno-mas-uno" data-tags="hogar caracter conversacion patrimonio incertidumbre">
         <h3 class="book-title">1 + 1 = N</h3>
         <p class="book-thesis">A great marriage is not one extraordinary decision taken once, but thousands of small decisions sustained over decades.</p>
@@ -1820,7 +1865,7 @@
       <a class="eco-card full" href="https://garzalivas.substack.com" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'contact','event_label':'substack'})">
         <div class="eco-code">Link 1</div>
         <div class="eco-name">Substack — Mario Garza Livas</div>
-        <p class="eco-desc">Through this channel, ongoing developments, revisions, and new essays are published on the themes that run through the thirty-two books on this page. Subscriptions are open.</p>
+        <p class="eco-desc">Through this channel, ongoing developments, revisions, and new essays are published on the themes that run through the thirty-three books on this page. Subscriptions are open.</p>
         <div class="eco-url">garzalivas.substack.com <span class="arrow">&rarr;</span></div>
       </a>
       <a class="eco-card" href="https://www.linkedin.com/in/garzalivas/recent-activity/articles/" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'contact','event_label':'linkedin'})">
@@ -1855,7 +1900,7 @@
   <div class="wrap">
     <img class="footer-seal" src="assets/mgw-emblem-firma.webp" alt="" width="148" height="113" loading="lazy" decoding="async">
     <div class="footer-brand">The Written Work</div>
-    <div class="footer-tagline">Thirty-two books, one architecture.</div>
+    <div class="footer-tagline">Thirty-three books, one architecture.</div>
     <div class="footer-role"><strong>Mario Garza Livas</strong> — Author · Writer · Thinker</div>
     <div class="footer-contacts">
       <a href="mailto:mario@metanoiagroup.vip">mario@metanoiagroup.vip</a>
@@ -1882,7 +1927,7 @@
   els.forEach(el=>io.observe(el));
 
     function STATUS(n, key, label, q){
-      if(key === 'all' && !q) return 'Showing all 32 books in the corpus.';
+      if(key === 'all' && !q) return 'Showing all 33 books in the corpus.';
       const word = n === 1 ? ' book' : ' books';
       if(key === 'all') return 'Showing ' + n + word + ' for \u201c' + q + '\u201d.';
       if(!q) return 'Showing ' + n + word + ' in \u201c' + label + '\u201d.';
