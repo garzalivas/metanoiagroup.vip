@@ -1,0 +1,9 @@
+  /* Cuadro de precios: filas alineadas entre bloques (nombre · frecuencia · semanas · descripción · precio · botón) */
+  @supports (grid-template-rows: subgrid){
+    .tiers{row-gap:0}
+    .tier{display:grid;grid-row:span 6;grid-template-rows:subgrid;row-gap:14px;align-content:start}
+    .tier > *{align-self:start}
+    .tier h3{align-self:end}
+    .tier .price,.tier .pick{align-self:end}
+    .tier .price{margin-top:clamp(10px,1.4vw,22px)}
+  }
