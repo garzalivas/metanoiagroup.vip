@@ -252,6 +252,49 @@
   @media (prefers-reduced-motion: reduce){
     *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}
   }
+
+  /* ---------- EASTER EGG · PARA RECORDAR (triple clic en "Prof. Mario") ---------- */
+  [data-pm]{-webkit-user-select:none;user-select:none;touch-action:manipulation;-webkit-tap-highlight-color:transparent;}
+  [data-pm].pm-fired{animation:pmFire 1.1s ease;}
+  @keyframes pmFire{0%{text-shadow:none;color:inherit}35%{text-shadow:0 0 18px rgba(182,144,92,.7),0 0 40px rgba(182,144,92,.35);color:var(--accent)}100%{text-shadow:none;color:inherit}}
+  .pz{width:min(640px,calc(100vw - 32px));max-height:calc(100dvh - 32px);margin:auto;padding:0;overflow:auto;
+    background:linear-gradient(180deg,#141416 0%,#0d0d0e 100%);color:var(--text);
+    border:1px solid var(--line-strong);border-radius:2px;
+    box-shadow:0 40px 120px rgba(0,0,0,.85),0 0 0 1px #b6905c1a,0 0 90px rgba(182,144,92,.10);}
+  .pz::backdrop{background:rgba(5,5,6,.84);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);}
+  .pz[open]{animation:pzIn .8s cubic-bezier(.2,.7,.2,1);}
+  .pz[open]::backdrop{animation:pzFade .5s ease;}
+  @keyframes pzIn{from{opacity:0;transform:translateY(14px) scale(.985)}to{opacity:1;transform:none}}
+  @keyframes pzFade{from{opacity:0}to{opacity:1}}
+  .pz-in{position:relative;padding:56px 54px 50px;}
+  .pz-head{display:flex;align-items:center;gap:22px;margin:0 0 38px;}
+  .pz-photo{position:relative;flex:0 0 auto;width:112px;height:112px;
+    filter:drop-shadow(0 8px 22px rgba(0,0,0,.55)) drop-shadow(0 0 24px rgba(182,144,92,.22));}
+  .pz-photo img{display:block;width:100%;height:100%;object-fit:contain;
+    image-rendering:auto;-webkit-backface-visibility:hidden;backface-visibility:hidden;}
+  .pz-photo.noimg{display:none;}
+  .pz-eyebrow{display:flex;align-items:center;gap:14px;margin:0 0 8px;font:500 11px/1.4 var(--sans);letter-spacing:.32em;text-transform:uppercase;color:var(--accent);}
+  .pz-eyebrow::before{content:'';width:34px;height:1px;background:var(--accent);opacity:.7;}
+  .pz-cap{margin:0;font:400 italic 15px/1.3 var(--serif);color:var(--text-muted);}
+  .pz-body p{font:400 clamp(16.5px,2vw,18.5px)/1.65 var(--serif);color:#d9d4ca;margin:0 0 1.3em;}
+  .pz-body em{font-style:italic;color:var(--accent);}
+  .pz-body strong{font-weight:500;color:var(--text);}
+  .pz-body blockquote{margin:6px 0 34px;padding:4px 0 4px 22px;border-left:2px solid var(--accent);
+    font:400 italic clamp(19px,2.4vw,22px)/1.5 var(--serif);color:var(--text);}
+  .pz-then{display:grid;grid-template-columns:auto 1fr;gap:10px 22px;align-items:baseline;margin:0 0 34px;padding:24px 0;border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong);}
+  .pz-k{font:500 10.5px/1.4 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--text-muted);}
+  .pz-v{font:400 clamp(20px,2.6vw,24px)/1.3 var(--serif);}
+  .pz-old{color:var(--text-muted);}
+  .pz-now{color:var(--accent);font-style:italic;}
+  .pz-coda{font-size:clamp(19px,2.4vw,22px) !important;line-height:1.5 !important;color:var(--text) !important;}
+  .pz-thanks{color:var(--text-muted) !important;font-style:italic;margin-top:30px !important;}
+  .pz-sign{display:block;margin-top:14px;font:500 11px/1 var(--sans);font-style:normal;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);}
+  .pz-body > *{opacity:0;animation:pzLine .9s ease forwards;}
+  @keyframes pzLine{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .pz-close{position:absolute;top:16px;right:16px;width:40px;height:40px;display:grid;place-items:center;background:none;border:1px solid transparent;color:var(--text-muted);font:300 26px/1 var(--sans);cursor:pointer;transition:color .2s,border-color .2s;}
+  .pz-close:hover,.pz-close:focus-visible{color:var(--accent);border-color:var(--line-strong);outline:none;}
+  @media (max-width:640px){.pz-in{padding:52px 24px 38px}.pz-head{gap:16px}.pz-photo{width:88px;height:88px}.pz-then{grid-template-columns:1fr;gap:2px}.pz-k:nth-of-type(3){margin-top:14px}}
+  @media (prefers-reduced-motion:reduce){.pz-body > *{opacity:1;animation:none}}
 </style>
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Los 17 Consejos del Prof. Mario — Mario Garza Livas">
@@ -285,7 +328,7 @@
 <header class="hero">
   <div class="wrap">
     <p class="eyebrow">Antes de despedirnos</p>
-    <h1 class="name">Los <em>17 Consejos</em><br>del Prof. Mario</h1>
+    <h1 class="name">Los <em>17 Consejos</em><br>del <span data-pm>Prof. Mario</span></h1>
     <p class="roles">
       Algunas cosas que he aprendido, pensado y llegado a valorar a lo largo de mi propia vida, y que me hubiera gustado que alguien compartiera conmigo cuando tenía su edad.<br>
       <strong>— Mario Garza Livas</strong>
@@ -464,5 +507,39 @@
   }
 </script>
 
+
+<!-- EASTER EGG · PARA RECORDAR — triple clic en "Prof. Mario" -->
+<dialog class="pz" id="pz" aria-label="Para recordar">
+  <div class="pz-in">
+    <button class="pz-close" type="button" aria-label="Cerrar">&times;</button>
+    <div class="pz-head">
+      <div class="pz-photo"><img src="prof_perezstein.png" alt="Prof. Perezstein" width="112" height="112" decoding="async" onerror="this.parentNode.classList.add('noimg')"></div>
+      <div><p class="pz-eyebrow">Para recordar</p><p class="pz-cap">Prof. Perezstein</p></div>
+    </div>
+    <div class="pz-body" id="pz-body"></div>
+  </div>
+</dialog>
+<script>
+(function(){
+  var el=document.querySelector('[data-pm]'), d=document.getElementById('pz');
+  if(!el||!d||typeof d.showModal!=='function') return;
+  var box=document.getElementById('pz-body'), c='=4DcvwjPuFGcz9CPvlmch1EIUCo4+Iibnl2ctoHci0zczFGbjBibhB3c84SZtJXYyRnbvNmblBSYgUWbyFGZ1lXYgI3bwBychl2YhJ3R+Iycr5WYoRXL6BnI9M3chx2YgAHPK4DcvwjLsl6wgUGZgMXoDLHdlRGIl1mclRmbvN2clBSZkBSqDrWZkBybs92U+InY84ychOsc0FGIpOsalRGIvxGIv5kPiEGZvNWL6BnI9M3chx2YgAHPK4jdpR2L84jbhB3cvwzbpJXYNBiLm9mcQBClAKuPic3bu1iewBidtoHci0zczFGbjBibhB3c84jbhB3cvwTYy9GaB5jIr1iewJSPzNXYsNGIuFGczxjPuFGcz9CPulWZ0NnelJXZQBiLm9mcQBClAKuPiQGbv1iewBidtoHci0zczFGbjBibhB3c84jbhB3cvwzbw1WZpRHIuVHIlRnbhJXdE5jIr1iewJSPzNXYsNGIuFGczxjPi4WZoRXL6BnI9M3chx2YgYXakxjC+UGdvVXcrN2bsJ2L80Jgi7SYylWbgU2cgUWdxBibvNGIsFGdzlmcjBCblRGIlRmblBXZkBCZhRWasFWZyBSYM5jcixjLhZXa0NWZwNnclBHIlRGIuN7wpR3clV3YgMXZg8GZvRFnAKuPlR3b1F3aj9GbixjC+A3L8ojbpOcai1WY0BSZzFmcmBSYsxWZ1FXYgklPyJGPuEWrD3GIlVnZgUmcw1WZpNHI69mdgEGbsVWdxFGIlVXcy9GU+AHPK4DcvwjLtOcbgI3bwBybsJXZjFGagUWdxBSZuVWa0BybuBSY5BibpVGdzpXZyVGUgUWdxBSrDPXQ+InY84SYyF2YgEGbgIXYkBSYg8GdzVWdwNXakBSevR3clBSevhkPwxjC+A3L84zZu9mc0N3L84ybpJXYpRWZtJXZ05Wag4Wdg8GdpNXZjVmbg8mb+cmbvJHdzxjPyJGPs8GZh1WYsxGI59GdzVGIlVXcg8GbgEGIvxGblVXchBiclNWYoBSYyFGc+InY8ojchRWa2x2bg8mcllWdxBybuBSevhGIlVXcg8GbgM7wxOcZz5WZgUWbg4WqDnmYtFGdg8mclBlPwxjC+A3L84ych16wtBibvJXZ1ZGIlJHctVWaz5jcixTYkFmcp1GIhxGI5BSYklmclhGIhxGIsEGZpZHIhxkPyJGPuEWaj5WY0NXakBSYsBSYtOsbvBHIsl4w+AHPK4DcvwjLyFmci12buBSYtOsYhNHIv5GIh16w2FGZvRHIlVXc+InY806wtBSZkBSZ0JXYwBSYuVHIyVGZuVGduVGIhBysDTWd5FGIl1kPyJGPuM7wu9Waj5WdmBSW+AHPK4DcvwjLhJWY0l2clNWZuByclNmbvRnblBSZ1FHIhl2YuFGdzlGZgEGbgUGZzVGZg8GZuVXbgwWZgIXYylWbgknPyJGPsIXYj9mdvJHcgwichF7wlNnblBCLhRHbhBievZHIuVGIyF2cuVGcgUGZ1BHIsl6wgUGZgMXqDbXYyRHIB5jcixjLyFGc1N2bgEWrDLXZ1FHIlVXcg8WajFGczVGIsVGIsUmci12buBybpB3byBHIp1GIu92Y+InY8wichBXdj9GIhBSYtOsdlJHdhBSZtBybuBSYtOsdhR2b0Bybk5WY1NGIpOcZyNGIvxkPwxjC+A3L84iPtV2L84WalR3c6VmclBFIuY2byBlPtVGPgwWZgUWdmBibllWdnxWYgU2cF5jcixjLtOcbgI3bwBSYyFGbiFGag4WZpV3ZsFGIlVXcgk6w0l2clNWZuBSZ1FHIuVGIvBXbllGdg4Wdg8mY1hkPwxjC', n=0, t0=0, filled=false, wt;
+  function u(s){var b=atob(s.split('').reverse().join(''));return new TextDecoder().decode(Uint8Array.from(b,function(ch){return ch.charCodeAt(0)}))}
+  function open(){
+    if(!filled){box.innerHTML=u(c);[].forEach.call(box.children,function(x,i){x.style.animationDelay=(.3+i*.32)+'s'});filled=true;}
+    d.showModal(); d.scrollTop=0;
+    d.querySelector('.pz-close').focus({preventScroll:true});
+    try{gtag('event','easter_egg',{'event_category':'perezstein','event_label':'es'})}catch(x){}
+  }
+  el.addEventListener('click',function(e){
+    var now=Date.now(); n=(now-t0<550)?n+1:1; t0=now;
+    if(n>=3){ n=0; e.preventDefault(); try{getSelection().removeAllRanges()}catch(x){}
+      el.classList.remove('pm-fired'); void el.offsetWidth; el.classList.add('pm-fired'); open(); }
+  });
+  el.addEventListener('dblclick',function(e){e.preventDefault()});
+  d.querySelector('.pz-close').addEventListener('click',function(){d.close()});
+  d.addEventListener('click',function(e){ if(e.target===d) d.close(); });
+})();
+</script>
 </body>
 </html>
