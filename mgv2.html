@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="new_favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The metanoias: changing the map, changing the center — Mario Garza Livas</title>
+<meta name="description" content="A guided walkthrough, in 42 graphic novels, through the lives of remarkable people who lived a first-order metanoia (changing the map) or a second-order metanoia (changing the center).">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="The metanoias: changing the map, changing the center — Mario Garza Livas">
+<meta property="og:description" content="Forty-two graphic novels, two ways to change: the map through which we see reality and the center from which we live.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="The Metanoia Group">
+<meta property="og:image" content="https://metanoiagroup.vip/og-image-2.jpg">
+<meta property="og:url" content="https://metanoiagroup.vip/MGV2">
+<link rel="alternate" hreflang="es" href="https://metanoiagroup.vip/mgv1.html">
+<link rel="alternate" hreflang="en" href="https://metanoiagroup.vip/mgv2.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0A0909; --carbon:#151312; --carbon-2:#1E1B1A; --line:#2E2927; --line-2:#3D3533;
+  --gray:#BDB5AA; --gray-2:#8F877E; --paper:#F3EEE2; --red:#D52525; --red-deep:#7E1413;
+  --display:'Anton', 'Impact', 'Arial Narrow', sans-serif;
+  --serif:'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --maxw:1180px;
+  color-scheme:dark;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%;}
+body{background:var(--ink);color:var(--paper);font-family:var(--serif);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+img{display:block;max-width:100%;height:auto;}
+a{color:inherit;}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px;}
+::selection{background:var(--red);color:var(--paper);}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+.skip{position:absolute;left:-999px;top:8px;background:var(--paper);color:var(--ink);padding:8px 14px;z-index:200;}
+.skip:focus{left:8px;}
+
+/* ---------- topbar ---------- */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(10,9,9,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+.topbar .inner{max-width:var(--maxw);margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;}
+.brand img{width:20px;height:20px;}
+.brand span{color:var(--gray-2);font-weight:400;}
+.nav{display:flex;align-items:center;gap:22px;flex-wrap:wrap;font-size:15px;}
+.nav a{text-decoration:none;color:var(--gray);padding:4px 0;border-bottom:2px solid transparent;transition:color .2s,border-color .2s;}
+.nav a:hover{color:var(--paper);}
+.nav a[aria-current="true"]{color:var(--paper);border-bottom-color:var(--red);}
+.nav a.pill{border:1px solid var(--line-2);padding:4px 11px;border-radius:2px;}
+.nav a.pill:hover{border-color:var(--paper);}
+
+/* ---------- hero ---------- */
+.hero{padding:80px 0 64px;}
+.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(52px,12.6vw,180px);line-height:.88;letter-spacing:.01em;text-transform:uppercase;margin-left:-.04em;}
+.hero .subtitle span{display:inline-block;}
+.hero .subtitle{margin-top:26px;font-family:var(--display);font-size:clamp(28px,3.8vw,52px);line-height:1.05;color:var(--paper);}
+.hero .lede{margin-top:22px;max-width:40em;font-size:21px;line-height:1.6;color:var(--gray);}
+.captions{margin-top:44px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;max-width:980px;align-items:stretch;}
+.cap{background:var(--paper);color:var(--ink);padding:16px 18px;font-size:16px;line-height:1.5;border:2px solid var(--ink);box-shadow:0 0 0 1px var(--paper);}
+.cap.red{background:var(--red);color:var(--paper);font-weight:600;font-size:19px;line-height:1.35;box-shadow:0 0 0 1px var(--red);}
+
+/* ---------- chooser ---------- */
+.choose{padding:24px 0 104px;}
+.choose h2{font-family:var(--display);font-weight:400;font-size:clamp(34px,4.6vw,56px);line-height:1.05;}
+.choose .sub{margin-top:12px;color:var(--gray);max-width:40em;}
+.doors{margin-top:36px;display:grid;grid-template-columns:1fr 1fr;gap:10px;background:var(--paper);padding:10px;}
+.door{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:clamp(380px,46vw,540px);background:var(--ink);color:var(--paper);text-decoration:none;overflow:hidden;padding:32px;isolation:isolate;}
+.door img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;filter:grayscale(.15) contrast(1.05);transition:transform .6s ease,opacity .4s;opacity:.9;}
+.door::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(10,9,9,0) 0%,rgba(10,9,9,.15) 35%,rgba(10,9,9,.8) 62%,rgba(10,9,9,.97) 100%);}
+.door .t{font-family:var(--display);font-size:clamp(44px,5.6vw,76px);line-height:.95;}
+.door .s{margin-top:6px;font-style:italic;font-size:24px;color:var(--paper);}
+.door p{margin-top:16px;max-width:30em;color:var(--gray);font-size:17px;}
+.door .foot{margin-top:24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.door .count{font-size:15px;color:var(--gray-2);}
+.door .go{background:var(--red);color:var(--paper);padding:10px 16px;font-weight:600;font-size:16px;transition:background .2s;}
+.door:hover img{transform:scale(1.035);opacity:1;}
+.door:hover .go{background:var(--paper);color:var(--ink);}
+
+/* ---------- order sections ---------- */
+.order{border-top:1px solid var(--line);padding:88px 0 40px;}
+.js .order:not(.active){display:none;}
+.order-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:48px;align-items:end;padding-bottom:28px;}
+.order-head .kicker{font-size:17px;color:var(--red);font-weight:600;}
+.order-head h2{font-family:var(--display);font-weight:400;font-size:clamp(46px,6.4vw,88px);line-height:.95;margin-top:6px;}
+.order-head p{color:var(--gray);font-size:19px;}
+.order-head .howto{margin-top:14px;font-size:15px;color:var(--gray-2);}
+.fam{margin-top:72px;display:flex;align-items:baseline;justify-content:space-between;gap:24px;flex-wrap:wrap;padding:14px 0;border-top:3px solid var(--paper);border-bottom:1px solid var(--line);}
+.fam h3{font-family:var(--display);font-weight:400;font-size:clamp(28px,3.2vw,40px);line-height:1.05;}
+.fam p{color:var(--gray);font-size:16px;max-width:34em;flex:1 1 320px;}
+.fam .n{color:var(--gray-2);font-size:15px;white-space:nowrap;}
+
+.novel{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,8fr);grid-template-areas:"head fig" "body fig";column-gap:48px;padding:56px 0;border-bottom:1px solid var(--line);}
+.novel-head{grid-area:head;align-self:end;}
+.novel-body{grid-area:body;align-self:start;}
+.novel figure{grid-area:fig;align-self:center;}
+.novel .num{font-size:15px;color:var(--gray-2);font-variant-numeric:tabular-nums;}
+.novel h4{font-family:var(--display);font-weight:400;font-size:clamp(34px,3.6vw,48px);line-height:1;margin-top:8px;}
+.novel .meta{margin-top:10px;font-style:italic;color:var(--gray);font-size:17px;}
+.novel .abs{margin-top:18px;font-size:17.5px;line-height:1.65;color:#E4DED2;}
+.novel .key{margin-top:20px;display:inline-block;background:var(--red);color:var(--paper);padding:9px 13px;font-weight:600;font-size:16.5px;line-height:1.35;max-width:100%;}
+.actions{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap;}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:9px 15px;font-size:15.5px;font-weight:600;text-decoration:none;border:1.5px solid var(--paper);transition:background .2s,color .2s,border-color .2s;}
+.btn svg{width:16px;height:16px;flex:none;}
+.btn.solid{background:var(--paper);color:var(--ink);}
+.btn.solid:hover{background:var(--red);border-color:var(--red);color:var(--paper);}
+.btn.ghost:hover{border-color:var(--red);color:var(--paper);background:var(--red);}
+.thumb{position:relative;display:block;width:100%;padding:0;background:var(--carbon);border:4px solid var(--paper);cursor:zoom-in;aspect-ratio:3/2;overflow:hidden;}
+.thumb img{width:100%;height:100%;object-fit:cover;}
+.thumb .zoom{position:absolute;right:10px;bottom:10px;width:38px;height:38px;display:grid;place-items:center;background:var(--ink);color:var(--paper);border:1.5px solid var(--paper);opacity:0;transition:opacity .2s;}
+.thumb:hover .zoom,.thumb:focus-visible .zoom{opacity:1;}
+.thumb .zoom svg{width:18px;height:18px;}
+
+.order-end{margin-top:72px;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:48px;align-items:end;padding:44px;background:var(--paper);color:var(--ink);}
+.order-end h3{font-family:var(--display);font-weight:400;font-size:clamp(34px,4.2vw,56px);line-height:1;}
+.order-end p{margin-top:14px;font-size:18px;color:#3a3431;max-width:36em;}
+.order-end .ctas{display:flex;flex-direction:column;gap:10px;align-items:flex-start;}
+.order-end .btn{border-color:var(--ink);}
+.order-end .btn.solid{background:var(--red);border-color:var(--red);color:var(--paper);}
+.order-end .btn.solid:hover{background:var(--ink);border-color:var(--ink);}
+.order-end .btn.ghost{color:var(--ink);}
+.order-end .btn.ghost:hover{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+
+/* ---------- book & links ---------- */
+.book{border-top:1px solid var(--line);padding:96px 0;}
+.book .grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:48px;align-items:start;}
+.book .kicker{color:var(--red);font-weight:600;font-size:17px;}
+.book h2{font-family:var(--display);font-weight:400;font-size:clamp(34px,4.2vw,54px);line-height:1.02;margin-top:8px;}
+.book p{color:var(--gray);font-size:19px;}
+.book .btn{margin-top:22px;}
+.links{border-top:1px solid var(--line);padding:88px 0 96px;}
+.links h2{font-family:var(--display);font-weight:400;font-size:clamp(34px,4.2vw,54px);line-height:1;}
+.link-grid{margin-top:32px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);}
+.link-grid a{display:block;padding:26px 28px;background:var(--ink);text-decoration:none;transition:background .2s;}
+.link-grid a:hover{background:var(--carbon-2);}
+.link-grid .ln{font-family:var(--display);font-size:28px;line-height:1.1;}
+.link-grid a:hover .ln{color:var(--red);}
+.link-grid .ld{margin-top:8px;color:var(--gray);font-size:16px;}
+.link-grid .lu{margin-top:12px;color:var(--gray-2);font-size:14px;}
+
+/* ---------- footer ---------- */
+footer{padding:72px 0 46px;border-top:1px solid var(--line);}
+.footer-seal{display:block;width:148px;max-width:none;height:auto;margin:0 0 28px;}
+.footer-brand{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--gray-2);}
+.footer-tagline{margin-top:14px;font-style:italic;font-size:20px;color:var(--paper);}
+.footer-role{margin-top:22px;font-size:14px;color:var(--gray-2);}
+.footer-role strong{color:var(--paper);font-weight:600;}
+.footer-contacts{margin-top:10px;display:flex;flex-direction:column;align-items:flex-start;gap:8px;font-size:14px;}
+.footer-contacts a{color:var(--gray);text-decoration:none;}
+.footer-contacts a:hover{color:var(--paper);}
+.footer-admg-rule{width:28px;height:2px;background:var(--red);margin-top:30px;}
+.footer-admg{margin-top:16px;font-style:italic;font-size:15px;color:var(--gray);}
+.footer-bottom{margin-top:40px;padding-top:22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;}
+.copyright{font-size:13px;color:var(--gray-2);}
+.footer-lang{font-size:14px;color:var(--gray);text-decoration:none;border:1px solid var(--line-2);padding:6px 13px;border-radius:2px;}
+.footer-lang:hover{color:var(--paper);border-color:var(--paper);}
+
+/* ---------- viewer ---------- */
+.viewer{position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;border:0;padding:0;background:#050404;color:var(--paper);}
+.viewer::backdrop{background:#050404;}
+.viewer[open]{display:grid;grid-template-rows:auto minmax(0,1fr) auto;animation:vin .22s ease-out;}
+@keyframes vin{from{opacity:0}to{opacity:1}}
+.v-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 16px 12px 22px;border-bottom:1px solid var(--line);}
+.v-title{min-width:0;}
+.v-name{font-family:var(--display);font-size:24px;line-height:1.1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.v-sub{font-size:14px;color:var(--gray-2);}
+.v-tools{display:flex;align-items:center;gap:8px;flex:none;}
+.v-close{width:44px;height:44px;display:grid;place-items:center;border:1.5px solid var(--paper);}
+.v-close:hover{background:var(--red);border-color:var(--red);}
+.v-close svg{width:22px;height:22px;}
+.v-stage{position:relative;min-height:0;}
+.v-scroll{position:absolute;inset:0;overflow:auto;display:flex;align-items:center;justify-content:center;padding:16px 72px;overscroll-behavior:contain;}
+.v-scroll img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;cursor:zoom-in;border:3px solid var(--paper);}
+.v-scroll.zoomed{display:block;padding:16px;}
+.v-scroll.zoomed img{max-width:none;max-height:none;width:max(1536px,170%);cursor:zoom-out;}
+.v-nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:72px;display:grid;place-items:center;background:rgba(10,9,9,.8);border:1.5px solid var(--line-2);z-index:2;}
+.v-nav:hover{background:var(--red);border-color:var(--red);}
+.v-nav svg{width:22px;height:22px;}
+.v-prev{left:12px;}.v-next{right:12px;}
+.v-scroll.zoomed ~ .v-nav{opacity:.35;}
+.v-foot{padding:10px 22px;font-size:14px;color:var(--gray-2);border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.v-loading{color:var(--gray);}
+html.lock{overflow:hidden;}
+
+/* ---------- responsive ---------- */
+@media (max-width:900px){
+  .captions{grid-template-columns:1fr;max-width:560px;}
+  .link-grid{grid-template-columns:1fr !important;}
+  .doors{grid-template-columns:1fr;}
+  .order-head,.book .grid,.order-end{grid-template-columns:1fr;gap:20px;}
+  .novel{grid-template-columns:1fr;grid-template-areas:"head" "fig" "body";row-gap:20px;padding:44px 0;}
+  .novel figure{align-self:auto;}
+  .link-grid{grid-template-columns:1fr;}
+  .order-end{padding:32px 24px;}
+}
+@media (max-width:640px){
+  body{font-size:17px;}
+  .wrap,.topbar .inner{padding-left:20px;padding-right:20px;}
+  .nav{gap:14px;font-size:14px;}
+  .nav .opt{display:none;}
+  .hero{padding:64px 0 56px;}
+  .hero .lede{font-size:19px;}
+  .door{padding:24px;}
+  .v-scroll{padding:10px;}
+  .v-nav{top:auto;bottom:12px;transform:none;width:52px;height:48px;}
+  .v-name{font-size:20px;}
+  .v-tools .btn span{display:none;}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  *{transition:none !important;animation:none !important;}
+}
+</style>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The metanoias: changing the map, changing the center — Mario Garza Livas">
+<meta name="twitter:description" content="Forty-two graphic novels, two ways to change: the map through which we see reality and the center from which we live.">
+<meta name="twitter:image" content="https://metanoiagroup.vip/og-image-2.jpg">
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KHNZVPJX1N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KHNZVPJX1N');
+</script>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip" href="#elegir">Which metanoia do you want to explore?</a>
+
+<nav class="topbar" aria-label="Main">
+  <div class="inner">
+    <a class="brand" href="#top"><img src="assets/mgw-mark.webp" alt="" width="20" height="20" onerror="this.remove()">Mario Garza Livas <span>· The metanoias</span></a>
+    <div class="nav">
+      <a href="#top" data-top>Home</a>
+      <a href="#first-order" data-go="1">First order</a>
+      <a href="#second-order" data-go="2">Second order</a>
+      <a class="opt" href="#book">The book</a>
+      <a class="opt" href="#links">Links</a>
+      <a class="pill opt" href="mgl2.html">mgL</a>
+      <a class="pill" href="mgv1.html" hreflang="es">Español</a>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+<header class="hero">
+  <div class="wrap">
+    <h1>The metanoias</h1>
+    <p class="subtitle"><span>Change the map.</span> <span>Change the center.</span></p>
+    <p class="lede">A guided walkthrough, in forty-two graphic novels, through the lives of remarkable people who lived a metanoia: a change of mind so deep that it transformed what they did and who they became.</p>
+    <div class="captions">
+      <p class="cap"><em>Metanoia</em> comes from Greek: <em>metá</em>, going beyond; <em>noûs</em>, the mind through which we see reality.</p>
+      <p class="cap">A first-order metanoia changes the map: the way we perceive, judge and decide. A second-order metanoia changes the center: the foundation from which we live.</p>
+      <p class="cap red">You change the map. God changes the center.</p>
+    </div>
+  </div>
+</header>
+
+<section class="choose" id="elegir" aria-labelledby="elegir-h">
+  <div class="wrap">
+    <h2 id="elegir-h">Which metanoia do you want to explore?</h2>
+    <p class="sub">Each order gathers twenty-one lives. Start with either one; when you finish, you can move on to the other.</p>
+    <div class="doors">
+      <a class="door" href="#first-order" data-go="1">
+        <img src="frank/web/door-1.webp" alt="" width="560" height="500" loading="eager" decoding="async">
+        <span class="t">First order</span>
+        <span class="s">Changing the map</span>
+        <p>People who looked at the same reality with new eyes and, in doing so, changed what they could do in the world. From Marcus Aurelius to Steve Jobs.</p>
+        <span class="foot"><span class="count">21 graphic novels</span><span class="go">Explore the first order</span></span>
+      </a>
+      <a class="door" href="#second-order" data-go="2">
+        <img src="frank/web/door-2.webp" alt="" width="700" height="460" loading="eager" decoding="async">
+        <span class="t">Second order</span>
+        <span class="s">Changing the center</span>
+        <p>People whose lives stopped revolving around themselves. They did not produce it: they received it, and cooperated. From Moses to Carlo Acutis.</p>
+        <span class="foot"><span class="count">21 graphic novels</span><span class="go">Explore the second order</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="order" id="first-order" data-order="1" aria-labelledby="first-order-h">
+  <div class="wrap">
+    <div class="order-head">
+      <div>
+        <div class="kicker">First order</div>
+        <h2 id="first-order-h">Changing the map</h2>
+      </div>
+      <div>
+        <p>All behavior rests on a chain: what we perceive, how we judge it, what we do, and who we become. A first-order metanoia steps in at the first link. It is not positive thinking: it is seeing with more accurate eyes. It depends, to a great extent, on oneself.</p>
+        <p class="howto">Click any novel to see it full size, or download it in high resolution. The novels are in Spanish; each summary is in English.</p>
+      </div>
+    </div>
+    <div class="fam">
+      <h3>They changed their own map</h3>
+      <p>People whose map worked, until reality showed them its limit.</p>
+      <span class="n">16 novels</span>
+    </div>
+      <article class="novel" id="n-Marco_Aurelio" data-order="1">
+        <div class="novel-head">
+          <div class="num">1 of 21</div>
+          <h4>Marcus Aurelius</h4>
+          <div class="meta">Rome, 121–180</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="Marco_Aurelio" aria-label="View full size: Marcus Aurelius">
+            <img src="frank/web/Marco_Aurelio.webp" alt="Graphic novel about the metanoia of Marcus Aurelius" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/Marco_Aurelio.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">Trained to shine in rhetoric, the future emperor left it for philosophy: he did not want to learn to persuade others, but to govern himself. He ruled amid war, plague and betrayal, and at night he wrote his Meditations to examine his own judgments. His metanoia was not an event but a daily discipline: telling apart what depended on him, and never mistaking the outcome for his identity.</p>
+          <div class="key">The same circumstances. The same man, more lucid.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="Marco_Aurelio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/Marco_Aurelio.png" download="Marco_Aurelio.png" data-dl="Marco_Aurelio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-Lincoln" data-order="1">
+        <div class="novel-head">
+          <div class="num">2 of 21</div>
+          <h4>Abraham Lincoln</h4>
+          <div class="meta">United States, 1809–1865</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="Lincoln" aria-label="View full size: Abraham Lincoln">
+            <img src="frank/web/Lincoln.webp" alt="Graphic novel about the metanoia of Abraham Lincoln" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/Lincoln.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">Early in his career, Lincoln sought above all to stop slavery from spreading: his map was political and territorial. The Civil War, soldiers&#x27; letters and the testimony of people fleeing slavery showed him the issue was not about borders but about persons. In 1863 he signed the Emancipation Proclamation. He remained the same man; what changed was how he read reality.</p>
+          <div class="key">He did not change who he was. He changed his map.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="Lincoln"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/Lincoln.png" download="Lincoln.png" data-dl="Lincoln"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-Henry_Ford" data-order="1">
+        <div class="novel-head">
+          <div class="num">3 of 21</div>
+          <h4>Henry Ford</h4>
+          <div class="meta">Detroit, 1863–1947</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="Henry_Ford" aria-label="View full size: Henry Ford">
+            <img src="frank/web/Henry_Ford.webp" alt="Graphic novel about the metanoia of Henry Ford" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/Henry_Ford.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">Between 1908 and 1913, Henry Ford stopped seeing his factory as a workshop where each team built a whole car. He asked whether the problem was not the people but the design of the system. He divided the work, standardized parts and created the moving assembly line. The automobile stopped being a luxury and became affordable for millions. His metanoia was to stop reacting to the system and start designing it.</p>
+          <div class="key">From reacting to the system to designing the architecture.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="Henry_Ford"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/Henry_Ford.png" download="Henry_Ford.png" data-dl="Henry_Ford"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-Gandhi" data-order="1">
+        <div class="novel-head">
+          <div class="num">4 of 21</div>
+          <h4>Mahatma Gandhi</h4>
+          <div class="meta">South Africa and India, 1869–1948</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="Gandhi" aria-label="View full size: Mahatma Gandhi">
+            <img src="frank/web/Gandhi.webp" alt="Graphic novel about the metanoia of Mahatma Gandhi" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/Gandhi.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">In 1893, at Pietermaritzburg station, a young lawyer holding a first-class ticket was thrown off the train for being Indian. That night he found that his map, made of fitting in, competing and earning recognition, had a limit. Years of observation led him to satyagraha, the force of truth: resisting without violence and refusing to cooperate with injustice. The same reality, read with another map.</p>
+          <div class="key">The same reality. Another map. Another way to walk.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="Gandhi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/Gandhi.png" download="Gandhi.png" data-dl="Gandhi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-Jules_Rimet" data-order="1">
+        <div class="novel-head">
+          <div class="num">5 of 21</div>
+          <h4>Jules Rimet</h4>
+          <div class="meta">France, 1873–1956</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="Jules_Rimet" aria-label="View full size: Jules Rimet">
+            <img src="frank/web/Jules_Rimet.webp" alt="Graphic novel about the metanoia of Jules Rimet" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/Jules_Rimet.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">In the 1920s, international football lived inside the Olympic calendar. Jules Rimet, FIFA president from 1921, saw that national-team football deserved a competition of its own. In 1928 FIFA approved the first World Cup, and in 1930 Rimet crossed the Atlantic with the trophy, bound for Uruguay. Thirteen teams played, and Mexico played the opening match. He did not adapt to the existing system: he built a new one.</p>
+          <div class="key">He did not adapt to the system. He built a new one.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="Jules_Rimet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/Jules_Rimet.png" download="Jules_Rimet.png" data-dl="Jules_Rimet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-Chaplin" data-order="1">
+        <div class="novel-head">
+          <div class="num">6 of 21</div>
+          <h4>Charles Chaplin</h4>
+          <div class="meta">England and United States, 1889–1977</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="Chaplin" aria-label="View full size: Charles Chaplin">
+            <img src="frank/web/Chaplin.webp" alt="Graphic novel about the metanoia of Charles Chaplin" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/Chaplin.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">The Tramp who conquered the world turned problems into laughter. But the Great Depression and a world tour in 1931 and 1932 showed him unemployment, automation and nationalism. Chaplin studied economics and changed what his art was for: in Modern Times (1936) the Tramp is a worker caught in the machine, and in The Great Dictator (1940) he confronts totalitarianism. The same character, a new map.</p>
+          <div class="key">The same Tramp. A new map. A larger mission.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="Chaplin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/Chaplin.png" download="Chaplin.png" data-dl="Chaplin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-Don_Eugenio_Garza_Sada" data-order="1">
+        <div class="novel-head">
+          <div class="num">7 of 21</div>
+          <h4>Eugenio Garza Sada</h4>
+          <div class="meta">Monterrey, 1892–1973</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="Don_Eugenio_Garza_Sada" aria-label="View full size: Eugenio Garza Sada">
+            <img src="frank/web/Don_Eugenio_Garza_Sada.webp" alt="Graphic novel about the metanoia of Eugenio Garza Sada" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/Don_Eugenio_Garza_Sada.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">Trained at MIT before leading the Cuauhtémoc Brewery, Eugenio Garza Sada had seen that education, science and technology move entire nations. His map said business creates wealth; reality asked him what wealth is for if it does not form better people. In 1943 he led the founding of the Tecnológico de Monterrey. He gave up neither the company nor its standards: he widened the reach of what he was building.</p>
+          <div class="key">A larger map for a life that serves more people.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="Don_Eugenio_Garza_Sada"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/Don_Eugenio_Garza_Sada.png" download="Don_Eugenio_Garza_Sada.png" data-dl="Don_Eugenio_Garza_Sada"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-JFK" data-order="1">
+        <div class="novel-head">
+          <div class="num">8 of 21</div>
+          <h4>John F. Kennedy</h4>
+          <div class="meta">United States, 1917–1963</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="JFK" aria-label="View full size: John F. Kennedy">
+            <img src="frank/web/JFK.webp" alt="Graphic novel about the metanoia of John F. Kennedy" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/JFK.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">In April 1961, the Bay of Pigs invasion failed: the assumptions were wrong and the consequences worse than expected. Kennedy treated the failure as information. In October 1962, facing Soviet missiles in Cuba, he questioned assumptions, laid out the options and chose a naval quarantine while keeping diplomatic channels open. The missiles were withdrawn and nuclear war was avoided. He did not change who he was; he changed how he read a crisis.</p>
+          <div class="key">He did not change who he was. He changed how he saw reality.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="JFK"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/JFK.png" download="JFK.png" data-dl="JFK"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-Mandela" data-order="1">
+        <div class="novel-head">
+          <div class="num">9 of 21</div>
+          <h4>Nelson Mandela</h4>
+          <div class="meta">South Africa, 1918–2013</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="Mandela" aria-label="View full size: Nelson Mandela">
+            <img src="frank/web/Mandela.webp" alt="Graphic novel about the metanoia of Nelson Mandela" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/Mandela.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">Facing an apartheid that left no room for dignity, Mandela backed armed struggle. Twenty-seven years in prison did not change his goal, but they made reality sharper. In the mid-eighties he opened contacts with the government and asked what configuration made sense given the reality that actually existed. In 1994, South Africa held its first democratic elections. The same center: dignity for all. Another map to reach it.</p>
+          <div class="key">The same goal. A more realistic map. A possible country.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="Mandela"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/Mandela.png" download="Mandela.png" data-dl="Mandela"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-George_P_Mitchell" data-order="1">
+        <div class="novel-head">
+          <div class="num">10 of 21</div>
+          <h4>George P. Mitchell</h4>
+          <div class="meta">Texas, 1919–2013</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="George_P_Mitchell" aria-label="View full size: George P. Mitchell">
+            <img src="frank/web/George_P_Mitchell.webp" alt="Graphic novel about the metanoia of George P. Mitchell" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/George_P_Mitchell.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">The industry had a verdict: gas from the Barnett Shale could not be extracted profitably. From the early eighties, George P. Mitchell and his team drilled, measured and failed for nearly two decades, treating each failure as information. The question changed: what if the problem is not the resource, but our configuration? In 1997, the right combination of fracturing and fluids made the field viable.</p>
+          <div class="key">What looks like a limit of reality is often the limit of our map.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="George_P_Mitchell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/George_P_Mitchell.png" download="George_P_Mitchell.png" data-dl="George_P_Mitchell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-Cesar_Chavez" data-order="1">
+        <div class="novel-head">
+          <div class="num">11 of 21</div>
+          <h4>César Chávez</h4>
+          <div class="meta">Arizona and California, 1927–1993</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="Cesar_Chavez" aria-label="View full size: César Chávez">
+            <img src="frank/web/Cesar_Chavez.webp" alt="Graphic novel about the metanoia of César Chávez" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/Cesar_Chavez.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">César Chávez grew up working in the fields. His first map was to help case by case: see the suffering and relieve it. But every day another family appeared in the same situation, and he understood this was not the pain of a few: it was a system. He moved from reacting to organizing. Through the National Farm Workers Association, the strikes and the grape boycott, the same compassion became collective power.</p>
+          <div class="key">From object of change to agent of change.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="Cesar_Chavez"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/Cesar_Chavez.png" download="Cesar_Chavez.png" data-dl="Cesar_Chavez"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-Rinus_Michels" data-order="1">
+        <div class="novel-head">
+          <div class="num">12 of 21</div>
+          <h4>Rinus Michels</h4>
+          <div class="meta">Amsterdam, 1928–2005</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="Rinus_Michels" aria-label="View full size: Rinus Michels">
+            <img src="frank/web/Rinus_Michels.webp" alt="Graphic novel about the metanoia of Rinus Michels" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/Rinus_Michels.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">In 1965, Rinus Michels arrived at an Ajax fighting relegation, with players tied to fixed positions. He asked what would happen if, instead of positions, the team thought in spaces. A system was born in which players swap roles and the team moves as a single body: more apparent freedom, more real order. In 1971, Ajax were champions of Europe.</p>
+          <div class="key">The same principle. An adaptable configuration.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="Rinus_Michels"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/Rinus_Michels.png" download="Rinus_Michels.png" data-dl="Rinus_Michels"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-Martin_Luther_King_Jr" data-order="1">
+        <div class="novel-head">
+          <div class="num">13 of 21</div>
+          <h4>Martin Luther King Jr.</h4>
+          <div class="meta">United States, 1929–1968</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="Martin_Luther_King_Jr" aria-label="View full size: Martin Luther King Jr.">
+            <img src="frank/web/Martin_Luther_King_Jr.webp" alt="Graphic novel about the metanoia of Martin Luther King Jr." width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/Martin_Luther_King_Jr.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">In a country that segregated and humiliated millions, the young Martin Luther King asked how to confront so great an evil. Thoreau showed him the power of conscience, Gandhi gave him a method, and his Christian faith reminded him of the commandment of love. In Montgomery, in 1955, nonviolence stopped being theory. Winning no longer meant defeating the adversary, but opening a path on which he, too, could be transformed.</p>
+          <div class="key">I changed my map, and that changed what I could do in the world.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="Martin_Luther_King_Jr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/Martin_Luther_King_Jr.png" download="Martin_Luther_King_Jr.png" data-dl="Martin_Luther_King_Jr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-Chespirito" data-order="1">
+        <div class="novel-head">
+          <div class="num">14 of 21</div>
+          <h4>Roberto Gómez Bolaños, Chespirito</h4>
+          <div class="meta">Mexico City, 1929–2014</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="Chespirito" aria-label="View full size: Roberto Gómez Bolaños, Chespirito">
+            <img src="frank/web/Chespirito.webp" alt="Graphic novel about the metanoia of Roberto Gómez Bolaños, Chespirito" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/Chespirito.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">Roberto Gómez Bolaños studied engineering: a clear map toward a stable life. But the work functioned and his heart did not light up. An ad seeking a creative copywriter took him into advertising, and there he found that his creativity was not a hobby but a vocation. That pen gave life to characters who kept generations company. He did not have to destroy his past: engineering was part of the road. He changed the lens.</p>
+          <div class="key">He changed his map. And with it, made a more human world.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="Chespirito"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/Chespirito.png" download="Chespirito.png" data-dl="Chespirito"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-Colosio" data-order="1">
+        <div class="novel-head">
+          <div class="num">15 of 21</div>
+          <h4>Luis Donaldo Colosio</h4>
+          <div class="meta">Mexico, 1950–1994</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="Colosio" aria-label="View full size: Luis Donaldo Colosio">
+            <img src="frank/web/Colosio.webp" alt="Graphic novel about the metanoia of Luis Donaldo Colosio" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/Colosio.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">On March 6, 1994, before the Monument to the Revolution, candidate Luis Donaldo Colosio spoke of a Mexico hungry and thirsty for justice, and proposed reforming power to build a new relationship between citizen and State. He came from a system that read the country from above; his campaign travels had shown him another country. It is not a proven conversion: it is, on the public record, a change of map. He was assassinated seventeen days later.</p>
+          <div class="key">The same country. Another way to read it.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="Colosio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/Colosio.png" download="Colosio.png" data-dl="Colosio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-Steve_Jobs" data-order="1">
+        <div class="novel-head">
+          <div class="num">16 of 21</div>
+          <h4>Steve Jobs</h4>
+          <div class="meta">California, 1955–2011</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="Steve_Jobs" aria-label="View full size: Steve Jobs">
+            <img src="frank/web/Steve_Jobs.webp" alt="Graphic novel about the metanoia of Steve Jobs" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/Steve_Jobs.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">On his return to Apple in 1997, Steve Jobs found a company crowded with products, lines and versions. Doing more was not creating more value. He remembered something learned years earlier in a calligraphy class: form matters. He cut the product line drastically and decided which things deserved to exist. Optimization is not order: the change was not doing more, but seeing differently what truly matters.</p>
+          <div class="key">We don&#x27;t need to make more things. We need to decide which things deserve to exist.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="Steve_Jobs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/Steve_Jobs.png" download="Steve_Jobs.png" data-dl="Steve_Jobs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+    <div class="fam">
+      <h3>They changed everyone's map</h3>
+      <p>Discoverers who saw what no one else saw and made the world redraw its map.</p>
+      <span class="n">4 novels</span>
+    </div>
+      <article class="novel" id="n-Pasteur" data-order="1">
+        <div class="novel-head">
+          <div class="num">17 of 21</div>
+          <h4>Louis Pasteur</h4>
+          <div class="meta">France, 1822–1895</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="Pasteur" aria-label="View full size: Louis Pasteur">
+            <img src="frank/web/Pasteur.webp" alt="Graphic novel about the metanoia of Louis Pasteur" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/Pasteur.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">In his day, many believed life arose spontaneously and that fermentation and disease had no precise cause. Using swan-neck flasks, Louis Pasteur showed that boiled broth stayed sterile as long as dust and microorganisms could not reach it. Where people saw a mystery, a causal system appeared. That change of map opened the way to vaccines, hygiene and a medicine able to prevent.</p>
+          <div class="key">It was not magic. It was reality, and behind it, an order that could be known.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="Pasteur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/Pasteur.png" download="Pasteur.png" data-dl="Pasteur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-Einstein" data-order="1">
+        <div class="novel-head">
+          <div class="num">18 of 21</div>
+          <h4>Albert Einstein</h4>
+          <div class="meta">Germany, Switzerland and United States, 1879–1955</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="Einstein" aria-label="View full size: Albert Einstein">
+            <img src="frank/web/Einstein.webp" alt="Graphic novel about the metanoia of Albert Einstein" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/Einstein.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">Einstein grew up in a universe that seemed well understood: fixed space, the same time for everyone, gravity as a force acting at a distance. Questions that would not leave him alone led him to special relativity: simultaneity depends on the observer. Then general relativity showed gravity as the curvature of spacetime. What everyone took to be the stage turned out to be part of the story.</p>
+          <div class="key">The map we thought was fixed was part of the territory too.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="Einstein"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/Einstein.png" download="Einstein.png" data-dl="Einstein"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-Camarena" data-order="1">
+        <div class="novel-head">
+          <div class="num">19 of 21</div>
+          <h4>Guillermo González Camarena</h4>
+          <div class="meta">Guadalajara and Mexico City, 1917–1965</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="Camarena" aria-label="View full size: Guillermo González Camarena">
+            <img src="frank/web/Camarena.webp" alt="Graphic novel about the metanoia of Guillermo González Camarena" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/Camarena.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">From childhood, Guillermo González Camarena built devices out of materials others threw away. When the world took black-and-white television for granted, he asked whether reality could also be seen in color. He developed a field-sequential trichromatic system, patented in Mexico in 1940 and later in the United States. Reality was the same; the way of seeing it changed, and with it what millions would be able to see.</p>
+          <div class="key">Reality was the same. What changed was the way of seeing it.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="Camarena"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/Camarena.png" download="Camarena.png" data-dl="Camarena"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-Mario_Molina" data-order="1">
+        <div class="novel-head">
+          <div class="num">20 of 21</div>
+          <h4>Mario Molina</h4>
+          <div class="meta">Mexico City, 1943–2020</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="Mario_Molina" aria-label="View full size: Mario Molina">
+            <img src="frank/web/Mario_Molina.webp" alt="Graphic novel about the metanoia of Mario Molina" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/Mario_Molina.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">Mario Molina trained as a chemical engineer, used to studying substances as isolated objects. At the University of California, Irvine, with Sherwood Rowland, he asked a different question: what happens when CFCs reach the stratosphere? They found that CFCs release chlorine that destroys the ozone layer. He moved from the molecule to the system. His work opened the way to the Montreal Protocol and, in 1995, made him Mexico&#x27;s first Nobel laureate in Chemistry.</p>
+          <div class="key">From a molecule to our common home.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="Mario_Molina"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/Mario_Molina.png" download="Mario_Molina.png" data-dl="Mario_Molina"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+    <div class="fam">
+      <h3>At the edge of the map</h3>
+      <p>A life that changed the map and reached its edge, where the other question begins.</p>
+      <span class="n">1 novel</span>
+    </div>
+      <article class="novel" id="n-Hammarskjold" data-order="1">
+        <div class="novel-head">
+          <div class="num">21 of 21</div>
+          <h4>Dag Hammarskjöld</h4>
+          <div class="meta">Sweden, 1905–1961</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="Hammarskjold" aria-label="View full size: Dag Hammarskjöld">
+            <img src="frank/web/Hammarskjold.webp" alt="Graphic novel about the metanoia of Dag Hammarskjöld" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/Hammarskjold.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">An economist and diplomat, Dag Hammarskjöld became UN Secretary-General with a reputation for efficiency. In the 1956 Suez crisis he changed the map of diplomacy: the UN could prevent and protect, not only react, and it created its first emergency force. He died in 1961, in a plane crash during a peace mission to the Congo. His journal, Markings, revealed what lay at the edge of his map: a life seeking to answer to Someone.</p>
+          <div class="key">A new map. And perhaps, a new center.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="Hammarskjold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/Hammarskjold.png" download="Hammarskjold.png" data-dl="Hammarskjold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+    <div class="order-end">
+      <div>
+        <h3>The map has edges.</h3>
+        <p>These twenty-one lives show how far a mind that learns to see better can go. Beyond the edge lies the other question: where we live from.</p>
+      </div>
+      <div class="ctas">
+        <a class="btn solid" href="#second-order" data-go="2">Explore the second order</a>
+        <a class="btn ghost" href="#elegir" data-go="0">Choose again</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="order" id="second-order" data-order="2" aria-labelledby="second-order-h">
+  <div class="wrap">
+    <div class="order-head">
+      <div>
+        <div class="kicker">Second order</div>
+        <h2 id="second-order-h">Changing the center</h2>
+      </div>
+      <div>
+        <p>A person can change maps many times and still remain the center of their own existence. A second-order metanoia displaces that center. It is not produced by one's own effort: it is received, and one cooperates with it.</p>
+        <p class="howto">Click any novel to see it full size, or download it in high resolution. The novels are in Spanish; each summary is in English.</p>
+      </div>
+    </div>
+    <div class="fam">
+      <h3>They crossed a threshold</h3>
+      <p>They lived from another center until something, or Someone, displaced it.</p>
+      <span class="n">12 novels</span>
+    </div>
+      <article class="novel" id="n-Moises" data-order="2">
+        <div class="novel-head">
+          <div class="num">1 of 21</div>
+          <h4>Moses</h4>
+          <div class="meta">Egypt and the desert of Midian</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="Moises" aria-label="View full size: Moses">
+            <img src="frank/web/Moises.webp" alt="Graphic novel about the metanoia of Moses" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/Moises.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">He had been a prince, then a fugitive, and now he tended his father-in-law&#x27;s flock. Before a bush that burned without being consumed, God sent him to bring his people out of Egypt. Moses answered with a question: who am I? God did not tell him he was capable. He told him: I will be with you. His metanoia was discovering that his own ability had never been the foundation of his mission.</p>
+          <div class="key">From “Who am I?” to “I will be with you.”</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="Moises"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/Moises.png" download="Moises.png" data-dl="Moises"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-San_Pedro" data-order="2">
+        <div class="novel-head">
+          <div class="num">2 of 21</div>
+          <h4>Saint Peter</h4>
+          <div class="meta">Galilee and Rome, 1st century</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="San_Pedro" aria-label="View full size: Saint Peter">
+            <img src="frank/web/San_Pedro.webp" alt="Graphic novel about the metanoia of Saint Peter" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/San_Pedro.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">Simon was a fisherman who trusted his strength, his experience and his control. He followed Jesus and confessed him as the Messiah, but still understood him through his own map, and when he heard Jesus speak of the cross, he rejected it. The night he denied him three times, that map collapsed. The risen Jesus did not ask him about his failure, but about his love. According to tradition, he died crucified in Rome.</p>
+          <div class="key">I no longer live from myself, but from Him.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="San_Pedro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/San_Pedro.png" download="San_Pedro.png" data-dl="San_Pedro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-San_Pablo" data-order="2">
+        <div class="novel-head">
+          <div class="num">3 of 21</div>
+          <h4>Saint Paul</h4>
+          <div class="meta">Tarsus, Damascus and Rome, 1st century</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="San_Pablo" aria-label="View full size: Saint Paul">
+            <img src="frank/web/San_Pablo.webp" alt="Graphic novel about the metanoia of Saint Paul" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/San_Pablo.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">Saul had learning, zeal and a purpose he believed was legitimate: to persecute the followers of Jesus in God&#x27;s name. His map was coherent. On the road to Damascus, a light threw him to the ground and a voice asked why he was persecuting him. Blind, he had to be led by the hand and wait for Ananias to restore his sight. He received what he could not give himself: not a new strategy, but a new center.</p>
+          <div class="key">The same passion. The same man. Another center.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="San_Pablo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/San_Pablo.png" download="San_Pablo.png" data-dl="San_Pablo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-San_Agustin" data-order="2">
+        <div class="novel-head">
+          <div class="num">4 of 21</div>
+          <h4>Saint Augustine</h4>
+          <div class="meta">Thagaste, Milan and Hippo, 354–430</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="San_Agustin" aria-label="View full size: Saint Augustine">
+            <img src="frank/web/San_Agustin.webp" alt="Graphic novel about the metanoia of Saint Augustine" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/San_Agustin.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">Brilliant and scattered, Augustine looked for truth in Cicero, in Manichaeism, in skepticism and in Neoplatonism. Each answer explained something and left an emptiness. In Milan, Ambrose&#x27;s preaching drew him to the Scriptures, but his will resisted. In 386, in a garden, he heard a child&#x27;s voice repeating “take and read.” He was baptized in 387. His heart, restless for years, found where to rest.</p>
+          <div class="key">He no longer seeks an answer. He lives a relationship.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="San_Agustin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/San_Agustin.png" download="San_Agustin.png" data-dl="San_Agustin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-San_Francisco" data-order="2">
+        <div class="novel-head">
+          <div class="num">5 of 21</div>
+          <h4>Saint Francis of Assisi</h4>
+          <div class="meta">Assisi, 1181/82–1226</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="San_Francisco" aria-label="View full size: Saint Francis of Assisi">
+            <img src="frank/web/San_Francisco.webp" alt="Graphic novel about the metanoia of Saint Francis of Assisi" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/San_Francisco.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">Son of a wealthy family, Francis dreamed of knightly glory: his life was about being someone. War, illness and the emptiness of his achievements called that map into question. One day he embraced and kissed a leper, something that had once repelled him; years later he wrote that the Lord had led him among them, and what was bitter turned to sweetness. He gave up his goods and his place in society to be a brother.</p>
+          <div class="key">From being someone to belonging.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="San_Francisco"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/San_Francisco.png" download="San_Francisco.png" data-dl="San_Francisco"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-San_Tomas_de_Aquino" data-order="2">
+        <div class="novel-head">
+          <div class="num">6 of 21</div>
+          <h4>Saint Thomas Aquinas</h4>
+          <div class="meta">Italy and Paris, 1225–1274</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="San_Tomas_de_Aquino" aria-label="View full size: Saint Thomas Aquinas">
+            <img src="frank/web/San_Tomas_de_Aquino.webp" alt="Graphic novel about the metanoia of Saint Thomas Aquinas" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/San_Tomas_de_Aquino.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">In Naples he discovered Aristotle and the Dominicans. His family held him for months to make him give up the Order of Preachers, and failed. Thomas built one of the most powerful maps in the history of thought without making intelligence his center: reason and faith illuminate each other, and grace does not destroy nature but perfects it. Near the end of his life, after an experience at Mass, he stopped writing: everything seemed like straw beside what he had seen.</p>
+          <div class="key">The same intellect, in service of a greater center.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="San_Tomas_de_Aquino"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/San_Tomas_de_Aquino.png" download="San_Tomas_de_Aquino.png" data-dl="San_Tomas_de_Aquino"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-San_Juan_Diego" data-order="2">
+        <div class="novel-head">
+          <div class="num">7 of 21</div>
+          <h4>Saint Juan Diego</h4>
+          <div class="meta">Mexico, 1474–1548</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="San_Juan_Diego" aria-label="View full size: Saint Juan Diego">
+            <img src="frank/web/San_Juan_Diego.webp" alt="Graphic novel about the metanoia of Saint Juan Diego" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/San_Juan_Diego.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">Cuauhtlatoatzin was baptized as an adult, together with his wife María Lucía, and lived his faith simply. In December 1531, at Tepeyac, the Virgin entrusted him with a mission: to ask the bishop for a church. The bishop did not believe him and asked for a sign. Juan Diego returned again and again, with no control over the outcome. Out-of-season flowers and the image on his tilma confirmed the mission. He spent the rest of his life beside the chapel, serving pilgrims.</p>
+          <div class="key">The same man. A new center.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="San_Juan_Diego"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/San_Juan_Diego.png" download="San_Juan_Diego.png" data-dl="San_Juan_Diego"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-San_Ignacio_de_Loyola" data-order="2">
+        <div class="novel-head">
+          <div class="num">8 of 21</div>
+          <h4>Saint Ignatius of Loyola</h4>
+          <div class="meta">Loyola, Manresa and Rome, 1491–1556</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="San_Ignacio_de_Loyola" aria-label="View full size: Saint Ignatius of Loyola">
+            <img src="frank/web/San_Ignacio_de_Loyola.webp" alt="Graphic novel about the metanoia of Saint Ignatius of Loyola" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/San_Ignacio_de_Loyola.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">Íñigo dreamed of honor, conquest and a name in history. In 1521, a cannonball at Pamplona left him unable to walk. During his recovery he asked for tales of chivalry and found only a life of Christ and lives of the saints. He noticed that some thoughts left him empty and others at peace, and began to discern. At Manresa his center was reordered. From there came the Spiritual Exercises and, later, the Society of Jesus.</p>
+          <div class="key">The same abilities. For the greater glory of God.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="San_Ignacio_de_Loyola"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/San_Ignacio_de_Loyola.png" download="San_Ignacio_de_Loyola.png" data-dl="San_Ignacio_de_Loyola"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-Santa_Teresa_de_Avila" data-order="2">
+        <div class="novel-head">
+          <div class="num">9 of 21</div>
+          <h4>Saint Teresa of Ávila</h4>
+          <div class="meta">Ávila, 1515–1582</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="Santa_Teresa_de_Avila" aria-label="View full size: Saint Teresa of Ávila">
+            <img src="frank/web/Santa_Teresa_de_Avila.webp" alt="Graphic novel about the metanoia of Saint Teresa of Ávila" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/Santa_Teresa_de_Avila.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">Teresa entered Carmel in 1535 with a clear plan for her spiritual life: to be a good nun and do things well. But her inner life stayed disordered, and she found that one can be very busy with the things of God and still be the center. Her encounter with Christ changed the question: no longer what do I want to do for God, but what does He want, and how can I cooperate. She founded the first reformed Carmel in 1562, and sixteen more.</p>
+          <div class="key">You change the map. God changes the center.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="Santa_Teresa_de_Avila"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/Santa_Teresa_de_Avila.png" download="Santa_Teresa_de_Avila.png" data-dl="Santa_Teresa_de_Avila"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-San_Pablo_Miki" data-order="2">
+        <div class="novel-head">
+          <div class="num">10 of 21</div>
+          <h4>Saint Paul Miki</h4>
+          <div class="meta">Japan, c. 1564–1597</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="San_Pablo_Miki" aria-label="View full size: Saint Paul Miki">
+            <img src="frank/web/San_Pablo_Miki.webp" alt="Graphic novel about the metanoia of Saint Paul Miki" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/San_Pablo_Miki.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">Born to a Christian family and trained by the Jesuits from his youth, Paul Miki was a respected preacher when the authorities condemned him with twenty-five companions. Every practical argument pointed one way: deny the faith and save your life. On February 5, 1597, in Nagasaki, he was crucified. From the cross he went on preaching and forgave those who condemned him.</p>
+          <div class="key">Life is a gift, not a possession. That is why it can be given.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="San_Pablo_Miki"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/San_Pablo_Miki.png" download="San_Pablo_Miki.png" data-dl="San_Pablo_Miki"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-San_Lorenzo_Ruiz" data-order="2">
+        <div class="novel-head">
+          <div class="num">11 of 21</div>
+          <h4>Saint Lorenzo Ruiz</h4>
+          <div class="meta">Manila and Nagasaki, c. 1600–1637</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="San_Lorenzo_Ruiz" aria-label="View full size: Saint Lorenzo Ruiz">
+            <img src="frank/web/San_Lorenzo_Ruiz.webp" alt="Graphic novel about the metanoia of Saint Lorenzo Ruiz" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/San_Lorenzo_Ruiz.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">A layman, husband and father, Lorenzo Ruiz led an ordinary life in Manila. Circumstances took him to Japan with Dominican missionaries, where he was arrested. He was offered freedom in exchange for renouncing his faith. Before his judges he answered that even if he had a thousand lives, he would offer them all for Christ. He died a martyr in Nagasaki in 1637 and is the first Filipino saint. The second metanoia is not reserved for monks or priests.</p>
+          <div class="key">An ordinary life can also have an extraordinary center.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="San_Lorenzo_Ruiz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/San_Lorenzo_Ruiz.png" download="San_Lorenzo_Ruiz.png" data-dl="San_Lorenzo_Ruiz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-Santa_Faustina" data-order="2">
+        <div class="novel-head">
+          <div class="num">12 of 21</div>
+          <h4>Saint Faustina Kowalska</h4>
+          <div class="meta">Poland, 1905–1938</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="Santa_Faustina" aria-label="View full size: Saint Faustina Kowalska">
+            <img src="frank/web/Santa_Faustina.webp" alt="Graphic novel about the metanoia of Saint Faustina Kowalska" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/Santa_Faustina.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">From childhood she felt called to religious life, but her parents opposed it and she tried to silence the call. In 1924, before a vision of the suffering Christ, she could no longer ignore it: she left home for Warsaw and in 1925 entered the Congregation of the Sisters of Our Lady of Mercy. A cook, gardener and porter, she received in prayer the message of Divine Mercy. The ordinary, lived from the right center, reached the whole world.</p>
+          <div class="key">Do your part, and let God do the rest.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="Santa_Faustina"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/Santa_Faustina.png" download="Santa_Faustina.png" data-dl="Santa_Faustina"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+    <div class="fam">
+      <h3>They received the center and held it</h3>
+      <p>Lives that received the right center early and held it when everything else changed.</p>
+      <span class="n">9 novels</span>
+    </div>
+      <article class="novel" id="n-Santo_Domingo" data-order="2">
+        <div class="novel-head">
+          <div class="num">13 of 21</div>
+          <h4>Saint Dominic</h4>
+          <div class="meta">Caleruega, 1170–1221</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="Santo_Domingo" aria-label="View full size: Saint Dominic">
+            <img src="frank/web/Santo_Domingo.webp" alt="Graphic novel about the metanoia of Saint Dominic" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/Santo_Domingo.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">Dominic grew up with a solid Christian formation, and his vocation matured without a dramatic conversion: God came first from the start. He could have remained in contemplation, but he saw a wounded world and understood that loving God in silence was not enough. He founded the Order of Preachers to study, contemplate and preach the truth. According to tradition, he also promoted the praying of the Rosary.</p>
+          <div class="key">To speak always with God, and of God.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="Santo_Domingo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/Santo_Domingo.png" download="Santo_Domingo.png" data-dl="Santo_Domingo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-San_Juan_de_la_Cruz" data-order="2">
+        <div class="novel-head">
+          <div class="num">14 of 21</div>
+          <h4>Saint John of the Cross</h4>
+          <div class="meta">Castile, 1542–1591</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="San_Juan_de_la_Cruz" aria-label="View full size: Saint John of the Cross">
+            <img src="frank/web/San_Juan_de_la_Cruz.webp" alt="Graphic novel about the metanoia of Saint John of the Cross" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/San_Juan_de_la_Cruz.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">John sought God with all his intelligence and discipline. Meeting Teresa of Ávila led him to the reform of Carmel, and his fidelity cost him persecution: in 1577 he was imprisoned in a cell in Toledo. They took his freedom, his books and his health, but not his relationship with God. In that darkness he wrote some of his deepest verse. He learned that his life rested not on a stable configuration, but on a center that does not collapse.</p>
+          <div class="key">If God is the center, it is possible to change without losing yourself.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="San_Juan_de_la_Cruz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/San_Juan_de_la_Cruz.png" download="San_Juan_de_la_Cruz.png" data-dl="San_Juan_de_la_Cruz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-Padre_Pio" data-order="2">
+        <div class="novel-head">
+          <div class="num">15 of 21</div>
+          <h4>Saint Pio of Pietrelcina</h4>
+          <div class="meta">Pietrelcina and San Giovanni Rotondo, 1887–1968</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="Padre_Pio" aria-label="View full size: Saint Pio of Pietrelcina">
+            <img src="frank/web/Padre_Pio.webp" alt="Graphic novel about the metanoia of Saint Pio of Pietrelcina" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/Padre_Pio.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">Francesco Forgione wanted to give his life to God, but imagined a quiet service without crosses. Ordained a priest in 1910, he received the stigmata in 1918, and suffering became part of his daily life. He did not try to eliminate it: he embraced it as the place from which to accompany the pain of others. He spent hours in the confessional and drove the building of the Casa Sollievo della Sofferenza, a first-rate hospital for the sick.</p>
+          <div class="key">The cross did not destroy him. It shaped him.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="Padre_Pio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/Padre_Pio.png" download="Padre_Pio.png" data-dl="Padre_Pio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-San_Maximiliano_Kolbe" data-order="2">
+        <div class="novel-head">
+          <div class="num">16 of 21</div>
+          <h4>Saint Maximilian Kolbe</h4>
+          <div class="meta">Poland and Auschwitz, 1894–1941</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="San_Maximiliano_Kolbe" aria-label="View full size: Saint Maximilian Kolbe">
+            <img src="frank/web/San_Maximiliano_Kolbe.webp" alt="Graphic novel about the metanoia of Saint Maximilian Kolbe" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/San_Maximiliano_Kolbe.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">From his youth, Maximilian Kolbe understood that his life was not his own and placed it in God&#x27;s hands. He founded the Militia of the Immaculata and used the media of his time to reach further. In Auschwitz, in 1941, ten prisoners were condemned to die of starvation. One of them, Franciszek Gajowniczek, cried out for his wife and children. Kolbe stepped forward and asked to take his place. He did his part and left the outcome to God.</p>
+          <div class="key">The same reality. Another center.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="San_Maximiliano_Kolbe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/San_Maximiliano_Kolbe.png" download="San_Maximiliano_Kolbe.png" data-dl="San_Maximiliano_Kolbe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-Sor_Lucia" data-order="2">
+        <div class="novel-head">
+          <div class="num">17 of 21</div>
+          <h4>Sister Lúcia of Fátima</h4>
+          <div class="meta">Fátima and Coimbra, 1907–2005</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="Sor_Lucia" aria-label="View full size: Sister Lúcia of Fátima">
+            <img src="frank/web/Sor_Lucia.webp" alt="Graphic novel about the metanoia of Sister Lúcia of Fátima" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/Sor_Lucia.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">In 1917, the Virgin appeared at Fátima to three shepherd children: Lúcia, Francisco and Jacinta. On October 13, thousands witnessed the miracle of the sun. Francisco and Jacinta died soon after, and Lúcia was left alone with the weight of the message. She became a Dorothean sister and, from 1948, a Carmelite in Coimbra. She wrote down the messages, including the so-called third secret, and held that their interpretation belonged to the Church, not to her.</p>
+          <div class="key">From my project to His mission.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="Sor_Lucia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/Sor_Lucia.png" download="Sor_Lucia.png" data-dl="Sor_Lucia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-San_Jose_Sanchez_del_Rio" data-order="2">
+        <div class="novel-head">
+          <div class="num">18 of 21</div>
+          <h4>Saint José Sánchez del Río</h4>
+          <div class="meta">Sahuayo, Michoacán, 1913–1928</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="San_Jose_Sanchez_del_Rio" aria-label="View full size: Saint José Sánchez del Río">
+            <img src="frank/web/San_Jose_Sanchez_del_Rio.webp" alt="Graphic novel about the metanoia of Saint José Sánchez del Río" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/San_Jose_Sanchez_del_Rio.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">José grew up in a family where the Eucharist, prayer and the catechism formed his center. When religious persecution began in Mexico in 1926, he joined the Cristeros while barely a teenager. He was captured at 14 and offered his freedom if he renounced his faith. He was tortured and did not deny Christ. He died crying out “Viva Cristo Rey!” He was canonized in 2016.</p>
+          <div class="key">Losing his life no longer meant losing himself.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="San_Jose_Sanchez_del_Rio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/San_Jose_Sanchez_del_Rio.png" download="San_Jose_Sanchez_del_Rio.png" data-dl="San_Jose_Sanchez_del_Rio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-San_Juan_Pablo_II" data-order="2">
+        <div class="novel-head">
+          <div class="num">19 of 21</div>
+          <h4>Saint John Paul II</h4>
+          <div class="meta">Poland and Rome, 1920–2005</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="San_Juan_Pablo_II" aria-label="View full size: Saint John Paul II">
+            <img src="frank/web/San_Juan_Pablo_II.webp" alt="Graphic novel about the metanoia of Saint John Paul II" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/San_Juan_Pablo_II.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">Karol Wojtyła lost his mother at 8, his brother at 12 and his father at 20. He wanted to be an actor, worked in a quarry during the Nazi occupation and in 1942 entered the clandestine seminary in Kraków. Ordained in 1946, he became a professor, bishop, cardinal and, in 1978, pope. He survived the 1981 assassination attempt. His configuration changed again and again; his center remained.</p>
+          <div class="key">He did not produce his vocation: he received it, and cooperated with it.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="San_Juan_Pablo_II"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/San_Juan_Pablo_II.png" download="San_Juan_Pablo_II.png" data-dl="San_Juan_Pablo_II"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-Conchita_Gonzalez" data-order="2">
+        <div class="novel-head">
+          <div class="num">20 of 21</div>
+          <h4>Conchita González</h4>
+          <div class="meta">San Sebastián de Garabandal, Spain, b. 1949</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="Conchita_Gonzalez" aria-label="View full size: Conchita González">
+            <img src="frank/web/Conchita_Gonzalez.webp" alt="Graphic novel about the metanoia of Conchita González" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/Conchita_Gonzalez.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">Conchita González was 12 in 1961 when, according to her testimony, the apparitions that she and three other girls described began in Garabandal, a phenomenon on which the Church maintains a position of prudence. It marked her life, but Conchita never made it her own: she insisted that what mattered was not her, but Jesus, the Eucharist and the conversion of souls. She later raised a family and lived a quiet life.</p>
+          <div class="key">What matters is not me.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="Conchita_Gonzalez"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/Conchita_Gonzalez.png" download="Conchita_Gonzalez.png" data-dl="Conchita_Gonzalez"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+      <article class="novel" id="n-San_Carlo_Acutis" data-order="2">
+        <div class="novel-head">
+          <div class="num">21 of 21</div>
+          <h4>Saint Carlo Acutis</h4>
+          <div class="meta">London and Milan, 1991–2006</div>
+        </div>
+        <figure>
+          <button class="thumb" type="button" data-open="San_Carlo_Acutis" aria-label="View full size: Saint Carlo Acutis">
+            <img src="frank/web/San_Carlo_Acutis.webp" alt="Graphic novel about the metanoia of Saint Carlo Acutis" width="1536" height="1024" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='frank/San_Carlo_Acutis.png'">
+            <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+          </button>
+        </figure>
+        <div class="novel-body">
+          <p class="abs">Born in London and raised in Milan, Carlo Acutis made his First Communion at seven and from then on went to Mass every day. He loved football, video games and technology, and used it to build a website documenting Eucharistic miracles around the world. When leukemia came, he offered his suffering for the pope and the Church. He died in 2006, at 15, and was canonized in 2025.</p>
+          <div class="key">The right center. An ordered life.</div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-open="San_Carlo_Acutis"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>View full size</button>
+            <a class="btn ghost" href="frank/San_Carlo_Acutis.png" download="San_Carlo_Acutis.png" data-dl="San_Carlo_Acutis"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download PNG</a>
+          </div>
+        </div>
+      </article>
+    <div class="order-end">
+      <div>
+        <h3>The center does not replace the map: it orders it.</h3>
+        <p>None of these lives stopped thinking, preparing or acting. What changed was the place from which they thought, prepared and acted.</p>
+      </div>
+      <div class="ctas">
+        <a class="btn solid" href="#first-order" data-go="1">Explore the first order</a>
+        <a class="btn ghost" href="#elegir" data-go="0">Choose again</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap grid">
+    <div>
+      <div class="kicker">The book behind this walkthrough</div>
+      <h2>Metanoia: Do Your Part and Let God Do the Rest</h2>
+    </div>
+    <div>
+      <p>The distinction between first-order and second-order metanoia comes from this book by Mario Garza Livas, which travels from the map to the center in three books and a hinge. Free PDF download, no registration. Spanish edition.</p>
+      <a class="btn solid" href="https://metanoiagroup.vip/downloads/Metanoia.pdf" target="_blank" rel="noopener" onclick="track('download','libro_metanoia')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download the book (PDF)</a>
+    </div>
+  </div>
+</section>
+
+<section class="links" id="links">
+  <div class="wrap">
+    <h2>Links</h2>
+    <div class="link-grid">
+      <a href="mgw2.html">
+        <div class="ln">The Written Work</div>
+        <div class="ld">Mario Garza Livas's thirty-three books, read as a single architecture.</div>
+        <div class="lu">metanoiagroup.vip/mgw2</div>
+      </a>
+      <a href="mgl2.html">
+        <div class="ln">Personal page</div>
+        <div class="ld">Direct contact, CV, documents and Mario Garza Livas's full ecosystem.</div>
+        <div class="lu">metanoiagroup.vip/mgl2</div>
+      </a>
+      <a href="https://metanoiagroup.vip/" target="_blank" rel="noopener">
+        <div class="ln">The Metanoia Group</div>
+        <div class="ld">An architecture of antifragility for the leader, the company and the family wealth.</div>
+        <div class="lu">metanoiagroup.vip</div>
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img class="footer-seal" src="assets/mgw-emblem-firma.webp" alt="" width="148" height="113" loading="lazy" decoding="async" onerror="this.remove()">
+    <div class="footer-brand">The metanoias</div>
+    <div class="footer-tagline">Forty-two lives. Two ways to change.</div>
+    <div class="footer-role"><strong>Mario Garza Livas</strong> — Author · Writer · Thinker</div>
+    <div class="footer-contacts">
+      <a href="mailto:mario@metanoiagroup.vip">mario@metanoiagroup.vip</a>
+      <a href="https://wa.me/528125136784" onclick="track('contact','whatsapp')">+52 (81) 2513 6784</a>
+      <a href="https://linkedin.com/in/garzalivas" onclick="track('contact','linkedin')">linkedin.com/in/garzalivas</a>
+    </div>
+    <div class="footer-admg-rule"></div>
+    <p class="footer-admg">Ad Majorem Dei Gloriam.</p>
+    <div class="footer-bottom">
+      <span class="copyright">© 2026 The Metanoia Group</span>
+      <a class="footer-lang" href="mgv1.html">Español</a>
+    </div>
+  </div>
+</footer>
+
+<dialog class="viewer" id="viewer" aria-labelledby="v-name">
+  <div class="v-bar">
+    <div class="v-title">
+      <div class="v-name" id="v-name"></div>
+      <div class="v-sub" id="v-sub"></div>
+    </div>
+    <div class="v-tools">
+      <a class="btn ghost" id="v-dl" href="#" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg><span>Download PNG</span></a>
+      <button class="v-close" type="button" id="v-close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+    </div>
+  </div>
+  <div class="v-stage">
+    <div class="v-scroll" id="v-scroll"><img id="v-img" alt=""></div>
+    <button class="v-nav v-prev" type="button" id="v-prev" aria-label="Previous novel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M15 4l-8 8 8 8"/></svg></button>
+    <button class="v-nav v-next" type="button" id="v-next" aria-label="Next novel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M9 4l8 8-8 8"/></svg></button>
+  </div>
+  <div class="v-foot"><span>Click or tap the image to zoom in or out.</span><span class="v-loading" id="v-loading" hidden>Loading high resolution…</span></div>
+</dialog>
+
+<script>
+(function(){
+  var D = {"novels": [{"f": "Marco_Aurelio", "name": "Marcus Aurelius", "meta": "Rome, 121–180", "o": 1}, {"f": "Lincoln", "name": "Abraham Lincoln", "meta": "United States, 1809–1865", "o": 1}, {"f": "Henry_Ford", "name": "Henry Ford", "meta": "Detroit, 1863–1947", "o": 1}, {"f": "Gandhi", "name": "Mahatma Gandhi", "meta": "South Africa and India, 1869–1948", "o": 1}, {"f": "Jules_Rimet", "name": "Jules Rimet", "meta": "France, 1873–1956", "o": 1}, {"f": "Chaplin", "name": "Charles Chaplin", "meta": "England and United States, 1889–1977", "o": 1}, {"f": "Don_Eugenio_Garza_Sada", "name": "Eugenio Garza Sada", "meta": "Monterrey, 1892–1973", "o": 1}, {"f": "JFK", "name": "John F. Kennedy", "meta": "United States, 1917–1963", "o": 1}, {"f": "Mandela", "name": "Nelson Mandela", "meta": "South Africa, 1918–2013", "o": 1}, {"f": "George_P_Mitchell", "name": "George P. Mitchell", "meta": "Texas, 1919–2013", "o": 1}, {"f": "Cesar_Chavez", "name": "César Chávez", "meta": "Arizona and California, 1927–1993", "o": 1}, {"f": "Rinus_Michels", "name": "Rinus Michels", "meta": "Amsterdam, 1928–2005", "o": 1}, {"f": "Martin_Luther_King_Jr", "name": "Martin Luther King Jr.", "meta": "United States, 1929–1968", "o": 1}, {"f": "Chespirito", "name": "Roberto Gómez Bolaños, Chespirito", "meta": "Mexico City, 1929–2014", "o": 1}, {"f": "Colosio", "name": "Luis Donaldo Colosio", "meta": "Mexico, 1950–1994", "o": 1}, {"f": "Steve_Jobs", "name": "Steve Jobs", "meta": "California, 1955–2011", "o": 1}, {"f": "Pasteur", "name": "Louis Pasteur", "meta": "France, 1822–1895", "o": 1}, {"f": "Einstein", "name": "Albert Einstein", "meta": "Germany, Switzerland and United States, 1879–1955", "o": 1}, {"f": "Camarena", "name": "Guillermo González Camarena", "meta": "Guadalajara and Mexico City, 1917–1965", "o": 1}, {"f": "Mario_Molina", "name": "Mario Molina", "meta": "Mexico City, 1943–2020", "o": 1}, {"f": "Hammarskjold", "name": "Dag Hammarskjöld", "meta": "Sweden, 1905–1961", "o": 1}, {"f": "Moises", "name": "Moses", "meta": "Egypt and the desert of Midian", "o": 2}, {"f": "San_Pedro", "name": "Saint Peter", "meta": "Galilee and Rome, 1st century", "o": 2}, {"f": "San_Pablo", "name": "Saint Paul", "meta": "Tarsus, Damascus and Rome, 1st century", "o": 2}, {"f": "San_Agustin", "name": "Saint Augustine", "meta": "Thagaste, Milan and Hippo, 354–430", "o": 2}, {"f": "San_Francisco", "name": "Saint Francis of Assisi", "meta": "Assisi, 1181/82–1226", "o": 2}, {"f": "San_Tomas_de_Aquino", "name": "Saint Thomas Aquinas", "meta": "Italy and Paris, 1225–1274", "o": 2}, {"f": "San_Juan_Diego", "name": "Saint Juan Diego", "meta": "Mexico, 1474–1548", "o": 2}, {"f": "San_Ignacio_de_Loyola", "name": "Saint Ignatius of Loyola", "meta": "Loyola, Manresa and Rome, 1491–1556", "o": 2}, {"f": "Santa_Teresa_de_Avila", "name": "Saint Teresa of Ávila", "meta": "Ávila, 1515–1582", "o": 2}, {"f": "San_Pablo_Miki", "name": "Saint Paul Miki", "meta": "Japan, c. 1564–1597", "o": 2}, {"f": "San_Lorenzo_Ruiz", "name": "Saint Lorenzo Ruiz", "meta": "Manila and Nagasaki, c. 1600–1637", "o": 2}, {"f": "Santa_Faustina", "name": "Saint Faustina Kowalska", "meta": "Poland, 1905–1938", "o": 2}, {"f": "Santo_Domingo", "name": "Saint Dominic", "meta": "Caleruega, 1170–1221", "o": 2}, {"f": "San_Juan_de_la_Cruz", "name": "Saint John of the Cross", "meta": "Castile, 1542–1591", "o": 2}, {"f": "Padre_Pio", "name": "Saint Pio of Pietrelcina", "meta": "Pietrelcina and San Giovanni Rotondo, 1887–1968", "o": 2}, {"f": "San_Maximiliano_Kolbe", "name": "Saint Maximilian Kolbe", "meta": "Poland and Auschwitz, 1894–1941", "o": 2}, {"f": "Sor_Lucia", "name": "Sister Lúcia of Fátima", "meta": "Fátima and Coimbra, 1907–2005", "o": 2}, {"f": "San_Jose_Sanchez_del_Rio", "name": "Saint José Sánchez del Río", "meta": "Sahuayo, Michoacán, 1913–1928", "o": 2}, {"f": "San_Juan_Pablo_II", "name": "Saint John Paul II", "meta": "Poland and Rome, 1920–2005", "o": 2}, {"f": "Conchita_Gonzalez", "name": "Conchita González", "meta": "San Sebastián de Garabandal, Spain, b. 1949", "o": 2}, {"f": "San_Carlo_Acutis", "name": "Saint Carlo Acutis", "meta": "London and Milan, 1991–2006", "o": 2}], "ids": {"1": "first-order", "2": "second-order"}, "orderName": {"1": "First order", "2": "Second order"}, "of": "of", "loading": "Loading high resolution…"};
+  window.track = function(cat, label){ try { if (window.gtag) gtag('event','click',{event_category:cat,event_label:label}); } catch(e){} };
+
+  var sections = {1: document.getElementById(D.ids['1']), 2: document.getElementById(D.ids['2'])};
+  var navLinks = document.querySelectorAll('.nav [data-go]');
+
+  function show(n, scroll){
+    [1,2].forEach(function(k){ sections[k].classList.toggle('active', k === n); });
+    navLinks.forEach(function(a){ a.setAttribute('aria-current', String(+a.dataset.go === n)); });
+    if (scroll && sections[n]) sections[n].scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
+  }
+
+  document.addEventListener('click', function(ev){
+    var a = ev.target.closest('[data-go]');
+    if (!a) return;
+    var n = +a.dataset.go;
+    ev.preventDefault();
+    if (n === 0) {
+      history.pushState(null, '', '#elegir');
+      document.getElementById('elegir').scrollIntoView({behavior:'smooth'});
+      return;
+    }
+    history.pushState(null, '', '#' + D.ids[n]);
+    show(n, true);
+    track('recorrido', 'orden_' + n);
+  });
+
+  function fromHash(){
+    var h = decodeURIComponent(location.hash.slice(1));
+    if (h === D.ids['1']) { show(1, false); return; }
+    if (h === D.ids['2']) { show(2, false); return; }
+    if (h.indexOf('n-') === 0) {
+      var el = document.getElementById(h);
+      if (el) { show(+el.dataset.order, false); el.scrollIntoView(); }
+    }
+  }
+  window.addEventListener('popstate', fromHash);
+  fromHash();
+  if (location.hash) { var t = document.getElementById(decodeURIComponent(location.hash.slice(1))); if (t) setTimeout(function(){ t.scrollIntoView(); }, 0); }
+
+  /* ---------- viewer ---------- */
+  var dlg = document.getElementById('viewer'), img = document.getElementById('v-img'),
+      scroller = document.getElementById('v-scroll'), vName = document.getElementById('v-name'),
+      vSub = document.getElementById('v-sub'), vDl = document.getElementById('v-dl'),
+      vLoad = document.getElementById('v-loading');
+  var list = [], pos = 0, opener = null, token = 0;
+
+  function render(){
+    var it = list[pos], my = ++token;
+    scroller.classList.remove('zoomed');
+    scroller.scrollTop = 0; scroller.scrollLeft = 0;
+    vName.textContent = it.name;
+    vSub.textContent = D.orderName[it.o] + ', ' + (pos + 1) + ' ' + D.of + ' ' + list.length + '. ' + it.meta;
+    img.alt = it.name;
+    img.src = 'frank/web/' + it.f + '.webp';
+    vDl.href = 'frank/' + it.f + '.png';
+    vDl.setAttribute('download', it.f + '.png');
+    vDl.dataset.dl = it.f;
+    vLoad.hidden = false;
+    var hi = new Image();
+    hi.onload = function(){ if (my === token) { img.src = hi.src; vLoad.hidden = true; } };
+    hi.onerror = function(){ if (my === token) vLoad.hidden = true; };
+    hi.src = 'frank/' + it.f + '.png';
+  }
+
+  function open(f, trigger){
+    var it = D.novels.filter(function(x){ return x.f === f; })[0];
+    if (!it) return;
+    list = D.novels.filter(function(x){ return x.o === it.o; });
+    pos = list.indexOf(it);
+    opener = trigger;
+    render();
+    document.documentElement.classList.add('lock');
+    if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '');
+    document.getElementById('v-close').focus();
+    track('novela_ver', f);
+  }
+  function close(){ if (dlg.open) dlg.close(); }
+  function step(d){ pos = (pos + d + list.length) % list.length; render(); }
+
+  dlg.addEventListener('close', function(){
+    document.documentElement.classList.remove('lock');
+    img.removeAttribute('src');
+    if (opener) {
+      var card = document.getElementById('n-' + list[pos].f);
+      var target = (card && card.querySelector('.thumb')) || opener;
+      target.focus({preventScroll: true});
+      if (card && list[pos].f !== opener.dataset.open) card.scrollIntoView({block:'center'});
+    }
+  });
+
+  document.addEventListener('click', function(ev){
+    var b = ev.target.closest('[data-open]');
+    if (b) { open(b.dataset.open, b); return; }
+    var d = ev.target.closest('[data-dl]');
+    if (d) track('novela_descarga', d.dataset.dl);
+  });
+  document.getElementById('v-close').addEventListener('click', close);
+  document.getElementById('v-prev').addEventListener('click', function(){ step(-1); });
+  document.getElementById('v-next').addEventListener('click', function(){ step(1); });
+  img.addEventListener('click', function(ev){
+    var zoomed = scroller.classList.toggle('zoomed');
+    if (zoomed) {
+      var r = img.getBoundingClientRect();
+      var fx = (ev.clientX - r.left) / r.width, fy = (ev.clientY - r.top) / r.height;
+      requestAnimationFrame(function(){
+        scroller.scrollLeft = fx * img.offsetWidth - scroller.clientWidth / 2;
+        scroller.scrollTop = fy * img.offsetHeight - scroller.clientHeight / 2;
+      });
+    }
+  });
+  dlg.addEventListener('click', function(ev){ if (ev.target === scroller && !scroller.classList.contains('zoomed')) close(); });
+  dlg.addEventListener('keydown', function(ev){
+    if (ev.key === 'ArrowRight') { ev.preventDefault(); step(1); }
+    else if (ev.key === 'ArrowLeft') { ev.preventDefault(); step(-1); }
+  });
+  var tx = null, ty = null;
+  scroller.addEventListener('touchstart', function(ev){
+    if (scroller.classList.contains('zoomed') || ev.touches.length > 1) { tx = null; return; }
+    tx = ev.touches[0].clientX; ty = ev.touches[0].clientY;
+  }, {passive:true});
+  scroller.addEventListener('touchend', function(ev){
+    if (tx === null) return;
+    var dx = ev.changedTouches[0].clientX - tx, dy = ev.changedTouches[0].clientY - ty;
+    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) step(dx < 0 ? 1 : -1);
+    tx = null;
+  });
+})();
+</script>
+</body>
+</html>

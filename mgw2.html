@@ -432,6 +432,11 @@
   .paper-dl:hover .dl-icon{border-color:var(--accent);background:var(--accent);}
   .paper-dl svg{width:12px;height:12px;stroke:var(--text-muted);transition:stroke .25s ease;}
   .paper-dl:hover svg{stroke:#0a0a0b;}
+  /* Enlace a Las Metanoias (mgv) en la obra central */
+  .paper-dl.mgv-dl .mgv-txt{display:flex;flex-direction:column;gap:4px;}
+  .paper-dl.mgv-dl small{font-family:var(--serif);font-style:italic;font-size:13px;letter-spacing:0;text-transform:none;color:var(--text-dim);transition:color .25s ease;}
+  .paper-dl.mgv-dl:hover small{color:var(--text-muted);}
+  .paper-dl.mgv-dl svg{fill:none;stroke-width:1.6;}
 
   .empty-state{
     padding:60px 0;color:var(--text-muted);font-size:14px;font-weight:300;
@@ -1362,6 +1367,10 @@
           <a class="paper-dl" href="https://metanoiagroup.vip/downloads/Metanoia.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'book_metanoia'})">
             <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
             Download book (PDF, Spanish)
+          </a>
+          <a class="paper-dl mgv-dl" href="mgv2.html" onclick="gtag('event','click',{'event_category':'navegacion','event_label':'las_metanoias'})">
+            <span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linejoin="round"><rect x="3" y="4" width="8" height="7"/><rect x="13" y="4" width="8" height="7"/><rect x="3" y="13" width="18" height="7"/></svg></span>
+            <span class="mgv-txt"><span>See The Metanoias</span><small>Forty-two lives that embody the two metanoias of this book, as graphic novels.</small></span>
           </a>
         </div>
       </article>
