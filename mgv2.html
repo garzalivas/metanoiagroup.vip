@@ -126,9 +126,19 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;}
 
 /* ---------- book & links ---------- */
 .book{border-top:1px solid var(--line);padding:96px 0;}
-.book .grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:48px;align-items:start;}
+.book-grid{display:grid;grid-template-columns:clamp(190px,21vw,270px) minmax(0,1fr);gap:clamp(36px,5.5vw,80px);align-items:center;}
+.cover{position:relative;display:block;perspective:1400px;padding:18px 26px 34px 6px;isolation:isolate;}
+.cover::before{content:'';position:absolute;inset:-12% -22% -6% -22%;z-index:-1;background:radial-gradient(ellipse 50% 46% at 50% 50%,rgba(243,238,226,.17),rgba(243,238,226,.05) 55%,transparent 72%);pointer-events:none;}
+.cover::after{content:'';position:absolute;left:8%;right:4%;bottom:6px;height:26px;z-index:-1;background:radial-gradient(ellipse at center,rgba(0,0,0,.9),transparent 70%);filter:blur(6px);}
+.book3d{position:relative;display:block;transform:rotateY(-24deg) rotateX(2deg);transform-style:preserve-3d;transform-origin:center;transition:transform .6s cubic-bezier(.2,.7,.2,1);}
+.book3d img{position:relative;display:block;width:100%;height:auto;border-radius:1px 3px 3px 1px;box-shadow:18px 22px 40px rgba(0,0,0,.75),4px 6px 12px rgba(0,0,0,.55);}
+.book3d::after{content:'';position:absolute;inset:0;border-radius:1px 3px 3px 1px;pointer-events:none;background:linear-gradient(90deg,rgba(0,0,0,.28) 0,rgba(255,255,255,.22) 1.6%,rgba(0,0,0,.20) 3.2%,rgba(255,255,255,.06) 5.5%,transparent 9%),linear-gradient(115deg,rgba(255,255,255,.14) 0,transparent 38%);}
+.book3d .pages{position:absolute;top:1.2%;right:0;width:22px;height:97.6%;transform-origin:right center;transform:rotateY(90deg) translateX(0);background:repeating-linear-gradient(90deg,#efe9dc 0 1px,#d6cfbf 1px 2px);box-shadow:inset 0 0 6px rgba(0,0,0,.25);}
+.cover:hover .book3d,.cover:focus-visible .book3d{transform:rotateY(-12deg) rotateX(1deg) translateY(-4px);}
+@media (prefers-reduced-motion:reduce){.book3d{transition:none;}}
+.book-body p{max-width:38em;margin-top:18px;}
 .book .kicker{color:var(--red);font-weight:600;font-size:17px;}
-.book h2{font-family:var(--display);font-weight:400;font-size:clamp(34px,4.2vw,54px);line-height:1.02;margin-top:8px;}
+.book h2{font-family:var(--display);font-weight:400;font-size:clamp(32px,3.6vw,50px);line-height:1.02;margin-top:8px;max-width:16em;}
 .book p{color:var(--gray);font-size:19px;}
 .book .btn{margin-top:22px;}
 .links{border-top:1px solid var(--line);padding:88px 0 96px;}
@@ -190,7 +200,9 @@ html.lock{overflow:hidden;}
   .captions{grid-template-columns:1fr;max-width:560px;}
   .link-grid{grid-template-columns:1fr !important;}
   .doors{grid-template-columns:1fr;}
-  .order-head,.book .grid,.order-end{grid-template-columns:1fr;gap:20px;}
+  .order-head,.order-end{grid-template-columns:1fr;gap:20px;}
+  .book-grid{grid-template-columns:1fr;gap:32px;}
+  .cover{width:190px;}
   .novel{grid-template-columns:1fr;grid-template-areas:"head" "fig" "body";row-gap:20px;padding:44px 0;}
   .novel figure{align-self:auto;}
   .link-grid{grid-template-columns:1fr;}
@@ -1241,12 +1253,16 @@ html.lock{overflow:hidden;}
 </section>
 
 <section class="book" id="book">
-  <div class="wrap grid">
-    <div>
+  <div class="wrap book-grid">
+    <a class="cover" href="https://metanoiagroup.vip/downloads/Metanoia.pdf" target="_blank" rel="noopener" onclick="track('download','libro_metanoia_portada')" aria-label="Download the book (PDF)">
+      <span class="book3d">
+        <img src="metanoia-portada.png" alt="Cover of Metanoia: Do Your Part and Let God Do the Rest, by Mario Garza Livas" width="1024" height="1536" loading="lazy" decoding="async">
+        <span class="pages" aria-hidden="true"></span>
+      </span>
+    </a>
+    <div class="book-body">
       <div class="kicker">The book behind this walkthrough</div>
       <h2>Metanoia: Do Your Part and Let God Do the Rest</h2>
-    </div>
-    <div>
       <p>The distinction between first-order and second-order metanoia comes from this book by Mario Garza Livas, which travels from the map to the center in three books and a hinge. Free PDF download, no registration. Spanish edition.</p>
       <a class="btn solid" href="https://metanoiagroup.vip/downloads/Metanoia.pdf" target="_blank" rel="noopener" onclick="track('download','libro_metanoia')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Download the book (PDF)</a>
     </div>
