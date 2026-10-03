@@ -115,10 +115,11 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;}
 .thumb:hover .zoom,.thumb:focus-visible .zoom{opacity:1;}
 .thumb .zoom svg{width:18px;height:18px;}
 
-.order-end{margin-top:72px;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:48px;align-items:end;padding:44px;background:var(--paper);color:var(--ink);}
-.order-end h3{font-family:var(--display);font-weight:400;font-size:clamp(34px,4.2vw,56px);line-height:1;}
-.order-end p{margin-top:14px;font-size:18px;color:#3a3431;max-width:36em;}
-.order-end .ctas{display:flex;flex-direction:column;gap:10px;align-items:flex-start;}
+.order-end{margin-top:72px;display:block;padding:clamp(32px,4.4vw,60px);background:var(--paper);color:var(--ink);}
+.order-end .end-k{display:inline-block;background:var(--ink);color:var(--paper);font-weight:600;font-size:16px;line-height:1.2;padding:8px 13px 7px;}
+.order-end h3{margin-top:clamp(20px,2.3vw,32px);font-family:var(--display);font-weight:400;font-size:clamp(34px,4.6vw,64px);line-height:1;max-width:30ch;}
+.order-end p{margin-top:18px;font-size:19px;color:#3a3431;max-width:40em;}
+.order-end .ctas{margin-top:30px;padding-top:28px;border-top:1px solid rgba(10,9,9,.18);display:flex;flex-wrap:wrap;gap:12px;align-items:center;}
 .order-end .btn{border-color:var(--ink);}
 .order-end .btn.solid{background:var(--red);border-color:var(--red);color:var(--paper);}
 .order-end .btn.solid:hover{background:var(--ink);border-color:var(--ink);}
@@ -153,7 +154,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;}
 
 /* ---------- footer ---------- */
 footer{padding:72px 0 46px;border-top:1px solid var(--line);}
-.footer-seal{display:block;width:148px;max-width:none;height:auto;margin:0 0 28px;}
+.footer-seal-wrap{position:relative;display:inline-block;margin:0 0 28px;isolation:isolate;}
+.footer-seal-wrap::before{content:"";position:absolute;left:38.8%;top:49.5%;width:200px;height:200px;transform:translate(-50%,-50%);border-radius:50%;z-index:-1;pointer-events:none;background:radial-gradient(circle closest-side,rgba(213,37,37,.30) 0 54%,rgba(213,37,37,.22) 62%,rgba(213,37,37,.09) 76%,rgba(213,37,37,.025) 90%,rgba(213,37,37,0) 100%);filter:blur(3px);}
+.footer-seal{display:block;width:148px;max-width:none;height:auto;}
 .footer-brand{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--gray-2);}
 .footer-tagline{margin-top:14px;font-size:20px;color:var(--paper);}
 .footer-role{margin-top:22px;font-size:14px;color:var(--gray-2);}
@@ -200,13 +203,14 @@ html.lock{overflow:hidden;}
   .captions{grid-template-columns:1fr;max-width:560px;}
   .link-grid{grid-template-columns:1fr !important;}
   .doors{grid-template-columns:1fr;}
-  .order-head,.order-end{grid-template-columns:1fr;gap:20px;}
+  .order-head{grid-template-columns:1fr;gap:20px;}
   .book-grid{grid-template-columns:1fr;gap:32px;}
   .cover{width:190px;}
   .novel{grid-template-columns:1fr;grid-template-areas:"head" "fig" "body";row-gap:20px;padding:44px 0;}
   .novel figure{align-self:auto;}
   .link-grid{grid-template-columns:1fr;}
   .order-end{padding:32px 24px;}
+  .order-end .ctas .btn{width:100%;justify-content:center;}
 }
 @media (max-width:640px){
   body{font-size:17px;}
@@ -245,7 +249,7 @@ html.lock{overflow:hidden;}
 
 <nav class="topbar" aria-label="Principal">
   <div class="inner">
-    <a class="brand" href="#top"><img src="assets/mgw-mark.webp" alt="" width="20" height="20" onerror="this.remove()">Mario Garza Livas <span>· Las metanoias</span></a>
+    <a class="brand" href="#top"><img src="assets/mgv-mark.webp" alt="" width="20" height="20" onerror="this.remove()">Mario Garza Livas <span>· Las metanoias</span></a>
     <div class="nav">
       <a href="#top" data-top>Inicio</a>
       <a href="#primer-orden" data-go="1">Primer orden</a>
@@ -765,6 +769,7 @@ html.lock{overflow:hidden;}
       </article>
     <div class="order-end">
       <div>
+        <div class="end-k">Fin del primer orden</div>
         <h3>El mapa tiene bordes.</h3>
         <p>Estas veintiuna vidas muestran hasta dónde llega una mente que aprende a ver mejor. Del otro lado del borde está la otra pregunta: desde dónde se vive.</p>
       </div>
@@ -1241,6 +1246,7 @@ html.lock{overflow:hidden;}
       </article>
     <div class="order-end">
       <div>
+        <div class="end-k">Fin del segundo orden</div>
         <h3>El centro no sustituye al mapa: lo ordena.</h3>
         <p>Ninguna de estas vidas dejó de pensar, de prepararse o de actuar. Cambió aquello desde lo cual pensaban, se preparaban y actuaban.</p>
       </div>
@@ -1295,7 +1301,7 @@ html.lock{overflow:hidden;}
 
 <footer>
   <div class="wrap">
-    <img class="footer-seal" src="assets/mgw-emblem-firma.webp" alt="" width="148" height="113" loading="lazy" decoding="async" onerror="this.remove()">
+    <span class="footer-seal-wrap"><img class="footer-seal" src="assets/mgv-emblem-firma.webp" alt="" width="148" height="113" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></span>
     <div class="footer-brand">Las metanoias</div>
     <div class="footer-tagline">Cuarenta y dos vidas. Dos maneras de cambiar.</div>
     <div class="footer-role"><strong>Mario Garza Livas</strong> — Autor · Escritor · Pensador</div>
