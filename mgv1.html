@@ -142,6 +142,16 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;}
 .book h2{font-family:var(--display);font-weight:400;font-size:clamp(32px,3.6vw,50px);line-height:1.02;margin-top:18px;max-width:16em;}
 .book p{color:var(--gray);font-size:19px;}
 .book .btn{margin-top:22px;}
+.bridge{border-top:1px solid var(--line);padding:88px 0;}
+.bridge-inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(32px,5vw,64px);align-items:center;}
+.bridge-k{display:inline-block;background:#E2A93B;color:var(--ink);font-weight:600;font-size:16px;line-height:1.2;padding:8px 13px 7px;}
+.bridge h2{font-family:var(--display);font-weight:400;font-size:clamp(40px,5.6vw,76px);line-height:.98;margin-top:clamp(20px,2.3vw,30px);}
+.bridge p{margin-top:16px;color:var(--gray);font-size:19px;max-width:34em;}
+.bridge .bridge-btn{margin-top:24px;background:#E2A93B;border-color:#E2A93B;color:var(--ink);}
+.bridge .bridge-btn:hover{background:var(--paper);border-color:var(--paper);}
+.bridge-img{display:block;border:4px solid var(--paper);aspect-ratio:3/2;overflow:hidden;}
+.bridge-img img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease;}
+.bridge-img:hover img{transform:scale(1.03);}
 .links{border-top:1px solid var(--line);padding:88px 0 96px;}
 .links h2{font-family:var(--display);font-weight:400;font-size:clamp(34px,4.2vw,54px);line-height:1;}
 .link-grid{margin-top:32px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);}
@@ -205,6 +215,7 @@ html.lock{overflow:hidden;}
   .doors{grid-template-columns:1fr;}
   .order-head{grid-template-columns:1fr;gap:20px;}
   .book-grid{grid-template-columns:1fr;gap:32px;}
+  .bridge-inner{grid-template-columns:1fr;}
   .cover{width:190px;}
   .novel{grid-template-columns:1fr;grid-template-areas:"head" "fig" "body";row-gap:20px;padding:44px 0;}
   .novel figure{align-self:auto;}
@@ -255,6 +266,7 @@ html.lock{overflow:hidden;}
       <a href="#primer-orden" data-go="1">Primer orden</a>
       <a href="#segundo-orden" data-go="2">Segundo orden</a>
       <a class="opt" href="#libro">El libro</a>
+      <a class="opt" href="mgu1.html">El Centro</a>
       <a class="opt" href="#enlaces">Enlaces</a>
       <a class="pill opt" href="mgl1.html">mgL</a>
       <a class="pill" href="mgv2.html" hreflang="en">English</a>
@@ -1272,6 +1284,18 @@ html.lock{overflow:hidden;}
       <p>La distinción entre la metanoia de primer y de segundo orden viene de este libro de Mario Garza Livas, que recorre el camino del mapa al centro en tres libros y una bisagra. Se descarga sin costo, en PDF y sin registro.</p>
       <a class="btn solid" href="https://metanoiagroup.vip/downloads/Metanoia.pdf" target="_blank" rel="noopener" onclick="track('download','libro_metanoia')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Descargar el libro en PDF</a>
     </div>
+  </div>
+</section>
+
+<section class="bridge">
+  <div class="wrap bridge-inner">
+    <div>
+      <div class="bridge-k">La otra serie</div>
+      <h2>El Centro</h2>
+      <p>Las palabras y los pasos de Cristo: sus grandes discursos, el Santo Rosario y el Santo Viacrucis, en novelas gráficas de varias páginas para leer con calma.</p>
+      <a class="btn bridge-btn" href="mgu1.html" onclick="track('navegacion','el_centro')">Leer El Centro</a>
+    </div>
+    <a class="bridge-img" href="mgu1.html" tabindex="-1" aria-hidden="true"><img src="centro/bridge.webp" alt="" width="656" height="438" loading="lazy" decoding="async"></a>
   </div>
 </section>
 
