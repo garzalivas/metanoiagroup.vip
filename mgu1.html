@@ -350,40 +350,55 @@ html.lock{overflow:hidden;}
           </div>
         </div>
       </article>
-      <article class="card soon" style="--accent:#C9A227">
-        <div class="cover"><span>Próximamente</span></div>
+      <article class="card" id="despedida" style="--accent:#C9A227">
+        <button class="cover" type="button" data-read="despedida" aria-label="Leer: Discurso de despedida">
+          <img src="centro/despedida/web/01.webp" alt="" width="1536" height="1024" loading="lazy" decoding="async">
+        </button>
         <div class="band"></div>
         <div class="body">
-          <div class="meta"><span>Novela 6</span></div>
+          <div class="meta"><span>Novela 6</span><span>23 páginas</span></div>
           <h4>Discurso de despedida</h4>
           <div class="ref">Juan 13–17</div>
           <p class="desc">En la última cena, Jesús lava los pies de sus discípulos, les da el mandamiento nuevo, promete el Espíritu, se presenta como la vid verdadera y ora al Padre por los suyos.</p>
-          <div class="actions"><span class="tag">Próximamente</span></div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-read="despedida"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5h6a2 2 0 0 1 2 2v12a2 2 0 0 0-2-2H4zM20 5h-6a2 2 0 0 0-2 2v12a2 2 0 0 1 2-2h6z"/></svg>Leer</button>
+            <button class="resume" type="button" data-resume="despedida" hidden></button>
+          </div>
         </div>
       </article>
     </div>
     <div class="group"><h3>Los pasos</h3><p>El camino que recorrió.</p></div>
     <div class="grid">
-      <article class="card soon" style="--accent:#3A6FD0">
-        <div class="cover"><span>Próximamente</span></div>
+      <article class="card" id="rosario" style="--accent:#3A6FD0">
+        <button class="cover" type="button" data-read="rosario" aria-label="Leer: El Santo Rosario">
+          <img src="centro/rosario/web/01.webp" alt="" width="1536" height="1024" loading="lazy" decoding="async">
+        </button>
         <div class="band"></div>
         <div class="body">
-          <div class="meta"><span>Novela 7</span></div>
+          <div class="meta"><span>Novela 7</span><span>20 páginas</span></div>
           <h4>El Santo Rosario</h4>
           <div class="ref">Los 20 misterios</div>
-          <p class="desc">Los misterios gozosos, luminosos, dolorosos y gloriosos: la vida de Cristo contemplada con los ojos de María, misterio por misterio.</p>
-          <div class="actions"><span class="tag">Próximamente</span></div>
+          <p class="desc">Los veinte misterios del Rosario, en el orden en que se rezan: gozosos, luminosos, dolorosos y gloriosos. De la Anunciación a la Coronación de María, la vida de Cristo contemplada con los ojos de su Madre, misterio por misterio.</p>
+          <div class="actions">
+            <button class="btn solid" type="button" data-read="rosario"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5h6a2 2 0 0 1 2 2v12a2 2 0 0 0-2-2H4zM20 5h-6a2 2 0 0 0-2 2v12a2 2 0 0 1 2-2h6z"/></svg>Leer</button>
+            <button class="resume" type="button" data-resume="rosario" hidden></button>
+          </div>
         </div>
       </article>
-      <article class="card soon" style="--accent:#B3261E">
-        <div class="cover"><span>Próximamente</span></div>
+      <article class="card" id="viacrucis" style="--accent:#B3261E">
+        <button class="cover" type="button" data-read="viacrucis" aria-label="Leer: El Santo Viacrucis">
+          <img src="centro/viacrucis/web/01.webp" alt="" width="1536" height="1024" loading="lazy" decoding="async">
+        </button>
         <div class="band"></div>
         <div class="body">
-          <div class="meta"><span>Novela 8</span></div>
+          <div class="meta"><span>Novela 8</span><span>14 páginas</span></div>
           <h4>El Santo Viacrucis</h4>
           <div class="ref">Las 14 estaciones</div>
-          <p class="desc">Del juicio ante Pilato al sepulcro: el camino de la cruz, estación por estación.</p>
-          <div class="actions"><span class="tag">Próximamente</span></div>
+          <p class="desc">Las catorce estaciones del camino de la cruz: de la condena ante Pilato al sepulcro. Las tres caídas, el encuentro con su Madre, el Cireneo, la Verónica y las mujeres de Jerusalén, estación por estación.</p>
+          <div class="actions">
+            <button class="btn solid" type="button" data-read="viacrucis"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5h6a2 2 0 0 1 2 2v12a2 2 0 0 0-2-2H4zM20 5h-6a2 2 0 0 0-2 2v12a2 2 0 0 1 2-2h6z"/></svg>Leer</button>
+            <button class="resume" type="button" data-resume="viacrucis" hidden></button>
+          </div>
         </div>
       </article>
     </div>
@@ -482,7 +497,7 @@ html.lock{overflow:hidden;}
 
 <script>
 (function(){
-  var D = {"novels": [{"slug": "sermon-del-monte", "t": "Sermón del Monte", "ref": "Mateo 5–7", "accent": "#3550D8", "pages": ["Mateo 5:1–12", "Mateo 5:13–16", "Mateo 5:17–20", "Mateo 5:21–26", "Mateo 5:27–30", "Mateo 5:31–32", "Mateo 5:33–37", "Mateo 5:38–42", "Mateo 5:43–48", "Mateo 6:1–3", "Mateo 6:5–15", "Mateo 6:16–18", "Mateo 6:19–24", "Mateo 6:25–34", "Mateo 7:1–6", "Mateo 7:7–11", "Mateo 7:12", "Mateo 7:13–14", "Mateo 7:15–23", "Mateo 7:24–29"]}, {"slug": "parabolas-del-reino", "t": "Parábolas del Reino", "ref": "Mateo 13", "accent": "#3F9142", "pages": ["Mateo 13:1–9", "Mateo 13:10–17", "Mateo 13:18–23", "Mateo 13:24–42", "Mateo 13:31", "Mateo 13:33", "Mateo 13:34–35", "Mateo 13:44", "Mateo 13:45", "Mateo 13:47–52", "Mateo 13:53"]}, {"slug": "discipulado", "t": "Enseñanzas sobre el discipulado", "ref": "Mateo 10", "accent": "#C62D2D", "pages": ["Mateo 10:1–4", "Mateo 10:5–6", "Mateo 10:7", "Mateo 10:8", "Mateo 10:9–10", "Mateo 10:11–13", "Mateo 10:14–15", "Mateo 10:16", "Mateo 10:17–20", "Mateo 10:21–23", "Mateo 10:24–25", "Mateo 10:26–31", "Mateo 10:32–33", "Mateo 10:34–42"]}, {"slug": "comunidad", "t": "Enseñanzas sobre la comunidad", "ref": "Mateo 18", "accent": "#8A3DB8", "pages": ["Mateo 18:1–5", "Mateo 18:6–9", "Mateo 18:10–14", "Mateo 18:15–17", "Mateo 18:18–20", "Mateo 18:21–22", "Mateo 18:23–27", "Mateo 18:28–30", "Mateo 18:31–35"]}, {"slug": "monte-de-los-olivos", "t": "Discurso del Monte de los Olivos", "ref": "Mateo 24–25", "accent": "#8A3DB8", "pages": ["Mateo 24:1–2", "Mateo 24:3", "Mateo 24:4–5", "Mateo 24:6–8", "Mateo 24:9–14", "Mateo 24:15–20", "Mateo 24:21–28", "Mateo 24:29–31", "Mateo 24:32–35", "Mateo 24:36–43", "Mateo 24:37–39", "Mateo 24:42–51", "Mateo 25:1–13", "Mateo 25:13", "Mateo 25:14–30", "Mateo 25:14–29", "Mateo 25:31–33", "Mateo 25:34–40", "Mateo 25:41–46", "Mateo 25:31–46"]}], "L": {"page": "Página", "of": "de", "resume": "Continuar en la página {p}", "nextnovel": "Siguiente: {t}", "alt": "{t}, página {p}"}};
+  var D = {"novels": [{"slug": "sermon-del-monte", "t": "Sermón del Monte", "ref": "Mateo 5–7", "accent": "#3550D8", "pages": ["Mateo 5:1–12", "Mateo 5:13–16", "Mateo 5:17–20", "Mateo 5:21–26", "Mateo 5:27–30", "Mateo 5:31–32", "Mateo 5:33–37", "Mateo 5:38–42", "Mateo 5:43–48", "Mateo 6:1–3", "Mateo 6:5–15", "Mateo 6:16–18", "Mateo 6:19–24", "Mateo 6:25–34", "Mateo 7:1–6", "Mateo 7:7–11", "Mateo 7:12", "Mateo 7:13–14", "Mateo 7:15–23", "Mateo 7:24–29"]}, {"slug": "parabolas-del-reino", "t": "Parábolas del Reino", "ref": "Mateo 13", "accent": "#3F9142", "pages": ["Mateo 13:1–9", "Mateo 13:10–17", "Mateo 13:18–23", "Mateo 13:24–42", "Mateo 13:31", "Mateo 13:33", "Mateo 13:34–35", "Mateo 13:44", "Mateo 13:45", "Mateo 13:47–52", "Mateo 13:53"]}, {"slug": "discipulado", "t": "Enseñanzas sobre el discipulado", "ref": "Mateo 10", "accent": "#C62D2D", "pages": ["Mateo 10:1–4", "Mateo 10:5–6", "Mateo 10:7", "Mateo 10:8", "Mateo 10:9–10", "Mateo 10:11–13", "Mateo 10:14–15", "Mateo 10:16", "Mateo 10:17–20", "Mateo 10:21–23", "Mateo 10:24–25", "Mateo 10:26–31", "Mateo 10:32–33", "Mateo 10:34–42"]}, {"slug": "comunidad", "t": "Enseñanzas sobre la comunidad", "ref": "Mateo 18", "accent": "#8A3DB8", "pages": ["Mateo 18:1–5", "Mateo 18:6–9", "Mateo 18:10–14", "Mateo 18:15–17", "Mateo 18:18–20", "Mateo 18:21–22", "Mateo 18:23–27", "Mateo 18:28–30", "Mateo 18:31–35"]}, {"slug": "monte-de-los-olivos", "t": "Discurso del Monte de los Olivos", "ref": "Mateo 24–25", "accent": "#8A3DB8", "pages": ["Mateo 24:1–2", "Mateo 24:3", "Mateo 24:4–5", "Mateo 24:6–8", "Mateo 24:9–14", "Mateo 24:15–20", "Mateo 24:21–28", "Mateo 24:29–31", "Mateo 24:32–35", "Mateo 24:36–43", "Mateo 24:37–39", "Mateo 24:42–51", "Mateo 25:1–13", "Mateo 25:13", "Mateo 25:14–30", "Mateo 25:14–29", "Mateo 25:31–33", "Mateo 25:34–40", "Mateo 25:41–46", "Mateo 25:31–46"]}, {"slug": "despedida", "t": "Discurso de despedida", "ref": "Juan 13–17", "accent": "#C9A227", "pages": ["Juan 13:1–11", "Juan 13:12–17", "Juan 13:18–30", "Juan 13:31–35", "Juan 13:36–38", "Juan 14:1–4", "Juan 14:5–7", "Juan 14:8–14", "Juan 14:15–24", "Juan 14:25–26", "Juan 14:27–31", "Juan 15:1–8", "Juan 15:9–17", "Juan 15:12–17", "Juan 15:18–25", "Juan 15:26–27", "Juan 16:1–4", "Juan 16:5–15", "Juan 16:16–24", "Juan 16:25–33", "Juan 17:1–5", "Juan 17:9–19", "Juan 17:20–26"]}, {"slug": "rosario", "t": "El Santo Rosario", "ref": "Los 20 misterios", "accent": "#3A6FD0", "pages": ["Misterios gozosos · La Anunciación", "Misterios gozosos · La Visitación", "Misterios gozosos · El Nacimiento de Jesús", "Misterios gozosos · La Presentación en el Templo", "Misterios gozosos · Jesús perdido y hallado en el Templo", "Misterios luminosos · El Bautismo de Jesús", "Misterios luminosos · Las Bodas de Caná", "Misterios luminosos · El Anuncio del Reino", "Misterios luminosos · La Transfiguración", "Misterios luminosos · La Eucaristía", "Misterios dolorosos · La Agonía en Getsemaní", "Misterios dolorosos · La Flagelación", "Misterios dolorosos · La Coronación de espinas", "Misterios dolorosos · El Camino de la cruz", "Misterios dolorosos · La Crucifixión", "Misterios gloriosos · La Resurrección", "Misterios gloriosos · La Ascensión", "Misterios gloriosos · Pentecostés", "Misterios gloriosos · La Asunción de María", "Misterios gloriosos · La Coronación de María"]}, {"slug": "viacrucis", "t": "El Santo Viacrucis", "ref": "Las 14 estaciones", "accent": "#B3261E", "pages": ["Estación I · Jesús es condenado a muerte", "Estación II · Jesús carga con la cruz", "Estación III · Jesús cae por primera vez", "Estación IV · Jesús encuentra a su Madre", "Estación V · Simón de Cirene ayuda a Jesús", "Estación VI · Verónica limpia el rostro de Jesús", "Estación VII · Jesús cae por segunda vez", "Estación VIII · Jesús consuela a las mujeres de Jerusalén", "Estación IX · Jesús cae por tercera vez", "Estación X · Jesús es despojado de sus vestiduras", "Estación XI · Jesús es clavado en la cruz", "Estación XII · Jesús muere en la cruz", "Estación XIII · Jesús es bajado de la cruz", "Estación XIV · Jesús es colocado en el sepulcro"]}], "L": {"page": "Página", "of": "de", "resume": "Continuar en la página {p}", "nextnovel": "Siguiente: {t}", "alt": "{t}, página {p}"}};
   window.track = function(c, l){ try { if (window.gtag) gtag('event','click',{event_category:c,event_label:l}); } catch(e){} };
   function pad(n){ return (n < 10 ? '0' : '') + n; }
   function get(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
@@ -641,6 +656,10 @@ html.lock{overflow:hidden;}
   /* enlace directo: mgu1.html#sermon-del-monte/7 */
   var m = decodeURIComponent(location.hash.slice(1)).match(/^([a-z-]+)\/(\d+)$/);
   if (m && bySlug[m[1]]) open(m[1], +m[2]);
+  window.addEventListener('hashchange', function(){
+    var h = decodeURIComponent(location.hash.slice(1)).match(/^([a-z-]+)\/(\d+)$/);
+    if (h && bySlug[h[1]] && !(dlg.open && cur && cur.slug === h[1] && page === +h[2])) open(h[1], +h[2]);
+  });
 })();
 </script>
 </body>

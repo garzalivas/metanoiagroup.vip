@@ -350,40 +350,55 @@ html.lock{overflow:hidden;}
           </div>
         </div>
       </article>
-      <article class="card soon" style="--accent:#C9A227">
-        <div class="cover"><span>Coming soon</span></div>
+      <article class="card" id="despedida" style="--accent:#C9A227">
+        <button class="cover" type="button" data-read="despedida" aria-label="Read: The Farewell Discourse">
+          <img src="centro/despedida/web/01.webp" alt="" width="1536" height="1024" loading="lazy" decoding="async">
+        </button>
         <div class="band"></div>
         <div class="body">
-          <div class="meta"><span>Novel 6</span></div>
+          <div class="meta"><span>Novel 6</span><span>23 pages</span></div>
           <h4>The Farewell Discourse</h4>
           <div class="ref">John 13–17</div>
           <p class="desc">At the Last Supper, Jesus washes his disciples&#x27; feet, gives them the new commandment, promises the Spirit, calls himself the true vine and prays to the Father for his own.</p>
-          <div class="actions"><span class="tag">Coming soon</span></div>
+          <div class="actions">
+            <button class="btn solid" type="button" data-read="despedida"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5h6a2 2 0 0 1 2 2v12a2 2 0 0 0-2-2H4zM20 5h-6a2 2 0 0 0-2 2v12a2 2 0 0 1 2-2h6z"/></svg>Read</button>
+            <button class="resume" type="button" data-resume="despedida" hidden></button>
+          </div>
         </div>
       </article>
     </div>
     <div class="group"><h3>The steps</h3><p>The path he walked.</p></div>
     <div class="grid">
-      <article class="card soon" style="--accent:#3A6FD0">
-        <div class="cover"><span>Coming soon</span></div>
+      <article class="card" id="rosario" style="--accent:#3A6FD0">
+        <button class="cover" type="button" data-read="rosario" aria-label="Read: The Holy Rosary">
+          <img src="centro/rosario/web/01.webp" alt="" width="1536" height="1024" loading="lazy" decoding="async">
+        </button>
         <div class="band"></div>
         <div class="body">
-          <div class="meta"><span>Novel 7</span></div>
+          <div class="meta"><span>Novel 7</span><span>20 pages</span></div>
           <h4>The Holy Rosary</h4>
           <div class="ref">The 20 mysteries</div>
-          <p class="desc">The joyful, luminous, sorrowful and glorious mysteries: the life of Christ contemplated through the eyes of Mary, mystery by mystery.</p>
-          <div class="actions"><span class="tag">Coming soon</span></div>
+          <p class="desc">The twenty mysteries of the Rosary, in the order in which they are prayed: joyful, luminous, sorrowful and glorious. From the Annunciation to the Coronation of Mary, the life of Christ contemplated through the eyes of his Mother, mystery by mystery.</p>
+          <div class="actions">
+            <button class="btn solid" type="button" data-read="rosario"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5h6a2 2 0 0 1 2 2v12a2 2 0 0 0-2-2H4zM20 5h-6a2 2 0 0 0-2 2v12a2 2 0 0 1 2-2h6z"/></svg>Read</button>
+            <button class="resume" type="button" data-resume="rosario" hidden></button>
+          </div>
         </div>
       </article>
-      <article class="card soon" style="--accent:#B3261E">
-        <div class="cover"><span>Coming soon</span></div>
+      <article class="card" id="viacrucis" style="--accent:#B3261E">
+        <button class="cover" type="button" data-read="viacrucis" aria-label="Read: The Holy Way of the Cross">
+          <img src="centro/viacrucis/web/01.webp" alt="" width="1536" height="1024" loading="lazy" decoding="async">
+        </button>
         <div class="band"></div>
         <div class="body">
-          <div class="meta"><span>Novel 8</span></div>
+          <div class="meta"><span>Novel 8</span><span>14 pages</span></div>
           <h4>The Holy Way of the Cross</h4>
           <div class="ref">The 14 stations</div>
-          <p class="desc">From the judgment before Pilate to the tomb: the way of the cross, station by station.</p>
-          <div class="actions"><span class="tag">Coming soon</span></div>
+          <p class="desc">The fourteen stations of the way of the cross: from the sentence before Pilate to the tomb. The three falls, the meeting with his Mother, Simon of Cyrene, Veronica and the women of Jerusalem, station by station.</p>
+          <div class="actions">
+            <button class="btn solid" type="button" data-read="viacrucis"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5h6a2 2 0 0 1 2 2v12a2 2 0 0 0-2-2H4zM20 5h-6a2 2 0 0 0-2 2v12a2 2 0 0 1 2-2h6z"/></svg>Read</button>
+            <button class="resume" type="button" data-resume="viacrucis" hidden></button>
+          </div>
         </div>
       </article>
     </div>
@@ -482,7 +497,7 @@ html.lock{overflow:hidden;}
 
 <script>
 (function(){
-  var D = {"novels": [{"slug": "sermon-del-monte", "t": "The Sermon on the Mount", "ref": "Matthew 5–7", "accent": "#3550D8", "pages": ["Matthew 5:1–12", "Matthew 5:13–16", "Matthew 5:17–20", "Matthew 5:21–26", "Matthew 5:27–30", "Matthew 5:31–32", "Matthew 5:33–37", "Matthew 5:38–42", "Matthew 5:43–48", "Matthew 6:1–3", "Matthew 6:5–15", "Matthew 6:16–18", "Matthew 6:19–24", "Matthew 6:25–34", "Matthew 7:1–6", "Matthew 7:7–11", "Matthew 7:12", "Matthew 7:13–14", "Matthew 7:15–23", "Matthew 7:24–29"]}, {"slug": "parabolas-del-reino", "t": "Parables of the Kingdom", "ref": "Matthew 13", "accent": "#3F9142", "pages": ["Matthew 13:1–9", "Matthew 13:10–17", "Matthew 13:18–23", "Matthew 13:24–42", "Matthew 13:31", "Matthew 13:33", "Matthew 13:34–35", "Matthew 13:44", "Matthew 13:45", "Matthew 13:47–52", "Matthew 13:53"]}, {"slug": "discipulado", "t": "Teachings on Discipleship", "ref": "Matthew 10", "accent": "#C62D2D", "pages": ["Matthew 10:1–4", "Matthew 10:5–6", "Matthew 10:7", "Matthew 10:8", "Matthew 10:9–10", "Matthew 10:11–13", "Matthew 10:14–15", "Matthew 10:16", "Matthew 10:17–20", "Matthew 10:21–23", "Matthew 10:24–25", "Matthew 10:26–31", "Matthew 10:32–33", "Matthew 10:34–42"]}, {"slug": "comunidad", "t": "Teachings on Community", "ref": "Matthew 18", "accent": "#8A3DB8", "pages": ["Matthew 18:1–5", "Matthew 18:6–9", "Matthew 18:10–14", "Matthew 18:15–17", "Matthew 18:18–20", "Matthew 18:21–22", "Matthew 18:23–27", "Matthew 18:28–30", "Matthew 18:31–35"]}, {"slug": "monte-de-los-olivos", "t": "The Olivet Discourse", "ref": "Matthew 24–25", "accent": "#8A3DB8", "pages": ["Matthew 24:1–2", "Matthew 24:3", "Matthew 24:4–5", "Matthew 24:6–8", "Matthew 24:9–14", "Matthew 24:15–20", "Matthew 24:21–28", "Matthew 24:29–31", "Matthew 24:32–35", "Matthew 24:36–43", "Matthew 24:37–39", "Matthew 24:42–51", "Matthew 25:1–13", "Matthew 25:13", "Matthew 25:14–30", "Matthew 25:14–29", "Matthew 25:31–33", "Matthew 25:34–40", "Matthew 25:41–46", "Matthew 25:31–46"]}], "L": {"page": "Page", "of": "of", "resume": "Continue on page {p}", "nextnovel": "Next: {t}", "alt": "{t}, page {p}"}};
+  var D = {"novels": [{"slug": "sermon-del-monte", "t": "The Sermon on the Mount", "ref": "Matthew 5–7", "accent": "#3550D8", "pages": ["Matthew 5:1–12", "Matthew 5:13–16", "Matthew 5:17–20", "Matthew 5:21–26", "Matthew 5:27–30", "Matthew 5:31–32", "Matthew 5:33–37", "Matthew 5:38–42", "Matthew 5:43–48", "Matthew 6:1–3", "Matthew 6:5–15", "Matthew 6:16–18", "Matthew 6:19–24", "Matthew 6:25–34", "Matthew 7:1–6", "Matthew 7:7–11", "Matthew 7:12", "Matthew 7:13–14", "Matthew 7:15–23", "Matthew 7:24–29"]}, {"slug": "parabolas-del-reino", "t": "Parables of the Kingdom", "ref": "Matthew 13", "accent": "#3F9142", "pages": ["Matthew 13:1–9", "Matthew 13:10–17", "Matthew 13:18–23", "Matthew 13:24–42", "Matthew 13:31", "Matthew 13:33", "Matthew 13:34–35", "Matthew 13:44", "Matthew 13:45", "Matthew 13:47–52", "Matthew 13:53"]}, {"slug": "discipulado", "t": "Teachings on Discipleship", "ref": "Matthew 10", "accent": "#C62D2D", "pages": ["Matthew 10:1–4", "Matthew 10:5–6", "Matthew 10:7", "Matthew 10:8", "Matthew 10:9–10", "Matthew 10:11–13", "Matthew 10:14–15", "Matthew 10:16", "Matthew 10:17–20", "Matthew 10:21–23", "Matthew 10:24–25", "Matthew 10:26–31", "Matthew 10:32–33", "Matthew 10:34–42"]}, {"slug": "comunidad", "t": "Teachings on Community", "ref": "Matthew 18", "accent": "#8A3DB8", "pages": ["Matthew 18:1–5", "Matthew 18:6–9", "Matthew 18:10–14", "Matthew 18:15–17", "Matthew 18:18–20", "Matthew 18:21–22", "Matthew 18:23–27", "Matthew 18:28–30", "Matthew 18:31–35"]}, {"slug": "monte-de-los-olivos", "t": "The Olivet Discourse", "ref": "Matthew 24–25", "accent": "#8A3DB8", "pages": ["Matthew 24:1–2", "Matthew 24:3", "Matthew 24:4–5", "Matthew 24:6–8", "Matthew 24:9–14", "Matthew 24:15–20", "Matthew 24:21–28", "Matthew 24:29–31", "Matthew 24:32–35", "Matthew 24:36–43", "Matthew 24:37–39", "Matthew 24:42–51", "Matthew 25:1–13", "Matthew 25:13", "Matthew 25:14–30", "Matthew 25:14–29", "Matthew 25:31–33", "Matthew 25:34–40", "Matthew 25:41–46", "Matthew 25:31–46"]}, {"slug": "despedida", "t": "The Farewell Discourse", "ref": "John 13–17", "accent": "#C9A227", "pages": ["John 13:1–11", "John 13:12–17", "John 13:18–30", "John 13:31–35", "John 13:36–38", "John 14:1–4", "John 14:5–7", "John 14:8–14", "John 14:15–24", "John 14:25–26", "John 14:27–31", "John 15:1–8", "John 15:9–17", "John 15:12–17", "John 15:18–25", "John 15:26–27", "John 16:1–4", "John 16:5–15", "John 16:16–24", "John 16:25–33", "John 17:1–5", "John 17:9–19", "John 17:20–26"]}, {"slug": "rosario", "t": "The Holy Rosary", "ref": "The 20 mysteries", "accent": "#3A6FD0", "pages": ["Joyful mysteries · The Annunciation", "Joyful mysteries · The Visitation", "Joyful mysteries · The Nativity", "Joyful mysteries · The Presentation in the Temple", "Joyful mysteries · The Finding in the Temple", "Luminous mysteries · The Baptism of Jesus", "Luminous mysteries · The Wedding at Cana", "Luminous mysteries · The Proclamation of the Kingdom", "Luminous mysteries · The Transfiguration", "Luminous mysteries · The Institution of the Eucharist", "Sorrowful mysteries · The Agony in the Garden", "Sorrowful mysteries · The Scourging at the Pillar", "Sorrowful mysteries · The Crowning with Thorns", "Sorrowful mysteries · The Carrying of the Cross", "Sorrowful mysteries · The Crucifixion", "Glorious mysteries · The Resurrection", "Glorious mysteries · The Ascension", "Glorious mysteries · The Descent of the Holy Spirit", "Glorious mysteries · The Assumption of Mary", "Glorious mysteries · The Coronation of Mary"]}, {"slug": "viacrucis", "t": "The Holy Way of the Cross", "ref": "The 14 stations", "accent": "#B3261E", "pages": ["Station I · Jesus is condemned to death", "Station II · Jesus takes up his cross", "Station III · Jesus falls the first time", "Station IV · Jesus meets his Mother", "Station V · Simon of Cyrene helps Jesus", "Station VI · Veronica wipes the face of Jesus", "Station VII · Jesus falls the second time", "Station VIII · Jesus consoles the women of Jerusalem", "Station IX · Jesus falls the third time", "Station X · Jesus is stripped of his garments", "Station XI · Jesus is nailed to the cross", "Station XII · Jesus dies on the cross", "Station XIII · Jesus is taken down from the cross", "Station XIV · Jesus is laid in the tomb"]}], "L": {"page": "Page", "of": "of", "resume": "Continue on page {p}", "nextnovel": "Next: {t}", "alt": "{t}, page {p}"}};
   window.track = function(c, l){ try { if (window.gtag) gtag('event','click',{event_category:c,event_label:l}); } catch(e){} };
   function pad(n){ return (n < 10 ? '0' : '') + n; }
   function get(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
@@ -641,6 +656,10 @@ html.lock{overflow:hidden;}
   /* enlace directo: mgu1.html#sermon-del-monte/7 */
   var m = decodeURIComponent(location.hash.slice(1)).match(/^([a-z-]+)\/(\d+)$/);
   if (m && bySlug[m[1]]) open(m[1], +m[2]);
+  window.addEventListener('hashchange', function(){
+    var h = decodeURIComponent(location.hash.slice(1)).match(/^([a-z-]+)\/(\d+)$/);
+    if (h && bySlug[h[1]] && !(dlg.open && cur && cur.slug === h[1] && page === +h[2])) open(h[1], +h[2]);
+  });
 })();
 </script>
 </body>
