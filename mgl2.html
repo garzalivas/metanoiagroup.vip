@@ -850,12 +850,12 @@ body.bcard-open{overflow:hidden}
       <a class="eco-card eco-feature" href="mfb2.html">
         <div class="feature-head">
           <div class="eco-code">Link 5</div>
-          <div class="feature-chips"><span class="chip">25 papers</span><span class="chip">9 areas</span><span class="chip">2 books</span></div>
+          <div class="feature-chips"><span class="chip">Dozens of papers</span><span class="chip">9 areas</span><span class="chip">2 books</span></div>
         </div>
         <h3 class="feature-name">Metanoia Football</h3>
         <p class="feature-line">Strategic architecture for the professional football ecosystem.</p>
         <div class="feature-rule"></div>
-        <p class="feature-desc">The football vertical inside The Metanoia Group: the same system applied to one concrete industry, where talent, institutions and governance decide competitive advantage. Twenty-five applied research papers organized across nine areas &mdash;from talent development to the institutional transformation of clubs and the governance of leagues and confederations&mdash; plus two titles from his written work: <em>Football Intelligence</em> and <em>Margen Cero</em>. They all share one thesis: sustainable advantage does not rest on talent or resources, but on the institutional architecture able to turn them into performance.</p>
+        <p class="feature-desc">The football vertical inside The Metanoia Group: the same system applied to one concrete industry, where talent, institutions and governance decide competitive advantage. Dozens of applied research papers organized across nine areas &mdash;from talent development to the institutional transformation of clubs and the governance of leagues and confederations&mdash; plus two titles from his written work: <em>Football Intelligence</em> and <em>Margen Cero</em>. They all share one thesis: sustainable advantage does not rest on talent or resources, but on the institutional architecture able to turn them into performance.</p>
         <div class="eco-url feature-url">metanoiagroup.vip/mfb2 <span class="arrow">&rarr;</span></div>
       </a>
       <a class="eco-card" href="https://natio.one" target="_blank" rel="noopener">
@@ -1072,6 +1072,30 @@ if(++n[m]>=3){n[m]=0;try{getSelection().removeAllRanges()}catch(x){}if(o[m]){var
   v.querySelector('.bcard-dl').addEventListener('click', function(){ ev('tarjeta_descargada'); });
   document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && !v.hidden) close(); });
 })();
+</script>
+<!-- brandmark → volver arriba -->
+<style>
+  .topbar .brandmark{cursor:pointer;-webkit-tap-highlight-color:transparent;}
+  .topbar .brandmark *{cursor:pointer;}
+  .topbar .brandmark:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:2px;}
+</style>
+<script>
+  (function(){
+    var en = (document.documentElement.lang || '').toLowerCase().indexOf('en') === 0;
+    document.querySelectorAll('.topbar .brandmark').forEach(function(el){
+      el.setAttribute('role','link');
+      el.setAttribute('tabindex','0');
+      el.setAttribute('title', en ? 'Back to top' : 'Volver al inicio');
+      function toTop(e){
+        if(e) e.preventDefault();
+        var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({top:0, left:0, behavior: reduce ? 'auto' : 'smooth'});
+        if(location.hash && history.replaceState) history.replaceState(null,'',location.pathname + location.search);
+      }
+      el.addEventListener('click', toTop);
+      el.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ toTop(e); } });
+    });
+  })();
 </script>
 </body>
 </html>

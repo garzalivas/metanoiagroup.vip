@@ -677,7 +677,7 @@
         La tesis de fondo que los atraviesa a todos puede enunciarse en una frase: <strong>la ventaja sostenible no proviene del esfuerzo extraordinario ni del talento aislado, sino de la arquitectura capaz de convertir potencial en capacidad realizada, de forma reproducible y a lo largo del tiempo.</strong> De ahí la insistencia del corpus en desplazar el foco desde el resultado hacia el sistema que lo produce, desde la predicción hacia la estructura que absorbe el error, y desde la acumulación hacia la pregunta que la vuelve inteligible: capacidad, ¿para qué?
       </p>
       <p class="lead">
-        Dos de estos libros —<em>Football Intelligence</em> y <em>Margen Cero</em>— pertenecen también al corpus de <strong>Metanoia Football</strong>, donde conviven con veinticinco papers de investigación aplicada al fútbol profesional. Otros dos —<em>ineXorable</em> y <em>Hágase Tu Voluntad</em>— dieron origen a proyectos propios que exceden el formato del libro. El resto encuentra aquí su casa. Todos se descargan sin costo, en PDF, sin registro y sin contraprestación.
+        Dos de estos libros —<em>Football Intelligence</em> y <em>Margen Cero</em>— pertenecen también al corpus de <strong>Metanoia Football</strong>, donde conviven con decenas de papers de investigación aplicada al fútbol profesional. Otros dos —<em>ineXorable</em> y <em>Hágase Tu Voluntad</em>— dieron origen a proyectos propios que exceden el formato del libro. El resto encuentra aquí su casa. Todos se descargan sin costo, en PDF, sin registro y sin contraprestación.
       </p>
     </div>
 
@@ -985,7 +985,7 @@
       <div class="cat-body">
         <p>El fútbol profesional de élite aparece en este corpus por una razón metodológica, no biográfica: es uno de los pocos entornos donde el error no admite revisión, no puede postergarse y no es absorbido por la organización. Esa ausencia de subsidios lo convierte en un laboratorio privilegiado para estudiar cómo se forja —y cómo se falsifica— el juicio bajo presión.</p>
         <p>De ahí salen las dos aportaciones de la categoría. Una es técnica: entender la analítica no como colección de datos y modelos, sino como ingeniería de decisiones, donde la causalidad, la incertidumbre explícita, la gobernanza, la adopción y la evaluación posterior pesan tanto como la sofisticación del modelo. La otra es epistemológica: las siete capacidades que forja un entorno de margen cero, desde el diagnóstico estructural y la decisión irreversible hasta la lectura del poder y la ingeniería de valor bajo restricciones duras.</p>
-        <p>Estos dos libros pertenecen también al corpus de <strong>Metanoia Football</strong>, donde conviven con veinticinco papers de investigación aplicada al ecosistema del fútbol profesional. Aquí funcionan como puente: muestran de dónde viene buena parte del vocabulario del resto de la obra y por qué un entorno deportivo puede enseñarle algo serio a una empresa, a un patrimonio y a quien los aconseja.</p>
+        <p>Estos dos libros pertenecen también al corpus de <strong>Metanoia Football</strong>, donde conviven con decenas de papers de investigación aplicada al ecosistema del fútbol profesional. Aquí funcionan como puente: muestran de dónde viene buena parte del vocabulario del resto de la obra y por qué un entorno deportivo puede enseñarle algo serio a una empresa, a un patrimonio y a quien los aconseja.</p>
       </div>
       <div class="cat-books">
         <div class="cat-books-line"><span class="cat-books-label lbl-p">Primaria</span><a class="bl" href="#libro-football-intelligence">Football Intelligence</a></div>
@@ -1877,7 +1877,7 @@
       <a class="eco-card" href="mfb1.html" target="_blank" rel="noopener">
         <div class="eco-code">Enlace 3</div>
         <div class="eco-name">Metanoia Football</div>
-        <p class="eco-desc">El corpus dedicado al fútbol profesional: veinticinco papers de investigación aplicada, más los dos libros que también viven en esta página.</p>
+        <p class="eco-desc">El corpus dedicado al fútbol profesional: decenas de papers de investigación aplicada, más los dos libros que también viven en esta página.</p>
         <div class="eco-url">metanoiagroup.vip/mfb1 <span class="arrow">&rarr;</span></div>
       </a>
       <a class="eco-card" href="mgl1.html" target="_blank" rel="noopener">
@@ -2015,6 +2015,30 @@
     });
     dlg.querySelector('[data-close]').addEventListener('click', ()=>dlg.close());
     dlg.addEventListener('click', e=>{ if(e.target === dlg) dlg.close(); });
+  })();
+</script>
+<!-- brandmark → volver arriba -->
+<style>
+  .topbar .brandmark{cursor:pointer;-webkit-tap-highlight-color:transparent;}
+  .topbar .brandmark *{cursor:pointer;}
+  .topbar .brandmark:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:2px;}
+</style>
+<script>
+  (function(){
+    var en = (document.documentElement.lang || '').toLowerCase().indexOf('en') === 0;
+    document.querySelectorAll('.topbar .brandmark').forEach(function(el){
+      el.setAttribute('role','link');
+      el.setAttribute('tabindex','0');
+      el.setAttribute('title', en ? 'Back to top' : 'Volver al inicio');
+      function toTop(e){
+        if(e) e.preventDefault();
+        var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({top:0, left:0, behavior: reduce ? 'auto' : 'smooth'});
+        if(location.hash && history.replaceState) history.replaceState(null,'',location.pathname + location.search);
+      }
+      el.addEventListener('click', toTop);
+      el.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ toTop(e); } });
+    });
   })();
 </script>
 </body>

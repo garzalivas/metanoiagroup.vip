@@ -1245,5 +1245,29 @@
   });
 })();
 </script>
+<!-- brandmark → volver arriba -->
+<style>
+  .topbar .brandmark{cursor:pointer;-webkit-tap-highlight-color:transparent;}
+  .topbar .brandmark *{cursor:pointer;}
+  .topbar .brandmark:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:2px;}
+</style>
+<script>
+  (function(){
+    var en = (document.documentElement.lang || '').toLowerCase().indexOf('en') === 0;
+    document.querySelectorAll('.topbar .brandmark').forEach(function(el){
+      el.setAttribute('role','link');
+      el.setAttribute('tabindex','0');
+      el.setAttribute('title', en ? 'Back to top' : 'Volver al inicio');
+      function toTop(e){
+        if(e) e.preventDefault();
+        var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({top:0, left:0, behavior: reduce ? 'auto' : 'smooth'});
+        if(location.hash && history.replaceState) history.replaceState(null,'',location.pathname + location.search);
+      }
+      el.addEventListener('click', toTop);
+      el.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ toTop(e); } });
+    });
+  })();
+</script>
 </body>
 </html>

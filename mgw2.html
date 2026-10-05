@@ -680,7 +680,7 @@
         The underlying thesis running through all of them can be stated in one sentence: <strong>sustainable advantage does not come from extraordinary effort or isolated talent, but from the architecture capable of turning potential into realized capacity, reproducibly and over time.</strong> Hence the corpus insists on shifting attention from the outcome to the system that produces it, from prediction to the structure that absorbs error, and from accumulation to the question that makes it intelligible: capacity for what?
       </p>
       <p class="lead">
-        Two of these books —<em>Football Intelligence</em> and <em>Zero Margin</em>— also belong to the <strong>Metanoia Football</strong> corpus, where they sit alongside twenty-five applied research papers on professional football. Two others —<em>ineXorable</em> and <em>Thy Will Be Done</em>— gave rise to projects of their own that outgrew the book format. The rest live here. All are downloadable in PDF, free of charge, with no registration and nothing asked in return.
+        Two of these books —<em>Football Intelligence</em> and <em>Zero Margin</em>— also belong to the <strong>Metanoia Football</strong> corpus, where they sit alongside dozens of applied research papers on professional football. Two others —<em>ineXorable</em> and <em>Thy Will Be Done</em>— gave rise to projects of their own that outgrew the book format. The rest live here. All are downloadable in PDF, free of charge, with no registration and nothing asked in return.
       </p>
       <p class="lead">
         <strong>A note on language.</strong> Every book was written and published in Spanish, and the PDFs on this page are the Spanish editions. Titles, theses and abstracts have been translated here so that readers can judge whether a book is worth their time; English editions do not yet exist. Today’s AI tools translate and summarize a full book competently, and readers who do not speak Spanish are encouraged to use them.
@@ -991,7 +991,7 @@
       <div class="cat-body">
         <p>Elite professional football appears in this corpus for a methodological reason, not a biographical one: it is one of the few environments where error admits no review, cannot be postponed and is not absorbed by the organization. That absence of subsidies makes it a privileged laboratory for studying how judgment under pressure is forged — and how it is faked.</p>
         <p>Two contributions follow. One is technical: understanding analytics not as a collection of data and models but as decision engineering, where causality, explicit uncertainty, governance, adoption and ex-post evaluation weigh as much as model sophistication. The other is epistemological: the seven capabilities forged by a zero-margin environment, from structural diagnosis and irreversible decision-making to reading power and value engineering under hard constraints.</p>
-        <p>These two books also belong to the <strong>Metanoia Football</strong> corpus, where they sit alongside twenty-five applied research papers on the professional football ecosystem. Here they work as a bridge: they show where much of the vocabulary of the rest of the work comes from, and why a sporting environment has something serious to teach a company, a family's wealth and whoever advises them.</p>
+        <p>These two books also belong to the <strong>Metanoia Football</strong> corpus, where they sit alongside dozens of applied research papers on the professional football ecosystem. Here they work as a bridge: they show where much of the vocabulary of the rest of the work comes from, and why a sporting environment has something serious to teach a company, a family's wealth and whoever advises them.</p>
       </div>
       <div class="cat-books">
         <div class="cat-books-line"><span class="cat-books-label lbl-p">Primary</span><a class="bl" href="#libro-football-intelligence">Football Intelligence</a></div>
@@ -1914,7 +1914,7 @@
       <a class="eco-card" href="mfb2.html" target="_blank" rel="noopener">
         <div class="eco-code">Link 3</div>
         <div class="eco-name">Metanoia Football</div>
-        <p class="eco-desc">The corpus devoted to professional football: twenty-five applied research papers, plus the two books that also live on this page.</p>
+        <p class="eco-desc">The corpus devoted to professional football: dozens of applied research papers, plus the two books that also live on this page.</p>
         <div class="eco-url">metanoiagroup.vip/mfb2 <span class="arrow">&rarr;</span></div>
       </a>
       <a class="eco-card" href="mgl2.html" target="_blank" rel="noopener">
@@ -2052,6 +2052,30 @@
     });
     dlg.querySelector('[data-close]').addEventListener('click', ()=>dlg.close());
     dlg.addEventListener('click', e=>{ if(e.target === dlg) dlg.close(); });
+  })();
+</script>
+<!-- brandmark → volver arriba -->
+<style>
+  .topbar .brandmark{cursor:pointer;-webkit-tap-highlight-color:transparent;}
+  .topbar .brandmark *{cursor:pointer;}
+  .topbar .brandmark:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:2px;}
+</style>
+<script>
+  (function(){
+    var en = (document.documentElement.lang || '').toLowerCase().indexOf('en') === 0;
+    document.querySelectorAll('.topbar .brandmark').forEach(function(el){
+      el.setAttribute('role','link');
+      el.setAttribute('tabindex','0');
+      el.setAttribute('title', en ? 'Back to top' : 'Volver al inicio');
+      function toTop(e){
+        if(e) e.preventDefault();
+        var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({top:0, left:0, behavior: reduce ? 'auto' : 'smooth'});
+        if(location.hash && history.replaceState) history.replaceState(null,'',location.pathname + location.search);
+      }
+      el.addEventListener('click', toTop);
+      el.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ toTop(e); } });
+    });
   })();
 </script>
 </body>
