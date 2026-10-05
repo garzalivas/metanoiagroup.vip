@@ -90,6 +90,15 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;}
 .btn.solid{background:var(--gold);border-color:var(--gold);color:var(--ink);}
 .btn.solid:hover{background:var(--paper);border-color:var(--paper);}
 .btn.ghost:hover{background:var(--paper);color:var(--ink);}
+.parts{margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.part{display:flex;flex-direction:column;align-items:flex-start;gap:2px;}
+.part-btn{position:relative;width:100%;text-align:left;display:flex;flex-direction:column;gap:2px;padding:11px 14px;border:1.5px solid var(--line-2);background:var(--ink);transition:border-color .2s,background .2s;}
+.part-btn:hover{border-color:var(--gold);background:var(--carbon-2);}
+.part-btn .pn{font-weight:600;font-size:16px;color:var(--paper);}
+.part-btn .pd{font-size:13.5px;color:var(--gray-2);}
+.part-btn .today{display:none;position:absolute;top:9px;right:10px;background:var(--gold);color:var(--ink);font-size:12px;font-weight:600;padding:2px 7px;}
+.part.is-today .part-btn{border-color:var(--gold);}
+.part.is-today .today{display:block;}
 .card .resume{font-size:15px;font-weight:600;color:var(--gold);text-decoration:underline;text-underline-offset:3px;background:none;border:0;padding:4px 2px;}
 .card .resume:hover{color:var(--paper);}
 .card.soon .cover{cursor:default;}
@@ -202,6 +211,7 @@ html.lock{overflow:hidden;}
 @media (max-width:900px){
   .captions{grid-template-columns:1fr;max-width:560px;}
   .grid{grid-template-columns:1fr;}
+  .parts{grid-template-columns:1fr;}
   .bridge .inner{grid-template-columns:1fr;}
   .link-grid{grid-template-columns:1fr;}
 }
@@ -370,18 +380,40 @@ html.lock{overflow:hidden;}
     <div class="group"><h3>The steps</h3><p>The path he walked.</p></div>
     <div class="grid">
       <article class="card" id="rosario" style="--accent:#3A6FD0">
-        <button class="cover" type="button" data-read="rosario" aria-label="Read: The Holy Rosary">
+        <button class="cover" type="button" id="rosario-cover" data-read="rosario-gozosos" aria-label="Read: The Holy Rosary">
           <img src="centro/rosario/web/01.webp" alt="" width="1536" height="1024" loading="lazy" decoding="async">
         </button>
         <div class="band"></div>
         <div class="body">
-          <div class="meta"><span>Novel 7</span><span>20 pages</span></div>
+          <div class="meta"><span>Novel 7</span><span>20 mysteries</span></div>
           <h4>The Holy Rosary</h4>
-          <div class="ref">The 20 mysteries</div>
-          <p class="desc">The twenty mysteries of the Rosary, in the order in which they are prayed: joyful, luminous, sorrowful and glorious. From the Annunciation to the Coronation of Mary, the life of Christ contemplated through the eyes of his Mother, mystery by mystery.</p>
-          <div class="actions">
-            <button class="btn solid" type="button" data-read="rosario"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5h6a2 2 0 0 1 2 2v12a2 2 0 0 0-2-2H4zM20 5h-6a2 2 0 0 0-2 2v12a2 2 0 0 1 2-2h6z"/></svg>Read</button>
-            <button class="resume" type="button" data-resume="rosario" hidden></button>
+          <div class="ref">Four sets of mysteries</div>
+          <p class="desc">The twenty mysteries of the Rosary in their four sets: joyful, luminous, sorrowful and glorious. Choose the one for today, or whichever you wish to contemplate, and walk through it mystery by mystery: the life of Christ seen through the eyes of his Mother.</p>
+          <div class="parts">
+            <div class="part" data-wd="1,6">
+              <button class="part-btn" type="button" data-read="rosario-gozosos">
+                <span class="pn">Joyful mysteries</span><span class="pd">Monday and Saturday</span><span class="today">Today</span>
+              </button>
+              <button class="resume" type="button" data-resume="rosario-gozosos" hidden></button>
+            </div>
+            <div class="part" data-wd="4">
+              <button class="part-btn" type="button" data-read="rosario-luminosos">
+                <span class="pn">Luminous mysteries</span><span class="pd">Thursday</span><span class="today">Today</span>
+              </button>
+              <button class="resume" type="button" data-resume="rosario-luminosos" hidden></button>
+            </div>
+            <div class="part" data-wd="2,5">
+              <button class="part-btn" type="button" data-read="rosario-dolorosos">
+                <span class="pn">Sorrowful mysteries</span><span class="pd">Tuesday and Friday</span><span class="today">Today</span>
+              </button>
+              <button class="resume" type="button" data-resume="rosario-dolorosos" hidden></button>
+            </div>
+            <div class="part" data-wd="0,3">
+              <button class="part-btn" type="button" data-read="rosario-gloriosos">
+                <span class="pn">Glorious mysteries</span><span class="pd">Wednesday and Sunday</span><span class="today">Today</span>
+              </button>
+              <button class="resume" type="button" data-resume="rosario-gloriosos" hidden></button>
+            </div>
           </div>
         </div>
       </article>
@@ -497,7 +529,7 @@ html.lock{overflow:hidden;}
 
 <script>
 (function(){
-  var D = {"novels": [{"slug": "sermon-del-monte", "t": "The Sermon on the Mount", "ref": "Matthew 5–7", "accent": "#3550D8", "pages": ["Matthew 5:1–12", "Matthew 5:13–16", "Matthew 5:17–20", "Matthew 5:21–26", "Matthew 5:27–30", "Matthew 5:31–32", "Matthew 5:33–37", "Matthew 5:38–42", "Matthew 5:43–48", "Matthew 6:1–3", "Matthew 6:5–15", "Matthew 6:16–18", "Matthew 6:19–24", "Matthew 6:25–34", "Matthew 7:1–6", "Matthew 7:7–11", "Matthew 7:12", "Matthew 7:13–14", "Matthew 7:15–23", "Matthew 7:24–29"]}, {"slug": "parabolas-del-reino", "t": "Parables of the Kingdom", "ref": "Matthew 13", "accent": "#3F9142", "pages": ["Matthew 13:1–9", "Matthew 13:10–17", "Matthew 13:18–23", "Matthew 13:24–42", "Matthew 13:31", "Matthew 13:33", "Matthew 13:34–35", "Matthew 13:44", "Matthew 13:45", "Matthew 13:47–52", "Matthew 13:53"]}, {"slug": "discipulado", "t": "Teachings on Discipleship", "ref": "Matthew 10", "accent": "#C62D2D", "pages": ["Matthew 10:1–4", "Matthew 10:5–6", "Matthew 10:7", "Matthew 10:8", "Matthew 10:9–10", "Matthew 10:11–13", "Matthew 10:14–15", "Matthew 10:16", "Matthew 10:17–20", "Matthew 10:21–23", "Matthew 10:24–25", "Matthew 10:26–31", "Matthew 10:32–33", "Matthew 10:34–42"]}, {"slug": "comunidad", "t": "Teachings on Community", "ref": "Matthew 18", "accent": "#8A3DB8", "pages": ["Matthew 18:1–5", "Matthew 18:6–9", "Matthew 18:10–14", "Matthew 18:15–17", "Matthew 18:18–20", "Matthew 18:21–22", "Matthew 18:23–27", "Matthew 18:28–30", "Matthew 18:31–35"]}, {"slug": "monte-de-los-olivos", "t": "The Olivet Discourse", "ref": "Matthew 24–25", "accent": "#8A3DB8", "pages": ["Matthew 24:1–2", "Matthew 24:3", "Matthew 24:4–5", "Matthew 24:6–8", "Matthew 24:9–14", "Matthew 24:15–20", "Matthew 24:21–28", "Matthew 24:29–31", "Matthew 24:32–35", "Matthew 24:36–43", "Matthew 24:37–39", "Matthew 24:42–51", "Matthew 25:1–13", "Matthew 25:13", "Matthew 25:14–30", "Matthew 25:14–29", "Matthew 25:31–33", "Matthew 25:34–40", "Matthew 25:41–46", "Matthew 25:31–46"]}, {"slug": "despedida", "t": "The Farewell Discourse", "ref": "John 13–17", "accent": "#C9A227", "pages": ["John 13:1–11", "John 13:12–17", "John 13:18–30", "John 13:31–35", "John 13:36–38", "John 14:1–4", "John 14:5–7", "John 14:8–14", "John 14:15–24", "John 14:25–26", "John 14:27–31", "John 15:1–8", "John 15:9–17", "John 15:12–17", "John 15:18–25", "John 15:26–27", "John 16:1–4", "John 16:5–15", "John 16:16–24", "John 16:25–33", "John 17:1–5", "John 17:9–19", "John 17:20–26"]}, {"slug": "rosario", "t": "The Holy Rosary", "ref": "The 20 mysteries", "accent": "#3A6FD0", "pages": ["Joyful mysteries · The Annunciation", "Joyful mysteries · The Visitation", "Joyful mysteries · The Nativity", "Joyful mysteries · The Presentation in the Temple", "Joyful mysteries · The Finding in the Temple", "Luminous mysteries · The Baptism of Jesus", "Luminous mysteries · The Wedding at Cana", "Luminous mysteries · The Proclamation of the Kingdom", "Luminous mysteries · The Transfiguration", "Luminous mysteries · The Institution of the Eucharist", "Sorrowful mysteries · The Agony in the Garden", "Sorrowful mysteries · The Scourging at the Pillar", "Sorrowful mysteries · The Crowning with Thorns", "Sorrowful mysteries · The Carrying of the Cross", "Sorrowful mysteries · The Crucifixion", "Glorious mysteries · The Resurrection", "Glorious mysteries · The Ascension", "Glorious mysteries · The Descent of the Holy Spirit", "Glorious mysteries · The Assumption of Mary", "Glorious mysteries · The Coronation of Mary"]}, {"slug": "viacrucis", "t": "The Holy Way of the Cross", "ref": "The 14 stations", "accent": "#B3261E", "pages": ["Station I · Jesus is condemned to death", "Station II · Jesus takes up his cross", "Station III · Jesus falls the first time", "Station IV · Jesus meets his Mother", "Station V · Simon of Cyrene helps Jesus", "Station VI · Veronica wipes the face of Jesus", "Station VII · Jesus falls the second time", "Station VIII · Jesus consoles the women of Jerusalem", "Station IX · Jesus falls the third time", "Station X · Jesus is stripped of his garments", "Station XI · Jesus is nailed to the cross", "Station XII · Jesus dies on the cross", "Station XIII · Jesus is taken down from the cross", "Station XIV · Jesus is laid in the tomb"]}], "L": {"page": "Page", "of": "of", "resume": "Continue on page {p}", "nextnovel": "Next: {t}", "alt": "{t}, page {p}"}};
+  var D = {"novels": [{"slug": "sermon-del-monte", "card": "sermon-del-monte", "dir": "sermon-del-monte", "off": 0, "t": "The Sermon on the Mount", "full": "The Sermon on the Mount", "ref": "Matthew 5–7", "accent": "#3550D8", "unit": "Page", "pages": ["Matthew 5:1–12", "Matthew 5:13–16", "Matthew 5:17–20", "Matthew 5:21–26", "Matthew 5:27–30", "Matthew 5:31–32", "Matthew 5:33–37", "Matthew 5:38–42", "Matthew 5:43–48", "Matthew 6:1–3", "Matthew 6:5–15", "Matthew 6:16–18", "Matthew 6:19–24", "Matthew 6:25–34", "Matthew 7:1–6", "Matthew 7:7–11", "Matthew 7:12", "Matthew 7:13–14", "Matthew 7:15–23", "Matthew 7:24–29"]}, {"slug": "parabolas-del-reino", "card": "parabolas-del-reino", "dir": "parabolas-del-reino", "off": 0, "t": "Parables of the Kingdom", "full": "Parables of the Kingdom", "ref": "Matthew 13", "accent": "#3F9142", "unit": "Page", "pages": ["Matthew 13:1–9", "Matthew 13:10–17", "Matthew 13:18–23", "Matthew 13:24–42", "Matthew 13:31", "Matthew 13:33", "Matthew 13:34–35", "Matthew 13:44", "Matthew 13:45", "Matthew 13:47–52", "Matthew 13:53"]}, {"slug": "discipulado", "card": "discipulado", "dir": "discipulado", "off": 0, "t": "Teachings on Discipleship", "full": "Teachings on Discipleship", "ref": "Matthew 10", "accent": "#C62D2D", "unit": "Page", "pages": ["Matthew 10:1–4", "Matthew 10:5–6", "Matthew 10:7", "Matthew 10:8", "Matthew 10:9–10", "Matthew 10:11–13", "Matthew 10:14–15", "Matthew 10:16", "Matthew 10:17–20", "Matthew 10:21–23", "Matthew 10:24–25", "Matthew 10:26–31", "Matthew 10:32–33", "Matthew 10:34–42"]}, {"slug": "comunidad", "card": "comunidad", "dir": "comunidad", "off": 0, "t": "Teachings on Community", "full": "Teachings on Community", "ref": "Matthew 18", "accent": "#8A3DB8", "unit": "Page", "pages": ["Matthew 18:1–5", "Matthew 18:6–9", "Matthew 18:10–14", "Matthew 18:15–17", "Matthew 18:18–20", "Matthew 18:21–22", "Matthew 18:23–27", "Matthew 18:28–30", "Matthew 18:31–35"]}, {"slug": "monte-de-los-olivos", "card": "monte-de-los-olivos", "dir": "monte-de-los-olivos", "off": 0, "t": "The Olivet Discourse", "full": "The Olivet Discourse", "ref": "Matthew 24–25", "accent": "#8A3DB8", "unit": "Page", "pages": ["Matthew 24:1–2", "Matthew 24:3", "Matthew 24:4–5", "Matthew 24:6–8", "Matthew 24:9–14", "Matthew 24:15–20", "Matthew 24:21–28", "Matthew 24:29–31", "Matthew 24:32–35", "Matthew 24:36–43", "Matthew 24:37–39", "Matthew 24:42–51", "Matthew 25:1–13", "Matthew 25:13", "Matthew 25:14–30", "Matthew 25:14–29", "Matthew 25:31–33", "Matthew 25:34–40", "Matthew 25:41–46", "Matthew 25:31–46"]}, {"slug": "despedida", "card": "despedida", "dir": "despedida", "off": 0, "t": "The Farewell Discourse", "full": "The Farewell Discourse", "ref": "John 13–17", "accent": "#C9A227", "unit": "Page", "pages": ["John 13:1–11", "John 13:12–17", "John 13:18–30", "John 13:31–35", "John 13:36–38", "John 14:1–4", "John 14:5–7", "John 14:8–14", "John 14:15–24", "John 14:25–26", "John 14:27–31", "John 15:1–8", "John 15:9–17", "John 15:12–17", "John 15:18–25", "John 15:26–27", "John 16:1–4", "John 16:5–15", "John 16:16–24", "John 16:25–33", "John 17:1–5", "John 17:9–19", "John 17:20–26"]}, {"slug": "rosario-gozosos", "card": "rosario", "dir": "rosario", "off": 0, "t": "Joyful mysteries", "full": "The Holy Rosary: Joyful mysteries", "ref": "The Holy Rosary", "accent": "#3A6FD0", "unit": "Mystery", "res": "Continue at mystery {p}", "pages": ["The Annunciation", "The Visitation", "The Nativity", "The Presentation in the Temple", "The Finding in the Temple"]}, {"slug": "rosario-luminosos", "card": "rosario", "dir": "rosario", "off": 5, "t": "Luminous mysteries", "full": "The Holy Rosary: Luminous mysteries", "ref": "The Holy Rosary", "accent": "#3A6FD0", "unit": "Mystery", "res": "Continue at mystery {p}", "pages": ["The Baptism of Jesus", "The Wedding at Cana", "The Proclamation of the Kingdom", "The Transfiguration", "The Institution of the Eucharist"]}, {"slug": "rosario-dolorosos", "card": "rosario", "dir": "rosario", "off": 10, "t": "Sorrowful mysteries", "full": "The Holy Rosary: Sorrowful mysteries", "ref": "The Holy Rosary", "accent": "#3A6FD0", "unit": "Mystery", "res": "Continue at mystery {p}", "pages": ["The Agony in the Garden", "The Scourging at the Pillar", "The Crowning with Thorns", "The Carrying of the Cross", "The Crucifixion"]}, {"slug": "rosario-gloriosos", "card": "rosario", "dir": "rosario", "off": 15, "t": "Glorious mysteries", "full": "The Holy Rosary: Glorious mysteries", "ref": "The Holy Rosary", "accent": "#3A6FD0", "unit": "Mystery", "res": "Continue at mystery {p}", "pages": ["The Resurrection", "The Ascension", "The Descent of the Holy Spirit", "The Assumption of Mary", "The Coronation of Mary"]}, {"slug": "viacrucis", "card": "viacrucis", "dir": "viacrucis", "off": 0, "t": "The Holy Way of the Cross", "full": "The Holy Way of the Cross", "ref": "The 14 stations", "accent": "#B3261E", "unit": "Page", "pages": ["Station I · Jesus is condemned to death", "Station II · Jesus takes up his cross", "Station III · Jesus falls the first time", "Station IV · Jesus meets his Mother", "Station V · Simon of Cyrene helps Jesus", "Station VI · Veronica wipes the face of Jesus", "Station VII · Jesus falls the second time", "Station VIII · Jesus consoles the women of Jerusalem", "Station IX · Jesus falls the third time", "Station X · Jesus is stripped of his garments", "Station XI · Jesus is nailed to the cross", "Station XII · Jesus dies on the cross", "Station XIII · Jesus is taken down from the cross", "Station XIV · Jesus is laid in the tomb"]}], "L": {"page": "Page", "of": "of", "resume": "Continue on page {p}", "nextnovel": "Next: {t}", "alt": "{t}, page {p}"}};
   window.track = function(c, l){ try { if (window.gtag) gtag('event','click',{event_category:c,event_label:l}); } catch(e){} };
   function pad(n){ return (n < 10 ? '0' : '') + n; }
   function get(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
@@ -508,11 +540,18 @@ html.lock{overflow:hidden;}
   function refreshResume(){
     document.querySelectorAll('[data-resume]').forEach(function(b){
       var n = bySlug[b.dataset.resume], p = +get('centro:' + b.dataset.resume) || 0;
-      if (n && p > 1 && p <= n.pages.length) { b.hidden = false; b.textContent = D.L.resume.replace('{p}', p); b.dataset.page = p; }
+      if (n && p > 1 && p <= n.pages.length) { b.hidden = false; b.textContent = (n.res || D.L.resume).replace('{p}', p); b.dataset.page = p; }
       else b.hidden = true;
     });
   }
   refreshResume();
+  var wd = new Date().getDay();
+  document.querySelectorAll('.part').forEach(function(el){
+    if (el.dataset.wd.split(',').indexOf(String(wd)) > -1) {
+      el.classList.add('is-today');
+      var cv = el.closest('.card').querySelector('.cover'); if (cv) cv.dataset.read = el.querySelector('[data-read]').dataset.read;
+    }
+  });
 
   var dlg = document.getElementById('reader'), img = document.getElementById('r-img'),
       sc = document.getElementById('r-scroll'), nameEl = document.getElementById('r-name'),
@@ -523,15 +562,15 @@ html.lock{overflow:hidden;}
       nextNovel = document.getElementById('r-nextnovel');
   var cur = null, page = 1, opener = null, cache = {};
 
-  function src(n, p){ return 'centro/' + n.slug + '/web/' + pad(p) + '.webp'; }
+  function src(n, p){ return 'centro/' + n.dir + '/web/' + pad(n.off + p) + '.webp'; }
   function preload(n, p){ if (p < 1 || p > n.pages.length) return; var u = src(n, p); if (!cache[u]) { cache[u] = new Image(); cache[u].src = u; } }
 
   function buildThumbs(n){
     thumbs.innerHTML = '';
     n.pages.forEach(function(r, k){
       var b = document.createElement('button'); b.type = 'button'; b.dataset.p = k + 1;
-      b.setAttribute('aria-label', D.L.page + ' ' + (k + 1) + (r ? ' · ' + r : ''));
-      b.innerHTML = '<img src="centro/' + n.slug + '/thumb/' + pad(k + 1) + '.webp" alt="" width="384" height="256" loading="lazy"><span>' + (k + 1) + '</span>';
+      b.setAttribute('aria-label', n.unit + ' ' + (k + 1) + (r ? ' · ' + r : ''));
+      b.innerHTML = '<img src="centro/' + n.dir + '/thumb/' + pad(n.off + k + 1) + '.webp" alt="" width="384" height="256" loading="lazy"><span>' + (k + 1) + '</span>';
       thumbs.appendChild(b);
     });
   }
@@ -544,9 +583,9 @@ html.lock{overflow:hidden;}
     var alt = D.L.alt.replace('{t}', n.t).replace('{p}', page);
     turn(u, alt, dir);
     var ref = n.pages[page - 1];
-    subEl.innerHTML = D.L.page + ' <b>' + page + '</b> ' + D.L.of + ' ' + n.pages.length + (ref ? ' · ' + ref : '');
-    dl.href = 'centro/' + n.slug + '/' + pad(page) + '.png';
-    dl.setAttribute('download', n.slug + '-' + pad(page) + '.png');
+    subEl.innerHTML = n.unit + ' <b>' + page + '</b> ' + D.L.of + ' ' + n.pages.length + (ref ? ' · ' + ref : '');
+    dl.href = 'centro/' + n.dir + '/' + pad(n.off + page) + '.png';
+    dl.setAttribute('download', n.dir + '-' + pad(n.off + page) + '.png');
     bar.style.width = (page / n.pages.length * 100) + '%';
     prev.disabled = page === 1;
     thumbs.querySelectorAll('button').forEach(function(b){ b.setAttribute('aria-current', String(+b.dataset.p === page)); });
@@ -591,7 +630,7 @@ html.lock{overflow:hidden;}
     var n = bySlug[slug]; if (!n) return;
     cur = n; opener = trigger || opener;
     dlg.style.setProperty('--accent', n.accent);
-    nameEl.textContent = n.t;
+    nameEl.textContent = n.full;
     buildThumbs(n);
     if (!dlg.open) { document.documentElement.classList.add('lock'); dlg.showModal ? dlg.showModal() : dlg.setAttribute('open',''); }
     img.removeAttribute('src');
@@ -605,7 +644,7 @@ html.lock{overflow:hidden;}
     document.documentElement.classList.remove('lock');
     history.replaceState(null, '', '#novelas');
     refreshResume();
-    if (cur) { var c = document.getElementById(cur.slug); if (c) { c.scrollIntoView({block:'center'}); var b = c.querySelector('.cover'); if (b) b.focus({preventScroll:true}); } }
+    if (cur) { var c = document.getElementById(cur.card); if (c) { c.scrollIntoView({block:'center'}); var b = c.querySelector('.cover'); if (b) b.focus({preventScroll:true}); } }
   });
 
   function go(d){
@@ -655,6 +694,10 @@ html.lock{overflow:hidden;}
 
   /* enlace directo: mgu1.html#sermon-del-monte/7 */
   var m = decodeURIComponent(location.hash.slice(1)).match(/^([a-z-]+)\/(\d+)$/);
+  if (m && !bySlug[m[1]]) {
+    var parts = D.novels.filter(function(x){ return x.dir === m[1] && x.slug !== x.dir; }), pn = +m[2];
+    for (var q = 0; q < parts.length; q++) if (pn > parts[q].off && pn <= parts[q].off + parts[q].pages.length) { m = [0, parts[q].slug, pn - parts[q].off]; break; }
+  }
   if (m && bySlug[m[1]]) open(m[1], +m[2]);
   window.addEventListener('hashchange', function(){
     var h = decodeURIComponent(location.hash.slice(1)).match(/^([a-z-]+)\/(\d+)$/);
