@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="new_favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Áskesis — Mario Garza Livas</title>
+<meta name="description" content="Áskesis — Mario Garza Livas. Book, podcast and talks on a philosophy of training the whole person: living with less waste, more self-mastery and a life ordered around Christ. Simplify. Fulfill. Consecrate.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Áskesis — Mario Garza Livas">
+<meta property="og:description" content="Simplifica. Cumple. Consagra. Order your life before you optimize it: book, podcast and talks.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="The Metanoia Group">
+<meta property="og:image" content="https://metanoiagroup.vip/og-image-2.jpg">
+<meta property="og:url" content="https://metanoiagroup.vip/MGK2">
+<link rel="alternate" hreflang="es" href="https://metanoiagroup.vip/mgk1.html">
+<link rel="alternate" hreflang="en" href="https://metanoiagroup.vip/mgk2.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&family=GFS+Didot&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&text=MISO&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --bg:#000000;
+    --bg-alt:#0e0b09;
+    --bg-card:#18130f;
+    --text:#ece0d6;
+    --text-dim:#8c7f7499;
+    --text-muted:#a99b8f;
+    --accent:#e8894f;
+    --accent-dim:#9a5a33;
+    --accent-soft:#f4a877;
+    --stone:#e4d4ca;
+    --line:#2a221c66;
+    --line-strong:#32291f;
+    --serif:'Fraunces', Georgia, 'Times New Roman', serif;
+    --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --maxw:920px;
+    --nav-h:62px;
+    --anchor-gap:24px;
+    --sec-pad:86px;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;background:var(--bg);}
+
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  a{color:inherit;text-decoration:none;}
+
+  ::selection{background:var(--accent-dim);color:var(--text);}
+
+  a:focus-visible, button:focus-visible{
+    outline:1.5px solid var(--accent);
+    outline-offset:4px;
+  }
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;}
+
+  /* ---------- NAV ---------- */
+  nav.topbar{
+    position:sticky;top:0;
+    background:#000000d9;
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+    z-index:50;
+  }
+  nav.topbar .inner{
+    max-width:var(--maxw);margin:0 auto;padding:18px 28px;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:14px;flex-wrap:wrap;
+  }
+  .brandmark{
+    --brand-w:118px;
+    display:block;
+    width:var(--brand-w);
+    height:auto;
+    aspect-ratio:600 / 111;
+    mix-blend-mode:screen;
+    margin-left:calc(var(--brand-w) * -0.012);
+  }
+  .nav-links{display:flex;gap:24px;align-items:center;flex-wrap:wrap;}
+  .nav-links a{
+    font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--text-muted);
+    transition:color .25s ease;
+    white-space:nowrap;
+  }
+  .nav-links a:hover{color:var(--accent);}
+  .nav-links a.pill{
+    border:1px solid var(--line-strong);
+    padding:6px 12px;
+    border-radius:2px;
+  }
+  .nav-links a.pill:hover{border-color:var(--accent);}
+
+  /* ---------- HERO ---------- */
+  header.hero{
+    padding:104px 0 88px;
+    position:relative;
+  }
+  /* el contenido siempre por encima del sello */
+  header.hero .wrap > *:not(.hero-seal){position:relative;z-index:1;}
+
+  /* ---------- SELLO ---------- */
+  .hero-seal{
+    position:absolute;top:50%;right:-150px;z-index:0;margin:0;
+    width:clamp(230px, 20vw, 310px);
+    aspect-ratio:1;
+    transform:translateY(-50%);
+    pointer-events:none;
+    opacity:0;animation:sealIn 1.3s ease .55s forwards;
+  }
+  .hero-seal img{
+    display:block;width:100%;height:auto;
+    filter:drop-shadow(0 30px 58px rgba(0,0,0,.85)) drop-shadow(0 0 54px rgba(232,137,79,.30));
+  }
+  .hero-seal::after{
+    content:'';position:absolute;inset:-18px;border-radius:50%;
+    border:1px solid #e8894f33;pointer-events:none;
+  }
+  @keyframes sealIn{
+    from{opacity:0;transform:translateY(calc(-50% + 18px)) scale(.97);}
+    to{opacity:1;transform:translateY(-50%) scale(1);}
+  }
+  /* sin espacio lateral para el sangrado: pasa a columna */
+  @media (max-width:1279px){
+    .hero-seal{
+      position:relative;top:auto;right:auto;transform:none;
+      width:150px;margin:0 0 30px;
+      animation:fadeUp .9s ease .05s forwards;
+    }
+    .hero-seal::after{inset:-14px;}
+  }
+  @media (max-width:640px){
+    .hero-seal{width:118px;margin-bottom:24px;}
+    .hero-seal::after{inset:-11px;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .hero-seal{animation:none;opacity:1;}
+  }
+  .hero-logo{
+    --logo-w:min(560px, 88vw);
+    display:block;
+    width:var(--logo-w);
+    height:auto;
+    aspect-ratio:1400 / 337;
+    mix-blend-mode:screen;
+    /* compensa el aire interno del archivo para alinear con el titular */
+    margin-left:calc(var(--logo-w) * -0.02);
+    margin-bottom:40px;
+    opacity:0;
+    animation:fadeUp .9s ease .05s forwards;
+  }
+  @media (max-width:640px){
+    .hero-logo{--logo-w:min(520px, 92vw);margin-bottom:30px;}
+  }
+  h1.name{
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:clamp(34px, 5.6vw, 58px);
+    line-height:1.1;
+    letter-spacing:-.015em;
+    max-width:16ch;
+    opacity:0;
+    animation:fadeUp .9s ease .2s forwards;
+  }
+  h1.name .turn{color:var(--accent-soft);font-style:italic;}
+
+  p.lede{
+    margin-top:28px;
+    font-size:clamp(15px,2vw,17.5px);
+    color:var(--text-muted);
+    max-width:62ch;
+    line-height:1.75;
+    font-weight:300;
+    opacity:0;
+    animation:fadeUp .9s ease .34s forwards;
+  }
+
+  .triad-bar{
+    margin-top:34px;
+    display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+    font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);
+    opacity:0;
+    animation:fadeUp .9s ease .46s forwards;
+  }
+  .triad-bar .slash{color:var(--accent-dim);}
+  .triad-bar a:hover{color:var(--accent);}
+
+  .hero-cta{
+    margin-top:42px;
+    display:flex;gap:14px;flex-wrap:wrap;
+    opacity:0;
+    animation:fadeUp .9s ease .58s forwards;
+  }
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:14px 24px;
+    font-size:12.5px;letter-spacing:.09em;text-transform:uppercase;
+    border-radius:2px;
+    transition:all .25s ease;
+  }
+  .btn-primary{
+    background:var(--accent);color:#000000;font-weight:600;
+  }
+  .btn-primary:hover{background:var(--accent-soft);transform:translateY(-1px);}
+  .btn-ghost{
+    border:1px solid var(--line-strong);color:var(--text);
+  }
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+
+  @keyframes fadeUp{
+    from{opacity:0;transform:translateY(16px);}
+    to{opacity:1;transform:translateY(0);}
+  }
+
+  /* ---------- SECTION SHELL ---------- */
+  section{
+    padding:var(--sec-pad) 0;
+    scroll-margin-top:max(0px, calc(var(--nav-h) + var(--anchor-gap) - var(--sec-pad)));
+    border-top:1px solid var(--line);
+    position:relative;
+  }
+  .sec-head{
+    display:flex;align-items:baseline;gap:18px;margin-bottom:48px;
+  }
+  .sec-num{
+    font-family:var(--serif);font-style:italic;font-size:15px;color:var(--accent-dim);
+    letter-spacing:.05em;flex:none;
+  }
+  h2.sec-title{
+    font-family:var(--serif);font-weight:400;font-size:clamp(26px,3.4vw,36px);
+    letter-spacing:-.01em;
+  }
+  h2.sec-title em{font-style:italic;color:var(--accent);font-weight:400;}
+  .sec-sub{
+    color:var(--text-muted);font-size:14.5px;font-weight:300;max-width:56ch;margin-top:14px;line-height:1.7;
+  }
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease, transform .8s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  p.lead{
+    font-size:15.5px;line-height:1.8;color:var(--text-muted);font-weight:300;
+    max-width:72ch;
+  }
+  p.lead + p.lead{margin-top:18px;}
+  p.lead strong{color:var(--text);font-weight:500;}
+
+  /* ---------- PULL QUOTE ---------- */
+  .pull{
+    margin:40px 0;
+    border-left:2px solid var(--accent);
+    padding:6px 0 6px 26px;
+    font-family:var(--serif);
+    font-size:clamp(18px,2.6vw,23px);
+    line-height:1.5;
+    color:var(--text);
+    font-weight:400;
+    max-width:44ch;
+  }
+  .pull span{display:block;color:var(--text-muted);font-style:italic;font-size:.72em;margin-top:12px;}
+
+  /* ---------- LENS LIST ---------- */
+  .lens{
+    margin-top:38px;
+    border-top:1px solid var(--line-strong);
+  }
+  .lens li{
+    list-style:none;
+    border-bottom:1px solid var(--line-strong);
+    padding:18px 4px;
+    display:flex;align-items:baseline;gap:18px;
+    font-size:16px;
+    font-family:var(--serif);
+    font-weight:400;
+  }
+  .lens li .mark{
+    color:var(--accent-dim);font-style:italic;font-size:13px;flex:none;width:22px;
+  }
+  .lens-foot{
+    margin-top:22px;font-size:13.5px;color:var(--text-muted);font-weight:300;line-height:1.75;max-width:64ch;
+  }
+
+  /* ---------- STATS ---------- */
+  .stat-row{
+    display:grid;grid-template-columns:repeat(4,1fr);
+    gap:1px;background:var(--line-strong);
+    border:1px solid var(--line-strong);
+    margin-top:46px;
+  }
+  .stat-item{background:var(--bg-alt);padding:26px 20px;text-align:center;}
+  .stat-num{font-family:var(--serif);font-size:32px;color:var(--accent);font-weight:400;line-height:1;}
+  .stat-label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin-top:10px;line-height:1.5;}
+  @media (max-width:640px){
+    .stat-row{grid-template-columns:repeat(2,1fr);}
+  }
+
+  /* ---------- BOOK ---------- */
+  .book-grid{
+    display:flex;gap:44px;align-items:flex-start;
+  }
+  .book-cover{flex:none;width:236px;}
+  .book-cover img{
+    display:block;width:100%;height:auto;
+    border:1px solid var(--line-strong);
+    border-radius:3px;
+  }
+  .book-meta{
+    margin-top:16px;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--text-muted);line-height:1.8;
+  }
+  .book-body{flex:1;min-width:0;}
+  .book-sub{
+    font-family:var(--serif);font-style:italic;font-size:18px;color:var(--text);
+    line-height:1.5;margin-bottom:24px;max-width:36ch;
+  }
+  @media (max-width:760px){
+    .book-grid{flex-direction:column;gap:32px;}
+    .book-cover{width:200px;align-self:center;}
+  }
+
+  /* ---------- MATRIX ---------- */
+  .matrix-wrap{margin-top:44px;overflow-x:auto;}
+  table.matrix{
+    border-collapse:collapse;width:100%;min-width:520px;
+    font-size:13.5px;
+  }
+  table.matrix th, table.matrix td{
+    border:1px solid var(--line-strong);
+    padding:16px 18px;text-align:left;vertical-align:top;
+  }
+  table.matrix thead th{
+    background:var(--bg-alt);
+    font-family:var(--serif);font-weight:400;font-size:14px;color:var(--accent);
+  }
+  table.matrix tbody th{
+    background:var(--bg-alt);
+    font-family:var(--serif);font-weight:400;font-size:14px;color:var(--text);
+    font-style:italic;white-space:nowrap;
+  }
+  table.matrix td{color:var(--text-muted);font-weight:300;}
+  table.matrix thead th:first-child{background:transparent;border-color:transparent;}
+  .matrix-note{
+    margin-top:16px;font-size:12.5px;color:var(--text-dim);font-weight:300;line-height:1.7;
+  }
+
+  /* ---------- NUMBERED PRINCIPLES ---------- */
+  .decalogo{
+    margin-top:40px;
+    counter-reset:dec;
+    display:grid;grid-template-columns:1fr 1fr;
+    gap:1px;background:var(--line-strong);
+    border:1px solid var(--line-strong);
+  }
+  .decalogo li{
+    list-style:none;
+    counter-increment:dec;
+    background:var(--bg-alt);
+    padding:22px 24px;
+    font-size:14px;line-height:1.6;color:var(--text);
+    font-weight:300;
+    display:flex;gap:16px;align-items:baseline;
+  }
+  .decalogo li::before{
+    content:counter(dec,decimal-leading-zero);
+    font-family:var(--serif);font-style:italic;font-size:12.5px;color:var(--accent-dim);
+    flex:none;
+  }
+  @media (max-width:640px){
+    .decalogo{grid-template-columns:1fr;}
+  }
+
+  /* ---------- DOWNLOAD BUTTON ---------- */
+  .paper-dl{
+    margin-top:34px;
+    display:inline-flex;align-items:center;gap:12px;
+    border:1px solid var(--line-strong);
+    padding:15px 24px;border-radius:2px;
+    font-size:12.5px;letter-spacing:.09em;text-transform:uppercase;
+    transition:all .25s ease;
+  }
+  .paper-dl:hover{border-color:var(--accent);color:var(--accent);}
+  .dl-icon{
+    width:34px;height:34px;border-radius:50%;flex:none;
+    border:1px solid var(--line-strong);
+    display:flex;align-items:center;justify-content:center;
+    transition:all .25s ease;
+  }
+  .dl-icon svg{width:14px;height:14px;stroke:var(--text-muted);fill:none;transition:stroke .25s ease;}
+  .paper-dl:hover .dl-icon{border-color:var(--accent);background:var(--accent);}
+  .paper-dl:hover .dl-icon svg{stroke:#000000;}
+
+  /* ---------- PODCAST ---------- */
+  .pod-grid{display:flex;gap:44px;align-items:flex-start;}
+  .pod-art{flex:none;width:190px;}
+  .pod-art img{display:block;width:100%;height:auto;mix-blend-mode:screen;}
+  .pod-body{flex:1;min-width:0;}
+  .status{
+    display:inline-flex;align-items:center;gap:10px;
+    border:1px solid var(--accent-dim);
+    padding:8px 16px;border-radius:2px;
+    font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-soft);
+    margin-bottom:24px;
+  }
+  .status .dot{
+    width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none;
+    box-shadow:0 0 8px 1px #e8894f80;
+  }
+  @media (max-width:760px){
+    .pod-grid{flex-direction:column;gap:30px;}
+    .pod-art{width:160px;align-self:center;}
+  }
+
+  /* ---------- ECO GRID (territorios / formatos) ---------- */
+  .eco-grid{
+    display:grid;grid-template-columns:repeat(2,1fr);
+    gap:1px;background:var(--line-strong);
+    border:1px solid var(--line-strong);
+    margin-top:40px;
+  }
+  .eco-card{
+    background:var(--bg-alt);
+    padding:30px 28px;
+    display:block;
+    transition:background .3s ease;
+  }
+  a.eco-card:hover{background:var(--bg-card);}
+  .eco-code{
+    font-family:var(--serif);font-style:italic;font-size:13px;color:var(--accent);
+    letter-spacing:.05em;
+  }
+  .eco-name{
+    font-family:var(--serif);font-size:20px;margin-top:10px;font-weight:400;line-height:1.3;
+  }
+  .eco-desc{
+    color:var(--text-muted);font-size:13.5px;margin-top:10px;line-height:1.65;font-weight:300;
+  }
+  .eco-url{
+    margin-top:18px;font-size:11px;letter-spacing:.08em;color:var(--accent-dim);
+    display:flex;align-items:center;gap:8px;
+  }
+  a.eco-card:hover .eco-url{color:var(--accent);}
+  .eco-url .arrow{transition:transform .25s ease;}
+  a.eco-card:hover .eco-url .arrow{transform:translateX(4px);}
+  .eco-card.full{grid-column:span 2;}
+  @media (max-width:640px){
+    .eco-grid{grid-template-columns:1fr;}
+    .eco-card.full{grid-column:span 1;}
+  }
+
+  /* ---------- FORMATS ---------- */
+  .fmt-list{margin-top:40px;border-top:1px solid var(--line-strong);}
+  .fmt-row{
+    display:flex;align-items:baseline;justify-content:space-between;gap:24px;
+    padding:24px 4px;border-bottom:1px solid var(--line-strong);
+  }
+  .fmt-left{min-width:0;}
+  .fmt-name{font-family:var(--serif);font-size:19px;font-weight:400;}
+  .fmt-desc{color:var(--text-muted);font-size:13.5px;margin-top:6px;font-weight:300;line-height:1.6;max-width:56ch;}
+  .fmt-dur{
+    flex:none;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);
+    white-space:nowrap;
+  }
+  @media (max-width:600px){
+    .fmt-row{flex-direction:column;gap:10px;}
+  }
+
+  /* ---------- DISTINCTIONS / NOT-LIST ---------- */
+  .notlist{margin-top:36px;display:grid;grid-template-columns:1fr 1fr;gap:12px 32px;}
+  .notlist li{
+    list-style:none;font-size:14px;color:var(--text-muted);font-weight:300;
+    padding-left:20px;position:relative;line-height:1.6;
+  }
+  .notlist li::before{
+    content:'';position:absolute;left:0;top:10px;
+    width:9px;height:1px;background:var(--accent-dim);
+  }
+  @media (max-width:640px){.notlist{grid-template-columns:1fr;}}
+
+  /* ---------- CONTACT ---------- */
+  .contact-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:1px;
+    background:var(--line-strong);border:1px solid var(--line-strong);
+    margin-top:40px;
+  }
+  .contact-item{
+    background:var(--bg-alt);padding:26px 28px;
+    display:flex;align-items:center;gap:18px;
+    transition:background .25s ease;
+  }
+  .contact-item:hover{background:var(--bg-card);}
+  .cicon{
+    flex:none;width:42px;height:42px;border-radius:50%;
+    border:1px solid var(--line-strong);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--serif);font-style:italic;font-size:13px;color:var(--accent);
+    transition:border-color .25s ease;
+  }
+  .contact-item:hover .cicon{border-color:var(--accent);}
+  .clabel{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);}
+  .cvalue{font-size:15px;margin-top:4px;word-break:break-word;transition:color .2s ease;}
+  .contact-item:hover .cvalue{color:var(--accent);}
+  @media (max-width:640px){.contact-grid{grid-template-columns:1fr;}}
+
+  /* ---------- FOOTER ---------- */
+  footer{padding:70px 0 46px;border-top:1px solid var(--line);}
+  .footer-logo{
+    --logo-w:min(300px, 70vw);
+    display:block;
+    width:var(--logo-w);
+    height:auto;
+    aspect-ratio:1400 / 337;
+    mix-blend-mode:screen;
+    margin-left:calc(var(--logo-w) * -0.02);
+  }
+  .footer-role{margin-top:26px;font-size:13px;color:var(--text-muted);}
+  .footer-role strong{color:var(--text);font-weight:500;}
+  .footer-contacts{
+    margin-top:10px;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--text-muted);
+  }
+  .footer-contacts a:hover{color:var(--accent);}
+  .footer-bottom{
+    margin-top:44px;padding-top:22px;border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;
+  }
+  .copyright{font-size:11.5px;color:var(--text-dim);letter-spacing:.04em;}
+  .footer-en{
+    font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);
+    border:1px solid var(--line-strong);padding:7px 14px;border-radius:2px;
+  }
+  .footer-en:hover{color:var(--accent);border-color:var(--accent);}
+
+  @media (max-width:640px){
+    header.hero{padding:56px 0 60px;}
+    section{--sec-pad:60px;}
+    nav.topbar .inner{padding:16px 20px;}
+    .nav-links{gap:12px 16px;width:100%;}
+    .nav-links a{font-size:11px;}
+    .brandmark{--brand-w:108px;}
+    .footer-bottom{flex-direction:column;align-items:flex-start;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}
+  }
+
+  
+  /* =====================================================
+     ÁSKESIS · componentes propios
+     ===================================================== */
+
+  .footer-logo{--logo-w:min(340px, 74vw);aspect-ratio:1400 / 337;margin-left:calc(var(--logo-w) * -0.02);}
+  h3.sub-title{font-family:var(--serif);font-weight:400;font-size:21px;line-height:1.3;margin-top:60px;}
+  h3.sub-title + .sec-sub{margin-top:10px;}
+
+  /* ---------- PILARES ---------- */
+  .pillars{
+    margin-top:46px;
+    display:grid;grid-template-columns:repeat(3,1fr);
+    gap:1px;background:var(--line-strong);
+    border:1px solid var(--line-strong);
+  }
+  .pillar{background:var(--bg-alt);padding:30px 26px 28px;display:flex;flex-direction:column;}
+  .pillar-verb{
+    font-family:var(--serif);font-weight:400;font-size:clamp(26px,3vw,31px);
+    line-height:1.05;color:var(--accent-soft);letter-spacing:-.01em;
+  }
+  .pillar-name{
+    margin-top:10px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);
+  }
+  .pillar-q{
+    margin-top:24px;font-family:var(--serif);font-style:italic;font-size:17px;line-height:1.45;color:var(--text);
+  }
+  .pillar-desc{margin-top:12px;font-size:13.5px;line-height:1.65;color:var(--text-muted);font-weight:300;flex:1;}
+  .pillar-fruit{
+    margin-top:24px;padding-top:16px;border-top:1px solid var(--line-strong);
+    font-size:12.5px;color:var(--text-muted);
+  }
+  .pillar-fruit em{font-family:var(--serif);font-size:15px;color:var(--stone);margin-left:6px;}
+  @media (max-width:760px){.pillars{grid-template-columns:1fr;}}
+
+  /* ---------- CONTRAPESOS ---------- */
+  .guards{margin-top:34px;border-top:1px solid var(--line-strong);}
+  .guards li{
+    list-style:none;border-bottom:1px solid var(--line-strong);
+    padding:17px 4px;display:grid;grid-template-columns:minmax(0,250px) 28px minmax(0,1fr);
+    align-items:baseline;gap:10px;
+  }
+  .g-pair{font-family:var(--serif);font-size:17px;color:var(--text);}
+  .g-pair i{color:var(--accent);font-size:14px;margin:0 6px;}
+  .g-arrow{color:var(--accent-dim);font-size:13px;text-align:center;}
+  .g-out{font-size:14px;color:var(--text-muted);font-weight:300;}
+  @media (max-width:600px){
+    .guards li{grid-template-columns:1fr;gap:4px;}
+    .g-arrow{display:none;}
+    .g-out::before{content:'→ ';color:var(--accent-dim);}
+  }
+
+  /* ---------- CADENAS (rendimiento vs áskesis) ---------- */
+  .chains{margin-top:34px;border:1px solid var(--line-strong);}
+  .chain-row{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:22px 26px;align-items:baseline;}
+  .chain-row + .chain-row{border-top:1px solid var(--line-strong);background:var(--bg-alt);}
+  .chain-label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);}
+  .chain-steps{display:flex;flex-wrap:wrap;gap:8px 12px;font-family:var(--serif);font-size:17px;color:var(--text-muted);}
+  .chain-row.ours .chain-steps{color:var(--text);}
+  .chain-row.ours .chain-label{color:var(--accent);}
+  .chain-steps .ln{color:var(--accent-dim);font-size:15px;}
+  .chain-row.ours .chain-steps .first{color:var(--accent-soft);font-style:italic;}
+  .chain-note{margin-top:16px;font-size:12.5px;color:var(--text-dim);font-weight:300;line-height:1.7;max-width:64ch;}
+  @media (max-width:640px){.chain-row{grid-template-columns:1fr;gap:10px;padding:20px;}}
+
+  /* ---------- JERARQUÍA (telos → acciones) ---------- */
+  .hier{margin-top:34px;border-top:1px solid var(--line-strong);counter-reset:none;}
+  .hier li{
+    list-style:none;border-bottom:1px solid var(--line-strong);
+    display:grid;grid-template-columns:44px minmax(0,190px) minmax(0,1fr);gap:18px;
+    padding:20px 4px;align-items:baseline;
+  }
+  .hier .mark{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--accent-dim);}
+  .hier .h-name{font-family:var(--serif);font-size:19px;color:var(--text);}
+  .hier .h-name small{display:block;font-family:var(--sans);font-size:13px;color:var(--accent);font-style:normal;margin-top:4px;}
+  .hier .h-desc{font-size:13.5px;color:var(--text-muted);font-weight:300;line-height:1.65;}
+  .hier li:nth-child(2){padding-left:22px;}
+  .hier li:nth-child(3){padding-left:40px;}
+  .hier li:nth-child(4){padding-left:58px;}
+  @media (max-width:640px){
+    .hier li{grid-template-columns:30px 1fr;}
+    .hier .h-desc{grid-column:2;}
+    .hier li:nth-child(n){padding-left:4px;}
+  }
+
+  /* ---------- MISO ---------- */
+  .miso{
+    margin-top:56px;border:1px solid var(--line-strong);
+    display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);
+  }
+  .miso-mark{
+    padding:34px 32px;border-right:1px solid var(--line-strong);
+    background:radial-gradient(120% 90% at 0% 0%, #e8894f1f, transparent 60%), var(--bg-alt);
+  }
+  .miso-word{
+    font-family:'Chakra Petch', var(--sans);font-weight:600;font-size:clamp(56px,7.6vw,78px);line-height:.9;
+    letter-spacing:.06em;color:var(--accent-soft);
+  }
+  .miso-exp{margin-top:18px;font-family:var(--serif);font-size:17px;line-height:1.4;color:var(--text);}
+  .miso-exp span{display:block;color:var(--text-muted);font-style:italic;font-size:15px;margin-top:6px;}
+  .miso-body{padding:32px 34px;}
+  .miso-body p{font-size:14.5px;line-height:1.75;color:var(--text-muted);font-weight:300;max-width:56ch;}
+  .miso-body p + p{margin-top:14px;}
+  .miso-body strong{color:var(--text);font-weight:500;}
+  .costs{
+    margin:20px 0 18px;display:flex;flex-wrap:wrap;gap:6px 0;
+    font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--stone);
+  }
+  .costs span:not(:last-child)::after{content:'/';color:var(--accent-dim);margin:0 11px;}
+  .reframe{
+    margin-top:22px;display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:center;
+    font-family:var(--serif);font-size:15.5px;line-height:1.45;
+  }
+  .reframe .from{color:var(--text-muted);font-style:italic;}
+  .reframe .to{color:var(--text);}
+  .reframe .ln{color:var(--accent);}
+  @media (max-width:760px){
+    .miso{grid-template-columns:1fr;}
+    .miso-mark{border-right:0;border-bottom:1px solid var(--line-strong);}
+    .reframe{grid-template-columns:1fr;gap:6px;}
+    .reframe .ln{transform:rotate(90deg);width:max-content;}
+  }
+
+  /* ---------- LA RUEDA ---------- */
+  .wheel{
+    margin-top:38px;
+    display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:36px;align-items:center;
+  }
+  .wheel-fig{margin:0;position:relative;}
+  .wheel-fig svg{display:block;width:100%;height:auto;overflow:visible;}
+  .w-ring{fill:none;stroke:#3a2f25;stroke-width:1;}
+  .w-arc{
+    fill:none;stroke:var(--accent-dim);stroke-width:1.4;stroke-linecap:round;
+    stroke-dasharray:var(--len);stroke-dashoffset:var(--len);
+    transition:stroke-dashoffset 2.4s cubic-bezier(.6,.05,.3,1);
+  }
+  .wheel.in .w-arc{stroke-dashoffset:0;}
+  .w-node circle{fill:#000;stroke:var(--accent-dim);stroke-width:1;transition:fill .25s ease, stroke .25s ease;}
+  .w-node .n{font-family:var(--serif);font-style:italic;font-size:14px;fill:var(--accent-soft);transition:fill .25s ease;}
+  .w-node .lbl{font-family:var(--serif);font-size:19px;fill:var(--text-muted);transition:fill .25s ease;}
+  .w-node.on circle{fill:var(--accent);stroke:var(--accent-soft);}
+  .w-node.on .n{fill:#000;}
+  .w-node.on .lbl{fill:var(--text);}
+  .w-center{transition:opacity .3s ease;}
+  .wheel-list{border-top:1px solid var(--line-strong);counter-reset:wl;}
+  .wheel-list li{
+    list-style:none;counter-increment:wl;
+    border-bottom:1px solid var(--line-strong);
+    padding:11px 6px;display:grid;grid-template-columns:30px 112px 1fr;gap:10px;align-items:baseline;
+    cursor:default;transition:background .2s ease;outline:none;
+  }
+  .wheel-list li::before{
+    content:counter(wl,decimal-leading-zero);
+    font-family:var(--serif);font-style:italic;font-size:12px;color:var(--accent-dim);
+  }
+  .wheel-list .s-name{font-family:var(--serif);font-size:16px;color:var(--text);}
+  .wheel-list .s-desc{font-size:13px;color:var(--text-muted);font-weight:300;line-height:1.5;}
+  .wheel-list li.on{background:var(--bg-card);}
+  .wheel-list li.on .s-name{color:var(--accent-soft);}
+  .wheel-list li:focus-visible{outline:1.5px solid var(--accent);outline-offset:-1px;}
+  .wheel-list li.again{color:var(--text-muted);font-family:var(--serif);font-style:italic;font-size:14px;grid-template-columns:1fr;border-bottom:0;padding-top:14px;}
+  .wheel-list li.again::before{content:none;}
+  @media (max-width:820px){
+    .wheel{grid-template-columns:1fr;gap:26px;}
+    .wheel-fig{max-width:440px;margin:0 auto;width:100%;}
+  }
+  @media (max-width:480px){
+    .wheel-list li{grid-template-columns:28px 1fr;}
+    .wheel-list .s-desc{grid-column:2;}
+  }
+  @media (prefers-reduced-motion:reduce){.w-arc{stroke-dashoffset:0;transition:none;}}
+
+  /* ---------- PROMESAS ---------- */
+  .promise{
+    margin-top:40px;display:grid;grid-template-columns:repeat(4,1fr);
+    gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);
+  }
+  .promise div{background:var(--bg-alt);padding:24px 22px;}
+  .promise b{display:block;font-family:var(--serif);font-weight:400;font-size:19px;color:var(--accent-soft);}
+  .promise p{margin-top:10px;font-size:13px;color:var(--text-muted);font-weight:300;line-height:1.6;}
+  @media (max-width:760px){.promise{grid-template-columns:1fr 1fr;}}
+  @media (max-width:460px){.promise{grid-template-columns:1fr;}}
+
+  /* ---------- DISTINCIONES ---------- */
+  .dist{
+    margin-top:36px;
+    display:grid;grid-template-columns:repeat(2,1fr);
+    gap:1px;background:var(--line-strong);
+    border:1px solid var(--line-strong);
+  }
+  .dist li{
+    list-style:none;background:var(--bg-alt);
+    padding:20px 24px;
+    font-family:var(--serif);font-size:16.5px;color:var(--text);
+    display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;
+  }
+  .dist .neq{color:var(--accent);font-style:italic;font-size:14px;}
+  @media (max-width:640px){.dist{grid-template-columns:1fr;}}
+
+  /* ---------- CODA ---------- */
+  .coda{padding:110px 0 100px;}
+  .coda-greek{
+    font-family:'GFS Didot', var(--serif);font-weight:400;font-size:clamp(46px,8vw,86px);line-height:1;
+    color:var(--stone);letter-spacing:.01em;
+  }
+  .coda-lines{
+    margin-top:34px;font-family:var(--serif);font-size:clamp(17px,2.3vw,21px);line-height:1.7;color:var(--text-muted);
+    max-width:30ch;
+  }
+  .coda-until{margin-top:26px;font-size:15px;line-height:1.8;color:var(--text-muted);font-weight:300;max-width:52ch;}
+  .coda-sign{
+    margin-top:44px;font-family:var(--serif);font-style:italic;font-size:clamp(22px,3.2vw,30px);line-height:1.3;color:var(--accent-soft);
+  }
+  .coda-sign span{display:block;margin-top:8px;font-size:.55em;color:var(--text-muted);font-style:normal;font-family:var(--sans);font-weight:300;letter-spacing:.02em;}
+
+  /* ---------- FOOTER · AMDG ---------- */
+  .footer-admg-rule{width:28px;height:1px;background:var(--accent-dim);margin-top:34px;}
+  .footer-admg{margin-top:16px;font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--accent);letter-spacing:.02em;}
+
+  .gr{font-family:'GFS Didot', var(--serif);font-style:normal;}
+
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KHNZVPJX1N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KHNZVPJX1N');
+</script>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="inner">
+    <img class="brandmark" src="assets/askesis-nav.webp" alt="Áskesis" width="600" height="111" fetchpriority="high" decoding="async">
+    <div class="nav-links">
+      <a href="#vision">The vision</a>
+      <a href="#book">Book</a>
+      <a href="#podcast">Podcast</a>
+      <a href="#talks">Talks</a>
+      <a class="pill" href="mgl2.html" title="Personal Landing Page">mgL</a>
+      <a class="pill" href="mgk1.html">ES</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <figure class="hero-seal">
+      <img src="assets/askesis-seal.webp" alt="" width="720" height="720" decoding="async">
+    </figure>
+    <img class="hero-logo" src="assets/askesis-logo.webp" alt="Áskesis — Simplifica. Cumple. Consagra." width="1400" height="337" fetchpriority="high" decoding="async">
+    <h1 class="name">You don't need to do more.<br><span class="turn">You need to do what is yours to do.</span></h1>
+    <p class="lede">
+      Áskesis —from the Greek <span class="gr" lang="grc">Ἄσκησις</span>, “training”— is a philosophy of training the whole person: a way of living with less waste, more self-mastery and a life ordered around Christ. It doesn't train only the body. It trains habits, will and character.
+    </p>
+    <div class="triad-bar">
+      <a href="#book">Book</a><span class="slash">/</span><a href="#podcast">Podcast</a><span class="slash">/</span><a href="#talks">Talks</a>
+    </div>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="downloads/Askesis.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_askesis_en'})">Download the book</a>
+      <a class="btn btn-ghost" href="https://www.youtube.com/@AskesisMX" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'outbound','event_label':'youtube_askesis_en'})">Watch the podcast</a>
+      <a class="btn btn-ghost" href="#talks">Invite Mario to speak</a>
+    </div>
+  </div>
+</header>
+
+<section id="vision">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">I</span>
+      <div>
+        <h2 class="sec-title">Training the whole <em>person</em></h2>
+        <p class="sec-sub">What Áskesis is, what it diagnoses, and why it doesn't ask you to do more, but to need less.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        <strong>Áskesis</strong> starts from a paradox: we have never had so many tools to organize our lives, and yet we keep living with scatter, overload, anxiety and no margin. A person can keep an immaculate calendar, stick to their habits and hit their goals, and still be moving in the wrong direction. The problem isn't always disorder in execution. It can be disorder in what we choose.
+      </p>
+      <p class="lead">
+        Hence the distinction that organizes the whole project: <strong>efficiency is not direction</strong>. Efficiency asks how to get a result with fewer resources; direction asks whether that result is worth getting. When the course is wrong, efficiency doesn't fix the problem: it amplifies it. That is why Áskesis doesn't begin by asking “what else do I need?” but “how much of all this is actually necessary?”
+      </p>
+      <p class="lead">
+        And beneath it all, one observation: <strong>whatever is repeated, forms</strong>. There is no neutral zone in a life. Every habit, every purchase, every “yes,” every “no” and every small promise kept is training something in us. The question isn't whether we are being formed, but whether that training is deliberate or accidental.
+      </p>
+      <p class="lead">
+        Its three pillars are named by three verbs, kept in their original Spanish as the project's motto: <em>Simplifica</em> —simplify—, <em>Cumple</em> —fulfill your duty—, <em>Consagra</em> —consecrate.
+      </p>
+    </div>
+
+    <div class="pillars reveal">
+      <div class="pillar">
+        <div class="pillar-verb">Simplifica.</div>
+        <div class="pillar-name">Frugality</div>
+        <p class="pillar-q">What is truly necessary?</p>
+        <p class="pillar-desc">Use little, need little, waste little. Tell the essential from the superfluous. It doesn't seek the minimum: it seeks enough.</p>
+        <div class="pillar-fruit">Its fruit:<em>freedom</em></div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-verb">Cumple.</div>
+        <div class="pillar-name">Discipline</div>
+        <p class="pillar-q">What is mine to do?</p>
+        <p class="pillar-desc">Do what is yours to do even when you don't feel like it, governing yourself. Not harshness, not perfectionism: it asks for faithfulness, not omnipotence.</p>
+        <div class="pillar-fruit">Its fruit:<em>reliability</em></div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-verb">Consagra.</div>
+        <div class="pillar-name">Faith</div>
+        <p class="pillar-q">Toward whom is all of this ordered?</p>
+        <p class="pillar-desc">Discern, reconsecrate, offer and trust. Not an add-on to a life already organized: the center from which the whole life is reorganized.</p>
+        <div class="pillar-fruit">Its fruit:<em>peace</em></div>
+      </div>
+    </div>
+
+    <div class="pull reveal">
+      It isn't only about what we obtain, but about who we become while we do it.
+    </div>
+
+    <div class="reveal">
+      <h3 class="sub-title">The pillars correct one another</h3>
+      <p class="sec-sub">Every virtue warps when it is separated from its counterweight. None of them, alone, is enough.</p>
+      <ul class="guards">
+        <li><span class="g-pair">Discipline<i>without</i>Frugality</span><span class="g-arrow">→</span><span class="g-out">Unnecessary activity, carried out with great discipline.</span></li>
+        <li><span class="g-pair">Discipline<i>without</i>Faith</span><span class="g-arrow">→</span><span class="g-out">Self-sufficiency: believing it all depends on willpower.</span></li>
+        <li><span class="g-pair">Frugality<i>without</i>Faith</span><span class="g-arrow">→</span><span class="g-out">Cutting for the sake of cutting, without knowing what it frees you for.</span></li>
+        <li><span class="g-pair">Faith<i>without</i>Discipline</span><span class="g-arrow">→</span><span class="g-out">Passivity: waiting for God to do what was ours to do.</span></li>
+        <li><span class="g-pair">Faith<i>without</i>Frugality</span><span class="g-arrow">→</span><span class="g-out">Pious scatter: good works that crowd out what is ours to do.</span></li>
+      </ul>
+      <p class="lens-foot">
+        That is why service is not a fourth pillar. It is the fruit of all three. Self-mastery isn't the destination; it is the instrument for becoming available for the good: to love, to serve, to listen and to keep faith.
+      </p>
+    </div>
+
+    <div class="reveal">
+      <p class="lead" style="margin-top:48px;">
+        The philosophy is expressed through three vehicles. <strong>The book develops it</strong> in full and turns it into a Rule of Life. <strong>The video podcast trains it</strong> out loud: solo, in conversation and in interviews. <strong>The talk brings it</strong> into a specific room. And the Substack keeps it company, issue by issue. Áskesis wasn't written to be read once: it was written to be practiced.
+      </p>
+    </div>
+
+    <div class="stat-row reveal">
+      <div class="stat-item">
+        <div class="stat-num">3</div>
+        <div class="stat-label">Pillars</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">4</div>
+        <div class="stat-label">Levels of an ordered life</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">10</div>
+        <div class="stat-label">Steps of the Wheel</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">1</div>
+        <div class="stat-label">Day at a time</div>
+      </div>
+    </div>
+
+    <div class="eco-grid reveal">
+      <div class="eco-card">
+        <div class="eco-code">Training ground</div>
+        <div class="eco-name">Time</div>
+        <p class="eco-desc">Don't automatically manage every minute. Ask what deserves to fill it, and don't fill every empty space.</p>
+      </div>
+      <div class="eco-card">
+        <div class="eco-code">Training ground</div>
+        <div class="eco-name">Resources</div>
+        <p class="eco-desc">Money, energy, complexity and upkeep. What a decision really costs, not just what you pay for it.</p>
+      </div>
+      <div class="eco-card">
+        <div class="eco-code">Training ground</div>
+        <div class="eco-name">Attention</div>
+        <p class="eco-desc">Whatever you attend to takes part in forming you. Focus, silence, contemplation and deep work.</p>
+      </div>
+      <div class="eco-card">
+        <div class="eco-code">Training ground</div>
+        <div class="eco-name">Work</div>
+        <p class="eco-desc">Tell busyness from contribution. Don't confuse activity with importance, or measure your worth by results.</p>
+      </div>
+      <div class="eco-card">
+        <div class="eco-code">Training ground</div>
+        <div class="eco-name">Body and conduct</div>
+        <p class="eco-desc">Train, eat with moderation, sleep, rest, persevere. We train the body in order to train the man.</p>
+      </div>
+      <div class="eco-card">
+        <div class="eco-code">Training ground</div>
+        <div class="eco-name">The spiritual life</div>
+        <p class="eco-desc">Not adding God to a life organized around the self. Reorganizing life from Him.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">II</span>
+      <div>
+        <h2 class="sec-title">The <em>book</em></h2>
+        <p class="sec-sub">The founding work, where the philosophy is developed in full and turned into practice. Direct PDF download, free of charge.</p>
+      </div>
+    </div>
+
+    <div class="book-grid reveal">
+      <div class="book-cover">
+        <img src="assets/askesis-portada.webp" alt="Cover of Áskesis, by Mario Garza Livas" width="236" height="354" loading="lazy">
+        <div class="book-meta">
+          Mario Garza Livas<br>
+          PDF · Free download
+        </div>
+      </div>
+      <div class="book-body">
+        <p class="book-sub">Order your life before you optimize it.</p>
+        <p class="lead">
+          Áskesis puts forward a simple but radical idea: we don't need a more optimized life, but a more ordered one. It questions the culture of “more” —more goals, tools, activity, results and control— and holds that a well-ordered life begins by discerning what truly deserves our time, our attention, our effort and our resources.
+        </p>
+        <p class="lead">
+          More than a productivity method, it is a philosophy of formation. Every decision produces two results: an external one —what we obtain— and an internal one —the person we become while obtaining it. A behavior can be productive and, at the same time, deforming. That is why the book doesn't only ask what a decision produces, but <strong>what it produces in you.</strong>
+        </p>
+        <p class="lead">
+          And it doesn't end in concepts. Its final part turns the philosophy into a Rule of Life —the day, the week, the month, the year, work, resources, the mind— with matrices, questions for moments of pressure, a template, a guide for groups and a forty-day training program.
+        </p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <h3 class="sub-title">Order before you optimize</h3>
+      <p class="sec-sub">The difference isn't how hard each one works, but the order in which each one decides.</p>
+      <div class="chains">
+        <div class="chain-row">
+          <div class="chain-label">Performance</div>
+          <div class="chain-steps"><span>do</span><span class="ln">→</span><span>measure</span><span class="ln">→</span><span>optimize</span><span class="ln">→</span><span>repeat</span></div>
+        </div>
+        <div class="chain-row ours">
+          <div class="chain-label">Áskesis</div>
+          <div class="chain-steps"><span class="first">discern</span><span class="ln">→</span><span>order</span><span class="ln">→</span><span>simplify</span><span class="ln">→</span><span>optimize</span><span class="ln">→</span><span>practice</span><span class="ln">→</span><span>examine</span></div>
+        </div>
+      </div>
+      <p class="chain-note">
+        Optimizing assumes that what you optimize deserves to exist. That makes optimization a secondary activity: a criterion has to come first. Rules serve for what was foreseen; criteria let you decide when something nobody anticipated arrives.
+      </p>
+    </div>
+
+    <div class="reveal">
+      <h3 class="sub-title">The architecture of an ordered life</h3>
+      <p class="sec-sub">Four levels. Disorder appears when one usurps the place of another.</p>
+      <ul class="hier">
+        <li><span class="mark">i</span><span class="h-name">Telos<small>What do I live for?</small></span><span class="h-desc">The final end that gives meaning and hierarchy to everything else. In Áskesis, a life ordered around Christ.</span></li>
+        <li><span class="mark">ii</span><span class="h-name">Goals<small>What do I want to achieve?</small></span><span class="h-desc">Concrete results that give direction. Pursued seriously, without turning them into gods.</span></li>
+        <li><span class="mark">iii</span><span class="h-name">Processes<small>What must I practice?</small></span><span class="h-desc">The stable practices through which goals are pursued and, above all, the person is formed.</span></li>
+        <li><span class="mark">iv</span><span class="h-name">Actions<small>What do I do today?</small></span><span class="h-desc">The concrete decisions that turn everything above into conduct.</span></li>
+      </ul>
+      <p class="lens-foot">
+        A goal becomes an identity. An urgency becomes a priority. A tool becomes a purpose. Against that, one rule: the telos orders the goals, the goals orient the processes, and the processes organize the actions.
+      </p>
+    </div>
+
+    <div class="miso reveal">
+      <div class="miso-mark">
+        <div class="miso-word">MISO</div>
+        <div class="miso-exp">Minimum Input. Same Output.<span>Spend the least; keep the result.</span></div>
+      </div>
+      <div class="miso-body">
+        <p>
+          Frugality's operating principle. It doesn't cut indiscriminately: it finds the essential minimum input that actually moves the result and removes the rest. <strong>MISO doesn't lower the standard. It removes the waste.</strong> And the cost is never only money:
+        </p>
+        <div class="costs"><span>Money</span><span>Time</span><span>Energy</span><span>Attention</span><span>Effort</span><span>Complexity</span><span>Tools</span><span>Upkeep</span></div>
+        <p>
+          The first form of simplifying is eliminating. There's no point automating a task that should disappear, or perfecting a meeting that shouldn't exist. And every decision is weighed twice: <strong>what does it produce?</strong> and <strong>what does it produce in me?</strong>
+        </p>
+        <div class="reframe">
+          <span class="from">“When I have X, I'll be able to do Y.”</span>
+          <span class="ln">→</span>
+          <span class="to">“With what I have today, how can I do Y?”</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pull reveal">
+      Goals produce results. Processes form people.
+      <span>The process is the Dojo: the place where you practice, repeat, fail, correct and persevere, until the extraordinary becomes ordinary.</span>
+    </div>
+
+    <div class="reveal wheel-wrap">
+      <h3 class="sub-title">The Áskesis Wheel</h3>
+      <p class="sec-sub">Order isn't a final state. It's a continuous practice. The wheel doesn't end: it begins again.</p>
+      <div class="wheel reveal">
+        <figure class="wheel-fig"><svg viewBox="-312 -240 624 480" role="img" aria-label="The Áskesis Wheel: ten steps in a cycle, from Consecrate to Examine, and back to the beginning."><defs><marker id="wArrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 1 L8 5 L0 9" fill="none" stroke="#9a5a33" stroke-width="1.4"/></marker></defs><circle class="w-ring" r="178"/><path class="w-arc" style="--len:1074.9" marker-end="url(#wArrow)" d="M18.61 -177.02 A178 178 0 1 1 -24.77 -176.27"/><image class="w-center" href="assets/askesis-pictograma.webp" x="-86" y="-62" width="172" height="110" opacity=".92"/><g class="w-node" data-i="0"><circle cx="0.00" cy="-178.00" r="16"/><text class="n" x="0.00" y="-173.50" text-anchor="middle">1</text><text class="lbl" x="0.00" y="-212.00" text-anchor="middle">Consecrate</text></g><g class="w-node" data-i="1"><circle cx="104.63" cy="-144.01" r="16"/><text class="n" x="104.63" y="-139.51" text-anchor="middle">2</text><text class="lbl" x="122.26" y="-172.28" text-anchor="start">Discern</text></g><g class="w-node" data-i="2"><circle cx="169.29" cy="-55.01" r="16"/><text class="n" x="169.29" y="-50.51" text-anchor="middle">3</text><text class="lbl" x="197.82" y="-59.28" text-anchor="start">Eliminate</text></g><g class="w-node" data-i="3"><circle cx="169.29" cy="55.01" r="16"/><text class="n" x="169.29" y="59.51" text-anchor="middle">4</text><text class="lbl" x="197.82" y="69.28" text-anchor="start">Simplify</text></g><g class="w-node" data-i="4"><circle cx="104.63" cy="144.01" r="16"/><text class="n" x="104.63" y="148.51" text-anchor="middle">5</text><text class="lbl" x="122.26" y="187.28" text-anchor="start">Order</text></g><g class="w-node" data-i="5"><circle cx="0.00" cy="178.00" r="16"/><text class="n" x="0.00" y="182.50" text-anchor="middle">6</text><text class="lbl" x="0.00" y="227.00" text-anchor="middle">Fulfill</text></g><g class="w-node" data-i="6"><circle cx="-104.63" cy="144.01" r="16"/><text class="n" x="-104.63" y="148.51" text-anchor="middle">7</text><text class="lbl" x="-122.26" y="187.28" text-anchor="end">Train</text></g><g class="w-node" data-i="7"><circle cx="-169.29" cy="55.01" r="16"/><text class="n" x="-169.29" y="59.51" text-anchor="middle">8</text><text class="lbl" x="-197.82" y="69.28" text-anchor="end">Offer</text></g><g class="w-node" data-i="8"><circle cx="-169.29" cy="-55.01" r="16"/><text class="n" x="-169.29" y="-50.51" text-anchor="middle">9</text><text class="lbl" x="-197.82" y="-59.28" text-anchor="end">Trust</text></g><g class="w-node" data-i="9"><circle cx="-104.63" cy="-144.01" r="16"/><text class="n" x="-104.63" y="-139.51" text-anchor="middle">10</text><text class="lbl" x="-122.26" y="-172.28" text-anchor="end">Examine</text></g></svg></figure>
+        <ol class="wheel-list">
+          <li tabindex="0" data-i="0"><span class="s-name">Consecrate</span><span class="s-desc">Place your life under God.</span></li>
+          <li tabindex="0" data-i="1"><span class="s-name">Discern</span><span class="s-desc">Determine what is yours to do.</span></li>
+          <li tabindex="0" data-i="2"><span class="s-name">Eliminate</span><span class="s-desc">Remove what doesn't deserve to stay.</span></li>
+          <li tabindex="0" data-i="3"><span class="s-name">Simplify</span><span class="s-desc">Reduce complexity and waste.</span></li>
+          <li tabindex="0" data-i="4"><span class="s-name">Order</span><span class="s-desc">Give each thing its place.</span></li>
+          <li tabindex="0" data-i="5"><span class="s-name">Fulfill</span><span class="s-desc">Do what is yours to do.</span></li>
+          <li tabindex="0" data-i="6"><span class="s-name">Train</span><span class="s-desc">Repeat until it forms character.</span></li>
+          <li tabindex="0" data-i="7"><span class="s-name">Offer</span><span class="s-desc">Hand over the effort.</span></li>
+          <li tabindex="0" data-i="8"><span class="s-name">Trust</span><span class="s-desc">Let go of what you don't control.</span></li>
+          <li tabindex="0" data-i="9"><span class="s-name">Examine</span><span class="s-desc">Review and correct.</span></li>
+          <li class="again">And begin again.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <h3 class="sub-title">What it promises, and what it refuses to promise</h3>
+      <p class="sec-sub">It doesn't promise control, comfort, guaranteed results or perfection. It promises an ordered life: one that can hold illness, fatigue, loss and defeat, but in which things keep their hierarchy. Four fruits follow from that order.</p>
+      <div class="promise">
+        <div><b>Freedom</b><p>Because whoever needs less depends on less.</p></div>
+        <div><b>Stability</b><p>Because a life built on duty doesn't depend on motivation.</p></div>
+        <div><b>Serenity</b><p>Because whoever tells responsibility from control stops carrying the impossible.</p></div>
+        <div><b>Availability</b><p>Because whoever recovers margin can use it to love and to serve.</p></div>
+      </div>
+      <a class="paper-dl" href="downloads/Askesis.pdf" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'download','event_label':'libro_askesis_en_seccion'})">
+        <span class="dl-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg></span>
+        Download the book (PDF)
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="podcast">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">III</span>
+      <div>
+        <h2 class="sec-title">The <em>podcast</em></h2>
+        <p class="sec-sub">A video podcast where the philosophy is trained out loud: frugality, discipline and faith; habits, character and will.</p>
+      </div>
+    </div>
+
+    <div class="pod-grid reveal">
+      <div class="pod-art">
+        <img src="assets/askesis-podcast.webp" alt="Áskesis podcast logo" width="720" height="720" loading="lazy">
+      </div>
+      <div class="pod-body">
+        <div class="status"><span class="dot"></span>First episodes coming soon</div>
+        <p class="lead">
+          Here we train life itself. We learn to tell the essential from the superfluous, to do what is ours to do even when we don't feel like it, and to place our effort at the service of God, trusting in His Providence.
+        </p>
+        <p class="lead">
+          Three formats: solo episodes, conversations and interviews. It speaks to anyone who already suspects they aren't short of tools, information or goals, but of a criterion for deciding what deserves their time, their attention and their effort.
+        </p>
+        <p class="lead">
+          Episode after episode, the same watchword: <strong>Do your best. Let God do the rest.</strong>
+        </p>
+        <a class="btn btn-primary" style="margin-top:28px;" href="https://www.youtube.com/@AskesisMX" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'outbound','event_label':'youtube_askesis_en_seccion'})">Subscribe on YouTube</a>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <h3 class="sub-title">What Áskesis is not</h3>
+      <ul class="notlist">
+        <li>A productivity channel, or a source of hacks for doing more.</li>
+        <li>Fitness, or a cult of the body.</li>
+        <li>Minimalism as an aesthetic.</li>
+        <li>Harshness for its own sake, or suffering for its own sake.</li>
+        <li>Deprivation as an identity or a reason to feel superior.</li>
+        <li>Self-help for becoming the best version of yourself, by yourself.</li>
+      </ul>
+      <p class="lens-foot">
+        Áskesis asks a great deal of action, and very little of the ego. It doesn't make results an identity, discipline a salvation, or the body a god.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="talks">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">IV</span>
+      <div>
+        <h2 class="sec-title">The <em>talks</em></h2>
+        <p class="sec-sub">The in-person expression: companies, universities, teams, Catholic communities, congresses and gatherings.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        An Áskesis talk is not a motivational speech, not a productivity class in Christian language, and not a summary of the book. It is a training session: an idea that gets examined, a distinction that gets learned, and a practice the audience can begin the next day.
+      </p>
+      <p class="lead">
+        The audience isn't defined by age or job title, but by a suspicion: that the problem isn't a lack of tools, but a lack of order. <strong>People who already do a great deal and are starting to ask how much of it deserves doing.</strong>
+      </p>
+    </div>
+
+    <div class="pull reveal">
+      We don't come to teach you to do more. We come to help you do what is yours to do, and to leave the result in God's hands.
+    </div>
+
+    <div class="reveal">
+      <p class="lead">
+        There are two ways to bring it into a room. <strong>The keynote leads</strong>: defined direction, tighter curation, greater intensity. <strong>The conversation accompanies</strong>: closer and more dialogical, with participation in service of the question. Neither is a lesser version of the other; each is a different relationship with the room.
+      </p>
+      <div class="fmt-list">
+        <div class="fmt-row">
+          <div class="fmt-left">
+            <div class="fmt-name">Microtalk</div>
+            <p class="fmt-desc">One idea, one distinction and one practice. For forums, universities and multi-speaker gatherings.</p>
+          </div>
+          <div class="fmt-dur">15 – 25 min</div>
+        </div>
+        <div class="fmt-row">
+          <div class="fmt-left">
+            <div class="fmt-name">Conversation</div>
+            <p class="fmt-desc">Close and dialogical. Improvisation happens inside a prepared architecture.</p>
+          </div>
+          <div class="fmt-dur">30 – 45 min</div>
+        </div>
+        <div class="fmt-row">
+          <div class="fmt-left">
+            <div class="fmt-name">Keynote</div>
+            <p class="fmt-desc">The flagship format. It moves through the diagnosis, the distinction, the three pillars, the practice and the surrender.</p>
+          </div>
+          <div class="fmt-dur">45 – 60 min</div>
+        </div>
+        <div class="fmt-row">
+          <div class="fmt-left">
+            <div class="fmt-name">Extended session</div>
+            <p class="fmt-desc">With interaction, exercises and applied work: the Rule of Life, the Wheel and the forty-day program. For teams and formation groups.</p>
+          </div>
+          <div class="fmt-dur">75 – 120 min</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <h3 class="sub-title">The distinctions</h3>
+      <p class="sec-sub">What an Áskesis talk should help separate. Almost all waste begins by confusing one of these pairs.</p>
+      <ul class="dist">
+        <li>Efficiency <span class="neq">is not</span> direction</li>
+        <li>More <span class="neq">is not</span> better</li>
+        <li>Enough <span class="neq">is not</span> minimum</li>
+        <li>Frugality <span class="neq">is not</span> deprivation</li>
+        <li>Discipline <span class="neq">is not</span> harshness</li>
+        <li>Motivation <span class="neq">is not</span> duty</li>
+        <li>Preparation <span class="neq">is not</span> action</li>
+        <li>Responsibility <span class="neq">is not</span> control</li>
+        <li>Success <span class="neq">is not</span> faithfulness</li>
+        <li>Failure <span class="neq">is not</span> worthlessness</li>
+      </ul>
+    </div>
+
+    <div class="reveal">
+      <h3 class="sub-title">Three to begin with</h3>
+      <div class="eco-grid">
+        <div class="eco-card">
+          <div class="eco-code">Foundational</div>
+          <div class="eco-name">Order your life before you optimize it</div>
+          <p class="eco-desc">The full thesis: why efficiency without direction only gets you to the wrong place faster.</p>
+        </div>
+        <div class="eco-card">
+          <div class="eco-code">Criterion</div>
+          <div class="eco-name">MISO: minimum input, same output</div>
+          <p class="eco-desc">Frugality as a discipline of perception: eliminate before you add, and don't optimize what doesn't deserve to exist.</p>
+        </div>
+        <div class="eco-card full">
+          <div class="eco-code">Application</div>
+          <div class="eco-name">Do your best. Let God do the rest.</div>
+          <p class="eco-desc">Discipline and Faith together: maximum commitment to action, minimum attachment to the result. Responsibility is not control.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <h3 class="sub-title">Invite Mario to speak</h3>
+      <p class="sec-sub">Available in English and Spanish, in person or online.</p>
+      <div class="contact-grid">
+        <a class="contact-item" href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp_mgk2'})">
+          <div class="cicon">TW</div>
+          <div>
+            <div class="clabel">Phone &amp; WhatsApp</div>
+            <div class="cvalue">+52 (81) 2513 6784</div>
+          </div>
+        </a>
+        <a class="contact-item" href="mailto:mario@metanoiagroup.vip?subject=%C3%81skesis%20Speaking%20Enquiry" onclick="gtag('event','click',{'event_category':'contact','event_label':'email_mgk2'})">
+          <div class="cicon">@</div>
+          <div>
+            <div class="clabel">Email</div>
+            <div class="cvalue">mario@metanoiagroup.vip</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="links">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">V</span>
+      <div>
+        <h2 class="sec-title">Relevant <em>links</em></h2>
+        <p class="sec-sub">The rest of the ecosystem.</p>
+      </div>
+    </div>
+    <div class="eco-grid reveal">
+      <a class="eco-card full" href="https://askesismx.substack.com/" target="_blank" rel="noopener" onclick="if(window.gtag)gtag('event','click',{'event_category':'contact','event_label':'substack_askesis_en'})">
+        <div class="eco-code">Newsletter</div>
+        <div class="eco-name">Áskesis on Substack</div>
+        <p class="eco-desc">A philosophy of training the whole person, for living with less waste, more self-mastery and a life ordered around Christ. Issue by issue, delivered to your inbox.</p>
+        <div class="eco-url">askesismx.substack.com <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="eco-card" href="mgl2.html">
+        <div class="eco-code">Personal</div>
+        <div class="eco-name">Mario Garza Livas</div>
+        <p class="eco-desc">Personal landing page: contact, documents and the rest of the projects.</p>
+        <div class="eco-url">mgl2 <span class="arrow">&rarr;</span></div>
+      </a>
+      <a class="eco-card" href="https://metanoiagroup.vip/en.html" target="_blank" rel="noopener">
+        <div class="eco-code">Firm</div>
+        <div class="eco-name">The Metanoia Group</div>
+        <p class="eco-desc">Antifragility architecture for the leader, the company and the estate.</p>
+        <div class="eco-url">metanoiagroup.vip <span class="arrow">&rarr;</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="coda" aria-label="Ἄσκησις">
+  <div class="wrap reveal">
+    <div class="coda-greek" lang="grc">Ἄσκησις</div>
+    <p class="coda-lines">To train. Again and again. The small things. The necessary. The difficult. The good. What is yours to do. One day at a time.</p>
+    <p class="coda-until">Until it stops being extraordinary and becomes character. Until our effort becomes an offering. Until we learn to do our part without pretending to take the place of God.</p>
+    <p class="coda-sign">Do your best. Let God do the rest.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img class="footer-logo" src="assets/askesis-logo.webp" alt="Áskesis — Simplifica. Cumple. Consagra." width="1400" height="337" loading="lazy" decoding="async">
+    <div class="footer-role"><strong>Mario Garza Livas</strong> — Author · Host · Speaker</div>
+    <div class="footer-contacts">
+      <a href="mailto:mario@metanoiagroup.vip">mario@metanoiagroup.vip</a>
+      <a href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp_footer_mgk2'})">+52 (81) 2513 6784</a>
+      <a href="https://www.youtube.com/@AskesisMX" target="_blank" rel="noopener">youtube.com/@AskesisMX</a>
+      <a href="https://askesismx.substack.com/" target="_blank" rel="noopener" onclick="if(window.gtag)gtag('event','click',{'event_category':'outbound','event_label':'substack_footer_mgk2'})">askesismx.substack.com</a>
+    </div>
+    <div class="footer-admg-rule"></div>
+    <p class="footer-admg">Ad maiorem Dei gloriam.</p>
+    <div class="footer-bottom">
+      <span class="copyright">© 2026 The Metanoia Group</span>
+      <a class="footer-en" href="mgk1.html">Versión en español &rarr;</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const topbar = document.querySelector('nav.topbar');
+  const syncNavHeight = () => document.documentElement.style.setProperty('--nav-h', topbar.offsetHeight + 'px');
+  syncNavHeight();
+  if(window.ResizeObserver){ new ResizeObserver(syncNavHeight).observe(topbar); }
+  else { window.addEventListener('resize', syncNavHeight); }
+
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.12});
+  els.forEach(el=>io.observe(el));
+</script>
+<script>
+  /* LA RUEDA · enlaza la lista con los nodos del diagrama */
+  (function(){
+    const items = document.querySelectorAll('.wheel-list li[data-i]');
+    const nodes = document.querySelectorAll('.w-node');
+    if(!items.length || !nodes.length) return;
+    function set(i){
+      items.forEach(li=>li.classList.toggle('on', li.dataset.i === i));
+      nodes.forEach(n=>n.classList.toggle('on', n.dataset.i === i));
+    }
+    items.forEach(li=>{
+      li.addEventListener('mouseenter', ()=>set(li.dataset.i));
+      li.addEventListener('focus', ()=>set(li.dataset.i));
+      li.addEventListener('mouseleave', ()=>set(null));
+      li.addEventListener('blur', ()=>set(null));
+    });
+    nodes.forEach(n=>{
+      n.addEventListener('mouseenter', ()=>set(n.dataset.i));
+      n.addEventListener('mouseleave', ()=>set(null));
+    });
+  })();
+</script>
+</body>
+</html>

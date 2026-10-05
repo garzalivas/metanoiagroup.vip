@@ -208,6 +208,35 @@ html.lock{overflow:hidden;}
 @media (orientation:portrait) and (max-width:700px){.r-rotate{display:block;position:absolute;top:12px;left:12px;right:12px;z-index:2;text-align:center;background:var(--gold);color:var(--ink);font-weight:600;font-size:14px;padding:8px 10px;}}
 @media (max-height:520px) and (orientation:landscape){.r-bar{padding:4px 10px 4px 14px;}.r-name{font-size:17px;}.r-icon{width:36px;height:36px;}.r-hint{display:none;}.r-scroll{padding:6px 60px;}}
 
+/* easter egg · kénosis */
+.egg{cursor:default;-webkit-user-select:none;user-select:none;touch-action:manipulation;-webkit-tap-highlight-color:transparent;}
+.kenosis{width:min(640px,calc(100vw - 32px));max-height:calc(100dvh - 32px);margin:auto;padding:0;overflow:auto;color:var(--paper);
+  background:radial-gradient(120% 70% at 50% 0%,#1a1612 0%,#0d0b0a 60%,#080707 100%);border:1px solid rgba(226,169,59,.28);
+  box-shadow:0 40px 120px rgba(0,0,0,.88),0 0 90px rgba(226,169,59,.12);}
+.kenosis::backdrop{background:rgba(4,3,3,.86);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);}
+.kenosis[open]{animation:kIn .8s cubic-bezier(.2,.7,.2,1);}
+@keyframes kIn{from{opacity:0;transform:translateY(14px) scale(.985)}to{opacity:1;transform:none}}
+.k-inner{position:relative;padding:42px 52px 40px;}
+.k-close{position:absolute;top:16px;right:16px;width:40px;height:40px;display:grid;place-items:center;border:1px solid transparent;color:var(--gray-2);font-size:26px;line-height:1;}
+.k-close:hover,.k-close:focus-visible{color:var(--gold);border-color:rgba(226,169,59,.4);outline:none;}
+.k-vessel{display:block;width:78px;height:78px;margin:0 0 22px;overflow:visible;}
+.k-ring{fill:none;stroke:var(--gold);stroke-width:1.6;stroke-dasharray:283;stroke-dashoffset:283;animation:kDraw 1.4s .2s ease forwards;}
+.k-light{fill:url(#kLight);transform-origin:50% 50%;transform:scale(0);opacity:0;animation:kFill 2.6s ease forwards;animation-delay:var(--fill,4.6s);}
+@keyframes kDraw{to{stroke-dashoffset:0}}
+@keyframes kFill{0%{transform:scale(0);opacity:0}100%{transform:scale(1);opacity:1}}
+.k-eyebrow{font-family:var(--display);font-weight:400;font-size:clamp(34px,5vw,48px);line-height:1;text-transform:uppercase;letter-spacing:.01em;margin:0 0 20px;}
+.k-body p{font-size:clamp(17px,2.1vw,19px);line-height:1.62;color:#DDD6CA;margin:0 0 1em;opacity:0;animation:kLine .9s ease forwards;}
+.k-body strong{color:var(--paper);font-weight:600;}
+.k-body em{color:var(--gold);font-style:normal;font-weight:600;}
+.k-pair{display:grid;grid-template-columns:auto 1fr;gap:10px 18px;margin:6px 0 1.5em;padding:18px 20px;border-left:2px solid var(--gold);background:rgba(226,169,59,.06);opacity:0;animation:kLine .9s ease forwards;}
+.k-pair b{font-family:var(--display);font-weight:400;font-size:24px;line-height:1.1;color:var(--gold);letter-spacing:.01em;}
+.k-pair span{font-size:18px;line-height:1.35;color:var(--paper);align-self:center;}
+.k-coda{margin-top:30px !important;padding-top:24px;border-top:1px solid var(--line-2);font-weight:600;color:var(--paper) !important;}
+.k-sign{display:block;margin-top:14px;font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gray-2);}
+@keyframes kLine{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (max-width:640px){.k-inner{padding:46px 24px 34px;}.k-vessel{width:76px;height:76px;}.k-pair{padding:14px 16px;gap:8px 14px;}.k-pair b{font-size:21px;}}
+@media (prefers-reduced-motion:reduce){.k-body p,.k-pair{opacity:1;animation:none;}.k-ring{stroke-dashoffset:0;animation:none;}.k-light{transform:none;opacity:1;animation:none;}}
+
 @media (max-width:900px){
   .captions{grid-template-columns:1fr;max-width:560px;}
   .grid{grid-template-columns:1fr;}
@@ -262,7 +291,7 @@ html.lock{overflow:hidden;}
 <header class="hero">
   <div class="hero-band"><img src="centro/hero.webp" alt="" width="1386" height="236" fetchpriority="high"></div>
   <div class="wrap">
-    <h1>El Centro</h1>
+    <h1>El <span class="egg">Centro</span></h1>
     <p class="subtitle">Las palabras y los pasos de Cristo, en novela gráfica.</p>
     <p class="lede">Las Metanoias mostró vidas que cambiaron de centro. Esta serie muestra el Centro mismo: lo que Cristo enseñó y el camino que recorrió, en ocho novelas gráficas para leer con calma, página por página.</p>
     <div class="captions">
@@ -454,7 +483,7 @@ html.lock{overflow:hidden;}
     <h2>Enlaces</h2>
     <div class="link-grid">
       <a href="mgw1.html">
-        <div class="ln">La Obra Escrita</div><div class="ld">Los treinta y tres libros de Mario Garza Livas, leídos como una sola arquitectura.</div>
+        <div class="ln">La Obra Escrita</div><div class="ld">La obra escrita de Mario Garza Livas: decenas de libros leídos como una sola arquitectura.</div>
         <div class="lu">metanoiagroup.vip/mgw1</div>
       </a>
       <a href="mgl1.html">
@@ -703,6 +732,52 @@ html.lock{overflow:hidden;}
     var h = decodeURIComponent(location.hash.slice(1)).match(/^([a-z-]+)\/(\d+)$/);
     if (h && bySlug[h[1]] && !(dlg.open && cur && cur.slug === h[1] && page === +h[2])) open(h[1], +h[2]);
   });
+})();
+</script>
+
+<!-- EASTER EGG · KÉNOSIS — triple clic sobre la palabra del título -->
+<dialog class="kenosis" id="kenosis" aria-labelledby="k-title">
+  <div class="k-inner">
+    <button class="k-close" type="button" aria-label="Cerrar" data-kclose>&times;</button>
+    <svg class="k-vessel" viewBox="0 0 100 100" aria-hidden="true" style="--fill:4.40s">
+      <defs><radialGradient id="kLight"><stop offset="0" stop-color="#FFF4D6" stop-opacity="1"/><stop offset=".45" stop-color="#E2A93B" stop-opacity=".85"/><stop offset="1" stop-color="#E2A93B" stop-opacity="0"/></radialGradient></defs>
+      <circle class="k-light" cx="50" cy="50" r="44"/>
+      <circle class="k-ring" cx="50" cy="50" r="45"/>
+    </svg>
+    <h2 class="k-eyebrow" id="k-title">El Centro</h2>
+    <div class="k-body">
+      <p style="animation-delay:0.50s">La metanoia de segundo orden no se fabrica.<br><strong>Se recibe.</strong></p>
+      <p style="animation-delay:1.05s">Lo único que realmente podemos hacer de nuestra parte es la <em>kénosis</em>: vaciar el yo hasta volverlo lo más transparente y disponible posible.</p>
+      <p style="animation-delay:1.60s">En español: maximizar nuestra condición de vaso.</p>
+      <div class="k-pair" style="animation-delay:2.15s"><b>Kénosis</b><span>Do your best</span><b>Theosis</b><span>Let God do the rest</span></div>
+      <p style="animation-delay:2.70s">El vaciamiento no obliga a Dios.<br>Solo quita el obstáculo principal para que, si Él quiere, pueda llenar.</p>
+      <p style="animation-delay:3.25s">Sin kénosis, el centro sigue ocupado.<br>Con kénosis, al menos hay espacio.</p>
+      <p class="k-coda" style="animation-delay:3.80s">Eso es todo lo que nos corresponde.<span class="k-sign">— Mario Garza Livas</span></p>
+    </div>
+  </div>
+</dialog>
+<script>
+(function(){
+  var dlg = document.getElementById('kenosis'), el = document.querySelector('.hero .egg');
+  if (!dlg || !el || typeof dlg.showModal !== 'function') return;
+  var n = 0, t0 = 0, timer;
+  el.addEventListener('mousedown', function(e){ if (e.detail > 1) e.preventDefault(); });
+  el.addEventListener('click', function(e){
+    var now = Date.now();
+    n = (now - t0 < 550) ? n + 1 : 1; t0 = now;
+    clearTimeout(timer); timer = setTimeout(function(){ n = 0; }, 600);
+    if (n >= 3 && !dlg.open) {
+      n = 0; if (window.getSelection) window.getSelection().removeAllRanges();
+      var c = dlg.cloneNode(true); dlg.parentNode.replaceChild(c, dlg); dlg = c; bind();
+      dlg.showModal(); dlg.querySelector('[data-kclose]').focus({preventScroll:true});
+      if (typeof gtag === 'function') gtag('event','easter_egg',{event_category:'kenosis',event_label:'hero'});
+    }
+  });
+  function bind(){
+    dlg.querySelector('[data-kclose]').addEventListener('click', function(){ dlg.close(); });
+    dlg.addEventListener('click', function(e){ if (e.target === dlg) dlg.close(); });
+  }
+  bind();
 })();
 </script>
 </body>
