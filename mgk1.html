@@ -1365,5 +1365,46 @@
     });
   })();
 </script>
+<!-- ---------- EASTER EGG · EL PICTOGRAMA (triple clic → abre Phoenix 180 en otra pestaña) ---------- -->
+<style>
+  .hero-seal{z-index:2;}
+  .hero-seal img{pointer-events:auto;cursor:default;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;-webkit-user-drag:none;touch-action:manipulation;}
+  .hero-seal.x-fired img{animation:askFire 1.1s ease;}
+  .hero-seal.x-fired::after{animation:askRing 1.1s ease;}
+  @keyframes askFire{
+    0%{filter:drop-shadow(0 30px 58px rgba(0,0,0,.85)) drop-shadow(0 0 54px rgba(232,137,79,.30));}
+    30%{filter:drop-shadow(0 30px 58px rgba(0,0,0,.85)) drop-shadow(0 0 90px rgba(232,137,79,.95)) brightness(1.25);}
+    100%{filter:drop-shadow(0 30px 58px rgba(0,0,0,.85)) drop-shadow(0 0 54px rgba(232,137,79,.30));}
+  }
+  @keyframes askRing{0%{border-color:#e8894f33;}30%{border-color:#e8894fcc;box-shadow:0 0 40px #e8894f55;}100%{border-color:#e8894f33;}}
+  @media (prefers-reduced-motion:reduce){.hero-seal.x-fired img,.hero-seal.x-fired::after{animation:none;}}
+</style>
+<script>
+  (function(){
+    var seal = document.querySelector('.hero-seal');
+    if(!seal) return;
+    var img = seal.querySelector('img');
+    if(!img) return;
+    var FILE = '/gkvecl94m8hktthw5lojb55tjstk29wtdgtx627vwdvfbxk6io/Phoenix_180_Memorandum.pdf';
+    var LABEL = 'phoenix180_es';
+    var n = 0, t0 = 0, timer;
+    function fire(){
+      seal.classList.remove('x-fired'); void seal.offsetWidth; seal.classList.add('x-fired');
+      var a = document.createElement('a');
+      a.href = FILE; a.target = '_blank'; a.rel = 'noopener';
+      document.body.appendChild(a); a.click(); a.remove();
+      if(typeof gtag === 'function') gtag('event','easter_egg',{'event_category':'askesis','event_label':LABEL});
+    }
+    img.addEventListener('click', function(e){
+      var now = Date.now();
+      n = (now - t0 < 550) ? n + 1 : 1;
+      t0 = now;
+      clearTimeout(timer); timer = setTimeout(function(){ n = 0; }, 600);
+      if(n >= 3){ n = 0; e.preventDefault(); if(window.getSelection) window.getSelection().removeAllRanges(); fire(); }
+    });
+    img.addEventListener('dblclick', function(e){ e.preventDefault(); });
+    img.addEventListener('dragstart', function(e){ e.preventDefault(); });
+  })();
+</script>
 </body>
 </html>
