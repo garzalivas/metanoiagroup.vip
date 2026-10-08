@@ -1130,7 +1130,7 @@ if(++n[m]>=3){n[m]=0;try{getSelection().removeAllRanges()}catch(x){}if(o[m]){var
 <dialog class="pl" id="pl" aria-label="Palestina">
   <div class="pl-in">
     <button class="pl-x" type="button" aria-label="Cerrar">&times;</button>
-    <img class="pl-logo" src="palestina.webp" alt="Palestina — emblema diseñado por Mario Garza Livas" width="240" height="240" decoding="async" onerror="this.classList.add('noimg')">
+    <img class="pl-logo" alt="Palestina — emblema diseñado por Mario Garza Livas" width="240" height="240" decoding="async" onerror="this.classList.add('noimg')">
     <h2 class="pl-t">Palestina</h2>
     <div class="pl-body" id="pl-body"></div>
   </div>
@@ -1142,7 +1142,7 @@ if(++n[m]>=3){n[m]=0;try{getSelection().removeAllRanges()}catch(x){}if(o[m]){var
   var box=document.getElementById('pl-body'), c='==gPw9CPzFmdpxEIhpnchdEIvlmch1EIUCo4+Iibnl2ctwGci0zczFGbjBCc8ogPw9CPuUmci12buBSdzBicvBnPyJGPhxmch1WYsxGIhBSY2xWZ1ZHIlJnYt9GagwWZgUWdxBSYyVGczVmPyJGPsEmdpZHIvJXZwBSYklmclhmPyJGPsEmcyVWa0BSYsBSW+AHPK4DcvwjLkFGdyVmYpxmPiQmcvdXLsBnI9M3chx2YgAHPK4DcvwjO69mdgEmb1BCLvl2YuVGbpNHIsVGIlJHduVkPyJGPu8mc0N3byBib1BCLzFmclRmbhJGIlJHduVkPyJGPuEGbslWblNHIh5Wdgwych5Wa1JHIlJHduVkPwxjC+A3L84SYixWYgwWYgUmbllGdlRGIvJXdtBib6O8ZulmbgUWdx5jcixjOuFGZpZHbvByclJnYt9GagM3bsBSZ1FHIvxmPyJGPhRmclV3YlJHIhJncllGdgEGT+AHPK4DcvwjLvxmYlVHcg4WdgUmYhNGIhJnYt92cgU3cg4WZgknPyJGPhpHbhBSZzBybuFWbgEmbV5jcixjLzFmclRnbvJnZgUmbllGdg8mbgUGaj9mbgEGT+AHP', n=0, t0=0, filled=false;
   function u(s){var b=atob(s.split('').reverse().join(''));return new TextDecoder().decode(Uint8Array.from(b,function(ch){return ch.charCodeAt(0)}))}
   function open(){
-    if(!filled){box.innerHTML=u(c);[].forEach.call(box.children,function(x,i){x.style.animationDelay=(.35+i*.45)+'s'});filled=true;}
+    if(!filled){var lg=d.querySelector('.pl-logo');if(lg)lg.src=u('=AnYldnLh5Wa0NXZsFGcv8Wa2sGeiZmdkdnd3IjN4R3ZkR3d5Iza0Nna0VTNip2bsVzdoRHdrhGOtRTOsNWZ2t2Z');box.innerHTML=u(c);[].forEach.call(box.children,function(x,i){x.style.animationDelay=(.35+i*.45)+'s'});filled=true;}
     d.showModal(); d.scrollTop=0; d.querySelector('.pl-x').focus({preventScroll:true});
     try{gtag('event','easter_egg',{'event_category':'palestina','event_label':'es'})}catch(x){}
   }
