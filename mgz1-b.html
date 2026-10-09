@@ -278,6 +278,16 @@
     *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}
     .reveal{opacity:1;transform:none;}
   }
+
+  /* ---------- MANIFESTO CTA ---------- */
+  a.manifesto-cta{display:block;margin-top:52px;max-width:620px;border:1px solid #ffffff2e;border-radius:3px;padding:28px 28px 24px;transition:border-color .3s ease,background .3s ease;}
+  a.manifesto-cta:hover{border-color:var(--accent-dim);background:#ffffff08;}
+  .mc-tag{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-dim);margin-bottom:12px;}
+  .mc-title{display:block;font-family:var(--serif);font-size:clamp(21px,3vw,27px);line-height:1.25;color:#ffffff;margin-bottom:10px;}
+  .mc-desc{display:block;font-size:14.5px;line-height:1.7;color:#f3efe6aa;margin-bottom:16px;}
+  .mc-go{font-size:12.5px;letter-spacing:.06em;color:var(--accent-dim);}
+  .mc-go .arrow{display:inline-block;transition:transform .25s ease;}
+  a.manifesto-cta:hover .mc-go .arrow{transform:translateX(4px);}
 </style>
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Fraternitas Catholica — Portafolio de Apostolados">
@@ -302,6 +312,7 @@
       <a href="#pilares">Los pilares</a>
       <a href="#circulos">Los círculos</a>
       <a href="#metodo">Cómo funciona</a>
+      <a href="mgz1-bm.html">Manifiesto</a>
       <a class="home" href="mgz1.html">Portafolio</a>
       <a class="pill" href="mgl1.html" title="Landing Page Personal">mgL</a>
       <a class="pill" href="mgz2-b.html">EN</a>
@@ -761,6 +772,12 @@
         <span>Formamos</span><span>Acompañamos</span><span>Discernimos</span><span>Actuamos</span>
       </div>
       <p class="creed-final">No para retirarnos del mundo, <span class="soft">sino para transformarlo desde dentro.</span></p>
+      <a class="manifesto-cta" href="mgz1-bm.html" onclick="gtag('event','click',{'event_category':'manifesto','event_label':'cta_mgz1b'})">
+        <span class="mc-tag">Manifiesto Fundacional</span>
+        <span class="mc-title">El Manifiesto del Florecimiento Fraterno</span>
+        <span class="mc-desc">Un marco católico para la reciprocidad, la mutualidad, la solidaridad y el bien común. Doce partes y cincuenta y seis principios que orientan la vida de la fraternidad.</span>
+        <span class="mc-go">Leer el manifiesto <span class="arrow">&rarr;</span></span>
+      </a>
     </div>
   </div>
 </div>
@@ -857,6 +874,7 @@
         <a href="#circulos">Los Círculos Fraternales</a>
         <a href="#metodo">Cómo funciona</a>
         <a href="#fases">Las etapas</a>
+        <a href="mgz1-bm.html">Manifiesto fundacional</a>
       </div>
       <div class="footer-col">
         <div class="footer-col-title">Iniciador</div>

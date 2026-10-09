@@ -278,6 +278,16 @@
     *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}
     .reveal{opacity:1;transform:none;}
   }
+
+  /* ---------- MANIFESTO CTA ---------- */
+  a.manifesto-cta{display:block;margin-top:52px;max-width:620px;border:1px solid #ffffff2e;border-radius:3px;padding:28px 28px 24px;transition:border-color .3s ease,background .3s ease;}
+  a.manifesto-cta:hover{border-color:var(--accent-dim);background:#ffffff08;}
+  .mc-tag{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-dim);margin-bottom:12px;}
+  .mc-title{display:block;font-family:var(--serif);font-size:clamp(21px,3vw,27px);line-height:1.25;color:#ffffff;margin-bottom:10px;}
+  .mc-desc{display:block;font-size:14.5px;line-height:1.7;color:#f3efe6aa;margin-bottom:16px;}
+  .mc-go{font-size:12.5px;letter-spacing:.06em;color:var(--accent-dim);}
+  .mc-go .arrow{display:inline-block;transition:transform .25s ease;}
+  a.manifesto-cta:hover .mc-go .arrow{transform:translateX(4px);}
 </style>
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Fraternitas Catholica — Apostolate Portfolio">
@@ -302,6 +312,7 @@
       <a href="#pillars">The pillars</a>
       <a href="#circles">The circles</a>
       <a href="#method">How it works</a>
+      <a href="mgz2-bm.html">Manifesto</a>
       <a class="home" href="mgz2.html">Portfolio</a>
       <a class="pill" href="mgl2.html" title="Personal Landing Page">mgL</a>
       <a class="pill" href="mgz1-b.html">ES</a>
@@ -761,6 +772,12 @@
         <span>We form</span><span>We accompany</span><span>We discern</span><span>We act</span>
       </div>
       <p class="creed-final">Not to withdraw from the world, <span class="soft">but to transform it from within.</span></p>
+      <a class="manifesto-cta" href="mgz2-bm.html" onclick="gtag('event','click',{'event_category':'manifesto','event_label':'cta_mgz2b'})">
+        <span class="mc-tag">Founding Manifesto</span>
+        <span class="mc-title">The Manifesto for Fraternal Flourishing</span>
+        <span class="mc-desc">A Catholic framework for reciprocity, mutuality, solidarity and the common good. Twelve parts and fifty-six principles that orient the life of the fraternity.</span>
+        <span class="mc-go">Read the manifesto <span class="arrow">&rarr;</span></span>
+      </a>
     </div>
   </div>
 </div>
@@ -857,6 +874,7 @@
         <a href="#circles">The Fraternal Circles</a>
         <a href="#method">How it works</a>
         <a href="#phases">The stages</a>
+        <a href="mgz2-bm.html">Founding manifesto</a>
       </div>
       <div class="footer-col">
         <div class="footer-col-title">Initiator</div>
