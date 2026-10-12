@@ -55,6 +55,11 @@
   .essay-img::after{background:linear-gradient(90deg,rgba(20,30,41,0) 0%,rgba(20,30,41,.05) 26%,rgba(20,30,41,.78) 50%,rgba(20,30,41,.92) 100%),linear-gradient(0deg,rgba(20,30,41,.55) 0%,rgba(20,30,41,0) 45%)}
   .essay-body{margin-left:46%;padding:56px clamp(32px,4vw,64px) 52px 0;max-width:620px}
 }
+/* Triad — alineado a las 3 columnas de .responses; "sin" en el mismo estilo que la palabra siguiente (mover a tmg.css) */
+.triad .sin{font-family:var(--serif);font-size:inherit;letter-spacing:0;color:var(--on-dark-soft)}
+@media (min-width:641px){
+  .triad li{grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.4vw,32px)}
+}
 </style>
 </head>
 <body class="">
@@ -180,9 +185,9 @@
       <div class="resp best" role="listitem"><svg viewBox="0 0 200 100" aria-hidden="true"><line class="ax" x1="0" y1="92" x2="200" y2="92"/><line class="shock" x1="78" y1="4" x2="78" y2="92"/><path class="curve" d="M0 50 L78 50 L84 72 Q104 74 128 34 Q150 20 200 18"/></svg><div><h3>It is antifragility</h3><p>The system that doesn't merely survive chaos — but is strengthened by it.</p></div></div>
     </div>
     <ul class="triad rv">
-      <li><b>Talent</b> <span class="sin">without</span> <span class="miss">structure</span> <span class="res">is fragile.</span></li>
-      <li><b>Structure</b> <span class="sin">without</span> <span class="miss">purpose</span> <span class="res">is rigid.</span></li>
-      <li><b>Purpose</b> <span class="sin">without</span> <span class="miss">adaptation</span> <span class="res">is dangerous.</span></li>
+      <li><b>Talent</b> <span class="mid"><span class="sin">without</span> <span class="miss">structure</span></span> <span class="res">is fragile.</span></li>
+      <li><b>Structure</b> <span class="mid"><span class="sin">without</span> <span class="miss">purpose</span></span> <span class="res">is rigid.</span></li>
+      <li><b>Purpose</b> <span class="mid"><span class="sin">without</span> <span class="miss">adaptation</span></span> <span class="res">is dangerous.</span></li>
     </ul>
     <div class="split">
       <div></div>
