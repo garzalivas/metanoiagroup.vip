@@ -29,17 +29,32 @@
 <link rel="stylesheet" href="assets/tmg.css">
 <style>
 /* Ensayo descargable — Capítulo I (mover a tmg.css cuando convenga) */
-.essay{margin-top:clamp(40px,5vw,64px);padding-top:28px;border-top:1px solid var(--rule)}
-.essay .k{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin:0 0 14px}
-.essay h3{font-family:var(--serif);font-weight:400;font-size:clamp(28px,3.2vw,40px);line-height:1.1;color:var(--ink);margin:0 0 10px}
-.essay h3 em{color:var(--gold)}
-.essay .sub{font-family:var(--serif);font-style:italic;font-size:19px;line-height:1.4;color:var(--mid);max-width:52ch;margin:0 0 22px}
-.essay ol{list-style:none;margin:0 0 28px;padding:0;display:grid;gap:8px}
-.essay li{display:flex;gap:14px;font-size:14px;line-height:1.45;color:var(--mid)}
-.essay li i{font-family:var(--serif);font-size:16px;color:var(--gold);min-width:2.2em}
-.essay .get{font-size:14px;text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:2px;color:var(--ink)}
-.essay .get:hover{color:var(--gold)}
-.essay .meta{display:block;margin-top:10px;font-size:12px;color:var(--mid)}
+.essay{position:relative;margin-top:clamp(48px,6vw,88px);background:#141E29;color:#F4F1EA;overflow:hidden;isolation:isolate}
+.essay-img{position:relative;aspect-ratio:1/1;margin:0}
+.essay-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:9% 40%;display:block}
+.essay-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,30,41,0) 55%,#141E29 100%)}
+.essay-body{position:relative;padding:8px 24px 40px}
+.essay .k{display:flex;align-items:baseline;gap:14px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:rgba(244,241,234,.72);margin:0 0 18px}
+.essay .k i{font-family:var(--serif);font-size:26px;letter-spacing:0;text-transform:none;color:#D4B26A}
+.essay .k i::after{content:"";display:none;width:40px;height:1px;background:#D4B26A;vertical-align:middle;margin-left:14px}
+.essay h3{font-family:var(--serif);font-weight:400;font-size:clamp(38px,5vw,64px);line-height:1.02;color:#F4F1EA;margin:0 0 14px}
+.essay h3 em{color:#D4B26A}
+.essay .sub{font-family:var(--serif);font-style:italic;font-size:clamp(18px,1.6vw,22px);line-height:1.4;color:#D4B26A;max-width:46ch;margin:0 0 28px}
+.essay ol{list-style:none;margin:0 0 30px;padding:18px 0 0;border-top:1px solid rgba(244,241,234,.16);display:grid;gap:9px}
+.essay li{display:flex;gap:14px;font-size:14px;line-height:1.45;color:rgba(244,241,234,.78)}
+.essay li i{font-family:var(--serif);font-size:16px;color:#D4B26A;min-width:2.2em}
+.essay .get{font-size:14px;letter-spacing:.02em;text-decoration:none;border-bottom:1px solid #D4B26A;padding-bottom:3px;color:#F4F1EA}
+.essay .get:hover{color:#D4B26A}
+.essay .meta{display:block;margin-top:12px;font-size:12px;color:rgba(244,241,234,.55)}
+.essay .meta i{color:rgba(244,241,234,.75)}
+@media (min-width:900px){
+  .essay .k i::after{display:inline-block}
+  .essay{min-height:clamp(560px,52vw,680px);display:flex;align-items:flex-end}
+  .essay-img{position:absolute;inset:0;aspect-ratio:auto;z-index:-1}
+  .essay-img img{object-position:12% 36%}
+  .essay-img::after{background:linear-gradient(90deg,rgba(20,30,41,0) 0%,rgba(20,30,41,.05) 26%,rgba(20,30,41,.78) 50%,rgba(20,30,41,.92) 100%),linear-gradient(0deg,rgba(20,30,41,.55) 0%,rgba(20,30,41,0) 45%)}
+  .essay-body{margin-left:46%;padding:56px clamp(32px,4vw,64px) 52px 0;max-width:620px}
+}
 </style>
 </head>
 <body class="">
@@ -114,22 +129,24 @@
     <text class="lb g fade late" x="901.0" y="30" text-anchor="middle">Nuevo régimen</text>
   </svg>
 </figure>
-    <div class="split">
-      <div></div>
-      <aside class="essay rv" aria-labelledby="essay-t">
-        <p class="k">Ensayo · Mario Garza Livas · 2026</p>
+    <aside class="essay rv" aria-labelledby="essay-t">
+      <figure class="essay-img">
+        <img src="assets/ruptura-nyc-2000.webp" srcset="assets/ruptura-nyc-1000.webp 1000w, assets/ruptura-nyc-2000.webp 2000w" sizes="(min-width:1200px) 1200px, 100vw" alt="El bajo Manhattan con el One World Trade Center bajo un cielo de tormenta" width="2000" height="1164" loading="lazy" decoding="async">
+      </figure>
+      <div class="essay-body">
+        <p class="k"><i>I</i>Ensayo · Mario Garza Livas · 2026</p>
         <h3 id="essay-t">La próxima <em>gran ruptura</em></h3>
-        <p class="sub">El fin del orden que comenzó en 1945, la convergencia de las crisis y lo que exige construir en un mundo que ya no coopera.</p>
+        <p class="sub">El precio de la cima, la convergencia de las crisis y el futuro de un orden mundial al límite.</p>
         <ol>
-          <li><i>I</i><span>El precio de la cima, la convergencia de las crisis y el futuro de un orden mundial al límite</span></li>
+          <li><i>I</i><span>El precio de la cima</span></li>
           <li><i>II</i><span>El arte de no depender de un mundo que coopera</span></li>
           <li><i>III</i><span>El fin de la autosuficiencia</span></li>
           <li><i>IV</i><span>La ruptura elegida</span></li>
         </ol>
         <a class="get" href="./downloads/La_Proxima_Gran_Ruptura.pdf" download data-ev="ensayo_ruptura">Descargar el ensayo completo (PDF)</a>
         <span class="meta">Cuatro partes · 276 páginas · 8.4 MB</span>
-      </aside>
-    </div>
+      </div>
+    </aside>
   </div>
 </section>
 
