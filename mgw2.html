@@ -443,6 +443,26 @@
   }
   .empty-state.hidden{display:none;}
 
+  /* ---------- SELLO EDITORIAL ---------- */
+  .publisher{
+    margin-top:56px;padding:40px 44px;
+    border:1px solid var(--line-strong);border-radius:2px;
+    background:linear-gradient(135deg,#b6905c0d,transparent 55%),var(--bg-card);
+    display:grid;grid-template-columns:240px 1fr;gap:44px;align-items:center;
+  }
+  .publisher img{width:100%;height:auto;display:block;}
+  .publisher-eyebrow{
+    font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;
+  }
+  .publisher-text p{
+    font-family:var(--serif);font-weight:300;font-size:clamp(18px,2.1vw,21px);line-height:1.5;color:var(--text);
+  }
+  .publisher-text p strong{font-weight:500;color:var(--accent);}
+  @media (max-width:640px){
+    .publisher{grid-template-columns:1fr;gap:26px;padding:32px 24px;text-align:center;}
+    .publisher img{max-width:220px;margin:0 auto;}
+  }
+
   /* ---------- READING PATHS ---------- */
   .path-grid{
     display:grid;grid-template-columns:repeat(2,1fr);
@@ -1967,6 +1987,13 @@
       </article>
     </div>
     <div class="empty-state hidden" id="empty-state">No books match that selection.</div>
+    <aside class="publisher reveal" aria-label="Publisher">
+      <img src="assets/el-atelier-mx-logo.webp" alt="El Atelier MX — Historias que importan" width="720" height="372" loading="lazy" decoding="async">
+      <div class="publisher-text">
+        <div class="publisher-eyebrow">Publisher</div>
+        <p>Every book in this collection was published by <strong>El Atelier MX</strong>.</p>
+      </div>
+    </aside>
   </div>
 </section>
 
