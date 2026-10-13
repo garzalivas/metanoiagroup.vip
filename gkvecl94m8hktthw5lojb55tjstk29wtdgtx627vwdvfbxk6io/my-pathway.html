@@ -481,7 +481,7 @@
     <div class="sec-head reveal">
       <span class="sec-num">I</span>
       <div>
-        <h2 class="sec-title">The <em>offering</em></h2>
+        <h2 class="sec-title">The <em data-knots>offering</em></h2>
         <p class="sec-sub">None of these goals stands on its own. All of them are handed over first.</p>
       </div>
     </div>
@@ -655,7 +655,7 @@
             <span class="goal-chip">Fraternitas Catholica</span>
             <span class="goal-chip">Sintonía Católica</span>
             <span class="goal-chip">Luz en el Camino</span>
-	    <span class="goal-chip">Lumen Terrae</span>
+            <span class="goal-chip">Lumen Terrae</span>
             <span class="goal-chip">and other apostolates</span>
           </div>
         </article>
@@ -788,6 +788,20 @@
   els.forEach(el=>io.observe(el));
 </script>
 
+<script>
+(function(){var p="==AbtRHauMHdv52atkXb",n=0,t=0;
+var e=document.querySelector("[data-knots]");if(!e)return;
+e.style.touchAction="manipulation";e.style.webkitUserSelect="none";e.style.userSelect="none";e.style.webkitTapHighlightColor="transparent";
+e.addEventListener("dblclick",function(ev){ev.preventDefault()});
+e.addEventListener("click",function(){var w=Date.now();
+if(!t||w-t>650)n=0;t=w;if(++n<3)return;n=0;
+try{getSelection().removeAllRanges()}catch(x){}
+var o=e.style.textShadow;e.style.transition="text-shadow .35s ease";
+e.style.textShadow="0 0 18px rgba(182,144,92,.85)";
+try{gtag('event','easter_egg',{'event_category':'mis_nudos','event_label':'en'})}catch(x){}
+var u=atob(p.split("").reverse().join(""));
+setTimeout(function(){e.style.textShadow=o||"none";location.href=u},700);});})();
+</script>
 <!-- brandmark → volver arriba -->
 <style>
   .topbar .brandmark{cursor:pointer;-webkit-tap-highlight-color:transparent;}

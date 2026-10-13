@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="../new_favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mis Nudos — Mario Garza Livas</title>
+<meta name="description" content="Mis Nudos — Mapa personal de oración, conversión y discernimiento de Mario Garza Livas. Veintidós nudos en seis dimensiones, encomendados a la intercesión de Santa María Desatadora de Nudos.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="same-origin">
+<meta property="og:title" content="Mis Nudos — Mario Garza Livas">
+<meta property="og:description" content="Mapa personal de oración, conversión y discernimiento. Veintidós nudos, seis dimensiones, una sola intercesora.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<meta property="og:site_name" content="The Metanoia Group">
+<meta property="og:image" content="https://metanoiagroup.vip/og-image-1.jpg">
+<meta property="og:url" content="https://metanoiagroup.vip/gkvecl94m8hktthw5lojb55tjstk29wtdgtx627vwdvfbxk6io/mis-nudos.html">
+<link rel="alternate" hreflang="es" href="https://metanoiagroup.vip/gkvecl94m8hktthw5lojb55tjstk29wtdgtx627vwdvfbxk6io/mis-nudos.html">
+<link rel="alternate" hreflang="en" href="https://metanoiagroup.vip/gkvecl94m8hktthw5lojb55tjstk29wtdgtx627vwdvfbxk6io/my-knots.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0a0b;
+    --bg-alt:#111113;
+    --bg-card:#141416;
+    --text:#ece8e0;
+    --text-dim:#96908780;
+    --text-muted:#9b968c;
+    --accent:#b6905c;
+    --accent-dim:#7d6743;
+    --line:#26242066;
+    --line-strong:#2f2c27;
+    --serif:'Fraunces', Georgia, 'Times New Roman', serif;
+    --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --maxw:920px;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;scroll-padding-top:150px;}
+
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  a{color:inherit;text-decoration:none;}
+
+  ::selection{background:var(--accent-dim);color:var(--bg);}
+
+  a:focus-visible, button:focus-visible{
+    outline:1.5px solid var(--accent);
+    outline-offset:4px;
+  }
+
+  /* background texture */
+  body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+    background:
+      radial-gradient(ellipse 900px 500px at 15% -10%, #b6905c10, transparent 60%),
+      radial-gradient(ellipse 700px 500px at 100% 20%, #b6905c08, transparent 60%);
+    pointer-events:none;
+    z-index:0;
+  }
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;z-index:1;}
+
+  /* ---------- NAV ---------- */
+  nav.topbar{
+    position:sticky;top:0;
+    background:#0a0a0bd9;
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+    z-index:50;
+  }
+  nav.topbar .inner{
+    max-width:var(--maxw);margin:0 auto;padding:18px 28px;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:14px;flex-wrap:wrap;
+  }
+  .brandmark{
+    font-family:var(--serif);
+    font-size:15px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--text);
+    font-weight:500;
+  }
+  .brandmark span{color:var(--text-muted);font-weight:400;}
+  .nav-links{display:flex;gap:26px;align-items:center;flex-wrap:wrap;}
+  .nav-links a{
+    font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--text-muted);
+    transition:color .25s ease;
+    white-space:nowrap;
+  }
+  .nav-links a:hover{color:var(--accent);}
+  .nav-links a.en,.nav-links a.box{
+    border:1px solid var(--line-strong);
+    padding:6px 12px;
+    border-radius:2px;
+  }
+  .nav-links a.en:hover,.nav-links a.box:hover{border-color:var(--accent);}
+
+  /* ---------- HERO ---------- */
+  header.hero{
+    padding:120px 0 90px;
+    position:relative;
+  }
+  .eyebrow{
+    font-size:12px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--accent);
+    font-weight:500;
+    display:flex;align-items:center;gap:12px;
+    opacity:0;
+    animation:fadeUp .9s ease .1s forwards;
+  }
+  .eyebrow::before{
+    content:'';display:inline-block;width:28px;height:1px;background:var(--accent);
+  }
+  h1.name{
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:clamp(42px, 7vw, 74px);
+    line-height:1.04;
+    letter-spacing:-.01em;
+    margin-top:22px;
+    opacity:0;
+    animation:fadeUp .9s ease .25s forwards;
+  }
+  h1.name em{font-style:italic;font-weight:400;color:var(--accent);font-size:0.52em;display:block;margin-top:18px;line-height:1.2;}
+
+  p.roles{
+    margin-top:26px;
+    font-size:clamp(15px,2vw,18px);
+    color:var(--text-muted);
+    max-width:640px;
+    line-height:1.7;
+    font-weight:300;
+    opacity:0;
+    animation:fadeUp .9s ease .4s forwards;
+  }
+  p.roles .sep{color:var(--accent-dim);margin:0 10px;}
+
+  .locbar{
+    margin-top:34px;
+    display:flex;align-items:center;gap:10px;
+    font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);
+    opacity:0;
+    animation:fadeUp .9s ease .55s forwards;
+  }
+  .locbar .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none;
+    box-shadow:0 0 8px 1px #b6905c80;
+  }
+
+  .hero-cta{
+    margin-top:46px;
+    display:flex;gap:16px;flex-wrap:wrap;
+    opacity:0;
+    animation:fadeUp .9s ease .7s forwards;
+  }
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:14px 24px;
+    font-size:12.5px;letter-spacing:.09em;text-transform:uppercase;
+    border-radius:2px;
+    transition:all .25s ease;
+  }
+  .btn-primary{
+    background:var(--accent);color:#0a0a0b;font-weight:600;
+  }
+  .btn-primary:hover{background:#c9a06d;transform:translateY(-1px);}
+  .btn-ghost{
+    border:1px solid var(--line-strong);color:var(--text);
+  }
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+
+  @keyframes fadeUp{
+    from{opacity:0;transform:translateY(16px);}
+    to{opacity:1;transform:translateY(0);}
+  }
+
+  /* ---------- SECTION SHELL ---------- */
+  section{
+    padding:86px 0;
+    border-top:1px solid var(--line);
+    position:relative;
+  }
+  .sec-head{
+    display:flex;align-items:baseline;gap:18px;margin-bottom:48px;
+  }
+  .sec-num{
+    font-family:var(--serif);font-style:italic;font-size:15px;color:var(--accent-dim);
+    letter-spacing:.05em;
+  }
+  h2.sec-title{
+    font-family:var(--serif);font-weight:400;font-size:clamp(26px,3.4vw,36px);
+    letter-spacing:-.01em;
+  }
+  h2.sec-title em{font-style:italic;color:var(--accent);font-weight:400;}
+  .sec-sub{
+    color:var(--text-muted);font-size:14.5px;font-weight:300;max-width:520px;margin-top:14px;line-height:1.7;
+  }
+  .sec-sub.wide{max-width:none;}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease, transform .8s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  /* ---------- LEAD PARAGRAPHS ---------- */
+  .lead{
+    font-size:15.5px;color:var(--text-muted);line-height:1.9;font-weight:300;max-width:720px;
+  }
+  .lead + .lead{margin-top:20px;}
+  .lead strong{color:var(--text);font-weight:500;}
+
+  /* ---------- OFRENDA (opening consecration) ---------- */
+  .offering{
+    border:1px solid var(--line-strong);
+    background:var(--bg-alt);
+    padding:44px 40px;
+    position:relative;
+    overflow:hidden;
+  }
+  .offering::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--accent);}
+  .offering-tag{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);}
+  .offering-text{
+    font-family:var(--serif);font-style:italic;font-weight:300;
+    font-size:clamp(19px,2.6vw,25px);
+    line-height:1.65;color:var(--text);margin-top:20px;max-width:720px;
+  }
+
+  @media (max-width:640px){
+    .offering{padding:30px 24px;}
+  }
+
+  /* ---------- STAT ROW ---------- */
+  .stat-row{
+    display:flex;flex-wrap:wrap;
+    margin-top:52px;
+    border-top:1px solid var(--line-strong);
+    border-bottom:1px solid var(--line-strong);
+  }
+  .stat-item{flex:1 1 140px;padding:26px 26px 26px 0;}
+  .stat-item + .stat-item{border-left:1px solid var(--line-strong);padding-left:26px;}
+  .stat-num{font-family:var(--serif);font-size:34px;color:var(--accent);line-height:1;}
+  .stat-label{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin-top:10px;}
+
+  @media (max-width:640px){
+    .stat-item{flex:1 1 45%;border-left:none !important;padding-left:0 !important;}
+  }
+
+  /* ---------- HORIZON INDEX CARDS ---------- */
+  .eco-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:1px;
+    background:var(--line-strong);
+    border:1px solid var(--line-strong);
+  }
+  .eco-card{
+    background:var(--bg-alt);
+    padding:34px 30px;
+    display:block;
+    transition:background .3s ease, transform .3s ease;
+  }
+  .eco-card:hover{background:var(--bg-card);transform:translateY(-2px);}
+  .eco-code{
+    font-family:var(--serif);font-style:italic;font-size:13px;color:var(--accent);
+    letter-spacing:.06em;
+  }
+  .eco-name{
+    font-family:var(--serif);font-size:21px;margin-top:10px;font-weight:400;
+  }
+  .eco-desc{
+    color:var(--text-muted);font-size:13.5px;margin-top:10px;line-height:1.65;font-weight:300;
+  }
+  .eco-url{
+    margin-top:18px;font-size:11px;letter-spacing:.08em;color:var(--accent-dim);
+    display:flex;align-items:center;gap:8px;
+    text-transform:lowercase;
+  }
+  .eco-card:hover .eco-url{color:var(--accent);}
+  .eco-url .arrow{transition:transform .25s ease;}
+  .eco-card:hover .eco-url .arrow{transform:translateX(4px);}
+  .eco-tag{text-transform:none;}
+  .eco-card.full{grid-column:1 / -1;}
+
+  @media (max-width:640px){
+    .eco-grid{grid-template-columns:1fr;}
+    .eco-card.full{grid-column:auto;}
+  }
+
+  /* ---------- HORIZON BLOCKS ---------- */
+  .cat-block{margin-bottom:64px;scroll-margin-top:150px;}
+  .cat-block:last-child{margin-bottom:0;}
+  .cat-header{
+    display:flex;align-items:baseline;gap:16px;
+    margin-bottom:26px;padding-bottom:18px;
+    border-bottom:1px solid var(--line-strong);
+    flex-wrap:wrap;
+  }
+  .cat-letter{
+    font-family:var(--serif);font-style:italic;font-size:26px;color:var(--accent);flex:none;
+  }
+  .cat-titlewrap{flex:1;min-width:200px;}
+  .cat-title{font-family:var(--serif);font-size:19px;font-weight:400;color:var(--text);}
+  .cat-gloss{font-size:13px;color:var(--text-muted);font-weight:300;margin-top:6px;line-height:1.65;max-width:560px;}
+  .cat-count{
+    font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);
+    flex:none;
+  }
+
+  /* ---------- GOAL CARDS ---------- */
+  .goal-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(255px,1fr));
+    gap:14px;
+  }
+  .goal{
+    background:var(--bg-alt);
+    border:1px solid var(--line-strong);
+    border-left:2px solid var(--accent-dim);
+    padding:28px 26px;
+    transition:background .3s ease, border-left-color .3s ease, transform .3s ease;
+  }
+  .goal:hover{background:var(--bg-card);border-left-color:var(--accent);transform:translateY(-2px);}
+  .goal-role{
+    font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);
+    font-weight:500;
+  }
+  .goal-name{
+    font-family:var(--serif);font-size:22px;font-weight:400;color:var(--text);
+    margin-top:12px;line-height:1.25;
+  }
+  .goal-desc{
+    color:var(--text-muted);font-size:13.5px;line-height:1.8;font-weight:300;margin-top:12px;
+  }
+  .goal-projects{
+    margin-top:18px;display:flex;flex-wrap:wrap;gap:7px;
+  }
+  .goal-chip{
+    font-size:10.5px;letter-spacing:.04em;color:var(--text-muted);
+    border:1px solid var(--line-strong);border-radius:32px;
+    padding:5px 11px;white-space:nowrap;
+    transition:all .25s ease;
+  }
+  .goal:hover .goal-chip{border-color:var(--accent-dim);color:var(--text);}
+
+  /* ---------- PRAYER ---------- */
+  .prayer{
+    border-top:1px solid var(--line-strong);
+    border-bottom:1px solid var(--line-strong);
+    padding:52px 0;
+    text-align:center;
+  }
+  .prayer p{
+    font-family:var(--serif);font-style:italic;font-weight:300;
+    font-size:clamp(18px,2.4vw,26px);
+    line-height:1.6;color:var(--text);
+    max-width:none;margin:0 auto;
+    text-wrap:balance;
+  }
+  .prayer p + p{margin-top:26px;color:var(--text-muted);font-size:clamp(16px,2vw,21px);}
+  .prayer-rule{width:30px;height:1px;background:var(--accent);margin:0 auto 30px;}
+  .prayer p.prayer-amdg{
+    margin-top:38px;font-family:var(--serif);font-style:italic;font-size:14px;color:var(--accent);
+    letter-spacing:.04em;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    padding:70px 0 46px;
+    border-top:1px solid var(--line);
+  }
+  .footer-brand{
+    font-family:var(--serif);font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted);
+  }
+  .footer-tagline{
+    font-family:var(--serif);font-style:italic;font-size:19px;color:var(--text);margin-top:14px;
+  }
+  .footer-role{
+    margin-top:22px;font-size:13px;color:var(--text-muted);
+  }
+  .footer-role strong{color:var(--text);font-weight:500;}
+  .footer-contacts{
+    margin-top:10px;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--text-muted);
+  }
+  .footer-contacts a:hover{color:var(--accent);}
+  .footer-bottom{
+    margin-top:40px;padding-top:22px;border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;
+  }
+  .copyright{font-size:11.5px;color:var(--text-dim);letter-spacing:.04em;}
+  .footer-en{
+    font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);
+    border:1px solid var(--line-strong);padding:7px 14px;border-radius:2px;
+  }
+  .footer-en:hover{color:var(--accent);border-color:var(--accent);}
+  .footer-admg-rule{width:28px;height:1px;background:var(--accent-dim);margin-top:30px;}
+  .footer-admg{
+    margin-top:16px;font-family:var(--serif);font-style:italic;font-size:13.5px;
+    color:var(--accent);letter-spacing:.02em;
+  }
+
+  @media (max-width:640px){
+    header.hero{padding:56px 0 60px;}
+    section{padding:60px 0;}
+    nav.topbar .inner{padding:16px 20px;}
+    .nav-links{gap:12px 16px;width:100%;}
+    .nav-links a{font-size:11px;}
+    .nav-links a.en{margin-left:auto;}
+    .brandmark{font-size:13px;}
+    .footer-bottom{flex-direction:column;align-items:flex-start;}
+    .goal{padding:24px 22px;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}
+  }
+
+  /* brandmark → volver arriba */
+  .topbar .brandmark{cursor:pointer;-webkit-tap-highlight-color:transparent;}
+  .topbar .brandmark *{cursor:pointer;}
+  .topbar .brandmark:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:2px;}
+
+  /* ================= MIS NUDOS — additions ================= */
+  html{scroll-padding-top:110px;}
+
+  /* ---------- HERO with shrine ---------- */
+  header.hero{padding:96px 0 96px;overflow:hidden;}
+  .hero-grid{
+    display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);
+    gap:56px;align-items:center;
+  }
+  .hero-text p.roles{max-width:520px;}
+
+  /* shrine = spotlight + glow + arched niche */
+  .shrine{
+    position:relative;margin:0;
+    display:flex;flex-direction:column;align-items:center;
+    opacity:0;animation:shrineIn 1.6s ease .35s forwards;
+  }
+  .shrine-beam{
+    position:absolute;left:50%;top:-150px;
+    width:150%;height:calc(100% + 110px);
+    transform:translateX(-50%);
+    background:linear-gradient(180deg,#fff3dc2e 0%,#f3dcb01a 38%,#b6905c08 75%,transparent 100%);
+    clip-path:polygon(43% 0,57% 0,100% 100%,0 100%);
+    filter:blur(14px);
+    pointer-events:none;z-index:0;
+  }
+  .shrine-glow{
+    position:absolute;left:50%;top:44%;
+    width:125%;aspect-ratio:1;
+    transform:translate(-50%,-50%);
+    background:radial-gradient(circle,#d9b57a40 0%,#b6905c1c 34%,transparent 66%);
+    pointer-events:none;z-index:0;
+    animation:candle 7s ease-in-out infinite;
+  }
+  .niche{
+    position:relative;z-index:1;
+    width:100%;max-width:360px;
+    border-radius:999px 999px 6px 6px;
+    padding:46px 30px 22px;
+    background:
+      radial-gradient(ellipse 62% 46% at 50% 30%,#fffdf7 0%,#f7efdf 46%,#e7d8bb 78%,#cdb78f 100%);
+    border:1px solid var(--accent);
+    box-shadow:
+      0 0 0 7px #0a0a0b,
+      0 0 0 8px #7d6743,
+      0 40px 90px -30px #000,
+      0 0 140px -20px #d9b57a66;
+    overflow:hidden;
+  }
+  .niche::after{ /* soft top-light vignette */
+    content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+    box-shadow:inset 0 -40px 60px -30px #8a6a3a55, inset 0 0 0 1px #ffffff40;
+  }
+  .niche img{
+    display:block;width:100%;height:auto;
+    mix-blend-mode:multiply;
+    position:relative;
+  }
+  .shrine figcaption{
+    position:relative;z-index:1;
+    margin-top:30px;text-align:center;
+    display:flex;flex-direction:column;gap:6px;
+  }
+  .shrine-name{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--text);letter-spacing:.01em;}
+  .shrine-sub{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);}
+
+  @keyframes shrineIn{from{opacity:0;transform:translateY(18px) scale(.985);}to{opacity:1;transform:none;}}
+  @keyframes candle{
+    0%,100%{opacity:.85;transform:translate(-50%,-50%) scale(1);}
+    45%{opacity:1;transform:translate(-50%,-50%) scale(1.04);}
+    70%{opacity:.9;transform:translate(-50%,-50%) scale(1.01);}
+  }
+
+  @media (max-width:820px){
+    .hero-grid{grid-template-columns:1fr;gap:56px;}
+    .shrine{order:-1;}
+    .niche{max-width:270px;}
+    .shrine-beam{top:-120px;}
+  }
+
+  /* ---------- small headings / labels ---------- */
+  .mini-head{
+    font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);
+    font-weight:500;margin-bottom:18px;
+  }
+  .struct-label{
+    display:block;
+    font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);
+    margin:-20px 0 18px;
+  }
+
+  /* ---------- KNOT CARDS ---------- */
+  .knot-grid{
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;
+  }
+  .knot-grid > .knot:last-child:nth-child(odd){grid-column:1 / -1;}
+  .knot{
+    position:relative;
+    background:var(--bg-alt);
+    border:1px solid var(--line-strong);
+    border-left:2px solid var(--accent-dim);
+    padding:28px 28px 22px;
+    display:flex;flex-direction:column;
+    scroll-margin-top:120px;
+    transition:background .3s ease,border-color .3s ease,transform .3s ease,box-shadow .4s ease;
+  }
+  .knot:hover{background:var(--bg-card);border-left-color:var(--accent);transform:translateY(-2px);}
+  .knot-top{display:flex;align-items:center;justify-content:space-between;gap:12px;}
+  .knot-num{
+    font-family:var(--serif);font-style:italic;font-size:14px;color:var(--accent);letter-spacing:.06em;
+  }
+  .knot-flag{
+    font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:#0a0a0b;
+    background:var(--accent);padding:4px 9px;border-radius:2px;
+    opacity:0;transform:translateY(-3px);transition:opacity .35s ease,transform .35s ease;
+    white-space:nowrap;
+  }
+  .knot-title{
+    font-family:var(--serif);font-size:20px;font-weight:400;color:var(--text);
+    margin-top:12px;line-height:1.3;
+  }
+  .knot-text{
+    font-family:var(--serif);font-weight:300;font-size:15.5px;line-height:1.85;
+    color:#cdc7bb;margin-top:14px;flex:1;
+  }
+  .knot-text em{font-style:italic;color:var(--accent);}
+  .knot-mark{
+    align-self:flex-start;margin-top:20px;
+    display:inline-flex;align-items:center;gap:9px;
+    background:none;border:0;padding:4px 0;cursor:pointer;
+    font-family:var(--sans);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--text-dim);transition:color .25s ease;
+  }
+  .knot-mark .ring{
+    width:11px;height:11px;border-radius:50%;border:1px solid currentColor;flex:none;
+    transition:background .25s ease,box-shadow .25s ease;
+  }
+  .knot:hover .knot-mark{color:var(--text-muted);}
+  .knot-mark:hover{color:var(--accent) !important;}
+  .knot.is-center{
+    border-color:var(--accent);border-left-color:var(--accent);
+    background:linear-gradient(160deg,#b6905c14,var(--bg-alt) 60%);
+    box-shadow:0 0 0 1px #b6905c40,0 20px 60px -30px #b6905c66;
+  }
+  .knot.is-center .knot-flag{opacity:1;transform:none;}
+  .knot.is-center .knot-mark{color:var(--accent);}
+  .knot.is-center .knot-mark .ring{background:var(--accent);box-shadow:0 0 8px 1px #b6905c80;}
+
+  @media (max-width:720px){
+    .knot-grid{grid-template-columns:1fr;}
+    .knot-grid > .knot:last-child:nth-child(odd){grid-column:auto;}
+    .knot{padding:24px 22px 20px;}
+  }
+
+  /* ---------- THREAD (synthesis) ---------- */
+  .thread{
+    list-style:none;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));
+    position:relative;padding-top:6px;
+  }
+  .thread::before{
+    content:'';position:absolute;left:8%;right:8%;top:14px;height:1px;
+    background:linear-gradient(90deg,transparent,var(--accent-dim) 8%,var(--accent) 50%,var(--accent-dim) 92%,transparent);
+  }
+  .thread li{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 6px;position:relative;}
+  .t-dot{
+    width:17px;height:17px;border-radius:50%;
+    border:1px solid var(--accent);background:var(--bg);
+    box-shadow:0 0 0 4px var(--bg);
+    position:relative;
+  }
+  .t-dot::after{content:'';position:absolute;inset:4px;border-radius:50%;background:var(--accent);opacity:.75;}
+  .t-num{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--accent);margin-top:16px;}
+  .t-name{font-family:var(--serif);font-size:16px;color:var(--text);margin-top:6px;line-height:1.3;}
+  .t-frag{font-size:11.5px;color:var(--text-muted);font-weight:300;margin-top:8px;line-height:1.55;}
+  @media (max-width:760px){
+    .thread{grid-template-columns:1fr;gap:22px;padding-left:4px;}
+    .thread::before{left:12px;right:auto;top:8px;bottom:8px;width:1px;height:auto;
+      background:linear-gradient(180deg,transparent,var(--accent) 10%,var(--accent) 90%,transparent);}
+    .thread li{display:grid;grid-template-columns:26px auto 1fr;grid-template-rows:auto auto;column-gap:14px;text-align:left;align-items:baseline;padding:0;}
+    .t-dot{grid-row:1 / span 2;align-self:start;margin-top:2px;}
+    .t-num{margin-top:0;}
+    .t-name{margin-top:0;}
+    .t-frag{grid-column:2 / -1;margin-top:4px;}
+  }
+
+  /* ---------- LITANY (prayer to Our Lady) ---------- */
+  .sec-prayer{overflow:hidden;background:radial-gradient(ellipse 700px 520px at 50% 22%,#b6905c0d,transparent 70%);}
+  .litany{
+    border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong);
+    padding:64px 0 58px;text-align:center;
+  }
+  .shrine.sm{opacity:1;animation:none;margin:0 auto 40px;}
+  .shrine.sm .niche{max-width:210px;padding:30px 18px 14px;box-shadow:0 0 0 5px #0a0a0b,0 0 0 6px #7d6743,0 30px 70px -30px #000,0 0 110px -20px #d9b57a66;}
+  .litany-title{
+    font-family:var(--serif);font-weight:400;font-size:clamp(21px,2.8vw,28px);color:var(--text);
+    margin-bottom:28px;text-wrap:balance;
+  }
+  .litany p{
+    font-family:var(--serif);font-weight:300;
+    font-size:clamp(16.5px,2vw,19px);line-height:1.85;color:#d6d0c4;
+    max-width:660px;margin:0 auto;text-wrap:pretty;
+  }
+  .litany p + p{margin-top:22px;}
+  .litany p.invocation{
+    font-style:italic;font-weight:400;color:var(--accent);
+    font-size:clamp(19px,2.5vw,24px);line-height:1.6;
+    margin-top:40px;padding:30px 0;
+    border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong);
+    text-wrap:balance;
+  }
+  .litany p.invocation + p{margin-top:30px;}
+  .litany p.amen{
+    margin-top:30px;font-style:italic;font-size:18px;color:var(--accent);letter-spacing:.04em;
+  }
+
+  /* ---------- REFLECTION ---------- */
+  .offering.question{margin-top:48px;}
+  .center-card{
+    margin-top:40px;border:1px dashed var(--line-strong);padding:26px 28px;
+  }
+  .cc-label{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);}
+  .cc-empty{font-size:13.5px;color:var(--text-muted);font-weight:300;line-height:1.7;margin-top:12px;max-width:620px;}
+  .cc-knot{margin-top:14px;}
+  .cc-num{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--accent);}
+  .cc-title{font-family:var(--serif);font-size:22px;color:var(--text);margin-top:6px;line-height:1.3;}
+  .cc-actions{margin-top:16px;display:flex;gap:20px;flex-wrap:wrap;}
+  .cc-actions a,.cc-actions button{
+    font-family:var(--sans);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--text-muted);background:none;border:0;cursor:pointer;padding:0;
+    transition:color .25s ease;
+  }
+  .cc-actions a:hover,.cc-actions button:hover{color:var(--accent);}
+  .center-card.has{border-style:solid;border-color:var(--accent-dim);background:linear-gradient(160deg,#b6905c10,transparent 70%);}
+
+  .prayer.closing{margin-top:56px;}
+  .prayer.closing p{max-width:760px;font-size:clamp(18px,2.3vw,24px);}
+
+  /* ---------- EXAMINATION ---------- */
+  .exam{list-style:none;border-top:1px solid var(--line-strong);}
+  .exam li{
+    display:grid;grid-template-columns:52px 1fr;gap:18px;align-items:baseline;
+    padding:24px 0;border-bottom:1px solid var(--line-strong);
+    transition:background .3s ease;
+  }
+  .exam li:hover{background:#ffffff03;}
+  .q-num{font-family:var(--serif);font-style:italic;font-size:26px;color:var(--accent);line-height:1;}
+  .exam p{font-family:var(--serif);font-weight:300;font-size:clamp(17px,2vw,19.5px);line-height:1.6;color:var(--text);}
+  .criterio{
+    margin-top:44px;padding:26px 28px;background:var(--bg-alt);border:1px solid var(--line-strong);
+  }
+  .criterio p{font-size:13.5px;color:var(--text-muted);font-weight:300;line-height:1.8;margin-top:12px;max-width:720px;}
+
+  @media (max-width:640px){
+    header.hero{padding:56px 0 70px;}
+    .exam li{grid-template-columns:36px 1fr;gap:12px;}
+    .center-card,.criterio{padding:22px 20px;}
+    .litany{padding:48px 0 44px;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .shrine{opacity:1;animation:none;}
+    .shrine-glow{animation:none;}
+  }
+
+</style>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mis Nudos — Mario Garza Livas">
+<meta name="twitter:description" content="Mapa personal de oración, conversión y discernimiento. Veintidós nudos, seis dimensiones, una sola intercesora.">
+<meta name="twitter:image" content="https://metanoiagroup.vip/og-image-1.jpg">
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KHNZVPJX1N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KHNZVPJX1N');
+</script>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="inner">
+    <div class="brandmark">MARIO GARZA LIVAS <span>· MIS NUDOS</span></div>
+    <div class="nav-links">
+      <a href="#nudos">Los 22 nudos</a>
+      <a href="#oracion">Oración</a>
+      <a href="#reflexion">Reflexión</a>
+      <a href="mi-camino.html">Mi Camino</a>
+      <a href="mi-compas.html">Mi Compás</a>
+      <a class="box" href="../mgl1.html">MGL</a>
+      <a class="en" href="my-knots.html">English</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <p class="eyebrow">Personal · Mis Nudos</p>
+        <h1 class="name">Mis Nudos<em>Mapa personal de oración, conversión y discernimiento</em></h1>
+        <p class="roles">
+          Mario Garza Livas<br><span class="sep">·</span>Veintidós nudos<br><span class="sep">·</span>Seis dimensiones<br><span class="sep">·</span>Una sola intercesora
+        </p>
+        <div class="locbar"><span class="dot"></span>Monterrey, México · Bajo el amparo de María</div>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#nudos">Ver los veintidós nudos</a>
+          <a class="btn btn-ghost" href="#oracion">Rezar la oración</a>
+          <a class="btn btn-ghost" href="mi-compas.html">Mi Compás</a>
+        </div>
+      </div>
+      <figure class="shrine">
+        <div class="shrine-beam" aria-hidden="true"></div>
+        <div class="shrine-glow" aria-hidden="true"></div>
+        <div class="niche">
+          <img src="data:image/webp;base64,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" width="570" height="806" alt="Imagen de Santa María Desatadora de Nudos: la Virgen desata un listón lleno de nudos que le entregan dos ángeles, de pie sobre la luna y aplastando a la serpiente." fetchpriority="high">
+        </div>
+        <figcaption>
+          <span class="shrine-name">Santa María Desatadora de Nudos</span>
+          <span class="shrine-sub">Ora pro nobis</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</header>
+
+<section id="proposito">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">I</span>
+      <div>
+        <h2 class="sec-title">El <em>propósito</em></h2>
+        <p class="sec-sub">Un mapa para la oración concreta y para mirar la propia vida delante de Dios.</p>
+      </div>
+    </div>
+
+    <div class="offering reveal">
+      <div class="offering-tag">Para qué sirve este mapa</div>
+      <p class="offering-text">“Una guía para presentar a Dios las intenciones personales, reconocer las dimensiones de la propia vida y orientar las decisiones hacia su voluntad.”</p>
+    </div>
+
+    <div class="reveal" style="margin-top:44px;">
+      <h3 class="mini-head">Propósito del documento</h3>
+      <p class="lead">Este documento reúne veintidós peticiones personales dirigidas a la intercesión de Santa María Desatadora de Nudos. Su propósito es doble: servir como apoyo para la oración concreta y ofrecer un mapa organizado de las principales dimensiones de la vida que se desean poner delante de Dios.</p>
+      <p class="lead">Las peticiones se conservan íntegramente, sin modificar su redacción. La organización temática no pretende establecer un diagnóstico ni determinar una única interpretación de la experiencia personal; busca hacer visibles las relaciones entre conversión, carácter, confianza, vocación, familia e historia personal.</p>
+    </div>
+
+    <div class="stat-row reveal">
+      <div class="stat-item">
+        <div class="stat-num">22</div>
+        <div class="stat-label">Nudos</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">6</div>
+        <div class="stat-label">Dimensiones</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">7</div>
+        <div class="stat-label">Preguntas de examen</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">1</div>
+        <div class="stat-label">Sola intercesora</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="dimensiones">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">II</span>
+      <div>
+        <h2 class="sec-title">Las seis <em>dimensiones</em></h2>
+        <p class="sec-sub">Estructura general: cada dimensión agrupa los nudos que comparten una misma raíz.</p>
+      </div>
+    </div>
+    <p class="struct-label reveal">Estructura general</p>
+    <div class="eco-grid reveal">
+      <a class="eco-card" href="#dimension-i">
+        <div class="eco-code">Dimensión I</div>
+        <div class="eco-name">Conversión y unión con Dios</div>
+        <p class="eco-desc">Identidad espiritual, consagración, virtudes, Espíritu Santo, perseverancia y docilidad a la gracia.</p>
+        <div class="eco-url"><span class="eco-tag">7 nudos · 1–7</span> <span class="arrow">→</span></div>
+      </a>
+      <a class="eco-card" href="#dimension-ii">
+        <div class="eco-code">Dimensión II</div>
+        <div class="eco-name">Carácter, voluntad y capacidad de actuar</div>
+        <p class="eco-desc">Disciplina, constancia, responsabilidad, diligencia y coherencia entre intención y acción.</p>
+        <div class="eco-url"><span class="eco-tag">4 nudos · 8–11</span> <span class="arrow">→</span></div>
+      </a>
+      <a class="eco-card" href="#dimension-iii">
+        <div class="eco-code">Dimensión III</div>
+        <div class="eco-name">Confianza en Dios y libertad interior</div>
+        <p class="eco-desc">Providencia, humildad, gratitud, sobriedad y reconocimiento de las verdaderas riquezas.</p>
+        <div class="eco-url"><span class="eco-tag">3 nudos · 12–14</span> <span class="arrow">→</span></div>
+      </a>
+      <a class="eco-card" href="#dimension-iv">
+        <div class="eco-code">Dimensión IV</div>
+        <div class="eco-name">Vocación, trabajo y administración de los recursos</div>
+        <p class="eco-desc">Sustento digno, desarrollo de talentos, apostolado y administración fiel.</p>
+        <div class="eco-url"><span class="eco-tag">3 nudos · 15–17</span> <span class="arrow">→</span></div>
+      </a>
+      <a class="eco-card" href="#dimension-v">
+        <div class="eco-code">Dimensión V</div>
+        <div class="eco-name">Familia y responsabilidad de custodiar a los propios</div>
+        <p class="eco-desc">Amor, paternidad, matrimonio, provisión y cumplimiento de los deberes familiares.</p>
+        <div class="eco-url"><span class="eco-tag">2 nudos · 18–19</span> <span class="arrow">→</span></div>
+      </a>
+      <a class="eco-card" href="#dimension-vi">
+        <div class="eco-code">Dimensión VI</div>
+        <div class="eco-name">Historia, heridas y dirección de vida</div>
+        <p class="eco-desc">Redención de la historia, sanación, cruces, discernimiento y fidelidad al Camino y al Compás.</p>
+        <div class="eco-url"><span class="eco-tag">3 nudos · 20–22</span> <span class="arrow">→</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="nudos">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">III</span>
+      <div>
+        <h2 class="sec-title">Los veintidós <em>nudos</em></h2>
+        <p class="sec-sub">Cada nudo conserva íntegra su petición. Los títulos y agrupaciones solo facilitan su consulta.</p>
+      </div>
+    </div>
+
+    <div class="cat-block reveal" id="dimension-i">
+      <div class="cat-header">
+        <span class="cat-letter">I</span>
+        <div class="cat-titlewrap">
+          <div class="cat-title">La raíz: mi conversión y mi unión con Dios</div>
+          <p class="cat-gloss">Esta dimensión reúne el deseo de una transformación interior profunda. La conversión no se limita a modificar conductas: comprende la consagración de la propia vida a Cristo, la formación del carácter, la vida de las virtudes, la apertura a la gracia y la perseverancia en el bien.</p>
+        </div>
+        <span class="cat-count">7 nudos</span>
+      </div>
+      <div class="knot-grid">
+        <article class="knot" id="nudo-1" data-knot="1">
+          <div class="knot-top"><span class="knot-num">Nudo 01</span><span class="knot-flag">En el centro de los demás</span></div>
+          <h3 class="knot-title">La consagración y reconsagración de mi vida a Jesucristo</h3>
+          <p class="knot-text"><em>Intercede por mí</em> para que Dios me conceda la lucidez y el discernimiento necesarios para consagrar cada dimensión de mi vida a Jesucristo y reconsagrar cuanto, habiendo sido profanado, ensuciado o desviado, pueda ser restaurado y devuelto a su divina voluntad y mayor gloria.</p>
+          <button class="knot-mark" type="button" aria-pressed="false" data-off="Marcar como nudo central" data-on="Nudo central"><span class="ring" aria-hidden="true"></span><span class="lbl">Marcar como nudo central</span></button>
+        </article>
+        <article class="knot" id="nudo-2" data-knot="2">
+          <div class="knot-top"><span class="knot-num">Nudo 02</span><span class="knot-flag">En el centro de los demás</span></div>
+          <h3 class="knot-title">Mi metanoia y transformación</h3>
+          <p class="knot-text"><em>Intercede por mí</em> para que Dios consolide y lleve a plenitud mi metanoia, mi conversión, mi transformación, concediéndome discernimiento para reconocer sus señales y fortaleza para hacer mi parte, confiando en que Él hará el resto, para mayor gloria suya.</p>
+          <button class="knot-mark" type="button" aria-pressed="false" data-off="Marcar como nudo central" data-on="Nudo central"><span class="ring" aria-hidden="true"></span><span class="lbl">Marcar como nudo central</span></button>
+        </article>
+        <article class="knot" id="nudo-3" data-knot="3">
+          <div class="knot-top"><span class="knot-num">Nudo 03</span><span class="knot-flag">En el centro de los demás</span></div>
+          <h3 class="knot-title">Las virtudes teologales: fe, esperanza y caridad</h3>
+          <p class="knot-text"><em>Intercede por mí</em> para que la Fe me guíe, la Esperanza me sostenga y la Caridad me mueva a amar como Cristo. Que estas tres virtudes orienten mi vida hacia Dios, me fortalezcan ante toda adversidad y me enseñen a vivir para amar, servir y alcanzar la vida eterna.</p>
+          <button class="knot-mark" type="button" aria-pressed="false" data-off="Marcar como nudo central" data-on="Nudo central"><span class="ring" aria-hidden="true"></span><span class="lbl">Marcar como nudo central</span></button>
+        </article>
+        <article class="knot" id="nudo-4" data-knot="4">
+          <div class="knot-top"><span class="knot-num">Nudo 04</span><span class="knot-flag">En el centro de los demás</span></div>
+          <h3 class="knot-title">Las virtudes cardinales: prudencia, justicia, fortaleza y templanza</h3>
+          <p class="knot-text"><em>Intercede por mí</em> para que la Prudencia guíe mis decisiones, la Justicia rija mis actos, la Fortaleza me sostenga ante la adversidad y la Templanza gobierne mis deseos. Que estas cuatro virtudes ordenen mi carácter, afiancen mi voluntad y me enseñen a elegir siempre el bien, con rectitud, firmeza y sabiduría, para mayor gloria de Dios.</p>
+          <button class="knot-mark" type="button" aria-pressed="false" data-off="Marcar como nudo central" data-on="Nudo central"><span class="ring" aria-hidden="true"></span><span class="lbl">Marcar como nudo central</span></button>
+        </article>
+        <article class="knot" id="nudo-5" data-knot="5">
+          <div class="knot-top"><span class="knot-num">Nudo 05</span><span class="knot-flag">En el centro de los demás</span></div>
+          <h3 class="knot-title">La gracia del Espíritu Santo y sus dones</h3>
+          <p class="knot-text"><em>Intercede por mí</em> para que el Espíritu Santo, recibido en mi Confirmación, renueve en mí la gracia de Pentecostés, avive sus dones y me conceda los talentos, virtudes y carismas necesarios para discernir y cumplir la voluntad de Dios, vivir mi vocación y obrar siempre para mayor gloria suya.</p>
+          <button class="knot-mark" type="button" aria-pressed="false" data-off="Marcar como nudo central" data-on="Nudo central"><span class="ring" aria-hidden="true"></span><span class="lbl">Marcar como nudo central</span></button>
+        </article>
+        <article class="knot" id="nudo-6" data-knot="6">
+          <div class="knot-top"><span class="knot-num">Nudo 06</span><span class="knot-flag">En el centro de los demás</span></div>
+          <h3 class="knot-title">La perseverancia en el bien y el regreso a la gracia</h3>
+          <p class="knot-text"><em>Intercede por mí</em> para que Dios me fortalezca contra el pecado y me haga perseverar en el bien. Que, cuando mis debilidades me venzan, no me hunda en el pecado, sino que me conceda arrepentimiento, determinación para volver a su gracia y fortaleza para levantarme y retomar el rumbo hacia su divina voluntad y mayor gloria.</p>
+          <button class="knot-mark" type="button" aria-pressed="false" data-off="Marcar como nudo central" data-on="Nudo central"><span class="ring" aria-hidden="true"></span><span class="lbl">Marcar como nudo central</span></button>
+        </article>
+        <article class="knot" id="nudo-7" data-knot="7">
+          <div class="knot-top"><span class="knot-num">Nudo 07</span><span class="knot-flag">En el centro de los demás</span></div>
+          <h3 class="knot-title">La docilidad a la gracia y la transformación en Cristo</h3>
+          <p class="knot-text"><em>Intercede por mí</em> para que Dios me vacíe de todo cuanto me aleja de Él y me haga dócil a su gracia, libre de resistencias e indisposiciones, para que mi vida sea instrumento de su voluntad, reflejo de su amor y camino de unión con Él, hasta ser transformado a imagen de Cristo y obrar siempre para su mayor gloria.</p>
+          <button class="knot-mark" type="button" aria-pressed="false" data-off="Marcar como nudo central" data-on="Nudo central"><span class="ring" aria-hidden="true"></span><span class="lbl">Marcar como nudo central</span></button>
+        </article>
+      </div>
+    </div>
+
+    <div class="cat-block reveal" id="dimension-ii">
+      <div class="cat-header">
+        <span class="cat-letter">II</span>
+        <div class="cat-titlewrap">
+          <div class="cat-title">Mi carácter, mi voluntad y mi capacidad de actuar</div>
+          <p class="cat-gloss">Esta dimensión se refiere a convertir convicciones e intenciones en acciones sostenidas. Incluye la disciplina cotidiana, el cumplimiento de compromisos, la capacidad de afrontar dificultades y la perseverancia cuando el progreso es lento.</p>
+        </div>
+        <span class="cat-count">4 nudos</span>
+      </div>
+      <div class="knot-grid">
+        <article class="knot" id="nudo-8" data-knot="8">
+          <div class="knot-top"><span class="knot-num">Nudo 08</span><span class="knot-flag">En el centro de los demás</span></div>
+          <h3 class="knot-title">La fidelidad al proceso por encima de los resultados</h3>
+          <p class="knot-text"><em>Intercede por mí</em> para que Dios me conceda disciplina, constancia y fidelidad al proceso, priorizando la transformación de mi carácter sobre los resultados. Que nunca sacrifique quién estoy llamado a ser por lo que deseo alcanzar y que, aun sin progreso material, crezca en santidad, integridad y amor.</p>
+          <button class="knot-mark" type="button" aria-pressed="false" data-off="Marcar como nudo central" data-on="Nudo central"><span class="ring" aria-hidden="true"></span><span class="lbl">Marcar como nudo central</span></button>
+        </article>
+        <article class="knot" id="nudo-9" data-knot="9">
+          <div class="knot-top"><span class="knot-num">Nudo 09</span><span class="knot-flag">En el centro de los demás</span></div>
+          <h3 class="knot-title">La determinación para cumplir mis deberes y responsabilidades</h3>
+          <p class="knot-text"><em>Intercede por mí</em> para que Dios me conceda determinación, disciplina, perseverancia, resiliencia y una voluntad firme e incansable para cumplir mis deberes, asumir mis responsabilidades y cuidar de los míos, no por ambición propia, sino para cumplir su santa voluntad y obrar siempre para su mayor gloria.</p>
+          <button class="knot-mark" type="button" aria-pressed="false" data-off="Marcar como nudo central" data-on="Nudo central"><span class="ring" aria-hidden="true"></span><span class="lbl">Marcar como nudo central</span></button>
+        </article>
+        <article class="knot" id="nudo-10" data-knot="10">
+          <div class="knot-top"><span class="knot-num">Nudo 10</span><span class="knot-flag">En el centro de los demás</span></div>
+          <h3 class="knot-title">Vencer la procrastinación y la evasión</h3>
+          <p class="knot-text"><em>Intercede por mí</em> para que Dios me libre de la procrastinación y la evasión, y me conceda la valentía para enfrentar mis problemas, la tenacidad para perseverar y la diligencia para trabajar con disciplina, honradez y fecundidad, cumpliendo mis responsabilidades con honor y obrando siempre para su mayor gloria.</p>
+          <button class="knot-mark" type="button" aria-pressed="false" data-off="Marcar como nudo central" data-on="Nudo central"><span class="ring" aria-hidden="true"></span><span class="lbl">Marcar como nudo central</span></button>
+        </article>
+        <article class="knot" id="nudo-11" data-knot="11">
+          <div class="knot-top"><span class="knot-num">Nudo 11</span><span class="knot-flag">En el centro de los demás</span></div>
+          <h3 class="knot-title">Cumplir mi palabra y concluir lo que comienzo</h3>
+          <p class="knot-text"><em>Intercede por mí</em> para que Dios me conceda disciplina y constancia para cumplir mi palabra, honrar mis compromisos y convertir mis intenciones en acciones. Que me ayude a concluir lo que comienzo, superar mis debilidades y avanzar con determinación, siempre conforme a su voluntad y para su mayor gloria.</p>
+          <button class="knot-mark" type="button" aria-pressed="false" data-off="Marcar como nudo central" data-on="Nudo central"><span class="ring" aria-hidden="true"></span><span class="lbl">Marcar como nudo central</span></button>
+        </article>
+      </div>
+    </div>
+
+    <div class="cat-block reveal" id="dimension-iii">
+      <div class="cat-header">
+        <span class="cat-letter">III</span>
+        <div class="cat-titlewrap">
+          <div class="cat-title">Mi confianza en Dios y mi manera de vivir las bendiciones</div>
+          <p class="cat-gloss">Esta dimensión contempla la relación con lo recibido, lo que falta y aquello que no se puede controlar. Busca unir gratitud y sobriedad con una confianza activa en la Divina Providencia, sin confundir abandono con pasividad.</p>
+        </div>
+        <span class="cat-count">3 nudos</span>
+      </div>
+      <div class="knot-grid">
+        <article class="knot" id="nudo-12" data-knot="12">
+          <div class="knot-top"><span class="knot-num">Nudo 12</span><span class="knot-flag">En el centro de los demás</span></div>
+          <h3 class="knot-title">La humildad y la gratitud por lo recibido</h3>
+          <p class="knot-text"><em>Intercede por mí</em> para que Dios me conceda humildad y gratitud, y nunca me deje olvidar las bendiciones que me ha confiado. Que sepa reconocer sus dones aun en la adversidad, valorar lo que doy por sentado y recordar que lo que hoy considero una dificultad puede ser la bendición que otros anhelan.</p>
+          <button class="knot-mark" type="button" aria-pressed="false" data-off="Marcar como nudo central" data-on="Nudo central"><span class="ring" aria-hidden="true"></span><span class="lbl">Marcar como nudo central</span></button>
+        </article>
+        <article class="knot" id="nudo-13" data-knot="13">
+          <div class="knot-top"><span class="knot-num">Nudo 13</span><span class="knot-flag">En el centro de los demás</span></div>
+          <h3 class="knot-title">El abandono a la Divina Providencia</h3>
+          <p class="knot-text"><em>Intercede por mí</em> para que me abandone plenamente a la Divina Providencia, confiando en que Dios me concede a cada paso lo que verdaderamente necesito, lo entienda o no, y me enseñe a descansar siempre en su santa voluntad.</p>
+          <button class="knot-mark" type="button" aria-pressed="false" data-off="Marcar como nudo central" data-on="Nudo central"><span class="ring" aria-hidden="true"></span><span class="lbl">Marcar como nudo central</span></button>
+        </article>
+        <article class="knot" id="nudo-14" data-knot="14">
+          <div class="knot-top"><span class="knot-num">Nudo 14</span><span class="knot-flag">En el centro de los demás</span></div>
+          <h3 class="knot-title">Reconocer las verdaderas riquezas de la vida</h3>
+          <p class="knot-text"><em>Intercede por mí</em> para que Dios me conceda discernimiento para reconocer y atesorar las verdaderas riquezas de la vida: el amor de los míos, las experiencias que enriquecen el alma y la belleza de su creación. Que aprenda a disfrutarlas y agradecerlas siempre, para mayor gloria suya.</p>
+          <button class="knot-mark" type="button" aria-pressed="false" data-off="Marcar como nudo central" data-on="Nudo central"><span class="ring" aria-hidden="true"></span><span class="lbl">Marcar como nudo central</span></button>
+        </article>
+      </div>
+    </div>
+
+    <div class="cat-block reveal" id="dimension-iv">
+      <div class="cat-header">
+        <span class="cat-letter">IV</span>
+        <div class="cat-titlewrap">
+          <div class="cat-title">Mi vocación, mi trabajo y la administración de los recursos</div>
+          <p class="cat-gloss">Esta dimensión reúne el deseo de un sustento digno, el desarrollo de los talentos y la búsqueda de una integración entre profesión y apostolado. El trabajo se entiende como medio de provisión, desarrollo y servicio; los recursos, como bienes que deben administrarse con sobriedad y fidelidad.</p>
+        </div>
+        <span class="cat-count">3 nudos</span>
+      </div>
+      <div class="knot-grid">
+        <article class="knot" id="nudo-15" data-knot="15">
+          <div class="knot-top"><span class="knot-num">Nudo 15</span><span class="knot-flag">En el centro de los demás</span></div>
+          <h3 class="knot-title">Administrar fielmente las bendiciones y la abundancia</h3>
+          <p class="knot-text"><em>Intercede por mí</em> para que Dios forme en mí un corazón de custodio y administrador fiel de sus bendiciones. Que, si me concede abundancia, sepa vivir con sobriedad, procurar dignamente el bienestar de los míos y poner todo excedente al servicio de su obra, multiplicando los talentos y recursos recibidos para mayor gloria suya.</p>
+          <button class="knot-mark" type="button" aria-pressed="false" data-off="Marcar como nudo central" data-on="Nudo central"><span class="ring" aria-hidden="true"></span><span class="lbl">Marcar como nudo central</span></button>
+        </article>
+        <article class="knot" id="nudo-16" data-knot="16">
+          <div class="knot-top"><span class="knot-num">Nudo 16</span><span class="knot-flag">En el centro de los demás</span></div>
+          <h3 class="knot-title">Encontrar trabajo digno y honrado</h3>
+          <p class="knot-text"><em>Intercede por mí</em> para que Dios ponga en mi camino trabajo digno y honrado, bendiga mis talentos y me permita ejercerlos para su gloria. Que, mediante el fruto de mi trabajo, nunca falte lo necesario para procurar una vida digna y de calidad a mi familia y a quienes ha puesto bajo mi cuidado, siempre conforme a su divina voluntad.</p>
+          <button class="knot-mark" type="button" aria-pressed="false" data-off="Marcar como nudo central" data-on="Nudo central"><span class="ring" aria-hidden="true"></span><span class="lbl">Marcar como nudo central</span></button>
+        </article>
+        <article class="knot" id="nudo-17" data-knot="17">
+          <div class="knot-top"><span class="knot-num">Nudo 17</span><span class="knot-flag">En el centro de los demás</span></div>
+          <h3 class="knot-title">Discernir mi vocación profesional y apostólica</h3>
+          <p class="knot-text"><em>Intercede por mí</em> para que Dios ilumine mi discernimiento y me guíe hacia mi vocación profesional y apostólica. Que, si es su voluntad, ambas converjan en una sola, para sostener dignamente a los míos y, mediante mi trabajo, servir a Dios, hacer su obra y obrar siempre para su mayor gloria.</p>
+          <button class="knot-mark" type="button" aria-pressed="false" data-off="Marcar como nudo central" data-on="Nudo central"><span class="ring" aria-hidden="true"></span><span class="lbl">Marcar como nudo central</span></button>
+        </article>
+      </div>
+    </div>
+
+    <div class="cat-block reveal" id="dimension-v">
+      <div class="cat-header">
+        <span class="cat-letter">V</span>
+        <div class="cat-titlewrap">
+          <div class="cat-title">Mi familia y mi responsabilidad de custodiar a los míos</div>
+          <p class="cat-gloss">Esta dimensión sitúa el amor familiar en el centro de los deberes concretos: cuidar, formar, acompañar y proveer. También recuerda que la responsabilidad personal debe ejercerse con amor y rectitud, sin convertir el control de todos los resultados en una carga imposible.</p>
+        </div>
+        <span class="cat-count">2 nudos</span>
+      </div>
+      <div class="knot-grid">
+        <article class="knot" id="nudo-18" data-knot="18">
+          <div class="knot-top"><span class="knot-num">Nudo 18</span><span class="knot-flag">En el centro de los demás</span></div>
+          <h3 class="knot-title">El bienestar y la protección de mi familia</h3>
+          <p class="knot-text"><em>Intercede por mí</em> para que Dios bendiga y proteja a mi familia, concediéndole salud, paz, alegría y cuanto necesite. Que Dios haga fructificar mis sacrificios en gracias para su bienestar y una vida digna y plena, mientras yo vivo libre de codicia y apego material, movido siempre por el amor y conforme a su divina voluntad.</p>
+          <button class="knot-mark" type="button" aria-pressed="false" data-off="Marcar como nudo central" data-on="Nudo central"><span class="ring" aria-hidden="true"></span><span class="lbl">Marcar como nudo central</span></button>
+        </article>
+        <article class="knot" id="nudo-19" data-knot="19">
+          <div class="knot-top"><span class="knot-num">Nudo 19</span><span class="knot-flag">En el centro de los demás</span></div>
+          <h3 class="knot-title">Cumplir fielmente mis deberes familiares</h3>
+          <p class="knot-text"><em>Intercede por mí</em> para que Dios me conceda la sabiduría, fortaleza y caridad necesarias para cumplir fielmente mis deberes como esposo, padre, hijo, hermano y yerno; para guiar y formar a mi hija, proveer a los míos y custodiar a mi familia con amor, responsabilidad y rectitud, siempre conforme a su divina voluntad.</p>
+          <button class="knot-mark" type="button" aria-pressed="false" data-off="Marcar como nudo central" data-on="Nudo central"><span class="ring" aria-hidden="true"></span><span class="lbl">Marcar como nudo central</span></button>
+        </article>
+      </div>
+    </div>
+
+    <div class="cat-block reveal" id="dimension-vi">
+      <div class="cat-header">
+        <span class="cat-letter">VI</span>
+        <div class="cat-titlewrap">
+          <div class="cat-title">Mi historia, mis heridas y el rumbo de mi vida</div>
+          <p class="cat-gloss">Esta dimensión relaciona pasado, presente y futuro. Comprende el deseo de que la propia historia sea redimida, la necesidad de discernir qué cruces corresponde llevar y la disposición a corregir el rumbo cuando la conciencia y el discernimiento así lo indiquen.</p>
+        </div>
+        <span class="cat-count">3 nudos</span>
+      </div>
+      <div class="knot-grid">
+        <article class="knot" id="nudo-20" data-knot="20">
+          <div class="knot-top"><span class="knot-num">Nudo 20</span><span class="knot-flag">En el centro de los demás</span></div>
+          <h3 class="knot-title">La redención de mi historia</h3>
+          <p class="knot-text"><em>Intercede por mí</em> para que Dios tome mis cenizas, mis errores, heridas, caídas, aciertos y aprendizajes, y que, conforme a su infinita sabiduría y divina voluntad, nada de mi historia sea en vano, sino que todo sea redimido y transformado en propósito, dando paso a un nuevo capítulo de mi vida, para mayor gloria suya.</p>
+          <button class="knot-mark" type="button" aria-pressed="false" data-off="Marcar como nudo central" data-on="Nudo central"><span class="ring" aria-hidden="true"></span><span class="lbl">Marcar como nudo central</span></button>
+        </article>
+        <article class="knot" id="nudo-21" data-knot="21">
+          <div class="knot-top"><span class="knot-num">Nudo 21</span><span class="knot-flag">En el centro de los demás</span></div>
+          <h3 class="knot-title">Mis cruces y las heridas familiares, especialmente las relacionadas con mi padre</h3>
+          <p class="knot-text"><em>Intercede por mí</em> para que Dios me conceda discernir las cruces que me corresponde llevar y la fortaleza para asumirlas con dignidad y valentía cristiana. Sana mis heridas familiares, especialmente las relacionadas con mi padre, y ayúdame a reconciliar mi pasado, honrar mis cicatrices y aceptar las cruces que Dios disponga.</p>
+          <button class="knot-mark" type="button" aria-pressed="false" data-off="Marcar como nudo central" data-on="Nudo central"><span class="ring" aria-hidden="true"></span><span class="lbl">Marcar como nudo central</span></button>
+        </article>
+        <article class="knot" id="nudo-22" data-knot="22">
+          <div class="knot-top"><span class="knot-num">Nudo 22</span><span class="knot-flag">En el centro de los demás</span></div>
+          <h3 class="knot-title">Mi Camino y mi Compás</h3>
+          <p class="knot-text"><em>Intercede por mí</em> para que Dios ilumine mi discernimiento y mantenga mi Camino y mi Compás alineados con su santa voluntad. Dame claridad para perseverar cuando voy por el rumbo correcto, humildad para corregirlo cuando me desvíe y docilidad para cambiarlo cuando Dios me llame a otro destino, siempre para su mayor gloria.</p>
+          <button class="knot-mark" type="button" aria-pressed="false" data-off="Marcar como nudo central" data-on="Nudo central"><span class="ring" aria-hidden="true"></span><span class="lbl">Marcar como nudo central</span></button>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sintesis">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">IV</span>
+      <div>
+        <h2 class="sec-title">Una sola vida, <em>seis dimensiones</em></h2>
+        <p class="sec-sub">Cómo se iluminan y se sostienen entre sí.</p>
+      </div>
+    </div>
+    <p class="struct-label reveal">Síntesis: una sola vida, seis dimensiones</p>
+    <ol class="thread reveal" aria-label="Síntesis: una sola vida, seis dimensiones">
+      <li><span class="t-dot" aria-hidden="true"></span><span class="t-num">I</span><span class="t-name">Conversión</span><span class="t-frag">ofrece el fundamento</span></li>
+      <li><span class="t-dot" aria-hidden="true"></span><span class="t-num">II</span><span class="t-name">Carácter y voluntad</span><span class="t-frag">traducir las convicciones en actos</span></li>
+      <li><span class="t-dot" aria-hidden="true"></span><span class="t-num">III</span><span class="t-name">Confianza en Dios</span><span class="t-frag">ordena la relación con los resultados</span></li>
+      <li><span class="t-dot" aria-hidden="true"></span><span class="t-num">IV</span><span class="t-name">Vocación y trabajo</span><span class="t-frag">el sustento y el servicio</span></li>
+      <li><span class="t-dot" aria-hidden="true"></span><span class="t-num">V</span><span class="t-name">Familia</span><span class="t-frag">responsabilidades cotidianas</span></li>
+      <li><span class="t-dot" aria-hidden="true"></span><span class="t-num">VI</span><span class="t-name">Historia</span><span class="t-frag">hacia el futuro con mayor libertad</span></li>
+    </ol>
+    <div class="reveal" style="margin-top:52px;">
+      <p class="lead">Las seis dimensiones se iluminan mutuamente. La conversión ofrece el fundamento; el carácter y la voluntad permiten traducir las convicciones en actos; la confianza en Dios ordena la relación con los resultados; la vocación y el trabajo orientan los talentos hacia el sustento y el servicio; la familia concreta el amor en responsabilidades cotidianas; y la reconciliación con la propia historia ayuda a caminar hacia el futuro con mayor libertad.</p>
+      <p class="lead">El propósito no es resolver los veintidós nudos simultáneamente ni medir el propio valor por la velocidad del cambio. Es reconocerlos, presentarlos en oración y responder, con la gracia de Dios, a aquello que hoy corresponde aceptar, sanar, discernir, corregir o realizar.</p>
+    </div>
+  </div>
+</section>
+
+<section id="oracion" class="sec-prayer">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">V</span>
+      <div>
+        <h2 class="sec-title">La <em>oración</em></h2>
+        <p class="sec-sub">Para poner ante ella, cada día, todos los nudos de mi vida.</p>
+      </div>
+    </div>
+
+    <div class="litany reveal">
+      <figure class="shrine sm">
+        <div class="shrine-glow" aria-hidden="true"></div>
+        <div class="niche">
+          <img src="data:image/webp;base64,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" width="570" height="806" alt="Imagen de Santa María Desatadora de Nudos: la Virgen desata un listón lleno de nudos que le entregan dos ángeles, de pie sobre la luna y aplastando a la serpiente." loading="lazy">
+        </div>
+      </figure>
+      <h3 class="litany-title">Oración a Santa María Desatadora de Nudos</h3>
+      <div class="prayer-rule"></div>
+      <p>Santa María Desatadora de Nudos, Madre de Nuestro Señor Jesucristo y Madre nuestra, hoy pongo ante ti todos los nudos de mi vida.</p>
+      <p>Te encomiendo mi conversión, mi carácter, mis debilidades, mis heridas, mis responsabilidades, mi vocación, mi trabajo, mis anhelos y mi familia.</p>
+      <p>Ayúdame a consagrar a Jesucristo cada dimensión de mi vida y a reconsagrar cuanto, habiendo sido profanado, ensuciado o desviado, pueda ser restaurado y devuelto a su divina voluntad.</p>
+      <p>Presenta ante tu Hijo mi deseo de ser transformado a su imagen. Pide para mí la gracia de una fe firme, una esperanza perseverante y una caridad sincera; un corazón humilde y agradecido, una voluntad fortalecida por la gracia y un espíritu dócil a las inspiraciones del Espíritu Santo.</p>
+      <p>Ayúdame a reconocer lo que debo cambiar, a afrontar lo que he evitado, a reparar lo que he dañado y a perseverar en el bien. Que no confunda mis deseos con la voluntad de Dios ni la confianza en su Providencia con la pasividad ante mis responsabilidades.</p>
+      <p>Intercede para que encuentre el camino por el que pueda servir a Dios, amar y proveer dignamente a mi familia, desarrollar los talentos que he recibido y poner mis bienes al servicio del bien.</p>
+      <p>Encomiendo también a mi esposa, a mi hija, a mis padres, a mi hermano y a toda mi familia. Que el Señor sane nuestras heridas, fortalezca nuestros vínculos y nos conceda vivir en paz, salud, amor y fidelidad.</p>
+      <p>Pon ante tu Hijo las cruces de mi historia, especialmente aquellas que todavía duelen. Enséñame a honrar mi pasado sin quedar prisionero de él, a reconocer mis errores sin desesperar y a recibir la misericordia de Dios con un corazón arrepentido y confiado.</p>
+      <p>Madre, cuando me falten las fuerzas, ayúdame a levantarme. Cuando pierda el rumbo, ayúdame a discernir. Cuando me sea difícil esperar, enséñame a confiar. Cuando reciba bendiciones, enséñame a agradecer. Y cuando llegue la abundancia, recuérdame que soy administrador de lo recibido, no su dueño absoluto.</p>
+      <p>No permitas que mis ambiciones pesen más que mi vocación, que mis temores pesen más que mi fe ni que mis caídas pesen más que la misericordia de Dios.</p>
+      <p>Toma entre tus manos los nudos que hoy no sé desatar y preséntalos a Jesús, el único Salvador, para que, conforme a la voluntad del Padre, Él obre en mí aquello que yo no puedo realizar por mis propias fuerzas.</p>
+      <p>Que mi Camino permanezca orientado hacia Dios y que mi Compás se mantenga fiel a su verdad. Dame humildad para corregir el rumbo, fortaleza para perseverar y amor para servir.</p>
+      <p class="invocation">Santa María Desatadora de Nudos, ruega por mí, por mi esposa, por mi hija y por toda mi familia.</p>
+      <p>Que mi vida entera sea transformada por la gracia de Dios, que todo bien recibido dé fruto y que, en todo cuanto haga, busque siempre la mayor gloria de Dios.</p>
+      <p class="amen">Amén.</p>
+    </div>
+  </div>
+</section>
+
+<section id="reflexion">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">VI</span>
+      <div>
+        <h2 class="sec-title">Una reflexión para <em>mi propio camino</em></h2>
+        <p class="sec-sub">Lo que necesito conservar en el corazón mientras recorro este proceso.</p>
+      </div>
+    </div>
+    <div class="reveal">
+      <p class="lead">Hay algo que necesito conservar en el corazón mientras recorro este proceso: no tengo que convertirme mañana en todo el hombre que deseo llegar a ser. Me corresponde responder hoy, con la gracia de Dios, al bien que ya puedo hacer.</p>
+      <p class="lead">La santidad no consiste en ejecutar perfectamente un plan personal de transformación. Consiste en aprender a amar a Dios y al prójimo con fidelidad, también cuando el progreso es lento, cuando aparecen mis debilidades y cuando la vida no se desarrolla como esperaba.</p>
+      <p class="lead">Mis responsabilidades importan. Mi disciplina importa. Mi familia importa. Mi trabajo importa. Pero mi dignidad delante de Dios no depende de alcanzar todos mis objetivos ni de demostrar que puedo con todo.</p>
+      <p class="lead">Puedo trabajar con firmeza sin vivir esclavizado por los resultados. Puedo aspirar a la abundancia sin caer en la codicia. Puedo reconocer mis errores sin reducir toda mi identidad a ellos. Y puedo confiar en la Divina Providencia mientras hago, con diligencia, aquello que me corresponde.</p>
+      <p class="lead">María no ocupa el lugar de Dios ni decide por mí: intercede por mí y me conduce a Cristo. Por eso, cada nudo que le encomiendo puede convertirse también en una invitación a dar un paso concreto de fe, responsabilidad, reconciliación o amor.</p>
+    </div>
+
+    <div class="offering question reveal">
+      <div class="offering-tag">La pregunta del centro</div>
+      <p class="offering-text">Al contemplar mis nudos, necesito preguntarme con honestidad: ¿cuál está en el centro de los demás? ¿Cuál, si Dios comenzara a desatarlo profundamente en mí, podría ayudar a que muchos de los otros empezaran a aflojarse también?</p>
+    </div>
+
+    <div class="reveal" style="margin-top:44px;">
+      <p class="lead">Quizá no sea el más doloroso ni el más urgente. Quizá sea aquel que, en el fondo de mi corazón, reconozco como la raíz de muchas de mis dificultades, resistencias o inquietudes. No necesito encontrar la respuesta perfecta de inmediato. Necesito la humildad para mirar dentro de mí con verdad, la valentía para reconocer lo que descubra y la confianza para ponerlo en manos de Dios.</p>
+    </div>
+
+    <div class="center-card reveal" id="center-card" aria-live="polite">
+      <div class="cc-label">El nudo que hoy reconozco en el centro</div>
+      <div class="cc-body" data-empty="Todavía no he marcado ninguno. En cada nudo del mapa puedo señalar el que hoy reconozco en el centro de los demás." data-go="Ir al nudo" data-clear="Quitar la marca" data-word="Nudo" data-anchor="nudo-"><p class="cc-empty">Todavía no he marcado ninguno. En cada nudo del mapa puedo señalar el que hoy reconozco en el centro de los demás.</p></div>
+    </div>
+
+    <div class="reveal" style="margin-top:44px;">
+      <p class="lead">Mi tarea no es resolver todos mis nudos de una vez, sino aprender a reconocerlos, presentarlos ante Dios y cooperar con su gracia en aquello que hoy me corresponde. Que mi transformación no se convierta en una exigencia que me robe la paz, sino en un camino de conversión que me enseñe a amar mejor.</p>
+      <p class="lead">Que no me obsesione con la distancia que todavía me separa del hombre que deseo llegar a ser, sino que aprenda a ser fiel al siguiente paso. Que no sacrifique mi presente por perseguir un futuro ideal, ni descuide a quienes amo por intentar construir una vida que considero mejor.</p>
+      <p class="lead">Que mi Camino permanezca orientado hacia Dios y que mi Compás me ayude a discernir, corregir y perseverar. Que mis esfuerzos nazcan del amor y no del miedo; de la responsabilidad y no de la culpa; de la confianza y no de la necesidad de controlarlo todo.</p>
+      <p class="lead">Y que, al final, pueda mirar mi historia y reconocer que, aun con mis caídas, mis errores, mis heridas y mis limitaciones, Dios fue obrando en mí, enseñándome a levantarme, a confiar, a servir y a amar.</p>
+      <p class="lead">No necesito tener todo resuelto para comenzar a caminar. Necesito la gracia de Dios, la disposición para cooperar con ella y la fidelidad para dar hoy el paso que me corresponde.</p>
+    </div>
+
+    <div class="prayer closing reveal">
+      <div class="prayer-rule"></div>
+      <p>Que mi vida no se mida solamente por lo que consiga, sino también por el hombre en quien me convierta, el amor que sea capaz de dar y la fidelidad con la que responda a la voluntad de Dios, para su mayor gloria.</p>
+    </div>
+  </div>
+</section>
+
+<section id="examen">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">VII</span>
+      <div>
+        <h2 class="sec-title">Preguntas para el <em>examen personal</em></h2>
+        <p class="sec-sub">Siete preguntas para volver a este mapa con honestidad.</p>
+      </div>
+    </div>
+    <ol class="exam reveal">
+      <li><span class="q-num">1</span><p>¿Qué aspecto de mi vida interior necesita hoy conversión, verdad o mayor docilidad a la gracia?</p></li>
+      <li><span class="q-num">2</span><p>¿Qué responsabilidad concreta estoy evitando y cuál sería el siguiente paso honesto para afrontarla?</p></li>
+      <li><span class="q-num">3</span><p>¿Qué bendición necesito reconocer y agradecer en las circunstancias actuales?</p></li>
+      <li><span class="q-num">4</span><p>¿Qué decisión relacionada con mi trabajo, vocación o administración de recursos requiere discernimiento?</p></li>
+      <li><span class="q-num">5</span><p>¿Qué necesita mi familia de mí en este momento, de manera concreta y realista?</p></li>
+      <li><span class="q-num">6</span><p>¿Qué herida, experiencia o circunstancia de mi historia necesita ser atendida, reconciliada o aceptada?</p></li>
+      <li><span class="q-num">7</span><p>¿Qué paso puedo dar hoy para mantener mi Camino y mi Compás alineados con la voluntad de Dios?</p></li>
+    </ol>
+
+    <div class="criterio reveal">
+      <div class="offering-tag">Criterio de lectura</div>
+      <p>Este documento es una guía personal de oración y reflexión, no un instrumento de diagnóstico ni una exigencia de perfección. Puede revisarse periódicamente, atendiendo a los cambios de la vida y al discernimiento prudente. Las peticiones originales permanecen intactas; los títulos y agrupaciones se añaden únicamente para facilitar su consulta y comprensión.</p>
+    </div>
+
+    <div class="reveal" style="margin-top:56px;">
+      <p class="lead">Si <strong>Mi Camino</strong> es hacia dónde voy y <strong>Mi Compás</strong> es con qué decido cada paso, <strong>Mis Nudos</strong> es lo que no sé desatar solo y pongo, por manos de María, delante de Cristo.</p>
+      <div class="hero-cta" style="opacity:1;animation:none;margin-top:30px;">
+        <a class="btn btn-primary" href="mi-camino.html">Ir a Mi Camino</a>
+        <a class="btn btn-ghost" href="mi-compas.html">Ir a Mi Compás</a>
+        <a class="btn btn-ghost" href="../mgl1.html">Volver a la Landing Personal</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-brand">Mis Nudos</div>
+    <div class="footer-tagline">Mapa personal de oración, conversión y discernimiento.</div>
+    <div class="footer-role"><strong>Mario Garza Livas</strong> — Documento personal · Monterrey, Nuevo León</div>
+    <div class="footer-contacts">
+      <a href="mailto:mario@metanoiagroup.vip">mario@metanoiagroup.vip</a>
+      <a href="mi-camino.html">Mi Camino — mis metas trascendentes</a>
+      <a href="mi-compas.html">Mi Compás — mis valores personales</a>
+      <a href="../mgl1.html">Landing Personal</a>
+    </div>
+    <div class="footer-admg-rule"></div>
+    <p class="footer-admg">Ad Majorem Dei Gloriam.</p>
+
+    <div class="footer-bottom">
+      <span class="copyright">© 2026 Mario Garza Livas</span>
+      <a class="footer-en" href="my-knots.html">English →</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.12});
+  els.forEach(el=>io.observe(el));
+
+  /* ---------- nudo central (se guarda solo en este navegador) ---------- */
+  (function(){
+    var KEY = 'mgl-nudo-central';
+    var knots = Array.prototype.slice.call(document.querySelectorAll('.knot'));
+    var card = document.getElementById('center-card');
+    var body = card ? card.querySelector('.cc-body') : null;
+
+    function read(){ try{ return localStorage.getItem(KEY); }catch(x){ return null; } }
+    function write(v){ try{ if(v){ localStorage.setItem(KEY, v); } else { localStorage.removeItem(KEY); } }catch(x){} }
+    var current = read();
+
+    function esc(s){ var d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
+
+    function render(){
+      knots.forEach(function(k){
+        var on = k.getAttribute('data-knot') === current;
+        k.classList.toggle('is-center', on);
+        var b = k.querySelector('.knot-mark');
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+        b.querySelector('.lbl').textContent = on ? b.getAttribute('data-on') : b.getAttribute('data-off');
+      });
+      if(!body) return;
+      var k = current ? document.querySelector('.knot[data-knot="'+current+'"]') : null;
+      if(!k){
+        card.classList.remove('has');
+        body.innerHTML = '<p class="cc-empty">'+esc(body.getAttribute('data-empty'))+'</p>';
+        return;
+      }
+      var n = ('0'+current).slice(-2);
+      var title = k.querySelector('.knot-title').textContent;
+      card.classList.add('has');
+      body.innerHTML =
+        '<div class="cc-knot"><div class="cc-num">'+esc(body.getAttribute('data-word'))+' '+n+'</div>'+
+        '<div class="cc-title">'+esc(title)+'</div></div>'+
+        '<div class="cc-actions"><a href="#'+body.getAttribute('data-anchor')+current+'">'+esc(body.getAttribute('data-go'))+' →</a>'+
+        '<button type="button" class="cc-clear">'+esc(body.getAttribute('data-clear'))+'</button></div>';
+      body.querySelector('.cc-clear').addEventListener('click', function(){ current=null; write(null); render(); });
+    }
+
+    knots.forEach(function(k){
+      k.querySelector('.knot-mark').addEventListener('click', function(){
+        var id = k.getAttribute('data-knot');
+        current = (current === id) ? null : id;
+        write(current);
+        render();
+      });
+    });
+    render();
+  })();
+
+  /* ---------- brandmark → volver arriba ---------- */
+  (function(){
+    var en = (document.documentElement.lang || '').toLowerCase().indexOf('en') === 0;
+    document.querySelectorAll('.topbar .brandmark').forEach(function(el){
+      el.setAttribute('role','link');
+      el.setAttribute('tabindex','0');
+      el.setAttribute('title', en ? 'Back to top' : 'Volver al inicio');
+      function toTop(e){
+        if(e) e.preventDefault();
+        var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({top:0, left:0, behavior: reduce ? 'auto' : 'smooth'});
+        if(location.hash && history.replaceState) history.replaceState(null,'',location.pathname + location.search);
+      }
+      el.addEventListener('click', toTop);
+      el.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ toTop(e); } });
+    });
+  })();
+
+</script>
+</body>
+</html>
