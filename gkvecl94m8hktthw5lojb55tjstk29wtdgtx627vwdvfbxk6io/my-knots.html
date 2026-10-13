@@ -699,6 +699,39 @@
     .shrine-glow{animation:none;}
   }
 
+  /* ---------- EL LISTÓN ---------- */
+  .sec-liston{overflow:hidden;background:radial-gradient(ellipse 760px 380px at 50% 60%,#b6905c0b,transparent 70%);}
+  .liston-wrap{text-align:center;}
+  .liston-tag{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:26px;}
+  .liston{
+    position:relative;margin:0 auto;max-width:860px;
+    padding:46px clamp(44px,8vw,96px);
+    background:
+      linear-gradient(180deg,#ffffff 0%,#fffdf8 22%,#f6eedd 78%,#eadcc0 100%);
+    clip-path:polygon(0 0,100% 0,calc(100% - 30px) 50%,100% 100%,0 100%,30px 50%);
+    filter:drop-shadow(0 24px 40px #000000aa) drop-shadow(0 0 60px #d9b57a2e);
+  }
+  .liston::before,.liston::after{ /* gold selvage */
+    content:'';position:absolute;left:0;right:0;height:3px;
+    background:linear-gradient(90deg,#9c7a4a,#d8b77f 50%,#9c7a4a);
+  }
+  .liston::before{top:9px;} .liston::after{bottom:9px;}
+  .liston-text{
+    font-family:var(--serif);font-style:italic;font-weight:400;
+    font-size:clamp(17px,2.2vw,21.5px);line-height:1.75;color:#2a2219;
+    text-wrap:pretty;
+  }
+  .liston-actions{margin-top:28px;}
+  .liston-copy{
+    background:none;border:1px solid var(--line-strong);border-radius:2px;cursor:pointer;
+    padding:10px 18px;font-family:var(--sans);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--text-muted);transition:color .25s ease,border-color .25s ease;
+  }
+  .liston-copy:hover,.liston-copy.ok{color:var(--accent);border-color:var(--accent);}
+  @media (max-width:640px){
+    .liston{padding:36px 34px;clip-path:polygon(0 0,100% 0,calc(100% - 18px) 50%,100% 100%,0 100%,18px 50%);}
+  }
+
 </style>
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="My Knots — Mario Garza Livas">
@@ -720,6 +753,7 @@
     <div class="brandmark">MARIO GARZA LIVAS <span>· MY KNOTS</span></div>
     <div class="nav-links">
       <a href="#knots">The 23 Knots</a>
+      <a href="#ribbon">The Ribbon</a>
       <a href="#prayer">Prayer</a>
       <a href="#reflection">Reflection</a>
       <a href="my-pathway.html">My Pathway</a>
@@ -742,7 +776,7 @@
         <div class="locbar"><span class="dot"></span>Monterrey, Mexico · Under Mary’s protection</div>
         <div class="hero-cta">
           <a class="btn btn-primary" href="#knots">See the twenty-three knots</a>
-          <a class="btn btn-ghost" href="#prayer">Pray the prayer</a>
+          <a class="btn btn-ghost" href="#ribbon">The ribbon</a>
           <a class="btn btn-ghost" href="my-compass.html">My Compass</a>
         </div>
       </div>
@@ -1107,10 +1141,31 @@
   </div>
 </section>
 
-<section id="prayer" class="sec-prayer">
+<section id="ribbon" class="sec-liston">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="sec-num">V</span>
+      <div>
+        <h2 class="sec-title">The <em>ribbon</em></h2>
+        <p class="sec-sub">The petition I carry to the sanctuary: one single ribbon for all twenty-three knots.</p>
+      </div>
+    </div>
+    <div class="liston-wrap reveal">
+      <h3 class="liston-tag">The ribbon for the sanctuary</h3>
+      <div class="liston">
+        <p class="liston-text" id="liston-text">Holy Mary, Undoer of Knots, intercede before Our Lord Jesus Christ that He may untie the twenty-three knots of my life, which you both know, and grant me the grace to recognize them, face them and cooperate with His grace so that each one may be resolved according to His divine will and for the greater glory of God.</p>
+      </div>
+      <div class="liston-actions">
+        <button type="button" class="liston-copy" data-done="Copied"><span class="lbl">Copy the text</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="prayer" class="sec-prayer">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">VI</span>
       <div>
         <h2 class="sec-title">The <em>prayer</em></h2>
         <p class="sec-sub">To place before her, every day, all the knots of my life.</p>
@@ -1149,7 +1204,7 @@
 <section id="reflection">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="sec-num">VI</span>
+      <span class="sec-num">VII</span>
       <div>
         <h2 class="sec-title">A reflection for <em>my own pathway</em></h2>
         <p class="sec-sub">What I need to keep in my heart as I walk through this process.</p>
@@ -1195,7 +1250,7 @@
 <section id="examination">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="sec-num">VII</span>
+      <span class="sec-num">VIII</span>
       <div>
         <h2 class="sec-title">Questions for <em>personal examination</em></h2>
         <p class="sec-sub">Seven questions for returning to this map honestly.</p>
@@ -1305,6 +1360,18 @@
       });
     });
     render();
+  })();
+
+  /* ---------- copiar el listón ---------- */
+  (function(){
+    var b=document.querySelector('.liston-copy'), t=document.getElementById('liston-text'); if(!b||!t) return;
+    var lbl=b.querySelector('.lbl'), orig=lbl.textContent;
+    function ok(){ b.classList.add('ok'); lbl.textContent=b.getAttribute('data-done'); setTimeout(function(){b.classList.remove('ok'); lbl.textContent=orig;},1800); }
+    b.addEventListener('click',function(){
+      var s=t.textContent.trim();
+      if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(s).then(ok,fallback); } else { fallback(); }
+      function fallback(){ try{ var r=document.createRange(); r.selectNodeContents(t); var sel=getSelection(); sel.removeAllRanges(); sel.addRange(r); document.execCommand('copy'); sel.removeAllRanges(); ok(); }catch(x){} }
+    });
   })();
 
   /* ---------- brandmark → volver arriba ---------- */

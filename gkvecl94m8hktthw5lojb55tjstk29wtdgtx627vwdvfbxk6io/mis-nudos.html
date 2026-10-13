@@ -699,6 +699,39 @@
     .shrine-glow{animation:none;}
   }
 
+  /* ---------- EL LISTÓN ---------- */
+  .sec-liston{overflow:hidden;background:radial-gradient(ellipse 760px 380px at 50% 60%,#b6905c0b,transparent 70%);}
+  .liston-wrap{text-align:center;}
+  .liston-tag{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:26px;}
+  .liston{
+    position:relative;margin:0 auto;max-width:860px;
+    padding:46px clamp(44px,8vw,96px);
+    background:
+      linear-gradient(180deg,#ffffff 0%,#fffdf8 22%,#f6eedd 78%,#eadcc0 100%);
+    clip-path:polygon(0 0,100% 0,calc(100% - 30px) 50%,100% 100%,0 100%,30px 50%);
+    filter:drop-shadow(0 24px 40px #000000aa) drop-shadow(0 0 60px #d9b57a2e);
+  }
+  .liston::before,.liston::after{ /* gold selvage */
+    content:'';position:absolute;left:0;right:0;height:3px;
+    background:linear-gradient(90deg,#9c7a4a,#d8b77f 50%,#9c7a4a);
+  }
+  .liston::before{top:9px;} .liston::after{bottom:9px;}
+  .liston-text{
+    font-family:var(--serif);font-style:italic;font-weight:400;
+    font-size:clamp(17px,2.2vw,21.5px);line-height:1.75;color:#2a2219;
+    text-wrap:pretty;
+  }
+  .liston-actions{margin-top:28px;}
+  .liston-copy{
+    background:none;border:1px solid var(--line-strong);border-radius:2px;cursor:pointer;
+    padding:10px 18px;font-family:var(--sans);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--text-muted);transition:color .25s ease,border-color .25s ease;
+  }
+  .liston-copy:hover,.liston-copy.ok{color:var(--accent);border-color:var(--accent);}
+  @media (max-width:640px){
+    .liston{padding:36px 34px;clip-path:polygon(0 0,100% 0,calc(100% - 18px) 50%,100% 100%,0 100%,18px 50%);}
+  }
+
 </style>
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mis Nudos — Mario Garza Livas">
@@ -720,6 +753,7 @@
     <div class="brandmark">MARIO GARZA LIVAS <span>· MIS NUDOS</span></div>
     <div class="nav-links">
       <a href="#nudos">Los 23 nudos</a>
+      <a href="#liston">El listón</a>
       <a href="#oracion">Oración</a>
       <a href="#reflexion">Reflexión</a>
       <a href="mi-camino.html">Mi Camino</a>
@@ -742,7 +776,7 @@
         <div class="locbar"><span class="dot"></span>Monterrey, México · Bajo el amparo de María</div>
         <div class="hero-cta">
           <a class="btn btn-primary" href="#nudos">Ver los veintitrés nudos</a>
-          <a class="btn btn-ghost" href="#oracion">Rezar la oración</a>
+          <a class="btn btn-ghost" href="#liston">El listón</a>
           <a class="btn btn-ghost" href="mi-compas.html">Mi Compás</a>
         </div>
       </div>
@@ -1107,10 +1141,31 @@
   </div>
 </section>
 
-<section id="oracion" class="sec-prayer">
+<section id="liston" class="sec-liston">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="sec-num">V</span>
+      <div>
+        <h2 class="sec-title">El <em>listón</em></h2>
+        <p class="sec-sub">La petición que llevo al santuario: un solo listón por los veintitrés nudos.</p>
+      </div>
+    </div>
+    <div class="liston-wrap reveal">
+      <h3 class="liston-tag">El listón para el santuario</h3>
+      <div class="liston">
+        <p class="liston-text" id="liston-text">Santa María Desatadora de Nudos, intercede ante Nuestro Señor Jesucristo para que desate los veintitrés nudos de mi vida, que ambos conocen, y me conceda la gracia de reconocerlos, afrontarlos y cooperar con su gracia para que cada uno sea resuelto conforme a su divina voluntad y para mayor gloria de Dios.</p>
+      </div>
+      <div class="liston-actions">
+        <button type="button" class="liston-copy" data-done="Copiado"><span class="lbl">Copiar el texto</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="oracion" class="sec-prayer">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">VI</span>
       <div>
         <h2 class="sec-title">La <em>oración</em></h2>
         <p class="sec-sub">Para poner ante ella, cada día, todos los nudos de mi vida.</p>
@@ -1149,7 +1204,7 @@
 <section id="reflexion">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="sec-num">VI</span>
+      <span class="sec-num">VII</span>
       <div>
         <h2 class="sec-title">Una reflexión para <em>mi propio camino</em></h2>
         <p class="sec-sub">Lo que necesito conservar en el corazón mientras recorro este proceso.</p>
@@ -1195,7 +1250,7 @@
 <section id="examen">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="sec-num">VII</span>
+      <span class="sec-num">VIII</span>
       <div>
         <h2 class="sec-title">Preguntas para el <em>examen personal</em></h2>
         <p class="sec-sub">Siete preguntas para volver a este mapa con honestidad.</p>
@@ -1305,6 +1360,18 @@
       });
     });
     render();
+  })();
+
+  /* ---------- copiar el listón ---------- */
+  (function(){
+    var b=document.querySelector('.liston-copy'), t=document.getElementById('liston-text'); if(!b||!t) return;
+    var lbl=b.querySelector('.lbl'), orig=lbl.textContent;
+    function ok(){ b.classList.add('ok'); lbl.textContent=b.getAttribute('data-done'); setTimeout(function(){b.classList.remove('ok'); lbl.textContent=orig;},1800); }
+    b.addEventListener('click',function(){
+      var s=t.textContent.trim();
+      if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(s).then(ok,fallback); } else { fallback(); }
+      function fallback(){ try{ var r=document.createRange(); r.selectNodeContents(t); var sel=getSelection(); sel.removeAllRanges(); sel.addRange(r); document.execCommand('copy'); sel.removeAllRanges(); ok(); }catch(x){} }
+    });
   })();
 
   /* ---------- brandmark → volver arriba ---------- */
