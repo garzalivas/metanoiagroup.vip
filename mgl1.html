@@ -599,6 +599,24 @@
     .hero-portrait::after{inset:-11px;}
   }
   @media (prefers-reduced-motion:reduce){ .hero-portrait,.qr-card{animation:none;opacity:1;} }
+
+  /* ---------- ENLACE A TRAYECTORIA PROFESIONAL ---------- */
+  .roles-more{display:inline-flex;align-items:center;gap:10px;margin-top:20px;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);padding-bottom:5px;border-bottom:1px solid var(--accent-dim);transition:border-color .25s ease,color .25s ease;opacity:0;animation:fadeUp .9s ease .48s forwards;}
+  .roles-more:hover{color:#c9a06d;border-color:var(--accent);}
+  .roles-more .arrow{transition:transform .25s ease;}
+  .roles-more:hover .arrow{transform:translateX(4px);}
+  .bridge{display:block;margin-top:56px;padding:30px 30px 28px;border:1px solid var(--line-strong);background:linear-gradient(180deg,#b6905c0a,transparent 70%),var(--bg-alt);position:relative;transition:border-color .3s ease,background .3s ease,transform .3s ease;}
+  .bridge::before{content:'';position:absolute;left:0;top:0;width:100%;height:1px;background:linear-gradient(90deg,var(--accent),#b6905c00 80%);}
+  .bridge:hover{border-color:var(--accent-dim);background:linear-gradient(180deg,#b6905c14,transparent 70%),var(--bg-card);transform:translateY(-2px);}
+  .bridge-k{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:11px;}
+  .bridge-k::before{content:'';width:22px;height:1px;background:var(--accent);}
+  .bridge-t{display:block;font-family:var(--serif);font-size:clamp(17px,2.1vw,20px);line-height:1.55;color:var(--text);margin-top:16px;max-width:620px;}
+  .bridge-cta{display:inline-flex;align-items:center;gap:8px;margin-top:20px;font-size:11.5px;letter-spacing:.1em;color:var(--accent-dim);transition:color .25s ease;}
+  .bridge:hover .bridge-cta{color:var(--accent);}
+  .bridge-cta .arrow{transition:transform .25s ease;}
+  .bridge:hover .bridge-cta .arrow{transform:translateX(4px);}
+  @media (max-width:640px){.bridge{padding:24px 22px 22px;margin-top:44px;}}
+  @media (prefers-reduced-motion:reduce){.roles-more{animation:none;opacity:1;}}
 </style>
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mario Garza Livas — The Metanoia Group">
@@ -641,6 +659,7 @@ body.bcard-open{overflow:hidden}
     <div class="brandmark"><img class="avatar" src="assets/mgl-avatar.webp" alt="" width="24" height="24">MARIO GARZA LIVAS <span>· LANDING PAGE</span></div>
     <div class="nav-links">
       <a href="#acerca">Acerca de</a>
+      <a href="mgp1.html" onclick="gtag('event','click',{'event_category':'navigation','event_label':'trayectoria_nav'})">Trayectoria</a>
       <a href="#contacto">Contacto</a>
       <a href="#enlaces">Enlaces</a>
       <a href="#documentos">Documentos</a>
@@ -659,6 +678,7 @@ body.bcard-open{overflow:hidden}
         <p class="roles">
           <span class="sep">·</span><span data-m="5">Asesor Estratégico</span><br><span class="sep">·</span>Consultor en Negocios de Fútbol<br><span class="sep">·</span><span data-m="4">Agente Deportivo</span><br><span class="sep">·</span>CIO de Family Office<br><span class="sep">·</span>Profesor de Cátedra
         </p>
+        <a class="roles-more" href="mgp1.html" onclick="gtag('event','click',{'event_category':'navigation','event_label':'trayectoria_hero'})">Ver trayectoria profesional <span class="arrow">&rarr;</span></a>
         <div class="locbar"><span class="dot"></span>Monterrey, Nuevo León, México</div>
         <div class="hero-cta">
           <a class="btn btn-primary" href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp'})">Escribir por WhatsApp</a>
@@ -707,6 +727,11 @@ body.bcard-open{overflow:hidden}
         <p class="about-name">Mario Garza Livas</p>
         <p class="about-place">Monterrey, Nuevo León, México</p>
       </div>
+      <a class="bridge" href="mgp1.html" onclick="gtag('event','click',{'event_category':'navigation','event_label':'trayectoria_about'})">
+        <span class="bridge-k">Trayectoria profesional</span>
+        <span class="bridge-t">Esta página cuenta quién soy. Si lo que buscas es qué hago y desde dónde —pilares, roles, plataformas y dominios—, lo encontrarás en mi trayectoria profesional.</span>
+        <span class="bridge-cta">Ver trayectoria profesional <span class="arrow">&rarr;</span></span>
+      </a>
     </div>
   </div>
 </section>
@@ -939,14 +964,24 @@ body.bcard-open{overflow:hidden}
       <span class="sec-num">IV</span>
       <div>
         <h2 class="sec-title">Documentos para <em>descargar</em></h2>
-        <p class="sec-sub">Trayectoria y credenciales en dos documentos.</p>
+        <p class="sec-sub">Trayectoria y credenciales: una página y dos documentos.</p>
       </div>
     </div>
 
     <div class="doc-list reveal">
-      <a class="doc-row" href="https://metanoiagroup.vip/downloads/CV_Mario_Garza_Livas.pdf" target="_blank" rel="noopener">
+      <a class="doc-row" href="mgp1.html" onclick="gtag('event','click',{'event_category':'navigation','event_label':'trayectoria_docs'})">
         <div class="doc-left">
           <span class="doc-num">01</span>
+          <div class="doc-text">
+            <div class="doc-title">Trayectoria Profesional</div>
+            <div class="doc-hint">Pilares, roles, plataformas y dominios · Página web</div>
+          </div>
+        </div>
+        <div class="doc-dl"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6l6 6-6 6"/></svg></div>
+      </a>
+      <a class="doc-row" href="https://metanoiagroup.vip/downloads/CV_Mario_Garza_Livas.pdf" target="_blank" rel="noopener">
+        <div class="doc-left">
+          <span class="doc-num">02</span>
           <div class="doc-text">
             <div class="doc-title">Curriculum Vitae</div>
             <div class="doc-hint">Trayectoria profesional y académica completa · PDF</div>
@@ -956,7 +991,7 @@ body.bcard-open{overflow:hidden}
       </a>
       <a class="doc-row" href="https://metanoiagroup.vip/downloads/Diplomas_Mario_Garza_Livas.pdf" target="_blank" rel="noopener">
         <div class="doc-left">
-          <span class="doc-num">02</span>
+          <span class="doc-num">03</span>
           <div class="doc-text">
             <div class="doc-title">Diplomas y Certificados</div>
             <div class="doc-hint">Credenciales académicas y profesionales más relevantes · PDF</div>
