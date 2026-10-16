@@ -207,6 +207,7 @@ footer{padding:72px 0 46px;border-top:1px solid var(--line);}
 .v-foot{padding:10px 22px;font-size:14px;color:var(--gray-2);border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;}
 .v-loading{color:var(--gray);}
 html.lock{overflow:hidden;}
+[aria-busy="true"]{opacity:.6;cursor:progress;}
 
 /* ---------- responsive ---------- */
 @media (max-width:900px){
@@ -1458,8 +1459,37 @@ html.lock{overflow:hidden;}
     var b = ev.target.closest('[data-open]');
     if (b) { open(b.dataset.open, b); return; }
     var d = ev.target.closest('[data-dl]');
-    if (d) track('novela_descarga', d.dataset.dl);
+    if (d) { ev.preventDefault(); download(d.dataset.dl, d); track('novela_descarga', d.dataset.dl); }
   });
+
+  /* Descarga: el PNG original; si no está en el servidor, un PNG de 1536×1024 hecho desde la versión web */
+  function save(blob, name){
+    var u = URL.createObjectURL(blob), a = document.createElement('a');
+    a.href = u; a.download = name; document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function(){ URL.revokeObjectURL(u); }, 4000);
+  }
+  function fromWeb(f, done){
+    var im = new Image();
+    im.onload = function(){
+      var c = document.createElement('canvas'); c.width = im.naturalWidth; c.height = im.naturalHeight;
+      c.getContext('2d').drawImage(im, 0, 0);
+      c.toBlob(function(b){ if (b) save(b, f + '.png'); done(); }, 'image/png');
+    };
+    im.onerror = done;
+    im.src = 'frank/web/' + f + '.webp';
+  }
+  function download(f, btn){
+    if (btn.getAttribute('aria-busy') === 'true') return;
+    btn.setAttribute('aria-busy', 'true');
+    function done(){ btn.removeAttribute('aria-busy'); }
+    if (!window.fetch) { fromWeb(f, done); return; }
+    fetch('frank/' + f + '.png', {cache: 'force-cache'}).then(function(r){
+      var t = r.headers.get('content-type') || '';
+      if (!r.ok || t.indexOf('image') !== 0) throw 0;
+      return r.blob();
+    }).then(function(b){ save(b, f + '.png'); done(); })
+      .catch(function(){ fromWeb(f, done); });
+  }
   document.getElementById('v-close').addEventListener('click', close);
   document.getElementById('v-prev').addEventListener('click', function(){ step(-1); });
   document.getElementById('v-next').addEventListener('click', function(){ step(1); });
