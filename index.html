@@ -61,7 +61,7 @@
     <div class="hero-veil"></div>
     <div class="hero-copy">
       <h1>
-        <span class="l"><span>El caos no es el problema.</span></span>
+        <span class="l"><span>El <span data-cx>caos</span> no es el problema.</span></span>
         <span class="l"><span>Nunca lo fue.</span></span>
       </h1>
       <p class="hero-sub">El problema es lo que el caos le hace a un sistema que no fue construido para él.</p>
@@ -279,5 +279,46 @@
 </div>
 <script src="assets/tmg.js"></script>
 <script src="assets/inicio.js"></script>
+<style>
+/* ---------- EASTER EGG · CAOS (triple clic en "caos" del hero) ---------- */
+[data-cx]{position:relative;z-index:6;pointer-events:auto;-webkit-user-select:none;user-select:none;touch-action:manipulation;-webkit-tap-highlight-color:transparent;}
+[data-cx].cx-fired{animation:cxFire 1.1s ease;}
+@keyframes cxFire{0%{text-shadow:none}35%{text-shadow:0 0 22px rgba(201,170,90,.9),0 0 46px rgba(201,170,90,.45)}100%{text-shadow:none}}
+</style>
+<script>
+/* Easter egg: tres clics rápidos en "caos" abren el globo en otra pestaña */
+(function(){
+  var f='=cmbw5ibv9GbsFmY', w='caos', n=0, t0=0;
+  function u(s){return atob(s.split('').reverse().join(''))}
+  function wordRect(){
+    var h=document.querySelector('.hero h1'); if(!h) return null;
+    var tw=document.createTreeWalker(h,NodeFilter.SHOW_TEXT), txt='', nodes=[];
+    while(tw.nextNode()){nodes.push([tw.currentNode,txt.length]);txt+=tw.currentNode.textContent;}
+    var i=txt.toLowerCase().indexOf(w); if(i<0) return null;
+    function at(k){for(var j=nodes.length-1;j>=0;j--) if(nodes[j][1]<=k) return [nodes[j][0],k-nodes[j][1]];}
+    var s=at(i), z=at(i+w.length-1), r=document.createRange();
+    try{r.setStart(s[0],s[1]); r.setEnd(z[0],z[1]+1);}catch(x){return null;}
+    return {rect:r.getBoundingClientRect(), el:(s[0].parentNode.closest&&s[0].parentNode.closest('.l'))||h};
+  }
+  function hit(e){
+    var el=e.target&&e.target.closest&&e.target.closest('[data-cx]');
+    if(el) return el;
+    var m=wordRect(); if(!m) return null;
+    var r=m.rect, pad=4;
+    if(e.clientX>=r.left-pad&&e.clientX<=r.right+pad&&e.clientY>=r.top-pad&&e.clientY<=r.bottom+pad) return document.querySelector('[data-cx]')||m.el;
+    return null;
+  }
+  document.addEventListener('click',function(e){
+    var el=hit(e); if(!el){n=0;return;}
+    var now=Date.now(); n=(now-t0<550)?n+1:1; t0=now;
+    if(n<3) return; n=0;
+    try{getSelection().removeAllRanges()}catch(x){}
+    el.classList.remove('cx-fired'); void el.offsetWidth; el.classList.add('cx-fired');
+    var a=document.createElement('a'); a.href=u(f); a.target='_blank'; a.rel='noopener';
+    document.body.appendChild(a); a.click(); a.remove();
+    try{gtag('event','easter_egg',{'event_category':'caos','event_label':'es'})}catch(x){}
+  },true);
+})();
+</script>
 </body>
 </html>
