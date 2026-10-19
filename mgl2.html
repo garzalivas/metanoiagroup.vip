@@ -615,6 +615,11 @@
   .bridge-cta .arrow{transition:transform .25s ease;}
   .bridge:hover .bridge-cta .arrow{transform:translateX(4px);}
   @media (max-width:640px){.bridge{padding:24px 22px 22px;margin-top:44px;}}
+  /* ---------- ENLACES A PREGUNTAS FRECUENTES (mgf) ---------- */
+  .hero-links{display:flex;flex-wrap:wrap;gap:0 28px;}
+  .bridge + .bridge{margin-top:16px;}
+  .bridge-t em{font-style:italic;color:var(--accent);}
+
   @media (prefers-reduced-motion:reduce){.roles-more{animation:none;opacity:1;}}
 </style>
 <meta name="twitter:card" content="summary_large_image">
@@ -659,6 +664,7 @@ body.bcard-open{overflow:hidden}
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="mgp2.html" onclick="gtag('event','click',{'event_category':'navigation','event_label':'perfil_nav'})">Profile</a>
+      <a href="mgf2.html" onclick="gtag('event','click',{'event_category':'navigation','event_label':'faq_nav'})">FAQ</a>
       <a href="#contact">Contact</a>
       <a href="#links">Links</a>
       <a href="#documents">Documents</a>
@@ -677,7 +683,10 @@ body.bcard-open{overflow:hidden}
         <p class="roles">
           <span class="sep">·</span><span data-m="5">Strategic Advisor</span><br><span class="sep">·</span>Football Business Consultant<br><span class="sep">·</span><span data-m="4">Sports Agent</span><br><span class="sep">·</span>Family Office CIO<br><span class="sep">·</span>Adjunct Professor
         </p>
-        <a class="roles-more" href="mgp2.html" onclick="gtag('event','click',{'event_category':'navigation','event_label':'perfil_hero'})">View professional profile <span class="arrow">&rarr;</span></a>
+        <div class="hero-links">
+          <a class="roles-more" href="mgp2.html" onclick="gtag('event','click',{'event_category':'navigation','event_label':'perfil_hero'})">View professional profile <span class="arrow">&rarr;</span></a>
+          <a class="roles-more" href="mgf2.html" onclick="gtag('event','click',{'event_category':'navigation','event_label':'faq_hero'})">Frequently asked questions <span class="arrow">&rarr;</span></a>
+        </div>
         <div class="locbar"><span class="dot"></span>Monterrey, Nuevo León, México</div>
         <div class="hero-cta">
           <a class="btn btn-primary" href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp'})">Message on WhatsApp</a>
@@ -730,6 +739,11 @@ body.bcard-open{overflow:hidden}
         <span class="bridge-k">Professional profile</span>
         <span class="bridge-t">This page tells who I am. If what you are looking for is what I do and where I do it from —pillars, roles, platforms and domains—, you will find it in my professional profile.</span>
         <span class="bridge-cta">View professional profile <span class="arrow">&rarr;</span></span>
+      </a>
+      <a class="bridge" href="mgf2.html" onclick="gtag('event','click',{'event_category':'navigation','event_label':'faq_about'})">
+        <span class="bridge-k">Frequently asked questions</span>
+        <span class="bridge-t">And if you would like to go deeper —<em>how I think, why, and what I live from</em>—, you will find twenty questions answered in the first person.</span>
+        <span class="bridge-cta">Read the frequently asked questions <span class="arrow">&rarr;</span></span>
       </a>
     </div>
   </div>

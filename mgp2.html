@@ -228,6 +228,24 @@
   @media (prefers-reduced-motion: reduce){
     *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}
   }
+
+  /* ---------- ENLACES A PREGUNTAS FRECUENTES (mgf) ---------- */
+  .faq-link{display:inline-flex;align-items:center;gap:10px;margin-top:22px;margin-left:23px;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);padding-bottom:4px;border-bottom:1px solid var(--accent-dim);transition:color .25s ease,border-color .25s ease;}
+  .faq-link:hover{color:#c9a06d;border-color:var(--accent);}
+  .faq-link small{font-size:10.5px;letter-spacing:.12em;color:var(--text-muted);}
+  .faq-link .arrow,.bridge-cta .arrow{transition:transform .25s ease;}
+  .faq-link:hover .arrow{transform:translateX(4px);}
+  .bridge{display:block;margin-top:52px;max-width:720px;padding:30px 30px 28px;border:1px solid var(--line-strong);background:linear-gradient(180deg,#b6905c0a,transparent 70%),var(--bg-alt);position:relative;transition:border-color .3s ease,background .3s ease,transform .3s ease;}
+  .bridge::before{content:'';position:absolute;left:0;top:0;width:100%;height:1px;background:linear-gradient(90deg,var(--accent),#b6905c00 80%);}
+  .bridge:hover{border-color:var(--accent-dim);background:linear-gradient(180deg,#b6905c14,transparent 70%),var(--bg-card);transform:translateY(-2px);}
+  .bridge-k{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:11px;}
+  .bridge-k::before{content:'';width:22px;height:1px;background:var(--accent);}
+  .bridge-t{display:block;font-family:var(--serif);font-size:clamp(17px,2.1vw,20px);line-height:1.55;color:var(--text);margin-top:16px;}
+  .bridge-t em{font-style:italic;color:var(--accent);}
+  .bridge-cta{display:inline-flex;align-items:center;gap:8px;margin-top:20px;font-size:11.5px;letter-spacing:.1em;color:var(--accent-dim);transition:color .25s ease;}
+  .bridge:hover .bridge-cta{color:var(--accent);}
+  .bridge:hover .bridge-cta .arrow{transform:translateX(4px);}
+  @media (max-width:640px){.bridge{padding:24px 22px 22px;margin-top:40px;} .faq-link{margin-left:16px;display:inline-block;line-height:1.9;}}
 </style>
 <noscript><style>.reveal{opacity:1;transform:none;}</style></noscript>
 <meta name="twitter:card" content="summary_large_image">
@@ -568,6 +586,7 @@
       </div>
 
       <p class="closing">These practices inform my professional work and connect my activities across <strong>business, investment, football, and academia</strong>.</p>
+      <a class="faq-link" href="mgf2.html#layer-2" onclick="gtag('event','click',{'event_category':'navigation','event_label':'faq_identity'})">How I think, in the first person <small>· The mind, questions 5–9</small> <span class="arrow">&rarr;</span></a>
     </div>
   </div>
 </section>
@@ -590,6 +609,12 @@
         <p>My approach combines analytical rigor, systems thinking, strategic differentiation, and an entrepreneurial orientation to identify constraints, structure opportunities, and translate complex challenges into actionable solutions.</p>
         <p>Across business, investment, and football, my objective is to contribute to the design of <em>systems capable of creating, capturing, and sustaining value</em>.</p>
       </div>
+
+      <a class="bridge" href="mgf2.html" onclick="gtag('event','click',{'event_category':'navigation','event_label':'faq_approach'})">
+        <span class="bridge-k">Frequently asked questions</span>
+        <span class="bridge-t">This page shows what I do and where I do it from. If you would like to know me more deeply —<em>how I think, why, and what I live from</em>—, you will find it in twenty questions.</span>
+        <span class="bridge-cta">Read the frequently asked questions <span class="arrow">&rarr;</span></span>
+      </a>
 
       <div class="sign">
         <span class="sign-rule"></span>

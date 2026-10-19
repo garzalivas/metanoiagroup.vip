@@ -616,6 +616,11 @@
   .bridge-cta .arrow{transition:transform .25s ease;}
   .bridge:hover .bridge-cta .arrow{transform:translateX(4px);}
   @media (max-width:640px){.bridge{padding:24px 22px 22px;margin-top:44px;}}
+  /* ---------- ENLACES A PREGUNTAS FRECUENTES (mgf) ---------- */
+  .hero-links{display:flex;flex-wrap:wrap;gap:0 28px;}
+  .bridge + .bridge{margin-top:16px;}
+  .bridge-t em{font-style:italic;color:var(--accent);}
+
   @media (prefers-reduced-motion:reduce){.roles-more{animation:none;opacity:1;}}
 </style>
 <meta name="twitter:card" content="summary_large_image">
@@ -660,6 +665,7 @@ body.bcard-open{overflow:hidden}
     <div class="nav-links">
       <a href="#acerca">Acerca de</a>
       <a href="mgp1.html" onclick="gtag('event','click',{'event_category':'navigation','event_label':'perfil_nav'})">Perfil</a>
+      <a href="mgf1.html" onclick="gtag('event','click',{'event_category':'navigation','event_label':'faq_nav'})">FAQ</a>
       <a href="#contacto">Contacto</a>
       <a href="#enlaces">Enlaces</a>
       <a href="#documentos">Documentos</a>
@@ -678,7 +684,10 @@ body.bcard-open{overflow:hidden}
         <p class="roles">
           <span class="sep">·</span><span data-m="5">Asesor Estratégico</span><br><span class="sep">·</span>Consultor en Negocios de Fútbol<br><span class="sep">·</span><span data-m="4">Agente Deportivo</span><br><span class="sep">·</span>CIO de Family Office<br><span class="sep">·</span>Profesor de Cátedra
         </p>
-        <a class="roles-more" href="mgp1.html" onclick="gtag('event','click',{'event_category':'navigation','event_label':'perfil_hero'})">Ver perfil profesional <span class="arrow">&rarr;</span></a>
+        <div class="hero-links">
+          <a class="roles-more" href="mgp1.html" onclick="gtag('event','click',{'event_category':'navigation','event_label':'perfil_hero'})">Ver perfil profesional <span class="arrow">&rarr;</span></a>
+          <a class="roles-more" href="mgf1.html" onclick="gtag('event','click',{'event_category':'navigation','event_label':'faq_hero'})">Preguntas frecuentes <span class="arrow">&rarr;</span></a>
+        </div>
         <div class="locbar"><span class="dot"></span>Monterrey, Nuevo León, México</div>
         <div class="hero-cta">
           <a class="btn btn-primary" href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp'})">Escribir por WhatsApp</a>
@@ -731,6 +740,11 @@ body.bcard-open{overflow:hidden}
         <span class="bridge-k">Perfil profesional</span>
         <span class="bridge-t">Esta página cuenta quién soy. Si lo que buscas es qué hago y desde dónde —pilares, roles, plataformas y dominios—, lo encontrarás en mi perfil profesional.</span>
         <span class="bridge-cta">Ver perfil profesional <span class="arrow">&rarr;</span></span>
+      </a>
+      <a class="bridge" href="mgf1.html" onclick="gtag('event','click',{'event_category':'navigation','event_label':'faq_about'})">
+        <span class="bridge-k">Preguntas frecuentes</span>
+        <span class="bridge-t">Y si quieres ir más a fondo —<em>cómo pienso, por qué y desde dónde vivo</em>—, encontrarás veinte preguntas respondidas en primera persona.</span>
+        <span class="bridge-cta">Ver las preguntas frecuentes <span class="arrow">&rarr;</span></span>
       </a>
     </div>
   </div>
