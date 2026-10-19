@@ -615,6 +615,8 @@
   .bridge:hover .bridge-cta{color:var(--accent);}
   .bridge-cta .arrow{transition:transform .25s ease;}
   .bridge:hover .bridge-cta .arrow{transform:translateX(4px);}
+  .bridge + .bridge{margin-top:16px;}
+  @media (max-width:640px){.bridge + .bridge{margin-top:14px;}}
   @media (max-width:640px){.bridge{padding:24px 22px 22px;margin-top:44px;}}
   @media (prefers-reduced-motion:reduce){.roles-more{animation:none;opacity:1;}}
 </style>
@@ -731,6 +733,11 @@ body.bcard-open{overflow:hidden}
         <span class="bridge-k">Perfil profesional</span>
         <span class="bridge-t">Esta página cuenta quién soy. Si lo que buscas es qué hago y desde dónde —pilares, roles, plataformas y dominios—, lo encontrarás en mi perfil profesional.</span>
         <span class="bridge-cta">Ver perfil profesional <span class="arrow">&rarr;</span></span>
+      </a>
+      <a class="bridge" href="mgf1.html" onclick="gtag('event','click',{'event_category':'navigation','event_label':'faq_about'})">
+        <span class="bridge-k">Preguntas frecuentes</span>
+        <span class="bridge-t">Y si quieres ir más allá de esta página —cómo pienso, por qué hago lo que hago y desde dónde vivo—, lo encontrarás en veinte preguntas para conocerme a fondo.</span>
+        <span class="bridge-cta">Ver preguntas frecuentes <span class="arrow">&rarr;</span></span>
       </a>
     </div>
   </div>
@@ -964,7 +971,7 @@ body.bcard-open{overflow:hidden}
       <span class="sec-num">IV</span>
       <div>
         <h2 class="sec-title">Documentos para <em>descargar</em></h2>
-        <p class="sec-sub">Perfil, trayectoria y credenciales: una página y dos documentos.</p>
+        <p class="sec-sub">Perfil, preguntas frecuentes, trayectoria y credenciales: dos páginas y dos documentos.</p>
       </div>
     </div>
 
@@ -979,9 +986,19 @@ body.bcard-open{overflow:hidden}
         </div>
         <div class="doc-dl"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6l6 6-6 6"/></svg></div>
       </a>
-      <a class="doc-row" href="https://metanoiagroup.vip/downloads/CV_Mario_Garza_Livas.pdf" target="_blank" rel="noopener">
+      <a class="doc-row" href="mgf1.html" onclick="gtag('event','click',{'event_category':'navigation','event_label':'faq_docs'})">
         <div class="doc-left">
           <span class="doc-num">02</span>
+          <div class="doc-text">
+            <div class="doc-title">Preguntas Frecuentes</div>
+            <div class="doc-hint">Veinte preguntas para conocerme a fondo · Página web</div>
+          </div>
+        </div>
+        <div class="doc-dl"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6l6 6-6 6"/></svg></div>
+      </a>
+      <a class="doc-row" href="https://metanoiagroup.vip/downloads/CV_Mario_Garza_Livas.pdf" target="_blank" rel="noopener">
+        <div class="doc-left">
+          <span class="doc-num">03</span>
           <div class="doc-text">
             <div class="doc-title">Curriculum Vitae</div>
             <div class="doc-hint">Trayectoria profesional y académica completa · PDF</div>
@@ -991,7 +1008,7 @@ body.bcard-open{overflow:hidden}
       </a>
       <a class="doc-row" href="https://metanoiagroup.vip/downloads/Diplomas_Mario_Garza_Livas.pdf" target="_blank" rel="noopener">
         <div class="doc-left">
-          <span class="doc-num">03</span>
+          <span class="doc-num">04</span>
           <div class="doc-text">
             <div class="doc-title">Diplomas y Certificados</div>
             <div class="doc-hint">Credenciales académicas y profesionales más relevantes · PDF</div>
