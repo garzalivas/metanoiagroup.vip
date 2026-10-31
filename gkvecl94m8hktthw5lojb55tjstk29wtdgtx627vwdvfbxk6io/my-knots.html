@@ -732,6 +732,28 @@
     .liston{padding:36px 34px;clip-path:polygon(0 0,100% 0,calc(100% - 18px) 50%,100% 100%,0 100%,18px 50%);}
   }
 
+
+  /* ---------- MI ORACIÓN DIARIA ---------- */
+  @media (min-width:641px){ .nav-links{gap:13px 13px;} } /* cabe un elemento más en la barra sin partirla en dos líneas */
+  .sec-daily{background:radial-gradient(ellipse 760px 520px at 50% 18%,#b6905c0b,transparent 70%);}
+  .daily-tabs{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);max-width:620px;margin:0 auto 40px;}
+  .daily-tab{background:var(--bg-alt);border:0;cursor:pointer;padding:18px 20px 16px;text-align:center;font-family:var(--sans);color:var(--text-muted);transition:background .25s ease,color .25s ease;position:relative;}
+  .daily-tab:hover{background:var(--bg-card);color:var(--text);}
+  .daily-tab .dt-k{display:block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;}
+  .daily-tab .dt-t{display:block;font-family:var(--serif);font-size:21px;margin-top:6px;color:var(--text);}
+  .daily-tab[aria-selected="true"]{background:linear-gradient(180deg,#b6905c18,transparent 80%),var(--bg-card);color:var(--accent);}
+  .daily-tab[aria-selected="true"] .dt-t{color:var(--accent);font-style:italic;}
+  .daily-tab[aria-selected="true"]::after{content:'';position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--accent);}
+  .daily-note{text-align:center;font-size:12px;color:var(--text-muted);font-weight:300;margin:-24px auto 36px;max-width:560px;}
+  .daily-panel + .daily-panel{margin-top:56px;}
+  .daily-panel[hidden]{display:none;}
+  .litany.daily-panel p{line-height:1.8;}
+  .litany.daily-panel p.salute{font-style:italic;font-weight:400;color:var(--text);font-size:clamp(19px,2.4vw,23px);margin-bottom:34px;}
+  .litany.daily-panel p.intercession{font-style:italic;font-weight:400;color:var(--accent);margin-top:34px;}
+  .litany.daily-panel p.intercession + p.intercession{margin-top:26px;}
+  .litany.daily-panel p.pivot{font-style:italic;font-weight:400;color:var(--text);font-size:clamp(18.5px,2.3vw,22px);line-height:1.55;margin-top:40px;padding:28px 0;border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong);}
+  .litany.daily-panel p.pivot + p{margin-top:30px;}
+  .litany.daily-panel .liston-actions{margin-top:34px;}
 </style>
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="My Knots — Mario Garza Livas">
@@ -755,6 +777,7 @@
       <a href="#knots">The 23 Knots</a>
       <a href="#ribbon">The Ribbon</a>
       <a href="#prayer">Prayer</a>
+      <a href="#daily-prayer">Daily Prayer</a>
       <a href="#reflection">Reflection</a>
       <a href="my-pathway.html">My Pathway</a>
       <a href="my-compass.html">My Compass</a>
@@ -1281,6 +1304,117 @@
   </div>
 </section>
 
+<section id="daily-prayer" class="sec-prayer sec-daily">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">IX</span>
+      <div>
+        <h2 class="sec-title">My daily <em>prayer</em></h2>
+        <p class="sec-sub">The same surrender at the beginning and at the end of the day: in the morning, consecration; at night, abandonment.</p>
+      </div>
+    </div>
+    <div class="daily-tabs reveal" role="tablist">
+      <button type="button" class="daily-tab" role="tab" id="tab-morning" aria-controls="morning" aria-selected="false" data-key="morning"><span class="dt-k">As the day begins</span><span class="dt-t">Morning</span></button>
+      <button type="button" class="daily-tab" role="tab" id="tab-night" aria-controls="night" aria-selected="false" data-key="night"><span class="dt-k">As the day ends</span><span class="dt-t">Night</span></button>
+    </div>
+    <p class="daily-note reveal">The one that matches the time of day opens on its own.</p>
+    <article class="litany daily-panel" id="morning" role="tabpanel" aria-labelledby="tab-morning">
+        <h3 class="litany-title">Morning prayer of surrender, trust and consecration to God</h3>
+        <div class="prayer-rule"></div>
+        <p class="salute">Lord Jesus, my Lord and Savior:</p>
+        <p>I am a sailboat in the midst of the storm;<br>without You, adrift and without a course,<br>but with You, whole and full of trust,<br>because You are my Lighthouse.</p>
+        <p>In You I trust and in You I rest.<br>Be the center, the origin and the meaning of my life.<br>You are the Love that sustains me,<br>embraces me and transforms me.<br>You are my Master;<br>teach me to love as You love,<br>so that Your Love may live in me<br>and be expressed through me.</p>
+        <p>Therefore, Lord, I surrender myself to You<br>and I renounce my selfishness,<br>my fears, my sorrows, my anger,<br>my lies and my sins.</p>
+        <p>Purify my heart<br>and grant me the grace to be<br>a clean vessel, ready for You.<br>I yield myself before You, my Lord and my God,<br>for without You I am nothing.</p>
+        <p>Protect me from my own weaknesses,<br>from my inclinations to sin<br>and from the temptations that could draw me away from You.<br>Above all, guard me from those to which I am most vulnerable.<br>Do not let me fall into the snares of the evil one,<br>nor let evil find a dwelling in my heart.<br>Strengthen my will, enlighten my understanding<br>and grant me the grace to recognize and reject every temptation.<br>When I falter, uphold me; when I am tempted, strengthen me;<br>and if I fall, grant me the humility to rise,<br>to run to Your mercy and always return to You.<br>Deliver me from all evil and cover me with Your protection and Your grace.</p>
+        <p>I love You, my God,<br>Father, Son and Holy Spirit.</p>
+        <p>Thank You for my life,<br>for the gift of living<br>and for all the blessings You have granted me.</p>
+        <p>I place in Your hands the whole story of my life:<br>my achievements and my successes,<br>my mistakes and my failures,<br>my falls and my wounds,<br>as well as the learnings and the lessons<br>that life has left me.</p>
+        <p>I give You even the ashes of what I did not know how to do well,<br>of my wrong decisions<br>and of all that I now recognize as a lost opportunity.</p>
+        <p>I also place before You all that is good,<br>true and worth redeeming in my story,<br>all that, by Your grace, has borne fruit in me.</p>
+        <p>Take it all, Lord;<br>purify it, redeem it and transform it.<br>Make use of it as best pleases You,<br>for my good, for the good of others<br>and for Your greater glory.</p>
+        <p>Lord, I place in Your hands<br>my wife, my daughter, my parents, my brother and my mother-in-law.<br>Care for them, bless them and always guide them toward You.<br>Grant them the grace to know You, to love You<br>and to live according to Your will.<br>May they never lack what they need to live with dignity,<br>and may they enjoy the joys and blessings of the life You give us.<br>Protect them, strengthen their faith<br>and let Your Love dwell always in their hearts.</p>
+        <p>I also place in Your hands<br>all those who suffer in this life:<br>the sick, the hungry,<br>those who live in poverty, loneliness or abandonment,<br>and those who pass through pain, anguish or despair.<br>Console them, strengthen them and come to their aid.<br>Be their refuge in the midst of tribulation<br>and let them never lack Your Love and Your mercy.</p>
+        <p>I pray for the reparation of the world,<br>for the conversion of hearts,<br>for the rising of holy vocations,<br>for peace in the world<br>and for the triumph of good over evil.<br>May Your truth enlighten the world,<br>may Your Love transform hearts<br>and may Your Kingdom spread among us.</p>
+        <p>I offer You this prayer<br>in reparation for all the offenses,<br>ingratitudes and sacrileges committed<br>against Your Sacred Heart, Jesus.<br>May there never be lacking souls who love You,<br>console You and respond to Your infinite Love.</p>
+        <p>I also offer You my sacrifices and my works,<br>above all in reparation for my own offenses<br>and, insofar as You dispose,<br>for the conversion of other souls as much in need of Your mercy as mine.</p>
+        <p>I pray for all the souls in purgatory.<br>Have mercy on them,<br>purify them and grant them the grace<br>to contemplate Your face for all eternity.</p>
+        <p>In a special way, I commend to You<br>my four grandparents and my father-in-law.<br>May Your infinite mercy reach them<br>and, by Your goodness, may they enjoy<br>the light and peace of Your presence.</p>
+        <p>I ask You for the grace to extend<br>the love that, in Your goodness, You make room for in my heart<br>to all Your children and to all Your creation.<br>Teach me to love it, respect it, safeguard it<br>and marvel before it.</p>
+        <p>Teach me to trust and abandon myself to Your Divine Providence,<br>even when I do not understand Your designs<br>or things do not happen as I wish.</p>
+        <p>Grant me the grace to fulfill faithfully<br>all my duties, obligations and responsibilities.<br>Help me to be diligent and persevering<br>in all that You have placed in my care.<br>Give me wisdom to make good decisions,<br>strength to work with dedication<br>and prudence to steward the fruits of my effort.<br>May I never neglect what is mine to do,<br>especially all that concerns the well-being,<br>the sustenance and the provision of my own.<br>Let me always do the best within my reach,<br>with honesty, love and responsibility;<br>and, having done all that is mine to do,<br>teach me to trust fully in You,<br>knowing that You will provide what is lacking<br>and that Your times and Your ways are perfect.</p>
+        <p>Grant me the grace and the blessing<br>that I may never lack work<br>nor opportunities to be of use<br>and to receive a just wage.<br>May I never lack love for my work,<br>nor the energy, the ability and the willingness<br>to work and to provide with dignity<br>for those who depend on me.</p>
+        <p>Grant me the fortitude, the temperance and the resilience<br>needed to embrace and carry<br>with dignity, faith and courage the crosses You place on my path.</p>
+        <p>Give me also the courage to face adversity,<br>without evading it or being overcome by fear,<br>and the determination to take up with faith<br>whatever I must face and overcome.</p>
+        <p>May I never lack the humility to accept my crosses,<br>the wisdom to understand them,<br>the strength to bear them<br>and the faith not to turn away from You in the midst of them.</p>
+        <p>Grant me the grace to safeguard<br>all that You entrust to my hands,<br>ever aware that nothing belongs to me<br>and that all glory is through You and for You.</p>
+        <p>Help me to do with love and diligence<br>all that lies in my hands,<br>and to entrust to You whatever escapes my control.</p>
+        <p>May I always understand that all You place in my hands<br>and the fruits with which You bless me<br>are means to serve You and glorify You,<br>never an end in themselves.</p>
+        <p>I consecrate to You once more, Lord, my whole life<br>and every dimension of my existence.<br>May all that I am, have, do and may yet become<br>remain under Your lordship and be for You.<br>Reconsecrate my story, my family, my relationships,<br>my work, my projects, my possessions,<br>my thoughts, my desires, my decisions<br>and every sphere of my life, without exception.<br>May nothing remain outside Your will<br>nor apart from Your Love.<br>May everything be ordered according to Your designs<br>and always directed toward You<br>and to the greater glory of God.</p>
+        <p>Holy Spirit, I beg You, in Your infinite goodness,<br>to grant me the gifts, the virtues, the charisms<br>and the graces You deem necessary<br>to serve the Lord, to fulfill His holy will<br>and to place all that I am and have<br>at the service of others,<br>for the greater glory of God.</p>
+        <p>Fill me with Your light<br>and, if it is Your will, make me an instrument of Your Love,<br>at the service of Your holy will.</p>
+        <p class="intercession">Most Holy Virgin Mary,<br>our Mother and heavenly Mother,<br>I ask you to intercede for me and for my own before your beloved Son.<br>Cover us with your maternal mantle,<br>lead us to Jesus<br>and teach us to love, trust and give ourselves to Him<br>as you did.<br>Walk with us on our journey<br>and pray for us now and at the hour of our death.</p>
+        <p class="intercession">To all the holy men and women of God,<br>and to the whole communion of saints,<br>I ask your intercession before the Lord.<br>Pray for us,<br>that we may persevere in faith,<br>grow in love<br>and attain, by the grace of God,<br>eternal life in His presence.</p>
+        <p class="pivot">Lord, I also place in Your hands the day that now begins.</p>
+        <p>I give You every moment,<br>every encounter, every decision and every task.<br>Take my steps, my thoughts, my words and my actions;<br>guide me, enlighten me and help me to live this day<br>according to Your holy will.</p>
+        <p>I place myself entirely in Your hands.<br>Grant me Your blessing, Your grace and Your protection;<br>may Your presence accompany me at every moment<br>and may nothing I live through today draw me away from You.</p>
+        <p>My Guardian Angel,<br>accompany me and protect me throughout this day,<br>light my way and guide me along the path of good.<br>Do not let me stray from God<br>and help me remain always in His grace.</p>
+        <p class="amen">Amen.</p>
+        <div class="liston-actions"><button type="button" class="liston-copy daily-copy" data-done="Copied"><span class="lbl">Copy the prayer</span></button></div>
+    </article>
+    <article class="litany daily-panel" id="night" role="tabpanel" aria-labelledby="tab-night">
+        <h3 class="litany-title">Night prayer of surrender, trust and abandonment to God</h3>
+        <div class="prayer-rule"></div>
+        <p class="salute">Lord Jesus, my Lord and Savior:</p>
+        <p>I am a sailboat in the midst of the storm;<br>without You, adrift and without a course,<br>but with You, whole and full of trust,<br>because You are my Lighthouse.</p>
+        <p>In You I trust and in You I rest.<br>Be the center, the origin and the meaning of my life.<br>You are the Love that sustains me,<br>embraces me and transforms me.<br>You are my Master;<br>teach me to love as You love,<br>so that Your Love may live in me<br>and be expressed through me.</p>
+        <p>Therefore, Lord, I surrender myself to You<br>and I renounce my selfishness,<br>my fears, my sorrows, my anger,<br>my lies and my sins.</p>
+        <p>Purify my heart<br>and grant me the grace to be<br>a clean vessel, ready for You.<br>I yield myself before You, my Lord and my God,<br>for without You I am nothing.</p>
+        <p>Protect me from my own weaknesses,<br>from my inclinations to sin<br>and from the temptations that could draw me away from You.<br>Above all, guard me from those to which I am most vulnerable.<br>Do not let me fall into the snares of the evil one,<br>nor let evil find a dwelling in my heart.<br>Strengthen my will, enlighten my understanding<br>and grant me the grace to recognize and reject every temptation.<br>When I falter, uphold me; when I am tempted, strengthen me;<br>and if I fall, grant me the humility to rise,<br>to run to Your mercy and always return to You.<br>Deliver me from all evil and cover me with Your protection and Your grace.</p>
+        <p>I love You, my God,<br>Father, Son and Holy Spirit.</p>
+        <p>Thank You for my life,<br>for the gift of living<br>and for all the blessings You have granted me.</p>
+        <p>I place in Your hands the whole story of my life:<br>my achievements and my successes,<br>my mistakes and my failures,<br>my falls and my wounds,<br>as well as the learnings and the lessons<br>that life has left me.</p>
+        <p>I give You even the ashes of what I did not know how to do well,<br>of my wrong decisions<br>and of all that I now recognize as a lost opportunity.</p>
+        <p>I also place before You all that is good,<br>true and worth redeeming in my story,<br>all that, by Your grace, has borne fruit in me.</p>
+        <p>Take it all, Lord;<br>purify it, redeem it and transform it.<br>Make use of it as best pleases You,<br>for my good, for the good of others<br>and for Your greater glory.</p>
+        <p>Lord, I place in Your hands<br>my wife, my daughter, my parents, my brother and my mother-in-law.<br>Care for them, bless them and always guide them toward You.<br>Grant them the grace to know You, to love You<br>and to live according to Your will.<br>May they never lack what they need to live with dignity,<br>and may they enjoy the joys and blessings of the life You give us.<br>Protect them, strengthen their faith<br>and let Your Love dwell always in their hearts.</p>
+        <p>I also place in Your hands<br>all those who suffer in this life:<br>the sick, the hungry,<br>those who live in poverty, loneliness or abandonment,<br>and those who pass through pain, anguish or despair.<br>Console them, strengthen them and come to their aid.<br>Be their refuge in the midst of tribulation<br>and let them never lack Your Love and Your mercy.</p>
+        <p>I pray for the reparation of the world,<br>for the conversion of hearts,<br>for the rising of holy vocations,<br>for peace in the world<br>and for the triumph of good over evil.<br>May Your truth enlighten the world,<br>may Your Love transform hearts<br>and may Your Kingdom spread among us.</p>
+        <p>I offer You this prayer<br>in reparation for all the offenses,<br>ingratitudes and sacrileges committed<br>against Your Sacred Heart, Jesus.<br>May there never be lacking souls who love You,<br>console You and respond to Your infinite Love.</p>
+        <p>I also offer You my sacrifices and my works,<br>above all in reparation for my own offenses<br>and, insofar as You dispose,<br>for the conversion of other souls as much in need of Your mercy as mine.</p>
+        <p>I pray for all the souls in purgatory.<br>Have mercy on them,<br>purify them and grant them the grace<br>to contemplate Your face for all eternity.</p>
+        <p>In a special way, I commend to You<br>my four grandparents and my father-in-law.<br>May Your infinite mercy reach them<br>and, by Your goodness, may they enjoy<br>the light and peace of Your presence.</p>
+        <p>I ask You for the grace to extend<br>the love that, in Your goodness, You make room for in my heart<br>to all Your children and to all Your creation.<br>Teach me to love it, respect it, safeguard it<br>and marvel before it.</p>
+        <p>Teach me to trust and abandon myself to Your Divine Providence,<br>even when I do not understand Your designs<br>or things do not happen as I wish.</p>
+        <p>Grant me the grace to fulfill faithfully<br>all my duties, obligations and responsibilities.<br>Help me to be diligent and persevering<br>in all that You have placed in my care.<br>Give me wisdom to make good decisions,<br>strength to work with dedication<br>and prudence to steward the fruits of my effort.<br>May I never neglect what is mine to do,<br>especially all that concerns the well-being,<br>the sustenance and the provision of my own.<br>Let me always do the best within my reach,<br>with honesty, love and responsibility;<br>and, having done all that is mine to do,<br>teach me to trust fully in You,<br>knowing that You will provide what is lacking<br>and that Your times and Your ways are perfect.</p>
+        <p>Grant me the grace and the blessing<br>that I may never lack work<br>nor opportunities to be of use<br>and to receive a just wage.<br>May I never lack love for my work,<br>nor the energy, the ability and the willingness<br>to work and to provide with dignity<br>for those who depend on me.</p>
+        <p>Grant me the fortitude, the temperance and the resilience<br>needed to embrace and carry<br>with dignity, faith and courage the crosses You place on my path.</p>
+        <p>Give me also the courage to face adversity,<br>without evading it or being overcome by fear,<br>and the determination to take up with faith<br>whatever I must face and overcome.</p>
+        <p>May I never lack the humility to accept my crosses,<br>the wisdom to understand them,<br>the strength to bear them<br>and the faith not to turn away from You in the midst of them.</p>
+        <p>Grant me the grace to safeguard<br>all that You entrust to my hands,<br>ever aware that nothing belongs to me<br>and that all glory is through You and for You.</p>
+        <p>Help me to do with love and diligence<br>all that lies in my hands,<br>and to entrust to You whatever escapes my control.</p>
+        <p>May I always understand that all You place in my hands<br>and the fruits with which You bless me<br>are means to serve You and glorify You,<br>never an end in themselves.</p>
+        <p>I consecrate to You once more, Lord, my whole life<br>and every dimension of my existence.<br>May all that I am, have, do and may yet become<br>remain under Your lordship and be for You.<br>Reconsecrate my story, my family, my relationships,<br>my work, my projects, my possessions,<br>my thoughts, my desires, my decisions<br>and every sphere of my life, without exception.<br>May nothing remain outside Your will<br>nor apart from Your Love.<br>May everything be ordered according to Your designs<br>and always directed toward You<br>and to the greater glory of God.</p>
+        <p>Holy Spirit, I beg You, in Your infinite goodness,<br>to grant me the gifts, the virtues, the charisms<br>and the graces You deem necessary<br>to serve the Lord, to fulfill His holy will<br>and to place all that I am and have<br>at the service of others,<br>for the greater glory of God.</p>
+        <p>Fill me with Your light<br>and, if it is Your will, make me an instrument of Your Love,<br>at the service of Your holy will.</p>
+        <p class="intercession">Most Holy Virgin Mary,<br>our Mother and heavenly Mother,<br>I ask you to intercede for me and for my own before your beloved Son.<br>Cover us with your maternal mantle,<br>lead us to Jesus<br>and teach us to love, trust and give ourselves to Him<br>as you did.<br>Walk with us on our journey<br>and pray for us now and at the hour of our death.</p>
+        <p class="intercession">To all the holy men and women of God,<br>and to the whole communion of saints,<br>I ask your intercession before the Lord.<br>Pray for us,<br>that we may persevere in faith,<br>grow in love<br>and attain, by the grace of God,<br>eternal life in His presence.</p>
+        <p class="pivot">Lord, I place in Your hands the day that now ends.</p>
+        <p>I give You all that I have lived:<br>every encounter, every decision and every task;<br>what I did and what I left undone,<br>my joys and my sorrows,<br>my successes and my mistakes,<br>my efforts and all that remained unfinished.</p>
+        <p>I thank You for the blessings received,<br>for the opportunities You granted me<br>and for Your presence, even in those moments<br>when I did not know how to recognize it.</p>
+        <p>Forgive my faults,<br>my omissions and my failures to love.<br>Show me where I must improve,<br>give me a contrite and humble heart<br>and the grace not to fall again into the same mistakes.</p>
+        <p>Heal my wounds, restore my strength<br>and free my heart from all unrest,<br>resentment or worry<br>that I should not carry with me into rest.</p>
+        <p>I also give You what remained pending,<br>what I could not resolve<br>and all that escapes my control.<br>Teach me to leave it in Your hands<br>and to rest in the certainty of Your Providence.</p>
+        <p>Grant me Your peace, a restoring rest<br>and the grace to awaken renewed in Your Love,<br>ready to live a new day according to Your will.</p>
+        <p>Watch over me and my own through this night.<br>Cover us with Your protection,<br>keep all evil far from us<br>and grant us Your blessing while we rest.</p>
+        <p>My Guardian Angel,<br>watch over me and my own through this night,<br>protect us from every danger<br>and keep us under the shelter of God.</p>
+        <p>In You we rest, Lord,<br>for we are Yours and we are in Your hands.</p>
+        <p class="amen">Amen.</p>
+        <div class="liston-actions"><button type="button" class="liston-copy daily-copy" data-done="Copied"><span class="lbl">Copy the prayer</span></button></div>
+    </article>
+  </div>
+</section>
+
 <footer>
   <div class="wrap">
     <div class="footer-brand">My Knots</div>
@@ -1391,6 +1525,47 @@
     });
   })();
 
+</script>
+<script>
+  /* ---------- mi oración diaria: matutina / nocturna ---------- */
+  (function(){
+    var tabs = Array.prototype.slice.call(document.querySelectorAll('.daily-tab'));
+    if(!tabs.length) return;
+    var keys = tabs.map(function(t){ return t.getAttribute('data-key'); });
+    function show(key, scroll){
+      tabs.forEach(function(t){
+        var on = t.getAttribute('data-key') === key;
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.tabIndex = on ? 0 : -1;
+        document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+      });
+      if(scroll){ var el = document.getElementById(key); if(el) el.scrollIntoView({block:'start'}); }
+    }
+    tabs.forEach(function(t, i){
+      t.addEventListener('click', function(){ show(t.getAttribute('data-key')); });
+      t.addEventListener('keydown', function(e){
+        if(e.key === 'ArrowRight' || e.key === 'ArrowLeft'){ var n = tabs[(i + 1) % tabs.length]; n.focus(); show(n.getAttribute('data-key')); }
+      });
+    });
+    // De madrugada a media tarde, la matutina; después, la nocturna.
+    var h = new Date().getHours();
+    var byHour = (h >= 4 && h < 16) ? keys[0] : keys[1];
+    var fromHash = location.hash && keys.indexOf(location.hash.slice(1)) > -1 ? location.hash.slice(1) : null;
+    show(fromHash || byHour, !!fromHash);
+
+    // copiar la oración visible, respetando versos y estrofas
+    document.querySelectorAll('.daily-copy').forEach(function(b){
+      var lbl = b.querySelector('.lbl'), orig = lbl.textContent;
+      b.addEventListener('click', function(){
+        var panel = b.closest('.daily-panel');
+        var parts = [panel.querySelector('.litany-title').textContent.trim()];
+        panel.querySelectorAll('p').forEach(function(p){ parts.push(p.innerHTML.split(/<br\s*\/?>/i).map(function(s){ var d=document.createElement('div'); d.innerHTML=s; return d.textContent.trim(); }).join('\n')); });
+        var text = parts.join('\n\n');
+        function ok(){ b.classList.add('ok'); lbl.textContent = b.getAttribute('data-done'); setTimeout(function(){ b.classList.remove('ok'); lbl.textContent = orig; }, 1800); }
+        if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(ok, function(){}); }
+      });
+    });
+  })();
 </script>
 </body>
 </html>

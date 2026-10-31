@@ -732,6 +732,28 @@
     .liston{padding:36px 34px;clip-path:polygon(0 0,100% 0,calc(100% - 18px) 50%,100% 100%,0 100%,18px 50%);}
   }
 
+
+  /* ---------- MI ORACIÓN DIARIA ---------- */
+  @media (min-width:641px){ .nav-links{gap:13px 13px;} } /* cabe un elemento más en la barra sin partirla en dos líneas */
+  .sec-daily{background:radial-gradient(ellipse 760px 520px at 50% 18%,#b6905c0b,transparent 70%);}
+  .daily-tabs{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);max-width:620px;margin:0 auto 40px;}
+  .daily-tab{background:var(--bg-alt);border:0;cursor:pointer;padding:18px 20px 16px;text-align:center;font-family:var(--sans);color:var(--text-muted);transition:background .25s ease,color .25s ease;position:relative;}
+  .daily-tab:hover{background:var(--bg-card);color:var(--text);}
+  .daily-tab .dt-k{display:block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;}
+  .daily-tab .dt-t{display:block;font-family:var(--serif);font-size:21px;margin-top:6px;color:var(--text);}
+  .daily-tab[aria-selected="true"]{background:linear-gradient(180deg,#b6905c18,transparent 80%),var(--bg-card);color:var(--accent);}
+  .daily-tab[aria-selected="true"] .dt-t{color:var(--accent);font-style:italic;}
+  .daily-tab[aria-selected="true"]::after{content:'';position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--accent);}
+  .daily-note{text-align:center;font-size:12px;color:var(--text-muted);font-weight:300;margin:-24px auto 36px;max-width:560px;}
+  .daily-panel + .daily-panel{margin-top:56px;}
+  .daily-panel[hidden]{display:none;}
+  .litany.daily-panel p{line-height:1.8;}
+  .litany.daily-panel p.salute{font-style:italic;font-weight:400;color:var(--text);font-size:clamp(19px,2.4vw,23px);margin-bottom:34px;}
+  .litany.daily-panel p.intercession{font-style:italic;font-weight:400;color:var(--accent);margin-top:34px;}
+  .litany.daily-panel p.intercession + p.intercession{margin-top:26px;}
+  .litany.daily-panel p.pivot{font-style:italic;font-weight:400;color:var(--text);font-size:clamp(18.5px,2.3vw,22px);line-height:1.55;margin-top:40px;padding:28px 0;border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong);}
+  .litany.daily-panel p.pivot + p{margin-top:30px;}
+  .litany.daily-panel .liston-actions{margin-top:34px;}
 </style>
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mis Nudos — Mario Garza Livas">
@@ -755,6 +777,7 @@
       <a href="#nudos">Los 23 nudos</a>
       <a href="#liston">El listón</a>
       <a href="#oracion">Oración</a>
+      <a href="#oracion-diaria">Oración diaria</a>
       <a href="#reflexion">Reflexión</a>
       <a href="mi-camino.html">Mi Camino</a>
       <a href="mi-compas.html">Mi Compás</a>
@@ -1281,6 +1304,117 @@
   </div>
 </section>
 
+<section id="oracion-diaria" class="sec-prayer sec-daily">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">IX</span>
+      <div>
+        <h2 class="sec-title">Mi oración <em>diaria</em></h2>
+        <p class="sec-sub">La misma entrega al comenzar y al terminar el día: por la mañana, consagración; por la noche, abandono.</p>
+      </div>
+    </div>
+    <div class="daily-tabs reveal" role="tablist">
+      <button type="button" class="daily-tab" role="tab" id="tab-manana" aria-controls="manana" aria-selected="false" data-key="manana"><span class="dt-k">Al comenzar el día</span><span class="dt-t">Matutina</span></button>
+      <button type="button" class="daily-tab" role="tab" id="tab-noche" aria-controls="noche" aria-selected="false" data-key="noche"><span class="dt-k">Al terminar el día</span><span class="dt-t">Nocturna</span></button>
+    </div>
+    <p class="daily-note reveal">Se abre sola la que corresponde a la hora del día.</p>
+    <article class="litany daily-panel" id="manana" role="tabpanel" aria-labelledby="tab-manana">
+        <h3 class="litany-title">Oración matutina de entrega, confianza y consagración a Dios</h3>
+        <div class="prayer-rule"></div>
+        <p class="salute">Señor Jesús, mi Señor y Salvador:</p>
+        <p>Soy un velero en medio de la tormenta;<br>sin Ti, a la deriva y sin rumbo,<br>pero contigo, pleno y confiado,<br>porque Tú eres mi Faro.</p>
+        <p>En Ti confío y en Ti descanso.<br>Sé Tú el centro, el origen y el sentido de mi vida.<br>Tú eres el Amor que me sostiene,<br>me abraza y me transforma.<br>Tú eres mi Maestro;<br>enséñame a amar como Tú amas,<br>para que tu Amor viva en mí<br>y se exprese a través de mí.</p>
+        <p>Por eso, Señor, me entrego a Ti<br>y renuncio a mi egoísmo,<br>a mis miedos, mis penas, mis enojos,<br>mis mentiras y mis pecados.</p>
+        <p>Purifica mi corazón<br>y concédeme la gracia de ser<br>una vasija limpia y dispuesta para Ti.<br>Me rindo ante Ti, Señor y Dios mío,<br>porque sin Ti nada soy.</p>
+        <p>Protégeme de mis propias debilidades,<br>de mis inclinaciones al pecado<br>y de las tentaciones que puedan apartarme de Ti.<br>En especial, guárdame de aquellas ante las que soy más vulnerable.<br>No permitas que caiga en las asechanzas del maligno<br>ni que el mal encuentre morada en mi corazón.<br>Fortalece mi voluntad, ilumina mi entendimiento<br>y concédeme la gracia de reconocer y rechazar toda tentación.<br>Cuando flaquee, sostenme; cuando me vea tentado, fortaléceme;<br>y si caigo, concédeme la humildad de levantarme,<br>acudir a tu misericordia y volver siempre a Ti.<br>Líbrame de todo mal y cúbreme con tu protección y tu gracia.</p>
+        <p>Te amo, Dios mío,<br>Padre, Hijo y Espíritu Santo.</p>
+        <p>Gracias por mi vida,<br>por el regalo de vivir<br>y por todas las bendiciones que me has concedido.</p>
+        <p>Pongo en tus manos toda la historia de mi vida:<br>mis logros y mis aciertos,<br>mis errores y mis fracasos,<br>mis caídas y mis heridas,<br>así como los aprendizajes y las lecciones<br>que la vida me ha dejado.</p>
+        <p>Te entrego incluso las cenizas de aquello que no supe hacer bien,<br>de mis decisiones equivocadas<br>y de todo cuanto hoy reconozco como una oportunidad perdida.</p>
+        <p>Pongo también ante Ti todo lo bueno,<br>lo verdadero y rescatable de mi historia,<br>todo aquello que, por tu gracia, ha dado fruto en mí.</p>
+        <p>Tómalo todo, Señor;<br>purifícalo, redímelo y transfórmalo.<br>Sírvete de ello como mejor te plazca,<br>para mi bien, para el bien de los demás<br>y para mayor gloria tuya.</p>
+        <p>Señor, pongo en tus manos<br>a mi esposa, mi hija, mis padres, mi hermano y mi suegra.<br>Cuídalos, bendícelos y guíalos siempre hacia Ti.<br>Concédeles la gracia de conocerte, amarte<br>y vivir conforme a tu voluntad.<br>Que nunca les falte lo necesario para vivir dignamente<br>y puedan gozar de las alegrías y bendiciones de la vida que nos regalas.<br>Protégelos, fortalece su fe<br>y haz que tu Amor habite siempre en sus corazones.</p>
+        <p>Pongo también en tus manos<br>a todos aquellos que sufren en esta vida:<br>los enfermos, los que padecen hambre,<br>los que viven en la pobreza, la soledad o el abandono,<br>y los que atraviesan el dolor, la angustia o la desesperanza.<br>Consuélalos, fortalécelos y socórrelos.<br>Sé su refugio en medio de las tribulaciones<br>y permite que nunca les falten tu Amor y tu misericordia.</p>
+        <p>Te pido por la reparación del mundo,<br>por la conversión de los corazones,<br>por el surgimiento de santas vocaciones,<br>por la paz en el mundo<br>y por el triunfo del bien sobre el mal.<br>Que tu verdad ilumine al mundo,<br>que tu Amor transforme los corazones<br>y que tu Reino se extienda entre nosotros.</p>
+        <p>Te ofrezco esta oración<br>en reparación por todas las ofensas,<br>ingratitudes y sacrilegios cometidos<br>contra tu Sagrado Corazón, Jesús.<br>Que nunca falten almas que te amen,<br>te consuelen y correspondan a tu infinito Amor.</p>
+        <p>Te ofrezco también mis sacrificios y mis obras,<br>principalmente en reparación por mis propias ofensas<br>y, en la medida en que Tú dispongas,<br>por la conversión de otras almas tan necesitadas de tu misericordia como la mía.</p>
+        <p>Te pido por todas las almas del purgatorio.<br>Ten misericordia de ellas,<br>purifícalas y concédeles la gracia<br>de contemplar eternamente tu rostro.</p>
+        <p>De manera especial, te encomiendo<br>a mis cuatro abuelos y a mi suegro.<br>Que tu infinita misericordia los alcance<br>y que, por tu bondad, puedan gozar<br>de la luz y la paz de tu presencia.</p>
+        <p>Te pido la gracia de extender<br>el amor que, por tu bondad, hagas caber en mi corazón<br>a todos tus hijos y a toda tu creación.<br>Enséñame a amarla, respetarla, custodiarla<br>y maravillarme ante ella.</p>
+        <p>Enséñame a confiar y abandonarme a tu Divina Providencia,<br>incluso cuando no comprenda tus designios<br>o las cosas no sucedan como deseo.</p>
+        <p>Concédeme la gracia de cumplir fielmente<br>con todos mis deberes, obligaciones y responsabilidades.<br>Ayúdame a ser diligente y perseverante<br>en todo aquello que has puesto bajo mi cuidado.<br>Dame sabiduría para tomar buenas decisiones,<br>fortaleza para trabajar con entrega<br>y prudencia para administrar los frutos de mi esfuerzo.<br>Que nunca descuide aquello que me corresponde hacer,<br>especialmente cuanto concierne al bienestar,<br>el sustento y la provisión de los míos.<br>Permíteme hacer siempre lo mejor que esté a mi alcance,<br>con honradez, amor y responsabilidad;<br>y, habiendo hecho cuanto esté de mi parte,<br>enséñame a confiar plenamente en Ti,<br>sabiendo que Tú proveerás lo que falte<br>y que tus tiempos y tus caminos son perfectos.</p>
+        <p>Concédeme la gracia y la bendición<br>de que nunca me falte el trabajo<br>ni las oportunidades para ser de utilidad<br>y recibir una justa remuneración.<br>Que nunca me falten el amor por el trabajo,<br>la energía, la capacidad y la disposición necesarias<br>para trabajar y proveer dignamente<br>a quienes dependen de mí.</p>
+        <p>Concédeme la fortaleza, la templanza y la resiliencia<br>necesarias para abrazar y llevar<br>con dignidad, fe y valentía las cruces que dispongas en mi camino.</p>
+        <p>Dame también la valentía para enfrentar las adversidades,<br>sin evadirlas ni dejarme vencer por el miedo,<br>y la determinación para asumir con fe<br>aquello que deba afrontar y superar.</p>
+        <p>Que nunca me falten la humildad para aceptar las cruces,<br>la sabiduría para comprenderlas,<br>la fortaleza para soportarlas<br>y la fe para no apartarme de Ti en medio de ellas.</p>
+        <p>Concédeme la gracia de custodiar<br>todo aquello que confíes a mis manos,<br>siempre consciente de que nada me pertenece<br>y de que toda la gloria es por Ti y para Ti.</p>
+        <p>Ayúdame a hacer con amor y diligencia<br>todo aquello que esté en mis manos,<br>y a confiarte aquello que escape a mi control.</p>
+        <p>Que comprenda siempre que todo lo que pones en mis manos<br>y los frutos con los que me bendices<br>son medios para servirte y glorificarte,<br>nunca un fin en sí mismos.</p>
+        <p>Te consagro nuevamente, Señor, toda mi vida<br>y todas las dimensiones de mi existencia.<br>Que todo cuanto soy, tengo, hago y pueda llegar a ser<br>quede bajo tu señorío y sea para Ti.<br>Reconsagra mi historia, mi familia, mis relaciones,<br>mi trabajo, mis proyectos, mis bienes,<br>mis pensamientos, mis deseos, mis decisiones<br>y cada ámbito de mi vida, sin excepción.<br>Que nada quede fuera de tu voluntad<br>ni apartado de tu Amor.<br>Que todo sea ordenado conforme a tus designios<br>y esté siempre orientado a Ti<br>y a la mayor gloria de Dios.</p>
+        <p>Espíritu Santo, te ruego que, por tu infinita bondad,<br>me concedas los dones, las virtudes, los carismas<br>y las gracias que consideres necesarios<br>para servir al Señor, cumplir su santa voluntad<br>y poner todo lo que soy y tengo<br>al servicio de los demás,<br>para mayor gloria de Dios.</p>
+        <p>Lléname de tu luz<br>y, si es tu voluntad, haz de mí un instrumento de tu Amor,<br>al servicio de tu santa voluntad.</p>
+        <p class="intercession">Santísima Virgen María,<br>Madre nuestra y Madre celestial,<br>te ruego que intercedas por mí y por los míos ante tu amado Hijo.<br>Cúbrenos con tu manto maternal,<br>guíanos hacia Jesús<br>y enséñanos a amar, confiar y entregarnos a Él<br>como tú lo hiciste.<br>Acompáñanos en nuestro caminar<br>y ruega por nosotros ahora y en la hora de nuestra muerte.</p>
+        <p class="intercession">A todos los santos y santas de Dios,<br>y a toda la comunión de los santos,<br>les pido su intercesión ante el Señor.<br>Rueguen por nosotros,<br>para que perseveremos en la fe,<br>crezcamos en el amor<br>y alcancemos, por la gracia de Dios,<br>la vida eterna en su presencia.</p>
+        <p class="pivot">Señor, pongo también en tus manos el día que hoy comienza.</p>
+        <p>Te entrego cada momento,<br>cada encuentro, cada decisión y cada tarea.<br>Toma mis pasos, mis pensamientos, mis palabras y mis acciones;<br>guíame, ilumíname y ayúdame a vivir este día<br>conforme a tu santa voluntad.</p>
+        <p>Me pongo enteramente en tus manos.<br>Concédeme tu bendición, tu gracia y tu protección;<br>que tu presencia me acompañe en todo momento<br>y que nada de cuanto viva me aparte de Ti.</p>
+        <p>Ángel de mi guarda,<br>acompáñame y protégeme durante este día,<br>ilumina mi camino y guíame por el camino del bien.<br>No permitas que me aparte de Dios<br>y ayúdame a permanecer siempre bajo su gracia.</p>
+        <p class="amen">Amén.</p>
+        <div class="liston-actions"><button type="button" class="liston-copy daily-copy" data-done="Copiada"><span class="lbl">Copiar la oración</span></button></div>
+    </article>
+    <article class="litany daily-panel" id="noche" role="tabpanel" aria-labelledby="tab-noche">
+        <h3 class="litany-title">Oración nocturna de entrega, confianza y abandono en Dios</h3>
+        <div class="prayer-rule"></div>
+        <p class="salute">Señor Jesús, mi Señor y Salvador:</p>
+        <p>Soy un velero en medio de la tormenta;<br>sin Ti, a la deriva y sin rumbo,<br>pero contigo, pleno y confiado,<br>porque Tú eres mi Faro.</p>
+        <p>En Ti confío y en Ti descanso.<br>Sé Tú el centro, el origen y el sentido de mi vida.<br>Tú eres el Amor que me sostiene,<br>me abraza y me transforma.<br>Tú eres mi Maestro;<br>enséñame a amar como Tú amas,<br>para que tu Amor viva en mí<br>y se exprese a través de mí.</p>
+        <p>Por eso, Señor, me entrego a Ti<br>y renuncio a mi egoísmo,<br>a mis miedos, mis penas, mis enojos,<br>mis mentiras y mis pecados.</p>
+        <p>Purifica mi corazón<br>y concédeme la gracia de ser<br>una vasija limpia y dispuesta para Ti.<br>Me rindo ante Ti, Señor y Dios mío,<br>porque sin Ti nada soy.</p>
+        <p>Protégeme de mis propias debilidades,<br>de mis inclinaciones al pecado<br>y de las tentaciones que puedan apartarme de Ti.<br>En especial, guárdame de aquellas ante las que soy más vulnerable.<br>No permitas que caiga en las asechanzas del maligno<br>ni que el mal encuentre morada en mi corazón.<br>Fortalece mi voluntad, ilumina mi entendimiento<br>y concédeme la gracia de reconocer y rechazar toda tentación.<br>Cuando flaquee, sostenme; cuando me vea tentado, fortaléceme;<br>y si caigo, concédeme la humildad de levantarme,<br>acudir a tu misericordia y volver siempre a Ti.<br>Líbrame de todo mal y cúbreme con tu protección y tu gracia.</p>
+        <p>Te amo, Dios mío,<br>Padre, Hijo y Espíritu Santo.</p>
+        <p>Gracias por mi vida,<br>por el regalo de vivir<br>y por todas las bendiciones que me has concedido.</p>
+        <p>Pongo en tus manos toda la historia de mi vida:<br>mis logros y mis aciertos,<br>mis errores y mis fracasos,<br>mis caídas y mis heridas,<br>así como los aprendizajes y las lecciones<br>que la vida me ha dejado.</p>
+        <p>Te entrego incluso las cenizas de aquello que no supe hacer bien,<br>de mis decisiones equivocadas<br>y de todo cuanto hoy reconozco como una oportunidad perdida.</p>
+        <p>Pongo también ante Ti todo lo bueno,<br>lo verdadero y rescatable de mi historia,<br>todo aquello que, por tu gracia, ha dado fruto en mí.</p>
+        <p>Tómalo todo, Señor;<br>purifícalo, redímelo y transfórmalo.<br>Sírvete de ello como mejor te plazca,<br>para mi bien, para el bien de los demás<br>y para mayor gloria tuya.</p>
+        <p>Señor, pongo en tus manos<br>a mi esposa, mi hija, mis padres, mi hermano y mi suegra.<br>Cuídalos, bendícelos y guíalos siempre hacia Ti.<br>Concédeles la gracia de conocerte, amarte<br>y vivir conforme a tu voluntad.<br>Que nunca les falte lo necesario para vivir dignamente<br>y puedan gozar de las alegrías y bendiciones de la vida que nos regalas.<br>Protégelos, fortalece su fe<br>y haz que tu Amor habite siempre en sus corazones.</p>
+        <p>Pongo también en tus manos<br>a todos aquellos que sufren en esta vida:<br>los enfermos, los que padecen hambre,<br>los que viven en la pobreza, la soledad o el abandono,<br>y los que atraviesan el dolor, la angustia o la desesperanza.<br>Consuélalos, fortalécelos y socórrelos.<br>Sé su refugio en medio de las tribulaciones<br>y permite que nunca les falten tu Amor y tu misericordia.</p>
+        <p>Te pido por la reparación del mundo,<br>por la conversión de los corazones,<br>por el surgimiento de santas vocaciones,<br>por la paz en el mundo<br>y por el triunfo del bien sobre el mal.<br>Que tu verdad ilumine al mundo,<br>que tu Amor transforme los corazones<br>y que tu Reino se extienda entre nosotros.</p>
+        <p>Te ofrezco esta oración<br>en reparación por todas las ofensas,<br>ingratitudes y sacrilegios cometidos<br>contra tu Sagrado Corazón, Jesús.<br>Que nunca falten almas que te amen,<br>te consuelen y correspondan a tu infinito Amor.</p>
+        <p>Te ofrezco también mis sacrificios y mis obras,<br>principalmente en reparación por mis propias ofensas<br>y, en la medida en que Tú dispongas,<br>por la conversión de otras almas tan necesitadas de tu misericordia como la mía.</p>
+        <p>Te pido por todas las almas del purgatorio.<br>Ten misericordia de ellas,<br>purifícalas y concédeles la gracia<br>de contemplar eternamente tu rostro.</p>
+        <p>De manera especial, te encomiendo<br>a mis cuatro abuelos y a mi suegro.<br>Que tu infinita misericordia los alcance<br>y que, por tu bondad, puedan gozar<br>de la luz y la paz de tu presencia.</p>
+        <p>Te pido la gracia de extender<br>el amor que, por tu bondad, hagas caber en mi corazón<br>a todos tus hijos y a toda tu creación.<br>Enséñame a amarla, respetarla, custodiarla<br>y maravillarme ante ella.</p>
+        <p>Enséñame a confiar y abandonarme a tu Divina Providencia,<br>incluso cuando no comprenda tus designios<br>o las cosas no sucedan como deseo.</p>
+        <p>Concédeme la gracia de cumplir fielmente<br>con todos mis deberes, obligaciones y responsabilidades.<br>Ayúdame a ser diligente y perseverante<br>en todo aquello que has puesto bajo mi cuidado.<br>Dame sabiduría para tomar buenas decisiones,<br>fortaleza para trabajar con entrega<br>y prudencia para administrar los frutos de mi esfuerzo.<br>Que nunca descuide aquello que me corresponde hacer,<br>especialmente cuanto concierne al bienestar,<br>el sustento y la provisión de los míos.<br>Permíteme hacer siempre lo mejor que esté a mi alcance,<br>con honradez, amor y responsabilidad;<br>y, habiendo hecho cuanto esté de mi parte,<br>enséñame a confiar plenamente en Ti,<br>sabiendo que Tú proveerás lo que falte<br>y que tus tiempos y tus caminos son perfectos.</p>
+        <p>Concédeme la gracia y la bendición<br>de que nunca me falte el trabajo<br>ni las oportunidades para ser de utilidad<br>y recibir una justa remuneración.<br>Que nunca me falten el amor por el trabajo,<br>la energía, la capacidad y la disposición necesarias<br>para trabajar y proveer dignamente<br>a quienes dependen de mí.</p>
+        <p>Concédeme la fortaleza, la templanza y la resiliencia<br>necesarias para abrazar y llevar<br>con dignidad, fe y valentía las cruces que dispongas en mi camino.</p>
+        <p>Dame también la valentía para enfrentar las adversidades,<br>sin evadirlas ni dejarme vencer por el miedo,<br>y la determinación para asumir con fe<br>aquello que deba afrontar y superar.</p>
+        <p>Que nunca me falten la humildad para aceptar las cruces,<br>la sabiduría para comprenderlas,<br>la fortaleza para soportarlas<br>y la fe para no apartarme de Ti en medio de ellas.</p>
+        <p>Concédeme la gracia de custodiar<br>todo aquello que confíes a mis manos,<br>siempre consciente de que nada me pertenece<br>y de que toda la gloria es por Ti y para Ti.</p>
+        <p>Ayúdame a hacer con amor y diligencia<br>todo aquello que esté en mis manos,<br>y a confiarte aquello que escape a mi control.</p>
+        <p>Que comprenda siempre que todo lo que pones en mis manos<br>y los frutos con los que me bendices<br>son medios para servirte y glorificarte,<br>nunca un fin en sí mismos.</p>
+        <p>Te consagro nuevamente, Señor, toda mi vida<br>y todas las dimensiones de mi existencia.<br>Que todo cuanto soy, tengo, hago y pueda llegar a ser<br>quede bajo tu señorío y sea para Ti.<br>Reconsagra mi historia, mi familia, mis relaciones,<br>mi trabajo, mis proyectos, mis bienes,<br>mis pensamientos, mis deseos, mis decisiones<br>y cada ámbito de mi vida, sin excepción.<br>Que nada quede fuera de tu voluntad<br>ni apartado de tu Amor.<br>Que todo sea ordenado conforme a tus designios<br>y esté siempre orientado a Ti<br>y a la mayor gloria de Dios.</p>
+        <p>Espíritu Santo, te ruego que, por tu infinita bondad,<br>me concedas los dones, las virtudes, los carismas<br>y las gracias que consideres necesarios<br>para servir al Señor, cumplir su santa voluntad<br>y poner todo lo que soy y tengo<br>al servicio de los demás,<br>para mayor gloria de Dios.</p>
+        <p>Lléname de tu luz<br>y, si es tu voluntad, haz de mí un instrumento de tu Amor,<br>al servicio de tu santa voluntad.</p>
+        <p class="intercession">Santísima Virgen María,<br>Madre nuestra y Madre celestial,<br>te ruego que intercedas por mí y por los míos ante tu amado Hijo.<br>Cúbrenos con tu manto maternal,<br>guíanos hacia Jesús<br>y enséñanos a amar, confiar y entregarnos a Él<br>como tú lo hiciste.<br>Acompáñanos en nuestro caminar<br>y ruega por nosotros ahora y en la hora de nuestra muerte.</p>
+        <p class="intercession">A todos los santos y santas de Dios,<br>y a toda la comunión de los santos,<br>les pido su intercesión ante el Señor.<br>Rueguen por nosotros,<br>para que perseveremos en la fe,<br>crezcamos en el amor<br>y alcancemos, por la gracia de Dios,<br>la vida eterna en su presencia.</p>
+        <p class="pivot">Señor, pongo en tus manos el día que hoy termina.</p>
+        <p>Te entrego cuanto he vivido:<br>cada encuentro, cada decisión y cada tarea;<br>lo que hice y lo que dejé de hacer,<br>mis alegrías y mis tristezas,<br>mis aciertos y mis errores,<br>mis esfuerzos y todo aquello que quedó pendiente.</p>
+        <p>Te doy gracias por las bendiciones recibidas,<br>por las oportunidades que me concediste<br>y por tu presencia, incluso en aquellos momentos<br>en los que no supe reconocerla.</p>
+        <p>Perdona mis faltas,<br>mis omisiones y mis faltas de amor.<br>Muéstrame aquello en lo que debo mejorar,<br>dame un corazón contrito y humilde<br>y la gracia de no volver a caer en los mismos errores.</p>
+        <p>Sana mis heridas, restaura mis fuerzas<br>y libera mi corazón de toda inquietud,<br>resentimiento o preocupación<br>que no deba llevar conmigo al descanso.</p>
+        <p>Te entrego también aquello que quedó pendiente,<br>lo que no pude resolver<br>y todo cuanto escapa a mi control.<br>Enséñame a dejarlo en tus manos<br>y a descansar en la certeza de tu Providencia.</p>
+        <p>Concédeme tu paz, un descanso reparador<br>y la gracia de despertar renovado en tu Amor,<br>dispuesto a vivir un nuevo día conforme a tu voluntad.</p>
+        <p>Cuida de mí y de los míos durante esta noche.<br>Cúbrenos con tu protección,<br>aleja de nosotros todo mal<br>y concédenos tu bendición mientras descansamos.</p>
+        <p>Ángel de mi guarda,<br>vela por mí y por los míos durante esta noche,<br>protégenos de todo peligro<br>y acompáñanos bajo el amparo de Dios.</p>
+        <p>En Ti descansamos, Señor,<br>porque tuyos somos y en tus manos estamos.</p>
+        <p class="amen">Amén.</p>
+        <div class="liston-actions"><button type="button" class="liston-copy daily-copy" data-done="Copiada"><span class="lbl">Copiar la oración</span></button></div>
+    </article>
+  </div>
+</section>
+
 <footer>
   <div class="wrap">
     <div class="footer-brand">Mis Nudos</div>
@@ -1391,6 +1525,47 @@
     });
   })();
 
+</script>
+<script>
+  /* ---------- mi oración diaria: matutina / nocturna ---------- */
+  (function(){
+    var tabs = Array.prototype.slice.call(document.querySelectorAll('.daily-tab'));
+    if(!tabs.length) return;
+    var keys = tabs.map(function(t){ return t.getAttribute('data-key'); });
+    function show(key, scroll){
+      tabs.forEach(function(t){
+        var on = t.getAttribute('data-key') === key;
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.tabIndex = on ? 0 : -1;
+        document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+      });
+      if(scroll){ var el = document.getElementById(key); if(el) el.scrollIntoView({block:'start'}); }
+    }
+    tabs.forEach(function(t, i){
+      t.addEventListener('click', function(){ show(t.getAttribute('data-key')); });
+      t.addEventListener('keydown', function(e){
+        if(e.key === 'ArrowRight' || e.key === 'ArrowLeft'){ var n = tabs[(i + 1) % tabs.length]; n.focus(); show(n.getAttribute('data-key')); }
+      });
+    });
+    // De madrugada a media tarde, la matutina; después, la nocturna.
+    var h = new Date().getHours();
+    var byHour = (h >= 4 && h < 16) ? keys[0] : keys[1];
+    var fromHash = location.hash && keys.indexOf(location.hash.slice(1)) > -1 ? location.hash.slice(1) : null;
+    show(fromHash || byHour, !!fromHash);
+
+    // copiar la oración visible, respetando versos y estrofas
+    document.querySelectorAll('.daily-copy').forEach(function(b){
+      var lbl = b.querySelector('.lbl'), orig = lbl.textContent;
+      b.addEventListener('click', function(){
+        var panel = b.closest('.daily-panel');
+        var parts = [panel.querySelector('.litany-title').textContent.trim()];
+        panel.querySelectorAll('p').forEach(function(p){ parts.push(p.innerHTML.split(/<br\s*\/?>/i).map(function(s){ var d=document.createElement('div'); d.innerHTML=s; return d.textContent.trim(); }).join('\n')); });
+        var text = parts.join('\n\n');
+        function ok(){ b.classList.add('ok'); lbl.textContent = b.getAttribute('data-done'); setTimeout(function(){ b.classList.remove('ok'); lbl.textContent = orig; }, 1800); }
+        if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(ok, function(){}); }
+      });
+    });
+  })();
 </script>
 </body>
 </html>
