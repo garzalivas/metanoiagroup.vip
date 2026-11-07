@@ -122,14 +122,13 @@
   .wall-head::after{content:'';flex:1;height:1px;background:var(--line-strong);}
   .wall-row{margin-top:26px;}
   .wall-lbl{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-dim);margin-bottom:12px;}
-  .wall{display:grid;gap:16px 14px;}
-  .wall.w7{grid-template-columns:repeat(7,1fr);}
-  .wall.w8{grid-template-columns:repeat(8,1fr);}
+  .wall{display:flex;flex-wrap:wrap;justify-content:center;gap:16px 14px;}
+  .wall .w-item{flex:0 0 calc((100% - 7 * 14px) / 8);}
   .w-item{display:block;border-radius:50%;line-height:0;transition:transform .3s cubic-bezier(.2,.7,.3,1), filter .3s ease;filter:saturate(.9) brightness(.92);}
   .w-item img{width:100%;height:auto;}
   .w-item:hover,.w-item:focus-visible{transform:translateY(-4px) scale(1.04);filter:none drop-shadow(0 0 18px var(--c));}
   .wall-note{margin-top:18px;font-size:12px;color:var(--text-dim);font-style:italic;font-family:var(--serif);}
-  @media (max-width:640px){.wall.w7,.wall.w8{grid-template-columns:repeat(4,1fr);gap:12px 10px;}}
+  @media (max-width:640px){.wall{gap:12px 10px;}.wall .w-item{flex-basis:calc((100% - 3 * 10px) / 4);}}
 
   /* ---------- SUB HEADINGS ---------- */
   .sub-h{margin-top:84px;font-family:var(--serif);font-weight:400;font-size:clamp(23px,3vw,29px);display:flex;align-items:baseline;gap:16px;}
@@ -267,6 +266,10 @@
   .talk{background:var(--bg-alt);padding:30px 24px 28px;position:relative;transition:background .3s ease;}
   .talk::before{content:'';position:absolute;left:0;top:0;height:2px;width:100%;background:linear-gradient(90deg,var(--c,var(--accent)),transparent 80%);}
   .talk:hover{background:var(--bg-card);}
+  a.talk{display:flex;flex-direction:column;color:inherit;}
+  .talk-go{margin-top:auto;padding-top:18px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-dim);transition:color .25s ease;}
+  a.talk:hover .talk-go{color:var(--c,var(--accent));}
+  a.talk:hover .arrow{transform:translateX(4px);}
   .talk-logo{display:block;width:78px;height:78px;border-radius:50%;margin-bottom:20px;filter:drop-shadow(0 10px 22px rgba(0,0,0,.6));transition:transform .4s cubic-bezier(.2,.7,.3,1);}
   .talk:hover .talk-logo{transform:rotate(-4deg) scale(1.04);}
   .talk-k{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--c,var(--accent));}
@@ -824,7 +827,7 @@
     <div class="sec-head reveal"><span class="sec-num">V</span><div>
       <h2 class="sec-title">Conferencias y <em>presentaciones</em></h2><p class="sec-sub">Las ideas de la casa, en vivo.</p></div></div>
     <div class="reveal"><p class="lead">Las tres marcas de la casa también se llevan al escenario: auditorios, empresas, universidades, comunidades de fe y foros de liderazgo. Mario Garza Livas imparte conferencias principalmente desde <strong>ineXorable</strong>, <strong>Hágase Tu Voluntad</strong> y <strong>Áskesis</strong>, y también fuera de ellas, sobre estrategia, empresa, patrimonio y fútbol.</p></div>
-    <div class="talks reveal"><div class="talk" style="--c:#E0313F"><img class="talk-logo" src="assets/pod/inexorable.webp" alt="ineXorable" width="480" height="480" loading="lazy" decoding="async"><div class="talk-k">ineXorable</div><div class="talk-t">Pensar en un mundo que cambia</div><div class="talk-d">Inteligencia Adaptativa, antifragilidad y arquitectura para líderes y organizaciones.</div></div><div class="talk" style="--c:#5C82D6"><img class="talk-logo" src="assets/pod/hagase-tu-voluntad.webp" alt="Hágase Tu Voluntad" width="480" height="480" loading="lazy" decoding="async"><div class="talk-k">Hágase Tu Voluntad</div><div class="talk-t">La fe en el mundo real</div><div class="talk-d">Vocación, trabajo, liderazgo y dinero a la luz de la fe, para el laico de hoy.</div></div><div class="talk" style="--c:#C98A4B"><img class="talk-logo" src="assets/pod/askesis.webp" alt="Áskesis" width="480" height="480" loading="lazy" decoding="async"><div class="talk-k">Áskesis</div><div class="talk-t">Entrenar la vida</div><div class="talk-d">Frugalidad, Disciplina y Fe: productividad con criterio y gobierno de uno mismo.</div></div></div>
+    <div class="talks reveal"><a class="talk" href="mgx1.html#conferencias" style="--c:#E0313F" onclick="gtag('event','click',{'event_category':'talks','event_label':'mgx1_mgq1'})"><img class="talk-logo" src="assets/pod/inexorable.webp" alt="ineXorable" width="480" height="480" loading="lazy" decoding="async"><div class="talk-k">ineXorable</div><div class="talk-t">Pensar en un mundo que cambia</div><div class="talk-d">Inteligencia Adaptativa, antifragilidad y arquitectura para líderes y organizaciones.</div><div class="talk-go">Ver conferencias <span class="arrow">&rarr;</span></div></a><a class="talk" href="mgy1.html#conferencias" style="--c:#5C82D6" onclick="gtag('event','click',{'event_category':'talks','event_label':'mgy1_mgq1'})"><img class="talk-logo" src="assets/pod/hagase-tu-voluntad.webp" alt="Hágase Tu Voluntad" width="480" height="480" loading="lazy" decoding="async"><div class="talk-k">Hágase Tu Voluntad</div><div class="talk-t">La fe en el mundo real</div><div class="talk-d">Vocación, trabajo, liderazgo y dinero a la luz de la fe, para el laico de hoy.</div><div class="talk-go">Ver conferencias <span class="arrow">&rarr;</span></div></a><a class="talk" href="mgk1.html#conferencias" style="--c:#C98A4B" onclick="gtag('event','click',{'event_category':'talks','event_label':'mgk1_mgq1'})"><img class="talk-logo" src="assets/pod/askesis.webp" alt="Áskesis" width="480" height="480" loading="lazy" decoding="async"><div class="talk-k">Áskesis</div><div class="talk-t">Entrenar la vida</div><div class="talk-d">Frugalidad, Disciplina y Fe: productividad con criterio y gobierno de uno mismo.</div><div class="talk-go">Ver conferencias <span class="arrow">&rarr;</span></div></a></div>
     <div class="hero-cta talk-cta reveal">
       <a class="btn btn-primary" href="mailto:mario@metanoiagroup.vip?subject=Conferencia%20%E2%80%94%20El%20Atelier%20MX" onclick="gtag('event','click',{'event_category':'contact','event_label':'conferencia_mgq1'})">Solicitar una conferencia</a>
       <a class="btn btn-ghost" href="https://wa.me/528125136784">Escribir por WhatsApp</a>
