@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="new_favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Atelier MX — Stories that matter</title>
+<meta name="description" content="El Atelier MX, the production house and publishing imprint of Mario Garza Livas: twenty-five video podcasts, dozens of books, three brands and keynote talks. Monterrey, Nuevo León, Mexico.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="El Atelier MX — Stories that matter">
+<meta property="og:description" content="The production house and publishing imprint behind the work of Mario Garza Livas: twenty-five video podcasts, dozens of books, three brands and keynote talks.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="The Metanoia Group">
+<meta property="og:image" content="https://metanoiagroup.vip/og-image-1.jpg">
+<meta property="og:url" content="https://metanoiagroup.vip/mgq2">
+<link rel="alternate" hreflang="es" href="https://metanoiagroup.vip/mgq1.html">
+<link rel="alternate" hreflang="en" href="https://metanoiagroup.vip/mgq2.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0a0b;--bg-alt:#111113;--bg-card:#141416;
+    --text:#ece8e0;--text-dim:#96908780;--text-muted:#9b968c;
+    --accent:#b6905c;--accent-dim:#7d6743;
+    --line:#26242066;--line-strong:#2f2c27;
+    --serif:'Fraunces', Georgia, 'Times New Roman', serif;
+    --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --maxw:980px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;scroll-padding-top:120px;}
+  body{background:var(--bg);color:var(--text);font-family:var(--sans);font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  a{color:inherit;text-decoration:none;}
+  ::selection{background:var(--accent-dim);color:var(--bg);}
+  a:focus-visible, button:focus-visible, summary:focus-visible{outline:1.5px solid var(--accent);outline-offset:4px;}
+  body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+    background:radial-gradient(ellipse 900px 500px at 15% -10%, #b6905c10, transparent 60%),radial-gradient(ellipse 700px 500px at 100% 20%, #b6905c08, transparent 60%);}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;z-index:1;}
+
+  /* ---------- NAV ---------- */
+  nav.topbar{position:sticky;top:0;background:#0a0a0bd9;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:50;}
+  nav.topbar .inner{max-width:var(--maxw);margin:0 auto;padding:18px 28px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;}
+  .brandmark{font-family:var(--serif);font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:var(--text);font-weight:500;white-space:nowrap;}
+  .brandmark span{color:var(--text-muted);font-weight:400;}
+  .brandmark .mark{display:inline-block;width:22px;height:22px;vertical-align:-5px;margin-right:10px;}
+  .nav-links{display:flex;gap:24px;align-items:center;flex-wrap:wrap;}
+  .nav-links a{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);transition:color .25s ease;white-space:nowrap;}
+  .nav-links a:hover{color:var(--accent);}
+  .nav-links a.en,.nav-links a.pill{border:1px solid var(--line-strong);padding:6px 12px;border-radius:2px;}
+  .nav-links a.en:hover,.nav-links a.pill:hover{border-color:var(--accent);}
+
+  /* ---------- HERO ---------- */
+  header.hero{padding:110px 0 90px;position:relative;}
+  .hero-grid{display:flex;align-items:center;justify-content:space-between;gap:56px;}
+  .hero-main{flex:1;min-width:0;}
+  .eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:500;display:flex;align-items:center;gap:12px;opacity:0;animation:fadeUp .9s ease .1s forwards;}
+  .eyebrow::before{content:'';display:inline-block;width:28px;height:1px;background:var(--accent);flex:none;}
+  h1.name{font-family:var(--serif);font-weight:400;font-size:clamp(46px,7.6vw,84px);line-height:1.02;letter-spacing:-.015em;margin-top:22px;opacity:0;animation:fadeUp .9s ease .25s forwards;}
+  h1.name em{font-style:italic;color:var(--accent);}
+  p.roles{margin-top:28px;font-size:clamp(15px,2vw,18px);color:var(--text-muted);max-width:600px;line-height:1.75;font-weight:300;opacity:0;animation:fadeUp .9s ease .4s forwards;}
+  .locbar{margin-top:30px;display:flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);opacity:0;animation:fadeUp .9s ease .55s forwards;}
+  .locbar .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none;box-shadow:0 0 8px 1px #b6905c80;}
+  .hero-cta{margin-top:42px;display:flex;gap:16px;flex-wrap:wrap;opacity:0;animation:fadeUp .9s ease .7s forwards;}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;font-size:12.5px;letter-spacing:.09em;text-transform:uppercase;border-radius:2px;transition:all .25s ease;}
+  .btn-primary{background:var(--accent);color:#0a0a0b;font-weight:600;}
+  .btn-primary:hover{background:#c9a06d;transform:translateY(-1px);}
+  .btn-ghost{border:1px solid var(--line-strong);color:var(--text);}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+  .hero-seal{flex:none;width:300px;margin:0;position:relative;opacity:0;animation:fadeUp 1.1s ease .5s forwards;}
+  .hero-seal img{display:block;width:100%;height:auto;filter:drop-shadow(0 34px 60px rgba(0,0,0,.8)) drop-shadow(0 0 50px rgba(182,144,92,.3));}
+  .hero-seal::after{content:'';position:absolute;inset:-18px;border-radius:50%;border:1px solid #b6905c30;pointer-events:none;}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+  @media (max-width:860px){
+    .hero-grid{flex-direction:column-reverse;align-items:flex-start;gap:40px;}
+    .hero-seal{width:200px;}
+  }
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:90px 0;border-top:1px solid var(--line);position:relative;}
+  .sec-head{display:flex;align-items:baseline;gap:18px;margin-bottom:46px;}
+  .sec-num{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--accent-dim);letter-spacing:.05em;}
+  h2.sec-title{font-family:var(--serif);font-weight:400;font-size:clamp(28px,3.8vw,40px);letter-spacing:-.01em;line-height:1.15;}
+  h2.sec-title em{font-style:italic;color:var(--accent);font-weight:400;}
+  .sec-sub{color:var(--text-muted);font-size:14.5px;font-weight:300;max-width:600px;margin-top:14px;line-height:1.7;}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease, transform .8s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+  .lead{font-size:15.5px;color:var(--text-muted);line-height:1.9;font-weight:300;max-width:740px;}
+  .lead + .lead{margin-top:20px;}
+  .lead strong{color:var(--text);font-weight:500;}
+  .lead em{font-style:italic;color:var(--text);font-family:var(--serif);}
+
+  .statement{font-family:var(--serif);font-size:clamp(28px,4.4vw,44px);line-height:1.15;letter-spacing:-.015em;margin:60px 0 0;max-width:22ch;}
+  .statement .soft{color:var(--accent);font-style:italic;}
+
+  .stat-row{display:flex;flex-wrap:wrap;margin-top:52px;border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong);}
+  .stat-item{flex:1 1 120px;padding:26px 22px 26px 0;}
+  .stat-item + .stat-item{border-left:1px solid var(--line-strong);padding-left:22px;}
+  .stat-num{font-family:var(--serif);font-size:36px;color:var(--accent);line-height:1;}
+  .stat-label{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin-top:10px;}
+  @media (max-width:640px){.stat-item{flex:1 1 45%;border-left:none !important;padding-left:0 !important;}.stat-item:last-child:nth-child(odd){flex-basis:100%;}}
+
+  .do-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);margin-top:40px;}
+  a.do{background:var(--bg-alt);padding:26px 22px 22px;display:flex;flex-direction:column;gap:8px;transition:background .3s ease;}
+  a.do:hover{background:var(--bg-card);}
+  .do-k{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--accent-dim);}
+  .do-t{font-family:var(--serif);font-size:19px;color:var(--text);}
+  .do-d{font-size:13px;color:var(--text-muted);line-height:1.6;font-weight:300;flex:1;}
+  a.do .arrow{color:var(--accent-dim);transition:transform .25s ease,color .25s ease;}
+  a.do:hover .arrow{transform:translateX(4px);color:var(--accent);}
+  @media (max-width:820px){.do-grid{grid-template-columns:1fr 1fr;}}
+  @media (max-width:480px){.do-grid{grid-template-columns:1fr;}}
+
+  /* ---------- HOST ---------- */
+  .host{margin-top:40px;border-left:2px solid var(--accent);padding:6px 0 6px 22px;max-width:720px;}
+  .host-k{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);}
+  .host-t{font-family:var(--serif);font-size:clamp(17px,2.1vw,20px);line-height:1.55;margin-top:10px;}
+
+  /* ---------- LOGO WALL ---------- */
+  .wall-head{margin-top:64px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);display:flex;align-items:center;gap:14px;}
+  .wall-head::after{content:'';flex:1;height:1px;background:var(--line-strong);}
+  .wall-row{margin-top:26px;}
+  .wall-lbl{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-dim);margin-bottom:12px;}
+  .wall{display:grid;gap:16px 14px;}
+  .wall.w7{grid-template-columns:repeat(7,1fr);}
+  .wall.w8{grid-template-columns:repeat(8,1fr);}
+  .w-item{display:block;border-radius:50%;line-height:0;transition:transform .3s cubic-bezier(.2,.7,.3,1), filter .3s ease;filter:saturate(.9) brightness(.92);}
+  .w-item img{width:100%;height:auto;}
+  .w-item:hover,.w-item:focus-visible{transform:translateY(-4px) scale(1.04);filter:none drop-shadow(0 0 18px var(--c));}
+  .wall-note{margin-top:18px;font-size:12px;color:var(--text-dim);font-style:italic;font-family:var(--serif);}
+  @media (max-width:640px){.wall.w7,.wall.w8{grid-template-columns:repeat(4,1fr);gap:12px 10px;}}
+
+  /* ---------- SUB HEADINGS ---------- */
+  .sub-h{margin-top:84px;font-family:var(--serif);font-weight:400;font-size:clamp(23px,3vw,29px);display:flex;align-items:baseline;gap:16px;}
+  .sub-h span{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--accent-dim);}
+  .sub-lead{color:var(--text-muted);font-size:14.5px;font-weight:300;max-width:640px;margin-top:12px;line-height:1.7;}
+
+  .kick{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--c,var(--accent));opacity:.95;}
+  .lema{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--text);line-height:1.45;margin-top:8px;}
+
+  /* ---------- MOTHERSHIP ---------- */
+  .ch-mother{margin-top:28px;border:1px solid var(--line-strong);position:relative;overflow:hidden;
+    background:radial-gradient(ellipse 520px 360px at 12% 30%, color-mix(in srgb, var(--c) 14%, transparent), transparent 70%),linear-gradient(180deg,#b6905c0a,transparent 60%),var(--bg-card);}
+  .ch-mother::before{content:'';position:absolute;left:0;top:0;height:2px;width:100%;background:linear-gradient(90deg,#F28C1B,#2F8FF0 60%,#2f8ff000);}
+  .mo-grid{display:grid;grid-template-columns:260px 1fr;gap:44px;padding:48px 44px 36px;align-items:start;}
+  .mo-logo .logo{width:100%;height:auto;filter:drop-shadow(0 24px 50px rgba(0,0,0,.7));}
+  .mo-name{font-family:var(--serif);font-weight:400;font-size:clamp(28px,3.8vw,40px);line-height:1.08;margin-top:14px;letter-spacing:-.01em;}
+  .ch-mother .lema{font-size:20px;color:var(--c);}
+  .mo-desc{color:var(--text-muted);font-size:15px;line-height:1.8;font-weight:300;margin-top:18px;}
+  .mo-quote{margin-top:22px;font-family:var(--serif);font-style:italic;font-size:16px;color:var(--text);line-height:1.55;border-left:1px solid var(--line-strong);padding-left:16px;}
+  .mo-quote cite{display:block;font-style:normal;font-family:var(--sans);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);margin-top:8px;}
+  .mo-foot{border-top:1px solid var(--line-strong);padding:16px 44px;font-family:var(--serif);font-style:italic;font-size:15px;color:var(--accent);}
+  @media (max-width:760px){.mo-grid{grid-template-columns:1fr;padding:34px 24px 28px;gap:26px;}.mo-logo{width:180px;}.mo-foot{padding:14px 24px;}}
+
+  /* ---------- CHANNEL CARDS ---------- */
+  .ch-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:28px;}
+  .ch{position:relative;background:var(--bg-alt);border:1px solid var(--line-strong);padding:28px 26px 20px;display:flex;flex-direction:column;
+    transition:border-color .3s ease, background .3s ease, transform .3s ease;}
+  .ch::before{content:'';position:absolute;left:0;top:0;height:2px;width:100%;background:linear-gradient(90deg,var(--c),transparent 75%);opacity:.85;}
+  .ch:hover{border-color:color-mix(in srgb, var(--c) 45%, var(--line-strong));background:var(--bg-card);}
+  .ch.hidden{display:none;}
+  .ch-top{display:flex;gap:20px;align-items:center;}
+  .logo{display:block;border-radius:50%;}
+  .lg-md{width:92px;height:92px;flex:none;filter:drop-shadow(0 10px 22px rgba(0,0,0,.6));transition:transform .4s cubic-bezier(.2,.7,.3,1);}
+  .ch:hover .lg-md{transform:rotate(-4deg) scale(1.04);}
+  .ch-name{font-family:var(--serif);font-weight:400;font-size:22px;line-height:1.2;margin-top:6px;}
+  .ch .lema{font-size:14.5px;color:var(--c);margin-top:6px;}
+  .promesa{color:var(--text-muted);font-size:13.8px;line-height:1.75;font-weight:300;margin-top:18px;}
+  .ask{margin-top:14px;font-family:var(--serif);font-style:italic;font-size:14.5px;color:var(--text);line-height:1.5;border-left:1px solid var(--c);padding-left:12px;}
+  .ask span{display:block;font-family:var(--sans);font-style:normal;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:3px;}
+  .links{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;margin-top:18px;padding-top:14px;border-top:1px solid var(--line);}
+  .ch .promesa,.ch .ask{margin-bottom:18px;}
+  .ch .promesa + .ask{margin-top:-4px;}
+  .ch .links{margin-top:auto;}
+  .lk{font-size:11.5px;letter-spacing:.06em;color:var(--text-muted);display:inline-flex;align-items:center;gap:7px;transition:color .25s ease;}
+  .lk:hover{color:var(--accent);}
+  .lk .arrow{transition:transform .25s ease;}
+  .lk:hover .arrow{transform:translateX(3px);}
+  .lk-yt{color:var(--text);}
+  .lk-yt svg{width:17px;height:17px;fill:var(--c,#e0313f);flex:none;}
+  .lk-yt:hover{color:var(--c);}
+  .lk-yt span{word-break:break-all;}
+  details.desc{margin-top:12px;}
+  details.desc summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-dim);padding:6px 0;transition:color .2s ease;}
+  details.desc summary::-webkit-details-marker{display:none;}
+  details.desc summary:hover{color:var(--text-muted);}
+  details.desc summary i{font-style:normal;font-size:16px;color:var(--c,var(--accent));transition:transform .3s ease;}
+  details.desc[open] summary i{transform:rotate(45deg);}
+  .desc-body{padding:8px 0 6px;}
+  .desc-body p{font-size:13px;line-height:1.75;color:var(--text-muted);font-weight:300;}
+  .desc-body p + p{margin-top:10px;}
+  .desc-body p:last-child{font-family:var(--serif);font-style:italic;color:var(--text);font-size:14px;}
+  @media (max-width:760px){.ch-grid{grid-template-columns:1fr;}}
+  @media (max-width:420px){.lg-md{width:76px;height:76px;}.ch{padding:24px 20px 18px;}}
+
+  /* ---------- FILTER ---------- */
+  .filterbar{margin-top:26px;padding:20px 0 22px;border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong);}
+  .filter-caption{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:14px;}
+  .filter-chips{display:flex;flex-wrap:wrap;gap:8px;}
+  .fchip{font-family:var(--sans);font-size:11.5px;letter-spacing:.03em;padding:7px 13px;border-radius:2px;border:1px solid var(--line-strong);background:transparent;color:var(--text-muted);cursor:pointer;transition:all .22s ease;}
+  .fchip em{font-style:normal;opacity:.6;margin-left:4px;}
+  .fchip:hover{border-color:var(--accent-dim);color:var(--text);}
+  .fchip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#0a0a0b;font-weight:600;}
+
+  /* ---------- BRIDGE ---------- */
+  .bridge{display:block;margin-top:48px;padding:30px 30px 28px;border:1px solid var(--line-strong);background:linear-gradient(180deg,#b6905c0a,transparent 70%),var(--bg-alt);position:relative;transition:border-color .3s ease,background .3s ease,transform .3s ease;}
+  .bridge::before{content:'';position:absolute;left:0;top:0;width:100%;height:1px;background:linear-gradient(90deg,var(--accent),#b6905c00 80%);}
+  .bridge:hover{border-color:var(--accent-dim);background:linear-gradient(180deg,#b6905c14,transparent 70%),var(--bg-card);transform:translateY(-2px);}
+  .bridge-k{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:11px;}
+  .bridge-k::before{content:'';width:22px;height:1px;background:var(--accent);}
+  .bridge-t{display:block;font-family:var(--serif);font-size:clamp(17px,2.1vw,20px);line-height:1.55;color:var(--text);margin-top:16px;max-width:660px;}
+  .bridge-cta{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-size:11.5px;letter-spacing:.1em;color:var(--accent-dim);transition:color .25s ease;}
+  .bridge:hover .bridge-cta{color:var(--accent);}
+  .arrow{display:inline-block;transition:transform .25s ease;}
+  .bridge:hover .arrow{transform:translateX(4px);}
+
+  .wl{margin-top:56px;border:1px solid var(--line-strong);background:radial-gradient(ellipse 600px 300px at 0% 0%,#b6905c14,transparent 70%),var(--bg-alt);padding:40px 36px 36px;position:relative;}
+  .wl::before{content:'';position:absolute;left:0;top:0;width:100%;height:1px;background:linear-gradient(90deg,var(--accent),#b6905c00 80%);}
+  .wl-t{font-family:var(--serif);font-weight:400;font-size:clamp(24px,3vw,32px);line-height:1.15;margin-top:14px;}
+  .wl-t em{font-style:italic;color:var(--accent);}
+  .wl-d{color:var(--text-muted);font-size:14px;line-height:1.75;font-weight:300;max-width:560px;margin-top:12px;}
+  .st-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px;}
+  a.st{display:flex;flex-direction:column;align-items:flex-start;padding:22px 18px 18px;border:1px solid var(--line-strong);background:var(--bg);position:relative;transition:transform .3s ease,border-color .3s ease,background .3s ease;}
+  a.st::before{content:'';position:absolute;left:0;top:0;height:2px;width:100%;background:linear-gradient(90deg,var(--c),transparent 80%);}
+  a.st:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--c) 45%,var(--line-strong));background:var(--bg-card);}
+  a.st img{width:58px;height:58px;border-radius:50%;filter:drop-shadow(0 8px 18px rgba(0,0,0,.6));transition:transform .4s cubic-bezier(.2,.7,.3,1);}
+  a.st:hover img{transform:rotate(-4deg) scale(1.05);}
+  .st-n{font-family:var(--serif);font-size:17px;line-height:1.25;margin-top:16px;color:var(--text);}
+  .st-l{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--c);margin-top:6px;line-height:1.4;}
+  .st-u{margin-top:auto;padding-top:16px;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-dim);transition:color .2s;}
+  a.st:hover .st-u{color:var(--c);}
+  a.st:hover .arrow{transform:translateX(3px);}
+  a.st-main{background:linear-gradient(180deg,#b6905c18,transparent 70%),var(--bg-card);border-color:var(--accent-dim);}
+  a.st-main .st-l{color:var(--accent);}
+  @media (max-width:820px){.st-grid{grid-template-columns:1fr 1fr;}}
+  @media (max-width:640px){.wl{padding:30px 20px 24px;}.st-grid{gap:10px;}a.st{padding:18px 14px 14px;}.st-n{font-size:15.5px;}.st-u{letter-spacing:.04em;font-size:10px;}}
+
+  /* ---------- BRANDS ---------- */
+  .brand-list{display:flex;flex-direction:column;gap:18px;}
+  a.brand{display:grid;grid-template-columns:120px 1fr;gap:30px;align-items:start;padding:30px 30px 26px;border:1px solid var(--line-strong);background:var(--bg-alt);position:relative;transition:border-color .3s ease,background .3s ease;}
+  a.brand::before{content:'';position:absolute;left:0;top:0;width:2px;height:100%;background:var(--c);}
+  a.brand:hover{background:var(--bg-card);border-color:color-mix(in srgb, var(--c) 40%, var(--line-strong));}
+  a.brand .lg-md{width:120px;height:120px;}
+  .chips{display:flex;gap:7px;flex-wrap:wrap;}
+  .chip{font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent-dim);border-radius:2px;padding:4px 9px;}
+  .brand-name{font-family:var(--serif);font-weight:400;font-size:26px;margin-top:14px;}
+  a.brand .lema{color:var(--c);}
+  .brand-desc{color:var(--text-muted);font-size:14px;line-height:1.75;font-weight:300;margin-top:12px;max-width:640px;}
+  .brand-desc em{font-style:italic;color:var(--text);}
+  .brand-ask{margin-top:14px;font-family:var(--serif);font-style:italic;color:var(--text);font-size:15px;}
+  .brand-ask span{font-family:var(--sans);font-style:normal;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);margin-right:12px;}
+  .brand-go{margin-top:16px;font-size:11.5px;letter-spacing:.1em;color:var(--accent-dim);transition:color .25s ease;}
+  a.brand:hover .brand-go{color:var(--accent);}
+  a.brand:hover .arrow{transform:translateX(4px);}
+  @media (max-width:600px){a.brand{grid-template-columns:1fr;gap:18px;padding:26px 22px 22px;}a.brand .lg-md{width:90px;height:90px;}}
+
+  /* ---------- BOOKS ---------- */
+  .book-list{list-style:none;columns:3 220px;column-gap:34px;counter-reset:bk;border-top:1px solid var(--line-strong);padding-top:20px;}
+  .book-list li{counter-increment:bk;break-inside:avoid;padding:7px 0;display:flex;gap:12px;align-items:baseline;border-bottom:1px solid var(--line);}
+  .book-list li::before{content:counter(bk,decimal-leading-zero);font-family:var(--serif);font-style:italic;font-size:11.5px;color:var(--accent-dim);flex:none;min-width:20px;}
+  .book-list a{font-family:var(--serif);font-size:15px;line-height:1.4;color:var(--text);transition:color .2s ease;}
+  .book-list a:hover{color:var(--accent);}
+
+  /* ---------- TALKS ---------- */
+  .talks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);margin-top:36px;}
+  .talk{background:var(--bg-alt);padding:26px 22px;}
+  .talk-k{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);}
+  .talk-t{font-family:var(--serif);font-size:19px;margin-top:10px;line-height:1.3;}
+  .talk-d{color:var(--text-muted);font-size:13px;line-height:1.7;margin-top:8px;font-weight:300;}
+  .talk-cta{opacity:1;animation:none;}
+  @media (max-width:700px){.talks{grid-template-columns:1fr;}}
+
+  /* ---------- OTRAS PRODUCCIONES ---------- */
+  .cop-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .cop{display:flex;gap:22px;align-items:flex-start;padding:28px 26px;border:1px solid var(--line-strong);background:var(--bg-alt);position:relative;}
+  .cop::before{content:'';position:absolute;left:0;top:0;height:2px;width:100%;background:linear-gradient(90deg,var(--c),transparent 75%);}
+  .cop .lg-md{border-radius:0;object-fit:contain;}
+  .cop-name{font-family:var(--serif);font-weight:400;font-size:22px;margin-top:6px;}
+  .cop .lema{color:var(--c);font-size:14.5px;}
+  .cop-desc{color:var(--text-muted);font-size:13.5px;line-height:1.75;font-weight:300;margin-top:12px;}
+  @media (max-width:760px){.cop-grid{grid-template-columns:1fr;}}
+  @media (max-width:420px){.cop{flex-direction:column;}}
+
+  /* ---------- CONTACT / ECO ---------- */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);}
+  .contact-item{background:var(--bg-alt);padding:24px 26px;display:flex;align-items:center;gap:18px;transition:background .25s ease;}
+  .contact-item:hover{background:var(--bg-card);}
+  .cicon{flex:none;width:42px;height:42px;border-radius:50%;border:1px solid var(--line-strong);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-style:italic;font-size:13px;color:var(--accent);transition:border-color .25s ease;}
+  .contact-item:hover .cicon{border-color:var(--accent);}
+  .clabel{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);}
+  .cvalue{font-size:15px;margin-top:4px;word-break:break-word;transition:color .2s ease;}
+  .contact-item:hover .cvalue{color:var(--accent);}
+  .eco-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);margin-top:34px;}
+  .eco-card{background:var(--bg-alt);padding:30px 28px;display:flex;flex-direction:column;transition:background .3s ease, transform .3s ease;}
+  .eco-card:hover{background:var(--bg-card);transform:translateY(-2px);}
+  .eco-code{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--accent);letter-spacing:.06em;}
+  .eco-name{font-family:var(--serif);font-size:21px;margin-top:10px;}
+  .eco-desc{color:var(--text-muted);font-size:13.5px;margin-top:10px;line-height:1.65;font-weight:300;}
+  .eco-url{margin-top:auto;padding-top:18px;font-size:11px;letter-spacing:.08em;color:var(--accent-dim);display:flex;align-items:center;gap:8px;}
+  .eco-card:hover .eco-url{color:var(--accent);}
+  .eco-card:hover .arrow{transform:translateX(4px);}
+  @media (max-width:640px){.contact-grid,.eco-grid{grid-template-columns:1fr;}}
+
+  /* ---------- FOOTER ---------- */
+  footer{padding:70px 0 46px;border-top:1px solid var(--line);position:relative;z-index:1;}
+  .footer-seal{display:block;width:110px;height:auto;margin:0 0 26px;filter:drop-shadow(0 0 30px rgba(182,144,92,.25));}
+  .footer-brand{font-family:var(--serif);font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted);}
+  .footer-tagline{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--text);margin-top:14px;}
+  .footer-role{margin-top:22px;font-size:13px;color:var(--text-muted);}
+  .footer-role strong{color:var(--text);font-weight:500;}
+  .footer-contacts{margin-top:10px;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--text-muted);}
+  .footer-contacts a:hover{color:var(--accent);}
+  .footer-bottom{margin-top:40px;padding-top:22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;}
+  .copyright{font-size:11.5px;color:var(--text-dim);letter-spacing:.04em;}
+  .footer-en{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);border:1px solid var(--line-strong);padding:7px 14px;border-radius:2px;}
+  .footer-en:hover{color:var(--accent);border-color:var(--accent);}
+  .footer-admg-rule{width:28px;height:1px;background:var(--accent-dim);margin-top:30px;}
+  .footer-admg{margin-top:16px;font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--accent);letter-spacing:.02em;}
+
+  @media (max-width:640px){
+    header.hero{padding:56px 0 60px;}
+    section{padding:64px 0;}
+    nav.topbar .inner{padding:14px 20px;}
+    .nav-links{gap:10px 16px;width:100%;}
+    .nav-links a{font-size:11px;}
+    .nav-links a.en{margin-left:auto;}
+    .brandmark{font-size:13px;}
+    .footer-bottom{flex-direction:column;align-items:flex-start;}
+  }
+  @media (max-width:430px){.brandmark{font-size:12px;letter-spacing:.09em;}}
+
+  /* brandmark → volver arriba */
+  .topbar .brandmark{cursor:pointer;-webkit-tap-highlight-color:transparent;}
+  .topbar .brandmark:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:2px;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}
+    .reveal,.eyebrow,h1.name,p.roles,.locbar,.hero-cta,.hero-seal{opacity:1;transform:none;}
+  }
+
+</style>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="El Atelier MX — Stories that matter">
+<meta name="twitter:description" content="The production house and publishing imprint behind the work of Mario Garza Livas: twenty-five video podcasts, dozens of books, three brands and keynote talks.">
+<meta name="twitter:image" content="https://metanoiagroup.vip/og-image-1.jpg">
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KHNZVPJX1N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KHNZVPJX1N');
+</script>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="inner">
+    <div class="brandmark"><img class="mark" src="assets/pod/el-atelier-mx.webp" alt="" width="22" height="22">EL ATELIER MX <span>· PRODUCTION HOUSE</span></div>
+    <div class="nav-links">
+      <a href="#casa">The house</a><a href="#videopodcasts">Video podcasts</a><a href="#marcas">Brands</a><a href="#libros">Books</a><a href="#conferencias">Talks</a><a href="#contacto">Contact</a>
+      <a class="pill" href="mgl2.html" title="Personal Landing Page">mgL</a>
+      <a class="en" href="mgq1.html">ES</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-main">
+        <p class="eyebrow">El Atelier MX · Production house and publishing imprint</p>
+        <h1 class="name">Stories<br><em>that matter</em></h1>
+        <p class="roles">The house that produces the work of Mario Garza Livas: twenty-five video podcasts, seven written publications, dozens of books and the keynote talks of three brands. One house. Many works. One order.</p>
+        <div class="locbar"><span class="dot"></span>Monterrey, Nuevo León, México</div>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#videopodcasts">Explore the video podcasts</a>
+          <a class="btn btn-ghost" href="#libros">The books</a>
+          <a class="btn btn-ghost" href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp_mgq2'})">Message on WhatsApp</a>
+        </div>
+      </div>
+      <figure class="hero-seal"><img src="assets/pod/el-atelier-mx.webp" alt="El Atelier MX — Historias que importan" width="480" height="480" decoding="async" fetchpriority="high"></figure>
+    </div>
+  </div>
+</header>
+
+<section id="casa">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-num">I</span><div>
+      <h2 class="sec-title">One house, <em>many works</em></h2><p class="sec-sub">What El Atelier MX is, and what it makes possible.</p></div></div>
+    <div class="reveal"><p class="lead"><strong>El Atelier MX</strong> is the production house and publishing imprint behind the work of Mario Garza Livas. It produces his video podcasts, publishes his books and manages the brands from which he gives keynote talks. It is not one more voice: it is the house that lets a voice travel far without wearing out along the way.</p>
+<p class="lead">The way it works fits in a single idea: <em>share everything that has no identity, and never what does.</em> The team, the processes, the editing and the archive are common. The name, the promise, the language and the audience of each work are looked after separately. That is why lived faith in the real world and late-night satire, geopolitics and Mexican football, markets and unsolved mysteries can live side by side without blurring into one another.</p>
+<p class="lead">Its motto says it all: <strong>stories that matter</strong>. Not content to fill a calendar, but work made to last.</p></div>
+    <p class="statement reveal">The house is one. <span class="soft">The works are many.</span></p>
+    <div class="stat-row reveal"><div class="stat-item"><div class="stat-num">25</div><div class="stat-label">Video podcasts</div></div><div class="stat-item"><div class="stat-num">7</div><div class="stat-label">Editorial houses</div></div><div class="stat-item"><div class="stat-num">16</div><div class="stat-label">Shows</div></div><div class="stat-item"><div class="stat-num">3</div><div class="stat-label">Brands</div></div></div>
+    <div class="do-grid reveal"><a class="do" href="#videopodcasts"><span class="do-k">01</span><span class="do-t">Video podcasts</span><span class="do-d">Twenty-five YouTube channels: twenty-three in seven houses and two more productions.</span><span class="arrow">&rarr;</span></a><a class="do" href="#marcas"><span class="do-k">02</span><span class="do-t">Brands</span><span class="do-d">ineXorable, Hágase Tu Voluntad and Áskesis: book, video podcast and keynote.</span><span class="arrow">&rarr;</span></a><a class="do" href="#libros"><span class="do-k">03</span><span class="do-t">Books</span><span class="do-d">Dozens of books published under the imprint.</span><span class="arrow">&rarr;</span></a><a class="do" href="#conferencias"><span class="do-k">04</span><span class="do-t">Talks</span><span class="do-d">The ideas of the house, taken to auditoriums, companies and communities.</span><span class="arrow">&rarr;</span></a></div>
+  </div>
+</section>
+
+<section id="videopodcasts">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-num">II</span><div>
+      <h2 class="sec-title">The video podcasts <em>of the house</em></h2><p class="sec-sub">Twenty-three channels, one voice. The subject changes; the lens remains.</p></div></div>
+    <div class="reveal"><p class="lead">This is the heart of El Atelier MX. Twenty-three video podcasts that range from faith lived in the real world to geopolitics, from family business succession to unsolved mysteries, from investigating Mexican football to rankings and satire. <strong>They are not twenty-three separate projects: they are one way of seeing, applied to twenty-three territories.</strong></p>
+<p class="lead">They are organized in seven editorial houses. Six have a territory of their own, explored in depth. The seventh, <em>El Profesor Mario Presenta</em>, is also home to sixteen shows and gathers on a single channel everything the others publish: enter through a show and you see one territory; enter the house and you see the whole body of work.</p></div>
+
+    <div class="host reveal">
+      <div class="host-k">Hosted by Mario Garza Livas</div>
+      <p class="host-t">All twenty-three channels share the same host and the same way of seeing. Register, pace and format change —from sober analysis to narration, from rankings to satire— but the person speaking is always the same.</p>
+    </div>
+
+    <div class="wall-head reveal">All twenty-three channels at a glance</div>
+    <div class="reveal" aria-label="All twenty-three channels at a glance"><div class="wall-row"><div class="wall-lbl">The seven houses</div><div class="wall w7"><a class="w-item" href="#c-el-profesor-mario-presenta" title="El Profesor Mario Presenta" style="--c:#F28C1B"><img class="logo lg-wall" src="assets/pod/el-profesor-mario-presenta.webp" alt="El Profesor Mario Presenta" width="480" height="480" loading="lazy" decoding="async"></a><a class="w-item" href="#c-inexorable" title="ineXorable" style="--c:#E0313F"><img class="logo lg-wall" src="assets/pod/inexorable.webp" alt="ineXorable" width="480" height="480" loading="lazy" decoding="async"></a><a class="w-item" href="#c-hagase-tu-voluntad" title="Hágase Tu Voluntad" style="--c:#5C82D6"><img class="logo lg-wall" src="assets/pod/hagase-tu-voluntad.webp" alt="Hágase Tu Voluntad" width="480" height="480" loading="lazy" decoding="async"></a><a class="w-item" href="#c-the-metanoia-group" title="The Metanoia Group" style="--c:#C9A55C"><img class="logo lg-wall" src="assets/pod/the-metanoia-group.webp" alt="The Metanoia Group" width="480" height="480" loading="lazy" decoding="async"></a><a class="w-item" href="#c-metanoia-football" title="Metanoia Football" style="--c:#C9A55C"><img class="logo lg-wall" src="assets/pod/metanoia-football.webp" alt="Metanoia Football" width="480" height="480" loading="lazy" decoding="async"></a><a class="w-item" href="#c-askesis" title="Áskesis" style="--c:#C98A4B"><img class="logo lg-wall" src="assets/pod/askesis.webp" alt="Áskesis" width="480" height="480" loading="lazy" decoding="async"></a><a class="w-item" href="#c-ordo-custodum" title="Ordo Custodum" style="--c:#C7C0B3"><img class="logo lg-wall" src="assets/pod/ordo-custodum.webp" alt="Ordo Custodum" width="480" height="480" loading="lazy" decoding="async"></a></div></div><div class="wall-row"><div class="wall-lbl">The sixteen shows</div><div class="wall w8"><a class="w-item" href="#c-al-filo-de-la-guerra" title="Al Filo de la Guerra" style="--c:#E0313F"><img class="logo lg-wall" src="assets/pod/al-filo-de-la-guerra.webp" alt="Al Filo de la Guerra" width="480" height="480" loading="lazy" decoding="async"></a><a class="w-item" href="#c-que-pasa-con-el-mundo" title="¿Qué pasa con el mundo?" style="--c:#F26A1B"><img class="logo lg-wall" src="assets/pod/que-pasa-con-el-mundo.webp" alt="¿Qué pasa con el mundo?" width="480" height="480" loading="lazy" decoding="async"></a><a class="w-item" href="#c-contrapunto-y-aparte" title="Contrapunto y Aparte" style="--c:#E0392E"><img class="logo lg-wall" src="assets/pod/contrapunto-y-aparte.webp" alt="Contrapunto y Aparte" width="480" height="480" loading="lazy" decoding="async"></a><a class="w-item" href="#c-el-pulso-del-dia" title="El Pulso del Día" style="--c:#D4A54A"><img class="logo lg-wall" src="assets/pod/el-pulso-del-dia.webp" alt="El Pulso del Día" width="480" height="480" loading="lazy" decoding="async"></a><a class="w-item" href="#c-tras-la-cortina" title="Tras la Cortina" style="--c:#2DB36B"><img class="logo lg-wall" src="assets/pod/tras-la-cortina.webp" alt="Tras la Cortina" width="480" height="480" loading="lazy" decoding="async"></a><a class="w-item" href="#c-delirio-por-el-futbol" title="Delirio por el Fútbol" style="--c:#2DB36B"><img class="logo lg-wall" src="assets/pod/delirio-por-el-futbol.webp" alt="Delirio por el Fútbol" width="480" height="480" loading="lazy" decoding="async"></a><a class="w-item" href="#c-jinetes-del-mercado" title="Jinetes del Mercado" style="--c:#D4AF37"><img class="logo lg-wall" src="assets/pod/jinetes-del-mercado.webp" alt="Jinetes del Mercado" width="480" height="480" loading="lazy" decoding="async"></a><a class="w-item" href="#c-la-frontera-tecnologica" title="La Frontera Tecnológica" style="--c:#4A90E8"><img class="logo lg-wall" src="assets/pod/la-frontera-tecnologica.webp" alt="La Frontera Tecnológica" width="480" height="480" loading="lazy" decoding="async"></a><a class="w-item" href="#c-relatos-vivos" title="Relatos Vivos" style="--c:#F5B82E"><img class="logo lg-wall" src="assets/pod/relatos-vivos.webp" alt="Relatos Vivos" width="480" height="480" loading="lazy" decoding="async"></a><a class="w-item" href="#c-la-pildora-roja" title="La Píldora Roja" style="--c:#E0313F"><img class="logo lg-wall" src="assets/pod/la-pildora-roja.webp" alt="La Píldora Roja" width="480" height="480" loading="lazy" decoding="async"></a><a class="w-item" href="#c-el-mundo-en-6-paneles" title="El Mundo en 6 Paneles" style="--c:#4F86E8"><img class="logo lg-wall" src="assets/pod/el-mundo-en-6-paneles.webp" alt="El Mundo en 6 Paneles" width="480" height="480" loading="lazy" decoding="async"></a><a class="w-item" href="#c-yo-te-lo-resumo" title="Yo te lo Resumo" style="--c:#D8A93B"><img class="logo lg-wall" src="assets/pod/yo-te-lo-resumo.webp" alt="Yo te lo Resumo" width="480" height="480" loading="lazy" decoding="async"></a><a class="w-item" href="#c-acortando-la-curva" title="Acortando la Curva" style="--c:#3A9BFF"><img class="logo lg-wall" src="assets/pod/acortando-la-curva.webp" alt="Acortando la Curva" width="480" height="480" loading="lazy" decoding="async"></a><a class="w-item" href="#c-el-show-del-profesor-mario" title="El Show del Profesor Mario" style="--c:#E3262E"><img class="logo lg-wall" src="assets/pod/el-show-del-profesor-mario.webp" alt="El Show del Profesor Mario" width="480" height="480" loading="lazy" decoding="async"></a><a class="w-item" href="#c-reaxion-en-salsa-verde" title="Reaxión en Salsa Verde" style="--c:#4CD137"><img class="logo lg-wall" src="assets/pod/reaxion-en-salsa-verde.webp" alt="Reaxión en Salsa Verde" width="480" height="480" loading="lazy" decoding="async"></a><a class="w-item" href="#c-lo-mejor-y-lo-peor" title="Lo Mejor y lo Peor" style="--c:#D4AF37"><img class="logo lg-wall" src="assets/pod/lo-mejor-y-lo-peor.webp" alt="Lo Mejor y lo Peor" width="480" height="480" loading="lazy" decoding="async"></a></div></div></div>
+    <p class="wall-note">Each logo takes you to the channel card: its promise, its official description and its YouTube link.</p>
+
+    <h3 class="sub-h reveal" id="casas"><span>01</span>The house that gathers the work</h3>
+    
+<article class="ch-mother reveal" id="c-el-profesor-mario-presenta" style="--c:#F28C1B">
+  <div class="mo-grid">
+    <div class="mo-logo"><img class="logo lg-xl" src="assets/pod/el-profesor-mario-presenta.webp" alt="El Profesor Mario Presenta" width="480" height="480" loading="lazy" decoding="async"></div>
+    <div class="mo-body">
+      <div class="kick">Editorial house · The complete work on one channel</div>
+      <h3 class="mo-name">El Profesor Mario Presenta</h3>
+      <p class="lema">Another way of seeing.</p>
+      <p class="mo-desc">Mario's editorial house and the best way into everything else. It has programming of its own —devoted to curiosity, culture and exploration— and is home to the sixteen shows of El Atelier MX. It also republishes everything the other twenty-two channels publish: it is the complete audiovisual archive of the work.</p>
+      <blockquote class="mo-quote">«It is all a matter of perspective. Reality depends on the lens through which you look.»<cite>— Profesor Mario</cite></blockquote>
+      <div class="links"><a class="lk lk-yt" href="https://www.youtube.com/@ElProfesorMarioPresenta" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'youtube','event_label':'el-profesor-mario-presenta_mgq2'})"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg><span>youtube.com/@ElProfesorMarioPresenta</span></a><a class="lk" href="https://elprofesormariopresenta.substack.com/" target="_blank" rel="noopener">Substack <span class="arrow">&rarr;</span></a></div>
+      <details class="desc"><summary><span>Official channel description</span><i aria-hidden="true">+</i></summary><div class="desc-body"><p>Welcome to El Profesor Mario Presenta: a space to explore ideas, question what we take for granted and discover new ways of understanding the world.</p><p>Economics, technology, history, business, sport, culture, science, society, philosophy or faith. Every subject that sparks curiosity and lets us look at reality from different angles has a place here.</p><p>The intention is not to hand you ready-made answers or tell you what to think, but to put ideas on the table, examine what lies behind them, connect the dots and open new perspectives. Because understanding a subject also means considering other points of view.</p><p>A space to learn, reflect, question and, above all, keep curiosity alive.</p></div></details>
+    </div>
+  </div>
+  <div class="mo-foot">If you only follow one channel, make it this one.</div>
+</article>
+
+    <h3 class="sub-h reveal"><span>02</span>The six territory houses</h3>
+    <p class="sub-lead reveal">Each answers a different question and has its own written publication. None hosts shows: their depth is their promise.</p>
+    <div class="ch-grid">
+<article class="ch reveal" id="c-inexorable" data-t="" style="--c:#E0313F">
+  <div class="ch-top">
+    <img class="logo lg-md" src="assets/pod/inexorable.webp" alt="ineXorable" width="480" height="480" loading="lazy" decoding="async">
+    <div class="ch-head">
+      <div class="kick">The intellectual pillar</div>
+      <h4 class="ch-name">ineXorable</h4>
+      <p class="lema">Change is inexorable. Your capacity need not give way.</p>
+    </div>
+  </div>
+  <p class="promesa">To understand the world better and build better models for acting in it.</p>
+  <p class="ask"><span>The question</span>How do we understand, build and act in a reality that never stops changing?</p>
+  <div class="links"><a class="lk lk-yt" href="https://www.youtube.com/@ineXorable-mx" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'youtube','event_label':'inexorable_mgq2'})"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg><span>youtube.com/@ineXorable-mx</span></a><a class="lk" href="mgx2.html">Landing <span class="arrow">&rarr;</span></a><a class="lk" href="https://inexorablemx.substack.com/" target="_blank" rel="noopener">Substack <span class="arrow">&rarr;</span></a></div>
+  <details class="desc"><summary><span>Official channel description</span><i aria-hidden="true">+</i></summary><div class="desc-body"><p>Change is inexorable. Your capacity can evolve and transcend it. ineXorable is for those who want to understand a reality that never stops changing, build within it and act on what can still be transformed.</p><p>Here we explore Adaptive Intelligence, systems thinking, capacity, margin, antifragility and agency to answer one question: how do you build a life, a body of work and a patrimony able to hold, evolve and create value when conditions change?</p><p>We talk about leadership, business, wealth, technology, markets, geopolitics, power, culture and the future. Not to predict what comes next, but to depend less on getting it right. Not to eliminate risk, but to build an architecture no single scenario can destroy.</p><p>Conversations with founders, investors, executives, athletes and people building something that matters. Rigorous analysis, structural thinking and uncomfortable questions. No quick motivation.</p></div></details>
+</article>
+<article class="ch reveal" id="c-hagase-tu-voluntad" data-t="" style="--c:#5C82D6">
+  <div class="ch-top">
+    <img class="logo lg-md" src="assets/pod/hagase-tu-voluntad.webp" alt="Hágase Tu Voluntad" width="480" height="480" loading="lazy" decoding="async">
+    <div class="ch-head">
+      <div class="kick">The spiritual pillar</div>
+      <h4 class="ch-name">Hágase Tu Voluntad</h4>
+      <p class="lema">Not my will, but Thine, be done.</p>
+    </div>
+  </div>
+  <p class="promesa">To form the judgment needed to order one&#x27;s life before God.</p>
+  <p class="ask"><span>The question</span>For whom, for what and under whose will should we do what we do?</p>
+  <div class="links"><a class="lk lk-yt" href="https://www.youtube.com/@Hagase-Tu-Voluntad" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'youtube','event_label':'hagase-tu-voluntad_mgq2'})"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg><span>youtube.com/@Hagase-Tu-Voluntad</span></a><a class="lk" href="mgy2.html">Landing <span class="arrow">&rarr;</span></a><a class="lk" href="https://hagasetuvoluntad.substack.com/" target="_blank" rel="noopener">Substack <span class="arrow">&rarr;</span></a></div>
+  <details class="desc"><summary><span>Official channel description</span><i aria-hidden="true">+</i></summary><div class="desc-body"><p>Faith was not given to us to live on the margins of the world, but to transform it from within.</p><p>Hágase Tu Voluntad is a space of Catholic formation for lay people living in the real world: family, work, business, leadership, money, culture, technology and responsibility.</p><p>Here faith is neither decorative nor separate from life. It is the criterion by which we decide, work, lead, manage, love, exercise authority and steward what God entrusts to us. With depth and concrete application, this channel seeks to integrate faith, reason and action in a life ordered toward God.</p><p>You will find reflection on vocation, daily life, culture, responsibility and hard decisions: living the Catholic faith in a changing world. The path is that of the disciple who is formed, the apostle who is sent and the steward who responsibly manages what he has received.</p><p>The question running through this space is: for whom, for what and under whose will should we do what we do?</p><p>Not my will, but Thine, be done.</p></div></details>
+</article>
+<article class="ch reveal" id="c-the-metanoia-group" data-t="" style="--c:#C9A55C">
+  <div class="ch-top">
+    <img class="logo lg-md" src="assets/pod/the-metanoia-group.webp" alt="The Metanoia Group" width="480" height="480" loading="lazy" decoding="async">
+    <div class="ch-head">
+      <div class="kick">Person, business and wealth</div>
+      <h4 class="ch-name">The Metanoia Group</h4>
+      <p class="lema">Structure stabilizes. Purpose directs. Adaptation sustains.</p>
+    </div>
+  </div>
+  <p class="promesa">To see the architecture behind the result: why some people, companies and fortunes endure while others break, and what can be done in time.</p>
+  <p class="ask"><span>The question</span>What happens when person, business and wealth are understood as a single system?</p>
+  <div class="links"><a class="lk lk-yt" href="https://www.youtube.com/@TheMetanoiaGroup" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'youtube','event_label':'the-metanoia-group_mgq2'})"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg><span>youtube.com/@TheMetanoiaGroup</span></a><a class="lk" href="https://metanoiagroup.vip/en.html" target="_blank" rel="noopener">Website <span class="arrow">&rarr;</span></a><a class="lk" href="https://metanoiagroup.substack.com/" target="_blank" rel="noopener">Substack <span class="arrow">&rarr;</span></a></div>
+  <details class="desc"><summary><span>Official channel description</span><i aria-hidden="true">+</i></summary><div class="desc-body"><p>What happens when you stop looking at a person, a company or a patrimony as isolated pieces and start understanding the system that connects them? That is where another way of making decisions begins.</p><p>The Metanoia Group podcast explores the ideas, decisions and structures that make it possible to build people, companies and patrimonies with purpose, stability and the capacity to adapt.</p><p>Through the five verticals at the core of TMG —Metanoia Strategic Advisory, Metanoia Executive Coaching, Metanoia Business Consulting, Metanoia Wealth Strategies and Metanoia Executive Services— we talk about leadership, strategy, business, wealth, operations and the challenges that appear when success demands more than results.</p><p>We are not after quick answers or universal formulas. We seek to understand, connect the pieces and build structures capable of sustaining what matters.</p><p>The Metanoia Group · Person. Business. Wealth. · Structure stabilizes. Purpose directs. Adaptation sustains.</p></div></details>
+</article>
+<article class="ch reveal" id="c-metanoia-football" data-t="" style="--c:#C9A55C">
+  <div class="ch-top">
+    <img class="logo lg-md" src="assets/pod/metanoia-football.webp" alt="Metanoia Football" width="480" height="480" loading="lazy" decoding="async">
+    <div class="ch-head">
+      <div class="kick">Football as a system</div>
+      <h4 class="ch-name">Metanoia Football</h4>
+      <p class="lema">Not just talking about football. Thinking from football.</p>
+    </div>
+  </div>
+  <p class="promesa">To understand football as nobody explains it: the system, the power, the people and the decisions behind what you see on the pitch.</p>
+  <p class="ask"><span>The question</span>What is really happening behind what we see on the pitch?</p>
+  <div class="links"><a class="lk lk-yt" href="https://www.youtube.com/@MetanoiaFootball-MX" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'youtube','event_label':'metanoia-football_mgq2'})"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg><span>youtube.com/@MetanoiaFootball-MX</span></a><a class="lk" href="mfb2.html">Landing <span class="arrow">&rarr;</span></a><a class="lk" href="https://metanoiafootball.substack.com/" target="_blank" rel="noopener">Substack <span class="arrow">&rarr;</span></a></div>
+  <details class="desc"><summary><span>Official channel description</span><i aria-hidden="true">+</i></summary><div class="desc-body"><p>The football you see on the pitch is only part of everything that is really at stake. Behind every career, club, league, investment and decision lies a complex ecosystem few stop to understand.</p><p>METANOIA FOOTBALL exists to change the way football is understood. A space for conversation, analysis and strategic intelligence that explores football beyond the match: as an industry, a business, an organization, a career, a patrimony, technology, capital and an ecosystem.</p><p>We talk about the people and structures that make professional football possible; about the challenges facing players, clubs, leagues, federations and investors; and about the decisions that can define their evolution and sustainability.</p><p>We are not here to talk about football from the stands. We are here to observe it from another perspective: connecting the pieces, questioning the obvious and seeking to understand what happens behind the game.</p><p>METANOIA FOOTBALL · Changing the way football is understood.</p></div></details>
+</article>
+<article class="ch reveal" id="c-askesis" data-t="" style="--c:#C98A4B">
+  <div class="ch-top">
+    <img class="logo lg-md" src="assets/pod/askesis.webp" alt="Áskesis" width="480" height="480" loading="lazy" decoding="async">
+    <div class="ch-head">
+      <div class="kick">The formation of the person</div>
+      <h4 class="ch-name">Áskesis</h4>
+      <p class="lema">Simplify. Fulfill. Consecrate.</p>
+    </div>
+  </div>
+  <p class="promesa">To train the person to live with less waste, more self-mastery and a life ordered around Christ.</p>
+  <p class="ask"><span>The question</span>Who am I becoming while I do what I do?</p>
+  <div class="links"><a class="lk lk-yt" href="https://www.youtube.com/@AskesisMX" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'youtube','event_label':'askesis_mgq2'})"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg><span>youtube.com/@AskesisMX</span></a><a class="lk" href="mgk2.html">Landing <span class="arrow">&rarr;</span></a><a class="lk" href="https://askesismx.substack.com/" target="_blank" rel="noopener">Substack <span class="arrow">&rarr;</span></a></div>
+  <details class="desc"><summary><span>Official channel description</span><i aria-hidden="true">+</i></summary><div class="desc-body"><p>Áskesis is a philosophy of training the person: a way of living with less waste, more self-mastery and a life ordered around Christ.</p><p>Simplify. Fulfill. Consecrate.</p><p>Here we train life itself. We talk about Frugality, Discipline and Faith; about habits, character and will. We learn to tell the essential from the superfluous, to do what is ours to do even when we don&#x27;t feel like it, and to place our effort at the service of God, trusting in His Providence.</p><p>Frugality: use little, need little and eliminate waste. MISO — Minimum Input. Same Output.</p><p>Discipline: do what is ours to do, governing ourselves and forming character.</p><p>Faith: discern what is worth pursuing, reconsecrate it to God, offer our effort and leave the result in His hands.</p><p>Because it is not only about what we obtain, but about who we become while we do it.</p><p>Do your best. Let God do the rest.</p></div></details>
+</article>
+<article class="ch reveal" id="c-ordo-custodum" data-t="" style="--c:#C7C0B3">
+  <div class="ch-top">
+    <img class="logo lg-md" src="assets/pod/ordo-custodum.webp" alt="Ordo Custodum" width="480" height="480" loading="lazy" decoding="async">
+    <div class="ch-head">
+      <div class="kick">The stewardship of what we receive</div>
+      <h4 class="ch-name">Ordo Custodum</h4>
+      <p class="lema">We don&#x27;t need another Earth. We need to learn to live on this one… and hand it on alive.</p>
+    </div>
+  </div>
+  <p class="promesa">To learn to think and act as stewards: measuring power, property and progress by what is conserved, restored and passed on.</p>
+  <p class="ask"><span>The question</span>Are we leaving what we received in better condition?</p>
+  <div class="links"><a class="lk lk-yt" href="https://www.youtube.com/@OrdoCustodum" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'youtube','event_label':'ordo-custodum_mgq2'})"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg><span>youtube.com/@OrdoCustodum</span></a><a class="lk" href="https://ordocustodum.substack.com/" target="_blank" rel="noopener">Substack <span class="arrow">&rarr;</span></a></div>
+  <details class="desc"><summary><span>Official channel description</span><i aria-hidden="true">+</i></summary><div class="desc-body"><p>What if we measured the greatness of a civilization not by how much it can extract, accumulate or transform, but by how much well-being it can create and how much it can conserve, restore and pass on?</p><p>This channel explores the civilization of stewardship: a new way of understanding power, property, progress and our relationship with the world. Having the capacity to do something does not mean we should do it; owning something does not remove the responsibility to steward it.</p><p>We will talk about economics, technology, business, culture, science, nature, institutions and everyday life. Not to chase perfection, but to learn to think better and act where our decisions count.</p><p>Stewardship begins with the person and scales up to the family, the company and institutions; it reaches future generations too.</p><p>The central question: are we leaving what we received in better condition?</p><p>We don&#x27;t need another Earth. We need to learn to live on this one… and hand it on alive.</p></div></details>
+</article></div>
+
+    <h3 class="sub-h reveal" id="programas"><span>03</span>The sixteen shows</h3>
+    <p class="sub-lead reveal">They live inside El Profesor Mario Presenta. Each has its own channel, name, identity and promise. Filter by territory.</p>
+    <div class="filterbar reveal">
+      <div class="filter-caption">Filter by territory</div>
+      <div class="filter-chips" id="fchips"><button class="fchip" type="button" data-f="all" aria-pressed="true">All <em>16</em></button><button class="fchip" type="button" data-f="mundo" aria-pressed="false">World and power <em>4</em></button><button class="fchip" type="button" data-f="futbol" aria-pressed="false">Football <em>2</em></button><button class="fchip" type="button" data-f="mercados" aria-pressed="false">Markets and technology <em>2</em></button><button class="fchip" type="button" data-f="historias" aria-pressed="false">Stories and mystery <em>2</em></button><button class="fchip" type="button" data-f="aprender" aria-pressed="false">Learning and understanding <em>3</em></button><button class="fchip" type="button" data-f="humor" aria-pressed="false">Humor and entertainment <em>3</em></button></div>
+    </div>
+    <div class="ch-grid" id="progs">
+<article class="ch reveal" id="c-al-filo-de-la-guerra" data-t="mundo" style="--c:#E0313F">
+  <div class="ch-top">
+    <img class="logo lg-md" src="assets/pod/al-filo-de-la-guerra.webp" alt="Al Filo de la Guerra" width="480" height="480" loading="lazy" decoding="async">
+    <div class="ch-head">
+      <div class="kick">Show · World and power</div>
+      <h4 class="ch-name">Al Filo de la Guerra</h4>
+      <p class="lema">Your trusted geopolitical thermometer</p>
+    </div>
+  </div>
+  <p class="promesa">To understand what is happening in the world, why it is happening and what may come next, without taking sides or feeding alarmism.</p>
+  
+  <div class="links"><a class="lk lk-yt" href="https://www.youtube.com/@AlFiloDeLaGuerra" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'youtube','event_label':'al-filo-de-la-guerra_mgq2'})"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg><span>youtube.com/@AlFiloDeLaGuerra</span></a></div>
+  <details class="desc"><summary><span>Official channel description</span><i aria-hidden="true">+</i></summary><div class="desc-body"><p>The world is not on the brink of war: it is shot through with a struggle for power, territory, resources, technology and influence. Al Filo de la Guerra is your trusted geopolitical thermometer for understanding what is happening, why it is happening and what may come next.</p><p>We analyze conflicts, great-power rivalries, alliances, economics, energy, strategic routes, technology, military power and narrative warfare to connect the pieces. We don&#x27;t take sides or feed alarmism: we provide context, identify interests, contrast narratives and explain the forces moving the board.</p><p>Each episode starts from the facts and works toward the connections: which interests are at stake, which capabilities matter and how one decision can produce consequences far away. From open conflicts to the tensions that never make the headlines, we follow the signals before they turn into noise. Because understanding geopolitics is not guessing the future. It is learning to read the board.</p></div></details>
+</article>
+<article class="ch reveal" id="c-que-pasa-con-el-mundo" data-t="mundo" style="--c:#F26A1B">
+  <div class="ch-top">
+    <img class="logo lg-md" src="assets/pod/que-pasa-con-el-mundo.webp" alt="¿Qué pasa con el mundo?" width="480" height="480" loading="lazy" decoding="async">
+    <div class="ch-head">
+      <div class="kick">Show · World and power</div>
+      <h4 class="ch-name">¿Qué pasa con el mundo?</h4>
+      <p class="lema">To understand what is happening, first ask why.</p>
+    </div>
+  </div>
+  <p class="promesa">To understand the stories, forces and interests behind events, beyond the headline and the official line.</p>
+  
+  <div class="links"><a class="lk lk-yt" href="https://www.youtube.com/@QuePasaConElMundoMX" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'youtube','event_label':'que-pasa-con-el-mundo_mgq2'})"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg><span>youtube.com/@QuePasaConElMundoMX</span></a></div>
+  <details class="desc"><summary><span>Official channel description</span><i aria-hidden="true">+</i></summary><div class="desc-body"><p>¿Qué pasa con el mundo? is a podcast that explains the stories, forces and interests behind the events changing our planet. We don&#x27;t stop at the headline: we investigate how and why things happen, who is involved, what interests are at stake and what consequences they have for the rest of the world.</p><p>Each episode puts a different subject under the microscope: elections and political movements, conflicts and borders, international bodies, networks of influence, economics and struggles for power. From the rise of Milei and Morena to Somaliland, Davos or the weight of AIPAC in US politics.</p><p>Context, history and analysis to connect the dots, question easy explanations and better understand an increasingly complex world. Taking nothing for granted and going beyond the official line.</p><p>Because to understand what is happening, you first have to ask why.</p></div></details>
+</article>
+<article class="ch reveal" id="c-contrapunto-y-aparte" data-t="mundo" style="--c:#E0392E">
+  <div class="ch-top">
+    <img class="logo lg-md" src="assets/pod/contrapunto-y-aparte.webp" alt="Contrapunto y Aparte" width="480" height="480" loading="lazy" decoding="async">
+    <div class="ch-head">
+      <div class="kick">Show · World and power</div>
+      <h4 class="ch-name">Contrapunto y Aparte</h4>
+      <p class="lema">Critical thinking to tell reality from narrative.</p>
+    </div>
+  </div>
+  <p class="promesa">To learn to tell reality from its interpretations: questioning narratives and contrasting perspectives.</p>
+  
+  <div class="links"><a class="lk lk-yt" href="https://www.youtube.com/@ContrapuntoYAparte" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'youtube','event_label':'contrapunto-y-aparte_mgq2'})"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg><span>youtube.com/@ContrapuntoYAparte</span></a></div>
+  <details class="desc"><summary><span>Official channel description</span><i aria-hidden="true">+</i></summary><div class="desc-body"><p>CONTRAPUNTO Y APARTE is a space for critical thinking, analysis and independent reflection: questioning narratives, contrasting perspectives and telling reality apart from its interpretations.</p><p>In an environment saturated with information, opinions and interests, thinking for yourself is not a luxury: it is a necessity. It is not about accepting versions or repeating slogans, but about examining facts, questioning arguments, identifying bias and distinguishing evidence from opinion and manipulation.</p><p>We cover current affairs, politics, geopolitics, society, culture and ideas from an analytical, open and independent perspective.</p><p>We don&#x27;t seek to impose conclusions, but to prompt questions. We don&#x27;t claim to always be right: we defend the right and the responsibility to think.</p><p>Because listening is not always understanding. Being informed is not always comprehending. And questioning is where discernment begins.</p></div></details>
+</article>
+<article class="ch reveal" id="c-el-pulso-del-dia" data-t="mundo" style="--c:#D4A54A">
+  <div class="ch-top">
+    <img class="logo lg-md" src="assets/pod/el-pulso-del-dia.webp" alt="El Pulso del Día" width="480" height="480" loading="lazy" decoding="async">
+    <div class="ch-head">
+      <div class="kick">Show · World and power</div>
+      <h4 class="ch-name">El Pulso del Día</h4>
+      <p class="lema">The signal, without the noise.</p>
+    </div>
+  </div>
+  <p class="promesa">To understand what is happening, what really matters and why it matters, without losing hours to headlines, noise and information overload.</p>
+  
+  <div class="links"><a class="lk lk-yt" href="https://www.youtube.com/@ElPulsodelDia-MX" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'youtube','event_label':'el-pulso-del-dia_mgq2'})"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg><span>youtube.com/@ElPulsodelDia-MX</span></a></div>
+  <details class="desc"><summary><span>Official channel description</span><i aria-hidden="true">+</i></summary><div class="desc-body"><p>The world doesn&#x27;t stop. Neither do we. El Pulso del Día is the short newscast for understanding what is happening, what really matters and why it matters, without losing hours to headlines, noise and information overload.</p><p>Here you will find the news setting the agenda in Mexico and the world: politics, economics, markets, finance, business, technology, science, culture, entertainment, sport and the events changing our surroundings. But it is not about piling up headlines. It is about telling the signal from the noise, separating facts from interpretation and providing the context needed to understand what each event means.</p><p>With morning and evening editions, El Pulso del Día keeps you up to date in an agile, clear and disciplined way. Dates, sources, context and corrections when due. Because being informed shouldn&#x27;t mean being plugged into the news all day.</p><p>El Pulso del Día. The signal, without the noise.</p></div></details>
+</article>
+<article class="ch reveal" id="c-tras-la-cortina" data-t="futbol" style="--c:#2DB36B">
+  <div class="ch-top">
+    <img class="logo lg-md" src="assets/pod/tras-la-cortina.webp" alt="Tras la Cortina" width="480" height="480" loading="lazy" decoding="async">
+    <div class="ch-head">
+      <div class="kick">Show · Football</div>
+      <h4 class="ch-name">Tras la Cortina</h4>
+      <p class="lema">In-depth analysis of Mexican football</p>
+    </div>
+  </div>
+  <p class="promesa">To investigate what really happens behind Mexican football, beyond the official version and the noise of the pitch.</p>
+  
+  <div class="links"><a class="lk lk-yt" href="https://www.youtube.com/@TrasLaCortina-MX" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'youtube','event_label':'tras-la-cortina_mgq2'})"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg><span>youtube.com/@TrasLaCortina-MX</span></a></div>
+  <details class="desc"><summary><span>Official channel description</span><i aria-hidden="true">+</i></summary><div class="desc-body"><p>Tras la Cortina is where we investigate what really happens behind Mexican football. We don&#x27;t settle for the official version or the noise of the pitch: we follow the leads, connect the dots and put under the microscope the power, money, interests and decisions that move Liga MX, its clubs, the FMF and the Mexican national team.</p><p>This is a video podcast of journalism and investigation into Mexican football: its structures, protagonists, businesses, controversies and conflicts. Each episode goes beyond the news to understand what lies behind the decisions, what interests are at stake and how the narratives that reach the public are built. No fanaticism, no ready-made speeches and no need to repeat what everyone says. With context, analysis and uncomfortable questions. Because to understand Mexican football, sometimes you have to look exactly where no one is looking.</p><p>Tras la Cortina. In-depth analysis of Mexican football.</p></div></details>
+</article>
+<article class="ch reveal" id="c-delirio-por-el-futbol" data-t="futbol" style="--c:#2DB36B">
+  <div class="ch-top">
+    <img class="logo lg-md" src="assets/pod/delirio-por-el-futbol.webp" alt="Delirio por el Fútbol" width="480" height="480" loading="lazy" decoding="async">
+    <div class="ch-head">
+      <div class="kick">Show · Football</div>
+      <h4 class="ch-name">Delirio por el Fútbol</h4>
+      <p class="lema">We share your passion for the most beautiful game in the world</p>
+    </div>
+  </div>
+  <p class="promesa">To live Mexican football with passion, spontaneity and a sense of spectacle, without losing sight of the stories and emotions behind it.</p>
+  
+  <div class="links"><a class="lk lk-yt" href="https://www.youtube.com/@DelirioPorElFutbol" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'youtube','event_label':'delirio-por-el-futbol_mgq2'})"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg><span>youtube.com/@DelirioPorElFutbol</span></a></div>
+  <details class="desc"><summary><span>Official channel description</span><i aria-hidden="true">+</i></summary><div class="desc-body"><p>Because football isn&#x27;t explained. It&#x27;s lived. Delirio por el Fútbol is the place for those who don&#x27;t just follow Mexican football: they feel it, argue about it, celebrate it and suffer it. Here we live the news, the characters and the stories that make football so much more than a sport.</p><p>We talk about Liga MX, its clubs and the Mexican national team; about matches, news, controversies, protagonists, stories, reactions and everything that lights up the conversation among fans. A place to talk football with passion, spontaneity and a sense of spectacle, without losing sight of the fact that behind every match there are stories, identities and emotions that explain why this sport holds such a special place.</p><p>There is room here for the passion of the fan, conversation among friends, the thrill of a goal, the frustration of a defeat and that debate that never ends.</p><p>Because Mexican football isn&#x27;t just watched. It&#x27;s lived.</p><p>Subscribe and share your passion for the most beautiful game in the world.</p></div></details>
+</article>
+<article class="ch reveal" id="c-jinetes-del-mercado" data-t="mercados" style="--c:#D4AF37">
+  <div class="ch-top">
+    <img class="logo lg-md" src="assets/pod/jinetes-del-mercado.webp" alt="Jinetes del Mercado" width="480" height="480" loading="lazy" decoding="async">
+    <div class="ch-head">
+      <div class="kick">Show · Markets and technology</div>
+      <h4 class="ch-name">Jinetes del Mercado</h4>
+      <p class="lema">Finance. Economy. Money.</p>
+    </div>
+  </div>
+  <p class="promesa">To understand what really moves markets, the economy and money, beyond the noise, the headlines and the fashionable narratives.</p>
+  
+  <div class="links"><a class="lk lk-yt" href="https://www.youtube.com/@JinetesDelMercado" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'youtube','event_label':'jinetes-del-mercado_mgq2'})"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg><span>youtube.com/@JinetesDelMercado</span></a></div>
+  <details class="desc"><summary><span>Official channel description</span><i aria-hidden="true">+</i></summary><div class="desc-body"><p>The market doesn&#x27;t reward opinions: it rewards adaptation. Jinetes del Mercado is a space for strategic analysis to understand what really moves markets, the economy and money —beyond the noise, the headlines and the fashionable narratives.</p><p>Here we explore financial markets, macroeconomics, business, assets and global cycles from a structural perspective. Liquidity, monetary policy, incentives, positioning, crowd psychology and market structure are pieces of a single system. We are neither permabulls nor permabears. Markets change, regimes change and probabilities change. We analyze bull markets and bear markets alike, to tell signal from noise and consequences from headlines.</p><p>The goal is not to guess the next price move, but to build a mental map for interpreting the financial world: what is happening, why, which variables matter and which scenarios may open up.</p><p>Finance. Economy. Money. No noise. With context.</p></div></details>
+</article>
+<article class="ch reveal" id="c-la-frontera-tecnologica" data-t="mercados" style="--c:#4A90E8">
+  <div class="ch-top">
+    <img class="logo lg-md" src="assets/pod/la-frontera-tecnologica.webp" alt="La Frontera Tecnológica" width="480" height="480" loading="lazy" decoding="async">
+    <div class="ch-head">
+      <div class="kick">Show · Markets and technology</div>
+      <h4 class="ch-name">La Frontera Tecnológica</h4>
+      <p class="lema">Technology that expands what is human</p>
+    </div>
+  </div>
+  <p class="promesa">To understand what changes when a technology stops being a promise and becomes reality.</p>
+  
+  <div class="links"><a class="lk lk-yt" href="https://www.youtube.com/@LaFronteraTecnologica" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'youtube','event_label':'la-frontera-tecnologica_mgq2'})"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg><span>youtube.com/@LaFronteraTecnologica</span></a></div>
+  <details class="desc"><summary><span>Official channel description</span><i aria-hidden="true">+</i></summary><div class="desc-body"><p>Technology doesn&#x27;t just create tools: it changes what we can do, how we work, how we compete and, ultimately, the architecture of society. La Frontera Tecnológica explores the technologies pushing the limits of the possible —and, above all, what changes when they stop being promises and become reality.</p><p>Artificial intelligence, robotics, biotechnology, energy, computing, applied science and emerging technologies are the starting point, not the destination. You won&#x27;t find gadget news or fascination with novelty here. We analyze what each advance enables, what it displaces, what capabilities it creates and how it reshapes our economy, our work, our institutions and our way of life.</p><p>With Mario, each episode translates innovation into real consequences: explanations, conversations with experts, demonstrations when they add value and second-order analysis to understand what comes next.</p><p>Because the new changes more than it seems.</p></div></details>
+</article>
+<article class="ch reveal" id="c-relatos-vivos" data-t="historias" style="--c:#F5B82E">
+  <div class="ch-top">
+    <img class="logo lg-md" src="assets/pod/relatos-vivos.webp" alt="Relatos Vivos" width="480" height="480" loading="lazy" decoding="async">
+    <div class="ch-head">
+      <div class="kick">Show · Stories and mystery</div>
+      <h4 class="ch-name">Relatos Vivos</h4>
+      <p class="lema">Stories worth telling.</p>
+    </div>
+  </div>
+  <p class="promesa">To travel with the imagination to the heart of each event: listening is enough to travel.</p>
+  
+  <div class="links"><a class="lk lk-yt" href="https://www.youtube.com/@RelatosVivosMX" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'youtube','event_label':'relatos-vivos_mgq2'})"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg><span>youtube.com/@RelatosVivosMX</span></a></div>
+  <details class="desc"><summary><span>Official channel description</span><i aria-hidden="true">+</i></summary><div class="desc-body"><p>Every story is a door to another world. In Relatos Vivos, listening is enough to travel: the imagination supplies the images and the narration carries you to the heart of each event.</p><p>Here real stories that marked history come to life —like the sinking of the Titanic, the assassination of JFK or the fall of the Hindenburg— along with works of fiction able to transport you to extraordinary places, eras and situations.</p><p>This is a space for those who enjoy good stories: their mysteries, their characters, their unexpected twists and those moments that stay in the memory. Without relying on big visual effects, we bet on the power of the word, the rhythm of the narration and the freedom to imagine.</p><p>Get comfortable, listen closely and let your mind build each scene. Because some stories don&#x27;t need to be seen for you to feel you are there.</p><p>Relatos Vivos: stories worth telling.</p></div></details>
+</article>
+<article class="ch reveal" id="c-la-pildora-roja" data-t="historias" style="--c:#E0313F">
+  <div class="ch-top">
+    <img class="logo lg-md" src="assets/pod/la-pildora-roja.webp" alt="La Píldora Roja" width="480" height="480" loading="lazy" decoding="async">
+    <div class="ch-head">
+      <div class="kick">Show · Stories and mystery</div>
+      <h4 class="ch-name">La Píldora Roja</h4>
+      <p class="lema">Look again.</p>
+    </div>
+  </div>
+  <p class="promesa">To look again at what seems impossible, uncomfortable or too strange, without ever switching off critical thinking.</p>
+  
+  <div class="links"><a class="lk lk-yt" href="https://www.youtube.com/@LaPildoraRoja-MX" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'youtube','event_label':'la-pildora-roja_mgq2'})"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg><span>youtube.com/@LaPildoraRoja-MX</span></a></div>
+  <details class="desc"><summary><span>Official channel description</span><i aria-hidden="true">+</i></summary><div class="desc-body"><p>What if the story you were told doesn&#x27;t explain the whole story? La Píldora Roja is a space to look again at what seems impossible, uncomfortable or too strange to fit the official version.</p><p>Here we investigate plausible conspiracies, unsolved mysteries, anomalies, strange phenomena, true crime, UFOs and extraterrestrial life, documents, characters and stories that have left more questions than answers. It is not about believing for the sake of it: it is about investigating.</p><p>Each story starts from the available facts and moves through evidence, context, hypotheses, alternative explanations and speculation, distinguishing what we know from what we assume. Because a theory can be extraordinary without necessarily being true; and an official explanation still deserves questions.</p><p>La Píldora Roja is for those who enjoy following the trail, connecting pieces and keeping an open mind without switching off critical thinking.</p><p>Some stories deserve a second look.</p></div></details>
+</article>
+<article class="ch reveal" id="c-el-mundo-en-6-paneles" data-t="aprender" style="--c:#4F86E8">
+  <div class="ch-top">
+    <img class="logo lg-md" src="assets/pod/el-mundo-en-6-paneles.webp" alt="El Mundo en 6 Paneles" width="480" height="480" loading="lazy" decoding="async">
+    <div class="ch-head">
+      <div class="kick">Show · Learning and understanding</div>
+      <h4 class="ch-name">El Mundo en 6 Paneles</h4>
+      <p class="lema">Easy mastery of any subject.</p>
+    </div>
+  </div>
+  <p class="promesa">To master any subject with clarity and understand what lies behind things: judgment, not information.</p>
+  
+  <div class="links"><a class="lk lk-yt" href="https://www.youtube.com/@ElMundoen6Paneles" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'youtube','event_label':'el-mundo-en-6-paneles_mgq2'})"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg><span>youtube.com/@ElMundoen6Paneles</span></a></div>
+  <details class="desc"><summary><span>Official channel description</span><i aria-hidden="true">+</i></summary><div class="desc-body"><p>Understanding the world shouldn&#x27;t be complicated. In El Mundo en 6 Paneles we take complex subjects, take them apart and rebuild them in a clear, orderly and practical way, so you can truly understand them.</p><p>There is no single niche here: there is a single purpose. Understanding how things work. Business, markets, football, technology, artificial intelligence, politics, theology, science, art, culture and much more.</p><p>Each episode organizes a subject into 6 panels: six perspectives that let you see its structure, connect its pieces, discover patterns and understand the context.</p><p>We don&#x27;t try to fill your head with information, but to give you something more valuable: judgment. Ideas you can connect, remember and use to think better and make better decisions.</p><p>No needless detours. No oversimplifying. No getting lost on the surface.</p><p>If you want to master any subject with clarity and understand what lies behind things, this channel is for you.</p></div></details>
+</article>
+<article class="ch reveal" id="c-yo-te-lo-resumo" data-t="aprender" style="--c:#D8A93B">
+  <div class="ch-top">
+    <img class="logo lg-md" src="assets/pod/yo-te-lo-resumo.webp" alt="Yo te lo Resumo" width="480" height="480" loading="lazy" decoding="async">
+    <div class="ch-head">
+      <div class="kick">Show · Learning and understanding</div>
+      <h4 class="ch-name">Yo te lo Resumo</h4>
+      <p class="lema">The gold without the chaff</p>
+    </div>
+  </div>
+  <p class="promesa">To grasp the essence of a work without losing what matters, and decide what deserves a reading, a film or a deeper conversation.</p>
+  
+  <div class="links"><a class="lk lk-yt" href="https://www.youtube.com/@YoTeLoResumo-MX" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'youtube','event_label':'yo-te-lo-resumo_mgq2'})"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg><span>youtube.com/@YoTeLoResumo-MX</span></a></div>
+  <details class="desc"><summary><span>Official channel description</span><i aria-hidden="true">+</i></summary><div class="desc-body"><p>Short on time, but with too many things worth understanding? In Yo te lo Resumo we give you the gold without the chaff: books, films, novels, essays, series and stories summarized and explained so you grasp the essence without losing what matters.</p><p>Here summarizing doesn&#x27;t mean cutting. It means finding the structure, the argument, the central ideas and what deserves to survive the reduction. Each episode goes beyond &quot;what is it about?&quot;: we explore the thesis, the context, what matters, what we can learn and which ideas can carry over into our own lives.</p><p>From fiction and the great classics to non-fiction, film, television and contemporary works, this is a space to discover stories, learn faster and decide what deserves a reading, a film or a deeper conversation.</p><p>Read less. Understand more.</p></div></details>
+</article>
+<article class="ch reveal" id="c-acortando-la-curva" data-t="aprender" style="--c:#3A9BFF">
+  <div class="ch-top">
+    <img class="logo lg-md" src="assets/pod/acortando-la-curva.webp" alt="Acortando la Curva" width="480" height="480" loading="lazy" decoding="async">
+    <div class="ch-head">
+      <div class="kick">Show · Learning and understanding</div>
+      <h4 class="ch-name">Acortando la Curva</h4>
+      <p class="lema">Learn faster. Learn better.</p>
+    </div>
+  </div>
+  <p class="promesa">To understand how capabilities are acquired, how to train them better and how to turn what you learn into something you can do, sustain and transfer.</p>
+  
+  <div class="links"><a class="lk lk-yt" href="https://www.youtube.com/@AcortandoLaCurva-MX" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'youtube','event_label':'acortando-la-curva_mgq2'})"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg><span>youtube.com/@AcortandoLaCurva-MX</span></a></div>
+  <details class="desc"><summary><span>Official channel description</span><i aria-hidden="true">+</i></summary><div class="desc-body"><p>What if learning a skill didn&#x27;t have to take as long as we&#x27;ve been led to believe? Acortando la Curva is the practical lab for understanding how we acquire capabilities, how to train them better and how to reach, faster, a level of mastery that really matters.</p><p>Here we explore accelerated learning, skill acquisition, deliberate practice, mental models, feedback, measurement, transfer and the conditions that make it possible to turn knowledge into capability. It is not about piling up information or chasing miracle shortcuts: it is about understanding the process and designing it better.</p><p>From learning a new discipline to developing a professional, creative, physical or intellectual capability, each episode seeks to answer one concrete question: how can we learn faster, learn better and turn what we learn into something we can do, sustain and transfer?</p><p>Acortando la Curva. Learn faster. Learn better.</p></div></details>
+</article>
+<article class="ch reveal" id="c-el-show-del-profesor-mario" data-t="humor" style="--c:#E3262E">
+  <div class="ch-top">
+    <img class="logo lg-md" src="assets/pod/el-show-del-profesor-mario.webp" alt="El Show del Profesor Mario" width="480" height="480" loading="lazy" decoding="async">
+    <div class="ch-head">
+      <div class="kick">Show · Humor and entertainment</div>
+      <h4 class="ch-name">El Show del Profesor Mario</h4>
+      <p class="lema">Nothing is safe.</p>
+    </div>
+  </div>
+  <p class="promesa">A late-night show to think, debate, question and not swallow the story, with analysis, humor and irreverence.</p>
+  
+  <div class="links"><a class="lk lk-yt" href="https://www.youtube.com/@ElShowDelProfesorMario" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'youtube','event_label':'el-show-del-profesor-mario_mgq2'})"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg><span>youtube.com/@ElShowDelProfesorMario</span></a></div>
+  <details class="desc"><summary><span>Official channel description</span><i aria-hidden="true">+</i></summary><div class="desc-body"><p>Welcome to El Show del Profesor Mario, a late-night video podcast where analysis, humor and irreverence meet to put the world under the microscope.</p><p>Politics, power, society, culture, media, technology and current affairs: no subject is off the table. Through monologues, analysis, satire, interviews and unscripted conversations, we explore the contradictions of our reality, question the established and allow ourselves to laugh at what deserves to be questioned.</p><p>Critical thinking, uncomfortable arguments, intelligent humor and a good dose of sarcasm live side by side here. No needless solemnity, no ready-made answers and no fear of making anyone uncomfortable.</p><p>A space to think, debate, question and, above all, not swallow the story.</p><p>This is El Show del Profesor Mario. NOTHING IS SAFE.</p></div></details>
+</article>
+<article class="ch reveal" id="c-reaxion-en-salsa-verde" data-t="humor" style="--c:#4CD137">
+  <div class="ch-top">
+    <img class="logo lg-md" data-mq draggable="false" src="assets/pod/reaxion-en-salsa-verde.webp" alt="Reaxión en Salsa Verde" width="480" height="480" loading="lazy" decoding="async">
+    <div class="ch-head">
+      <div class="kick">Show · Humor and entertainment</div>
+      <h4 class="ch-name">Reaxión en Salsa Verde</h4>
+      <p class="lema">Reactions with flavor, sarcasm and zero solemnity.</p>
+    </div>
+  </div>
+  <p class="promesa">To watch what goes on across the internet with intelligent humor, sarcasm and opinions without solemnity.</p>
+  
+  <div class="links"><a class="lk lk-yt" href="https://www.youtube.com/@ReaxionEnSalsaVerde" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'youtube','event_label':'reaxion-en-salsa-verde_mgq2'})"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg><span>youtube.com/@ReaxionEnSalsaVerde</span></a></div>
+  <details class="desc"><summary><span>Official channel description</span><i aria-hidden="true">+</i></summary><div class="desc-body"><p>Reaxión en Salsa Verde is a Spanish-language reaction channel, made for Mexicans and Mexican Americans who enjoy intelligent humor, sarcasm and opinions without solemnity. Here we watch videos, trends, characters and internet moments to find the absurd, the unexpected and the genuinely funny… and comment on it without mincing words.</p><p>We are not here to applaud everything or to get outraged for sport: we are here to observe, question, exaggerate when needed and laugh with judgment. With a cynical, satirical and biting eye, we mix cultural references, spontaneous analysis and comedy to give another reading of what is happening on screen.</p><p>From Mexico to every corner where Spanish is spoken: turn up the volume, pour the salsa and join us. Because the internet is full of things that deserve a reaction. And here we don&#x27;t keep quiet.</p><p>Reaxión en Salsa Verde: reactions with flavor, sarcasm and zero solemnity.</p></div></details>
+</article>
+<article class="ch reveal" id="c-lo-mejor-y-lo-peor" data-t="humor" style="--c:#D4AF37">
+  <div class="ch-top">
+    <img class="logo lg-md" src="assets/pod/lo-mejor-y-lo-peor.webp" alt="Lo Mejor y lo Peor" width="480" height="480" loading="lazy" decoding="async">
+    <div class="ch-head">
+      <div class="kick">Show · Humor and entertainment</div>
+      <h4 class="ch-name">Lo Mejor y lo Peor</h4>
+      <p class="lema">Everything has a ranking.</p>
+    </div>
+  </div>
+  <p class="promesa">To discover, debate and be surprised by rankings that leave you with a new way of looking at what you thought you knew.</p>
+  
+  <div class="links"><a class="lk lk-yt" href="https://www.youtube.com/@LoMejoryLoPeor-MX" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'youtube','event_label':'lo-mejor-y-lo-peor_mgq2'})"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg><span>youtube.com/@LoMejoryLoPeor-MX</span></a></div>
+  <details class="desc"><summary><span>Official channel description</span><i aria-hidden="true">+</i></summary><div class="desc-body"><p>What is the best? What is the worst? And, above all, by what criteria do you decide? In Lo Mejor y lo Peor, everything has a ranking: culture, technology, football, business, history, films, ideas, phenomena and the absurdities of our time. Here lists are not an excuse to fill minutes: they are a way of looking, comparing and exercising judgment.</p><p>You will find Top 5, Top 10 and Top 20 rankings, built on explicit criteria and accompanied by the reasoning behind each position. Because ranking forces you to decide what matters, what deserves recognition, what deserves criticism and why.</p><p>It is a channel of entertainment and curation for those who enjoy discovering, debating and being surprised. Sometimes there will be great works; other times, great disasters. What matters is that each ranking has a logic and that each episode leaves you with more than a list: a new way of looking at what you thought you knew.</p><p>Lo Mejor y lo Peor. Everything has a ranking.</p></div></details>
+</article></div>
+
+    <div class="wl reveal">
+      <span class="bridge-k">The written layer</span>
+      <h3 class="wl-t">Eight publications, <em>one pen</em></h3>
+      <p class="wl-d">Each house also has its own Substack publication, where the ideas from the episodes are developed at a calmer pace. Mario's personal account gathers every article in one place.</p>
+      <div class="st-grid"><a class="st st-main" href="https://substack.com/@garzalivas" target="_blank" rel="noopener" title="https://substack.com/@garzalivas" style="--c:#b6905c" onclick="gtag('event','click',{'event_category':'substack','event_label':'mario-garza-livas_mgq2'})"><img src="assets/pod/mario-garza-livas.webp" alt="" width="480" height="480" loading="lazy" decoding="async"><span class="st-n">Mario Garza Livas</span><span class="st-l">Every article, in one place</span><span class="st-u">Read on Substack <span class="arrow">&rarr;</span></span></a><a class="st" href="https://elprofesormariopresenta.substack.com/" target="_blank" rel="noopener" title="https://elprofesormariopresenta.substack.com/" style="--c:#F28C1B" onclick="gtag('event','click',{'event_category':'substack','event_label':'el-profesor-mario-presenta_mgq2'})"><img src="assets/pod/el-profesor-mario-presenta.webp" alt="" width="480" height="480" loading="lazy" decoding="async"><span class="st-n">El Profesor Mario Presenta</span><span class="st-l">Another way of seeing.</span><span class="st-u">Read on Substack <span class="arrow">&rarr;</span></span></a><a class="st" href="https://inexorablemx.substack.com/" target="_blank" rel="noopener" title="https://inexorablemx.substack.com/" style="--c:#E0313F" onclick="gtag('event','click',{'event_category':'substack','event_label':'inexorable_mgq2'})"><img src="assets/pod/inexorable.webp" alt="" width="480" height="480" loading="lazy" decoding="async"><span class="st-n">ineXorable</span><span class="st-l">Ideas for a changing world</span><span class="st-u">Read on Substack <span class="arrow">&rarr;</span></span></a><a class="st" href="https://hagasetuvoluntad.substack.com/" target="_blank" rel="noopener" title="https://hagasetuvoluntad.substack.com/" style="--c:#5C82D6" onclick="gtag('event','click',{'event_category':'substack','event_label':'hagase-tu-voluntad_mgq2'})"><img src="assets/pod/hagase-tu-voluntad.webp" alt="" width="480" height="480" loading="lazy" decoding="async"><span class="st-n">Hágase Tu Voluntad</span><span class="st-l">Faith. Reality. Action.</span><span class="st-u">Read on Substack <span class="arrow">&rarr;</span></span></a><a class="st" href="https://metanoiagroup.substack.com/" target="_blank" rel="noopener" title="https://metanoiagroup.substack.com/" style="--c:#C9A55C" onclick="gtag('event','click',{'event_category':'substack','event_label':'the-metanoia-group_mgq2'})"><img src="assets/pod/the-metanoia-group.webp" alt="" width="480" height="480" loading="lazy" decoding="async"><span class="st-n">The Metanoia Group</span><span class="st-l">Person. Business. Wealth.</span><span class="st-u">Read on Substack <span class="arrow">&rarr;</span></span></a><a class="st" href="https://metanoiafootball.substack.com/" target="_blank" rel="noopener" title="https://metanoiafootball.substack.com/" style="--c:#C9A55C" onclick="gtag('event','click',{'event_category':'substack','event_label':'metanoia-football_mgq2'})"><img src="assets/pod/metanoia-football.webp" alt="" width="480" height="480" loading="lazy" decoding="async"><span class="st-n">Metanoia Football</span><span class="st-l">Thinking from football.</span><span class="st-u">Read on Substack <span class="arrow">&rarr;</span></span></a><a class="st" href="https://askesismx.substack.com/" target="_blank" rel="noopener" title="https://askesismx.substack.com/" style="--c:#C98A4B" onclick="gtag('event','click',{'event_category':'substack','event_label':'askesis_mgq2'})"><img src="assets/pod/askesis.webp" alt="" width="480" height="480" loading="lazy" decoding="async"><span class="st-n">Áskesis</span><span class="st-l">Simplify. Fulfill. Consecrate.</span><span class="st-u">Read on Substack <span class="arrow">&rarr;</span></span></a><a class="st" href="https://ordocustodum.substack.com/" target="_blank" rel="noopener" title="https://ordocustodum.substack.com/" style="--c:#C7C0B3" onclick="gtag('event','click',{'event_category':'substack','event_label':'ordo-custodum_mgq2'})"><img src="assets/pod/ordo-custodum.webp" alt="" width="480" height="480" loading="lazy" decoding="async"><span class="st-n">Ordo Custodum</span><span class="st-l">Maior Potestas, Maius Officium</span><span class="st-u">Read on Substack <span class="arrow">&rarr;</span></span></a></div>
+    </div>
+  </div>
+</section>
+
+<section id="marcas">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-num">III</span><div>
+      <h2 class="sec-title">The three <em>brands</em></h2><p class="sec-sub">Book, video podcast and keynote talks under one idea.</p></div></div>
+    <div class="brand-list">
+<a class="brand reveal" href="mgx2.html" style="--c:#E0313F">
+  <img class="logo lg-md" src="assets/pod/inexorable.webp" alt="ineXorable" width="480" height="480" loading="lazy" decoding="async">
+  <div class="brand-body">
+    <div class="chips"><span class="chip">Book</span><span class="chip">Video podcast</span><span class="chip">Talks</span></div>
+    <h3 class="brand-name">ineXorable</h3>
+    <p class="lema">Change is inexorable. Your capacity need not give way.</p>
+    <p class="brand-desc">The intellectual layer of the work. In an era of technological disruption, geopolitical tension and economic volatility, it proposes a shift: from prediction to architecture. Not getting the future right, but depending less on getting it right.</p>
+    <div class="brand-ask"><span>Key question</span>How do we understand the world?</div>
+    <div class="brand-go">Visit ineXorable <span class="arrow">&rarr;</span></div>
+  </div>
+</a>
+<a class="brand reveal" href="mgy2.html" style="--c:#5C82D6">
+  <img class="logo lg-md" src="assets/pod/hagase-tu-voluntad.webp" alt="Hágase Tu Voluntad" width="480" height="480" loading="lazy" decoding="async">
+  <div class="brand-body">
+    <div class="chips"><span class="chip">Book</span><span class="chip">Video podcast</span><span class="chip">Talks</span></div>
+    <h3 class="brand-name">Hágase Tu Voluntad</h3>
+    <p class="lema">Not my will, but Thine, be done.</p>
+    <p class="brand-desc">The spiritual layer of the work. Catholic formation for lay people living in the real world: ordering the whole of life —work, leadership, money, family and culture— from a single hierarchy.</p>
+    <div class="brand-ask"><span>Key question</span>Why live?</div>
+    <div class="brand-go">Visit Hágase Tu Voluntad <span class="arrow">&rarr;</span></div>
+  </div>
+</a>
+<a class="brand reveal" href="mgk2.html" style="--c:#C98A4B">
+  <img class="logo lg-md" src="assets/pod/askesis.webp" alt="Áskesis" width="480" height="480" loading="lazy" decoding="async">
+  <div class="brand-body">
+    <div class="chips"><span class="chip">Book</span><span class="chip">Video podcast</span><span class="chip">Talks</span></div>
+    <h3 class="brand-name">Áskesis</h3>
+    <p class="lema">Simplify. Fulfill. Consecrate.</p>
+    <p class="brand-desc">A philosophy of training the person built on three pillars —Frugality, Discipline and Faith— and one operating principle: <em>MISO, Minimum Input, Same Output</em>. Order before you optimize.</p>
+    <div class="brand-ask"><span>Key question</span>What is worth doing?</div>
+    <div class="brand-go">Visit Áskesis <span class="arrow">&rarr;</span></div>
+  </div>
+</a></div>
+  </div>
+</section>
+
+<section id="libros">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-num">IV</span><div>
+      <h2 class="sec-title">The <em>catalog</em></h2><p class="sec-sub">Dozens of books published by El Atelier MX. Here, just the titles, as published.</p></div></div>
+    <ol class="book-list reveal"><li><a href="mgw2.html#libro-metanoia">Metanoia: Haz tu parte y deja que Dios haga el resto</a></li><li><a href="mgw2.html#libro-uno-mas-uno">1 + 1 = N</a></li><li><a href="mgw2.html#libro-aprenderse">Aprenderse</a></li><li><a href="mgw2.html#libro-arquitectura-de-decision">Arquitectura de Decisión</a></li><li><a href="mgw2.html#libro-arquitectura-empresarial">Arquitectura Empresarial</a></li><li><a href="mgw2.html#libro-asesoria-aumentada">Asesoría Aumentada</a></li><li><a href="mgw2.html#libro-askesis">Áskesis</a></li><li><a href="mgw2.html#libro-autonomia">Autonomía</a></li><li><a href="mgw2.html#libro-brujula">Brújula Mata Plataforma</a></li><li><a href="mgw2.html#libro-despues-de-romperlo-todo">Después de romperlo todo</a></li><li><a href="mgw2.html#libro-el-barco">El Barco No Es el Viaje</a></li><li><a href="mgw2.html#libro-el-barniz">El Barniz del Carácter</a></li><li><a href="mgw2.html#libro-el-centro">El Centro que no se Mueve</a></li><li><a href="mgw2.html#libro-el-combate">El Combate tras la Cortina</a></li><li><a href="mgw2.html#libro-el-derecho-a-ser-grande">El Derecho a ser Grande</a></li><li><a href="mgw2.html#libro-el-dinero">El Dinero es una Promesa</a></li><li><a href="mgw2.html#libro-el-don-de-la-palabra">El Don de la Palabra</a></li><li><a href="mgw2.html#libro-el-interes">El Interés Compuesto del Juicio</a></li><li><a href="mgw2.html#libro-el-mundo">El Mundo que ya no Existe</a></li><li><a href="mgw2.html#libro-entregarla-viva">Entregarla Viva: La Civilización de la Custodia</a></li><li><a href="mgw2.html#libro-espacio-de-accion">Espacio de Acción</a></li><li><a href="mgw2.html#libro-football-intelligence">Football Intelligence</a></li><li><a href="mgw2.html#libro-garabandal">Garabandal: La Convergencia</a></li><li><a href="mgw2.html#libro-hagase-tu-voluntad">Hágase Tu Voluntad</a></li><li><a href="mgw2.html#libro-inexorable">ineXorable</a></li><li><a href="mgw2.html#libro-la-empresa-imposible">La Empresa Imposible</a></li><li><a href="mgw2.html#libro-la-gran-inversion">La Gran Inversión</a></li><li><a href="mgw2.html#libro-la-puerta">La Puerta entre dos Mentes</a></li><li><a href="mgw2.html#libro-la-ventana-gradual">La Ventana Gradual</a></li><li><a href="mgw2.html#libro-lo-que-dejamos-florecer">Lo que dejamos florecer</a></li><li><a href="mgw2.html#libro-lo-que-es-es">Lo que Es, Es</a></li><li><a href="mgw2.html#libro-los-cuatro-jardines">Los Cuatro Jardines</a></li><li><a href="mgw2.html#libro-manos-abiertas">Manos Abiertas</a></li><li><a href="mgw2.html#libro-margen-cero">Margen Cero</a></li><li><a href="mgw2.html#libro-nadie-por-encima">Nadie por encima</a></li><li><a href="mgw2.html#libro-no-controlas-la-cosecha">No Controlas la Cosecha</a></li><li><a href="mgw2.html#libro-que-haria-jesus">¿Qué haría Jesús?</a></li><li><a href="mgw2.html#libro-quien-gobierna">¿Quién Gobierna?</a></li><li><a href="mgw2.html#libro-segunda-mente">Segunda Mente</a></li><li><a href="mgw2.html#libro-sin-abandonar-la-orilla">Sin Abandonar la Orilla</a></li><li><a href="mgw2.html#libro-soberano">Soberano</a></li><li><a href="mgw2.html#libro-voz-soberana">Voz Soberana</a></li></ol>
+    <a class="bridge reveal" href="mgw2.html">
+      <span class="bridge-k">The Written Work</span>
+      <span class="bridge-t">Each book has its full entry —thesis, tags, abstract and free PDF download— in The Written Work.</span>
+      <span class="bridge-cta">See every book in detail <span class="arrow">&rarr;</span></span>
+    </a>
+  </div>
+</section>
+
+<section id="conferencias">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-num">V</span><div>
+      <h2 class="sec-title">Keynotes and <em>talks</em></h2><p class="sec-sub">The ideas of the house, live.</p></div></div>
+    <div class="reveal"><p class="lead">The three brands of the house also go on stage: auditoriums, companies, universities, faith communities and leadership forums. Mario Garza Livas speaks mainly through <strong>ineXorable</strong>, <strong>Hágase Tu Voluntad</strong> and <strong>Áskesis</strong>, and beyond them as well, on strategy, business, wealth and football.</p></div>
+    <div class="talks reveal"><div class="talk"><div class="talk-k">ineXorable</div><div class="talk-t">Thinking in a changing world</div><div class="talk-d">Adaptive Intelligence, antifragility and architecture for leaders and organizations.</div></div><div class="talk"><div class="talk-k">Hágase Tu Voluntad</div><div class="talk-t">Faith in the real world</div><div class="talk-d">Vocation, work, leadership and money in the light of faith, for today's lay person.</div></div><div class="talk"><div class="talk-k">Áskesis</div><div class="talk-t">Training life itself</div><div class="talk-d">Frugality, Discipline and Faith: productivity with judgment and self-governance.</div></div></div>
+    <div class="hero-cta talk-cta reveal">
+      <a class="btn btn-primary" href="mailto:mario@metanoiagroup.vip?subject=Keynote%20%E2%80%94%20El%20Atelier%20MX" onclick="gtag('event','click',{'event_category':'contact','event_label':'conferencia_mgq2'})">Request a talk</a>
+      <a class="btn btn-ghost" href="https://wa.me/528125136784">Message on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section id="otras-producciones">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-num">VI</span><div>
+      <h2 class="sec-title">More productions <em>of the house</em></h2><p class="sec-sub">Beyond Mario's twenty-three video podcasts, El Atelier MX also produces these two.</p></div></div>
+    <div class="cop-grid">
+<article class="cop reveal" style="--c:#F2579B">
+  <img class="logo lg-md" src="assets/pod/playdate-con-mariam.webp" alt="Playdate con Mariam" width="480" height="480" loading="lazy" decoding="async">
+  <div>
+    <div class="kick">For kids aged 2 to 7 and their parents</div>
+    <h3 class="cop-name">Playdate con Mariam</h3>
+    <p class="lema">Imagine, create and play… ¡Chiqui-Choqui-Tras!</p>
+    <p class="cop-desc">A space where children learn through play. Mariam, a little teacher full of joy, guides her «students» through fun missions that combine creativity, movement, music and stories: crafts, original songs, dance, kids&#x27; exercise and games, in a positive, safe setting without overstimulation.</p>
+    <div class="links"><a class="lk lk-yt" href="https://www.youtube.com/@PlaydateConMariam" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'youtube','event_label':'playdate-con-mariam_mgq2'})"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg><span>youtube.com/@PlaydateConMariam</span></a></div>
+  </div>
+</article>
+<article class="cop reveal" style="--c:#D9A08A">
+  <img class="logo lg-md" src="assets/pod/strongher-studio.webp" alt="StrongHer Studio" width="480" height="480" loading="lazy" decoding="async">
+  <div>
+    <div class="kick">Women&#x27;s whole-life recovery</div>
+    <h3 class="cop-name">StrongHer Studio</h3>
+    <p class="lema">Recover yourself without leaving what you love.</p>
+    <p class="cop-desc">A platform for women who at some point put themselves last and are now finding their way back to themselves without leaving what they love. Founded and hosted by Daniela De La Vega Mendoza, it speaks from the real process, not from perfection: workouts, reflections and real moments, without magic formulas.</p>
+    <div class="links"><a class="lk lk-yt" href="https://www.youtube.com/@StrongHer-Studio" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'youtube','event_label':'strongher-studio_mgq2'})"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg><span>youtube.com/@StrongHer-Studio</span></a></div>
+  </div>
+</article></div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-num">VII</span><div>
+      <h2 class="sec-title">Contact and <em>links</em></h2><p class="sec-sub">To collaborate, invite Mario to an episode or request a talk.</p></div></div>
+    <div class="contact-grid reveal">
+      <a class="contact-item" href="https://wa.me/528125136784" onclick="gtag('event','click',{'event_category':'contact','event_label':'whatsapp_mgq2'})"><div class="cicon">TW</div><div><div class="clabel">Phone &amp; WhatsApp</div><div class="cvalue">+52 (81) 2513 6784</div></div></a>
+      <a class="contact-item" href="mailto:mario@metanoiagroup.vip?subject=El%20Atelier%20MX" onclick="gtag('event','click',{'event_category':'contact','event_label':'email_mgq2'})"><div class="cicon">@</div><div><div class="clabel">Email</div><div class="cvalue">mario@metanoiagroup.vip</div></div></a>
+      <a class="contact-item" href="https://linkedin.com/in/garzalivas" target="_blank" rel="noopener" onclick="gtag('event','click',{'event_category':'contact','event_label':'linkedin_mgq2'})"><div class="cicon">in</div><div><div class="clabel">LinkedIn</div><div class="cvalue">linkedin.com/in/garzalivas</div></div></a>
+      <a class="contact-item" href="https://substack.com/@garzalivas" target="_blank" rel="noopener"><div class="cicon">SB</div><div><div class="clabel">Substack</div><div class="cvalue">substack.com/@garzalivas</div></div></a>
+    </div>
+    <div class="eco-grid reveal"><a class="eco-card" href="mgl2.html"><div class="eco-code">Personal</div><div class="eco-name">Mario Garza Livas</div><p class="eco-desc">Personal landing page: contact, documents and the rest of the projects.</p><div class="eco-url">metanoiagroup.vip/mgl2 <span class="arrow">&rarr;</span></div></a><a class="eco-card" href="mgw2.html"><div class="eco-code">Written work</div><div class="eco-name">The Written Work</div><p class="eco-desc">Dozens of books, with thesis, abstract and free download.</p><div class="eco-url">metanoiagroup.vip/mgw2 <span class="arrow">&rarr;</span></div></a><a class="eco-card" href="https://metanoiagroup.vip/en.html" target="_blank" rel="noopener"><div class="eco-code">Firm</div><div class="eco-name">The Metanoia Group</div><p class="eco-desc">Strategic architecture to strengthen leaders, companies and wealth.</p><div class="eco-url">metanoiagroup.vip <span class="arrow">&rarr;</span></div></a><a class="eco-card" href="mfb2.html"><div class="eco-code">Football</div><div class="eco-name">Metanoia Football</div><p class="eco-desc">Strategic architecture for the professional football ecosystem.</p><div class="eco-url">metanoiagroup.vip/mfb2 <span class="arrow">&rarr;</span></div></a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img class="footer-seal" src="assets/pod/el-atelier-mx.webp" alt="" width="120" height="120" loading="lazy" decoding="async">
+    <div class="footer-brand">El Atelier MX</div>
+    <div class="footer-tagline">Stories that matter.</div>
+    <div class="footer-role"><strong>Mario Garza Livas</strong>, founder and CEO</div>
+    <div class="footer-contacts">
+      <a href="mailto:mario@metanoiagroup.vip">mario@metanoiagroup.vip</a>
+      <a href="https://wa.me/528125136784">+52 (81) 2513 6784</a>
+      <a href="https://linkedin.com/in/garzalivas">linkedin.com/in/garzalivas</a>
+    </div>
+    <div class="footer-admg-rule"></div>
+    <p class="footer-admg">Ad Majorem Dei Gloriam.</p>
+    <div class="footer-bottom">
+      <span class="copyright">© 2026 The Metanoia Group</span>
+      <a class="footer-en" href="mgq1.html">Versión en español →</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // reveal
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.08,rootMargin:'0px 0px -6% 0px'});
+    els.forEach(function(el){io.observe(el);});
+  } else { els.forEach(function(el){el.classList.add('in');}); }
+
+  // filtro de programas por territorio
+  var chips=[].slice.call(document.querySelectorAll('#fchips .fchip'));
+  var cards=[].slice.call(document.querySelectorAll('#progs .ch'));
+  chips.forEach(function(c){
+    c.addEventListener('click',function(){
+      var f=c.getAttribute('data-f');
+      chips.forEach(function(x){x.setAttribute('aria-pressed',x===c?'true':'false');});
+      cards.forEach(function(k){
+        var show=(f==='all'||k.getAttribute('data-t')===f);
+        k.classList.toggle('hidden',!show);
+        if(show) k.classList.add('in');
+      });
+      try{gtag('event','filter',{'event_category':'videopodcasts','event_label':f});}catch(e){}
+    });
+  });
+
+  // logo wall: clear the filter when jumping to a hidden card
+  document.querySelectorAll('.w-item').forEach(function(a){
+    a.addEventListener('click',function(){
+      var t=document.querySelector(a.getAttribute('href'));
+      if(t&&t.classList.contains('hidden')&&chips[0]) chips[0].click();
+      if(t) t.classList.add('in');
+    });
+  });
+
+  // brandmark → volver arriba
+  var en=(document.documentElement.lang||'').toLowerCase().indexOf('en')===0;
+  document.querySelectorAll('.topbar .brandmark').forEach(function(el){
+    el.setAttribute('role','link');el.setAttribute('tabindex','0');
+    el.setAttribute('title',en?'Back to top':'Volver al inicio');
+    function toTop(e){
+      if(e) e.preventDefault();
+      var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({top:0,left:0,behavior:reduce?'auto':'smooth'});
+      if(location.hash&&history.replaceState) history.replaceState(null,'',location.pathname+location.search);
+    }
+    el.addEventListener('click',toTop);
+    el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){toTop(e);}});
+  });
+})();
+
+</script>
+<style>
+/* ---------- EASTER EGG · MAPACHECO (triple clic en el logo de Reaxión en Salsa Verde) ---------- */
+[data-mq]{-webkit-user-select:none;user-select:none;-webkit-user-drag:none;touch-action:manipulation;-webkit-tap-highlight-color:transparent;}
+[data-mq].mq-fired{animation:mqFire 1.1s ease;}
+@keyframes mqFire{0%{filter:drop-shadow(0 10px 22px rgba(0,0,0,.6))}35%{filter:drop-shadow(0 0 22px rgba(76,209,55,.95)) drop-shadow(0 0 46px rgba(76,209,55,.5)) brightness(1.12)}100%{filter:drop-shadow(0 10px 22px rgba(0,0,0,.6))}}
+.mq{--g:#4CD137;--g-dim:#4cd13733;width:min(780px,calc(100vw - 32px));max-height:calc(100dvh - 32px);margin:auto;padding:0;overflow:hidden;
+  background:linear-gradient(180deg,#121413 0%,#0c0d0c 100%);color:var(--text);
+  border:1px solid var(--line-strong);border-top:2px solid var(--g);border-radius:2px;
+  box-shadow:0 40px 120px rgba(0,0,0,.85),0 0 90px rgba(76,209,55,.10);}
+.mq::backdrop{background:rgba(5,6,5,.86);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);}
+.mq[open]{display:flex;flex-direction:column;animation:mqIn .7s cubic-bezier(.2,.7,.2,1);}
+.mq[open]::backdrop{animation:mqFade .5s ease;}
+@keyframes mqIn{from{opacity:0;transform:translateY(14px) scale(.985)}to{opacity:1;transform:none}}
+@keyframes mqFade{from{opacity:0}to{opacity:1}}
+.mq-bar{flex:none;display:flex;justify-content:flex-end;padding:10px 10px 0;}
+.mq-x{width:40px;height:40px;display:grid;place-items:center;background:none;border:1px solid transparent;color:var(--text-muted);font:300 26px/1 var(--sans);cursor:pointer;transition:color .2s,border-color .2s;}
+.mq-x:hover,.mq-x:focus-visible{color:var(--g);border-color:var(--line-strong);outline:none;}
+.mq-sc{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;}
+.mq-in{padding:4px 56px 54px;}
+.mq-body > *{opacity:0;animation:mqLine .8s ease forwards;}
+@keyframes mqLine{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.mq-k{display:flex;align-items:center;gap:14px;margin:0 0 20px;font:500 11px/1.4 var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--g);}
+.mq-k::before{content:'';width:34px;height:1px;background:var(--g);opacity:.7;}
+.mq-name{font:400 clamp(30px,4.6vw,44px)/1.08 var(--serif);margin:0 0 12px;color:var(--text);letter-spacing:-.005em;}
+.mq-alias{font:400 italic clamp(18px,2.2vw,21px)/1.4 var(--serif);color:var(--g);margin:0 0 30px;}
+.mq-intro{font:500 11px/1.5 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--text-muted);margin:0 0 10px;}
+.mq-lead{font:400 clamp(17px,2vw,19px)/1.65 var(--serif);color:#d9d4ca;margin:0 0 30px;}
+.mq-sides{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line-strong);margin:0 0 40px;}
+.mq-side{padding:22px 22px 20px;}
+.mq-side + .mq-side{border-left:1px solid var(--line-strong);}
+.mq-side span{display:block;font:500 10.5px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;margin-bottom:12px;}
+.mq-side strong{display:block;font:400 21px/1.25 var(--serif);color:var(--text);margin-bottom:8px;}
+.mq-side p{margin:0;font-size:14px;line-height:1.6;color:var(--text-muted);}
+.mq-a span{color:var(--accent);}
+.mq-b{background:linear-gradient(180deg,#4cd1370d,transparent);}
+.mq-b span{color:var(--g);}
+.mq-b p.mq-where{margin-top:10px;font-size:13px;}
+.mq-b em,.mq-where em{font-family:var(--serif);font-size:1.06em;color:#cfe9c8;}
+.mq-h{font:500 11px/1.4 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--g);margin:0 0 14px;padding-bottom:12px;border-bottom:1px solid var(--line-strong);}
+.mq-p{font:400 clamp(16.5px,1.9vw,18px)/1.7 var(--serif);color:#d9d4ca;margin:0 0 30px;}
+.mq-lema{margin:0 0 44px;padding:6px 0 6px 22px;border-left:2px solid var(--g);}
+.mq-lema span{display:block;font:500 10.5px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;}
+.mq-lema p{margin:0;font:400 italic clamp(20px,2.6vw,25px)/1.4 var(--serif);color:var(--text);}
+.mq-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);margin:0 0 44px;}
+.mq-card{background:#111312;padding:20px 20px 16px;}
+.mq-card:last-child:nth-child(odd){grid-column:1/-1;}
+.mq-card h4{margin:0 0 10px;font:500 18px/1.3 var(--serif);color:var(--text);}
+.mq-card ul{margin:0;padding:0;list-style:none;}
+.mq-card li{position:relative;padding-left:16px;margin-bottom:7px;font-size:14px;line-height:1.55;color:var(--text-muted);}
+.mq-card li::before{content:'';position:absolute;left:0;top:.62em;width:5px;height:5px;border-radius:50%;background:var(--g);opacity:.8;}
+.mq-card strong{color:var(--text);font-weight:500;}
+.mq-fig{margin:0 0 40px;}
+.mq-fig a{display:block;}
+.mq-fig img{display:block;width:100%;height:auto;box-shadow:0 0 0 1px #4cd13740,0 30px 70px rgba(0,0,0,.55);transition:transform .4s ease;}
+.mq-fig a:hover img{transform:scale(1.01);}
+.mq-fig figcaption{margin:14px 0 0;font:400 italic 14.5px/1.5 var(--serif);text-align:center;color:var(--text-muted);}
+.mq-quote{margin:0;text-align:center;font:400 italic clamp(19px,2.4vw,23px)/1.5 var(--serif);color:var(--g);}
+@media (max-width:640px){.mq-in{padding:2px 20px 40px}.mq-sides{grid-template-columns:1fr}.mq-side + .mq-side{border-left:0;border-top:1px solid var(--line-strong)}.mq-grid{grid-template-columns:1fr}.mq-card:last-child:nth-child(odd){grid-column:auto}}
+@media (prefers-reduced-motion:reduce){.mq-body > *{opacity:1;animation:none}.mq-fig img{transition:none}}
+</style>
+<!-- EASTER EGG · MAPACHECO — triple clic en el logo de Reaxión en Salsa Verde -->
+<dialog class="mq" id="mq" aria-label="Official monograph · Silvestre Feliciano Mapacheco Guadarrama">
+  <div class="mq-bar"><button class="mq-x" type="button" aria-label="Close">&times;</button></div>
+  <div class="mq-sc"><div class="mq-in"><div class="mq-body" id="mq-body"></div></div></div>
+</dialog>
+<script>
+(function(){
+  var el=document.querySelector('[data-mq]'), d=document.getElementById('mq');
+  if(!el||!d||typeof d.showModal!=='function') return;
+  var box=document.getElementById('mq-body'), c='+A3L80Jgi7yc05WZt12bjBychhGIzlXY3xWYg82Ylh2YhBXYNBCd1JEIuMncld3cuFGIlZXYoByc5F2dsFGI0lJgi72cl9GZgU2YuVWajNFnAKuPiUGdvVXctEXbi0zczFGbjBCc84TZyV3ZpZ2L84jbvlGdwF2YnlmZvwjLlpXazBCbsVnZgQXagUWZzByb0BSZnFWbpBSZoRHIwFGVg4ibvlGdpRWZgQWZ0Fmc0NXdsxWagwCawFmcn9mbv1GIsFWajlmZm9kPu9Wa0BXYjdWamxjPh9CP+IyYul3chJSPn5Wak92YlRGIiQTOwEjI9QHanlWZoBiIwADMxISPoRHZpdHIiEWbhJnchRWY1dEIvNWZoNWYwFWTg8mbhl2YpxWZGBSZyR3clZHbpNFIm9GIoBXYyd2bu9WbgQWZ0Fmc0NXdsxWSi0DdsFGIiAnYldnLhlmZhJ3Zv52bt1ybjVGajFGch12LvlmNrhnYmZHZ3Z3NyYDe0dGZ0dXOysGdzpGd1UjYq9Gb1cHa0R3aohTb0kDbjVmdrdmI9MmczByZtlGP+Iicl5WZw92buJSPsVmcgIyauFGbi9lI9QXZnJXY0BiIwJWZ35SYpZWYyd2bu9Wbt82Ylh2YhBXYt9ybpZza4JmZ2R2d2djM2gHdnRGd3ljMrR3cqRXN1ImavxWN3hGd0tGa40GN5w2YlZ3anJSPmVmcoBSY84jInlmZtEXbi0zczFGbjBSZyV3ZpZGP+YXak9CP+42bpR3YlN3L84Db19CP+kGbvwjLyV2dvh2cgknclZXZgIXZ0ZWYgUmbp5WYsFWLhRXZiBiZvBSZz9GZgEGIzV2ahRlPpxGP+kGbvwjLyVGdhdHI09GaggGdpdHI5FGZgEGIzVWbpRHIsFmclZXZzBycyV2dvh2U+kGb84Tas9CPuMXd0lmc1JHcgMWauV2ZhVXchBSbvJnZgMnclZmZ1NlPpxGP+wWd84DNo9CPpMXZpRXayFWasV3YlBHKggGdsFWZI5DNoxjPiQmchNWLx1mI9M3chx2Yg42bpR3YlNHP+42bpR3YlN3L84Db19CP+kGbvwjLjl2c11GIud3bgMXaoByclRXaydHIlhGI6IXZz9Gct92YgQmbhBCdzlmbhlGU+kGb84Tas9CPu8mbhlGcg42bgQWZ5FGbwBSZiBibhNGI0FGa0ByZulGa0lnbhBSesxWYpNWZwNXZgwyYpNXdtBCbsFGIzV2apxkPpxGP+wWd84DNo9CPjl2c11kP0gGP+ICZyF2YtEXbi0zczFGbjBibvlGdjV2c84jbvlGdjV2cvwjPsV3L84Tas9CPuMnchdWajBibhJWdDByclZ3bM5TasxjPpx2L84iclVmYgQmbhBSelt2cph2dgwSZoNWYwVGdgwSZ1FHb1BHIsEGbpVXclRHIswWYjpXZtBycr5WayRkPpxGP+kGbvwjLkxmcvdHIlhGdg4WagQ3clJGIlhGVg4CZv9mZg4WYjlGel1EIzVmdvxkPpxGP+wWd84DNo9CPr5WayRGIk5WYgQ2bvZkP0gGP+ICZyF2YtEXbi0zczFGbjBibvlGdjV2c84jbvlGdjV2cvwjPsV3L84Tas9CPu82b0BSQN1EIucmbph3biByclZ3bM5TasxjPpx2L84SQGVUVg4WavpGI5FGZgUmbvBCbsl2dggVTgE2ZpxEIk5WYgYUTGBSZoRHI0FGa0ByctFWZyRGIsxWa0NlPpxGP+kGbvwjLzVmcnlGVgMXaoByb0BCbhl3bsByc5FGdzBSZoBiOtFWZ0BiclhGdvBybuBychhGIlhEIuUWdnFWZMBycu9Waw1WYoNEIBZURVBSZoRHIzVmdvxkPpxGP+kGbvwjLtFWZ0BCbh52bpRXYuBibhNWa4VWTgUGa0BiZvBibhZEIuwkTBVFIzVmcnlGVgY2bg4WYmBCZyFGallGR+kGb84Db1xjP0g2L8MHdy9GcT5DNoxjPiQmchNWLx1mI9M3chx2Yg42bpR3YlNHP+42bpR3YlN3L84Db19CP+kGbvwjLtlGag4WagUmdllGblJGI0lJgi72cl9GZgQ2bHBCdhhGdgQmcvdHI05WZzBSekFWZyxWYgMXYoBCZvdEI0VnQ+kGb84Tas9CPuQ2bHBibpByclZXZpxWZC5TasxjPsVHP+QDavwjbvl2ZpxWZS5DNoxjPiQmchNWLx1mI9M3chx2Yg42bpR3YlNHP+42bpR3YlN3L84Db19CP+kGbvwjLlNmblN3clBCZuFGI0lmcpB3cg4WagMWaoNmch5WQ+kGb84Tas9CPu4WYzlGdyFGcu9mT+kGb84Tas9CPuM3YpRXas9Gcg4WaggGdpFmZg8mbgMXYI5TasxjPsVHP+QDavwzcjlGdpx2bwBCZuFGI5hGcvN3bslGaQ5DNoxjPiQmchNWLx1mI9M3chx2Yg42bpR3YlNHP+42bpR3YlN3L84Db19CP+kGbvwjLzt2Ylh2Y5FGcgMXaoBCbvJHdu92YgkXZoRlPpxGP+kGbvwjLzRncvBXZyBSZoBSbvh2dg8GdgwiclRHanVXYkBSYgQmbhBSZml2dgEGIzFGagUGS+kGb84Tas9CPuQWZpJnch1kPpxGP+wWd84DNo9CP5xWatFmR+QDa84jIkJXYj1SctJSPzNXYsNGIu9Wa0NWZzxjPu9Wa0NWZz9CP+wWdvwjPpx2L84yZulGa0lnclZXZt42bt42bp5Waw9WLuFGIscmbphGd5JXZ2VWLm9WL0lmYtEGIswGbh1Cdp1ydv52agwCa0FWb5x2bwBCLuFWakVWbvNGI6U2YpR3YhJHcg4WS+kGb84Tas9CPuU2YuVWajN3byVXZOByb0BCZllGbwBXQgM3YpRXYtVGa0FWTg4WagQEaQ5TasxjPpx2L84ibhl2YpRXYtVGa0FWTtQ3cpNWazlHaQ5TasxjPsVHP+QDavwjbvlGdhNWdkVkP0gGP+ICZyF2YtEXbi0zczFGbjBibvlGdjV2c84jbvlGdjV2cvwjPsV3L84Tas9CPukHdpNEIvNWa4VWTgYGbhhGIskXZyJXZ052bNBiZsFGagojPn52byR3cvwzbn5WYslGaj1ybpdWZy5zZu9mc0NHPgkHbkV3byBlPpxGP+kGbvwjL5VmcyVGdu9WTg4WagYGbhhGIyVGa09GIlhGdgQmbhBSe0l2Qg82YphXZNBibpBSZmlGbgMXaoBiZsFGagQWZ2lGbgUGS+kGb84Tas9CPukXZyJXZ052bNBSbvJnZgMnbv92YjFmcg82d0BiZvBibvNHIskHdpNEIvNWa4VWTg4Wag4mcvJkPpxGP+wWd84DNo9CPz5WanlmcP5DNoxjPiQmchNWLx1mI9M3chx2Yg42bpR3YlNHP+ICZpJ3ZtEXbi0zczFGbjBidpRGP+MDavwTZslmZgUGaU5jIo1SctJSPzNXYsNGIzgGP+YXak9CP+A3L80Jgi7yZulGa0lnclZXZg42bgMnbvlmbpB3bgUmdhhGI0NXdqBSSg4yZulGa0lnclZXZg42bgQnclBHelBibhBCdv5GItlJginEnAKuPwxjPuFGcz9CPvRHdv1GIsFWajlmZm9mb1BycphkPuFGczxjPiEWblxWLx1mI9M3chx2YgYXakxjPw9CPuMnbvlGduVmdu92YgwWYpN2bzByZulmbvlGdzVWdxBCZuFGI552bylGIsUmcpRXYzBCZyF2dvRHIu9Wa0Fmbpx2YulGIsFmc1RXYuBSYggGdpdFIuQnbhZnclNnYvBCZuFGI05WZyVmdlJncpBCLzV3bpJXdjBCLsF2Yp5WejBCLjlGdzF2YyF2cgwCbhVHdjVGbsVGdulkPiAXLx1mI9M3chx2YgAHP+MDavwTZslmZvJHcgwWYyVmbldkPigWLx1mI9M3chx2YgMDa84jdpR2L84jdpR2L84DcvwjLlNXdvhGIlhGdg02byZGIzd3boNHIyVGa09GIk5WYg4Tbl9CPlRmclZFIhNHbhNFIuVGIuN7wphXYlJlPtVGPgwiPtV2L88WayFWTgI3bzVmZvJHUgwWZkBydvh2UgwWR+0WZ8AibvBycyFWZwBXQ+ISZyVGa31SctJSPzNXYsNGIwxjPw9CPu02chNmchNHIk5WYg02cpNWaul3YgwSZylGdhNHIsI3btVHagsmchREIuQ3YlJncvNmbpBSesxWYjlGdpx2bwBCL05WZyVmdlJncpBCLjlmYyV2YB5Dc84zZu9mc0N3L882Ylh2YhBXYN5zZu9mc0NHP+4WYwN3L8IEIlRWaT5jbhB3c84jIi1SctBSZkl2ctEXbi0zczFGbjBidpRGP+YXak9CP+A3L84Cbh1mcvZGIsMXdvlmclNHIswWY1R3YlxGblRnbpBCLyVGcvJHU+AHP+cmbvJHdz9CPzFmdpxEIhpnchdEIvlmch1EIy92czVmZvJHU+cmbvJHdzxjPuFGcz9CPBBSZkl2U+4WYwNHP+ISYtEXbgUGZpNXLx1mI9M3chx2YgYXakxjPiMXZkl2ctEXbi0zczFGbjBidpRGP+A3L84yZulGa0lnclZXZgkHblRXds92ciFGIu9GIu9WaulGcvBibhBCZuFGIyF2ZpNGI0lGbgEGIsMXZzNXYsdmb1NHIrJXYkBCLslWY0BCZldmbpJHIhBychhGIzlJgi/WayFWTg4SZkl2ctIEIhBychhGIuFWbgMXdvlmclNHI5JXZ2VkPiQWYlxWLx1mI9M3chx2YgAHP+A3L84SZkl2ctIEIzlJgiPXY2lGTgEmeyF2Rg8WayFWT+IybyRnbp1SctJSPzNXYsNGIwxjPw9CP3VmcjBycphGIvRHIvNWZoNWYwFWT+IychlGbh1SctJSPzNXYsNGIwxjPyg2L8EWbhJnchRWY1dEIvNWZoNWYwFWT+InY88mbhl2YpxWZGBSZyR3clZHbpNlPiUWbh5WLx1mI9M3chx2YgIDa84DcvwTZslmZgUGbiFmbvlGdzVWdRBytCDCawFmcn9mbv1GIsFWajlmZm9kPisWLx1mI9M3chx2YgAHP', n=0, t0=0, filled=false;
+  function u(s){var b=atob(s.split('').reverse().join(''));return new TextDecoder().decode(Uint8Array.from(b,function(ch){return ch.charCodeAt(0)}))}
+  function open(){
+    if(!filled){box.innerHTML=u(c);[].forEach.call(box.children,function(x,k){x.style.animationDelay=Math.min(.25+k*.12,1.8)+'s'});filled=true;}
+    d.showModal(); d.querySelector('.mq-sc').scrollTop=0; d.querySelector('.mq-x').focus({preventScroll:true});
+    try{gtag('event','easter_egg',{'event_category':'mapacheco','event_label':'en'})}catch(x){}
+  }
+  el.addEventListener('click',function(e){
+    var now=Date.now(); n=(now-t0<550)?n+1:1; t0=now;
+    if(n>=3){ n=0; e.preventDefault(); try{getSelection().removeAllRanges()}catch(x){}
+      el.classList.remove('mq-fired'); void el.offsetWidth; el.classList.add('mq-fired'); open(); }
+  });
+  el.addEventListener('dblclick',function(e){e.preventDefault()});
+  el.addEventListener('dragstart',function(e){e.preventDefault()});
+  d.querySelector('.mq-x').addEventListener('click',function(){d.close()});
+  d.addEventListener('click',function(e){ if(e.target===d) d.close(); });
+})();
+</script>
+</body>
+</html>

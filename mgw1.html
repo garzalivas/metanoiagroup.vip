@@ -514,6 +514,10 @@
     display:grid;grid-template-columns:240px 1fr;gap:44px;align-items:center;
   }
   .publisher img{width:100%;height:auto;display:block;}
+  .publisher-link{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-dim);border-bottom:1px solid var(--line-strong);padding-bottom:4px;transition:color .25s ease,border-color .25s ease;}
+  .publisher-link:hover{color:var(--accent);border-color:var(--accent-dim);}
+  .publisher-link .arrow{transition:transform .25s ease;}
+  .publisher-link:hover .arrow{transform:translateX(4px);}
   .publisher-eyebrow{
     font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;
   }
@@ -2478,6 +2482,7 @@
       <div class="publisher-text">
         <div class="publisher-eyebrow">Sello editorial</div>
         <p>Todos los libros de esta obra fueron publicados por la editorial <strong>El Atelier MX</strong>.</p>
+        <a class="publisher-link" href="mgq1.html" onclick="gtag('event','click',{'event_category':'navigation','event_label':'mgq1_mgw1'})">Conocer El Atelier MX <span class="arrow">&rarr;</span></a>
       </div>
     </aside>
   </div>
